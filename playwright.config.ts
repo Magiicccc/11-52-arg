@@ -19,7 +19,12 @@ export default defineConfig({
     trace: "retain-on-failure",
     launchOptions: {
       ...(chromiumExecutablePath ? { executablePath: chromiumExecutablePath } : {}),
-      args: ["--no-sandbox", "--disable-dev-shm-usage", "--disable-gpu", "--no-proxy-server", "--proxy-bypass-list=*"]
+      args: [
+        "--no-sandbox",
+        "--disable-dev-shm-usage",
+        "--disable-gpu",
+        ...(remoteBaseURL ? [] : ["--no-proxy-server", "--proxy-bypass-list=*"])
+      ]
     }
   },
   webServer: remoteBaseURL ? undefined : {
