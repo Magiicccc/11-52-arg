@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.0.0",
+  "sceneId": "A2-05",
+  "title": "发现旧雨17缓存入口",
+  "order": 15,
+  "act": "A2",
+  "correctionStage": "R2",
+  "entryConditions": [
+    {
+      "op": "sceneCompleted",
+      "sceneId": "A2-04"
+    }
+  ],
+  "completionPolicy": "explicitTrigger",
+  "gatesSatisfied": [],
+  "contentRefs": [
+    "archive.oldrain17.entry"
+  ],
+  "puzzleRefs": [
+    "PZ-005"
+  ],
+  "triggerRefs": [
+    "trigger.a2-05.complete"
+  ],
+  "checkpoint": false,
+  "responseSource": "A",
+  "fallbackPolicy": {
+    "required": true,
+    "strategy": "alternateContentOrArchive"
+  },
+  "exitState": {
+    "nextSceneId": "A2-06"
+  },
+  "notes": "发现旧雨17缓存入口"
+}

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.0.0",
+  "sceneId": "A1-07",
+  "title": "玩家头像首次同步侵蚀",
+  "order": 10,
+  "act": "A1",
+  "correctionStage": "R1",
+  "entryConditions": [
+    {
+      "op": "sceneCompleted",
+      "sceneId": "A1-06"
+    }
+  ],
+  "completionPolicy": "explicitTrigger",
+  "gatesSatisfied": [
+    "G3"
+  ],
+  "contentRefs": [
+    "player.avatar.r1"
+  ],
+  "puzzleRefs": [],
+  "triggerRefs": [
+    "trigger.a1-07.complete"
+  ],
+  "checkpoint": true,
+  "responseSource": "A",
+  "fallbackPolicy": {
+    "required": true,
+    "strategy": "alternateContentOrArchive"
+  },
+  "exitState": {
+    "nextSceneId": "A2-01"
+  },
+  "notes": "玩家头像首次同步侵蚀"
+}

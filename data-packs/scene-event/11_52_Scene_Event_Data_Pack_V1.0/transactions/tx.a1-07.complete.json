@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "1.0.0",
+  "transactionId": "tx.a1-07.complete",
+  "atomic": true,
+  "idempotencyKey": "trigger.a1-07.complete",
+  "actions": [
+    {
+      "type": "completeScene",
+      "sceneId": "A1-07"
+    },
+    {
+      "type": "satisfyGate",
+      "gateId": "G3"
+    },
+    {
+      "type": "createCheckpoint",
+      "checkpointId": "checkpoint.A1-07"
+    },
+    {
+      "type": "setAnchorState",
+      "subjectId": "player",
+      "anchorType": "face",
+      "value": "eroding"
+    }
+  ],
+  "rollbackPolicy": "allOrNothing"
+}

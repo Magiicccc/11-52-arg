@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "1.0.0",
+  "triggerId": "trigger.a1-01.complete",
+  "enabled": true,
+  "once": true,
+  "priority": 100,
+  "when": {
+    "eventType": "settings.account.viewed",
+    "sceneId": "A1-01"
+  },
+  "conditions": {
+    "op": "all",
+    "conditions": [
+      {
+        "op": "sceneActive",
+        "sceneId": "A1-01"
+      },
+      {
+        "op": "triggerNotConsumed",
+        "triggerId": "trigger.a1-01.complete"
+      }
+    ]
+  },
+  "transactionRef": "tx.a1-01.complete",
+  "responseSource": "A"
+}

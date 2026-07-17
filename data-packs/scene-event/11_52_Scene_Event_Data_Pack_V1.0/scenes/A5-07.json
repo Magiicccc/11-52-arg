@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0.0",
+  "sceneId": "A5-07",
+  "title": "执行结局判定与余波",
+  "order": 48,
+  "act": "A5",
+  "correctionStage": "R5",
+  "entryConditions": [
+    {
+      "op": "sceneCompleted",
+      "sceneId": "A5-06"
+    }
+  ],
+  "completionPolicy": "explicitTrigger",
+  "gatesSatisfied": [],
+  "contentRefs": [
+    "ending.distributed_witness",
+    "ending.final_state"
+  ],
+  "puzzleRefs": [
+    "PZ-030"
+  ],
+  "triggerRefs": [
+    "trigger.a5-07.complete"
+  ],
+  "checkpoint": true,
+  "responseSource": "A",
+  "fallbackPolicy": {
+    "required": true,
+    "strategy": "alternateContentOrArchive"
+  },
+  "exitState": {
+    "nextSceneId": null
+  },
+  "notes": "执行结局判定与余波"
+}

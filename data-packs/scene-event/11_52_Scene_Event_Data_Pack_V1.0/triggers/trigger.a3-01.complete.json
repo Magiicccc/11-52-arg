@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "1.0.0",
+  "triggerId": "trigger.a3-01.complete",
+  "enabled": true,
+  "once": true,
+  "priority": 100,
+  "when": {
+    "eventType": "coordinates.assembled",
+    "sceneId": "A3-01"
+  },
+  "conditions": {
+    "op": "all",
+    "conditions": [
+      {
+        "op": "sceneActive",
+        "sceneId": "A3-01"
+      },
+      {
+        "op": "triggerNotConsumed",
+        "triggerId": "trigger.a3-01.complete"
+      }
+    ]
+  },
+  "transactionRef": "tx.a3-01.complete",
+  "responseSource": "A"
+}

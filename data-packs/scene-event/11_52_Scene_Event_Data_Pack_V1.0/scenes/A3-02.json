@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "1.0.0",
+  "sceneId": "A3-02",
+  "title": "查看百度地图真实地点",
+  "order": 23,
+  "act": "A3",
+  "correctionStage": "R3",
+  "entryConditions": [
+    {
+      "op": "sceneCompleted",
+      "sceneId": "A3-01"
+    }
+  ],
+  "completionPolicy": "explicitTrigger",
+  "gatesSatisfied": [],
+  "contentRefs": [
+    "map.loc_river_edu_old_01"
+  ],
+  "puzzleRefs": [],
+  "triggerRefs": [
+    "trigger.a3-02.complete"
+  ],
+  "checkpoint": false,
+  "responseSource": "A",
+  "fallbackPolicy": {
+    "required": true,
+    "strategy": "alternateContentOrArchive"
+  },
+  "exitState": {
+    "nextSceneId": "A3-03"
+  },
+  "notes": "查看百度地图真实地点"
+}

@@ -1,0 +1,49 @@
+[
+  {
+    "endingId": "ending.identity_replacement",
+    "title": "身份替代",
+    "route": "centralized_return",
+    "conditions": {
+      "all": [
+        "return.activeWitness==true",
+        "return.centralImportCommitted==true"
+      ]
+    },
+    "finalScene": "A5-07",
+    "worldPatch": "ending.identity_replacement.patch",
+    "nextRun": "W1"
+  },
+  {
+    "endingId": "ending.keep_panbowen",
+    "title": "保留潘博文",
+    "route": "keep_current_identity",
+    "conditions": {
+      "all": [
+        "network.syncCommitted==true",
+        "return.centralImportCommitted==false",
+        "pb.keepRequestAccepted==true"
+      ]
+    },
+    "finalScene": "A5-07",
+    "worldPatch": "ending.keep_panbowen.patch",
+    "nextRun": "W1"
+  },
+  {
+    "endingId": "ending.distributed_witness",
+    "title": "分布式见证",
+    "route": "distributed_reconciliation",
+    "conditions": {
+      "all": [
+        "return.activeWitness==false",
+        "witness.independentGroups>=7",
+        "witness.mediaTypes>=3",
+        "witness.shenHuman>=2",
+        "witness.playerHuman>=2",
+        "witness.sourceConcentration<0.40"
+      ]
+    },
+    "finalScene": "A5-07",
+    "worldPatch": "ending.distributed_witness.patch",
+    "nextRun": "W0_epilogue"
+  }
+]

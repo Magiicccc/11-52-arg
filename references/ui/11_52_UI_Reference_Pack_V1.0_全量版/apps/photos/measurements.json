@@ -1,0 +1,41 @@
+{
+  "targetViewport": {
+    "width": 402,
+    "height": 874,
+    "unit": "css_px"
+  },
+  "secondaryViewport": {
+    "width": 440,
+    "height": 956,
+    "unit": "css_px"
+  },
+  "globalIOSTokens": {
+    "statusBarNominal": 59,
+    "bottomSafeAreaNominal": 34,
+    "minimumTouchTarget": 44
+  },
+  "sourceImages": [
+    {
+      "refId": "PHOTOS26-LIB-01",
+      "pixelSize": "490x1008",
+      "path": "apps/photos/raw/PHOTOS26-LIB-01__PHOTOS26_01_library_collections.png"
+    },
+    {
+      "refId": "PHOTOS26-TIME-01",
+      "pixelSize": "490x1008",
+      "path": "apps/photos/raw/PHOTOS26-TIME-01__PHOTOS26_02_library_years_months_all.png"
+    },
+    {
+      "refId": "PHOTOS26-DETAIL-01",
+      "pixelSize": "490x1008",
+      "path": "apps/photos/raw/PHOTOS26-DETAIL-01__PHOTOS26_03_photo_detail.png"
+    },
+    {
+      "refId": "PHOTOS26-INFO-01",
+      "pixelSize": "490x1008",
+      "path": "apps/photos/raw/PHOTOS26-INFO-01__PHOTOS26_04_metadata_info.png"
+    }
+  ],
+  "measurementRule": "以raw截图的可见像素几何为准；比例缩放到402×874后测量。无精确直图状态必须复用同App已测组件。",
+  "doNotInferFromWordThumbnail": true
+}

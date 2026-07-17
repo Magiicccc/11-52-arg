@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0.0",
+  "sceneId": "A4-07",
+  "title": "播放2026-07-14手机交付视频",
+  "order": 38,
+  "act": "A4",
+  "correctionStage": "R4",
+  "entryConditions": [
+    {
+      "op": "sceneCompleted",
+      "sceneId": "A4-06"
+    }
+  ],
+  "completionPolicy": "explicitTrigger",
+  "gatesSatisfied": [
+    "G7"
+  ],
+  "contentRefs": [
+    "video.handover.61_2s"
+  ],
+  "puzzleRefs": [
+    "PZ-020"
+  ],
+  "triggerRefs": [
+    "trigger.a4-07.complete"
+  ],
+  "checkpoint": true,
+  "responseSource": "A",
+  "fallbackPolicy": {
+    "required": true,
+    "strategy": "alternateContentOrArchive"
+  },
+  "exitState": {
+    "nextSceneId": "A4-08"
+  },
+  "notes": "播放2026-07-14手机交付视频"
+}

@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0.0",
+  "sceneId": "A1-04",
+  "title": "发现第四张人脸",
+  "order": 7,
+  "act": "A1",
+  "correctionStage": "R1",
+  "entryConditions": [
+    {
+      "op": "sceneCompleted",
+      "sceneId": "A1-03"
+    }
+  ],
+  "completionPolicy": "explicitTrigger",
+  "gatesSatisfied": [],
+  "contentRefs": [
+    "photo.group.face4.r0",
+    "photo.group.face4.r2"
+  ],
+  "puzzleRefs": [
+    "PZ-003"
+  ],
+  "triggerRefs": [
+    "trigger.a1-04.complete"
+  ],
+  "checkpoint": false,
+  "responseSource": "A",
+  "fallbackPolicy": {
+    "required": true,
+    "strategy": "alternateContentOrArchive"
+  },
+  "exitState": {
+    "nextSceneId": "A1-05"
+  },
+  "notes": "发现第四张人脸"
+}

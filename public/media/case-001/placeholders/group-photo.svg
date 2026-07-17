@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#8ba0a6"/><stop offset="1" stop-color="#33444a"/></linearGradient></defs>
+  <rect width="1200" height="900" fill="url(#g)"/>
+  <rect x="80" y="80" width="1040" height="620" rx="30" fill="#d8d2c4" opacity=".85"/>
+  <rect x="130" y="130" width="940" height="520" rx="20" fill="#9db0a9"/>
+  <circle cx="330" cy="430" r="85" fill="#26343a"/><rect x="245" y="510" width="170" height="220" rx="70" fill="#293a40"/>
+  <circle cx="590" cy="420" r="85" fill="#4b3a32"/><rect x="505" y="500" width="170" height="230" rx="70" fill="#514037"/>
+  <circle cx="850" cy="435" r="85" fill="#2d3644"/><rect x="765" y="515" width="170" height="215" rx="70" fill="#323c4c"/>
+  <circle cx="1030" cy="255" r="34" fill="#1e2427" opacity=".55"/>
+  <text x="70" y="840" fill="#fff" font-size="34" font-family="sans-serif">TEMPORARY STORY MEDIA · 待AI写实母图替换</text>
+</svg>

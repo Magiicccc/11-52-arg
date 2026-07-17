@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0.0",
+  "sceneId": "A5-06",
+  "title": "分离姓名、面孔与社会身份",
+  "order": 47,
+  "act": "A5",
+  "correctionStage": "R5",
+  "entryConditions": [
+    {
+      "op": "sceneCompleted",
+      "sceneId": "A5-05"
+    }
+  ],
+  "completionPolicy": "explicitTrigger",
+  "gatesSatisfied": [],
+  "contentRefs": [
+    "witness.name.company_mail",
+    "witness.face.event_photo"
+  ],
+  "puzzleRefs": [
+    "PZ-029"
+  ],
+  "triggerRefs": [
+    "trigger.a5-06.complete"
+  ],
+  "checkpoint": false,
+  "responseSource": "A",
+  "fallbackPolicy": {
+    "required": true,
+    "strategy": "alternateContentOrArchive"
+  },
+  "exitState": {
+    "nextSceneId": "A5-07"
+  },
+  "notes": "分离姓名、面孔与社会身份"
+}

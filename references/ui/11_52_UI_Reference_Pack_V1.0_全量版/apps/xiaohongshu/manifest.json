@@ -1,0 +1,47 @@
+{
+  "app": "小红书",
+  "slug": "xiaohongshu",
+  "category": "社区支持",
+  "priority": "B",
+  "role": "沈川生活人格、发布内容、评论线索和账号修正。",
+  "referenceCount": 8,
+  "referenceIds": [
+    "XHS-DISCOVER-01",
+    "XHS-POST-01",
+    "XHS-VIDEO-01",
+    "XHS-CHAT-01",
+    "XHS-PUBLISH-01",
+    "XHS-PROFILE-01",
+    "XHS-PUBLISH-02",
+    "XHS-PROFILE-02"
+  ],
+  "requiredStates": [
+    "发现双列流",
+    "关注流",
+    "搜索",
+    "笔记详情",
+    "多图查看",
+    "评论/楼中楼",
+    "个人主页",
+    "发布入口",
+    "草稿箱",
+    "浏览历史",
+    "通知/私信",
+    "账号恢复"
+  ],
+  "interactionContract": [
+    "推荐流、笔记、评论、点赞、收藏、分享、主页和草稿必须真正可操作。",
+    "普通生活内容占多数，异常内容不得一眼显得为谜题布置。"
+  ],
+  "contentInjection": [
+    "注入“川流档案”账号、咖啡与城市散步、旧雨17评论、417线索和账号归属修正。"
+  ],
+  "officialSource": "https://apps.apple.com/cn/app/%E5%B0%8F%E7%BA%A2%E4%B9%A6/id741292507",
+  "target": {
+    "viewport": "402x874",
+    "os": "iOS 26.5.2",
+    "language": "简体中文",
+    "appearance": "浅色模式"
+  },
+  "authority": "本目录真实截图优先；没有精确截图的状态只允许从同一App参考组件派生，不允许跨App猜测。"
+}

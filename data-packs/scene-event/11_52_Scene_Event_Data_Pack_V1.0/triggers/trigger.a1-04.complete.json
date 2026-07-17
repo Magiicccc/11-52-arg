@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "1.0.0",
+  "triggerId": "trigger.a1-04.complete",
+  "enabled": true,
+  "once": true,
+  "priority": 100,
+  "when": {
+    "eventType": "photo.region.inspected",
+    "sceneId": "A1-04"
+  },
+  "conditions": {
+    "op": "all",
+    "conditions": [
+      {
+        "op": "sceneActive",
+        "sceneId": "A1-04"
+      },
+      {
+        "op": "triggerNotConsumed",
+        "triggerId": "trigger.a1-04.complete"
+      }
+    ]
+  },
+  "transactionRef": "tx.a1-04.complete",
+  "responseSource": "A"
+}

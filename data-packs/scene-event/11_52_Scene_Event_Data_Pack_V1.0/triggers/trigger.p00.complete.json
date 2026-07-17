@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "1.0.0",
+  "triggerId": "trigger.p00.complete",
+  "enabled": true,
+  "once": true,
+  "priority": 100,
+  "when": {
+    "eventType": "device.player.opened",
+    "sceneId": "P00"
+  },
+  "conditions": {
+    "op": "all",
+    "conditions": [
+      {
+        "op": "sceneActive",
+        "sceneId": "P00"
+      },
+      {
+        "op": "triggerNotConsumed",
+        "triggerId": "trigger.p00.complete"
+      }
+    ]
+  },
+  "transactionRef": "tx.p00.complete",
+  "responseSource": "A"
+}

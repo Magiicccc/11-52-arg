@@ -1,0 +1,224 @@
+[
+  {
+    "id": "P00",
+    "order": 0,
+    "prerequisites": [],
+    "gatesSatisfied": [],
+    "contentIds": [],
+    "triggerIds": []
+  },
+  {
+    "id": "P01",
+    "order": 1,
+    "prerequisites": [
+      "P00"
+    ],
+    "gatesSatisfied": [],
+    "contentIds": [],
+    "triggerIds": []
+  },
+  {
+    "id": "P02",
+    "order": 2,
+    "prerequisites": [
+      "P01"
+    ],
+    "gatesSatisfied": [],
+    "contentIds": [],
+    "triggerIds": []
+  },
+  {
+    "id": "P03",
+    "order": 3,
+    "prerequisites": [
+      "P02"
+    ],
+    "gatesSatisfied": [],
+    "contentIds": [],
+    "triggerIds": [],
+    "checkpointId": "checkpoint.P03"
+  },
+  {
+    "id": "A1-01",
+    "order": 4,
+    "prerequisites": [
+      "P03"
+    ],
+    "gatesSatisfied": [],
+    "contentIds": [],
+    "triggerIds": []
+  },
+  {
+    "id": "A1-02",
+    "order": 5,
+    "prerequisites": [
+      "A1-01"
+    ],
+    "gatesSatisfied": [],
+    "contentIds": [],
+    "triggerIds": []
+  },
+  {
+    "id": "A1-03",
+    "order": 6,
+    "prerequisites": [
+      "A1-02"
+    ],
+    "gatesSatisfied": [],
+    "contentIds": [],
+    "triggerIds": []
+  },
+  {
+    "id": "A1-04",
+    "order": 7,
+    "prerequisites": [
+      "A1-03"
+    ],
+    "gatesSatisfied": [],
+    "contentIds": [],
+    "triggerIds": []
+  },
+  {
+    "id": "A1-05",
+    "order": 8,
+    "prerequisites": [
+      "A1-04"
+    ],
+    "gatesSatisfied": [],
+    "contentIds": [],
+    "triggerIds": []
+  },
+  {
+    "id": "A1-06",
+    "order": 9,
+    "prerequisites": [
+      "A1-05"
+    ],
+    "gatesSatisfied": [],
+    "contentIds": [],
+    "triggerIds": []
+  },
+  {
+    "id": "A1-07",
+    "order": 10,
+    "prerequisites": [
+      "A1-06"
+    ],
+    "gatesSatisfied": [],
+    "contentIds": [],
+    "triggerIds": [],
+    "checkpointId": "checkpoint.A1-07"
+  },
+  {
+    "id": "A2-01",
+    "order": 11,
+    "prerequisites": [
+      "A1-07"
+    ],
+    "gatesSatisfied": [],
+    "contentIds": [],
+    "triggerIds": []
+  },
+  {
+    "id": "A2-02",
+    "order": 12,
+    "prerequisites": [
+      "A2-01"
+    ],
+    "gatesSatisfied": [],
+    "contentIds": [],
+    "triggerIds": []
+  },
+  {
+    "id": "A2-03",
+    "order": 13,
+    "prerequisites": [
+      "A2-02"
+    ],
+    "gatesSatisfied": [],
+    "contentIds": [],
+    "triggerIds": []
+  },
+  {
+    "id": "A2-04",
+    "order": 14,
+    "prerequisites": [
+      "A2-03"
+    ],
+    "gatesSatisfied": [],
+    "contentIds": [],
+    "triggerIds": []
+  },
+  {
+    "id": "A2-05",
+    "order": 15,
+    "prerequisites": [
+      "A2-04"
+    ],
+    "gatesSatisfied": [],
+    "contentIds": [],
+    "triggerIds": []
+  },
+  {
+    "id": "A2-06",
+    "order": 16,
+    "prerequisites": [
+      "A2-05"
+    ],
+    "gatesSatisfied": [],
+    "contentIds": [],
+    "triggerIds": []
+  },
+  {
+    "id": "A2-07",
+    "order": 17,
+    "prerequisites": [
+      "A2-06"
+    ],
+    "gatesSatisfied": [],
+    "contentIds": [],
+    "triggerIds": []
+  },
+  {
+    "id": "A2-08",
+    "order": 18,
+    "prerequisites": [
+      "A2-07"
+    ],
+    "gatesSatisfied": [],
+    "contentIds": [],
+    "triggerIds": [],
+    "checkpointId": "checkpoint.A2-08"
+  },
+  {
+    "id": "A2-09",
+    "order": 19,
+    "prerequisites": [
+      "A2-08"
+    ],
+    "gatesSatisfied": [],
+    "contentIds": [],
+    "triggerIds": []
+  },
+  {
+    "id": "A2-10",
+    "order": 20,
+    "prerequisites": [
+      "A2-09"
+    ],
+    "gatesSatisfied": [],
+    "contentIds": [],
+    "triggerIds": []
+  },
+  {
+    "id": "A2-11",
+    "order": 21,
+    "prerequisites": [
+      "A2-10"
+    ],
+    "gatesSatisfied": [],
+    "contentIds": [],
+    "triggerIds": [],
+    "checkpointId": "checkpoint.A2-11"
+  }
+]

@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0.0",
+  "sceneId": "A1-02",
+  "title": "恢复沈川姓名",
+  "order": 5,
+  "act": "A1",
+  "correctionStage": "R1",
+  "entryConditions": [
+    {
+      "op": "sceneCompleted",
+      "sceneId": "A1-01"
+    }
+  ],
+  "completionPolicy": "explicitTrigger",
+  "gatesSatisfied": [
+    "G2"
+  ],
+  "contentRefs": [
+    "settings.owner.fragment",
+    "voice.shen.unlabeled",
+    "mail.work.shen"
+  ],
+  "puzzleRefs": [
+    "PZ-002"
+  ],
+  "triggerRefs": [
+    "trigger.a1-02.complete"
+  ],
+  "checkpoint": false,
+  "responseSource": "A",
+  "fallbackPolicy": {
+    "required": true,
+    "strategy": "alternateContentOrArchive"
+  },
+  "exitState": {
+    "nextSceneId": "A1-03"
+  },
+  "notes": "恢复沈川姓名"
+}

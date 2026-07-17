@@ -1,0 +1,38 @@
+[
+  {
+    "id": "media.placeholder.group_photo",
+    "type": "image",
+    "file": "/media/case-001/placeholders/group-photo.svg",
+    "sourceMode": "generated",
+    "personReferenceIds": [],
+    "locationReferenceIds": [],
+    "correctionVariant": "R0",
+    "qa": {
+      "continuity": "pending",
+      "artifactCheck": "pending",
+      "textAndLogoCheck": "pending"
+    },
+    "fallback": {
+      "type": "text",
+      "contentId": "photo.shenchuan.group.01"
+    }
+  },
+  {
+    "id": "media.placeholder.frame417",
+    "type": "image",
+    "file": "/media/case-001/placeholders/corridor-frame-417.svg",
+    "sourceMode": "generated",
+    "personReferenceIds": [],
+    "locationReferenceIds": [],
+    "correctionVariant": "R0",
+    "qa": {
+      "continuity": "pending",
+      "artifactCheck": "pending",
+      "textAndLogoCheck": "pending"
+    },
+    "fallback": {
+      "type": "text",
+      "contentId": "video.corridor.frame417"
+    }
+  }
+]

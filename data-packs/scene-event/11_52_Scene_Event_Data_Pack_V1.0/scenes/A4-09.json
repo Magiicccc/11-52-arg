@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0.0",
+  "sceneId": "A4-09",
+  "title": "理解备份不是见证",
+  "order": 40,
+  "act": "A4",
+  "correctionStage": "R4",
+  "entryConditions": [
+    {
+      "op": "sceneCompleted",
+      "sceneId": "A4-08"
+    }
+  ],
+  "completionPolicy": "explicitTrigger",
+  "gatesSatisfied": [
+    "G8"
+  ],
+  "contentRefs": [
+    "note.backup_not_witness"
+  ],
+  "puzzleRefs": [
+    "PZ-022"
+  ],
+  "triggerRefs": [
+    "trigger.a4-09.complete"
+  ],
+  "checkpoint": false,
+  "responseSource": "A",
+  "fallbackPolicy": {
+    "required": true,
+    "strategy": "alternateContentOrArchive"
+  },
+  "exitState": {
+    "nextSceneId": "A4-10"
+  },
+  "notes": "理解备份不是见证"
+}

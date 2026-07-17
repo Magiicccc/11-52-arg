@@ -1,0 +1,32 @@
+{
+  "app": "时钟",
+  "slug": "clock",
+  "category": "环境/工具",
+  "priority": "C",
+  "role": "世界时钟、闹钟、秒表和计时器。",
+  "referenceCount": 1,
+  "referenceIds": [
+    "IOS26-CLOCK-01"
+  ],
+  "requiredStates": [
+    "世界时钟",
+    "闹钟",
+    "秒表",
+    "计时器",
+    "新增/编辑闹钟"
+  ],
+  "interactionContract": [
+    "计时器和秒表真正运行；闹钟可开关。"
+  ],
+  "contentInjection": [
+    "注入11:52闹钟、历史计时和普通工具内容。"
+  ],
+  "officialSource": "https://support.apple.com/zh-cn/guide/iphone/welcome/ios",
+  "target": {
+    "viewport": "402x874",
+    "os": "iOS 26.5.2",
+    "language": "简体中文",
+    "appearance": "浅色模式"
+  },
+  "authority": "本目录真实截图优先；没有精确截图的状态只允许从同一App参考组件派生，不允许跨App猜测。"
+}

@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.0.0",
+  "sceneId": "A3-09",
+  "title": "玩家手机家庭与地点锚点侵蚀",
+  "order": 30,
+  "act": "A3",
+  "correctionStage": "R3",
+  "entryConditions": [
+    {
+      "op": "sceneCompleted",
+      "sceneId": "A3-08"
+    }
+  ],
+  "completionPolicy": "explicitTrigger",
+  "gatesSatisfied": [],
+  "contentRefs": [
+    "player.mom.relationship.r2",
+    "player.map.home.r2"
+  ],
+  "puzzleRefs": [],
+  "triggerRefs": [
+    "trigger.a3-09.complete"
+  ],
+  "checkpoint": false,
+  "responseSource": "A",
+  "fallbackPolicy": {
+    "required": true,
+    "strategy": "alternateContentOrArchive"
+  },
+  "exitState": {
+    "nextSceneId": "A3-10"
+  },
+  "notes": "玩家手机家庭与地点锚点侵蚀"
+}

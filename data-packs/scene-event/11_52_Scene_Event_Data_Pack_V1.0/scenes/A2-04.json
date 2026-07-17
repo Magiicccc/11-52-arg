@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "1.0.0",
+  "sceneId": "A2-04",
+  "title": "进入知乎404",
+  "order": 14,
+  "act": "A2",
+  "correctionStage": "R2",
+  "entryConditions": [
+    {
+      "op": "sceneCompleted",
+      "sceneId": "A2-03"
+    }
+  ],
+  "completionPolicy": "explicitTrigger",
+  "gatesSatisfied": [],
+  "contentRefs": [
+    "zhihu.answer.404"
+  ],
+  "puzzleRefs": [],
+  "triggerRefs": [
+    "trigger.a2-04.complete"
+  ],
+  "checkpoint": false,
+  "responseSource": "A",
+  "fallbackPolicy": {
+    "required": true,
+    "strategy": "alternateContentOrArchive"
+  },
+  "exitState": {
+    "nextSceneId": "A2-05"
+  },
+  "notes": "进入知乎404"
+}

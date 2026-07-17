@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "1.0.0",
+  "triggerId": "trigger.a3-03.complete",
+  "enabled": true,
+  "once": true,
+  "priority": 100,
+  "when": {
+    "eventType": "photo.site.series.opened",
+    "sceneId": "A3-03"
+  },
+  "conditions": {
+    "op": "all",
+    "conditions": [
+      {
+        "op": "sceneActive",
+        "sceneId": "A3-03"
+      },
+      {
+        "op": "triggerNotConsumed",
+        "triggerId": "trigger.a3-03.complete"
+      }
+    ]
+  },
+  "transactionRef": "tx.a3-03.complete",
+  "responseSource": "A"
+}

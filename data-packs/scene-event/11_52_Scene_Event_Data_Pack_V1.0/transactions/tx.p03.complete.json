@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "1.0.0",
+  "transactionId": "tx.p03.complete",
+  "atomic": true,
+  "idempotencyKey": "trigger.p03.complete",
+  "actions": [
+    {
+      "type": "completeScene",
+      "sceneId": "P03"
+    },
+    {
+      "type": "satisfyGate",
+      "gateId": "G1"
+    },
+    {
+      "type": "createCheckpoint",
+      "checkpointId": "checkpoint.P03"
+    }
+  ],
+  "rollbackPolicy": "allOrNothing"
+}

@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0.0",
+  "sceneId": "A5-04",
+  "title": "分散声音并保护玩家",
+  "order": 45,
+  "act": "A5",
+  "correctionStage": "R5",
+  "entryConditions": [
+    {
+      "op": "sceneCompleted",
+      "sceneId": "A5-03"
+    }
+  ],
+  "completionPolicy": "explicitTrigger",
+  "gatesSatisfied": [],
+  "contentRefs": [
+    "witness.voice.chenyu",
+    "witness.player.axu",
+    "witness.player.father"
+  ],
+  "puzzleRefs": [
+    "PZ-027"
+  ],
+  "triggerRefs": [
+    "trigger.a5-04.complete"
+  ],
+  "checkpoint": false,
+  "responseSource": "A",
+  "fallbackPolicy": {
+    "required": true,
+    "strategy": "alternateContentOrArchive"
+  },
+  "exitState": {
+    "nextSceneId": "A5-05"
+  },
+  "notes": "分散声音并保护玩家"
+}

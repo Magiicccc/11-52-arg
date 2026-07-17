@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "1.0.0",
+  "transactionId": "tx.a4-07.complete",
+  "atomic": true,
+  "idempotencyKey": "trigger.a4-07.complete",
+  "actions": [
+    {
+      "type": "completeScene",
+      "sceneId": "A4-07"
+    },
+    {
+      "type": "satisfyGate",
+      "gateId": "G7"
+    },
+    {
+      "type": "createCheckpoint",
+      "checkpointId": "checkpoint.A4-07"
+    }
+  ],
+  "rollbackPolicy": "allOrNothing"
+}

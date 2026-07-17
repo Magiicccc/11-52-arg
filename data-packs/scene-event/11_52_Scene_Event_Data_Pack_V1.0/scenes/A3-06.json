@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "1.0.0",
+  "sceneId": "A3-06",
+  "title": "联系周岚",
+  "order": 27,
+  "act": "A3",
+  "correctionStage": "R3",
+  "entryConditions": [
+    {
+      "op": "sceneCompleted",
+      "sceneId": "A3-05"
+    }
+  ],
+  "completionPolicy": "explicitTrigger",
+  "gatesSatisfied": [],
+  "contentRefs": [
+    "wechat.zhoulan.initial"
+  ],
+  "puzzleRefs": [],
+  "triggerRefs": [
+    "trigger.a3-06.complete"
+  ],
+  "checkpoint": false,
+  "responseSource": "H",
+  "fallbackPolicy": {
+    "required": true,
+    "strategy": "alternateContentOrArchive"
+  },
+  "exitState": {
+    "nextSceneId": "A3-07"
+  },
+  "notes": "联系周岚"
+}

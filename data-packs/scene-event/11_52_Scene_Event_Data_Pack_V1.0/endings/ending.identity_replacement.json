@@ -1,0 +1,14 @@
+{
+  "endingId": "ending.identity_replacement",
+  "title": "身份替代",
+  "route": "centralized_return",
+  "conditions": {
+    "all": [
+      "return.activeWitness==true",
+      "return.centralImportCommitted==true"
+    ]
+  },
+  "finalScene": "A5-07",
+  "worldPatch": "ending.identity_replacement.patch",
+  "nextRun": "W1"
+}

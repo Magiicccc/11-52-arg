@@ -1,0 +1,62 @@
+[
+  {
+    "id": "wf.hangzhou.daily",
+    "category": "location",
+    "statement": "2026年沈川与玩家都生活在杭州，日常内容应体现真实城市节奏。",
+    "supportContentIds": []
+  },
+  {
+    "id": "wf.shenchuan.job",
+    "category": "profession",
+    "statement": "沈川是互联网产品用户研究员，习惯整理版本、访谈记录和证据来源。",
+    "supportContentIds": []
+  },
+  {
+    "id": "wf.shenchuan.family",
+    "category": "relationship",
+    "statement": "周岚是沈川母亲，长期用生活化提醒表达关心。",
+    "supportContentIds": []
+  },
+  {
+    "id": "wf.player.family",
+    "category": "relationship",
+    "statement": "玩家拥有正常且鲜活的家庭关系，后续修正会侵蚀这些关系。",
+    "supportContentIds": []
+  },
+  {
+    "id": "wf.2013.pb",
+    "category": "history",
+    "statement": "2013年4月25日11:52发生潘博文断开事件。",
+    "supportContentIds": []
+  },
+  {
+    "id": "wf.2023.meeting",
+    "category": "chronology",
+    "statement": "2023年9月17日沈川与玩家第一次线下见面。",
+    "supportContentIds": []
+  },
+  {
+    "id": "wf.device.offline",
+    "category": "technology",
+    "statement": "调查手机关闭云端同步，保留了未完全修正的本地内容。",
+    "supportContentIds": []
+  },
+  {
+    "id": "wf.floor417",
+    "category": "internet",
+    "statement": "同一旧帖在不同缓存中呈现416、417、418楼不一致。",
+    "supportContentIds": []
+  },
+  {
+    "id": "wf.daily.coffee",
+    "category": "daily",
+    "statement": "桥下咖啡是沈川与玩家建立现实关系的生活地点。",
+    "supportContentIds": []
+  },
+  {
+    "id": "wf.oldpark",
+    "category": "location",
+    "statement": "旧园区是沈川后期进行现实地点比对的公共区域。",
+    "supportContentIds": []
+  }
+]

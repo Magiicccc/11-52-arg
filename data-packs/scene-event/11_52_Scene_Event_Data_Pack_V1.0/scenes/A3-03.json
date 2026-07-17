@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.0.0",
+  "sceneId": "A3-03",
+  "title": "打开沈川现场照片",
+  "order": 24,
+  "act": "A3",
+  "correctionStage": "R3",
+  "entryConditions": [
+    {
+      "op": "sceneCompleted",
+      "sceneId": "A3-02"
+    }
+  ],
+  "completionPolicy": "explicitTrigger",
+  "gatesSatisfied": [],
+  "contentRefs": [
+    "photo.site.series.01-12"
+  ],
+  "puzzleRefs": [
+    "PZ-011"
+  ],
+  "triggerRefs": [
+    "trigger.a3-03.complete"
+  ],
+  "checkpoint": false,
+  "responseSource": "A",
+  "fallbackPolicy": {
+    "required": true,
+    "strategy": "alternateContentOrArchive"
+  },
+  "exitState": {
+    "nextSceneId": "A3-04"
+  },
+  "notes": "打开沈川现场照片"
+}

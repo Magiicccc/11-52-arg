@@ -1,0 +1,151 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://11-52.local/schema/narrative-context.json",
+  "title": "NarrativeContextRegistry",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "worldFacts",
+    "characterTraits",
+    "relationshipBeats",
+    "continuityLinks"
+  ],
+  "properties": {
+    "worldFacts": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/worldFact"
+      }
+    },
+    "characterTraits": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/characterTrait"
+      }
+    },
+    "relationshipBeats": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/relationshipBeat"
+      }
+    },
+    "continuityLinks": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/continuityLink"
+      }
+    }
+  },
+  "$defs": {
+    "worldFact": {
+      "type": "object",
+      "required": [
+        "id",
+        "category",
+        "statement"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "category": {
+          "type": "string"
+        },
+        "statement": {
+          "type": "string"
+        },
+        "supportContentIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "characterTrait": {
+      "type": "object",
+      "required": [
+        "id",
+        "actorId",
+        "statement"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "actorId": {
+          "type": "string"
+        },
+        "statement": {
+          "type": "string"
+        },
+        "supportContentIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "relationshipBeat": {
+      "type": "object",
+      "required": [
+        "id",
+        "actorIds",
+        "phase",
+        "statement"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "actorIds": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "type": "string"
+          }
+        },
+        "phase": {
+          "type": "string"
+        },
+        "statement": {
+          "type": "string"
+        },
+        "supportContentIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "continuityLink": {
+      "type": "object",
+      "required": [
+        "id",
+        "kind",
+        "canonicalValue"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "kind": {
+          "type": "string"
+        },
+        "canonicalValue": {},
+        "contentIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

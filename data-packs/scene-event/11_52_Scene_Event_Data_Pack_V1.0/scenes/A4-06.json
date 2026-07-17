@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.0.0",
+  "sceneId": "A4-06",
+  "title": "恢复两部设备共同位置",
+  "order": 37,
+  "act": "A4",
+  "correctionStage": "R4",
+  "entryConditions": [
+    {
+      "op": "sceneCompleted",
+      "sceneId": "A4-05"
+    }
+  ],
+  "completionPolicy": "explicitTrigger",
+  "gatesSatisfied": [],
+  "contentRefs": [
+    "map.device_co_location.20260714"
+  ],
+  "puzzleRefs": [
+    "PZ-019"
+  ],
+  "triggerRefs": [
+    "trigger.a4-06.complete"
+  ],
+  "checkpoint": false,
+  "responseSource": "A",
+  "fallbackPolicy": {
+    "required": true,
+    "strategy": "alternateContentOrArchive"
+  },
+  "exitState": {
+    "nextSceneId": "A4-07"
+  },
+  "notes": "恢复两部设备共同位置"
+}

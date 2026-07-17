@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0.0",
+  "sceneId": "P00",
+  "title": "玩家手机日常入口",
+  "order": 0,
+  "act": "P",
+  "correctionStage": "R0",
+  "entryConditions": [],
+  "completionPolicy": "explicitTrigger",
+  "gatesSatisfied": [],
+  "contentRefs": [
+    "message.player.mom.01",
+    "message.player.dad.01",
+    "message.player.axu.01"
+  ],
+  "puzzleRefs": [],
+  "triggerRefs": [
+    "trigger.p00.complete"
+  ],
+  "checkpoint": false,
+  "responseSource": "A",
+  "fallbackPolicy": {
+    "required": true,
+    "strategy": "alternateContentOrArchive"
+  },
+  "exitState": {
+    "nextSceneId": "P01"
+  },
+  "notes": "玩家手机日常入口"
+}

@@ -1,0 +1,38 @@
+﻿assetId,type,sceneRefs,title,baseAssetId,variantStages,sourceRootId,characterRefs,locationRefs,objectRefs,duration,dimensions,clueRole,priority,notes,status
+photo.wallpaper.dinner_4faces.master,still,"P00,A1-03",四人晚餐锁屏壁纸母版,,"R0,R1,R2,R5",src.photo.dinner.original,"char.shenchuan,char.chenyu,char.player",loc.hz.coffee_230917,,,4032x3024,direct,P0,第四人脸需从同一母版局部编辑；构图保持自然。,planned
+photo.coffee.230917.master,still,"P03,A4-02",2023-09-17双杯咖啡与票根,,"R0,R3,R5",src.photo.coffee.original,"char.shenchuan,char.player",loc.hz.coffee_230917,"obj.ticket.230917,obj.coffee_receipt",,4032x3024,supporting,P0,,planned
+photo.blue_mug.window.master,still,"A1-02,A3-07",窗边蓝色搪瓷杯,,"R0,R2,R3",src.photo.blue_mug.shen,,loc.hz.shen_apartment,obj.blue_mug,,3024x4032,supporting,P0,,planned
+photo.old_campus.04,still,"A2-01,A2-08",旧园区第四张门照片,,"R0,R2,R3",src.photo.oldrain.archive,,loc.tj.old_riverside,,,1920x1080,supporting,P0,,planned
+image.oldrain.guard,still,A2-03,旧雨17隐藏页guard.png,,R0,src.oldrain.guard,,,,,1170x2532,supporting,P0,过近人像不是旧雨17正脸；0.4秒闪帧。,planned
+video.oldrain.corridor.master,video,"A2-04,A2-07",旧雨17走廊原始视频,,"R0,R2,R3",src.oldrain.video,,loc.tj.corridor,,20.0s Cfr30,1920x1080,direct,P0,,planned
+image.oldrain.frame417,still,A2-07,走廊视频第417帧,video.oldrain.corridor.master,"R0,R2,R3",src.oldrain.video,char.panbowen,loc.tj.corridor,obj.keyring.pb,,1920x1080,direct,P0,索引417，时间码00:13.900，零基帧编号。,planned
+audio.oldrain.carrier_morse,audio,"A2-04,A2-06",carrier.wav摩斯音频,,R0,src.oldrain.audio,,loc.tj.corridor,obj.keyring.pb,43.0s,,direct,P0,,planned
+avatar.shenchuan.r0,still,A1-01,沈川微信/设置头像,,"R0,R2,R4,R5",src.avatar.shen,char.shenchuan,,,,1024x1024,supporting,P0,,planned
+avatar.chenyu.r0,still,"P02,A1-04",陈屿微信头像,,"R0,R3,R5",src.avatar.chenyu,char.chenyu,,,,1024x1024,none,P0,,planned
+avatar.pb0425.r0,still,"A2-08,A4-10",PB_0425匿名头像,,"R0,R2,R4,R5",src.pb.interface,char.panbowen,,,,1024x1024,supporting,P0,不得使用清晰人脸；用旧钥匙或模糊校徽式裁切。,planned
+photo.a3.site_04.master,still,"A3-02,A3-03",沈川现场相册：服务门向内开启,,"R0,R2,R3,R5",src.shen.site.04,,loc.tj.old_riverside,,,4032x3024,direct,P0,,planned
+photo.a3.site_05.master,still,"A3-02,A3-03",沈川现场相册：二层五扇窗与人影,,"R0,R2,R3,R5",src.shen.site.05,char.panbowen,loc.tj.old_riverside,obj.keyring.pb,,4032x3024,direct,P0,,planned
+photo.a3.site_12.master,still,"A3-02,A3-03",沈川现场相册：夜间封口与第四道门轮廓,,"R0,R2,R3,R5",src.shen.site.12,,loc.tj.old_riverside,,,4032x3024,direct,P0,,planned
+photo.a3.blue_mug.single,still,A3-07,蓝杯单物件盲证照片,,"R0,R2,R3",src.blue_mug.object,,loc.hz.shen_apartment,obj.blue_mug,,3024x4032,direct,P0,,planned
+photo.a3.kitchen_2019,still,A3-07,2019厨房照：沈川左手虎口旧疤,,"R0,R3,R5",src.zhoulan.family.photo,"char.shenchuan,char.zhoulan",loc.zhoulan.kitchen,obj.blue_mug,,4032x3024,direct,P0,,planned
+audio.a3.zhoulan_blue_mug.master,audio,A3-07,周岚蓝杯语音R2母版,,"R2,R3",src.zhoulan.voice,char.zhoulan,loc.zhoulan.kitchen,obj.blue_mug,18.2s,,direct,P0,,planned
+audio.a3.pb_call,audio,A3-05,未知来电：钥匙、两组脚步、羽毛球,,R0,src.pb.call,char.panbowen,loc.tj.corridor,"obj.keyring.pb,obj.ball.badminton",8.0s,,direct,P0,,planned
+video.a3.site_0612.master,video,A3-10,沈川现场短视频,,"R2,R3,R4",src.shen.site.video,"char.shenchuan,char.player",loc.tj.old_riverside,obj.wriststrap.player,26.4s Cfr30,1920x1080,direct,P0,,planned
+video.a4.handoff_0714.master,video,"A4-05,A4-06",2026-07-14手机交付视频,,"R3,R4,R5",src.handoff.0714,"char.shenchuan,char.player,char.panbowen","loc.tj.old_riverside,loc.tj.corridor","obj.phone.investigation,obj.phone.player,obj.wriststrap.player,obj.keyring.pb",61.2s Cfr30,1920x1080,direct,P0,,planned
+image.a4.handoff_frame_01,still,"A4-05,A4-06",沈川确认日期,video.a4.handoff_0714.master,"R3,R4,R5",src.handoff.0714,"char.shenchuan,char.player,char.panbowen",loc.tj.corridor,"obj.wriststrap.player,obj.keyring.pb",,1920x1080,supporting,P0,,planned
+image.a4.handoff_frame_02,still,"A4-05,A4-06",飞行模式与关闭同步,video.a4.handoff_0714.master,"R3,R4,R5",src.handoff.0714,"char.shenchuan,char.player,char.panbowen",loc.tj.corridor,"obj.wriststrap.player,obj.keyring.pb",,1920x1080,supporting,P0,,planned
+image.a4.handoff_frame_03,still,"A4-05,A4-06",手机递向镜头,video.a4.handoff_0714.master,"R3,R4,R5",src.handoff.0714,"char.shenchuan,char.player,char.panbowen",loc.tj.corridor,"obj.wriststrap.player,obj.keyring.pb",,1920x1080,direct,P0,,planned
+image.a4.handoff_frame_04,still,"A4-05,A4-06",玩家袖口与腕带,video.a4.handoff_0714.master,"R3,R4,R5",src.handoff.0714,"char.shenchuan,char.player,char.panbowen",loc.tj.corridor,"obj.wriststrap.player,obj.keyring.pb",,1920x1080,direct,P0,,planned
+image.a4.handoff_frame_05,still,"A4-05,A4-06",第四道门,video.a4.handoff_0714.master,"R3,R4,R5",src.handoff.0714,"char.shenchuan,char.player,char.panbowen",loc.tj.corridor,"obj.wriststrap.player,obj.keyring.pb",,1920x1080,supporting,P0,,planned
+image.a4.handoff_frame_06,still,"A4-05,A4-06",潘博文反向走出,video.a4.handoff_0714.master,"R3,R4,R5",src.handoff.0714,"char.shenchuan,char.player,char.panbowen",loc.tj.corridor,"obj.wriststrap.player,obj.keyring.pb",,1920x1080,direct,P0,,planned
+image.a4.handoff_frame_07,still,"A4-05,A4-06",手机落地,video.a4.handoff_0714.master,"R3,R4,R5",src.handoff.0714,"char.shenchuan,char.player,char.panbowen",loc.tj.corridor,"obj.wriststrap.player,obj.keyring.pb",,1920x1080,supporting,P0,,planned
+image.a4.handoff_frame_08,still,"A4-05,A4-06",最终黑屏前钥匙反光,video.a4.handoff_0714.master,"R3,R4,R5",src.handoff.0714,"char.shenchuan,char.player,char.panbowen",loc.tj.corridor,"obj.wriststrap.player,obj.keyring.pb",,1920x1080,supporting,P0,,planned
+image.a4.player_reflection,still,A4-06,反光高分辨率裁切：保护壳与腕带,video.a4.handoff_0714.master,"R3,R4",src.handoff.0714,char.player,,"obj.phone.player,obj.wriststrap.player",,2048x2048,direct,P0,,planned
+audio.a4.handoff_dialogue,audio,A4-05,交付视频独立音轨,video.a4.handoff_0714.master,"R3,R4,R5",src.handoff.0714,"char.shenchuan,char.player,char.panbowen",loc.tj.corridor,obj.keyring.pb,61.2s,,direct,P0,,planned
+audio.a4.axu_player_name,audio,"A4-09,A5-04",阿序叫出玩家代号的旧语音,,R0,src.axu.voice,"char.axu,char.player",,,7.2s,,direct,P0,,planned
+audio.a5.shen_unlabeled,audio,A5-04,未标姓名的沈川语音,,R0,src.shen.voice.external,char.shenchuan,,,11.6s,,direct,P0,,planned
+scan.a5.birth_booklet_01,scan,A5-05,沈川出生手册封面与姓名页,,R0,src.zhoulan.paper,"char.shenchuan,char.zhoulan",loc.zhoulan.kitchen,obj.birth_booklet,,3000x4000,direct,P0,,planned
+scan.a5.birth_booklet_02,scan,A5-05,入学搬家清单与家庭笔迹,,R0,src.zhoulan.paper,"char.shenchuan,char.zhoulan",loc.zhoulan.kitchen,obj.birth_booklet,,3000x4000,direct,P0,,planned
+photo.a5.university_unnamed,still,A5-06,活动摄影原片：沈川面孔，无姓名,,R0,src.event.photographer,char.shenchuan,,,,6000x4000,direct,P0,,planned
+photo.a5.key_unowned_current,still,A5-07,普通木桌上的无主钥匙,,R0,src.ending.key,,,obj.keyring.pb,,3024x4032,supporting,P0,,planned
+audio.a5.ending_no_number,audio,A5-07,无号码结局余波,,R0,src.ending.audio,"char.shenchuan,char.panbowen",,"obj.keyring.pb,obj.ball.badminton",6.4s,,supporting,P0,,planned

@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "1.0.0",
+  "transactionId": "tx.a5-02.complete",
+  "atomic": true,
+  "idempotencyKey": "trigger.a5-02.complete",
+  "actions": [
+    {
+      "type": "completeScene",
+      "sceneId": "A5-02"
+    }
+  ],
+  "rollbackPolicy": "allOrNothing"
+}

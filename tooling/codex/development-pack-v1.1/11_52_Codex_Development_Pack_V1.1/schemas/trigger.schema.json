@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://11-52.local/schema/trigger.json",
+  "title": "TriggerDefinition",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "enabled",
+    "once",
+    "priority",
+    "when",
+    "conditions",
+    "actions",
+    "responseSource"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "enabled": {
+      "type": "boolean"
+    },
+    "once": {
+      "type": "boolean"
+    },
+    "priority": {
+      "type": "integer"
+    },
+    "when": {
+      "type": "object",
+      "required": [
+        "type"
+      ],
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "targetId": {
+          "type": "string"
+        },
+        "deviceId": {
+          "enum": [
+            "investigation",
+            "player"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "conditions": {
+      "type": "object"
+    },
+    "actions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object"
+      }
+    },
+    "responseSource": {
+      "enum": [
+        "H",
+        "A",
+        "P",
+        "C"
+      ]
+    }
+  }
+}

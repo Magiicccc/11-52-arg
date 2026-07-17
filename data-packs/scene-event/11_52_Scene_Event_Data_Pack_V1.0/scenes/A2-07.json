@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.0.0",
+  "sceneId": "A2-07",
+  "title": "解出FRAME 417",
+  "order": 17,
+  "act": "A2",
+  "correctionStage": "R2",
+  "entryConditions": [
+    {
+      "op": "sceneCompleted",
+      "sceneId": "A2-06"
+    }
+  ],
+  "completionPolicy": "explicitTrigger",
+  "gatesSatisfied": [],
+  "contentRefs": [
+    "puzzle.frame417.answer"
+  ],
+  "puzzleRefs": [
+    "PZ-007"
+  ],
+  "triggerRefs": [
+    "trigger.a2-07.complete"
+  ],
+  "checkpoint": false,
+  "responseSource": "A",
+  "fallbackPolicy": {
+    "required": true,
+    "strategy": "alternateContentOrArchive"
+  },
+  "exitState": {
+    "nextSceneId": "A2-08"
+  },
+  "notes": "解出FRAME 417"
+}

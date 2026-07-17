@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.0.0",
+  "sceneId": "A4-01",
+  "title": "搜索沈川/存档员/230917",
+  "order": 32,
+  "act": "A4",
+  "correctionStage": "R4",
+  "entryConditions": [
+    {
+      "op": "sceneCompleted",
+      "sceneId": "A3-10"
+    }
+  ],
+  "completionPolicy": "explicitTrigger",
+  "gatesSatisfied": [],
+  "contentRefs": [
+    "search.hidden_thread.tokens"
+  ],
+  "puzzleRefs": [
+    "PZ-017"
+  ],
+  "triggerRefs": [
+    "trigger.a4-01.complete"
+  ],
+  "checkpoint": false,
+  "responseSource": "A",
+  "fallbackPolicy": {
+    "required": true,
+    "strategy": "alternateContentOrArchive"
+  },
+  "exitState": {
+    "nextSceneId": "A4-02"
+  },
+  "notes": "搜索沈川/存档员/230917"
+}

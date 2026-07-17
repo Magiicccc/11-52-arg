@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.0.0",
+  "sceneId": "A4-10",
+  "title": "PB_0425部分承认并进入最终选择",
+  "order": 41,
+  "act": "A4",
+  "correctionStage": "R4",
+  "entryConditions": [
+    {
+      "op": "sceneCompleted",
+      "sceneId": "A4-09"
+    }
+  ],
+  "completionPolicy": "explicitTrigger",
+  "gatesSatisfied": [],
+  "contentRefs": [
+    "wechat.pb.partial_admission"
+  ],
+  "puzzleRefs": [
+    "PZ-023"
+  ],
+  "triggerRefs": [
+    "trigger.a4-10.complete"
+  ],
+  "checkpoint": true,
+  "responseSource": "P",
+  "fallbackPolicy": {
+    "required": true,
+    "strategy": "alternateContentOrArchive"
+  },
+  "exitState": {
+    "nextSceneId": "A5-01"
+  },
+  "notes": "PB_0425部分承认并进入最终选择"
+}

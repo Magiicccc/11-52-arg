@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0.0",
+  "sceneId": "A5-03",
+  "title": "恢复网络并保留潘博文路线",
+  "order": 44,
+  "act": "A5",
+  "correctionStage": "R5",
+  "entryConditions": [
+    {
+      "op": "sceneCompleted",
+      "sceneId": "A5-02"
+    }
+  ],
+  "completionPolicy": "explicitTrigger",
+  "gatesSatisfied": [],
+  "contentRefs": [
+    "network.sync.preview",
+    "ending.keep_panbowen"
+  ],
+  "puzzleRefs": [
+    "PZ-026"
+  ],
+  "triggerRefs": [
+    "trigger.a5-03.complete"
+  ],
+  "checkpoint": false,
+  "responseSource": "P",
+  "fallbackPolicy": {
+    "required": true,
+    "strategy": "alternateContentOrArchive"
+  },
+  "exitState": {
+    "nextSceneId": "A5-04"
+  },
+  "notes": "恢复网络并保留潘博文路线"
+}

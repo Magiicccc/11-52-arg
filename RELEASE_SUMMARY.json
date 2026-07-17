@@ -1,0 +1,14 @@
+{
+  "repository": "11_52_Codex_Final_Repository_V1.0",
+  "generatedAt": "2026-07-17",
+  "fileCount": 943,
+  "totalBytes": 108229502,
+  "bibles": 12,
+  "authoritativeVolumes": "1-10 (volume 7 has A3/A4/A5 subvolumes)",
+  "runtimeStatus": "P00-A2-11 playable prototype",
+  "structuredDataStatus": "P00-A5-07 complete",
+  "remainingVolumes": [
+    "11 QA & Playtest",
+    "12 Release & Operations"
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "1.1",
+  "inputs": [
+    {
+      "order": 1,
+      "role": "世界规则",
+      "filename": "11_52_World_Bible_V1.0_第一册_完整定稿.docx",
+      "sha256": "c0b66b44233e74e74b654a8edeb08e25c5784bf9e8bbd89160757a3eb9a71356"
+    },
+    {
+      "order": 2,
+      "role": "剧情正史",
+      "filename": "11_52_Narrative_Bible_V1.1_第二册_日常叙事与生活世界修订版.docx",
+      "sha256": "854d357ad0de13e5825d0c843cf27784c7968fff840230e74098d6a089686698"
+    },
+    {
+      "order": 3,
+      "role": "系统合同",
+      "filename": "11_52_Systems_Bible_V1.3_第三册_内容语义与生活世界修订版.docx",
+      "sha256": "97a015a41a47d68faaf85c806c323d31eed514127065545953293b4ca48ec4c7"
+    },
+    {
+      "order": 4,
+      "role": "内容正文",
+      "filename": "11_52_Content_Bible_V1.2_第四册_日常叙事与生活世界修订版.docx",
+      "sha256": "198ea75811ce1eabd3fd88b09aee6aa2be4239aafd585b31d65c187ea7c055f6"
+    },
+    {
+      "order": 5,
+      "role": "视觉与交互参考",
+      "filename": "11_52_UI_Art_Bible_V1.4_第五册_全量现实界面冻结版.docx",
+      "sha256": "ed2d5d225d440a5ca04415d8460e8489d029003282b132e3d05193153e7947f0"
+    },
+    {
+      "order": 6,
+      "role": "原始视觉事实",
+      "filename": "11_52_UI_Reference_Pack_V1.0_全量冻结版.zip",
+      "sha256": "61cc3df9e2df077043603ad475f4b4824cb3574b6533e3aafb0ed02b56cd7046"
+    }
+  ]
+}

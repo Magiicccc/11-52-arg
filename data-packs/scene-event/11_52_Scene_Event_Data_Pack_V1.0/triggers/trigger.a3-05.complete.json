@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "1.0.0",
+  "triggerId": "trigger.a3-05.complete",
+  "enabled": true,
+  "once": true,
+  "priority": 100,
+  "when": {
+    "eventType": "unknown.call.completed",
+    "sceneId": "A3-05"
+  },
+  "conditions": {
+    "op": "all",
+    "conditions": [
+      {
+        "op": "sceneActive",
+        "sceneId": "A3-05"
+      },
+      {
+        "op": "triggerNotConsumed",
+        "triggerId": "trigger.a3-05.complete"
+      }
+    ]
+  },
+  "transactionRef": "tx.a3-05.complete",
+  "responseSource": "P"
+}

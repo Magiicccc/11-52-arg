@@ -1,0 +1,31 @@
+﻿app,slug,file,source_type,source_url,sha256,pixel_size,asset_status
+微信,wechat,icons/third_party/wechat.png,现实品牌当前分发图标镜像,https://pp.myapp.com/ma_icon/0/icon_10910_1783590847/256,81deba5cedba15436827bbea7380d85ced605368e839b0080a01e96b2fc3ce27,256x256,included_real
+小红书,xiaohongshu,icons/third_party/xiaohongshu.png,现实品牌当前分发图标镜像,https://pp.myapp.com/ma_icon/0/icon_10868231_1784019400/256,71d3c9f475c50039134ef283ccfd18cbea287257a7ee0f4f8944e45e83d4635d,256x256,included_real
+抖音,douyin,icons/third_party/douyin.png,现实品牌当前分发图标镜像,https://pp.myapp.com/ma_icon/0/icon_42350811_1784037787/256,b358c6668821b5d11782cebd7adeb68f7264f1e08a5bfdfe0aed31511b58a117,256x256,included_real
+知乎,zhihu,icons/third_party/zhihu.png,现实品牌当前分发图标镜像,https://pp.myapp.com/ma_icon/0/icon_1272392_1784102397/256,4bac52083c0acabeb6e6bf1795ff6bf414f963de91c3cff660c123db2dcd63cc,256x256,included_real
+百度贴吧,tieba,icons/third_party/tieba.png,现实品牌当前分发图标镜像,https://pp.myapp.com/ma_icon/0/icon_2753_1784184887/256,1abde74318e1ffdae53ff73a4c3fed8eac70cf1a53702df6f5ee66c80f513bea,256x256,included_real
+今日头条,toutiao,icons/third_party/toutiao.png,现实品牌当前分发图标镜像,https://pp.myapp.com/ma_icon/0/icon_213141_1784165230/256,a19f71468536fd6aafbbe67381efd822a6b86654b10abd4b902b5e310dac3fb2,256x256,included_real
+QQ邮箱,qqmail,icons/third_party/qqmail.png,现实品牌当前分发图标镜像,https://pp.myapp.com/ma_icon/0/icon_1129680_1784020087/256,512d606f149423a908ebc5ad4af91840bd2580db8355a484dda973afe50915e6,256x256,included_real
+百度网盘,baidunetdisk,icons/third_party/baidunetdisk.png,现实品牌当前分发图标镜像,https://pp.myapp.com/ma_icon/0/icon_116071_1783564637/256,a647dd0e62a42e0a2a23618fcc1ad293d21389c98d57c3bf6b9b2cc171dd3724,256x256,included_real
+百度地图,baidu_map,icons/third_party/baidu_map.png,现实品牌当前分发图标镜像,https://pp.myapp.com/ma_icon/0/icon_9997_1783645600/256,3b49b526115b2c38f300915850915522f20516d89dab3f18c176ccd9c55a733d,256x256,included_real
+支付宝,alipay,icons/third_party/alipay.png,现实品牌当前分发图标镜像,https://pp.myapp.com/ma_icon/0/icon_5294_1783932017/256,584331550ccf9711b377f8d71e9894bb381c8e9c5f8fd6851b6e63a1aab9e32a,256x256,included_real
+滴滴出行,didi,icons/third_party/didi.png,现实品牌当前分发图标镜像,https://pp.myapp.com/ma_icon/0/icon_288717_1784175077/256,f09414955af1c552f13d283103a1e697e3f1f21d2dcf9e91b37dc2e3d7a2b79f,256x256,included_real
+美团,meituan,icons/third_party/meituan.png,现实品牌当前分发图标镜像,https://pp.myapp.com/ma_icon/0/icon_11109_1784078987/256,477d790a38b0d080882e7df6f916815c23329b657f6bec90a6cbd235a439bdb9,256x256,included_real
+淘宝,taobao,icons/third_party/taobao.png,现实品牌当前分发图标镜像,https://pp.myapp.com/ma_icon/0/icon_5080_1783924197/256,dacfac9d726d6c05fb539738c3110cfa310c88384b86d137140bf812718f3452,256x256,included_real
+网易云音乐,netease_music,icons/third_party/netease_music.png,现实品牌当前分发图标镜像,https://pp.myapp.com/ma_icon/0/icon_1168851_1783413688/256,8b15ccd2a6feb343589b805783bc3976844a779f9321abd5ba558a7036dea990,256x256,included_real
+微信读书,wechat_reading,icons/third_party/wechat_reading.png,现实品牌当前分发图标镜像,https://pp.myapp.com/ma_icon/0/icon_12144239_1782177739/256,cc4fee278e85ded0650edb0df8580ba0446a2d2d953306cfbb83210320aa8082,256x256,included_real
+铁路12306,railway12306,icons/third_party/railway12306.png,现实品牌当前分发图标镜像,https://pp.myapp.com/ma_icon/0/icon_10331030_1784109807/256,ac5a121770535e3c4bec97d10f04c8c1278a5185021e98444eba58015962e7f7,256x256,included_real
+计算器,calculator,icons/system/calculator.png,Apple iOS 26官方图标图谱裁切,https://cdn.mgig.fr/2025/09/mg-8f9f2dce-w1446-w828-w1300.jpg,dc0f93acd884ebb5b822ac86421747452a911fe7efea4c4fbacc09fa067d76cf,100x100,included_real
+日历,calendar,icons/system/calendar.png,Apple iOS 26官方图标图谱裁切,https://cdn.mgig.fr/2025/09/mg-8f9f2dce-w1446-w828-w1300.jpg,79d60f5c8e8a9284c2e0825f02f54019ec27ac7a7e4f240e40a18c6d699b8ad5,100x100,included_real
+相机,camera,icons/system/camera.png,Apple iOS 26官方图标图谱裁切,https://cdn.mgig.fr/2025/09/mg-8f9f2dce-w1446-w828-w1300.jpg,1bfde8af2689a3eb8b801ede62ff3d3d74edf76ac0a1a588bf5b91fa4d992327,100x100,included_real
+时钟,clock,icons/system/clock.png,Apple iOS 26官方图标图谱裁切,https://cdn.mgig.fr/2025/09/mg-8f9f2dce-w1446-w828-w1300.jpg,d5ac6ae3d0c3d10bf487341e858a7434d598968c11f2c21f94559a29c3f81833,100x100,included_real
+指南针,compass,icons/system/compass.png,Apple iOS 26官方图标图谱裁切,https://cdn.mgig.fr/2025/09/mg-8f9f2dce-w1446-w828-w1300.jpg,58a9a5db74df0631160aba44e8f35357305af7d8917be01b5269dcb92e0d651b,100x100,included_real
+文件,files,icons/system/files.png,Apple iOS 26官方图标图谱裁切,https://cdn.mgig.fr/2025/09/mg-8f9f2dce-w1446-w828-w1300.jpg,83bffbe9be0f4a44f72ebaf61ca9fee2e87ff972fb25a84d542d5864c847337b,100x100,included_real
+健康,health,icons/system/health.png,Apple iOS 26官方图标图谱裁切,https://cdn.mgig.fr/2025/09/mg-8f9f2dce-w1446-w828-w1300.jpg,d187079d708e2f11951f1809983de8f5816b6428fb204cbcee7f2ac053674fab,100x100,included_real
+备忘录,notes,icons/system/notes.png,Apple iOS 26官方图标图谱裁切,https://cdn.mgig.fr/2025/09/mg-8f9f2dce-w1446-w828-w1300.jpg,6fac4f57b0d98fce3de821f523f2f733b095401f05d7cfb7ff5fba1648f1ef09,100x100,included_real
+电话,phone,icons/system/phone.png,Apple iOS 26官方图标图谱裁切,https://cdn.mgig.fr/2025/09/mg-8f9f2dce-w1446-w828-w1300.jpg,5ec812b9f62d665c2c9a6ceaf780ddf2cdd59adcead312b7bcf6dca69b1dc861,100x100,included_real
+照片,photos,icons/system/photos.png,Apple iOS 26官方图标图谱裁切,https://cdn.mgig.fr/2025/09/mg-8f9f2dce-w1446-w828-w1300.jpg,5547c82289062bb537911d33dec9c14828f46b0eba590a0d6eea9150e3600c3f,100x100,included_real
+Safari,safari,icons/system/safari.png,Apple iOS 26官方图标图谱裁切,https://cdn.mgig.fr/2025/09/mg-8f9f2dce-w1446-w828-w1300.jpg,8bb8fc3dffefc90348c6ba17bac704dae50bebadc59c90e3911ddaf5442924ea,100x100,included_real
+设置,settings,icons/system/settings.png,Apple iOS 26官方图标图谱裁切,https://cdn.mgig.fr/2025/09/mg-8f9f2dce-w1446-w828-w1300.jpg,8d7f6c791b379fb4262873f629e34548b8b26378a9516e37c61ee87e4a84ed03,100x100,included_real
+语音备忘录,voice_memos,icons/system/voice_memos.png,Apple iOS 26官方图标图谱裁切,https://cdn.mgig.fr/2025/09/mg-8f9f2dce-w1446-w828-w1300.jpg,83b08df173e75880ad9958b96694c49997d8c9b21763fcfeda4e4e304d8fc1e4,100x100,included_real
+天气,weather,icons/system/weather.png,Apple iOS 26官方图标图谱裁切,https://cdn.mgig.fr/2025/09/mg-8f9f2dce-w1446-w828-w1300.jpg,d52fbc899ac9a4d7535a7d2b982f01bf2c84792db335baefbe86ad4fcc6e3f1c,100x100,included_real

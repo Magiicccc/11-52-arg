@@ -1,0 +1,4 @@
+verifyDepsBeforeRun: false
+trustLockfile: true
+minimumReleaseAgeExclude:
+  - vite@8.1.5

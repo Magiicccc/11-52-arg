@@ -1,0 +1,30 @@
+{
+  "app": "指南针",
+  "slug": "compass",
+  "category": "环境/工具",
+  "priority": "C",
+  "role": "方向、经纬度和地点校验。",
+  "referenceCount": 1,
+  "referenceIds": [
+    "COMP26-MAIN-01"
+  ],
+  "requiredStates": [
+    "指南针主界面",
+    "经纬度显示",
+    "水平仪/方向锁定"
+  ],
+  "interactionContract": [
+    "方向显示可随设备模拟或鼠标拖动变化。"
+  ],
+  "contentInjection": [
+    "用于坐标核验和旧园区方向提示，不承担唯一主线。"
+  ],
+  "officialSource": "https://support.apple.com/zh-cn/guide/iphone/welcome/ios",
+  "target": {
+    "viewport": "402x874",
+    "os": "iOS 26.5.2",
+    "language": "简体中文",
+    "appearance": "浅色模式"
+  },
+  "authority": "本目录真实截图优先；没有精确截图的状态只允许从同一App参考组件派生，不允许跨App猜测。"
+}

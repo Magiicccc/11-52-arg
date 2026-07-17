@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0.0",
+  "sceneId": "A3-08",
+  "title": "周岚记忆再次普通化",
+  "order": 29,
+  "act": "A3",
+  "correctionStage": "R3",
+  "entryConditions": [
+    {
+      "op": "sceneCompleted",
+      "sceneId": "A3-07"
+    }
+  ],
+  "completionPolicy": "explicitTrigger",
+  "gatesSatisfied": [],
+  "contentRefs": [
+    "voice.zhoulan.mug.r2",
+    "voice.zhoulan.mug.r3"
+  ],
+  "puzzleRefs": [
+    "PZ-015"
+  ],
+  "triggerRefs": [
+    "trigger.a3-08.complete"
+  ],
+  "checkpoint": false,
+  "responseSource": "C",
+  "fallbackPolicy": {
+    "required": true,
+    "strategy": "alternateContentOrArchive"
+  },
+  "exitState": {
+    "nextSceneId": "A3-09"
+  },
+  "notes": "周岚记忆再次普通化"
+}

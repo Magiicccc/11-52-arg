@@ -1,0 +1,32 @@
+{
+  "app": "计算器",
+  "slug": "calculator",
+  "category": "环境/工具",
+  "priority": "C",
+  "role": "可用计算、换算和部分密码辅助。",
+  "referenceCount": 2,
+  "referenceIds": [
+    "CALC26-SCI-01",
+    "CALC26-CONV-01"
+  ],
+  "requiredStates": [
+    "基础计算",
+    "科学计算",
+    "换算",
+    "历史"
+  ],
+  "interactionContract": [
+    "必须真正计算；禁止仅显示静态按键。"
+  ],
+  "contentInjection": [
+    "可辅助时间戳、坐标和简单数值谜题，但不承担唯一线索。"
+  ],
+  "officialSource": "https://support.apple.com/zh-cn/guide/iphone/welcome/ios",
+  "target": {
+    "viewport": "402x874",
+    "os": "iOS 26.5.2",
+    "language": "简体中文",
+    "appearance": "浅色模式"
+  },
+  "authority": "本目录真实截图优先；没有精确截图的状态只允许从同一App参考组件派生，不允许跨App猜测。"
+}

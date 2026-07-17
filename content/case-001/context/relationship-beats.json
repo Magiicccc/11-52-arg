@@ -1,0 +1,53 @@
+[
+  {
+    "id": "rb.shenchuan.player.meeting",
+    "actorIds": [
+      "actor.shenchuan",
+      "actor.player"
+    ],
+    "phase": "normal",
+    "statement": "两人在2023年9月17日于桥下咖啡第一次线下见面。",
+    "supportContentIds": []
+  },
+  {
+    "id": "rb.shenchuan.chenyu",
+    "actorIds": [
+      "actor.shenchuan",
+      "actor.chenyu"
+    ],
+    "phase": "normal",
+    "statement": "沈川与陈屿是长期朋友，互相熟悉设备与生活习惯。",
+    "supportContentIds": []
+  },
+  {
+    "id": "rb.shenchuan.zhoulan",
+    "actorIds": [
+      "actor.shenchuan",
+      "actor.zhoulan"
+    ],
+    "phase": "normal",
+    "statement": "周岚会持续提醒沈川吃药和回家。",
+    "supportContentIds": []
+  },
+  {
+    "id": "rb.player.parents",
+    "actorIds": [
+      "actor.player",
+      "actor.player_mom",
+      "actor.player_dad"
+    ],
+    "phase": "normal",
+    "statement": "玩家与父母拥有连续、具体、非案件化的生活联系。",
+    "supportContentIds": []
+  },
+  {
+    "id": "rb.player.axu",
+    "actorIds": [
+      "actor.player",
+      "actor.axu"
+    ],
+    "phase": "normal",
+    "statement": "阿序与玩家会围绕旅行、充电器和吃饭进行熟人式交流。",
+    "supportContentIds": []
+  }
+]

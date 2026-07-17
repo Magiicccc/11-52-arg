@@ -1,0 +1,47 @@
+{
+  "id": "trigger.a2_08.pb_message_after_frame_417",
+  "enabled": true,
+  "once": true,
+  "priority": 80,
+  "when": {
+    "type": "video.frame.inspected",
+    "targetId": "media.video.corridor.frame_417",
+    "deviceId": "investigation"
+  },
+  "conditions": {
+    "op": "all",
+    "conditions": [
+      {
+        "op": "sceneCompleted",
+        "sceneId": "A2-06"
+      },
+      {
+        "op": "triggerNotConsumed",
+        "triggerId": "trigger.a2_08.pb_message_after_frame_417"
+      }
+    ]
+  },
+  "actions": [
+    {
+      "type": "enqueueMessage",
+      "threadId": "thread.pb_0425",
+      "messageId": "message.pb_0425.01",
+      "delayMs": 900
+    },
+    {
+      "type": "showNotification",
+      "deviceId": "investigation",
+      "notificationId": "notification.pb_0425.01",
+      "delayMs": 900
+    },
+    {
+      "type": "completeScene",
+      "sceneId": "A2-08"
+    },
+    {
+      "type": "createCheckpoint",
+      "checkpointId": "checkpoint.A2-08"
+    }
+  ],
+  "responseSource": "P"
+}

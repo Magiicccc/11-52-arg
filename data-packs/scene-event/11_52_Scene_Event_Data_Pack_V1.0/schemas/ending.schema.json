@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "endingId",
+    "conditions",
+    "finalScene",
+    "worldPatch"
+  ],
+  "properties": {
+    "endingId": {
+      "type": "string"
+    },
+    "conditions": {
+      "type": "object"
+    },
+    "finalScene": {
+      "const": "A5-07"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "app": "美团",
+  "slug": "meituan",
+  "category": "环境/生活",
+  "priority": "C",
+  "role": "餐饮、外卖、团购和双人订单。",
+  "referenceCount": 3,
+  "referenceIds": [
+    "MT-HOME-01",
+    "MT-SEARCH-01",
+    "MT-DELIVERY-01"
+  ],
+  "requiredStates": [
+    "首页",
+    "搜索",
+    "商户列表",
+    "商户详情",
+    "订单列表",
+    "订单详情",
+    "外卖频道"
+  ],
+  "interactionContract": [
+    "搜索、商户、订单和评价可进入。"
+  ],
+  "contentInjection": [
+    "注入咖啡双人套餐、旧园区附近订单和普通生活消费。"
+  ],
+  "officialSource": "https://apps.apple.com/cn/app/%E7%BE%8E%E5%9B%A2/id423084029",
+  "target": {
+    "viewport": "402x874",
+    "os": "iOS 26.5.2",
+    "language": "简体中文",
+    "appearance": "浅色模式"
+  },
+  "authority": "本目录真实截图优先；没有精确截图的状态只允许从同一App参考组件派生，不允许跨App猜测。"
+}

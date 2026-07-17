@@ -1,0 +1,46 @@
+{
+  "id": "content.daily.chat.zhoulan.01",
+  "appId": "app.wechat",
+  "kind": "message",
+  "ownerId": "actor.shen_chuan",
+  "sourceRootId": "source.chat.zhoulan",
+  "initialVariantId": "content.daily.chat.zhoulan.01.r0",
+  "variants": [
+    {
+      "id": "content.daily.chat.zhoulan.01.r0",
+      "correctionStage": "R0",
+      "body": {
+        "senderId": "actor.zhou_lan",
+        "text": "药店说这次换包装了，你别又买成甜的。"
+      },
+      "reason": "normal"
+    }
+  ],
+  "narrative": {
+    "primaryFunction": "relationship",
+    "secondaryFunctions": [
+      "characterization",
+      "emotional_contrast"
+    ],
+    "clueRole": "none",
+    "worldFactIds": [
+      "wf.shen.family"
+    ],
+    "characterTraitIds": [
+      "trait.shen.careless_daily"
+    ],
+    "relationshipBeatIds": [
+      "rel.shen.zhoulan.daily_care"
+    ],
+    "continuityLinkIds": [
+      "continuity.medicine.taste"
+    ],
+    "firstReadValue": "玩家理解周岚熟悉沈川的生活细节，母子关系以琐事表达关心。",
+    "recontextualizedValue": "周岚后期否认有儿子时，这条普通聊天成为关系曾经存在的情绪参照。",
+    "payoffPolicy": "optional"
+  },
+  "metadata": {
+    "slice": "P00-A2-11",
+    "visibleAtStart": true
+  }
+}

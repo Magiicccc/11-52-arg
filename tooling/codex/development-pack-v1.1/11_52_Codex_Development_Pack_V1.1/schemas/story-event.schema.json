@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://11-52.local/schema/story-event.json",
+  "title": "StoryEvent",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "eventId",
+    "type",
+    "occurredAt",
+    "storyDate",
+    "deviceId",
+    "sceneId",
+    "actorId",
+    "payload"
+  ],
+  "properties": {
+    "eventId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "type": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9]*(\\.[a-z][a-z0-9_-]*){2,}$"
+    },
+    "occurredAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "storyDate": {
+      "const": "2026-07-15"
+    },
+    "deviceId": {
+      "enum": [
+        "investigation",
+        "player"
+      ]
+    },
+    "sceneId": {
+      "type": "string"
+    },
+    "actorId": {
+      "type": "string"
+    },
+    "targetId": {
+      "type": "string"
+    },
+    "source": {
+      "enum": [
+        "H",
+        "A",
+        "P",
+        "C"
+      ]
+    },
+    "causationId": {
+      "type": "string"
+    },
+    "correlationId": {
+      "type": "string"
+    },
+    "transactionId": {
+      "type": "string"
+    },
+    "payload": {}
+  }
+}

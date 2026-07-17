@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0.0",
+  "sceneId": "A2-03",
+  "title": "确认416/417/418楼差异",
+  "order": 13,
+  "act": "A2",
+  "correctionStage": "R2",
+  "entryConditions": [
+    {
+      "op": "sceneCompleted",
+      "sceneId": "A2-02"
+    }
+  ],
+  "completionPolicy": "explicitTrigger",
+  "gatesSatisfied": [
+    "G4"
+  ],
+  "contentRefs": [
+    "tieba.floor.416",
+    "tieba.floor.417",
+    "tieba.floor.418"
+  ],
+  "puzzleRefs": [
+    "PZ-004"
+  ],
+  "triggerRefs": [
+    "trigger.a2-03.complete"
+  ],
+  "checkpoint": false,
+  "responseSource": "A",
+  "fallbackPolicy": {
+    "required": true,
+    "strategy": "alternateContentOrArchive"
+  },
+  "exitState": {
+    "nextSceneId": "A2-04"
+  },
+  "notes": "确认416/417/418楼差异"
+}

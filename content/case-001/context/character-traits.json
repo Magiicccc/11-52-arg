@@ -1,0 +1,44 @@
+[
+  {
+    "id": "ct.shenchuan.archivist",
+    "actorId": "actor.shenchuan",
+    "statement": "沈川会为截图、文件和网页版本建立清晰命名。",
+    "supportContentIds": []
+  },
+  {
+    "id": "ct.shenchuan.charger",
+    "actorId": "actor.shenchuan",
+    "statement": "沈川经常忘记携带充电线。",
+    "supportContentIds": []
+  },
+  {
+    "id": "ct.shenchuan.photo",
+    "actorId": "actor.shenchuan",
+    "statement": "沈川喜欢在雨后散步并拍摄普通城市细节。",
+    "supportContentIds": []
+  },
+  {
+    "id": "ct.chenyu.dry",
+    "actorId": "actor.chenyu",
+    "statement": "陈屿习惯用短句和克制玩笑表达关心。",
+    "supportContentIds": []
+  },
+  {
+    "id": "ct.zhoulan.care",
+    "actorId": "actor.zhoulan",
+    "statement": "周岚通过吃药、天气和饮食提醒表达关心。",
+    "supportContentIds": []
+  },
+  {
+    "id": "ct.player.curious",
+    "actorId": "actor.player",
+    "statement": "玩家具有持续追查矛盾信息的习惯。",
+    "supportContentIds": []
+  },
+  {
+    "id": "ct.axu.friend",
+    "actorId": "actor.axu",
+    "statement": "阿序与玩家关系熟悉，会用具体生活糗事确认关系。",
+    "supportContentIds": []
+  }
+]

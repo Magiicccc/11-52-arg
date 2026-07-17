@@ -1,0 +1,1950 @@
+[
+  {
+    "id": "message.player.mom.01",
+    "appId": "app.wechat",
+    "kind": "message",
+    "ownerId": "actor.player_mom",
+    "sourceRootId": "source.player_daily",
+    "initialVariantId": "message.player.mom.01.v0",
+    "variants": [
+      {
+        "id": "message.player.mom.01.v0",
+        "correctionStage": "R0",
+        "body": {
+          "thread": "妈妈",
+          "text": "杭州今天可能有阵雨，伞带了吗？晚上回来吃饭就说一声。",
+          "time": "08:16"
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "relationship",
+      "secondaryFunctions": [],
+      "clueRole": "none",
+      "worldFactIds": [
+        "wf.player.family",
+        "wf.hangzhou.daily"
+      ],
+      "characterTraitIds": [],
+      "relationshipBeatIds": [
+        "rb.player.parents"
+      ],
+      "continuityLinkIds": [],
+      "firstReadValue": "建立玩家与母亲稳定、具体的日常联系。",
+      "payoffPolicy": "required",
+      "recontextualizedValue": "关系修正后，这种自然关心会变成对陌生人的客套询问。"
+    },
+    "metadata": {
+      "visibleAtStart": true,
+      "slice": "P00-A2-11"
+    }
+  },
+  {
+    "id": "message.player.dad.01",
+    "appId": "app.wechat",
+    "kind": "message",
+    "ownerId": "actor.player_dad",
+    "sourceRootId": "source.player_daily",
+    "initialVariantId": "message.player.dad.01.v0",
+    "variants": [
+      {
+        "id": "message.player.dad.01.v0",
+        "correctionStage": "R0",
+        "body": {
+          "thread": "爸爸",
+          "text": "你上次说的充电器我放玄关了，别又忘。",
+          "time": "07:42"
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "relationship",
+      "secondaryFunctions": [],
+      "clueRole": "none",
+      "worldFactIds": [
+        "wf.player.family"
+      ],
+      "characterTraitIds": [],
+      "relationshipBeatIds": [
+        "rb.player.parents"
+      ],
+      "continuityLinkIds": [
+        "cl.charger"
+      ],
+      "firstReadValue": "通过具体物件建立家庭生活连续性。",
+      "payoffPolicy": "optional",
+      "recontextualizedValue": "后续玄关和充电器仍存在，但不再被解释为属于玩家。"
+    },
+    "metadata": {
+      "visibleAtStart": true,
+      "slice": "P00-A2-11"
+    }
+  },
+  {
+    "id": "message.player.axu.01",
+    "appId": "app.wechat",
+    "kind": "message",
+    "ownerId": "actor.axu",
+    "sourceRootId": "source.player_daily",
+    "initialVariantId": "message.player.axu.01.v0",
+    "variants": [
+      {
+        "id": "message.player.axu.01.v0",
+        "correctionStage": "R0",
+        "body": {
+          "thread": "阿序",
+          "text": "周末还去不去拍照？先说好，这次你自己带充电器。",
+          "time": "昨天"
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "relationship",
+      "secondaryFunctions": [],
+      "clueRole": "none",
+      "worldFactIds": [],
+      "characterTraitIds": [
+        "ct.axu.friend"
+      ],
+      "relationshipBeatIds": [
+        "rb.player.axu"
+      ],
+      "continuityLinkIds": [
+        "cl.charger"
+      ],
+      "firstReadValue": "建立阿序与玩家之间熟人式的玩笑和共同活动。",
+      "payoffPolicy": "required",
+      "recontextualizedValue": "阿序后续会保留拍照计划，却不再记得邀请过谁。"
+    },
+    "metadata": {
+      "visibleAtStart": true,
+      "slice": "P00-A2-11"
+    }
+  },
+  {
+    "id": "calendar.player.01",
+    "appId": "app.calendar",
+    "kind": "event",
+    "ownerId": "actor.player",
+    "sourceRootId": "source.player_daily",
+    "initialVariantId": "calendar.player.01.v0",
+    "variants": [
+      {
+        "id": "calendar.player.01.v0",
+        "correctionStage": "R0",
+        "body": {
+          "title": "和阿序吃饭",
+          "date": "2026-07-18",
+          "time": "18:30",
+          "location": "湖滨路"
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "continuity",
+      "secondaryFunctions": [],
+      "clueRole": "none",
+      "worldFactIds": [
+        "wf.hangzhou.daily"
+      ],
+      "characterTraitIds": [],
+      "relationshipBeatIds": [
+        "rb.player.axu"
+      ],
+      "continuityLinkIds": [],
+      "firstReadValue": "证明玩家拥有正在继续的现实生活安排。",
+      "payoffPolicy": "optional",
+      "recontextualizedValue": "修正后事件会只剩地点和时间，参与者变成空白。"
+    },
+    "metadata": {
+      "visibleAtStart": true,
+      "slice": "P00-A2-11"
+    }
+  },
+  {
+    "id": "photo.player.family.01",
+    "appId": "app.photos",
+    "kind": "photo",
+    "ownerId": "actor.player",
+    "sourceRootId": "source.player_daily",
+    "initialVariantId": "photo.player.family.01.v0",
+    "variants": [
+      {
+        "id": "photo.player.family.01.v0",
+        "correctionStage": "R0",
+        "body": {
+          "title": "周末晚饭",
+          "date": "2026-06-21",
+          "src": "/media/case-001/placeholders/group-photo.svg",
+          "people": 4,
+          "caption": "妈妈说终于凑齐一张不眨眼的。"
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "future_loss",
+      "secondaryFunctions": [],
+      "clueRole": "none",
+      "worldFactIds": [
+        "wf.player.family"
+      ],
+      "characterTraitIds": [],
+      "relationshipBeatIds": [
+        "rb.player.parents"
+      ],
+      "continuityLinkIds": [],
+      "firstReadValue": "让玩家先拥有一张普通而具体的家庭照片。",
+      "payoffPolicy": "required",
+      "recontextualizedValue": "玩家被修正后，照片会自然重构为三人合照。"
+    },
+    "metadata": {
+      "visibleAtStart": true,
+      "slice": "P00-A2-11"
+    }
+  },
+  {
+    "id": "message.zhoulan.med.01",
+    "appId": "app.wechat",
+    "kind": "message",
+    "ownerId": "actor.zhoulan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "message.zhoulan.med.01.v0",
+    "variants": [
+      {
+        "id": "message.zhoulan.med.01.v0",
+        "correctionStage": "R0",
+        "body": {
+          "thread": "妈",
+          "text": "小川，药放你背包侧袋了，别空腹吃。",
+          "time": "7月11日 08:02"
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "relationship",
+      "secondaryFunctions": [],
+      "clueRole": "none",
+      "worldFactIds": [
+        "wf.shenchuan.family"
+      ],
+      "characterTraitIds": [
+        "ct.zhoulan.care"
+      ],
+      "relationshipBeatIds": [
+        "rb.shenchuan.zhoulan"
+      ],
+      "continuityLinkIds": [],
+      "firstReadValue": "建立周岚与沈川的母子关系和关心方式。",
+      "payoffPolicy": "required",
+      "recontextualizedValue": "周岚后来会记得自己买过药，却不记得是给谁。"
+    },
+    "metadata": {
+      "visibleAtStart": true,
+      "slice": "P00-A2-11"
+    }
+  },
+  {
+    "id": "message.chenyu.charger.01",
+    "appId": "app.wechat",
+    "kind": "message",
+    "ownerId": "actor.chenyu",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "message.chenyu.charger.01.v0",
+    "variants": [
+      {
+        "id": "message.chenyu.charger.01.v0",
+        "correctionStage": "R0",
+        "body": {
+          "thread": "陈屿",
+          "text": "你的C口线又落我这了。第三次。",
+          "time": "7月8日 22:14"
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "relationship",
+      "secondaryFunctions": [],
+      "clueRole": "none",
+      "worldFactIds": [],
+      "characterTraitIds": [
+        "ct.shenchuan.charger",
+        "ct.chenyu.dry"
+      ],
+      "relationshipBeatIds": [
+        "rb.shenchuan.chenyu"
+      ],
+      "continuityLinkIds": [
+        "cl.charger"
+      ],
+      "firstReadValue": "用无关案件的生活玩笑证明两人相识已久。",
+      "payoffPolicy": "required",
+      "recontextualizedValue": "陈屿否认认识沈川后，这条聊天成为关系断裂的证据。"
+    },
+    "metadata": {
+      "visibleAtStart": true,
+      "slice": "P00-A2-11"
+    }
+  },
+  {
+    "id": "message.chenyu.p02",
+    "appId": "app.wechat",
+    "kind": "message",
+    "ownerId": "actor.chenyu",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "message.chenyu.p02.v0",
+    "variants": [
+      {
+        "id": "message.chenyu.p02.v0",
+        "correctionStage": "R0",
+        "body": {
+          "thread": "陈屿",
+          "text": "你是谁？这台手机为什么在你手里？",
+          "timeMode": "realtime"
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "relationship",
+      "secondaryFunctions": [],
+      "clueRole": "supporting",
+      "worldFactIds": [],
+      "characterTraitIds": [],
+      "relationshipBeatIds": [
+        "rb.shenchuan.chenyu"
+      ],
+      "continuityLinkIds": [],
+      "firstReadValue": "以陈屿的疑问建立手机归属矛盾。",
+      "payoffPolicy": "required",
+      "recontextualizedValue": "他熟悉设备细节，却无法说出沈川姓名。"
+    },
+    "metadata": {
+      "visibleAtStart": true,
+      "slice": "P00-A2-11"
+    }
+  },
+  {
+    "id": "post.xhs.coffee.230917",
+    "appId": "app.xiaohongshu",
+    "kind": "post",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "post.xhs.coffee.230917.v0",
+    "variants": [
+      {
+        "id": "post.xhs.coffee.230917.v0",
+        "correctionStage": "R0",
+        "body": {
+          "title": "桥下咖啡，雨刚停",
+          "text": "第一次见到一个会认真纠正文件名的人。咖啡一般，但聊得比预计久。",
+          "date": "2023-09-17",
+          "likes": 126,
+          "comments": 9,
+          "image": "/media/case-001/placeholders/group-photo.svg"
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "relationship",
+      "secondaryFunctions": [],
+      "clueRole": "none",
+      "worldFactIds": [
+        "wf.2023.meeting",
+        "wf.daily.coffee"
+      ],
+      "characterTraitIds": [],
+      "relationshipBeatIds": [
+        "rb.shenchuan.player.meeting"
+      ],
+      "continuityLinkIds": [
+        "cl.date.230917",
+        "cl.coffee_shop"
+      ],
+      "firstReadValue": "以普通社交平台帖子建立第一次线下见面的生活质感。",
+      "payoffPolicy": "required",
+      "recontextualizedValue": "后续账号归属变化后，帖子仍在但发帖人不再是沈川。"
+    },
+    "metadata": {
+      "visibleAtStart": true,
+      "slice": "P00-A2-11"
+    }
+  },
+  {
+    "id": "post.xhs.cat.01",
+    "appId": "app.xiaohongshu",
+    "kind": "post",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "post.xhs.cat.01.v0",
+    "variants": [
+      {
+        "id": "post.xhs.cat.01.v0",
+        "correctionStage": "R0",
+        "body": {
+          "title": "公司楼下的用户研究对象",
+          "text": "这只猫拒绝参与任何访谈。",
+          "date": "2026-06-12",
+          "likes": 318,
+          "comments": 21,
+          "image": "/media/case-001/placeholders/group-photo.svg"
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "characterization",
+      "secondaryFunctions": [],
+      "clueRole": "none",
+      "worldFactIds": [
+        "wf.shenchuan.job",
+        "wf.hangzhou.daily"
+      ],
+      "characterTraitIds": [
+        "ct.shenchuan.photo"
+      ],
+      "relationshipBeatIds": [],
+      "continuityLinkIds": [],
+      "firstReadValue": "用轻松内容建立沈川的职业语气和普通生活。",
+      "payoffPolicy": "none"
+    },
+    "metadata": {
+      "visibleAtStart": true,
+      "slice": "P00-A2-11"
+    }
+  },
+  {
+    "id": "order.meituan.coffee.230917",
+    "appId": "app.meituan",
+    "kind": "order",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "order.meituan.coffee.230917.v0",
+    "variants": [
+      {
+        "id": "order.meituan.coffee.230917.v0",
+        "correctionStage": "R0",
+        "body": {
+          "merchant": "桥下咖啡",
+          "date": "2023-09-17 15:08",
+          "items": [
+            "冰美式 × 1",
+            "拿铁 × 1"
+          ],
+          "tableware": 2,
+          "amount": 58.0
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "continuity",
+      "secondaryFunctions": [],
+      "clueRole": "none",
+      "worldFactIds": [
+        "wf.daily.coffee",
+        "wf.2023.meeting"
+      ],
+      "characterTraitIds": [],
+      "relationshipBeatIds": [
+        "rb.shenchuan.player.meeting"
+      ],
+      "continuityLinkIds": [
+        "cl.date.230917",
+        "cl.coffee_shop"
+      ],
+      "firstReadValue": "以双人消费记录支持第一次见面的现实连续性。",
+      "payoffPolicy": "optional"
+    },
+    "metadata": {
+      "visibleAtStart": true,
+      "slice": "P00-A2-11"
+    }
+  },
+  {
+    "id": "ticket.12306.230917",
+    "appId": "app.railway12306",
+    "kind": "ticket",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "ticket.12306.230917.v0",
+    "variants": [
+      {
+        "id": "ticket.12306.230917.v0",
+        "correctionStage": "R0",
+        "body": {
+          "date": "2023-09-17",
+          "route": "上海虹桥 → 杭州东",
+          "passengers": 2,
+          "status": "已完成"
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "chronology",
+      "secondaryFunctions": [],
+      "clueRole": "supporting",
+      "worldFactIds": [
+        "wf.2023.meeting"
+      ],
+      "characterTraitIds": [],
+      "relationshipBeatIds": [
+        "rb.shenchuan.player.meeting"
+      ],
+      "continuityLinkIds": [
+        "cl.date.230917"
+      ],
+      "firstReadValue": "提供230917日期的独立来源，同时建立两人同行事实。",
+      "payoffPolicy": "required"
+    },
+    "metadata": {
+      "visibleAtStart": true,
+      "slice": "P00-A2-11"
+    }
+  },
+  {
+    "id": "setting.owner.invalid",
+    "appId": "app.settings",
+    "kind": "setting",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "setting.owner.invalid.v0",
+    "variants": [
+      {
+        "id": "setting.owner.invalid.v0",
+        "correctionStage": "R0",
+        "body": {
+          "deviceName": "Shen's iPhone",
+          "owner": "无法验证账户身份",
+          "sync": "已暂停",
+          "lastBackup": "2026-07-13 23:48"
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "world_context",
+      "secondaryFunctions": [],
+      "clueRole": "supporting",
+      "worldFactIds": [
+        "wf.device.offline"
+      ],
+      "characterTraitIds": [
+        "ct.shenchuan.archivist"
+      ],
+      "relationshipBeatIds": [],
+      "continuityLinkIds": [],
+      "firstReadValue": "呈现设备长期使用痕迹与所有者身份缺失的矛盾。",
+      "payoffPolicy": "required"
+    },
+    "metadata": {
+      "visibleAtStart": true,
+      "slice": "P00-A2-11"
+    }
+  },
+  {
+    "id": "mail.work.research.01",
+    "appId": "app.qqmail",
+    "kind": "mail",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "mail.work.research.01.v0",
+    "variants": [
+      {
+        "id": "mail.work.research.01.v0",
+        "correctionStage": "R0",
+        "body": {
+          "from": "产品研究组",
+          "subject": "周三访谈记录命名规范",
+          "preview": "沈川整理的版本结构沿用即可……",
+          "date": "7月9日"
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "profession",
+      "secondaryFunctions": [],
+      "clueRole": "none",
+      "worldFactIds": [
+        "wf.shenchuan.job"
+      ],
+      "characterTraitIds": [
+        "ct.shenchuan.archivist"
+      ],
+      "relationshipBeatIds": [],
+      "continuityLinkIds": [],
+      "firstReadValue": "证明沈川拥有与案件无关的稳定工作和专业能力。",
+      "payoffPolicy": "optional",
+      "recontextualizedValue": "修正后邮件会保留附件，但作者字段被替换。"
+    },
+    "metadata": {
+      "visibleAtStart": true,
+      "slice": "P00-A2-11"
+    }
+  },
+  {
+    "id": "music.history.rain.01",
+    "appId": "app.netease_music",
+    "kind": "history",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "music.history.rain.01.v0",
+    "variants": [
+      {
+        "id": "music.history.rain.01.v0",
+        "correctionStage": "R0",
+        "body": {
+          "track": "雨停之后",
+          "playedAt": "2026-07-10 23:41",
+          "duration": "04:18"
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "habit",
+      "secondaryFunctions": [],
+      "clueRole": "none",
+      "worldFactIds": [],
+      "characterTraitIds": [
+        "ct.shenchuan.photo"
+      ],
+      "relationshipBeatIds": [],
+      "continuityLinkIds": [],
+      "firstReadValue": "建立沈川在深夜整理资料时的音乐习惯。",
+      "payoffPolicy": "none"
+    },
+    "metadata": {
+      "visibleAtStart": true,
+      "slice": "P00-A2-11"
+    }
+  },
+  {
+    "id": "order.taobao.drive.01",
+    "appId": "app.taobao",
+    "kind": "order",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "order.taobao.drive.01.v0",
+    "variants": [
+      {
+        "id": "order.taobao.drive.01.v0",
+        "correctionStage": "R0",
+        "body": {
+          "title": "1TB移动固态硬盘",
+          "date": "2026-06-02",
+          "status": "交易成功",
+          "amount": 529.0
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "profession",
+      "secondaryFunctions": [],
+      "clueRole": "none",
+      "worldFactIds": [
+        "wf.device.offline"
+      ],
+      "characterTraitIds": [
+        "ct.shenchuan.archivist"
+      ],
+      "relationshipBeatIds": [],
+      "continuityLinkIds": [],
+      "firstReadValue": "解释沈川为何具备离线备份和多版本存档条件。",
+      "payoffPolicy": "optional"
+    },
+    "metadata": {
+      "visibleAtStart": true,
+      "slice": "P00-A2-11"
+    }
+  },
+  {
+    "id": "trip.didi.oldpark.01",
+    "appId": "app.didi",
+    "kind": "trip",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "trip.didi.oldpark.01.v0",
+    "variants": [
+      {
+        "id": "trip.didi.oldpark.01.v0",
+        "correctionStage": "R0",
+        "body": {
+          "date": "2026-07-03 16:40",
+          "from": "杭州东站",
+          "to": "旧园区东门",
+          "status": "已完成"
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "location",
+      "secondaryFunctions": [],
+      "clueRole": "none",
+      "worldFactIds": [
+        "wf.oldpark"
+      ],
+      "characterTraitIds": [],
+      "relationshipBeatIds": [],
+      "continuityLinkIds": [
+        "cl.oldpark"
+      ],
+      "firstReadValue": "建立沈川曾前往现实地点的生活轨迹。",
+      "payoffPolicy": "optional"
+    },
+    "metadata": {
+      "visibleAtStart": true,
+      "slice": "P00-A2-11"
+    }
+  },
+  {
+    "id": "news.toutiao.identity.01",
+    "appId": "app.toutiao",
+    "kind": "article",
+    "ownerId": "actor.oldrain17",
+    "sourceRootId": "source.417_cache",
+    "initialVariantId": "news.toutiao.identity.01.v0",
+    "variants": [
+      {
+        "id": "news.toutiao.identity.01.v0",
+        "correctionStage": "R0",
+        "body": {
+          "title": "某市回应身份核验类求助：人口数据未见异常",
+          "summary": "相关部门表示，近期网络讨论与人口流入流出数据之间未发现统计关联。",
+          "date": "2026-06-18"
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "world_context",
+      "secondaryFunctions": [],
+      "clueRole": "supporting",
+      "worldFactIds": [
+        "wf.2013.pb"
+      ],
+      "characterTraitIds": [],
+      "relationshipBeatIds": [],
+      "continuityLinkIds": [],
+      "firstReadValue": "以克制新闻口径扩展世界背景，而不直接宣布超自然结论。",
+      "payoffPolicy": "optional"
+    },
+    "metadata": {
+      "visibleAtStart": true,
+      "slice": "P00-A2-11"
+    }
+  },
+  {
+    "id": "voice.shenchuan.name.01",
+    "appId": "app.wechat",
+    "kind": "voice",
+    "ownerId": "actor.zhoulan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "voice.shenchuan.name.01.v0",
+    "variants": [
+      {
+        "id": "voice.shenchuan.name.01.v0",
+        "correctionStage": "R0",
+        "body": {
+          "thread": "妈",
+          "duration": 8,
+          "transcript": "小川，到了给我回个消息。"
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "relationship",
+      "secondaryFunctions": [],
+      "clueRole": "direct",
+      "worldFactIds": [
+        "wf.shenchuan.family"
+      ],
+      "characterTraitIds": [],
+      "relationshipBeatIds": [
+        "rb.shenchuan.zhoulan"
+      ],
+      "continuityLinkIds": [],
+      "firstReadValue": "提供沈川姓名与家庭关系的第一条直接证据。",
+      "payoffPolicy": "required"
+    },
+    "metadata": {
+      "visibleAtStart": false,
+      "slice": "locked"
+    }
+  },
+  {
+    "id": "photo.shenchuan.group.01",
+    "appId": "app.photos",
+    "kind": "photo",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "photo.shenchuan.group.01.v0",
+    "variants": [
+      {
+        "id": "photo.shenchuan.group.01.v0",
+        "correctionStage": "R0",
+        "body": {
+          "title": "桥下咖啡",
+          "date": "2023-09-17 16:22",
+          "src": "/media/case-001/placeholders/group-photo.svg",
+          "peopleVisible": 3,
+          "facesDetected": 4,
+          "location": "桥下咖啡"
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "continuity",
+      "secondaryFunctions": [],
+      "clueRole": "direct",
+      "worldFactIds": [
+        "wf.2023.meeting",
+        "wf.daily.coffee"
+      ],
+      "characterTraitIds": [],
+      "relationshipBeatIds": [
+        "rb.shenchuan.player.meeting"
+      ],
+      "continuityLinkIds": [
+        "cl.date.230917",
+        "cl.coffee_shop"
+      ],
+      "firstReadValue": "以人脸计数与可见人数矛盾恢复沈川面孔锚点。",
+      "payoffPolicy": "required"
+    },
+    "metadata": {
+      "visibleAtStart": true,
+      "slice": "P00-A2-11"
+    }
+  },
+  {
+    "id": "message.chenyu.photo_reaction",
+    "appId": "app.wechat",
+    "kind": "message",
+    "ownerId": "actor.chenyu",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "message.chenyu.photo_reaction.v0",
+    "variants": [
+      {
+        "id": "message.chenyu.photo_reaction.v0",
+        "correctionStage": "R0",
+        "body": {
+          "thread": "陈屿",
+          "text": "这张照片……右边是不是本来还有一个人？",
+          "timeMode": "realtime"
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "relationship",
+      "secondaryFunctions": [],
+      "clueRole": "supporting",
+      "worldFactIds": [],
+      "characterTraitIds": [],
+      "relationshipBeatIds": [
+        "rb.shenchuan.chenyu"
+      ],
+      "continuityLinkIds": [],
+      "firstReadValue": "陈屿在收到独立照片后短暂恢复关系记忆。",
+      "payoffPolicy": "required",
+      "recontextualizedValue": "消息随后被撤回，陈屿再次否认认识沈川。"
+    },
+    "metadata": {
+      "visibleAtStart": false,
+      "slice": "locked"
+    }
+  },
+  {
+    "id": "forum.tieba.floor416",
+    "appId": "app.tieba",
+    "kind": "floor",
+    "ownerId": "actor.oldrain17",
+    "sourceRootId": "source.417_cache",
+    "initialVariantId": "forum.tieba.floor416.v0",
+    "variants": [
+      {
+        "id": "forum.tieba.floor416.v0",
+        "correctionStage": "R0",
+        "body": {
+          "floor": 416,
+          "author": "旧雨17",
+          "text": "别只看现在的页面，先保存响应体。"
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "world_context",
+      "secondaryFunctions": [],
+      "clueRole": "none",
+      "worldFactIds": [
+        "wf.floor417"
+      ],
+      "characterTraitIds": [],
+      "relationshipBeatIds": [],
+      "continuityLinkIds": [
+        "cl.floor417"
+      ],
+      "firstReadValue": "建立旧帖版本对比的方法和语境。",
+      "payoffPolicy": "none"
+    },
+    "metadata": {
+      "visibleAtStart": true,
+      "slice": "P00-A2-11"
+    }
+  },
+  {
+    "id": "forum.tieba.floor417",
+    "appId": "app.tieba",
+    "kind": "floor",
+    "ownerId": "actor.oldrain17",
+    "sourceRootId": "source.417_cache",
+    "initialVariantId": "forum.tieba.floor417.v0",
+    "variants": [
+      {
+        "id": "forum.tieba.floor417.v0",
+        "correctionStage": "R0",
+        "body": {
+          "floor": 417,
+          "author": "旧雨17",
+          "text": "不是三个人。数视频帧。",
+          "cacheOnly": true
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "theme",
+      "secondaryFunctions": [],
+      "clueRole": "direct",
+      "worldFactIds": [
+        "wf.floor417"
+      ],
+      "characterTraitIds": [],
+      "relationshipBeatIds": [],
+      "continuityLinkIds": [
+        "cl.floor417"
+      ],
+      "firstReadValue": "给出417异常索引的核心残片，但不直接解释其意义。",
+      "payoffPolicy": "required"
+    },
+    "metadata": {
+      "visibleAtStart": true,
+      "slice": "P00-A2-11"
+    }
+  },
+  {
+    "id": "forum.tieba.floor418",
+    "appId": "app.tieba",
+    "kind": "floor",
+    "ownerId": "actor.pb0425",
+    "sourceRootId": "source.pb_interface",
+    "initialVariantId": "forum.tieba.floor418.v0",
+    "variants": [
+      {
+        "id": "forum.tieba.floor418.v0",
+        "correctionStage": "R0",
+        "body": {
+          "floor": 418,
+          "author": "PB_0425",
+          "text": "你会看到417。"
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "theme",
+      "secondaryFunctions": [],
+      "clueRole": "supporting",
+      "worldFactIds": [
+        "wf.floor417"
+      ],
+      "characterTraitIds": [],
+      "relationshipBeatIds": [],
+      "continuityLinkIds": [
+        "cl.floor417"
+      ],
+      "firstReadValue": "让异常账号与缺失楼层建立联系。",
+      "payoffPolicy": "required"
+    },
+    "metadata": {
+      "visibleAtStart": true,
+      "slice": "P00-A2-11"
+    }
+  },
+  {
+    "id": "page.zhihu.deleted.01",
+    "appId": "app.zhihu",
+    "kind": "page",
+    "ownerId": "actor.oldrain17",
+    "sourceRootId": "source.417_cache",
+    "initialVariantId": "page.zhihu.deleted.01.v0",
+    "variants": [
+      {
+        "id": "page.zhihu.deleted.01.v0",
+        "correctionStage": "R0",
+        "body": {
+          "title": "如果你记得那个人，应该如何验证自己没有记错？",
+          "status": 404,
+          "archivedAt": "2021-04-18"
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "world_context",
+      "secondaryFunctions": [],
+      "clueRole": "supporting",
+      "worldFactIds": [
+        "wf.floor417"
+      ],
+      "characterTraitIds": [],
+      "relationshipBeatIds": [],
+      "continuityLinkIds": [],
+      "firstReadValue": "以正常404页面隐藏旧雨17留下的缓存入口。",
+      "payoffPolicy": "required"
+    },
+    "metadata": {
+      "visibleAtStart": true,
+      "slice": "P00-A2-11"
+    }
+  },
+  {
+    "id": "audio.carrier.01",
+    "appId": "app.safari",
+    "kind": "audio",
+    "ownerId": "actor.oldrain17",
+    "sourceRootId": "source.417_cache",
+    "initialVariantId": "audio.carrier.01.v0",
+    "variants": [
+      {
+        "id": "audio.carrier.01.v0",
+        "correctionStage": "R0",
+        "body": {
+          "name": "carrier.wav",
+          "morse": "..-. .-. .- -- . / ....- .---- --...",
+          "transcriptHint": "点划声持续12秒"
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "theme",
+      "secondaryFunctions": [],
+      "clueRole": "direct",
+      "worldFactIds": [
+        "wf.floor417"
+      ],
+      "characterTraitIds": [],
+      "relationshipBeatIds": [],
+      "continuityLinkIds": [
+        "cl.floor417"
+      ],
+      "firstReadValue": "要求玩家通过现实知识页学习摩斯密码并得到FRAME 417。",
+      "payoffPolicy": "required"
+    },
+    "metadata": {
+      "visibleAtStart": false,
+      "slice": "locked"
+    }
+  },
+  {
+    "id": "page.morse.guide",
+    "appId": "app.safari",
+    "kind": "knowledge",
+    "ownerId": "actor.oldrain17",
+    "sourceRootId": "source.417_cache",
+    "initialVariantId": "page.morse.guide.v0",
+    "variants": [
+      {
+        "id": "page.morse.guide.v0",
+        "correctionStage": "R0",
+        "body": {
+          "title": "摩斯密码",
+          "summary": "由点、划和间隔表示字母与数字；页面提供完整对照表。"
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "world_context",
+      "secondaryFunctions": [],
+      "clueRole": "none",
+      "worldFactIds": [
+        "wf.floor417"
+      ],
+      "characterTraitIds": [],
+      "relationshipBeatIds": [],
+      "continuityLinkIds": [],
+      "firstReadValue": "提供受控、稳定、可学习的现实知识，不直接代替玩家解题。",
+      "payoffPolicy": "required"
+    },
+    "metadata": {
+      "visibleAtStart": false,
+      "slice": "locked"
+    }
+  },
+  {
+    "id": "video.corridor.frame417",
+    "appId": "app.photos",
+    "kind": "video",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.417_cache",
+    "initialVariantId": "video.corridor.frame417.v0",
+    "variants": [
+      {
+        "id": "video.corridor.frame417.v0",
+        "correctionStage": "R0",
+        "body": {
+          "title": "走廊_未导出.mov",
+          "frame": 417,
+          "src": "/media/case-001/placeholders/corridor-frame-417.svg",
+          "description": "服务门旁出现手持钥匙的人影。"
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "theme",
+      "secondaryFunctions": [],
+      "clueRole": "direct",
+      "worldFactIds": [
+        "wf.floor417",
+        "wf.oldpark"
+      ],
+      "characterTraitIds": [],
+      "relationshipBeatIds": [],
+      "continuityLinkIds": [
+        "cl.floor417",
+        "cl.oldpark"
+      ],
+      "firstReadValue": "将摩斯解答转化为可观察的视觉证据。",
+      "payoffPolicy": "required"
+    },
+    "metadata": {
+      "visibleAtStart": false,
+      "slice": "locked"
+    }
+  },
+  {
+    "id": "message.pb_0425.01",
+    "appId": "app.wechat",
+    "kind": "message",
+    "ownerId": "actor.pb0425",
+    "sourceRootId": "source.pb_interface",
+    "initialVariantId": "message.pb_0425.01.v0",
+    "variants": [
+      {
+        "id": "message.pb_0425.01.v0",
+        "correctionStage": "R0",
+        "body": {
+          "thread": "PB_0425",
+          "text": "你看到的不是门。是他们后来把墙补齐了。",
+          "time": "11:52"
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "theme",
+      "secondaryFunctions": [],
+      "clueRole": "supporting",
+      "worldFactIds": [
+        "wf.2013.pb",
+        "wf.floor417"
+      ],
+      "characterTraitIds": [],
+      "relationshipBeatIds": [],
+      "continuityLinkIds": [
+        "cl.floor417"
+      ],
+      "firstReadValue": "异常接口只在玩家查看第417帧后回应。",
+      "payoffPolicy": "required"
+    },
+    "metadata": {
+      "visibleAtStart": false,
+      "slice": "locked"
+    }
+  },
+  {
+    "id": "note.validation.07",
+    "appId": "app.notes",
+    "kind": "note",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "note.validation.07.v0",
+    "variants": [
+      {
+        "id": "note.validation.07.v0",
+        "correctionStage": "R0",
+        "body": {
+          "title": "验证记录_07",
+          "text": "今天陈屿还能说出我的姓。妈记得蓝色杯子是谁买的。若这段记录被改写，先看通知预览，不要相信最近编辑时间。"
+        },
+        "reason": "normal"
+      },
+      {
+        "id": "note.validation.07.v1",
+        "correctionStage": "R2",
+        "body": {
+          "title": "购物清单",
+          "text": "牛奶、垃圾袋、充电线、蓝色杯垫。"
+        },
+        "replacesVariantId": "note.validation.07.v0",
+        "reason": "C"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "future_loss",
+      "secondaryFunctions": [],
+      "clueRole": "direct",
+      "worldFactIds": [
+        "wf.shenchuan.family",
+        "wf.device.offline"
+      ],
+      "characterTraitIds": [
+        "ct.shenchuan.archivist"
+      ],
+      "relationshipBeatIds": [],
+      "continuityLinkIds": [
+        "cl.blue_mug"
+      ],
+      "firstReadValue": "让玩家亲眼看到调查记录被普通生活内容覆盖。",
+      "payoffPolicy": "required",
+      "recontextualizedValue": "修正后它会变成购物清单，但通知残片保留关键句。"
+    },
+    "metadata": {
+      "visibleAtStart": true,
+      "slice": "P00-A2-11"
+    }
+  },
+  {
+    "id": "notification.note.remnant.content",
+    "appId": "app.notes",
+    "kind": "notification",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "notification.note.remnant.content.v0",
+    "variants": [
+      {
+        "id": "notification.note.remnant.content.v0",
+        "correctionStage": "R0",
+        "body": {
+          "title": "备忘录",
+          "preview": "……先看通知预览，不要相信最近编辑时间。"
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "future_loss",
+      "secondaryFunctions": [],
+      "clueRole": "supporting",
+      "worldFactIds": [
+        "wf.device.offline"
+      ],
+      "characterTraitIds": [
+        "ct.shenchuan.archivist"
+      ],
+      "relationshipBeatIds": [],
+      "continuityLinkIds": [],
+      "firstReadValue": "在原备忘录被普通化后保留一条独立残片。",
+      "payoffPolicy": "required"
+    },
+    "metadata": {
+      "visibleAtStart": false,
+      "slice": "locked"
+    }
+  },
+  {
+    "id": "file.417_index",
+    "appId": "app.files",
+    "kind": "file",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.417_cache",
+    "initialVariantId": "file.417_index.v0",
+    "variants": [
+      {
+        "id": "file.417_index.v0",
+        "correctionStage": "R0",
+        "body": {
+          "name": "417_index.json",
+          "size": "4 KB",
+          "content": {
+            "frame": 417,
+            "source": "corridor.mov",
+            "cachedFloor": 417,
+            "next": "compare_location_metadata"
+          }
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "continuity",
+      "secondaryFunctions": [],
+      "clueRole": "supporting",
+      "worldFactIds": [
+        "wf.floor417"
+      ],
+      "characterTraitIds": [],
+      "relationshipBeatIds": [],
+      "continuityLinkIds": [
+        "cl.floor417"
+      ],
+      "firstReadValue": "将417楼、摩斯和视频帧整理为可继续调查的索引文件。",
+      "payoffPolicy": "required"
+    },
+    "metadata": {
+      "visibleAtStart": false,
+      "slice": "locked"
+    }
+  },
+  {
+    "id": "mail.qq.inbox.01",
+    "appId": "app.qqmail",
+    "kind": "mail",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "mail.qq.inbox.01.v0",
+    "variants": [
+      {
+        "id": "mail.qq.inbox.01.v0",
+        "correctionStage": "R0",
+        "body": {
+          "from": "陈屿",
+          "subject": "充电线在我这里",
+          "preview": "明天路过拿走。",
+          "date": "7月8日"
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "relationship",
+      "secondaryFunctions": [],
+      "clueRole": "none",
+      "worldFactIds": [],
+      "characterTraitIds": [
+        "ct.shenchuan.charger"
+      ],
+      "relationshipBeatIds": [
+        "rb.shenchuan.chenyu"
+      ],
+      "continuityLinkIds": [
+        "cl.charger"
+      ],
+      "firstReadValue": "通过邮件再次建立两人的生活联系。",
+      "payoffPolicy": "none"
+    },
+    "metadata": {
+      "visibleAtStart": true,
+      "slice": "P00-A2-11"
+    }
+  },
+  {
+    "id": "netdisk.file.01",
+    "appId": "app.baidunetdisk",
+    "kind": "file",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "netdisk.file.01.v0",
+    "variants": [
+      {
+        "id": "netdisk.file.01.v0",
+        "correctionStage": "R0",
+        "body": {
+          "name": "访谈记录_0709.zip",
+          "status": "仅本机可用",
+          "size": "86 MB"
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "profession",
+      "secondaryFunctions": [],
+      "clueRole": "none",
+      "worldFactIds": [
+        "wf.shenchuan.job",
+        "wf.device.offline"
+      ],
+      "characterTraitIds": [
+        "ct.shenchuan.archivist"
+      ],
+      "relationshipBeatIds": [],
+      "continuityLinkIds": [],
+      "firstReadValue": "建立沈川的工作文件与离线存储习惯。",
+      "payoffPolicy": "none"
+    },
+    "metadata": {
+      "visibleAtStart": true,
+      "slice": "P00-A2-11"
+    }
+  },
+  {
+    "id": "alipay.bill.01",
+    "appId": "app.alipay",
+    "kind": "bill",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "alipay.bill.01.v0",
+    "variants": [
+      {
+        "id": "alipay.bill.01.v0",
+        "correctionStage": "R0",
+        "body": {
+          "merchant": "桥下咖啡",
+          "date": "2023-09-17 15:08",
+          "amount": 58.0
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "continuity",
+      "secondaryFunctions": [],
+      "clueRole": "none",
+      "worldFactIds": [
+        "wf.daily.coffee"
+      ],
+      "characterTraitIds": [],
+      "relationshipBeatIds": [],
+      "continuityLinkIds": [
+        "cl.coffee_shop",
+        "cl.date.230917"
+      ],
+      "firstReadValue": "以支付记录补全生活地点和日期连续性。",
+      "payoffPolicy": "none"
+    },
+    "metadata": {
+      "visibleAtStart": true,
+      "slice": "P00-A2-11"
+    }
+  },
+  {
+    "id": "book.reading.01",
+    "appId": "app.wechat_reading",
+    "kind": "book",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "book.reading.01.v0",
+    "variants": [
+      {
+        "id": "book.reading.01.v0",
+        "correctionStage": "R0",
+        "body": {
+          "title": "档案整理方法",
+          "progress": 62,
+          "note": "同源副本不能算第二个证人。"
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "profession",
+      "secondaryFunctions": [],
+      "clueRole": "none",
+      "worldFactIds": [
+        "wf.shenchuan.job"
+      ],
+      "characterTraitIds": [
+        "ct.shenchuan.archivist"
+      ],
+      "relationshipBeatIds": [],
+      "continuityLinkIds": [],
+      "firstReadValue": "体现沈川对证据独立性的长期思考。",
+      "payoffPolicy": "optional"
+    },
+    "metadata": {
+      "visibleAtStart": true,
+      "slice": "P00-A2-11"
+    }
+  },
+  {
+    "id": "health.steps.01",
+    "appId": "app.health",
+    "kind": "metric",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "health.steps.01.v0",
+    "variants": [
+      {
+        "id": "health.steps.01.v0",
+        "correctionStage": "R0",
+        "body": {
+          "date": "2026-07-03",
+          "steps": 18432,
+          "distanceKm": 12.4
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "continuity",
+      "secondaryFunctions": [],
+      "clueRole": "none",
+      "worldFactIds": [
+        "wf.oldpark"
+      ],
+      "characterTraitIds": [],
+      "relationshipBeatIds": [],
+      "continuityLinkIds": [
+        "cl.oldpark"
+      ],
+      "firstReadValue": "以身体活动数据证明沈川当天确实进行长距离步行。",
+      "payoffPolicy": "none"
+    },
+    "metadata": {
+      "visibleAtStart": true,
+      "slice": "P00-A2-11"
+    }
+  },
+  {
+    "id": "weather.hangzhou.01",
+    "appId": "app.weather",
+    "kind": "forecast",
+    "ownerId": "actor.player",
+    "sourceRootId": "source.player_daily",
+    "initialVariantId": "weather.hangzhou.01.v0",
+    "variants": [
+      {
+        "id": "weather.hangzhou.01.v0",
+        "correctionStage": "R0",
+        "body": {
+          "city": "杭州",
+          "condition": "阵雨",
+          "high": 33,
+          "low": 27
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "world_context",
+      "secondaryFunctions": [],
+      "clueRole": "none",
+      "worldFactIds": [
+        "wf.hangzhou.daily"
+      ],
+      "characterTraitIds": [],
+      "relationshipBeatIds": [],
+      "continuityLinkIds": [],
+      "firstReadValue": "建立游戏发生日的普通城市天气背景。",
+      "payoffPolicy": "none"
+    },
+    "metadata": {
+      "visibleAtStart": true,
+      "slice": "P00-A2-11"
+    }
+  },
+  {
+    "id": "clock.alarm.01",
+    "appId": "app.clock",
+    "kind": "alarm",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "clock.alarm.01.v0",
+    "variants": [
+      {
+        "id": "clock.alarm.01.v0",
+        "correctionStage": "R0",
+        "body": {
+          "time": "07:20",
+          "label": "访谈",
+          "enabled": true
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "profession",
+      "secondaryFunctions": [],
+      "clueRole": "none",
+      "worldFactIds": [
+        "wf.shenchuan.job"
+      ],
+      "characterTraitIds": [],
+      "relationshipBeatIds": [],
+      "continuityLinkIds": [],
+      "firstReadValue": "建立沈川正常工作日的作息。",
+      "payoffPolicy": "none"
+    },
+    "metadata": {
+      "visibleAtStart": true,
+      "slice": "P00-A2-11"
+    }
+  },
+  {
+    "id": "camera.recent.01",
+    "appId": "app.camera",
+    "kind": "camera_state",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "camera.recent.01.v0",
+    "variants": [
+      {
+        "id": "camera.recent.01.v0",
+        "correctionStage": "R0",
+        "body": {
+          "mode": "照片",
+          "lastCapture": "2026-07-13 21:48"
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "habit",
+      "secondaryFunctions": [],
+      "clueRole": "none",
+      "worldFactIds": [],
+      "characterTraitIds": [
+        "ct.shenchuan.photo"
+      ],
+      "relationshipBeatIds": [],
+      "continuityLinkIds": [],
+      "firstReadValue": "让相机具有真实的最近拍摄状态。",
+      "payoffPolicy": "none"
+    },
+    "metadata": {
+      "visibleAtStart": true,
+      "slice": "P00-A2-11"
+    }
+  },
+  {
+    "id": "voice.memo.01",
+    "appId": "app.voice_memos",
+    "kind": "recording",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "voice.memo.01.v0",
+    "variants": [
+      {
+        "id": "voice.memo.01.v0",
+        "correctionStage": "R0",
+        "body": {
+          "title": "雨声_0703",
+          "duration": "00:18",
+          "date": "2026-07-03"
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "location",
+      "secondaryFunctions": [],
+      "clueRole": "none",
+      "worldFactIds": [
+        "wf.oldpark"
+      ],
+      "characterTraitIds": [],
+      "relationshipBeatIds": [],
+      "continuityLinkIds": [
+        "cl.oldpark"
+      ],
+      "firstReadValue": "以普通环境录音补充现实地点的声音质感。",
+      "payoffPolicy": "none"
+    },
+    "metadata": {
+      "visibleAtStart": true,
+      "slice": "P00-A2-11"
+    }
+  },
+  {
+    "id": "compass.state.01",
+    "appId": "app.compass",
+    "kind": "reading",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "compass.state.01.v0",
+    "variants": [
+      {
+        "id": "compass.state.01.v0",
+        "correctionStage": "R0",
+        "body": {
+          "heading": 117,
+          "location": "杭州"
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "world_context",
+      "secondaryFunctions": [],
+      "clueRole": "none",
+      "worldFactIds": [
+        "wf.hangzhou.daily"
+      ],
+      "characterTraitIds": [],
+      "relationshipBeatIds": [],
+      "continuityLinkIds": [],
+      "firstReadValue": "为环境型App提供真实可用的状态。",
+      "payoffPolicy": "none"
+    },
+    "metadata": {
+      "visibleAtStart": true,
+      "slice": "P00-A2-11"
+    }
+  },
+  {
+    "id": "douyin.video.01",
+    "appId": "app.douyin",
+    "kind": "video",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "douyin.video.01.v0",
+    "variants": [
+      {
+        "id": "douyin.video.01.v0",
+        "correctionStage": "R0",
+        "body": {
+          "author": "城市边角",
+          "caption": "雨后天桥，风很大。",
+          "likes": 841,
+          "comments": 34
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "platform_culture",
+      "secondaryFunctions": [],
+      "clueRole": "none",
+      "worldFactIds": [
+        "wf.hangzhou.daily"
+      ],
+      "characterTraitIds": [
+        "ct.shenchuan.photo"
+      ],
+      "relationshipBeatIds": [],
+      "continuityLinkIds": [],
+      "firstReadValue": "建立沈川会浏览普通城市短视频的媒介习惯。",
+      "payoffPolicy": "none"
+    },
+    "metadata": {
+      "visibleAtStart": true,
+      "slice": "P00-A2-11"
+    }
+  },
+  {
+    "id": "zhihu.answer.01",
+    "appId": "app.zhihu",
+    "kind": "answer",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "zhihu.answer.01.v0",
+    "variants": [
+      {
+        "id": "zhihu.answer.01.v0",
+        "correctionStage": "R0",
+        "body": {
+          "question": "网页存档与当前页面为什么会不同？",
+          "answer": "缓存、CDN、编辑记录和登录状态都可能导致差异，先排除普通原因。",
+          "upvotes": 318
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "profession",
+      "secondaryFunctions": [],
+      "clueRole": "none",
+      "worldFactIds": [
+        "wf.shenchuan.job"
+      ],
+      "characterTraitIds": [
+        "ct.shenchuan.archivist"
+      ],
+      "relationshipBeatIds": [],
+      "continuityLinkIds": [],
+      "firstReadValue": "呈现沈川最初坚持普通技术解释的理性立场。",
+      "payoffPolicy": "none"
+    },
+    "metadata": {
+      "visibleAtStart": true,
+      "slice": "P00-A2-11"
+    }
+  },
+  {
+    "id": "map.place.coffee",
+    "appId": "app.baidu_map",
+    "kind": "place",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "map.place.coffee.v0",
+    "variants": [
+      {
+        "id": "map.place.coffee.v0",
+        "correctionStage": "R0",
+        "body": {
+          "name": "桥下咖啡",
+          "distance": "2.4 km",
+          "visited": "2023-09-17",
+          "favorite": true
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "location",
+      "secondaryFunctions": [],
+      "clueRole": "none",
+      "worldFactIds": [
+        "wf.daily.coffee"
+      ],
+      "characterTraitIds": [],
+      "relationshipBeatIds": [],
+      "continuityLinkIds": [
+        "cl.coffee_shop",
+        "cl.date.230917"
+      ],
+      "firstReadValue": "将社交帖子、支付和现实地点连接起来。",
+      "payoffPolicy": "none"
+    },
+    "metadata": {
+      "visibleAtStart": true,
+      "slice": "P00-A2-11"
+    }
+  },
+  {
+    "id": "calculator.state.01",
+    "appId": "app.calculator",
+    "kind": "state",
+    "ownerId": "actor.player",
+    "sourceRootId": "source.player_daily",
+    "initialVariantId": "calculator.state.01.v0",
+    "variants": [
+      {
+        "id": "calculator.state.01.v0",
+        "correctionStage": "R0",
+        "body": {
+          "lastResult": "0"
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "world_context",
+      "secondaryFunctions": [],
+      "clueRole": "none",
+      "worldFactIds": [
+        "wf.hangzhou.daily"
+      ],
+      "characterTraitIds": [],
+      "relationshipBeatIds": [],
+      "continuityLinkIds": [],
+      "firstReadValue": "为计算器提供正常且独立于剧情的可用状态。",
+      "payoffPolicy": "none"
+    },
+    "metadata": {
+      "visibleAtStart": true,
+      "slice": "P00-A2-11"
+    }
+  },
+  {
+    "id": "call.chenyu.lock.01",
+    "appId": "app.phone",
+    "kind": "call",
+    "ownerId": "actor.chenyu",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "call.chenyu.lock.01.v0",
+    "variants": [
+      {
+        "id": "call.chenyu.lock.01.v0",
+        "correctionStage": "R0",
+        "body": {
+          "contact": "陈屿",
+          "status": "已回拨",
+          "transcript": "我不认识失主。但这台手机右上角有一道短裂纹，壳里面夹着一张旧票根。你先别联网。",
+          "timeMode": "realtime"
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "relationship",
+      "secondaryFunctions": [],
+      "clueRole": "supporting",
+      "worldFactIds": [],
+      "characterTraitIds": [],
+      "relationshipBeatIds": [
+        "rb.shenchuan.chenyu"
+      ],
+      "continuityLinkIds": [],
+      "firstReadValue": "陈屿否认认识失主，却准确知道设备细节，建立第一处关系矛盾。",
+      "payoffPolicy": "required"
+    },
+    "metadata": {
+      "visibleAtStart": true,
+      "slice": "P00-A2-11"
+    }
+  },
+  {
+    "id": "search.shenchuan.results",
+    "appId": "app.wechat",
+    "kind": "search_results",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "search.shenchuan.results.v0",
+    "variants": [
+      {
+        "id": "search.shenchuan.results.v0",
+        "correctionStage": "R0",
+        "body": {
+          "query": "沈川",
+          "results": [
+            {
+              "app": "设置",
+              "title": "设备名称：Shen’s iPhone",
+              "detail": "账户所有者无法验证"
+            },
+            {
+              "app": "QQ邮箱",
+              "title": "沈川整理的版本结构沿用即可",
+              "detail": "产品研究组 · 7月9日"
+            },
+            {
+              "app": "小红书",
+              "title": "@river_archive · 川流档案",
+              "detail": "本机账号缓存"
+            }
+          ]
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "continuity",
+      "secondaryFunctions": [],
+      "clueRole": "direct",
+      "worldFactIds": [
+        "wf.shenchuan.job"
+      ],
+      "characterTraitIds": [
+        "ct.shenchuan.archivist"
+      ],
+      "relationshipBeatIds": [],
+      "continuityLinkIds": [],
+      "firstReadValue": "将设置、工作邮件和社交账号三类来源闭合为“沈川”这一姓名。",
+      "payoffPolicy": "required"
+    },
+    "metadata": {
+      "visibleAtStart": false,
+      "slice": "locked"
+    }
+  }
+]

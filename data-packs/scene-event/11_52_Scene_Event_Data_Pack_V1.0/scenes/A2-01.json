@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "1.0.0",
+  "sceneId": "A2-01",
+  "title": "搜索潘博文",
+  "order": 11,
+  "act": "A2",
+  "correctionStage": "R2",
+  "entryConditions": [
+    {
+      "op": "sceneCompleted",
+      "sceneId": "A1-07"
+    }
+  ],
+  "completionPolicy": "explicitTrigger",
+  "gatesSatisfied": [],
+  "contentRefs": [
+    "safari.search.panbowen"
+  ],
+  "puzzleRefs": [],
+  "triggerRefs": [
+    "trigger.a2-01.complete"
+  ],
+  "checkpoint": false,
+  "responseSource": "A",
+  "fallbackPolicy": {
+    "required": true,
+    "strategy": "alternateContentOrArchive"
+  },
+  "exitState": {
+    "nextSceneId": "A2-02"
+  },
+  "notes": "搜索潘博文"
+}

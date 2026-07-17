@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "1.0.0",
+  "triggerId": "trigger.a4-02.complete",
+  "enabled": true,
+  "once": true,
+  "priority": 100,
+  "when": {
+    "eventType": "wechat.hidden_thread.restored",
+    "sceneId": "A4-02"
+  },
+  "conditions": {
+    "op": "all",
+    "conditions": [
+      {
+        "op": "sceneActive",
+        "sceneId": "A4-02"
+      },
+      {
+        "op": "triggerNotConsumed",
+        "triggerId": "trigger.a4-02.complete"
+      }
+    ]
+  },
+  "transactionRef": "tx.a4-02.complete",
+  "responseSource": "A"
+}

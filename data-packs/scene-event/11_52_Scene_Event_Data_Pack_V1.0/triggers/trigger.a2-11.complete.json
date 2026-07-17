@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "1.0.0",
+  "triggerId": "trigger.a2-11.complete",
+  "enabled": true,
+  "once": true,
+  "priority": 100,
+  "when": {
+    "eventType": "file.opened",
+    "sceneId": "A2-11"
+  },
+  "conditions": {
+    "op": "all",
+    "conditions": [
+      {
+        "op": "sceneActive",
+        "sceneId": "A2-11"
+      },
+      {
+        "op": "triggerNotConsumed",
+        "triggerId": "trigger.a2-11.complete"
+      }
+    ]
+  },
+  "transactionRef": "tx.a2-11.complete",
+  "responseSource": "A"
+}

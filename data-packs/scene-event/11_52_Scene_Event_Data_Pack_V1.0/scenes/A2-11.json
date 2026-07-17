@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "1.0.0",
+  "sceneId": "A2-11",
+  "title": "获得417_index.json",
+  "order": 21,
+  "act": "A2",
+  "correctionStage": "R2",
+  "entryConditions": [
+    {
+      "op": "sceneCompleted",
+      "sceneId": "A2-10"
+    }
+  ],
+  "completionPolicy": "explicitTrigger",
+  "gatesSatisfied": [],
+  "contentRefs": [
+    "file.417_index.json"
+  ],
+  "puzzleRefs": [],
+  "triggerRefs": [
+    "trigger.a2-11.complete"
+  ],
+  "checkpoint": true,
+  "responseSource": "A",
+  "fallbackPolicy": {
+    "required": true,
+    "strategy": "alternateContentOrArchive"
+  },
+  "exitState": {
+    "nextSceneId": "A3-01"
+  },
+  "notes": "获得417_index.json"
+}

@@ -1,0 +1,40 @@
+{
+  "app": "iOS系统",
+  "slug": "ios_system",
+  "category": "系统层",
+  "priority": "A",
+  "role": "承载锁屏、密码、主屏、通知、键盘、弹窗、分享面板与App切换。",
+  "referenceCount": 4,
+  "referenceIds": [
+    "IOS26-LOCK-01",
+    "IOS26-HOME-01",
+    "IOS26-PASS-01",
+    "IOS26-SWITCH-01"
+  ],
+  "requiredStates": [
+    "锁定屏幕",
+    "六位密码输入",
+    "主屏幕",
+    "通知中心",
+    "App切换器",
+    "系统键盘",
+    "系统警告/确认弹窗",
+    "分享面板"
+  ],
+  "interactionContract": [
+    "所有状态栏、Dynamic Island、安全区和底部手势条统一。",
+    "主屏图标必须使用官方图标源，不得手绘替代。",
+    "系统弹层、键盘和通知可被任何App复用，但状态不得互相污染。"
+  ],
+  "contentInjection": [
+    "锁屏通知、壁纸和角标可注入剧情内容；系统几何和组件语法不变。"
+  ],
+  "officialSource": "https://support.apple.com/zh-cn/guide/iphone/welcome/ios",
+  "target": {
+    "viewport": "402x874",
+    "os": "iOS 26.5.2",
+    "language": "简体中文",
+    "appearance": "浅色模式"
+  },
+  "authority": "本目录真实截图优先；没有精确截图的状态只允许从同一App参考组件派生，不允许跨App猜测。"
+}

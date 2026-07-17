@@ -1,0 +1,37 @@
+{
+  "app": "备忘录",
+  "slug": "notes",
+  "category": "核心文本",
+  "priority": "A",
+  "role": "调查日志、每日自证、普通生活与自动普通化。",
+  "referenceCount": 2,
+  "referenceIds": [
+    "IOS26-NOTES-01",
+    "IOS26-NOTES-02"
+  ],
+  "requiredStates": [
+    "文件夹/列表",
+    "正文编辑",
+    "附件",
+    "搜索",
+    "锁定笔记",
+    "格式工具",
+    "自动普通化",
+    "最近删除"
+  ],
+  "interactionContract": [
+    "关键备忘录使用正式状态机：intact→unstable→ordinary→hidden。",
+    "阅读阈值和替代线索必须避免永久死路。"
+  ],
+  "contentInjection": [
+    "注入调查记录、购物清单覆盖、身份校验和玩家生活备忘。"
+  ],
+  "officialSource": "https://support.apple.com/zh-cn/guide/iphone/welcome/ios",
+  "target": {
+    "viewport": "402x874",
+    "os": "iOS 26.5.2",
+    "language": "简体中文",
+    "appearance": "浅色模式"
+  },
+  "authority": "本目录真实截图优先；没有精确截图的状态只允许从同一App参考组件派生，不允许跨App猜测。"
+}

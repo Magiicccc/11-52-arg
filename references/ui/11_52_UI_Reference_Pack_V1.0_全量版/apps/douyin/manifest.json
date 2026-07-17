@@ -1,0 +1,40 @@
+{
+  "app": "抖音",
+  "slug": "douyin",
+  "category": "社区支持",
+  "priority": "B",
+  "role": "短视频、异常帧、评论和浏览历史。",
+  "referenceCount": 5,
+  "referenceIds": [
+    "DY-FEED-01",
+    "DY-VIDEO-01",
+    "DY-LIVE-01",
+    "DY-CHALLENGE-01",
+    "DY-SEARCH-01"
+  ],
+  "requiredStates": [
+    "推荐视频流",
+    "视频详情",
+    "评论抽屉",
+    "搜索",
+    "直播",
+    "个人主页",
+    "收藏/历史",
+    "草稿"
+  ],
+  "interactionContract": [
+    "上下滑动、播放/暂停、进度、评论、收藏和主页可用。",
+    "第417帧只能来自固定视频资产。"
+  ],
+  "contentInjection": [
+    "注入14秒走廊视频、00:11.52、第二组脚步与普通生活视频。"
+  ],
+  "officialSource": "https://apps.apple.com/mo/app/%E6%8A%96%E9%9F%B3-douyin/id1142110895",
+  "target": {
+    "viewport": "402x874",
+    "os": "iOS 26.5.2",
+    "language": "简体中文",
+    "appearance": "浅色模式"
+  },
+  "authority": "本目录真实截图优先；没有精确截图的状态只允许从同一App参考组件派生，不允许跨App猜测。"
+}

@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "1.0.0",
+  "triggerId": "trigger.a2-05.complete",
+  "enabled": true,
+  "once": true,
+  "priority": 100,
+  "when": {
+    "eventType": "archive.cache.entry.opened",
+    "sceneId": "A2-05"
+  },
+  "conditions": {
+    "op": "all",
+    "conditions": [
+      {
+        "op": "sceneActive",
+        "sceneId": "A2-05"
+      },
+      {
+        "op": "triggerNotConsumed",
+        "triggerId": "trigger.a2-05.complete"
+      }
+    ]
+  },
+  "transactionRef": "tx.a2-05.complete",
+  "responseSource": "A"
+}

@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0.0",
+  "sceneId": "A5-01",
+  "title": "打开RETURN共同入口",
+  "order": 42,
+  "act": "A5",
+  "correctionStage": "R5",
+  "entryConditions": [
+    {
+      "op": "sceneCompleted",
+      "sceneId": "A4-10"
+    }
+  ],
+  "completionPolicy": "explicitTrigger",
+  "gatesSatisfied": [
+    "G9"
+  ],
+  "contentRefs": [
+    "return.route_selector"
+  ],
+  "puzzleRefs": [
+    "PZ-024"
+  ],
+  "triggerRefs": [
+    "trigger.a5-01.complete"
+  ],
+  "checkpoint": false,
+  "responseSource": "A",
+  "fallbackPolicy": {
+    "required": true,
+    "strategy": "alternateContentOrArchive"
+  },
+  "exitState": {
+    "nextSceneId": "A5-02"
+  },
+  "notes": "打开RETURN共同入口"
+}

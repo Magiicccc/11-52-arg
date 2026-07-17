@@ -1,0 +1,120 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://11-52.local/schema/app-manifest.json",
+  "title": "AppManifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "displayName",
+    "tier",
+    "iconAsset",
+    "deviceAvailability",
+    "initialRoute",
+    "routes",
+    "capabilities",
+    "reference"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "displayName": {
+      "type": "string"
+    },
+    "tier": {
+      "enum": [
+        "A",
+        "B",
+        "C"
+      ]
+    },
+    "iconAsset": {
+      "type": "string"
+    },
+    "deviceAvailability": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "investigation",
+          "player"
+        ]
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "initialRoute": {
+      "type": "string"
+    },
+    "routes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "path",
+          "scrollRestoration"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "path": {
+            "type": "string"
+          },
+          "scrollRestoration": {
+            "type": "boolean"
+          },
+          "requiresUnlock": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "capabilities": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "reference": {
+      "type": "object",
+      "required": [
+        "packVersion",
+        "appSlug",
+        "stateIds",
+        "modeByState"
+      ],
+      "properties": {
+        "packVersion": {
+          "const": "1.0-full"
+        },
+        "appSlug": {
+          "type": "string"
+        },
+        "stateIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "modeByState": {
+          "type": "object",
+          "additionalProperties": {
+            "enum": [
+              "direct_real",
+              "derived_real",
+              "system_inherited"
+            ]
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

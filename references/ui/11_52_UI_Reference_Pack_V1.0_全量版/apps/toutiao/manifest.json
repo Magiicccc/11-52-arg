@@ -1,0 +1,35 @@
+{
+  "app": "今日头条",
+  "slug": "toutiao",
+  "category": "社区支持",
+  "priority": "B",
+  "role": "正常新闻、人口数据和模棱两可的官方回应。",
+  "referenceCount": 3,
+  "referenceIds": [
+    "TT-HOT-01",
+    "TT-FEED-01",
+    "TT-AI-01"
+  ],
+  "requiredStates": [
+    "新闻信息流",
+    "热榜",
+    "文章详情",
+    "评论区",
+    "搜索/AI搜索",
+    "收藏/历史"
+  ],
+  "interactionContract": [
+    "文章、来源、时间、配图和评论层级保持克制真实。"
+  ],
+  "contentInjection": [
+    "注入身份核验求助、人口流动数据、旧校舍拆除与普通新闻。"
+  ],
+  "officialSource": "https://apps.apple.com/cn/app/%E4%BB%8A%E6%97%A5%E5%A4%B4%E6%9D%A1/id529092160",
+  "target": {
+    "viewport": "402x874",
+    "os": "iOS 26.5.2",
+    "language": "简体中文",
+    "appearance": "浅色模式"
+  },
+  "authority": "本目录真实截图优先；没有精确截图的状态只允许从同一App参考组件派生，不允许跨App猜测。"
+}

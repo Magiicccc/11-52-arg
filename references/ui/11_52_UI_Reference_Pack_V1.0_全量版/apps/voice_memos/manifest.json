@@ -1,0 +1,33 @@
+{
+  "app": "语音备忘录",
+  "slug": "voice_memos",
+  "category": "环境/声音",
+  "priority": "C",
+  "role": "录音、播放、波形、转写和未知说话者。",
+  "referenceCount": 1,
+  "referenceIds": [
+    "VM26-REC-01"
+  ],
+  "requiredStates": [
+    "录音列表",
+    "录制中",
+    "播放详情",
+    "重命名",
+    "删除",
+    "转写"
+  ],
+  "interactionContract": [
+    "录制、播放、暂停、拖动和删除可用。"
+  ],
+  "contentInjection": [
+    "注入沈川每日自证、玩家录音和未知说话者修正。"
+  ],
+  "officialSource": "https://support.apple.com/zh-cn/guide/iphone/welcome/ios",
+  "target": {
+    "viewport": "402x874",
+    "os": "iOS 26.5.2",
+    "language": "简体中文",
+    "appearance": "浅色模式"
+  },
+  "authority": "本目录真实截图优先；没有精确截图的状态只允许从同一App参考组件派生，不允许跨App猜测。"
+}

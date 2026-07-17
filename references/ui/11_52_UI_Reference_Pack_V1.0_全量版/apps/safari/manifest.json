@@ -1,0 +1,42 @@
+{
+  "app": "Safari",
+  "slug": "safari",
+  "category": "核心互联网",
+  "priority": "A",
+  "role": "真实知识查询、搜索结果、404缓存、档案页和网页历史。",
+  "referenceCount": 6,
+  "referenceIds": [
+    "SAFARI26-START-01",
+    "SAFARI26-SEARCH-01",
+    "SAFARI26-WEB-01",
+    "SAFARI26-MENU-01",
+    "SAFARI26-PRIVATE-01",
+    "SAFARI26-TABS-01"
+  ],
+  "requiredStates": [
+    "起始页",
+    "地址输入/搜索",
+    "网页浏览",
+    "更多菜单",
+    "无痕浏览",
+    "标签总览",
+    "历史/收藏",
+    "知识页",
+    "404/缓存页"
+  ],
+  "interactionContract": [
+    "地址栏、搜索建议、标签、历史、返回和页面滚动均可用。",
+    "真实知识页和游戏控制网页在同一浏览器壳内呈现。"
+  ],
+  "contentInjection": [
+    "注入潘博文搜索、摩斯密码知识、知乎原帖入口、404缓存和搜索结果修正。"
+  ],
+  "officialSource": "https://support.apple.com/zh-cn/guide/iphone/welcome/ios",
+  "target": {
+    "viewport": "402x874",
+    "os": "iOS 26.5.2",
+    "language": "简体中文",
+    "appearance": "浅色模式"
+  },
+  "authority": "本目录真实截图优先；没有精确截图的状态只允许从同一App参考组件派生，不允许跨App猜测。"
+}

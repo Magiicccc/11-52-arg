@@ -1,0 +1,15 @@
+{
+  "endingId": "ending.keep_panbowen",
+  "title": "保留潘博文",
+  "route": "keep_current_identity",
+  "conditions": {
+    "all": [
+      "network.syncCommitted==true",
+      "return.centralImportCommitted==false",
+      "pb.keepRequestAccepted==true"
+    ]
+  },
+  "finalScene": "A5-07",
+  "worldPatch": "ending.keep_panbowen.patch",
+  "nextRun": "W1"
+}

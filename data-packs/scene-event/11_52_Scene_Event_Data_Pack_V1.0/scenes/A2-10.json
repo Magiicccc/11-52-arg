@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0.0",
+  "sceneId": "A2-10",
+  "title": "备忘录普通化与通知残片",
+  "order": 20,
+  "act": "A2",
+  "correctionStage": "R2",
+  "entryConditions": [
+    {
+      "op": "sceneCompleted",
+      "sceneId": "A2-09"
+    }
+  ],
+  "completionPolicy": "explicitTrigger",
+  "gatesSatisfied": [],
+  "contentRefs": [
+    "note.verification.07.r3",
+    "notification.note.fragment"
+  ],
+  "puzzleRefs": [
+    "PZ-009"
+  ],
+  "triggerRefs": [
+    "trigger.a2-10.complete"
+  ],
+  "checkpoint": false,
+  "responseSource": "A",
+  "fallbackPolicy": {
+    "required": true,
+    "strategy": "alternateContentOrArchive"
+  },
+  "exitState": {
+    "nextSceneId": "A2-11"
+  },
+  "notes": "备忘录普通化与通知残片"
+}

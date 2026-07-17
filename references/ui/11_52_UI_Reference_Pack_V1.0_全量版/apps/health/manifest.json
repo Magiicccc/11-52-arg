@@ -1,0 +1,35 @@
+{
+  "app": "健康",
+  "slug": "health",
+  "category": "环境/身体",
+  "priority": "C",
+  "role": "步数、活动、健康摘要和无轨迹的身体数据。",
+  "referenceCount": 3,
+  "referenceIds": [
+    "HEALTH26-SUM-01",
+    "HEALTH26-DETAIL-01",
+    "HEALTH26-MED-01"
+  ],
+  "requiredStates": [
+    "摘要",
+    "浏览健康数据",
+    "步数详情",
+    "用药",
+    "趋势",
+    "活动记录"
+  ],
+  "interactionContract": [
+    "摘要、详情和日期范围可切换。"
+  ],
+  "contentInjection": [
+    "注入身体活动仍存在但路线/身份消失的矛盾。"
+  ],
+  "officialSource": "https://support.apple.com/zh-cn/guide/iphone/welcome/ios",
+  "target": {
+    "viewport": "402x874",
+    "os": "iOS 26.5.2",
+    "language": "简体中文",
+    "appearance": "浅色模式"
+  },
+  "authority": "本目录真实截图优先；没有精确截图的状态只允许从同一App参考组件派生，不允许跨App猜测。"
+}

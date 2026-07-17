@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0.0",
+  "sceneId": "A3-07",
+  "title": "发送蓝色搪瓷杯进行盲验证",
+  "order": 28,
+  "act": "A3",
+  "correctionStage": "R3",
+  "entryConditions": [
+    {
+      "op": "sceneCompleted",
+      "sceneId": "A3-06"
+    }
+  ],
+  "completionPolicy": "explicitTrigger",
+  "gatesSatisfied": [],
+  "contentRefs": [
+    "photo.blue_mug",
+    "wechat.zhoulan.blind_test"
+  ],
+  "puzzleRefs": [
+    "PZ-014"
+  ],
+  "triggerRefs": [
+    "trigger.a3-07.complete"
+  ],
+  "checkpoint": false,
+  "responseSource": "H",
+  "fallbackPolicy": {
+    "required": true,
+    "strategy": "alternateContentOrArchive"
+  },
+  "exitState": {
+    "nextSceneId": "A3-08"
+  },
+  "notes": "发送蓝色搪瓷杯进行盲验证"
+}

@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "11:52 MediaAsset",
+  "type": "object",
+  "required": [
+    "assetId",
+    "type",
+    "sceneRefs",
+    "title",
+    "variantStages",
+    "sourceRootId",
+    "priority",
+    "status"
+  ],
+  "properties": {
+    "assetId": {
+      "type": "string",
+      "minLength": 3
+    },
+    "type": {
+      "type": "string"
+    },
+    "sceneRefs": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "baseAssetId": {
+      "type": "string"
+    },
+    "variantStages": {
+      "type": "string"
+    },
+    "sourceRootId": {
+      "type": "string"
+    },
+    "characterRefs": {
+      "type": "string"
+    },
+    "locationRefs": {
+      "type": "string"
+    },
+    "objectRefs": {
+      "type": "string"
+    },
+    "duration": {
+      "type": "string"
+    },
+    "dimensions": {
+      "type": "string"
+    },
+    "clueRole": {
+      "enum": [
+        "none",
+        "supporting",
+        "direct"
+      ]
+    },
+    "priority": {
+      "enum": [
+        "P0",
+        "P1",
+        "P2"
+      ]
+    },
+    "notes": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "planned",
+        "reference_approved",
+        "base_approved",
+        "variants_approved",
+        "final"
+      ]
+    }
+  }
+}

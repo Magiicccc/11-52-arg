@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.0.0",
+  "sceneId": "A3-05",
+  "title": "未知来电与钥匙声",
+  "order": 26,
+  "act": "A3",
+  "correctionStage": "R3",
+  "entryConditions": [
+    {
+      "op": "sceneCompleted",
+      "sceneId": "A3-04"
+    }
+  ],
+  "completionPolicy": "explicitTrigger",
+  "gatesSatisfied": [],
+  "contentRefs": [
+    "call.pb.keys.8s"
+  ],
+  "puzzleRefs": [
+    "PZ-013"
+  ],
+  "triggerRefs": [
+    "trigger.a3-05.complete"
+  ],
+  "checkpoint": false,
+  "responseSource": "P",
+  "fallbackPolicy": {
+    "required": true,
+    "strategy": "alternateContentOrArchive"
+  },
+  "exitState": {
+    "nextSceneId": "A3-06"
+  },
+  "notes": "未知来电与钥匙声"
+}

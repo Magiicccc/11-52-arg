@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "1.0.0",
+  "triggerId": "trigger.a4-01.complete",
+  "enabled": true,
+  "once": true,
+  "priority": 100,
+  "when": {
+    "eventType": "global.search.submitted",
+    "sceneId": "A4-01"
+  },
+  "conditions": {
+    "op": "all",
+    "conditions": [
+      {
+        "op": "sceneActive",
+        "sceneId": "A4-01"
+      },
+      {
+        "op": "triggerNotConsumed",
+        "triggerId": "trigger.a4-01.complete"
+      }
+    ]
+  },
+  "transactionRef": "tx.a4-01.complete",
+  "responseSource": "A"
+}

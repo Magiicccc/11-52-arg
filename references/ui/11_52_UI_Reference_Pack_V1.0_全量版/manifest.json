@@ -1,0 +1,249 @@
+{
+  "schemaVersion": "2.0",
+  "packVersion": "1.0-full",
+  "title": "《11:52》全量真实界面参考包",
+  "frozenAt": "2026-07-16",
+  "deliveryMode": "single_batch_complete",
+  "target": {
+    "device": "Dynamic Island iPhone",
+    "logicalViewport": "402x874",
+    "os": "iOS 26.5.2",
+    "language": "简体中文",
+    "appearance": "浅色模式"
+  },
+  "appCount": 31,
+  "referenceCount": 108,
+  "requiredStateCount": 232,
+  "coverageCounts": {
+    "direct_real": 81,
+    "system_inherited": 59,
+    "derived_real": 92
+  },
+  "apps": [
+    {
+      "app": "iOS系统",
+      "slug": "ios_system",
+      "category": "系统层",
+      "priority": "A",
+      "referenceCount": 4
+    },
+    {
+      "app": "微信",
+      "slug": "wechat",
+      "category": "核心通讯",
+      "priority": "A",
+      "referenceCount": 8
+    },
+    {
+      "app": "照片",
+      "slug": "photos",
+      "category": "核心证据",
+      "priority": "A",
+      "referenceCount": 4
+    },
+    {
+      "app": "Safari",
+      "slug": "safari",
+      "category": "核心互联网",
+      "priority": "A",
+      "referenceCount": 6
+    },
+    {
+      "app": "百度地图",
+      "slug": "baidu_map",
+      "category": "核心现实锚点",
+      "priority": "A",
+      "referenceCount": 3
+    },
+    {
+      "app": "文件",
+      "slug": "files",
+      "category": "核心文件",
+      "priority": "A",
+      "referenceCount": 1
+    },
+    {
+      "app": "备忘录",
+      "slug": "notes",
+      "category": "核心文本",
+      "priority": "A",
+      "referenceCount": 2
+    },
+    {
+      "app": "电话",
+      "slug": "phone",
+      "category": "核心声音",
+      "priority": "A",
+      "referenceCount": 2
+    },
+    {
+      "app": "日历",
+      "slug": "calendar",
+      "category": "支持证据",
+      "priority": "B",
+      "referenceCount": 1
+    },
+    {
+      "app": "设置",
+      "slug": "settings",
+      "category": "支持身份",
+      "priority": "B",
+      "referenceCount": 2
+    },
+    {
+      "app": "小红书",
+      "slug": "xiaohongshu",
+      "category": "社区支持",
+      "priority": "B",
+      "referenceCount": 8
+    },
+    {
+      "app": "抖音",
+      "slug": "douyin",
+      "category": "社区支持",
+      "priority": "B",
+      "referenceCount": 5
+    },
+    {
+      "app": "知乎",
+      "slug": "zhihu",
+      "category": "社区支持",
+      "priority": "B",
+      "referenceCount": 5
+    },
+    {
+      "app": "百度贴吧",
+      "slug": "tieba",
+      "category": "社区支持",
+      "priority": "B",
+      "referenceCount": 4
+    },
+    {
+      "app": "今日头条",
+      "slug": "toutiao",
+      "category": "社区支持",
+      "priority": "B",
+      "referenceCount": 3
+    },
+    {
+      "app": "QQ邮箱",
+      "slug": "qqmail",
+      "category": "支持证据",
+      "priority": "B",
+      "referenceCount": 5
+    },
+    {
+      "app": "百度网盘",
+      "slug": "baidunetdisk",
+      "category": "支持证据",
+      "priority": "B",
+      "referenceCount": 5
+    },
+    {
+      "app": "支付宝",
+      "slug": "alipay",
+      "category": "支持生活",
+      "priority": "B",
+      "referenceCount": 4
+    },
+    {
+      "app": "滴滴出行",
+      "slug": "didi",
+      "category": "环境/轨迹",
+      "priority": "C",
+      "referenceCount": 5
+    },
+    {
+      "app": "美团",
+      "slug": "meituan",
+      "category": "环境/生活",
+      "priority": "C",
+      "referenceCount": 3
+    },
+    {
+      "app": "淘宝",
+      "slug": "taobao",
+      "category": "环境/生活",
+      "priority": "C",
+      "referenceCount": 3
+    },
+    {
+      "app": "网易云音乐",
+      "slug": "netease_music",
+      "category": "环境/声音",
+      "priority": "C",
+      "referenceCount": 2
+    },
+    {
+      "app": "微信读书",
+      "slug": "wechat_reading",
+      "category": "环境/文本",
+      "priority": "C",
+      "referenceCount": 5
+    },
+    {
+      "app": "健康",
+      "slug": "health",
+      "category": "环境/身体",
+      "priority": "C",
+      "referenceCount": 3
+    },
+    {
+      "app": "天气",
+      "slug": "weather",
+      "category": "环境/时间",
+      "priority": "C",
+      "referenceCount": 2
+    },
+    {
+      "app": "时钟",
+      "slug": "clock",
+      "category": "环境/工具",
+      "priority": "C",
+      "referenceCount": 1
+    },
+    {
+      "app": "计算器",
+      "slug": "calculator",
+      "category": "环境/工具",
+      "priority": "C",
+      "referenceCount": 2
+    },
+    {
+      "app": "相机",
+      "slug": "camera",
+      "category": "环境/媒体",
+      "priority": "C",
+      "referenceCount": 1
+    },
+    {
+      "app": "语音备忘录",
+      "slug": "voice_memos",
+      "category": "环境/声音",
+      "priority": "C",
+      "referenceCount": 1
+    },
+    {
+      "app": "铁路12306",
+      "slug": "railway12306",
+      "category": "环境/轨迹",
+      "priority": "C",
+      "referenceCount": 7
+    },
+    {
+      "app": "指南针",
+      "slug": "compass",
+      "category": "环境/工具",
+      "priority": "C",
+      "referenceCount": 1
+    }
+  ],
+  "authorityOrder": [
+    "本包raw真实截图",
+    "本包同App派生合同",
+    "本包iOS系统继承组件",
+    "仅用于版本核验的网络搜索",
+    "模型记忆（禁止）"
+  ],
+  "completionDefinition": "所有游戏所需App与状态均在本包中获得直接真实参考或同App/系统继承的确定派生合同；不再按后续批次补齐。"
+}

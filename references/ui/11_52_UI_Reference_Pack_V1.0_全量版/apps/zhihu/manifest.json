@@ -1,0 +1,40 @@
+{
+  "app": "知乎",
+  "slug": "zhihu",
+  "category": "社区支持",
+  "priority": "B",
+  "role": "潘博文原帖、问答、技术解释和404入口。",
+  "referenceCount": 5,
+  "referenceIds": [
+    "ZH-HOME-01",
+    "ZH-AI-01",
+    "ZH-PROFILE-01",
+    "ZH-KANSHAN-01",
+    "ZH-IDEAS-01"
+  ],
+  "requiredStates": [
+    "首页/回答",
+    "问题详情",
+    "搜索",
+    "想法流",
+    "个人主页",
+    "评论",
+    "AI模块",
+    "404页"
+  ],
+  "interactionContract": [
+    "长回答滚动、赞同、评论、收藏、搜索和返回可用。",
+    "原帖/回答必须保留真实问答层级。"
+  ],
+  "contentInjection": [
+    "注入潘博文原帖、存档技术问答、模棱两可解释和缓存入口。"
+  ],
+  "officialSource": "https://apps.apple.com/cn/app/%E7%9F%A5%E4%B9%8E/id432274380",
+  "target": {
+    "viewport": "402x874",
+    "os": "iOS 26.5.2",
+    "language": "简体中文",
+    "appearance": "浅色模式"
+  },
+  "authority": "本目录真实截图优先；没有精确截图的状态只允许从同一App参考组件派生，不允许跨App猜测。"
+}

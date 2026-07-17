@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "1.0.0",
+  "triggerId": "trigger.p03.complete",
+  "enabled": true,
+  "once": true,
+  "priority": 100,
+  "when": {
+    "eventType": "device.passcode.accepted",
+    "sceneId": "P03"
+  },
+  "conditions": {
+    "op": "all",
+    "conditions": [
+      {
+        "op": "sceneActive",
+        "sceneId": "P03"
+      },
+      {
+        "op": "triggerNotConsumed",
+        "triggerId": "trigger.p03.complete"
+      }
+    ]
+  },
+  "transactionRef": "tx.p03.complete",
+  "responseSource": "A"
+}

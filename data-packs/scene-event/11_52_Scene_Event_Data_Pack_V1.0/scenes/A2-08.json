@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0.0",
+  "sceneId": "A2-08",
+  "title": "查看第417帧并收到PB响应",
+  "order": 18,
+  "act": "A2",
+  "correctionStage": "R2",
+  "entryConditions": [
+    {
+      "op": "sceneCompleted",
+      "sceneId": "A2-07"
+    }
+  ],
+  "completionPolicy": "explicitTrigger",
+  "gatesSatisfied": [
+    "G5"
+  ],
+  "contentRefs": [
+    "video.oldrain17.frame417",
+    "wechat.pb.first"
+  ],
+  "puzzleRefs": [
+    "PZ-008"
+  ],
+  "triggerRefs": [
+    "trigger.a2-08.complete"
+  ],
+  "checkpoint": true,
+  "responseSource": "P",
+  "fallbackPolicy": {
+    "required": true,
+    "strategy": "alternateContentOrArchive"
+  },
+  "exitState": {
+    "nextSceneId": "A2-09"
+  },
+  "notes": "查看第417帧并收到PB响应"
+}

@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0.0",
+  "sceneId": "P03",
+  "title": "输入230917并解锁",
+  "order": 3,
+  "act": "P",
+  "correctionStage": "R0",
+  "entryConditions": [
+    {
+      "op": "sceneCompleted",
+      "sceneId": "P02"
+    }
+  ],
+  "completionPolicy": "explicitTrigger",
+  "gatesSatisfied": [
+    "G1"
+  ],
+  "contentRefs": [
+    "evidence.ticket.230917",
+    "device.passcode.230917"
+  ],
+  "puzzleRefs": [
+    "PZ-001"
+  ],
+  "triggerRefs": [
+    "trigger.p03.complete"
+  ],
+  "checkpoint": true,
+  "responseSource": "A",
+  "fallbackPolicy": {
+    "required": true,
+    "strategy": "alternateContentOrArchive"
+  },
+  "exitState": {
+    "nextSceneId": "A1-01"
+  },
+  "notes": "输入230917并解锁"
+}

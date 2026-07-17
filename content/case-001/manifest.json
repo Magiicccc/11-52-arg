@@ -1,0 +1,22 @@
+{
+  "id": "campaign.case-001",
+  "title": "11:52",
+  "version": "0.1.0",
+  "storyDate": "2026-07-15",
+  "initialSceneId": "P00",
+  "appManifestFile": "apps/app-manifests.json",
+  "contentFiles": [
+    "apps/content-items.json"
+  ],
+  "triggerFiles": [
+    "triggers/triggers.json"
+  ],
+  "contextFiles": [
+    "context/registry.json",
+    "context/world-facts.json",
+    "context/character-traits.json",
+    "context/relationship-beats.json",
+    "context/continuity-links.json"
+  ],
+  "visualReferencePack": "references/ui/11_52_UI_Reference_Pack_V1.0_全量版"
+}

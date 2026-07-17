@@ -1,0 +1,1276 @@
+[
+  {
+    "schemaVersion": "1.0.0",
+    "triggerId": "trigger.a1-01.complete",
+    "enabled": true,
+    "once": true,
+    "priority": 100,
+    "when": {
+      "eventType": "settings.account.viewed",
+      "sceneId": "A1-01"
+    },
+    "conditions": {
+      "op": "all",
+      "conditions": [
+        {
+          "op": "sceneActive",
+          "sceneId": "A1-01"
+        },
+        {
+          "op": "triggerNotConsumed",
+          "triggerId": "trigger.a1-01.complete"
+        }
+      ]
+    },
+    "transactionRef": "tx.a1-01.complete",
+    "responseSource": "A"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "triggerId": "trigger.a1-02.complete",
+    "enabled": true,
+    "once": true,
+    "priority": 100,
+    "when": {
+      "eventType": "identity.name.confirmed",
+      "sceneId": "A1-02"
+    },
+    "conditions": {
+      "op": "all",
+      "conditions": [
+        {
+          "op": "sceneActive",
+          "sceneId": "A1-02"
+        },
+        {
+          "op": "triggerNotConsumed",
+          "triggerId": "trigger.a1-02.complete"
+        }
+      ]
+    },
+    "transactionRef": "tx.a1-02.complete",
+    "responseSource": "A"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "triggerId": "trigger.a1-03.complete",
+    "enabled": true,
+    "once": true,
+    "priority": 100,
+    "when": {
+      "eventType": "daily.content.explored",
+      "sceneId": "A1-03"
+    },
+    "conditions": {
+      "op": "all",
+      "conditions": [
+        {
+          "op": "sceneActive",
+          "sceneId": "A1-03"
+        },
+        {
+          "op": "triggerNotConsumed",
+          "triggerId": "trigger.a1-03.complete"
+        }
+      ]
+    },
+    "transactionRef": "tx.a1-03.complete",
+    "responseSource": "A"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "triggerId": "trigger.a1-04.complete",
+    "enabled": true,
+    "once": true,
+    "priority": 100,
+    "when": {
+      "eventType": "photo.region.inspected",
+      "sceneId": "A1-04"
+    },
+    "conditions": {
+      "op": "all",
+      "conditions": [
+        {
+          "op": "sceneActive",
+          "sceneId": "A1-04"
+        },
+        {
+          "op": "triggerNotConsumed",
+          "triggerId": "trigger.a1-04.complete"
+        }
+      ]
+    },
+    "transactionRef": "tx.a1-04.complete",
+    "responseSource": "A"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "triggerId": "trigger.a1-05.complete",
+    "enabled": true,
+    "once": true,
+    "priority": 100,
+    "when": {
+      "eventType": "wechat.media.sent",
+      "sceneId": "A1-05"
+    },
+    "conditions": {
+      "op": "all",
+      "conditions": [
+        {
+          "op": "sceneActive",
+          "sceneId": "A1-05"
+        },
+        {
+          "op": "triggerNotConsumed",
+          "triggerId": "trigger.a1-05.complete"
+        }
+      ]
+    },
+    "transactionRef": "tx.a1-05.complete",
+    "responseSource": "H"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "triggerId": "trigger.a1-06.complete",
+    "enabled": true,
+    "once": true,
+    "priority": 100,
+    "when": {
+      "eventType": "wechat.memory.conflict.received",
+      "sceneId": "A1-06"
+    },
+    "conditions": {
+      "op": "all",
+      "conditions": [
+        {
+          "op": "sceneActive",
+          "sceneId": "A1-06"
+        },
+        {
+          "op": "triggerNotConsumed",
+          "triggerId": "trigger.a1-06.complete"
+        }
+      ]
+    },
+    "transactionRef": "tx.a1-06.complete",
+    "responseSource": "H"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "triggerId": "trigger.a1-07.complete",
+    "enabled": true,
+    "once": true,
+    "priority": 100,
+    "when": {
+      "eventType": "anchor.face.eroded",
+      "sceneId": "A1-07"
+    },
+    "conditions": {
+      "op": "all",
+      "conditions": [
+        {
+          "op": "sceneActive",
+          "sceneId": "A1-07"
+        },
+        {
+          "op": "triggerNotConsumed",
+          "triggerId": "trigger.a1-07.complete"
+        }
+      ]
+    },
+    "transactionRef": "tx.a1-07.complete",
+    "responseSource": "A"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "triggerId": "trigger.a2-01.complete",
+    "enabled": true,
+    "once": true,
+    "priority": 100,
+    "when": {
+      "eventType": "browser.search.submitted",
+      "sceneId": "A2-01"
+    },
+    "conditions": {
+      "op": "all",
+      "conditions": [
+        {
+          "op": "sceneActive",
+          "sceneId": "A2-01"
+        },
+        {
+          "op": "triggerNotConsumed",
+          "triggerId": "trigger.a2-01.complete"
+        }
+      ]
+    },
+    "transactionRef": "tx.a2-01.complete",
+    "responseSource": "A"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "triggerId": "trigger.a2-02.complete",
+    "enabled": true,
+    "once": true,
+    "priority": 100,
+    "when": {
+      "eventType": "forum.thread.opened",
+      "sceneId": "A2-02"
+    },
+    "conditions": {
+      "op": "all",
+      "conditions": [
+        {
+          "op": "sceneActive",
+          "sceneId": "A2-02"
+        },
+        {
+          "op": "triggerNotConsumed",
+          "triggerId": "trigger.a2-02.complete"
+        }
+      ]
+    },
+    "transactionRef": "tx.a2-02.complete",
+    "responseSource": "A"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "triggerId": "trigger.a2-03.complete",
+    "enabled": true,
+    "once": true,
+    "priority": 100,
+    "when": {
+      "eventType": "forum.floor.gap.confirmed",
+      "sceneId": "A2-03"
+    },
+    "conditions": {
+      "op": "all",
+      "conditions": [
+        {
+          "op": "sceneActive",
+          "sceneId": "A2-03"
+        },
+        {
+          "op": "triggerNotConsumed",
+          "triggerId": "trigger.a2-03.complete"
+        }
+      ]
+    },
+    "transactionRef": "tx.a2-03.complete",
+    "responseSource": "A"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "triggerId": "trigger.a2-04.complete",
+    "enabled": true,
+    "once": true,
+    "priority": 100,
+    "when": {
+      "eventType": "browser.page.404.opened",
+      "sceneId": "A2-04"
+    },
+    "conditions": {
+      "op": "all",
+      "conditions": [
+        {
+          "op": "sceneActive",
+          "sceneId": "A2-04"
+        },
+        {
+          "op": "triggerNotConsumed",
+          "triggerId": "trigger.a2-04.complete"
+        }
+      ]
+    },
+    "transactionRef": "tx.a2-04.complete",
+    "responseSource": "A"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "triggerId": "trigger.a2-05.complete",
+    "enabled": true,
+    "once": true,
+    "priority": 100,
+    "when": {
+      "eventType": "archive.cache.entry.opened",
+      "sceneId": "A2-05"
+    },
+    "conditions": {
+      "op": "all",
+      "conditions": [
+        {
+          "op": "sceneActive",
+          "sceneId": "A2-05"
+        },
+        {
+          "op": "triggerNotConsumed",
+          "triggerId": "trigger.a2-05.complete"
+        }
+      ]
+    },
+    "transactionRef": "tx.a2-05.complete",
+    "responseSource": "A"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "triggerId": "trigger.a2-06.complete",
+    "enabled": true,
+    "once": true,
+    "priority": 100,
+    "when": {
+      "eventType": "morse.reference.read",
+      "sceneId": "A2-06"
+    },
+    "conditions": {
+      "op": "all",
+      "conditions": [
+        {
+          "op": "sceneActive",
+          "sceneId": "A2-06"
+        },
+        {
+          "op": "triggerNotConsumed",
+          "triggerId": "trigger.a2-06.complete"
+        }
+      ]
+    },
+    "transactionRef": "tx.a2-06.complete",
+    "responseSource": "A"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "triggerId": "trigger.a2-07.complete",
+    "enabled": true,
+    "once": true,
+    "priority": 100,
+    "when": {
+      "eventType": "puzzle.answer.submitted",
+      "sceneId": "A2-07"
+    },
+    "conditions": {
+      "op": "all",
+      "conditions": [
+        {
+          "op": "sceneActive",
+          "sceneId": "A2-07"
+        },
+        {
+          "op": "triggerNotConsumed",
+          "triggerId": "trigger.a2-07.complete"
+        }
+      ]
+    },
+    "transactionRef": "tx.a2-07.complete",
+    "responseSource": "A"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "triggerId": "trigger.a2-08.complete",
+    "enabled": true,
+    "once": true,
+    "priority": 100,
+    "when": {
+      "eventType": "video.frame.inspected",
+      "sceneId": "A2-08"
+    },
+    "conditions": {
+      "op": "all",
+      "conditions": [
+        {
+          "op": "sceneActive",
+          "sceneId": "A2-08"
+        },
+        {
+          "op": "triggerNotConsumed",
+          "triggerId": "trigger.a2-08.complete"
+        }
+      ]
+    },
+    "transactionRef": "tx.a2-08.complete",
+    "responseSource": "P"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "triggerId": "trigger.a2-09.complete",
+    "enabled": true,
+    "once": true,
+    "priority": 100,
+    "when": {
+      "eventType": "note.read.threshold_reached",
+      "sceneId": "A2-09"
+    },
+    "conditions": {
+      "op": "all",
+      "conditions": [
+        {
+          "op": "sceneActive",
+          "sceneId": "A2-09"
+        },
+        {
+          "op": "triggerNotConsumed",
+          "triggerId": "trigger.a2-09.complete"
+        }
+      ]
+    },
+    "transactionRef": "tx.a2-09.complete",
+    "responseSource": "A"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "triggerId": "trigger.a2-10.complete",
+    "enabled": true,
+    "once": true,
+    "priority": 100,
+    "when": {
+      "eventType": "note.correction.completed",
+      "sceneId": "A2-10"
+    },
+    "conditions": {
+      "op": "all",
+      "conditions": [
+        {
+          "op": "sceneActive",
+          "sceneId": "A2-10"
+        },
+        {
+          "op": "triggerNotConsumed",
+          "triggerId": "trigger.a2-10.complete"
+        }
+      ]
+    },
+    "transactionRef": "tx.a2-10.complete",
+    "responseSource": "A"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "triggerId": "trigger.a2-11.complete",
+    "enabled": true,
+    "once": true,
+    "priority": 100,
+    "when": {
+      "eventType": "file.opened",
+      "sceneId": "A2-11"
+    },
+    "conditions": {
+      "op": "all",
+      "conditions": [
+        {
+          "op": "sceneActive",
+          "sceneId": "A2-11"
+        },
+        {
+          "op": "triggerNotConsumed",
+          "triggerId": "trigger.a2-11.complete"
+        }
+      ]
+    },
+    "transactionRef": "tx.a2-11.complete",
+    "responseSource": "A"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "triggerId": "trigger.a3-01.complete",
+    "enabled": true,
+    "once": true,
+    "priority": 100,
+    "when": {
+      "eventType": "coordinates.assembled",
+      "sceneId": "A3-01"
+    },
+    "conditions": {
+      "op": "all",
+      "conditions": [
+        {
+          "op": "sceneActive",
+          "sceneId": "A3-01"
+        },
+        {
+          "op": "triggerNotConsumed",
+          "triggerId": "trigger.a3-01.complete"
+        }
+      ]
+    },
+    "transactionRef": "tx.a3-01.complete",
+    "responseSource": "A"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "triggerId": "trigger.a3-02.complete",
+    "enabled": true,
+    "once": true,
+    "priority": 100,
+    "when": {
+      "eventType": "map.location.opened",
+      "sceneId": "A3-02"
+    },
+    "conditions": {
+      "op": "all",
+      "conditions": [
+        {
+          "op": "sceneActive",
+          "sceneId": "A3-02"
+        },
+        {
+          "op": "triggerNotConsumed",
+          "triggerId": "trigger.a3-02.complete"
+        }
+      ]
+    },
+    "transactionRef": "tx.a3-02.complete",
+    "responseSource": "A"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "triggerId": "trigger.a3-03.complete",
+    "enabled": true,
+    "once": true,
+    "priority": 100,
+    "when": {
+      "eventType": "photo.site.series.opened",
+      "sceneId": "A3-03"
+    },
+    "conditions": {
+      "op": "all",
+      "conditions": [
+        {
+          "op": "sceneActive",
+          "sceneId": "A3-03"
+        },
+        {
+          "op": "triggerNotConsumed",
+          "triggerId": "trigger.a3-03.complete"
+        }
+      ]
+    },
+    "transactionRef": "tx.a3-03.complete",
+    "responseSource": "A"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "triggerId": "trigger.a3-04.complete",
+    "enabled": true,
+    "once": true,
+    "priority": 100,
+    "when": {
+      "eventType": "photo.metadata.signature.confirmed",
+      "sceneId": "A3-04"
+    },
+    "conditions": {
+      "op": "all",
+      "conditions": [
+        {
+          "op": "sceneActive",
+          "sceneId": "A3-04"
+        },
+        {
+          "op": "triggerNotConsumed",
+          "triggerId": "trigger.a3-04.complete"
+        }
+      ]
+    },
+    "transactionRef": "tx.a3-04.complete",
+    "responseSource": "A"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "triggerId": "trigger.a3-05.complete",
+    "enabled": true,
+    "once": true,
+    "priority": 100,
+    "when": {
+      "eventType": "unknown.call.completed",
+      "sceneId": "A3-05"
+    },
+    "conditions": {
+      "op": "all",
+      "conditions": [
+        {
+          "op": "sceneActive",
+          "sceneId": "A3-05"
+        },
+        {
+          "op": "triggerNotConsumed",
+          "triggerId": "trigger.a3-05.complete"
+        }
+      ]
+    },
+    "transactionRef": "tx.a3-05.complete",
+    "responseSource": "P"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "triggerId": "trigger.a3-06.complete",
+    "enabled": true,
+    "once": true,
+    "priority": 100,
+    "when": {
+      "eventType": "wechat.thread.zhoulan.opened",
+      "sceneId": "A3-06"
+    },
+    "conditions": {
+      "op": "all",
+      "conditions": [
+        {
+          "op": "sceneActive",
+          "sceneId": "A3-06"
+        },
+        {
+          "op": "triggerNotConsumed",
+          "triggerId": "trigger.a3-06.complete"
+        }
+      ]
+    },
+    "transactionRef": "tx.a3-06.complete",
+    "responseSource": "H"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "triggerId": "trigger.a3-07.complete",
+    "enabled": true,
+    "once": true,
+    "priority": 100,
+    "when": {
+      "eventType": "wechat.media.sent",
+      "sceneId": "A3-07"
+    },
+    "conditions": {
+      "op": "all",
+      "conditions": [
+        {
+          "op": "sceneActive",
+          "sceneId": "A3-07"
+        },
+        {
+          "op": "triggerNotConsumed",
+          "triggerId": "trigger.a3-07.complete"
+        }
+      ]
+    },
+    "transactionRef": "tx.a3-07.complete",
+    "responseSource": "H"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "triggerId": "trigger.a3-08.complete",
+    "enabled": true,
+    "once": true,
+    "priority": 100,
+    "when": {
+      "eventType": "voice.variant.corrected",
+      "sceneId": "A3-08"
+    },
+    "conditions": {
+      "op": "all",
+      "conditions": [
+        {
+          "op": "sceneActive",
+          "sceneId": "A3-08"
+        },
+        {
+          "op": "triggerNotConsumed",
+          "triggerId": "trigger.a3-08.complete"
+        }
+      ]
+    },
+    "transactionRef": "tx.a3-08.complete",
+    "responseSource": "C"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "triggerId": "trigger.a3-09.complete",
+    "enabled": true,
+    "once": true,
+    "priority": 100,
+    "when": {
+      "eventType": "device.player.anchor_change.viewed",
+      "sceneId": "A3-09"
+    },
+    "conditions": {
+      "op": "all",
+      "conditions": [
+        {
+          "op": "sceneActive",
+          "sceneId": "A3-09"
+        },
+        {
+          "op": "triggerNotConsumed",
+          "triggerId": "trigger.a3-09.complete"
+        }
+      ]
+    },
+    "transactionRef": "tx.a3-09.complete",
+    "responseSource": "A"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "triggerId": "trigger.a3-10.complete",
+    "enabled": true,
+    "once": true,
+    "priority": 100,
+    "when": {
+      "eventType": "video.playback.completed",
+      "sceneId": "A3-10"
+    },
+    "conditions": {
+      "op": "all",
+      "conditions": [
+        {
+          "op": "sceneActive",
+          "sceneId": "A3-10"
+        },
+        {
+          "op": "triggerNotConsumed",
+          "triggerId": "trigger.a3-10.complete"
+        }
+      ]
+    },
+    "transactionRef": "tx.a3-10.complete",
+    "responseSource": "A"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "triggerId": "trigger.a4-01.complete",
+    "enabled": true,
+    "once": true,
+    "priority": 100,
+    "when": {
+      "eventType": "global.search.submitted",
+      "sceneId": "A4-01"
+    },
+    "conditions": {
+      "op": "all",
+      "conditions": [
+        {
+          "op": "sceneActive",
+          "sceneId": "A4-01"
+        },
+        {
+          "op": "triggerNotConsumed",
+          "triggerId": "trigger.a4-01.complete"
+        }
+      ]
+    },
+    "transactionRef": "tx.a4-01.complete",
+    "responseSource": "A"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "triggerId": "trigger.a4-02.complete",
+    "enabled": true,
+    "once": true,
+    "priority": 100,
+    "when": {
+      "eventType": "wechat.hidden_thread.restored",
+      "sceneId": "A4-02"
+    },
+    "conditions": {
+      "op": "all",
+      "conditions": [
+        {
+          "op": "sceneActive",
+          "sceneId": "A4-02"
+        },
+        {
+          "op": "triggerNotConsumed",
+          "triggerId": "trigger.a4-02.complete"
+        }
+      ]
+    },
+    "transactionRef": "tx.a4-02.complete",
+    "responseSource": "A"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "triggerId": "trigger.a4-03.complete",
+    "enabled": true,
+    "once": true,
+    "priority": 100,
+    "when": {
+      "eventType": "relationship.first_meeting.confirmed",
+      "sceneId": "A4-03"
+    },
+    "conditions": {
+      "op": "all",
+      "conditions": [
+        {
+          "op": "sceneActive",
+          "sceneId": "A4-03"
+        },
+        {
+          "op": "triggerNotConsumed",
+          "triggerId": "trigger.a4-03.complete"
+        }
+      ]
+    },
+    "transactionRef": "tx.a4-03.complete",
+    "responseSource": "A"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "triggerId": "trigger.a4-04.complete",
+    "enabled": true,
+    "once": true,
+    "priority": 100,
+    "when": {
+      "eventType": "relationship.history.confirmed",
+      "sceneId": "A4-04"
+    },
+    "conditions": {
+      "op": "all",
+      "conditions": [
+        {
+          "op": "sceneActive",
+          "sceneId": "A4-04"
+        },
+        {
+          "op": "triggerNotConsumed",
+          "triggerId": "trigger.a4-04.complete"
+        }
+      ]
+    },
+    "transactionRef": "tx.a4-04.complete",
+    "responseSource": "A"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "triggerId": "trigger.a4-05.complete",
+    "enabled": true,
+    "once": true,
+    "priority": 100,
+    "when": {
+      "eventType": "identity.protocol.read",
+      "sceneId": "A4-05"
+    },
+    "conditions": {
+      "op": "all",
+      "conditions": [
+        {
+          "op": "sceneActive",
+          "sceneId": "A4-05"
+        },
+        {
+          "op": "triggerNotConsumed",
+          "triggerId": "trigger.a4-05.complete"
+        }
+      ]
+    },
+    "transactionRef": "tx.a4-05.complete",
+    "responseSource": "A"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "triggerId": "trigger.a4-06.complete",
+    "enabled": true,
+    "once": true,
+    "priority": 100,
+    "when": {
+      "eventType": "map.devices.colocation.confirmed",
+      "sceneId": "A4-06"
+    },
+    "conditions": {
+      "op": "all",
+      "conditions": [
+        {
+          "op": "sceneActive",
+          "sceneId": "A4-06"
+        },
+        {
+          "op": "triggerNotConsumed",
+          "triggerId": "trigger.a4-06.complete"
+        }
+      ]
+    },
+    "transactionRef": "tx.a4-06.complete",
+    "responseSource": "A"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "triggerId": "trigger.a4-07.complete",
+    "enabled": true,
+    "once": true,
+    "priority": 100,
+    "when": {
+      "eventType": "video.playback.completed",
+      "sceneId": "A4-07"
+    },
+    "conditions": {
+      "op": "all",
+      "conditions": [
+        {
+          "op": "sceneActive",
+          "sceneId": "A4-07"
+        },
+        {
+          "op": "triggerNotConsumed",
+          "triggerId": "trigger.a4-07.complete"
+        }
+      ]
+    },
+    "transactionRef": "tx.a4-07.complete",
+    "responseSource": "A"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "triggerId": "trigger.a4-08.complete",
+    "enabled": true,
+    "once": true,
+    "priority": 100,
+    "when": {
+      "eventType": "return.diagnostics.read",
+      "sceneId": "A4-08"
+    },
+    "conditions": {
+      "op": "all",
+      "conditions": [
+        {
+          "op": "sceneActive",
+          "sceneId": "A4-08"
+        },
+        {
+          "op": "triggerNotConsumed",
+          "triggerId": "trigger.a4-08.complete"
+        }
+      ]
+    },
+    "transactionRef": "tx.a4-08.complete",
+    "responseSource": "A"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "triggerId": "trigger.a4-09.complete",
+    "enabled": true,
+    "once": true,
+    "priority": 100,
+    "when": {
+      "eventType": "evidence.source_independence.understood",
+      "sceneId": "A4-09"
+    },
+    "conditions": {
+      "op": "all",
+      "conditions": [
+        {
+          "op": "sceneActive",
+          "sceneId": "A4-09"
+        },
+        {
+          "op": "triggerNotConsumed",
+          "triggerId": "trigger.a4-09.complete"
+        }
+      ]
+    },
+    "transactionRef": "tx.a4-09.complete",
+    "responseSource": "A"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "triggerId": "trigger.a4-10.complete",
+    "enabled": true,
+    "once": true,
+    "priority": 100,
+    "when": {
+      "eventType": "wechat.pb.admission.received",
+      "sceneId": "A4-10"
+    },
+    "conditions": {
+      "op": "all",
+      "conditions": [
+        {
+          "op": "sceneActive",
+          "sceneId": "A4-10"
+        },
+        {
+          "op": "triggerNotConsumed",
+          "triggerId": "trigger.a4-10.complete"
+        }
+      ]
+    },
+    "transactionRef": "tx.a4-10.complete",
+    "responseSource": "P"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "triggerId": "trigger.a5-01.complete",
+    "enabled": true,
+    "once": true,
+    "priority": 100,
+    "when": {
+      "eventType": "return.route_selector.opened",
+      "sceneId": "A5-01"
+    },
+    "conditions": {
+      "op": "all",
+      "conditions": [
+        {
+          "op": "sceneActive",
+          "sceneId": "A5-01"
+        },
+        {
+          "op": "triggerNotConsumed",
+          "triggerId": "trigger.a5-01.complete"
+        }
+      ]
+    },
+    "transactionRef": "tx.a5-01.complete",
+    "responseSource": "A"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "triggerId": "trigger.a5-02.complete",
+    "enabled": true,
+    "once": true,
+    "priority": 100,
+    "when": {
+      "eventType": "return.central_import.committed",
+      "sceneId": "A5-02"
+    },
+    "conditions": {
+      "op": "all",
+      "conditions": [
+        {
+          "op": "sceneActive",
+          "sceneId": "A5-02"
+        },
+        {
+          "op": "triggerNotConsumed",
+          "triggerId": "trigger.a5-02.complete"
+        }
+      ]
+    },
+    "transactionRef": "tx.a5-02.complete",
+    "responseSource": "A"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "triggerId": "trigger.a5-03.complete",
+    "enabled": true,
+    "once": true,
+    "priority": 100,
+    "when": {
+      "eventType": "network.sync.committed",
+      "sceneId": "A5-03"
+    },
+    "conditions": {
+      "op": "all",
+      "conditions": [
+        {
+          "op": "sceneActive",
+          "sceneId": "A5-03"
+        },
+        {
+          "op": "triggerNotConsumed",
+          "triggerId": "trigger.a5-03.complete"
+        }
+      ]
+    },
+    "transactionRef": "tx.a5-03.complete",
+    "responseSource": "P"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "triggerId": "trigger.a5-04.complete",
+    "enabled": true,
+    "once": true,
+    "priority": 100,
+    "when": {
+      "eventType": "witness.voice.distributed",
+      "sceneId": "A5-04"
+    },
+    "conditions": {
+      "op": "all",
+      "conditions": [
+        {
+          "op": "sceneActive",
+          "sceneId": "A5-04"
+        },
+        {
+          "op": "triggerNotConsumed",
+          "triggerId": "trigger.a5-04.complete"
+        }
+      ]
+    },
+    "transactionRef": "tx.a5-04.complete",
+    "responseSource": "A"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "triggerId": "trigger.a5-05.complete",
+    "enabled": true,
+    "once": true,
+    "priority": 100,
+    "when": {
+      "eventType": "witness.family_location.distributed",
+      "sceneId": "A5-05"
+    },
+    "conditions": {
+      "op": "all",
+      "conditions": [
+        {
+          "op": "sceneActive",
+          "sceneId": "A5-05"
+        },
+        {
+          "op": "triggerNotConsumed",
+          "triggerId": "trigger.a5-05.complete"
+        }
+      ]
+    },
+    "transactionRef": "tx.a5-05.complete",
+    "responseSource": "A"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "triggerId": "trigger.a5-06.complete",
+    "enabled": true,
+    "once": true,
+    "priority": 100,
+    "when": {
+      "eventType": "witness.name_face.separated",
+      "sceneId": "A5-06"
+    },
+    "conditions": {
+      "op": "all",
+      "conditions": [
+        {
+          "op": "sceneActive",
+          "sceneId": "A5-06"
+        },
+        {
+          "op": "triggerNotConsumed",
+          "triggerId": "trigger.a5-06.complete"
+        }
+      ]
+    },
+    "transactionRef": "tx.a5-06.complete",
+    "responseSource": "A"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "triggerId": "trigger.a5-07.complete",
+    "enabled": true,
+    "once": true,
+    "priority": 100,
+    "when": {
+      "eventType": "ending.commit.requested",
+      "sceneId": "A5-07"
+    },
+    "conditions": {
+      "op": "all",
+      "conditions": [
+        {
+          "op": "sceneActive",
+          "sceneId": "A5-07"
+        },
+        {
+          "op": "triggerNotConsumed",
+          "triggerId": "trigger.a5-07.complete"
+        }
+      ]
+    },
+    "transactionRef": "tx.a5-07.complete",
+    "responseSource": "A"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "triggerId": "trigger.p00.complete",
+    "enabled": true,
+    "once": true,
+    "priority": 100,
+    "when": {
+      "eventType": "device.player.opened",
+      "sceneId": "P00"
+    },
+    "conditions": {
+      "op": "all",
+      "conditions": [
+        {
+          "op": "sceneActive",
+          "sceneId": "P00"
+        },
+        {
+          "op": "triggerNotConsumed",
+          "triggerId": "trigger.p00.complete"
+        }
+      ]
+    },
+    "transactionRef": "tx.p00.complete",
+    "responseSource": "A"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "triggerId": "trigger.p01.complete",
+    "enabled": true,
+    "once": true,
+    "priority": 100,
+    "when": {
+      "eventType": "device.investigation.woken",
+      "sceneId": "P01"
+    },
+    "conditions": {
+      "op": "all",
+      "conditions": [
+        {
+          "op": "sceneActive",
+          "sceneId": "P01"
+        },
+        {
+          "op": "triggerNotConsumed",
+          "triggerId": "trigger.p01.complete"
+        }
+      ]
+    },
+    "transactionRef": "tx.p01.complete",
+    "responseSource": "A"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "triggerId": "trigger.p02.complete",
+    "enabled": true,
+    "once": true,
+    "priority": 100,
+    "when": {
+      "eventType": "lockscreen.call.returned",
+      "sceneId": "P02"
+    },
+    "conditions": {
+      "op": "all",
+      "conditions": [
+        {
+          "op": "sceneActive",
+          "sceneId": "P02"
+        },
+        {
+          "op": "triggerNotConsumed",
+          "triggerId": "trigger.p02.complete"
+        }
+      ]
+    },
+    "transactionRef": "tx.p02.complete",
+    "responseSource": "H"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "triggerId": "trigger.p03.complete",
+    "enabled": true,
+    "once": true,
+    "priority": 100,
+    "when": {
+      "eventType": "device.passcode.accepted",
+      "sceneId": "P03"
+    },
+    "conditions": {
+      "op": "all",
+      "conditions": [
+        {
+          "op": "sceneActive",
+          "sceneId": "P03"
+        },
+        {
+          "op": "triggerNotConsumed",
+          "triggerId": "trigger.p03.complete"
+        }
+      ]
+    },
+    "transactionRef": "tx.p03.complete",
+    "responseSource": "A"
+  }
+]

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.0.0",
+  "sceneId": "A1-03",
+  "title": "浏览普通生活内容",
+  "order": 6,
+  "act": "A1",
+  "correctionStage": "R1",
+  "entryConditions": [
+    {
+      "op": "sceneCompleted",
+      "sceneId": "A1-02"
+    }
+  ],
+  "completionPolicy": "explicitTrigger",
+  "gatesSatisfied": [],
+  "contentRefs": [
+    "wechat.daily_threads",
+    "xiaohongshu.shen.normal_posts",
+    "orders.daily.normal"
+  ],
+  "puzzleRefs": [],
+  "triggerRefs": [
+    "trigger.a1-03.complete"
+  ],
+  "checkpoint": false,
+  "responseSource": "A",
+  "fallbackPolicy": {
+    "required": true,
+    "strategy": "alternateContentOrArchive"
+  },
+  "exitState": {
+    "nextSceneId": "A1-04"
+  },
+  "notes": "浏览普通生活内容"
+}

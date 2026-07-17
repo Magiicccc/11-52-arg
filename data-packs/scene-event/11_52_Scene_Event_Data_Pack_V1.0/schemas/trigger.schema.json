@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "triggerId",
+    "when",
+    "conditions",
+    "transactionRef",
+    "responseSource"
+  ],
+  "properties": {
+    "triggerId": {
+      "type": "string"
+    },
+    "once": {
+      "type": "boolean"
+    },
+    "priority": {
+      "type": "integer"
+    },
+    "responseSource": {
+      "enum": [
+        "H",
+        "A",
+        "P",
+        "C",
+        "M"
+      ]
+    }
+  }
+}

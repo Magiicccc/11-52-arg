@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "1.0.0",
+  "transactionId": "tx.a3-09.complete",
+  "atomic": true,
+  "idempotencyKey": "trigger.a3-09.complete",
+  "actions": [
+    {
+      "type": "completeScene",
+      "sceneId": "A3-09"
+    },
+    {
+      "type": "setAnchorState",
+      "subjectId": "player",
+      "anchorType": "family",
+      "value": "eroding"
+    },
+    {
+      "type": "setAnchorState",
+      "subjectId": "player",
+      "anchorType": "home",
+      "value": "eroding"
+    }
+  ],
+  "rollbackPolicy": "allOrNothing"
+}

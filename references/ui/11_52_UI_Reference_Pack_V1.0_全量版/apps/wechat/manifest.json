@@ -1,0 +1,47 @@
+{
+  "app": "微信",
+  "slug": "wechat",
+  "category": "核心通讯",
+  "priority": "A",
+  "role": "实时对话、历史证据、文件传输助手和世界响应中枢。",
+  "referenceCount": 8,
+  "referenceIds": [
+    "WX-LIST-01",
+    "WX-GROUP-01",
+    "WX-VOICE-01",
+    "WX-FILE-01",
+    "WX-MOMENT-01",
+    "WX-MOMENT-02",
+    "WX-PLUS-01",
+    "WX-SELECT-01"
+  ],
+  "requiredStates": [
+    "会话列表",
+    "单聊详情",
+    "群聊详情",
+    "语音输入/播放",
+    "图片与文件消息",
+    "文件传输助手",
+    "全局/聊天搜索",
+    "“+”扩展面板",
+    "多选/收藏/转发",
+    "撤回消息",
+    "发送失败/离线"
+  ],
+  "interactionContract": [
+    "会话行、聊天气泡、时间分隔、底部输入栏、键盘和长按菜单必须可交互。",
+    "NPC回复由事件系统触发，界面只负责呈现。",
+    "所有实时消息使用玩家现实时间显示，但主线不按等待时间推进。"
+  ],
+  "contentInjection": [
+    "注入沈川、陈屿、周岚、文件传输助手、玩家家庭聊天和R0—R5修正版本。"
+  ],
+  "officialSource": "https://apps.apple.com/cn/app/%E5%BE%AE%E4%BF%A1/id414478124",
+  "target": {
+    "viewport": "402x874",
+    "os": "iOS 26.5.2",
+    "language": "简体中文",
+    "appearance": "浅色模式"
+  },
+  "authority": "本目录真实截图优先；没有精确截图的状态只允许从同一App参考组件派生，不允许跨App猜测。"
+}

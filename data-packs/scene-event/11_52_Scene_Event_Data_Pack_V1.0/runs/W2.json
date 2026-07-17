@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "1.0.0",
+  "runId": "W2",
+  "title": "现实修正周目W2",
+  "baseRun": "W0",
+  "operations": [
+    "rename:map.loc_river_edu_old_01->ordinary_site",
+    "variant:orders.shared->single",
+    "redact:return.source_graph.partial"
+  ],
+  "archiveModeAvailable": true,
+  "fullResetAvailable": true,
+  "mainlineReachability": "full"
+}

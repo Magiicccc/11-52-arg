@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "1.0.0",
+  "runId": "W4",
+  "title": "现实修正周目W4",
+  "baseRun": "W0",
+  "operations": [
+    "reset:both_devices->near_new",
+    "retain:fragment.i_was_here",
+    "retain:timestamp.1152",
+    "retain:object.unowned_keys",
+    "mode:theme_endpoint"
+  ],
+  "archiveModeAvailable": true,
+  "fullResetAvailable": true,
+  "mainlineReachability": "none"
+}

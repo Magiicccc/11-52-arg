@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "1.0.0",
+  "triggerId": "trigger.a5-07.complete",
+  "enabled": true,
+  "once": true,
+  "priority": 100,
+  "when": {
+    "eventType": "ending.commit.requested",
+    "sceneId": "A5-07"
+  },
+  "conditions": {
+    "op": "all",
+    "conditions": [
+      {
+        "op": "sceneActive",
+        "sceneId": "A5-07"
+      },
+      {
+        "op": "triggerNotConsumed",
+        "triggerId": "trigger.a5-07.complete"
+      }
+    ]
+  },
+  "transactionRef": "tx.a5-07.complete",
+  "responseSource": "A"
+}

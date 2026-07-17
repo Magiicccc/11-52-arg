@@ -1,0 +1,206 @@
+{
+  "packId": "11_52_media_production_v1_0",
+  "generatedAt": "2026-07-17",
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "97f1dae7cc4934dac1c1e611046d3b28d2022b7cc2045d2ced3cc40b66bc5c99",
+      "size": 794
+    },
+    {
+      "path": "assets/media_manifest.json",
+      "sha256": "09286d9317faa9e7ddc857b2caab59288b7636bb58666de20388e8cfd3a3b751",
+      "size": 66140
+    },
+    {
+      "path": "audio/audio_production_rules.md",
+      "sha256": "0b7311165dd815976fa16cb416f078520dcc5bad372bcbfb3913e3a8b362d88e",
+      "size": 550
+    },
+    {
+      "path": "characters/axu.json",
+      "sha256": "82e4796b443253eac82ec2645687fabcee69b85ea05d22b8f1b0267bd4924b72",
+      "size": 873
+    },
+    {
+      "path": "characters/chenyu.json",
+      "sha256": "248c68871c7555935a6c5dda11a16f1ade92527dbe5e92d041e29fb6e2aa183c",
+      "size": 880
+    },
+    {
+      "path": "characters/oldrain17.json",
+      "sha256": "d8cbd537b088f39e7c24650c0e24d0a83da3f7f67e5592bb00949d30e1543565",
+      "size": 914
+    },
+    {
+      "path": "characters/panbowen.json",
+      "sha256": "82b2827d215fe07b8ad033ff567ebf9c4a155cddcfad007c28555d56f84ce59f",
+      "size": 1176
+    },
+    {
+      "path": "characters/player.json",
+      "sha256": "93ae83d0e5d9fd4bdda9b7c149d07eefb23be11517c04393dbad6828e72ac042",
+      "size": 1060
+    },
+    {
+      "path": "characters/shenchuan.json",
+      "sha256": "913506282dd546448f1521200968c09e0b27ee4d27e0ad1a5cda49fa574d2f0b",
+      "size": 1176
+    },
+    {
+      "path": "characters/zhoulan.json",
+      "sha256": "dc8657825d7d6364140151fd5fda3c8def6afc6a7e774941cbde5d683426f3c8",
+      "size": 932
+    },
+    {
+      "path": "locations/loc_hz_bridge_bookstore.json",
+      "sha256": "1309ac76484489028497422a11ca644d2521800ec65654aad1639ba7e57d5e15",
+      "size": 318
+    },
+    {
+      "path": "locations/loc_hz_coffee_230917.json",
+      "sha256": "30c89c48d05d931b7d556fd631fe662bac3bfa818f42dc16671a25b527acff74",
+      "size": 344
+    },
+    {
+      "path": "locations/loc_hz_office.json",
+      "sha256": "f2dbbde0818ca7eaef33b036d584fda9ad3282326b226f1bec09c6cd4e1d9e31",
+      "size": 350
+    },
+    {
+      "path": "locations/loc_hz_shen_apartment.json",
+      "sha256": "0f41ed4ec6a9399dfaab7a3ef628ca54fd18ef6d2e0e0dd99b005466fe703202",
+      "size": 355
+    },
+    {
+      "path": "locations/loc_player_home.json",
+      "sha256": "9b59e31857fd5a1fd477f83cae0be02a2dacfa084671f926bc06595a6a17b848",
+      "size": 347
+    },
+    {
+      "path": "locations/loc_tj_corridor.json",
+      "sha256": "6382a82bbd4861658d28b06154227189549302dca0c69ba94bc3a26a226f7571",
+      "size": 373
+    },
+    {
+      "path": "locations/loc_tj_hotel.json",
+      "sha256": "20bfea34339b1b1d4fcc76dd2c484230f4f4f5695e4ef912624247a93234eed6",
+      "size": 337
+    },
+    {
+      "path": "locations/loc_tj_old_riverside.json",
+      "sha256": "b1bf4aa4cadc084a23b566fcda002ac9725e103b6464a81bbc1619b43a7f4178",
+      "size": 474
+    },
+    {
+      "path": "locations/loc_zhoulan_kitchen.json",
+      "sha256": "e581b7458272dd77d3fd7778388ce0728818b49fbf2246b0d7a5800dc82bb4ed",
+      "size": 336
+    },
+    {
+      "path": "objects/obj_bag_shen.json",
+      "sha256": "c664a751a171203c96bf9b67c97741f9f7cc56feaa75bd154929c209b94dfba1",
+      "size": 235
+    },
+    {
+      "path": "objects/obj_ball_badminton.json",
+      "sha256": "8ae69c36e79eaa30e9e459d7c486d03b7112ab4ba099e6c7e1279bb55bf91865",
+      "size": 240
+    },
+    {
+      "path": "objects/obj_birth_booklet.json",
+      "sha256": "38ae4ab36579e58a40ac9e0680e8a664deabc252475bf500e41af6e7c8232aae",
+      "size": 297
+    },
+    {
+      "path": "objects/obj_blue_mug.json",
+      "sha256": "1b288fc1df0ae5506687617947bea80278be4ad62eeadb665d8f1c7c30045a95",
+      "size": 313
+    },
+    {
+      "path": "objects/obj_coffee_receipt.json",
+      "sha256": "29df1333411e2079bd2178d6d1d1462b7a3b2900b8f992b78b59d84b62562b62",
+      "size": 261
+    },
+    {
+      "path": "objects/obj_drive_archive.json",
+      "sha256": "a643f16c8ffb42128a3b20fe852693757296b4ccaad86c11a6038026bcc03285",
+      "size": 248
+    },
+    {
+      "path": "objects/obj_keyring_pb.json",
+      "sha256": "a13d78ca3e4f7befaa2a730ecc84e3fbd1d3a17e47416dee72c7e5800ea94404",
+      "size": 313
+    },
+    {
+      "path": "objects/obj_labels.json",
+      "sha256": "abb2cb335db2b735cd1b06061634c6c8699a136acee7337060758231eca7e2a4",
+      "size": 252
+    },
+    {
+      "path": "objects/obj_phone_investigation.json",
+      "sha256": "c4d8b638d419b414988da546a2fc73a60af087706fab4d6445c29ec9bc31e6f8",
+      "size": 313
+    },
+    {
+      "path": "objects/obj_phone_player.json",
+      "sha256": "ee95b9636c8776f10e8ef95fcf12f25f2f47106e3c98283573bb53135f80375d",
+      "size": 284
+    },
+    {
+      "path": "objects/obj_ticket_230917.json",
+      "sha256": "3fb2dab662b5d3a981262328dfbbde306b940ed304c93accce4d642ce783dfed",
+      "size": 298
+    },
+    {
+      "path": "objects/obj_wriststrap_player.json",
+      "sha256": "b4f7938ac5708d8e8819211f6f3835df3d86ae04964ae861f3ae91e51f857998",
+      "size": 256
+    },
+    {
+      "path": "production_order.md",
+      "sha256": "199e9fa978015486a40a7603bcad8c8fdf12da9a821fb8bf254546ced634bc5a",
+      "size": 791
+    },
+    {
+      "path": "prompts/generation_templates.md",
+      "sha256": "0ae4a5e00a2a5b234938d5b978463c457aa8a23a43961a976a07d3e1e92e9e1a",
+      "size": 2811
+    },
+    {
+      "path": "qa/continuity_audit_template.md",
+      "sha256": "190fc16c9b90868c98b72fa84b423e564b2dc869af11d8694ccf66bd18ef5f2b",
+      "size": 447
+    },
+    {
+      "path": "qa/media_qa_checklist.md",
+      "sha256": "e896dc1e6f29d5c3dc36df7a2ff2a8a6e364383d7518c3129090c394d6f6d9af",
+      "size": 1124
+    },
+    {
+      "path": "schemas/media-asset.schema.json",
+      "sha256": "5d9854cf1fa5b3cef8bdbee42626a179126ffd8b29201da7cefbcd836473b7bc",
+      "size": 1305
+    },
+    {
+      "path": "shotlists/all_media_assets.csv",
+      "sha256": "34ff1a438571cb7b6e67d78cefd32b41e713a7917e56533fdb054d8c5cf39150",
+      "size": 24964
+    },
+    {
+      "path": "shotlists/priority_p0.csv",
+      "sha256": "adce43b5f80730cf0aa38106e10a58fe8d5e77c91ad2a18514f84988b1d18358",
+      "size": 7681
+    },
+    {
+      "path": "variants/r0_r5_variant_matrix.csv",
+      "sha256": "cc8c8f97553a88a066afd4485cface86b3d3b091c06aa3b7979e0b94c6ec4d0a",
+      "size": 46482
+    },
+    {
+      "path": "video/video_production_rules.md",
+      "sha256": "0052b9f32a334e29dd06a23d73f3a03be46534f2ef53e39bc1288617f4b85856",
+      "size": 501
+    }
+  ]
+}

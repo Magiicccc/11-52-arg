@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "1.0.0",
+  "transactionId": "tx.a2-11.complete",
+  "atomic": true,
+  "idempotencyKey": "trigger.a2-11.complete",
+  "actions": [
+    {
+      "type": "completeScene",
+      "sceneId": "A2-11"
+    },
+    {
+      "type": "createCheckpoint",
+      "checkpointId": "checkpoint.A2-11"
+    }
+  ],
+  "rollbackPolicy": "allOrNothing"
+}

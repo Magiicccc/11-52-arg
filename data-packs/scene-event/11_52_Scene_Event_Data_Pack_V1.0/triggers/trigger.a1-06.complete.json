@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "1.0.0",
+  "triggerId": "trigger.a1-06.complete",
+  "enabled": true,
+  "once": true,
+  "priority": 100,
+  "when": {
+    "eventType": "wechat.memory.conflict.received",
+    "sceneId": "A1-06"
+  },
+  "conditions": {
+    "op": "all",
+    "conditions": [
+      {
+        "op": "sceneActive",
+        "sceneId": "A1-06"
+      },
+      {
+        "op": "triggerNotConsumed",
+        "triggerId": "trigger.a1-06.complete"
+      }
+    ]
+  },
+  "transactionRef": "tx.a1-06.complete",
+  "responseSource": "H"
+}

@@ -1,0 +1,872 @@
+[
+  {
+    "id": "app.wechat",
+    "displayName": "微信",
+    "tier": "A",
+    "iconAsset": "/icons/third_party/wechat.png",
+    "deviceAvailability": [
+      "investigation",
+      "player"
+    ],
+    "initialRoute": "root",
+    "routes": [
+      {
+        "id": "route.app.wechat.root",
+        "path": "root",
+        "scrollRestoration": true
+      }
+    ],
+    "capabilities": [
+      "open",
+      "back",
+      "refresh_restore"
+    ],
+    "reference": {
+      "packVersion": "1.0-full",
+      "appSlug": "wechat",
+      "stateIds": [],
+      "modeByState": {}
+    }
+  },
+  {
+    "id": "app.photos",
+    "displayName": "照片",
+    "tier": "A",
+    "iconAsset": "/icons/system/photos.png",
+    "deviceAvailability": [
+      "investigation",
+      "player"
+    ],
+    "initialRoute": "root",
+    "routes": [
+      {
+        "id": "route.app.photos.root",
+        "path": "root",
+        "scrollRestoration": true
+      }
+    ],
+    "capabilities": [
+      "open",
+      "back",
+      "refresh_restore"
+    ],
+    "reference": {
+      "packVersion": "1.0-full",
+      "appSlug": "photos",
+      "stateIds": [],
+      "modeByState": {}
+    }
+  },
+  {
+    "id": "app.safari",
+    "displayName": "Safari",
+    "tier": "A",
+    "iconAsset": "/icons/system/safari.png",
+    "deviceAvailability": [
+      "investigation",
+      "player"
+    ],
+    "initialRoute": "root",
+    "routes": [
+      {
+        "id": "route.app.safari.root",
+        "path": "root",
+        "scrollRestoration": true
+      }
+    ],
+    "capabilities": [
+      "open",
+      "back",
+      "refresh_restore"
+    ],
+    "reference": {
+      "packVersion": "1.0-full",
+      "appSlug": "safari",
+      "stateIds": [],
+      "modeByState": {}
+    }
+  },
+  {
+    "id": "app.baidu_map",
+    "displayName": "百度地图",
+    "tier": "A",
+    "iconAsset": "/icons/third_party/baidu_map.png",
+    "deviceAvailability": [
+      "investigation",
+      "player"
+    ],
+    "initialRoute": "root",
+    "routes": [
+      {
+        "id": "route.app.baidu_map.root",
+        "path": "root",
+        "scrollRestoration": true
+      }
+    ],
+    "capabilities": [
+      "open",
+      "back",
+      "refresh_restore"
+    ],
+    "reference": {
+      "packVersion": "1.0-full",
+      "appSlug": "baidu_map",
+      "stateIds": [],
+      "modeByState": {}
+    }
+  },
+  {
+    "id": "app.phone",
+    "displayName": "电话",
+    "tier": "A",
+    "iconAsset": "/icons/system/phone.png",
+    "deviceAvailability": [
+      "investigation",
+      "player"
+    ],
+    "initialRoute": "root",
+    "routes": [
+      {
+        "id": "route.app.phone.root",
+        "path": "root",
+        "scrollRestoration": true
+      }
+    ],
+    "capabilities": [
+      "open",
+      "back",
+      "refresh_restore"
+    ],
+    "reference": {
+      "packVersion": "1.0-full",
+      "appSlug": "phone",
+      "stateIds": [],
+      "modeByState": {}
+    }
+  },
+  {
+    "id": "app.files",
+    "displayName": "文件",
+    "tier": "A",
+    "iconAsset": "/icons/system/files.png",
+    "deviceAvailability": [
+      "investigation",
+      "player"
+    ],
+    "initialRoute": "root",
+    "routes": [
+      {
+        "id": "route.app.files.root",
+        "path": "root",
+        "scrollRestoration": true
+      }
+    ],
+    "capabilities": [
+      "open",
+      "back",
+      "refresh_restore"
+    ],
+    "reference": {
+      "packVersion": "1.0-full",
+      "appSlug": "files",
+      "stateIds": [],
+      "modeByState": {}
+    }
+  },
+  {
+    "id": "app.notes",
+    "displayName": "备忘录",
+    "tier": "A",
+    "iconAsset": "/icons/system/notes.png",
+    "deviceAvailability": [
+      "investigation",
+      "player"
+    ],
+    "initialRoute": "root",
+    "routes": [
+      {
+        "id": "route.app.notes.root",
+        "path": "root",
+        "scrollRestoration": true
+      }
+    ],
+    "capabilities": [
+      "open",
+      "back",
+      "refresh_restore"
+    ],
+    "reference": {
+      "packVersion": "1.0-full",
+      "appSlug": "notes",
+      "stateIds": [],
+      "modeByState": {}
+    }
+  },
+  {
+    "id": "app.calendar",
+    "displayName": "日历",
+    "tier": "B",
+    "iconAsset": "/icons/system/calendar.png",
+    "deviceAvailability": [
+      "investigation",
+      "player"
+    ],
+    "initialRoute": "root",
+    "routes": [
+      {
+        "id": "route.app.calendar.root",
+        "path": "root",
+        "scrollRestoration": true
+      }
+    ],
+    "capabilities": [
+      "open",
+      "back",
+      "refresh_restore"
+    ],
+    "reference": {
+      "packVersion": "1.0-full",
+      "appSlug": "calendar",
+      "stateIds": [],
+      "modeByState": {}
+    }
+  },
+  {
+    "id": "app.settings",
+    "displayName": "设置",
+    "tier": "A",
+    "iconAsset": "/icons/system/settings.png",
+    "deviceAvailability": [
+      "investigation",
+      "player"
+    ],
+    "initialRoute": "root",
+    "routes": [
+      {
+        "id": "route.app.settings.root",
+        "path": "root",
+        "scrollRestoration": true
+      }
+    ],
+    "capabilities": [
+      "open",
+      "back",
+      "refresh_restore"
+    ],
+    "reference": {
+      "packVersion": "1.0-full",
+      "appSlug": "settings",
+      "stateIds": [],
+      "modeByState": {}
+    }
+  },
+  {
+    "id": "app.xiaohongshu",
+    "displayName": "小红书",
+    "tier": "B",
+    "iconAsset": "/icons/third_party/xiaohongshu.png",
+    "deviceAvailability": [
+      "investigation",
+      "player"
+    ],
+    "initialRoute": "root",
+    "routes": [
+      {
+        "id": "route.app.xiaohongshu.root",
+        "path": "root",
+        "scrollRestoration": true
+      }
+    ],
+    "capabilities": [
+      "open",
+      "back",
+      "refresh_restore"
+    ],
+    "reference": {
+      "packVersion": "1.0-full",
+      "appSlug": "xiaohongshu",
+      "stateIds": [],
+      "modeByState": {}
+    }
+  },
+  {
+    "id": "app.douyin",
+    "displayName": "抖音",
+    "tier": "B",
+    "iconAsset": "/icons/third_party/douyin.png",
+    "deviceAvailability": [
+      "investigation",
+      "player"
+    ],
+    "initialRoute": "root",
+    "routes": [
+      {
+        "id": "route.app.douyin.root",
+        "path": "root",
+        "scrollRestoration": true
+      }
+    ],
+    "capabilities": [
+      "open",
+      "back",
+      "refresh_restore"
+    ],
+    "reference": {
+      "packVersion": "1.0-full",
+      "appSlug": "douyin",
+      "stateIds": [],
+      "modeByState": {}
+    }
+  },
+  {
+    "id": "app.zhihu",
+    "displayName": "知乎",
+    "tier": "B",
+    "iconAsset": "/icons/third_party/zhihu.png",
+    "deviceAvailability": [
+      "investigation",
+      "player"
+    ],
+    "initialRoute": "root",
+    "routes": [
+      {
+        "id": "route.app.zhihu.root",
+        "path": "root",
+        "scrollRestoration": true
+      }
+    ],
+    "capabilities": [
+      "open",
+      "back",
+      "refresh_restore"
+    ],
+    "reference": {
+      "packVersion": "1.0-full",
+      "appSlug": "zhihu",
+      "stateIds": [],
+      "modeByState": {}
+    }
+  },
+  {
+    "id": "app.tieba",
+    "displayName": "百度贴吧",
+    "tier": "B",
+    "iconAsset": "/icons/third_party/tieba.png",
+    "deviceAvailability": [
+      "investigation",
+      "player"
+    ],
+    "initialRoute": "root",
+    "routes": [
+      {
+        "id": "route.app.tieba.root",
+        "path": "root",
+        "scrollRestoration": true
+      }
+    ],
+    "capabilities": [
+      "open",
+      "back",
+      "refresh_restore"
+    ],
+    "reference": {
+      "packVersion": "1.0-full",
+      "appSlug": "tieba",
+      "stateIds": [],
+      "modeByState": {}
+    }
+  },
+  {
+    "id": "app.toutiao",
+    "displayName": "今日头条",
+    "tier": "B",
+    "iconAsset": "/icons/third_party/toutiao.png",
+    "deviceAvailability": [
+      "investigation",
+      "player"
+    ],
+    "initialRoute": "root",
+    "routes": [
+      {
+        "id": "route.app.toutiao.root",
+        "path": "root",
+        "scrollRestoration": true
+      }
+    ],
+    "capabilities": [
+      "open",
+      "back",
+      "refresh_restore"
+    ],
+    "reference": {
+      "packVersion": "1.0-full",
+      "appSlug": "toutiao",
+      "stateIds": [],
+      "modeByState": {}
+    }
+  },
+  {
+    "id": "app.qqmail",
+    "displayName": "QQ邮箱",
+    "tier": "B",
+    "iconAsset": "/icons/third_party/qqmail.png",
+    "deviceAvailability": [
+      "investigation",
+      "player"
+    ],
+    "initialRoute": "root",
+    "routes": [
+      {
+        "id": "route.app.qqmail.root",
+        "path": "root",
+        "scrollRestoration": true
+      }
+    ],
+    "capabilities": [
+      "open",
+      "back",
+      "refresh_restore"
+    ],
+    "reference": {
+      "packVersion": "1.0-full",
+      "appSlug": "qqmail",
+      "stateIds": [],
+      "modeByState": {}
+    }
+  },
+  {
+    "id": "app.baidunetdisk",
+    "displayName": "百度网盘",
+    "tier": "B",
+    "iconAsset": "/icons/third_party/baidunetdisk.png",
+    "deviceAvailability": [
+      "investigation",
+      "player"
+    ],
+    "initialRoute": "root",
+    "routes": [
+      {
+        "id": "route.app.baidunetdisk.root",
+        "path": "root",
+        "scrollRestoration": true
+      }
+    ],
+    "capabilities": [
+      "open",
+      "back",
+      "refresh_restore"
+    ],
+    "reference": {
+      "packVersion": "1.0-full",
+      "appSlug": "baidunetdisk",
+      "stateIds": [],
+      "modeByState": {}
+    }
+  },
+  {
+    "id": "app.alipay",
+    "displayName": "支付宝",
+    "tier": "B",
+    "iconAsset": "/icons/third_party/alipay.png",
+    "deviceAvailability": [
+      "investigation",
+      "player"
+    ],
+    "initialRoute": "root",
+    "routes": [
+      {
+        "id": "route.app.alipay.root",
+        "path": "root",
+        "scrollRestoration": true
+      }
+    ],
+    "capabilities": [
+      "open",
+      "back",
+      "refresh_restore"
+    ],
+    "reference": {
+      "packVersion": "1.0-full",
+      "appSlug": "alipay",
+      "stateIds": [],
+      "modeByState": {}
+    }
+  },
+  {
+    "id": "app.didi",
+    "displayName": "滴滴出行",
+    "tier": "C",
+    "iconAsset": "/icons/third_party/didi.png",
+    "deviceAvailability": [
+      "investigation",
+      "player"
+    ],
+    "initialRoute": "root",
+    "routes": [
+      {
+        "id": "route.app.didi.root",
+        "path": "root",
+        "scrollRestoration": true
+      }
+    ],
+    "capabilities": [
+      "open",
+      "back",
+      "refresh_restore"
+    ],
+    "reference": {
+      "packVersion": "1.0-full",
+      "appSlug": "didi",
+      "stateIds": [],
+      "modeByState": {}
+    }
+  },
+  {
+    "id": "app.meituan",
+    "displayName": "美团",
+    "tier": "C",
+    "iconAsset": "/icons/third_party/meituan.png",
+    "deviceAvailability": [
+      "investigation",
+      "player"
+    ],
+    "initialRoute": "root",
+    "routes": [
+      {
+        "id": "route.app.meituan.root",
+        "path": "root",
+        "scrollRestoration": true
+      }
+    ],
+    "capabilities": [
+      "open",
+      "back",
+      "refresh_restore"
+    ],
+    "reference": {
+      "packVersion": "1.0-full",
+      "appSlug": "meituan",
+      "stateIds": [],
+      "modeByState": {}
+    }
+  },
+  {
+    "id": "app.taobao",
+    "displayName": "淘宝",
+    "tier": "C",
+    "iconAsset": "/icons/third_party/taobao.png",
+    "deviceAvailability": [
+      "investigation",
+      "player"
+    ],
+    "initialRoute": "root",
+    "routes": [
+      {
+        "id": "route.app.taobao.root",
+        "path": "root",
+        "scrollRestoration": true
+      }
+    ],
+    "capabilities": [
+      "open",
+      "back",
+      "refresh_restore"
+    ],
+    "reference": {
+      "packVersion": "1.0-full",
+      "appSlug": "taobao",
+      "stateIds": [],
+      "modeByState": {}
+    }
+  },
+  {
+    "id": "app.netease_music",
+    "displayName": "网易云音乐",
+    "tier": "C",
+    "iconAsset": "/icons/third_party/netease_music.png",
+    "deviceAvailability": [
+      "investigation",
+      "player"
+    ],
+    "initialRoute": "root",
+    "routes": [
+      {
+        "id": "route.app.netease_music.root",
+        "path": "root",
+        "scrollRestoration": true
+      }
+    ],
+    "capabilities": [
+      "open",
+      "back",
+      "refresh_restore"
+    ],
+    "reference": {
+      "packVersion": "1.0-full",
+      "appSlug": "netease_music",
+      "stateIds": [],
+      "modeByState": {}
+    }
+  },
+  {
+    "id": "app.wechat_reading",
+    "displayName": "微信读书",
+    "tier": "C",
+    "iconAsset": "/icons/third_party/wechat_reading.png",
+    "deviceAvailability": [
+      "investigation",
+      "player"
+    ],
+    "initialRoute": "root",
+    "routes": [
+      {
+        "id": "route.app.wechat_reading.root",
+        "path": "root",
+        "scrollRestoration": true
+      }
+    ],
+    "capabilities": [
+      "open",
+      "back",
+      "refresh_restore"
+    ],
+    "reference": {
+      "packVersion": "1.0-full",
+      "appSlug": "wechat_reading",
+      "stateIds": [],
+      "modeByState": {}
+    }
+  },
+  {
+    "id": "app.railway12306",
+    "displayName": "铁路12306",
+    "tier": "B",
+    "iconAsset": "/icons/third_party/railway12306.png",
+    "deviceAvailability": [
+      "investigation",
+      "player"
+    ],
+    "initialRoute": "root",
+    "routes": [
+      {
+        "id": "route.app.railway12306.root",
+        "path": "root",
+        "scrollRestoration": true
+      }
+    ],
+    "capabilities": [
+      "open",
+      "back",
+      "refresh_restore"
+    ],
+    "reference": {
+      "packVersion": "1.0-full",
+      "appSlug": "railway12306",
+      "stateIds": [],
+      "modeByState": {}
+    }
+  },
+  {
+    "id": "app.health",
+    "displayName": "健康",
+    "tier": "C",
+    "iconAsset": "/icons/system/health.png",
+    "deviceAvailability": [
+      "investigation",
+      "player"
+    ],
+    "initialRoute": "root",
+    "routes": [
+      {
+        "id": "route.app.health.root",
+        "path": "root",
+        "scrollRestoration": true
+      }
+    ],
+    "capabilities": [
+      "open",
+      "back",
+      "refresh_restore"
+    ],
+    "reference": {
+      "packVersion": "1.0-full",
+      "appSlug": "health",
+      "stateIds": [],
+      "modeByState": {}
+    }
+  },
+  {
+    "id": "app.weather",
+    "displayName": "天气",
+    "tier": "C",
+    "iconAsset": "/icons/system/weather.png",
+    "deviceAvailability": [
+      "investigation",
+      "player"
+    ],
+    "initialRoute": "root",
+    "routes": [
+      {
+        "id": "route.app.weather.root",
+        "path": "root",
+        "scrollRestoration": true
+      }
+    ],
+    "capabilities": [
+      "open",
+      "back",
+      "refresh_restore"
+    ],
+    "reference": {
+      "packVersion": "1.0-full",
+      "appSlug": "weather",
+      "stateIds": [],
+      "modeByState": {}
+    }
+  },
+  {
+    "id": "app.clock",
+    "displayName": "时钟",
+    "tier": "C",
+    "iconAsset": "/icons/system/clock.png",
+    "deviceAvailability": [
+      "investigation",
+      "player"
+    ],
+    "initialRoute": "root",
+    "routes": [
+      {
+        "id": "route.app.clock.root",
+        "path": "root",
+        "scrollRestoration": true
+      }
+    ],
+    "capabilities": [
+      "open",
+      "back",
+      "refresh_restore"
+    ],
+    "reference": {
+      "packVersion": "1.0-full",
+      "appSlug": "clock",
+      "stateIds": [],
+      "modeByState": {}
+    }
+  },
+  {
+    "id": "app.calculator",
+    "displayName": "计算器",
+    "tier": "C",
+    "iconAsset": "/icons/system/calculator.png",
+    "deviceAvailability": [
+      "investigation",
+      "player"
+    ],
+    "initialRoute": "root",
+    "routes": [
+      {
+        "id": "route.app.calculator.root",
+        "path": "root",
+        "scrollRestoration": true
+      }
+    ],
+    "capabilities": [
+      "open",
+      "back",
+      "refresh_restore"
+    ],
+    "reference": {
+      "packVersion": "1.0-full",
+      "appSlug": "calculator",
+      "stateIds": [],
+      "modeByState": {}
+    }
+  },
+  {
+    "id": "app.camera",
+    "displayName": "相机",
+    "tier": "C",
+    "iconAsset": "/icons/system/camera.png",
+    "deviceAvailability": [
+      "investigation",
+      "player"
+    ],
+    "initialRoute": "root",
+    "routes": [
+      {
+        "id": "route.app.camera.root",
+        "path": "root",
+        "scrollRestoration": true
+      }
+    ],
+    "capabilities": [
+      "open",
+      "back",
+      "refresh_restore"
+    ],
+    "reference": {
+      "packVersion": "1.0-full",
+      "appSlug": "camera",
+      "stateIds": [],
+      "modeByState": {}
+    }
+  },
+  {
+    "id": "app.voice_memos",
+    "displayName": "语音备忘录",
+    "tier": "C",
+    "iconAsset": "/icons/system/voice_memos.png",
+    "deviceAvailability": [
+      "investigation",
+      "player"
+    ],
+    "initialRoute": "root",
+    "routes": [
+      {
+        "id": "route.app.voice_memos.root",
+        "path": "root",
+        "scrollRestoration": true
+      }
+    ],
+    "capabilities": [
+      "open",
+      "back",
+      "refresh_restore"
+    ],
+    "reference": {
+      "packVersion": "1.0-full",
+      "appSlug": "voice_memos",
+      "stateIds": [],
+      "modeByState": {}
+    }
+  },
+  {
+    "id": "app.compass",
+    "displayName": "指南针",
+    "tier": "C",
+    "iconAsset": "/icons/system/compass.png",
+    "deviceAvailability": [
+      "investigation",
+      "player"
+    ],
+    "initialRoute": "root",
+    "routes": [
+      {
+        "id": "route.app.compass.root",
+        "path": "root",
+        "scrollRestoration": true
+      }
+    ],
+    "capabilities": [
+      "open",
+      "back",
+      "refresh_restore"
+    ],
+    "reference": {
+      "packVersion": "1.0-full",
+      "appSlug": "compass",
+      "stateIds": [],
+      "modeByState": {}
+    }
+  }
+]

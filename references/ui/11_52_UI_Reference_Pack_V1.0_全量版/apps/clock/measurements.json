@@ -1,0 +1,26 @@
+{
+  "targetViewport": {
+    "width": 402,
+    "height": 874,
+    "unit": "css_px"
+  },
+  "secondaryViewport": {
+    "width": 440,
+    "height": 956,
+    "unit": "css_px"
+  },
+  "globalIOSTokens": {
+    "statusBarNominal": 59,
+    "bottomSafeAreaNominal": 34,
+    "minimumTouchTarget": 44
+  },
+  "sourceImages": [
+    {
+      "refId": "IOS26-CLOCK-01",
+      "pixelSize": "490x1008",
+      "path": "apps/clock/raw/IOS26-CLOCK-01__ios_clock_alarm.png"
+    }
+  ],
+  "measurementRule": "以raw截图的可见像素几何为准；比例缩放到402×874后测量。无精确直图状态必须复用同App已测组件。",
+  "doNotInferFromWordThumbnail": true
+}

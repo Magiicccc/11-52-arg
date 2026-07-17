@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "1.0.0",
+  "triggerId": "trigger.a4-04.complete",
+  "enabled": true,
+  "once": true,
+  "priority": 100,
+  "when": {
+    "eventType": "relationship.history.confirmed",
+    "sceneId": "A4-04"
+  },
+  "conditions": {
+    "op": "all",
+    "conditions": [
+      {
+        "op": "sceneActive",
+        "sceneId": "A4-04"
+      },
+      {
+        "op": "triggerNotConsumed",
+        "triggerId": "trigger.a4-04.complete"
+      }
+    ]
+  },
+  "transactionRef": "tx.a4-04.complete",
+  "responseSource": "A"
+}

@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "1.0.0",
+  "sceneId": "A1-05",
+  "title": "把照片发给陈屿",
+  "order": 8,
+  "act": "A1",
+  "correctionStage": "R1",
+  "entryConditions": [
+    {
+      "op": "sceneCompleted",
+      "sceneId": "A1-04"
+    }
+  ],
+  "completionPolicy": "explicitTrigger",
+  "gatesSatisfied": [],
+  "contentRefs": [
+    "wechat.chenyu.photo_share"
+  ],
+  "puzzleRefs": [],
+  "triggerRefs": [
+    "trigger.a1-05.complete"
+  ],
+  "checkpoint": false,
+  "responseSource": "H",
+  "fallbackPolicy": {
+    "required": true,
+    "strategy": "alternateContentOrArchive"
+  },
+  "exitState": {
+    "nextSceneId": "A1-06"
+  },
+  "notes": "把照片发给陈屿"
+}

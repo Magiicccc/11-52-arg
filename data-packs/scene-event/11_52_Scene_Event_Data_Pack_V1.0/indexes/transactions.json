@@ -1,0 +1,728 @@
+[
+  {
+    "schemaVersion": "1.0.0",
+    "transactionId": "tx.p00.complete",
+    "atomic": true,
+    "idempotencyKey": "trigger.p00.complete",
+    "actions": [
+      {
+        "type": "completeScene",
+        "sceneId": "P00"
+      }
+    ],
+    "rollbackPolicy": "allOrNothing"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "transactionId": "tx.p01.complete",
+    "atomic": true,
+    "idempotencyKey": "trigger.p01.complete",
+    "actions": [
+      {
+        "type": "completeScene",
+        "sceneId": "P01"
+      }
+    ],
+    "rollbackPolicy": "allOrNothing"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "transactionId": "tx.p02.complete",
+    "atomic": true,
+    "idempotencyKey": "trigger.p02.complete",
+    "actions": [
+      {
+        "type": "completeScene",
+        "sceneId": "P02"
+      }
+    ],
+    "rollbackPolicy": "allOrNothing"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "transactionId": "tx.p03.complete",
+    "atomic": true,
+    "idempotencyKey": "trigger.p03.complete",
+    "actions": [
+      {
+        "type": "completeScene",
+        "sceneId": "P03"
+      },
+      {
+        "type": "satisfyGate",
+        "gateId": "G1"
+      },
+      {
+        "type": "createCheckpoint",
+        "checkpointId": "checkpoint.P03"
+      }
+    ],
+    "rollbackPolicy": "allOrNothing"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "transactionId": "tx.a1-01.complete",
+    "atomic": true,
+    "idempotencyKey": "trigger.a1-01.complete",
+    "actions": [
+      {
+        "type": "completeScene",
+        "sceneId": "A1-01"
+      }
+    ],
+    "rollbackPolicy": "allOrNothing"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "transactionId": "tx.a1-02.complete",
+    "atomic": true,
+    "idempotencyKey": "trigger.a1-02.complete",
+    "actions": [
+      {
+        "type": "completeScene",
+        "sceneId": "A1-02"
+      },
+      {
+        "type": "satisfyGate",
+        "gateId": "G2"
+      }
+    ],
+    "rollbackPolicy": "allOrNothing"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "transactionId": "tx.a1-03.complete",
+    "atomic": true,
+    "idempotencyKey": "trigger.a1-03.complete",
+    "actions": [
+      {
+        "type": "completeScene",
+        "sceneId": "A1-03"
+      }
+    ],
+    "rollbackPolicy": "allOrNothing"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "transactionId": "tx.a1-04.complete",
+    "atomic": true,
+    "idempotencyKey": "trigger.a1-04.complete",
+    "actions": [
+      {
+        "type": "completeScene",
+        "sceneId": "A1-04"
+      }
+    ],
+    "rollbackPolicy": "allOrNothing"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "transactionId": "tx.a1-05.complete",
+    "atomic": true,
+    "idempotencyKey": "trigger.a1-05.complete",
+    "actions": [
+      {
+        "type": "completeScene",
+        "sceneId": "A1-05"
+      }
+    ],
+    "rollbackPolicy": "allOrNothing"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "transactionId": "tx.a1-06.complete",
+    "atomic": true,
+    "idempotencyKey": "trigger.a1-06.complete",
+    "actions": [
+      {
+        "type": "completeScene",
+        "sceneId": "A1-06"
+      }
+    ],
+    "rollbackPolicy": "allOrNothing"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "transactionId": "tx.a1-07.complete",
+    "atomic": true,
+    "idempotencyKey": "trigger.a1-07.complete",
+    "actions": [
+      {
+        "type": "completeScene",
+        "sceneId": "A1-07"
+      },
+      {
+        "type": "satisfyGate",
+        "gateId": "G3"
+      },
+      {
+        "type": "createCheckpoint",
+        "checkpointId": "checkpoint.A1-07"
+      },
+      {
+        "type": "setAnchorState",
+        "subjectId": "player",
+        "anchorType": "face",
+        "value": "eroding"
+      }
+    ],
+    "rollbackPolicy": "allOrNothing"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "transactionId": "tx.a2-01.complete",
+    "atomic": true,
+    "idempotencyKey": "trigger.a2-01.complete",
+    "actions": [
+      {
+        "type": "completeScene",
+        "sceneId": "A2-01"
+      }
+    ],
+    "rollbackPolicy": "allOrNothing"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "transactionId": "tx.a2-02.complete",
+    "atomic": true,
+    "idempotencyKey": "trigger.a2-02.complete",
+    "actions": [
+      {
+        "type": "completeScene",
+        "sceneId": "A2-02"
+      }
+    ],
+    "rollbackPolicy": "allOrNothing"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "transactionId": "tx.a2-03.complete",
+    "atomic": true,
+    "idempotencyKey": "trigger.a2-03.complete",
+    "actions": [
+      {
+        "type": "completeScene",
+        "sceneId": "A2-03"
+      },
+      {
+        "type": "satisfyGate",
+        "gateId": "G4"
+      }
+    ],
+    "rollbackPolicy": "allOrNothing"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "transactionId": "tx.a2-04.complete",
+    "atomic": true,
+    "idempotencyKey": "trigger.a2-04.complete",
+    "actions": [
+      {
+        "type": "completeScene",
+        "sceneId": "A2-04"
+      }
+    ],
+    "rollbackPolicy": "allOrNothing"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "transactionId": "tx.a2-05.complete",
+    "atomic": true,
+    "idempotencyKey": "trigger.a2-05.complete",
+    "actions": [
+      {
+        "type": "completeScene",
+        "sceneId": "A2-05"
+      }
+    ],
+    "rollbackPolicy": "allOrNothing"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "transactionId": "tx.a2-06.complete",
+    "atomic": true,
+    "idempotencyKey": "trigger.a2-06.complete",
+    "actions": [
+      {
+        "type": "completeScene",
+        "sceneId": "A2-06"
+      }
+    ],
+    "rollbackPolicy": "allOrNothing"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "transactionId": "tx.a2-07.complete",
+    "atomic": true,
+    "idempotencyKey": "trigger.a2-07.complete",
+    "actions": [
+      {
+        "type": "completeScene",
+        "sceneId": "A2-07"
+      }
+    ],
+    "rollbackPolicy": "allOrNothing"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "transactionId": "tx.a2-08.complete",
+    "atomic": true,
+    "idempotencyKey": "trigger.a2-08.complete",
+    "actions": [
+      {
+        "type": "completeScene",
+        "sceneId": "A2-08"
+      },
+      {
+        "type": "satisfyGate",
+        "gateId": "G5"
+      },
+      {
+        "type": "createCheckpoint",
+        "checkpointId": "checkpoint.A2-08"
+      }
+    ],
+    "rollbackPolicy": "allOrNothing"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "transactionId": "tx.a2-09.complete",
+    "atomic": true,
+    "idempotencyKey": "trigger.a2-09.complete",
+    "actions": [
+      {
+        "type": "completeScene",
+        "sceneId": "A2-09"
+      }
+    ],
+    "rollbackPolicy": "allOrNothing"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "transactionId": "tx.a2-10.complete",
+    "atomic": true,
+    "idempotencyKey": "trigger.a2-10.complete",
+    "actions": [
+      {
+        "type": "completeScene",
+        "sceneId": "A2-10"
+      }
+    ],
+    "rollbackPolicy": "allOrNothing"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "transactionId": "tx.a2-11.complete",
+    "atomic": true,
+    "idempotencyKey": "trigger.a2-11.complete",
+    "actions": [
+      {
+        "type": "completeScene",
+        "sceneId": "A2-11"
+      },
+      {
+        "type": "createCheckpoint",
+        "checkpointId": "checkpoint.A2-11"
+      }
+    ],
+    "rollbackPolicy": "allOrNothing"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "transactionId": "tx.a3-01.complete",
+    "atomic": true,
+    "idempotencyKey": "trigger.a3-01.complete",
+    "actions": [
+      {
+        "type": "completeScene",
+        "sceneId": "A3-01"
+      }
+    ],
+    "rollbackPolicy": "allOrNothing"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "transactionId": "tx.a3-02.complete",
+    "atomic": true,
+    "idempotencyKey": "trigger.a3-02.complete",
+    "actions": [
+      {
+        "type": "completeScene",
+        "sceneId": "A3-02"
+      }
+    ],
+    "rollbackPolicy": "allOrNothing"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "transactionId": "tx.a3-03.complete",
+    "atomic": true,
+    "idempotencyKey": "trigger.a3-03.complete",
+    "actions": [
+      {
+        "type": "completeScene",
+        "sceneId": "A3-03"
+      }
+    ],
+    "rollbackPolicy": "allOrNothing"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "transactionId": "tx.a3-04.complete",
+    "atomic": true,
+    "idempotencyKey": "trigger.a3-04.complete",
+    "actions": [
+      {
+        "type": "completeScene",
+        "sceneId": "A3-04"
+      }
+    ],
+    "rollbackPolicy": "allOrNothing"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "transactionId": "tx.a3-05.complete",
+    "atomic": true,
+    "idempotencyKey": "trigger.a3-05.complete",
+    "actions": [
+      {
+        "type": "completeScene",
+        "sceneId": "A3-05"
+      }
+    ],
+    "rollbackPolicy": "allOrNothing"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "transactionId": "tx.a3-06.complete",
+    "atomic": true,
+    "idempotencyKey": "trigger.a3-06.complete",
+    "actions": [
+      {
+        "type": "completeScene",
+        "sceneId": "A3-06"
+      }
+    ],
+    "rollbackPolicy": "allOrNothing"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "transactionId": "tx.a3-07.complete",
+    "atomic": true,
+    "idempotencyKey": "trigger.a3-07.complete",
+    "actions": [
+      {
+        "type": "completeScene",
+        "sceneId": "A3-07"
+      }
+    ],
+    "rollbackPolicy": "allOrNothing"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "transactionId": "tx.a3-08.complete",
+    "atomic": true,
+    "idempotencyKey": "trigger.a3-08.complete",
+    "actions": [
+      {
+        "type": "completeScene",
+        "sceneId": "A3-08"
+      }
+    ],
+    "rollbackPolicy": "allOrNothing"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "transactionId": "tx.a3-09.complete",
+    "atomic": true,
+    "idempotencyKey": "trigger.a3-09.complete",
+    "actions": [
+      {
+        "type": "completeScene",
+        "sceneId": "A3-09"
+      },
+      {
+        "type": "setAnchorState",
+        "subjectId": "player",
+        "anchorType": "family",
+        "value": "eroding"
+      },
+      {
+        "type": "setAnchorState",
+        "subjectId": "player",
+        "anchorType": "home",
+        "value": "eroding"
+      }
+    ],
+    "rollbackPolicy": "allOrNothing"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "transactionId": "tx.a3-10.complete",
+    "atomic": true,
+    "idempotencyKey": "trigger.a3-10.complete",
+    "actions": [
+      {
+        "type": "completeScene",
+        "sceneId": "A3-10"
+      },
+      {
+        "type": "satisfyGate",
+        "gateId": "G6"
+      },
+      {
+        "type": "createCheckpoint",
+        "checkpointId": "checkpoint.A3-10"
+      }
+    ],
+    "rollbackPolicy": "allOrNothing"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "transactionId": "tx.a4-01.complete",
+    "atomic": true,
+    "idempotencyKey": "trigger.a4-01.complete",
+    "actions": [
+      {
+        "type": "completeScene",
+        "sceneId": "A4-01"
+      }
+    ],
+    "rollbackPolicy": "allOrNothing"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "transactionId": "tx.a4-02.complete",
+    "atomic": true,
+    "idempotencyKey": "trigger.a4-02.complete",
+    "actions": [
+      {
+        "type": "completeScene",
+        "sceneId": "A4-02"
+      }
+    ],
+    "rollbackPolicy": "allOrNothing"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "transactionId": "tx.a4-03.complete",
+    "atomic": true,
+    "idempotencyKey": "trigger.a4-03.complete",
+    "actions": [
+      {
+        "type": "completeScene",
+        "sceneId": "A4-03"
+      }
+    ],
+    "rollbackPolicy": "allOrNothing"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "transactionId": "tx.a4-04.complete",
+    "atomic": true,
+    "idempotencyKey": "trigger.a4-04.complete",
+    "actions": [
+      {
+        "type": "completeScene",
+        "sceneId": "A4-04"
+      }
+    ],
+    "rollbackPolicy": "allOrNothing"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "transactionId": "tx.a4-05.complete",
+    "atomic": true,
+    "idempotencyKey": "trigger.a4-05.complete",
+    "actions": [
+      {
+        "type": "completeScene",
+        "sceneId": "A4-05"
+      }
+    ],
+    "rollbackPolicy": "allOrNothing"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "transactionId": "tx.a4-06.complete",
+    "atomic": true,
+    "idempotencyKey": "trigger.a4-06.complete",
+    "actions": [
+      {
+        "type": "completeScene",
+        "sceneId": "A4-06"
+      }
+    ],
+    "rollbackPolicy": "allOrNothing"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "transactionId": "tx.a4-07.complete",
+    "atomic": true,
+    "idempotencyKey": "trigger.a4-07.complete",
+    "actions": [
+      {
+        "type": "completeScene",
+        "sceneId": "A4-07"
+      },
+      {
+        "type": "satisfyGate",
+        "gateId": "G7"
+      },
+      {
+        "type": "createCheckpoint",
+        "checkpointId": "checkpoint.A4-07"
+      }
+    ],
+    "rollbackPolicy": "allOrNothing"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "transactionId": "tx.a4-08.complete",
+    "atomic": true,
+    "idempotencyKey": "trigger.a4-08.complete",
+    "actions": [
+      {
+        "type": "completeScene",
+        "sceneId": "A4-08"
+      }
+    ],
+    "rollbackPolicy": "allOrNothing"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "transactionId": "tx.a4-09.complete",
+    "atomic": true,
+    "idempotencyKey": "trigger.a4-09.complete",
+    "actions": [
+      {
+        "type": "completeScene",
+        "sceneId": "A4-09"
+      },
+      {
+        "type": "satisfyGate",
+        "gateId": "G8"
+      }
+    ],
+    "rollbackPolicy": "allOrNothing"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "transactionId": "tx.a4-10.complete",
+    "atomic": true,
+    "idempotencyKey": "trigger.a4-10.complete",
+    "actions": [
+      {
+        "type": "completeScene",
+        "sceneId": "A4-10"
+      },
+      {
+        "type": "createCheckpoint",
+        "checkpointId": "checkpoint.A4-10"
+      }
+    ],
+    "rollbackPolicy": "allOrNothing"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "transactionId": "tx.a5-01.complete",
+    "atomic": true,
+    "idempotencyKey": "trigger.a5-01.complete",
+    "actions": [
+      {
+        "type": "completeScene",
+        "sceneId": "A5-01"
+      },
+      {
+        "type": "satisfyGate",
+        "gateId": "G9"
+      }
+    ],
+    "rollbackPolicy": "allOrNothing"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "transactionId": "tx.a5-02.complete",
+    "atomic": true,
+    "idempotencyKey": "trigger.a5-02.complete",
+    "actions": [
+      {
+        "type": "completeScene",
+        "sceneId": "A5-02"
+      }
+    ],
+    "rollbackPolicy": "allOrNothing"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "transactionId": "tx.a5-03.complete",
+    "atomic": true,
+    "idempotencyKey": "trigger.a5-03.complete",
+    "actions": [
+      {
+        "type": "completeScene",
+        "sceneId": "A5-03"
+      }
+    ],
+    "rollbackPolicy": "allOrNothing"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "transactionId": "tx.a5-04.complete",
+    "atomic": true,
+    "idempotencyKey": "trigger.a5-04.complete",
+    "actions": [
+      {
+        "type": "completeScene",
+        "sceneId": "A5-04"
+      }
+    ],
+    "rollbackPolicy": "allOrNothing"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "transactionId": "tx.a5-05.complete",
+    "atomic": true,
+    "idempotencyKey": "trigger.a5-05.complete",
+    "actions": [
+      {
+        "type": "completeScene",
+        "sceneId": "A5-05"
+      }
+    ],
+    "rollbackPolicy": "allOrNothing"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "transactionId": "tx.a5-06.complete",
+    "atomic": true,
+    "idempotencyKey": "trigger.a5-06.complete",
+    "actions": [
+      {
+        "type": "completeScene",
+        "sceneId": "A5-06"
+      }
+    ],
+    "rollbackPolicy": "allOrNothing"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "transactionId": "tx.a5-07.complete",
+    "atomic": true,
+    "idempotencyKey": "trigger.a5-07.complete",
+    "actions": [
+      {
+        "type": "completeScene",
+        "sceneId": "A5-07"
+      },
+      {
+        "type": "createCheckpoint",
+        "checkpointId": "checkpoint.A5-07"
+      },
+      {
+        "type": "evaluateEndingRoutes"
+      }
+    ],
+    "rollbackPolicy": "allOrNothing"
+  }
+]

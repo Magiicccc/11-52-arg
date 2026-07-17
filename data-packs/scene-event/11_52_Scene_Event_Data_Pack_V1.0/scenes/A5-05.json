@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0.0",
+  "sceneId": "A5-05",
+  "title": "分散家庭与地点",
+  "order": 46,
+  "act": "A5",
+  "correctionStage": "R5",
+  "entryConditions": [
+    {
+      "op": "sceneCompleted",
+      "sceneId": "A5-04"
+    }
+  ],
+  "completionPolicy": "explicitTrigger",
+  "gatesSatisfied": [],
+  "contentRefs": [
+    "witness.family.zhoulan",
+    "witness.location.public_archive"
+  ],
+  "puzzleRefs": [
+    "PZ-028"
+  ],
+  "triggerRefs": [
+    "trigger.a5-05.complete"
+  ],
+  "checkpoint": false,
+  "responseSource": "A",
+  "fallbackPolicy": {
+    "required": true,
+    "strategy": "alternateContentOrArchive"
+  },
+  "exitState": {
+    "nextSceneId": "A5-06"
+  },
+  "notes": "分散家庭与地点"
+}

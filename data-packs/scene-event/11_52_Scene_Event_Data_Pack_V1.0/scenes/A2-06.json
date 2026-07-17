@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0.0",
+  "sceneId": "A2-06",
+  "title": "学习摩斯密码",
+  "order": 16,
+  "act": "A2",
+  "correctionStage": "R2",
+  "entryConditions": [
+    {
+      "op": "sceneCompleted",
+      "sceneId": "A2-05"
+    }
+  ],
+  "completionPolicy": "explicitTrigger",
+  "gatesSatisfied": [],
+  "contentRefs": [
+    "wiki.morse",
+    "audio.carrier.43s"
+  ],
+  "puzzleRefs": [
+    "PZ-006"
+  ],
+  "triggerRefs": [
+    "trigger.a2-06.complete"
+  ],
+  "checkpoint": false,
+  "responseSource": "A",
+  "fallbackPolicy": {
+    "required": true,
+    "strategy": "alternateContentOrArchive"
+  },
+  "exitState": {
+    "nextSceneId": "A2-07"
+  },
+  "notes": "学习摩斯密码"
+}

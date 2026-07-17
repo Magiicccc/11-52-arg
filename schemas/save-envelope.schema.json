@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://11-52.local/schema/save-envelope.json",
+  "title": "SaveEnvelope",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "contentPackVersion",
+    "createdAt",
+    "updatedAt",
+    "snapshot",
+    "journal",
+    "receipts",
+    "integrityHash",
+    "migrationsApplied"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "contentPackVersion": {
+      "type": "string"
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "snapshot": {
+      "type": "object"
+    },
+    "journal": {
+      "type": "array"
+    },
+    "receipts": {
+      "type": "array"
+    },
+    "integrityHash": {
+      "type": "string"
+    },
+    "migrationsApplied": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

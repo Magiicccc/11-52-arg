@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "1.0.0",
+  "sceneId": "A1-06",
+  "title": "陈屿短暂产生记忆矛盾",
+  "order": 9,
+  "act": "A1",
+  "correctionStage": "R1",
+  "entryConditions": [
+    {
+      "op": "sceneCompleted",
+      "sceneId": "A1-05"
+    }
+  ],
+  "completionPolicy": "explicitTrigger",
+  "gatesSatisfied": [],
+  "contentRefs": [
+    "wechat.chenyu.memory_conflict"
+  ],
+  "puzzleRefs": [],
+  "triggerRefs": [
+    "trigger.a1-06.complete"
+  ],
+  "checkpoint": false,
+  "responseSource": "H",
+  "fallbackPolicy": {
+    "required": true,
+    "strategy": "alternateContentOrArchive"
+  },
+  "exitState": {
+    "nextSceneId": "A1-07"
+  },
+  "notes": "陈屿短暂产生记忆矛盾"
+}

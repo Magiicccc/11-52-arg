@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "1.0.0",
+  "transactionId": "tx.a2-03.complete",
+  "atomic": true,
+  "idempotencyKey": "trigger.a2-03.complete",
+  "actions": [
+    {
+      "type": "completeScene",
+      "sceneId": "A2-03"
+    },
+    {
+      "type": "satisfyGate",
+      "gateId": "G4"
+    }
+  ],
+  "rollbackPolicy": "allOrNothing"
+}

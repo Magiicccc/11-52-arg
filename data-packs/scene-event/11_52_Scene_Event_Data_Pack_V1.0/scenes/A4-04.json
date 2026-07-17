@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.0.0",
+  "sceneId": "A4-04",
+  "title": "恢复2024—2026共同调查记录",
+  "order": 35,
+  "act": "A4",
+  "correctionStage": "R4",
+  "entryConditions": [
+    {
+      "op": "sceneCompleted",
+      "sceneId": "A4-03"
+    }
+  ],
+  "completionPolicy": "explicitTrigger",
+  "gatesSatisfied": [],
+  "contentRefs": [
+    "wechat.archive_thread.2024_2026",
+    "xiaohongshu.shared_posts"
+  ],
+  "puzzleRefs": [],
+  "triggerRefs": [
+    "trigger.a4-04.complete"
+  ],
+  "checkpoint": false,
+  "responseSource": "A",
+  "fallbackPolicy": {
+    "required": true,
+    "strategy": "alternateContentOrArchive"
+  },
+  "exitState": {
+    "nextSceneId": "A4-05"
+  },
+  "notes": "恢复2024—2026共同调查记录"
+}

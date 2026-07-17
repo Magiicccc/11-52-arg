@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "1.0.0",
+  "transactionId": "tx.a5-07.complete",
+  "atomic": true,
+  "idempotencyKey": "trigger.a5-07.complete",
+  "actions": [
+    {
+      "type": "completeScene",
+      "sceneId": "A5-07"
+    },
+    {
+      "type": "createCheckpoint",
+      "checkpointId": "checkpoint.A5-07"
+    },
+    {
+      "type": "evaluateEndingRoutes"
+    }
+  ],
+  "rollbackPolicy": "allOrNothing"
+}

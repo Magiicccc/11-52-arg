@@ -1,0 +1,37 @@
+{
+  "app": "电话",
+  "slug": "phone",
+  "category": "核心声音",
+  "priority": "A",
+  "role": "最近通话、联系人、来电、通话中和语音留言。",
+  "referenceCount": 2,
+  "referenceIds": [
+    "PHONE26-TRANSLATE-01",
+    "PHONE26-HOLD-01"
+  ],
+  "requiredStates": [
+    "最近通话",
+    "联系人详情",
+    "拨号盘",
+    "来电界面",
+    "通话中",
+    "语音留言",
+    "未接来电",
+    "未知号码"
+  ],
+  "interactionContract": [
+    "来电、接听、拒接、播放语音和通话历史可操作。",
+    "通话排序使用事件序，不受异常显示时间破坏。"
+  ],
+  "contentInjection": [
+    "注入11:52未知来电、陈屿通话、母亲语音和本机号码呼入。"
+  ],
+  "officialSource": "https://support.apple.com/zh-cn/guide/iphone/welcome/ios",
+  "target": {
+    "viewport": "402x874",
+    "os": "iOS 26.5.2",
+    "language": "简体中文",
+    "appearance": "浅色模式"
+  },
+  "authority": "本目录真实截图优先；没有精确截图的状态只允许从同一App参考组件派生，不允许跨App猜测。"
+}

@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "1.0.0",
+  "triggerId": "trigger.p01.complete",
+  "enabled": true,
+  "once": true,
+  "priority": 100,
+  "when": {
+    "eventType": "device.investigation.woken",
+    "sceneId": "P01"
+  },
+  "conditions": {
+    "op": "all",
+    "conditions": [
+      {
+        "op": "sceneActive",
+        "sceneId": "P01"
+      },
+      {
+        "op": "triggerNotConsumed",
+        "triggerId": "trigger.p01.complete"
+      }
+    ]
+  },
+  "transactionRef": "tx.p01.complete",
+  "responseSource": "A"
+}

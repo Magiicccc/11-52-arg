@@ -1,0 +1,39 @@
+{
+  "app": "百度地图",
+  "slug": "baidu_map",
+  "category": "核心现实锚点",
+  "priority": "A",
+  "role": "验证现实地点、坐标、路线、收藏与街景对比。",
+  "referenceCount": 3,
+  "referenceIds": [
+    "MAP-HOME-01",
+    "MAP-SEARCH-01",
+    "MAP-FAV-01"
+  ],
+  "requiredStates": [
+    "地图首页",
+    "搜索结果",
+    "地点卡",
+    "收藏地点",
+    "路线规划",
+    "行程历史",
+    "街景/全景入口",
+    "分享位置",
+    "照片比对模式"
+  ],
+  "interactionContract": [
+    "真实地图层保持正常；异常只出现在沈川照片、受控缓存或比对层。",
+    "搜索、缩放、地点卡、路线和收藏必须可交互。"
+  ],
+  "contentInjection": [
+    "注入旧园区坐标、历史路线、“家”收藏消失和地图—照片差异。"
+  ],
+  "officialSource": "https://apps.apple.com/cn/app/%E7%99%BE%E5%BA%A6%E5%9C%B0%E5%9B%BE/id452186370",
+  "target": {
+    "viewport": "402x874",
+    "os": "iOS 26.5.2",
+    "language": "简体中文",
+    "appearance": "浅色模式"
+  },
+  "authority": "本目录真实截图优先；没有精确截图的状态只允许从同一App参考组件派生，不允许跨App猜测。"
+}

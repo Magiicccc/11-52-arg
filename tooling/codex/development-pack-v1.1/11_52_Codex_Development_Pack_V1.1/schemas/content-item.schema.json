@@ -1,0 +1,187 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://11-52.local/schema/content-item.json",
+  "title": "ContentItem",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "appId",
+    "kind",
+    "ownerId",
+    "sourceRootId",
+    "initialVariantId",
+    "variants",
+    "narrative"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "appId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "kind": {
+      "type": "string",
+      "minLength": 1
+    },
+    "ownerId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "sourceRootId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "initialVariantId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "variants": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "correctionStage",
+          "body"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "correctionStage": {
+            "enum": [
+              "R0",
+              "R1",
+              "R2",
+              "R3",
+              "R4",
+              "R5"
+            ]
+          },
+          "body": {},
+          "replacesVariantId": {
+            "type": "string"
+          },
+          "reason": {
+            "enum": [
+              "normal",
+              "player_action",
+              "H",
+              "A",
+              "P",
+              "C"
+            ]
+          }
+        }
+      }
+    },
+    "narrative": {
+      "$ref": "#/$defs/narrativeMetadata"
+    },
+    "metadata": {
+      "type": "object"
+    }
+  },
+  "$defs": {
+    "narrativeFunction": {
+      "enum": [
+        "characterization",
+        "relationship",
+        "world_context",
+        "chronology",
+        "location",
+        "profession",
+        "socioeconomic",
+        "habit",
+        "platform_culture",
+        "theme",
+        "emotional_contrast",
+        "continuity",
+        "future_loss"
+      ]
+    },
+    "narrativeMetadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "primaryFunction",
+        "secondaryFunctions",
+        "clueRole",
+        "worldFactIds",
+        "characterTraitIds",
+        "relationshipBeatIds",
+        "continuityLinkIds",
+        "firstReadValue",
+        "payoffPolicy"
+      ],
+      "properties": {
+        "primaryFunction": {
+          "$ref": "#/$defs/narrativeFunction"
+        },
+        "secondaryFunctions": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/narrativeFunction"
+          }
+        },
+        "clueRole": {
+          "enum": [
+            "none",
+            "supporting",
+            "direct",
+            "misdirection"
+          ]
+        },
+        "worldFactIds": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string"
+          }
+        },
+        "characterTraitIds": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string"
+          }
+        },
+        "relationshipBeatIds": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string"
+          }
+        },
+        "continuityLinkIds": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string"
+          }
+        },
+        "firstReadValue": {
+          "type": "string",
+          "minLength": 8
+        },
+        "recontextualizedValue": {
+          "type": "string"
+        },
+        "payoffPolicy": {
+          "enum": [
+            "none",
+            "optional",
+            "required"
+          ]
+        }
+      }
+    }
+  }
+}

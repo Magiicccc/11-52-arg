@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.0.0",
+  "sceneId": "P02",
+  "title": "回拨陈屿",
+  "order": 2,
+  "act": "P",
+  "correctionStage": "R0",
+  "entryConditions": [
+    {
+      "op": "sceneCompleted",
+      "sceneId": "P01"
+    }
+  ],
+  "completionPolicy": "explicitTrigger",
+  "gatesSatisfied": [],
+  "contentRefs": [
+    "call.chenyu.lock.01",
+    "dialogue.chenyu.callback"
+  ],
+  "puzzleRefs": [],
+  "triggerRefs": [
+    "trigger.p02.complete"
+  ],
+  "checkpoint": false,
+  "responseSource": "H",
+  "fallbackPolicy": {
+    "required": true,
+    "strategy": "alternateContentOrArchive"
+  },
+  "exitState": {
+    "nextSceneId": "P03"
+  },
+  "notes": "回拨陈屿"
+}

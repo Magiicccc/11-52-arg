@@ -1,0 +1,60 @@
+[
+  {
+    "schemaVersion": "1.0.0",
+    "runId": "W1",
+    "title": "现实修正周目W1",
+    "baseRun": "W0",
+    "operations": [
+      "hide:tieba.floor.417",
+      "variant:zhoulan.blue_mug->nephew",
+      "variant:photo.coffee.230917->single_cup"
+    ],
+    "archiveModeAvailable": true,
+    "fullResetAvailable": true,
+    "mainlineReachability": "full"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "runId": "W2",
+    "title": "现实修正周目W2",
+    "baseRun": "W0",
+    "operations": [
+      "rename:map.loc_river_edu_old_01->ordinary_site",
+      "variant:orders.shared->single",
+      "redact:return.source_graph.partial"
+    ],
+    "archiveModeAvailable": true,
+    "fullResetAvailable": true,
+    "mainlineReachability": "full"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "runId": "W3",
+    "title": "现实修正周目W3",
+    "baseRun": "W0",
+    "operations": [
+      "filter:safari.panbowen->cultural_analysis_only",
+      "reassign:shen.work_and_family->other_people",
+      "earlyErosion:player.identity"
+    ],
+    "archiveModeAvailable": true,
+    "fullResetAvailable": true,
+    "mainlineReachability": "residual"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "runId": "W4",
+    "title": "现实修正周目W4",
+    "baseRun": "W0",
+    "operations": [
+      "reset:both_devices->near_new",
+      "retain:fragment.i_was_here",
+      "retain:timestamp.1152",
+      "retain:object.unowned_keys",
+      "mode:theme_endpoint"
+    ],
+    "archiveModeAvailable": true,
+    "fullResetAvailable": true,
+    "mainlineReachability": "none"
+  }
+]

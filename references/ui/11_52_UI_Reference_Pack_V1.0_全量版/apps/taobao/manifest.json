@@ -1,0 +1,36 @@
+{
+  "app": "淘宝",
+  "slug": "taobao",
+  "category": "环境/生活",
+  "priority": "C",
+  "role": "商品、订单、物流和调查设备购买记录。",
+  "referenceCount": 3,
+  "referenceIds": [
+    "TBao-HOME-01",
+    "TBao-SEARCH-01",
+    "TBao-FLASH-01"
+  ],
+  "requiredStates": [
+    "首页",
+    "搜索结果",
+    "商品详情",
+    "订单列表",
+    "订单详情",
+    "物流",
+    "即时零售"
+  ],
+  "interactionContract": [
+    "搜索、商品、订单和物流至少完成一条可信流程。"
+  ],
+  "contentInjection": [
+    "注入移动硬盘、蓝色搪瓷杯、录音设备和普通购买。"
+  ],
+  "officialSource": "https://apps.apple.com/cn/app/%E6%B7%98%E5%AE%9D/id387682726",
+  "target": {
+    "viewport": "402x874",
+    "os": "iOS 26.5.2",
+    "language": "简体中文",
+    "appearance": "浅色模式"
+  },
+  "authority": "本目录真实截图优先；没有精确截图的状态只允许从同一App参考组件派生，不允许跨App猜测。"
+}

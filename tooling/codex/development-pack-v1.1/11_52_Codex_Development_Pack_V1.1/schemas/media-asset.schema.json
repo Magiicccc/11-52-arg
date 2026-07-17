@@ -1,0 +1,104 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://11-52.local/schema/media-asset.json",
+  "title": "MediaAssetManifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "type",
+    "file",
+    "sourceMode",
+    "personReferenceIds",
+    "locationReferenceIds",
+    "correctionVariant",
+    "qa"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "type": {
+      "enum": [
+        "image",
+        "audio",
+        "video",
+        "document"
+      ]
+    },
+    "file": {
+      "type": "string"
+    },
+    "sourceMode": {
+      "enum": [
+        "captured",
+        "generated",
+        "edited",
+        "composite"
+      ]
+    },
+    "baseAssetId": {
+      "type": "string"
+    },
+    "personReferenceIds": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "locationReferenceIds": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "correctionVariant": {
+      "enum": [
+        "R0",
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5"
+      ]
+    },
+    "storyDate": {
+      "type": "string"
+    },
+    "qa": {
+      "type": "object",
+      "required": [
+        "continuity",
+        "artifactCheck",
+        "textAndLogoCheck"
+      ],
+      "properties": {
+        "continuity": {
+          "enum": [
+            "pending",
+            "pass",
+            "fail"
+          ]
+        },
+        "artifactCheck": {
+          "enum": [
+            "pending",
+            "pass",
+            "fail"
+          ]
+        },
+        "textAndLogoCheck": {
+          "enum": [
+            "pending",
+            "pass",
+            "fail"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "fallback": {
+      "type": "object"
+    }
+  }
+}

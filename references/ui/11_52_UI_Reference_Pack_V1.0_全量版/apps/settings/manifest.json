@@ -1,0 +1,36 @@
+{
+  "app": "设置",
+  "slug": "settings",
+  "category": "支持身份",
+  "priority": "B",
+  "role": "设备所有者、账号、存储、屏幕时间和具体程序日志。",
+  "referenceCount": 2,
+  "referenceIds": [
+    "SET26-NOTIFY-01",
+    "SET26-ALERT-01"
+  ],
+  "requiredStates": [
+    "设置首页",
+    "Apple账号/设备名",
+    "通知",
+    "存储空间",
+    "屏幕使用时间",
+    "隐私/权限",
+    "关于本机"
+  ],
+  "interactionContract": [
+    "系统列表、开关和详情页使用iOS真实组件。",
+    "设置变化只由世界状态投影，不直接写剧情台词。"
+  ],
+  "contentInjection": [
+    "注入设备名空白、账号验证失败、存储异常和RETURN诊断入口。"
+  ],
+  "officialSource": "https://support.apple.com/zh-cn/guide/iphone/welcome/ios",
+  "target": {
+    "viewport": "402x874",
+    "os": "iOS 26.5.2",
+    "language": "简体中文",
+    "appearance": "浅色模式"
+  },
+  "authority": "本目录真实截图优先；没有精确截图的状态只允许从同一App参考组件派生，不允许跨App猜测。"
+}

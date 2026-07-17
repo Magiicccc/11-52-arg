@@ -1,0 +1,138 @@
+[
+  {
+    "id": "investigation",
+    "type": "device",
+    "name": "调查手机"
+  },
+  {
+    "id": "player",
+    "type": "device",
+    "name": "玩家手机"
+  },
+  {
+    "id": "actor.shenchuan",
+    "type": "actor",
+    "name": "沈川"
+  },
+  {
+    "id": "actor.player",
+    "type": "actor",
+    "name": "玩家"
+  },
+  {
+    "id": "actor.chenyu",
+    "type": "actor",
+    "name": "陈屿"
+  },
+  {
+    "id": "actor.zhoulan",
+    "type": "actor",
+    "name": "周岚"
+  },
+  {
+    "id": "actor.player_mom",
+    "type": "actor",
+    "name": "妈妈"
+  },
+  {
+    "id": "actor.player_dad",
+    "type": "actor",
+    "name": "爸爸"
+  },
+  {
+    "id": "actor.axu",
+    "type": "actor",
+    "name": "阿序"
+  },
+  {
+    "id": "actor.pb0425",
+    "type": "actor",
+    "name": "PB_0425"
+  },
+  {
+    "id": "actor.oldrain17",
+    "type": "actor",
+    "name": "旧雨17"
+  },
+  {
+    "id": "source.player_daily",
+    "type": "source_root"
+  },
+  {
+    "id": "source.shenchuan_daily",
+    "type": "source_root"
+  },
+  {
+    "id": "source.417_cache",
+    "type": "source_root"
+  },
+  {
+    "id": "source.pb_interface",
+    "type": "source_root"
+  },
+  {
+    "id": "thread.chenyu",
+    "type": "thread"
+  },
+  {
+    "id": "thread.file_transfer",
+    "type": "thread"
+  },
+  {
+    "id": "thread.pb_0425",
+    "type": "thread"
+  },
+  {
+    "id": "notification.pb_0425.01",
+    "type": "notification"
+  },
+  {
+    "id": "notification.file.417_index",
+    "type": "notification"
+  },
+  {
+    "id": "notification.note.remnant",
+    "type": "notification"
+  },
+  {
+    "id": "checkpoint.P03",
+    "type": "checkpoint"
+  },
+  {
+    "id": "checkpoint.A1-07",
+    "type": "checkpoint"
+  },
+  {
+    "id": "checkpoint.A2-08",
+    "type": "checkpoint"
+  },
+  {
+    "id": "checkpoint.A2-11",
+    "type": "checkpoint"
+  },
+  {
+    "id": "evidence.shenchuan.name",
+    "type": "evidence"
+  },
+  {
+    "id": "evidence.shenchuan.face",
+    "type": "evidence"
+  },
+  {
+    "id": "evidence.floor417",
+    "type": "evidence"
+  },
+  {
+    "id": "evidence.frame417",
+    "type": "evidence"
+  },
+  {
+    "id": "puzzle.morse.frame417",
+    "type": "puzzle",
+    "name": "FRAME 417 摩斯密码"
+  },
+  {
+    "id": "notification.chenyu.photo_reaction",
+    "type": "notification"
+  }
+]

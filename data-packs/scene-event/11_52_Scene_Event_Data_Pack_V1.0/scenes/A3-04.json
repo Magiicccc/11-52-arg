@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.0.0",
+  "sceneId": "A3-04",
+  "title": "确认1970/11:52元数据",
+  "order": 25,
+  "act": "A3",
+  "correctionStage": "R3",
+  "entryConditions": [
+    {
+      "op": "sceneCompleted",
+      "sceneId": "A3-03"
+    }
+  ],
+  "completionPolicy": "explicitTrigger",
+  "gatesSatisfied": [],
+  "contentRefs": [
+    "photo.site.exif.1152"
+  ],
+  "puzzleRefs": [
+    "PZ-012"
+  ],
+  "triggerRefs": [
+    "trigger.a3-04.complete"
+  ],
+  "checkpoint": false,
+  "responseSource": "A",
+  "fallbackPolicy": {
+    "required": true,
+    "strategy": "alternateContentOrArchive"
+  },
+  "exitState": {
+    "nextSceneId": "A3-05"
+  },
+  "notes": "确认1970/11:52元数据"
+}

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+  <rect width="1200" height="675" fill="#111518"/>
+  <polygon points="0,0 420,150 420,675 0,675" fill="#252b2f"/>
+  <polygon points="1200,0 780,150 780,675 1200,675" fill="#20262a"/>
+  <rect x="420" y="150" width="360" height="525" fill="#15191b"/>
+  <rect x="530" y="260" width="140" height="310" fill="#050607"/>
+  <circle cx="830" cy="330" r="35" fill="#090a0b"/>
+  <rect x="805" y="360" width="50" height="150" rx="22" fill="#090a0b"/>
+  <line x1="855" y1="420" x2="930" y2="455" stroke="#c3aa65" stroke-width="8"/>
+  <text x="40" y="635" fill="#d7d7d7" font-size="28" font-family="monospace">FRAME 417 · TEMPORARY STORY MEDIA</text>
+</svg>

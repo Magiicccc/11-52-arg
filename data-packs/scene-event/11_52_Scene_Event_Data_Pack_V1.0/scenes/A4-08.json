@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0.0",
+  "sceneId": "A4-08",
+  "title": "分析RETURN与active_witness",
+  "order": 39,
+  "act": "A4",
+  "correctionStage": "R4",
+  "entryConditions": [
+    {
+      "op": "sceneCompleted",
+      "sceneId": "A4-07"
+    }
+  ],
+  "completionPolicy": "explicitTrigger",
+  "gatesSatisfied": [],
+  "contentRefs": [
+    "return.readme",
+    "return.diagnostics",
+    "return.source_graph"
+  ],
+  "puzzleRefs": [
+    "PZ-021"
+  ],
+  "triggerRefs": [
+    "trigger.a4-08.complete"
+  ],
+  "checkpoint": false,
+  "responseSource": "A",
+  "fallbackPolicy": {
+    "required": true,
+    "strategy": "alternateContentOrArchive"
+  },
+  "exitState": {
+    "nextSceneId": "A4-09"
+  },
+  "notes": "分析RETURN与active_witness"
+}

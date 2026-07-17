@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "1.0.0",
+  "triggerId": "trigger.a5-06.complete",
+  "enabled": true,
+  "once": true,
+  "priority": 100,
+  "when": {
+    "eventType": "witness.name_face.separated",
+    "sceneId": "A5-06"
+  },
+  "conditions": {
+    "op": "all",
+    "conditions": [
+      {
+        "op": "sceneActive",
+        "sceneId": "A5-06"
+      },
+      {
+        "op": "triggerNotConsumed",
+        "triggerId": "trigger.a5-06.complete"
+      }
+    ]
+  },
+  "transactionRef": "tx.a5-06.complete",
+  "responseSource": "A"
+}

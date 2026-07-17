@@ -1,0 +1,1725 @@
+[
+  {
+    "schemaVersion": "1.0.0",
+    "sceneId": "P00",
+    "title": "玩家手机日常入口",
+    "order": 0,
+    "act": "P",
+    "correctionStage": "R0",
+    "entryConditions": [],
+    "completionPolicy": "explicitTrigger",
+    "gatesSatisfied": [],
+    "contentRefs": [
+      "message.player.mom.01",
+      "message.player.dad.01",
+      "message.player.axu.01"
+    ],
+    "puzzleRefs": [],
+    "triggerRefs": [
+      "trigger.p00.complete"
+    ],
+    "checkpoint": false,
+    "responseSource": "A",
+    "fallbackPolicy": {
+      "required": true,
+      "strategy": "alternateContentOrArchive"
+    },
+    "exitState": {
+      "nextSceneId": "P01"
+    },
+    "notes": "玩家手机日常入口"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sceneId": "P01",
+    "title": "调查手机锁屏",
+    "order": 1,
+    "act": "P",
+    "correctionStage": "R0",
+    "entryConditions": [
+      {
+        "op": "sceneCompleted",
+        "sceneId": "P00"
+      }
+    ],
+    "completionPolicy": "explicitTrigger",
+    "gatesSatisfied": [],
+    "contentRefs": [
+      "lockscreen.investigation.notifications",
+      "wallpaper.group_photo.r0"
+    ],
+    "puzzleRefs": [],
+    "triggerRefs": [
+      "trigger.p01.complete"
+    ],
+    "checkpoint": false,
+    "responseSource": "A",
+    "fallbackPolicy": {
+      "required": true,
+      "strategy": "alternateContentOrArchive"
+    },
+    "exitState": {
+      "nextSceneId": "P02"
+    },
+    "notes": "调查手机锁屏"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sceneId": "P02",
+    "title": "回拨陈屿",
+    "order": 2,
+    "act": "P",
+    "correctionStage": "R0",
+    "entryConditions": [
+      {
+        "op": "sceneCompleted",
+        "sceneId": "P01"
+      }
+    ],
+    "completionPolicy": "explicitTrigger",
+    "gatesSatisfied": [],
+    "contentRefs": [
+      "call.chenyu.lock.01",
+      "dialogue.chenyu.callback"
+    ],
+    "puzzleRefs": [],
+    "triggerRefs": [
+      "trigger.p02.complete"
+    ],
+    "checkpoint": false,
+    "responseSource": "H",
+    "fallbackPolicy": {
+      "required": true,
+      "strategy": "alternateContentOrArchive"
+    },
+    "exitState": {
+      "nextSceneId": "P03"
+    },
+    "notes": "回拨陈屿"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sceneId": "P03",
+    "title": "输入230917并解锁",
+    "order": 3,
+    "act": "P",
+    "correctionStage": "R0",
+    "entryConditions": [
+      {
+        "op": "sceneCompleted",
+        "sceneId": "P02"
+      }
+    ],
+    "completionPolicy": "explicitTrigger",
+    "gatesSatisfied": [
+      "G1"
+    ],
+    "contentRefs": [
+      "evidence.ticket.230917",
+      "device.passcode.230917"
+    ],
+    "puzzleRefs": [
+      "PZ-001"
+    ],
+    "triggerRefs": [
+      "trigger.p03.complete"
+    ],
+    "checkpoint": true,
+    "responseSource": "A",
+    "fallbackPolicy": {
+      "required": true,
+      "strategy": "alternateContentOrArchive"
+    },
+    "exitState": {
+      "nextSceneId": "A1-01"
+    },
+    "notes": "输入230917并解锁"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sceneId": "A1-01",
+    "title": "确认设置中的设备残片",
+    "order": 4,
+    "act": "A1",
+    "correctionStage": "R1",
+    "entryConditions": [
+      {
+        "op": "sceneCompleted",
+        "sceneId": "P03"
+      }
+    ],
+    "completionPolicy": "explicitTrigger",
+    "gatesSatisfied": [],
+    "contentRefs": [
+      "settings.device.account_fragment",
+      "settings.storage.owner_trace"
+    ],
+    "puzzleRefs": [],
+    "triggerRefs": [
+      "trigger.a1-01.complete"
+    ],
+    "checkpoint": false,
+    "responseSource": "A",
+    "fallbackPolicy": {
+      "required": true,
+      "strategy": "alternateContentOrArchive"
+    },
+    "exitState": {
+      "nextSceneId": "A1-02"
+    },
+    "notes": "确认设置中的设备残片"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sceneId": "A1-02",
+    "title": "恢复沈川姓名",
+    "order": 5,
+    "act": "A1",
+    "correctionStage": "R1",
+    "entryConditions": [
+      {
+        "op": "sceneCompleted",
+        "sceneId": "A1-01"
+      }
+    ],
+    "completionPolicy": "explicitTrigger",
+    "gatesSatisfied": [
+      "G2"
+    ],
+    "contentRefs": [
+      "settings.owner.fragment",
+      "voice.shen.unlabeled",
+      "mail.work.shen"
+    ],
+    "puzzleRefs": [
+      "PZ-002"
+    ],
+    "triggerRefs": [
+      "trigger.a1-02.complete"
+    ],
+    "checkpoint": false,
+    "responseSource": "A",
+    "fallbackPolicy": {
+      "required": true,
+      "strategy": "alternateContentOrArchive"
+    },
+    "exitState": {
+      "nextSceneId": "A1-03"
+    },
+    "notes": "恢复沈川姓名"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sceneId": "A1-03",
+    "title": "浏览普通生活内容",
+    "order": 6,
+    "act": "A1",
+    "correctionStage": "R1",
+    "entryConditions": [
+      {
+        "op": "sceneCompleted",
+        "sceneId": "A1-02"
+      }
+    ],
+    "completionPolicy": "explicitTrigger",
+    "gatesSatisfied": [],
+    "contentRefs": [
+      "wechat.daily_threads",
+      "xiaohongshu.shen.normal_posts",
+      "orders.daily.normal"
+    ],
+    "puzzleRefs": [],
+    "triggerRefs": [
+      "trigger.a1-03.complete"
+    ],
+    "checkpoint": false,
+    "responseSource": "A",
+    "fallbackPolicy": {
+      "required": true,
+      "strategy": "alternateContentOrArchive"
+    },
+    "exitState": {
+      "nextSceneId": "A1-04"
+    },
+    "notes": "浏览普通生活内容"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sceneId": "A1-04",
+    "title": "发现第四张人脸",
+    "order": 7,
+    "act": "A1",
+    "correctionStage": "R1",
+    "entryConditions": [
+      {
+        "op": "sceneCompleted",
+        "sceneId": "A1-03"
+      }
+    ],
+    "completionPolicy": "explicitTrigger",
+    "gatesSatisfied": [],
+    "contentRefs": [
+      "photo.group.face4.r0",
+      "photo.group.face4.r2"
+    ],
+    "puzzleRefs": [
+      "PZ-003"
+    ],
+    "triggerRefs": [
+      "trigger.a1-04.complete"
+    ],
+    "checkpoint": false,
+    "responseSource": "A",
+    "fallbackPolicy": {
+      "required": true,
+      "strategy": "alternateContentOrArchive"
+    },
+    "exitState": {
+      "nextSceneId": "A1-05"
+    },
+    "notes": "发现第四张人脸"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sceneId": "A1-05",
+    "title": "把照片发给陈屿",
+    "order": 8,
+    "act": "A1",
+    "correctionStage": "R1",
+    "entryConditions": [
+      {
+        "op": "sceneCompleted",
+        "sceneId": "A1-04"
+      }
+    ],
+    "completionPolicy": "explicitTrigger",
+    "gatesSatisfied": [],
+    "contentRefs": [
+      "wechat.chenyu.photo_share"
+    ],
+    "puzzleRefs": [],
+    "triggerRefs": [
+      "trigger.a1-05.complete"
+    ],
+    "checkpoint": false,
+    "responseSource": "H",
+    "fallbackPolicy": {
+      "required": true,
+      "strategy": "alternateContentOrArchive"
+    },
+    "exitState": {
+      "nextSceneId": "A1-06"
+    },
+    "notes": "把照片发给陈屿"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sceneId": "A1-06",
+    "title": "陈屿短暂产生记忆矛盾",
+    "order": 9,
+    "act": "A1",
+    "correctionStage": "R1",
+    "entryConditions": [
+      {
+        "op": "sceneCompleted",
+        "sceneId": "A1-05"
+      }
+    ],
+    "completionPolicy": "explicitTrigger",
+    "gatesSatisfied": [],
+    "contentRefs": [
+      "wechat.chenyu.memory_conflict"
+    ],
+    "puzzleRefs": [],
+    "triggerRefs": [
+      "trigger.a1-06.complete"
+    ],
+    "checkpoint": false,
+    "responseSource": "H",
+    "fallbackPolicy": {
+      "required": true,
+      "strategy": "alternateContentOrArchive"
+    },
+    "exitState": {
+      "nextSceneId": "A1-07"
+    },
+    "notes": "陈屿短暂产生记忆矛盾"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sceneId": "A1-07",
+    "title": "玩家头像首次同步侵蚀",
+    "order": 10,
+    "act": "A1",
+    "correctionStage": "R1",
+    "entryConditions": [
+      {
+        "op": "sceneCompleted",
+        "sceneId": "A1-06"
+      }
+    ],
+    "completionPolicy": "explicitTrigger",
+    "gatesSatisfied": [
+      "G3"
+    ],
+    "contentRefs": [
+      "player.avatar.r1"
+    ],
+    "puzzleRefs": [],
+    "triggerRefs": [
+      "trigger.a1-07.complete"
+    ],
+    "checkpoint": true,
+    "responseSource": "A",
+    "fallbackPolicy": {
+      "required": true,
+      "strategy": "alternateContentOrArchive"
+    },
+    "exitState": {
+      "nextSceneId": "A2-01"
+    },
+    "notes": "玩家头像首次同步侵蚀"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sceneId": "A2-01",
+    "title": "搜索潘博文",
+    "order": 11,
+    "act": "A2",
+    "correctionStage": "R2",
+    "entryConditions": [
+      {
+        "op": "sceneCompleted",
+        "sceneId": "A1-07"
+      }
+    ],
+    "completionPolicy": "explicitTrigger",
+    "gatesSatisfied": [],
+    "contentRefs": [
+      "safari.search.panbowen"
+    ],
+    "puzzleRefs": [],
+    "triggerRefs": [
+      "trigger.a2-01.complete"
+    ],
+    "checkpoint": false,
+    "responseSource": "A",
+    "fallbackPolicy": {
+      "required": true,
+      "strategy": "alternateContentOrArchive"
+    },
+    "exitState": {
+      "nextSceneId": "A2-02"
+    },
+    "notes": "搜索潘博文"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sceneId": "A2-02",
+    "title": "进入百度贴吧原帖",
+    "order": 12,
+    "act": "A2",
+    "correctionStage": "R2",
+    "entryConditions": [
+      {
+        "op": "sceneCompleted",
+        "sceneId": "A2-01"
+      }
+    ],
+    "completionPolicy": "explicitTrigger",
+    "gatesSatisfied": [],
+    "contentRefs": [
+      "tieba.pb.original"
+    ],
+    "puzzleRefs": [],
+    "triggerRefs": [
+      "trigger.a2-02.complete"
+    ],
+    "checkpoint": false,
+    "responseSource": "A",
+    "fallbackPolicy": {
+      "required": true,
+      "strategy": "alternateContentOrArchive"
+    },
+    "exitState": {
+      "nextSceneId": "A2-03"
+    },
+    "notes": "进入百度贴吧原帖"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sceneId": "A2-03",
+    "title": "确认416/417/418楼差异",
+    "order": 13,
+    "act": "A2",
+    "correctionStage": "R2",
+    "entryConditions": [
+      {
+        "op": "sceneCompleted",
+        "sceneId": "A2-02"
+      }
+    ],
+    "completionPolicy": "explicitTrigger",
+    "gatesSatisfied": [
+      "G4"
+    ],
+    "contentRefs": [
+      "tieba.floor.416",
+      "tieba.floor.417",
+      "tieba.floor.418"
+    ],
+    "puzzleRefs": [
+      "PZ-004"
+    ],
+    "triggerRefs": [
+      "trigger.a2-03.complete"
+    ],
+    "checkpoint": false,
+    "responseSource": "A",
+    "fallbackPolicy": {
+      "required": true,
+      "strategy": "alternateContentOrArchive"
+    },
+    "exitState": {
+      "nextSceneId": "A2-04"
+    },
+    "notes": "确认416/417/418楼差异"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sceneId": "A2-04",
+    "title": "进入知乎404",
+    "order": 14,
+    "act": "A2",
+    "correctionStage": "R2",
+    "entryConditions": [
+      {
+        "op": "sceneCompleted",
+        "sceneId": "A2-03"
+      }
+    ],
+    "completionPolicy": "explicitTrigger",
+    "gatesSatisfied": [],
+    "contentRefs": [
+      "zhihu.answer.404"
+    ],
+    "puzzleRefs": [],
+    "triggerRefs": [
+      "trigger.a2-04.complete"
+    ],
+    "checkpoint": false,
+    "responseSource": "A",
+    "fallbackPolicy": {
+      "required": true,
+      "strategy": "alternateContentOrArchive"
+    },
+    "exitState": {
+      "nextSceneId": "A2-05"
+    },
+    "notes": "进入知乎404"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sceneId": "A2-05",
+    "title": "发现旧雨17缓存入口",
+    "order": 15,
+    "act": "A2",
+    "correctionStage": "R2",
+    "entryConditions": [
+      {
+        "op": "sceneCompleted",
+        "sceneId": "A2-04"
+      }
+    ],
+    "completionPolicy": "explicitTrigger",
+    "gatesSatisfied": [],
+    "contentRefs": [
+      "archive.oldrain17.entry"
+    ],
+    "puzzleRefs": [
+      "PZ-005"
+    ],
+    "triggerRefs": [
+      "trigger.a2-05.complete"
+    ],
+    "checkpoint": false,
+    "responseSource": "A",
+    "fallbackPolicy": {
+      "required": true,
+      "strategy": "alternateContentOrArchive"
+    },
+    "exitState": {
+      "nextSceneId": "A2-06"
+    },
+    "notes": "发现旧雨17缓存入口"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sceneId": "A2-06",
+    "title": "学习摩斯密码",
+    "order": 16,
+    "act": "A2",
+    "correctionStage": "R2",
+    "entryConditions": [
+      {
+        "op": "sceneCompleted",
+        "sceneId": "A2-05"
+      }
+    ],
+    "completionPolicy": "explicitTrigger",
+    "gatesSatisfied": [],
+    "contentRefs": [
+      "wiki.morse",
+      "audio.carrier.43s"
+    ],
+    "puzzleRefs": [
+      "PZ-006"
+    ],
+    "triggerRefs": [
+      "trigger.a2-06.complete"
+    ],
+    "checkpoint": false,
+    "responseSource": "A",
+    "fallbackPolicy": {
+      "required": true,
+      "strategy": "alternateContentOrArchive"
+    },
+    "exitState": {
+      "nextSceneId": "A2-07"
+    },
+    "notes": "学习摩斯密码"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sceneId": "A2-07",
+    "title": "解出FRAME 417",
+    "order": 17,
+    "act": "A2",
+    "correctionStage": "R2",
+    "entryConditions": [
+      {
+        "op": "sceneCompleted",
+        "sceneId": "A2-06"
+      }
+    ],
+    "completionPolicy": "explicitTrigger",
+    "gatesSatisfied": [],
+    "contentRefs": [
+      "puzzle.frame417.answer"
+    ],
+    "puzzleRefs": [
+      "PZ-007"
+    ],
+    "triggerRefs": [
+      "trigger.a2-07.complete"
+    ],
+    "checkpoint": false,
+    "responseSource": "A",
+    "fallbackPolicy": {
+      "required": true,
+      "strategy": "alternateContentOrArchive"
+    },
+    "exitState": {
+      "nextSceneId": "A2-08"
+    },
+    "notes": "解出FRAME 417"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sceneId": "A2-08",
+    "title": "查看第417帧并收到PB响应",
+    "order": 18,
+    "act": "A2",
+    "correctionStage": "R2",
+    "entryConditions": [
+      {
+        "op": "sceneCompleted",
+        "sceneId": "A2-07"
+      }
+    ],
+    "completionPolicy": "explicitTrigger",
+    "gatesSatisfied": [
+      "G5"
+    ],
+    "contentRefs": [
+      "video.oldrain17.frame417",
+      "wechat.pb.first"
+    ],
+    "puzzleRefs": [
+      "PZ-008"
+    ],
+    "triggerRefs": [
+      "trigger.a2-08.complete"
+    ],
+    "checkpoint": true,
+    "responseSource": "P",
+    "fallbackPolicy": {
+      "required": true,
+      "strategy": "alternateContentOrArchive"
+    },
+    "exitState": {
+      "nextSceneId": "A2-09"
+    },
+    "notes": "查看第417帧并收到PB响应"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sceneId": "A2-09",
+    "title": "阅读验证记录_07",
+    "order": 19,
+    "act": "A2",
+    "correctionStage": "R2",
+    "entryConditions": [
+      {
+        "op": "sceneCompleted",
+        "sceneId": "A2-08"
+      }
+    ],
+    "completionPolicy": "explicitTrigger",
+    "gatesSatisfied": [],
+    "contentRefs": [
+      "note.verification.07.r0"
+    ],
+    "puzzleRefs": [],
+    "triggerRefs": [
+      "trigger.a2-09.complete"
+    ],
+    "checkpoint": false,
+    "responseSource": "A",
+    "fallbackPolicy": {
+      "required": true,
+      "strategy": "alternateContentOrArchive"
+    },
+    "exitState": {
+      "nextSceneId": "A2-10"
+    },
+    "notes": "阅读验证记录_07"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sceneId": "A2-10",
+    "title": "备忘录普通化与通知残片",
+    "order": 20,
+    "act": "A2",
+    "correctionStage": "R2",
+    "entryConditions": [
+      {
+        "op": "sceneCompleted",
+        "sceneId": "A2-09"
+      }
+    ],
+    "completionPolicy": "explicitTrigger",
+    "gatesSatisfied": [],
+    "contentRefs": [
+      "note.verification.07.r3",
+      "notification.note.fragment"
+    ],
+    "puzzleRefs": [
+      "PZ-009"
+    ],
+    "triggerRefs": [
+      "trigger.a2-10.complete"
+    ],
+    "checkpoint": false,
+    "responseSource": "A",
+    "fallbackPolicy": {
+      "required": true,
+      "strategy": "alternateContentOrArchive"
+    },
+    "exitState": {
+      "nextSceneId": "A2-11"
+    },
+    "notes": "备忘录普通化与通知残片"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sceneId": "A2-11",
+    "title": "获得417_index.json",
+    "order": 21,
+    "act": "A2",
+    "correctionStage": "R2",
+    "entryConditions": [
+      {
+        "op": "sceneCompleted",
+        "sceneId": "A2-10"
+      }
+    ],
+    "completionPolicy": "explicitTrigger",
+    "gatesSatisfied": [],
+    "contentRefs": [
+      "file.417_index.json"
+    ],
+    "puzzleRefs": [],
+    "triggerRefs": [
+      "trigger.a2-11.complete"
+    ],
+    "checkpoint": true,
+    "responseSource": "A",
+    "fallbackPolicy": {
+      "required": true,
+      "strategy": "alternateContentOrArchive"
+    },
+    "exitState": {
+      "nextSceneId": "A3-01"
+    },
+    "notes": "获得417_index.json"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sceneId": "A3-01",
+    "title": "组合现实地点坐标",
+    "order": 22,
+    "act": "A3",
+    "correctionStage": "R3",
+    "entryConditions": [
+      {
+        "op": "sceneCompleted",
+        "sceneId": "A2-11"
+      }
+    ],
+    "completionPolicy": "explicitTrigger",
+    "gatesSatisfied": [],
+    "contentRefs": [
+      "coord.latitude.fragment",
+      "coord.longitude.fragment",
+      "coord.radius.fragment"
+    ],
+    "puzzleRefs": [
+      "PZ-010"
+    ],
+    "triggerRefs": [
+      "trigger.a3-01.complete"
+    ],
+    "checkpoint": false,
+    "responseSource": "A",
+    "fallbackPolicy": {
+      "required": true,
+      "strategy": "alternateContentOrArchive"
+    },
+    "exitState": {
+      "nextSceneId": "A3-02"
+    },
+    "notes": "组合现实地点坐标"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sceneId": "A3-02",
+    "title": "查看百度地图真实地点",
+    "order": 23,
+    "act": "A3",
+    "correctionStage": "R3",
+    "entryConditions": [
+      {
+        "op": "sceneCompleted",
+        "sceneId": "A3-01"
+      }
+    ],
+    "completionPolicy": "explicitTrigger",
+    "gatesSatisfied": [],
+    "contentRefs": [
+      "map.loc_river_edu_old_01"
+    ],
+    "puzzleRefs": [],
+    "triggerRefs": [
+      "trigger.a3-02.complete"
+    ],
+    "checkpoint": false,
+    "responseSource": "A",
+    "fallbackPolicy": {
+      "required": true,
+      "strategy": "alternateContentOrArchive"
+    },
+    "exitState": {
+      "nextSceneId": "A3-03"
+    },
+    "notes": "查看百度地图真实地点"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sceneId": "A3-03",
+    "title": "打开沈川现场照片",
+    "order": 24,
+    "act": "A3",
+    "correctionStage": "R3",
+    "entryConditions": [
+      {
+        "op": "sceneCompleted",
+        "sceneId": "A3-02"
+      }
+    ],
+    "completionPolicy": "explicitTrigger",
+    "gatesSatisfied": [],
+    "contentRefs": [
+      "photo.site.series.01-12"
+    ],
+    "puzzleRefs": [
+      "PZ-011"
+    ],
+    "triggerRefs": [
+      "trigger.a3-03.complete"
+    ],
+    "checkpoint": false,
+    "responseSource": "A",
+    "fallbackPolicy": {
+      "required": true,
+      "strategy": "alternateContentOrArchive"
+    },
+    "exitState": {
+      "nextSceneId": "A3-04"
+    },
+    "notes": "打开沈川现场照片"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sceneId": "A3-04",
+    "title": "确认1970/11:52元数据",
+    "order": 25,
+    "act": "A3",
+    "correctionStage": "R3",
+    "entryConditions": [
+      {
+        "op": "sceneCompleted",
+        "sceneId": "A3-03"
+      }
+    ],
+    "completionPolicy": "explicitTrigger",
+    "gatesSatisfied": [],
+    "contentRefs": [
+      "photo.site.exif.1152"
+    ],
+    "puzzleRefs": [
+      "PZ-012"
+    ],
+    "triggerRefs": [
+      "trigger.a3-04.complete"
+    ],
+    "checkpoint": false,
+    "responseSource": "A",
+    "fallbackPolicy": {
+      "required": true,
+      "strategy": "alternateContentOrArchive"
+    },
+    "exitState": {
+      "nextSceneId": "A3-05"
+    },
+    "notes": "确认1970/11:52元数据"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sceneId": "A3-05",
+    "title": "未知来电与钥匙声",
+    "order": 26,
+    "act": "A3",
+    "correctionStage": "R3",
+    "entryConditions": [
+      {
+        "op": "sceneCompleted",
+        "sceneId": "A3-04"
+      }
+    ],
+    "completionPolicy": "explicitTrigger",
+    "gatesSatisfied": [],
+    "contentRefs": [
+      "call.pb.keys.8s"
+    ],
+    "puzzleRefs": [
+      "PZ-013"
+    ],
+    "triggerRefs": [
+      "trigger.a3-05.complete"
+    ],
+    "checkpoint": false,
+    "responseSource": "P",
+    "fallbackPolicy": {
+      "required": true,
+      "strategy": "alternateContentOrArchive"
+    },
+    "exitState": {
+      "nextSceneId": "A3-06"
+    },
+    "notes": "未知来电与钥匙声"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sceneId": "A3-06",
+    "title": "联系周岚",
+    "order": 27,
+    "act": "A3",
+    "correctionStage": "R3",
+    "entryConditions": [
+      {
+        "op": "sceneCompleted",
+        "sceneId": "A3-05"
+      }
+    ],
+    "completionPolicy": "explicitTrigger",
+    "gatesSatisfied": [],
+    "contentRefs": [
+      "wechat.zhoulan.initial"
+    ],
+    "puzzleRefs": [],
+    "triggerRefs": [
+      "trigger.a3-06.complete"
+    ],
+    "checkpoint": false,
+    "responseSource": "H",
+    "fallbackPolicy": {
+      "required": true,
+      "strategy": "alternateContentOrArchive"
+    },
+    "exitState": {
+      "nextSceneId": "A3-07"
+    },
+    "notes": "联系周岚"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sceneId": "A3-07",
+    "title": "发送蓝色搪瓷杯进行盲验证",
+    "order": 28,
+    "act": "A3",
+    "correctionStage": "R3",
+    "entryConditions": [
+      {
+        "op": "sceneCompleted",
+        "sceneId": "A3-06"
+      }
+    ],
+    "completionPolicy": "explicitTrigger",
+    "gatesSatisfied": [],
+    "contentRefs": [
+      "photo.blue_mug",
+      "wechat.zhoulan.blind_test"
+    ],
+    "puzzleRefs": [
+      "PZ-014"
+    ],
+    "triggerRefs": [
+      "trigger.a3-07.complete"
+    ],
+    "checkpoint": false,
+    "responseSource": "H",
+    "fallbackPolicy": {
+      "required": true,
+      "strategy": "alternateContentOrArchive"
+    },
+    "exitState": {
+      "nextSceneId": "A3-08"
+    },
+    "notes": "发送蓝色搪瓷杯进行盲验证"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sceneId": "A3-08",
+    "title": "周岚记忆再次普通化",
+    "order": 29,
+    "act": "A3",
+    "correctionStage": "R3",
+    "entryConditions": [
+      {
+        "op": "sceneCompleted",
+        "sceneId": "A3-07"
+      }
+    ],
+    "completionPolicy": "explicitTrigger",
+    "gatesSatisfied": [],
+    "contentRefs": [
+      "voice.zhoulan.mug.r2",
+      "voice.zhoulan.mug.r3"
+    ],
+    "puzzleRefs": [
+      "PZ-015"
+    ],
+    "triggerRefs": [
+      "trigger.a3-08.complete"
+    ],
+    "checkpoint": false,
+    "responseSource": "C",
+    "fallbackPolicy": {
+      "required": true,
+      "strategy": "alternateContentOrArchive"
+    },
+    "exitState": {
+      "nextSceneId": "A3-09"
+    },
+    "notes": "周岚记忆再次普通化"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sceneId": "A3-09",
+    "title": "玩家手机家庭与地点锚点侵蚀",
+    "order": 30,
+    "act": "A3",
+    "correctionStage": "R3",
+    "entryConditions": [
+      {
+        "op": "sceneCompleted",
+        "sceneId": "A3-08"
+      }
+    ],
+    "completionPolicy": "explicitTrigger",
+    "gatesSatisfied": [],
+    "contentRefs": [
+      "player.mom.relationship.r2",
+      "player.map.home.r2"
+    ],
+    "puzzleRefs": [],
+    "triggerRefs": [
+      "trigger.a3-09.complete"
+    ],
+    "checkpoint": false,
+    "responseSource": "A",
+    "fallbackPolicy": {
+      "required": true,
+      "strategy": "alternateContentOrArchive"
+    },
+    "exitState": {
+      "nextSceneId": "A3-10"
+    },
+    "notes": "玩家手机家庭与地点锚点侵蚀"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sceneId": "A3-10",
+    "title": "播放A3现场视频",
+    "order": 31,
+    "act": "A3",
+    "correctionStage": "R3",
+    "entryConditions": [
+      {
+        "op": "sceneCompleted",
+        "sceneId": "A3-09"
+      }
+    ],
+    "completionPolicy": "explicitTrigger",
+    "gatesSatisfied": [
+      "G6"
+    ],
+    "contentRefs": [
+      "video.site.a3.26_4s"
+    ],
+    "puzzleRefs": [
+      "PZ-016"
+    ],
+    "triggerRefs": [
+      "trigger.a3-10.complete"
+    ],
+    "checkpoint": true,
+    "responseSource": "A",
+    "fallbackPolicy": {
+      "required": true,
+      "strategy": "alternateContentOrArchive"
+    },
+    "exitState": {
+      "nextSceneId": "A4-01"
+    },
+    "notes": "播放A3现场视频"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sceneId": "A4-01",
+    "title": "搜索沈川/存档员/230917",
+    "order": 32,
+    "act": "A4",
+    "correctionStage": "R4",
+    "entryConditions": [
+      {
+        "op": "sceneCompleted",
+        "sceneId": "A3-10"
+      }
+    ],
+    "completionPolicy": "explicitTrigger",
+    "gatesSatisfied": [],
+    "contentRefs": [
+      "search.hidden_thread.tokens"
+    ],
+    "puzzleRefs": [
+      "PZ-017"
+    ],
+    "triggerRefs": [
+      "trigger.a4-01.complete"
+    ],
+    "checkpoint": false,
+    "responseSource": "A",
+    "fallbackPolicy": {
+      "required": true,
+      "strategy": "alternateContentOrArchive"
+    },
+    "exitState": {
+      "nextSceneId": "A4-02"
+    },
+    "notes": "搜索沈川/存档员/230917"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sceneId": "A4-02",
+    "title": "恢复2022年隐藏聊天线程",
+    "order": 33,
+    "act": "A4",
+    "correctionStage": "R4",
+    "entryConditions": [
+      {
+        "op": "sceneCompleted",
+        "sceneId": "A4-01"
+      }
+    ],
+    "completionPolicy": "explicitTrigger",
+    "gatesSatisfied": [],
+    "contentRefs": [
+      "wechat.archive_thread.2022"
+    ],
+    "puzzleRefs": [],
+    "triggerRefs": [
+      "trigger.a4-02.complete"
+    ],
+    "checkpoint": false,
+    "responseSource": "A",
+    "fallbackPolicy": {
+      "required": true,
+      "strategy": "alternateContentOrArchive"
+    },
+    "exitState": {
+      "nextSceneId": "A4-03"
+    },
+    "notes": "恢复2022年隐藏聊天线程"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sceneId": "A4-03",
+    "title": "验证2023年首次线下见面",
+    "order": 34,
+    "act": "A4",
+    "correctionStage": "R4",
+    "entryConditions": [
+      {
+        "op": "sceneCompleted",
+        "sceneId": "A4-02"
+      }
+    ],
+    "completionPolicy": "explicitTrigger",
+    "gatesSatisfied": [],
+    "contentRefs": [
+      "alipay.coffee.230917",
+      "photo.coffee.230917",
+      "event.ticket.230917"
+    ],
+    "puzzleRefs": [
+      "PZ-018"
+    ],
+    "triggerRefs": [
+      "trigger.a4-03.complete"
+    ],
+    "checkpoint": false,
+    "responseSource": "A",
+    "fallbackPolicy": {
+      "required": true,
+      "strategy": "alternateContentOrArchive"
+    },
+    "exitState": {
+      "nextSceneId": "A4-04"
+    },
+    "notes": "验证2023年首次线下见面"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sceneId": "A4-04",
+    "title": "恢复2024—2026共同调查记录",
+    "order": 35,
+    "act": "A4",
+    "correctionStage": "R4",
+    "entryConditions": [
+      {
+        "op": "sceneCompleted",
+        "sceneId": "A4-03"
+      }
+    ],
+    "completionPolicy": "explicitTrigger",
+    "gatesSatisfied": [],
+    "contentRefs": [
+      "wechat.archive_thread.2024_2026",
+      "xiaohongshu.shared_posts"
+    ],
+    "puzzleRefs": [],
+    "triggerRefs": [
+      "trigger.a4-04.complete"
+    ],
+    "checkpoint": false,
+    "responseSource": "A",
+    "fallbackPolicy": {
+      "required": true,
+      "strategy": "alternateContentOrArchive"
+    },
+    "exitState": {
+      "nextSceneId": "A4-05"
+    },
+    "notes": "恢复2024—2026共同调查记录"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sceneId": "A4-05",
+    "title": "确认每日身份验证协议",
+    "order": 36,
+    "act": "A4",
+    "correctionStage": "R4",
+    "entryConditions": [
+      {
+        "op": "sceneCompleted",
+        "sceneId": "A4-04"
+      }
+    ],
+    "completionPolicy": "explicitTrigger",
+    "gatesSatisfied": [],
+    "contentRefs": [
+      "note.daily_identity_protocol"
+    ],
+    "puzzleRefs": [],
+    "triggerRefs": [
+      "trigger.a4-05.complete"
+    ],
+    "checkpoint": false,
+    "responseSource": "A",
+    "fallbackPolicy": {
+      "required": true,
+      "strategy": "alternateContentOrArchive"
+    },
+    "exitState": {
+      "nextSceneId": "A4-06"
+    },
+    "notes": "确认每日身份验证协议"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sceneId": "A4-06",
+    "title": "恢复两部设备共同位置",
+    "order": 37,
+    "act": "A4",
+    "correctionStage": "R4",
+    "entryConditions": [
+      {
+        "op": "sceneCompleted",
+        "sceneId": "A4-05"
+      }
+    ],
+    "completionPolicy": "explicitTrigger",
+    "gatesSatisfied": [],
+    "contentRefs": [
+      "map.device_co_location.20260714"
+    ],
+    "puzzleRefs": [
+      "PZ-019"
+    ],
+    "triggerRefs": [
+      "trigger.a4-06.complete"
+    ],
+    "checkpoint": false,
+    "responseSource": "A",
+    "fallbackPolicy": {
+      "required": true,
+      "strategy": "alternateContentOrArchive"
+    },
+    "exitState": {
+      "nextSceneId": "A4-07"
+    },
+    "notes": "恢复两部设备共同位置"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sceneId": "A4-07",
+    "title": "播放2026-07-14手机交付视频",
+    "order": 38,
+    "act": "A4",
+    "correctionStage": "R4",
+    "entryConditions": [
+      {
+        "op": "sceneCompleted",
+        "sceneId": "A4-06"
+      }
+    ],
+    "completionPolicy": "explicitTrigger",
+    "gatesSatisfied": [
+      "G7"
+    ],
+    "contentRefs": [
+      "video.handover.61_2s"
+    ],
+    "puzzleRefs": [
+      "PZ-020"
+    ],
+    "triggerRefs": [
+      "trigger.a4-07.complete"
+    ],
+    "checkpoint": true,
+    "responseSource": "A",
+    "fallbackPolicy": {
+      "required": true,
+      "strategy": "alternateContentOrArchive"
+    },
+    "exitState": {
+      "nextSceneId": "A4-08"
+    },
+    "notes": "播放2026-07-14手机交付视频"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sceneId": "A4-08",
+    "title": "分析RETURN与active_witness",
+    "order": 39,
+    "act": "A4",
+    "correctionStage": "R4",
+    "entryConditions": [
+      {
+        "op": "sceneCompleted",
+        "sceneId": "A4-07"
+      }
+    ],
+    "completionPolicy": "explicitTrigger",
+    "gatesSatisfied": [],
+    "contentRefs": [
+      "return.readme",
+      "return.diagnostics",
+      "return.source_graph"
+    ],
+    "puzzleRefs": [
+      "PZ-021"
+    ],
+    "triggerRefs": [
+      "trigger.a4-08.complete"
+    ],
+    "checkpoint": false,
+    "responseSource": "A",
+    "fallbackPolicy": {
+      "required": true,
+      "strategy": "alternateContentOrArchive"
+    },
+    "exitState": {
+      "nextSceneId": "A4-09"
+    },
+    "notes": "分析RETURN与active_witness"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sceneId": "A4-09",
+    "title": "理解备份不是见证",
+    "order": 40,
+    "act": "A4",
+    "correctionStage": "R4",
+    "entryConditions": [
+      {
+        "op": "sceneCompleted",
+        "sceneId": "A4-08"
+      }
+    ],
+    "completionPolicy": "explicitTrigger",
+    "gatesSatisfied": [
+      "G8"
+    ],
+    "contentRefs": [
+      "note.backup_not_witness"
+    ],
+    "puzzleRefs": [
+      "PZ-022"
+    ],
+    "triggerRefs": [
+      "trigger.a4-09.complete"
+    ],
+    "checkpoint": false,
+    "responseSource": "A",
+    "fallbackPolicy": {
+      "required": true,
+      "strategy": "alternateContentOrArchive"
+    },
+    "exitState": {
+      "nextSceneId": "A4-10"
+    },
+    "notes": "理解备份不是见证"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sceneId": "A4-10",
+    "title": "PB_0425部分承认并进入最终选择",
+    "order": 41,
+    "act": "A4",
+    "correctionStage": "R4",
+    "entryConditions": [
+      {
+        "op": "sceneCompleted",
+        "sceneId": "A4-09"
+      }
+    ],
+    "completionPolicy": "explicitTrigger",
+    "gatesSatisfied": [],
+    "contentRefs": [
+      "wechat.pb.partial_admission"
+    ],
+    "puzzleRefs": [
+      "PZ-023"
+    ],
+    "triggerRefs": [
+      "trigger.a4-10.complete"
+    ],
+    "checkpoint": true,
+    "responseSource": "P",
+    "fallbackPolicy": {
+      "required": true,
+      "strategy": "alternateContentOrArchive"
+    },
+    "exitState": {
+      "nextSceneId": "A5-01"
+    },
+    "notes": "PB_0425部分承认并进入最终选择"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sceneId": "A5-01",
+    "title": "打开RETURN共同入口",
+    "order": 42,
+    "act": "A5",
+    "correctionStage": "R5",
+    "entryConditions": [
+      {
+        "op": "sceneCompleted",
+        "sceneId": "A4-10"
+      }
+    ],
+    "completionPolicy": "explicitTrigger",
+    "gatesSatisfied": [
+      "G9"
+    ],
+    "contentRefs": [
+      "return.route_selector"
+    ],
+    "puzzleRefs": [
+      "PZ-024"
+    ],
+    "triggerRefs": [
+      "trigger.a5-01.complete"
+    ],
+    "checkpoint": false,
+    "responseSource": "A",
+    "fallbackPolicy": {
+      "required": true,
+      "strategy": "alternateContentOrArchive"
+    },
+    "exitState": {
+      "nextSceneId": "A5-02"
+    },
+    "notes": "打开RETURN共同入口"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sceneId": "A5-02",
+    "title": "集中导入与身份替代路线",
+    "order": 43,
+    "act": "A5",
+    "correctionStage": "R5",
+    "entryConditions": [
+      {
+        "op": "sceneCompleted",
+        "sceneId": "A5-01"
+      }
+    ],
+    "completionPolicy": "explicitTrigger",
+    "gatesSatisfied": [],
+    "contentRefs": [
+      "return.central_import",
+      "ending.identity_replacement"
+    ],
+    "puzzleRefs": [
+      "PZ-025"
+    ],
+    "triggerRefs": [
+      "trigger.a5-02.complete"
+    ],
+    "checkpoint": false,
+    "responseSource": "A",
+    "fallbackPolicy": {
+      "required": true,
+      "strategy": "alternateContentOrArchive"
+    },
+    "exitState": {
+      "nextSceneId": "A5-03"
+    },
+    "notes": "集中导入与身份替代路线"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sceneId": "A5-03",
+    "title": "恢复网络并保留潘博文路线",
+    "order": 44,
+    "act": "A5",
+    "correctionStage": "R5",
+    "entryConditions": [
+      {
+        "op": "sceneCompleted",
+        "sceneId": "A5-02"
+      }
+    ],
+    "completionPolicy": "explicitTrigger",
+    "gatesSatisfied": [],
+    "contentRefs": [
+      "network.sync.preview",
+      "ending.keep_panbowen"
+    ],
+    "puzzleRefs": [
+      "PZ-026"
+    ],
+    "triggerRefs": [
+      "trigger.a5-03.complete"
+    ],
+    "checkpoint": false,
+    "responseSource": "P",
+    "fallbackPolicy": {
+      "required": true,
+      "strategy": "alternateContentOrArchive"
+    },
+    "exitState": {
+      "nextSceneId": "A5-04"
+    },
+    "notes": "恢复网络并保留潘博文路线"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sceneId": "A5-04",
+    "title": "分散声音并保护玩家",
+    "order": 45,
+    "act": "A5",
+    "correctionStage": "R5",
+    "entryConditions": [
+      {
+        "op": "sceneCompleted",
+        "sceneId": "A5-03"
+      }
+    ],
+    "completionPolicy": "explicitTrigger",
+    "gatesSatisfied": [],
+    "contentRefs": [
+      "witness.voice.chenyu",
+      "witness.player.axu",
+      "witness.player.father"
+    ],
+    "puzzleRefs": [
+      "PZ-027"
+    ],
+    "triggerRefs": [
+      "trigger.a5-04.complete"
+    ],
+    "checkpoint": false,
+    "responseSource": "A",
+    "fallbackPolicy": {
+      "required": true,
+      "strategy": "alternateContentOrArchive"
+    },
+    "exitState": {
+      "nextSceneId": "A5-05"
+    },
+    "notes": "分散声音并保护玩家"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sceneId": "A5-05",
+    "title": "分散家庭与地点",
+    "order": 46,
+    "act": "A5",
+    "correctionStage": "R5",
+    "entryConditions": [
+      {
+        "op": "sceneCompleted",
+        "sceneId": "A5-04"
+      }
+    ],
+    "completionPolicy": "explicitTrigger",
+    "gatesSatisfied": [],
+    "contentRefs": [
+      "witness.family.zhoulan",
+      "witness.location.public_archive"
+    ],
+    "puzzleRefs": [
+      "PZ-028"
+    ],
+    "triggerRefs": [
+      "trigger.a5-05.complete"
+    ],
+    "checkpoint": false,
+    "responseSource": "A",
+    "fallbackPolicy": {
+      "required": true,
+      "strategy": "alternateContentOrArchive"
+    },
+    "exitState": {
+      "nextSceneId": "A5-06"
+    },
+    "notes": "分散家庭与地点"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sceneId": "A5-06",
+    "title": "分离姓名、面孔与社会身份",
+    "order": 47,
+    "act": "A5",
+    "correctionStage": "R5",
+    "entryConditions": [
+      {
+        "op": "sceneCompleted",
+        "sceneId": "A5-05"
+      }
+    ],
+    "completionPolicy": "explicitTrigger",
+    "gatesSatisfied": [],
+    "contentRefs": [
+      "witness.name.company_mail",
+      "witness.face.event_photo"
+    ],
+    "puzzleRefs": [
+      "PZ-029"
+    ],
+    "triggerRefs": [
+      "trigger.a5-06.complete"
+    ],
+    "checkpoint": false,
+    "responseSource": "A",
+    "fallbackPolicy": {
+      "required": true,
+      "strategy": "alternateContentOrArchive"
+    },
+    "exitState": {
+      "nextSceneId": "A5-07"
+    },
+    "notes": "分离姓名、面孔与社会身份"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sceneId": "A5-07",
+    "title": "执行结局判定与余波",
+    "order": 48,
+    "act": "A5",
+    "correctionStage": "R5",
+    "entryConditions": [
+      {
+        "op": "sceneCompleted",
+        "sceneId": "A5-06"
+      }
+    ],
+    "completionPolicy": "explicitTrigger",
+    "gatesSatisfied": [],
+    "contentRefs": [
+      "ending.distributed_witness",
+      "ending.final_state"
+    ],
+    "puzzleRefs": [
+      "PZ-030"
+    ],
+    "triggerRefs": [
+      "trigger.a5-07.complete"
+    ],
+    "checkpoint": true,
+    "responseSource": "A",
+    "fallbackPolicy": {
+      "required": true,
+      "strategy": "alternateContentOrArchive"
+    },
+    "exitState": {
+      "nextSceneId": null
+    },
+    "notes": "执行结局判定与余波"
+  }
+]

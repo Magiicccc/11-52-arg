@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.0.0",
+  "sceneId": "A1-01",
+  "title": "确认设置中的设备残片",
+  "order": 4,
+  "act": "A1",
+  "correctionStage": "R1",
+  "entryConditions": [
+    {
+      "op": "sceneCompleted",
+      "sceneId": "P03"
+    }
+  ],
+  "completionPolicy": "explicitTrigger",
+  "gatesSatisfied": [],
+  "contentRefs": [
+    "settings.device.account_fragment",
+    "settings.storage.owner_trace"
+  ],
+  "puzzleRefs": [],
+  "triggerRefs": [
+    "trigger.a1-01.complete"
+  ],
+  "checkpoint": false,
+  "responseSource": "A",
+  "fallbackPolicy": {
+    "required": true,
+    "strategy": "alternateContentOrArchive"
+  },
+  "exitState": {
+    "nextSceneId": "A1-02"
+  },
+  "notes": "确认设置中的设备残片"
+}

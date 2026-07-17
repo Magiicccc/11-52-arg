@@ -1,0 +1,40 @@
+{
+  "app": "QQ邮箱",
+  "slug": "qqmail",
+  "category": "支持证据",
+  "priority": "B",
+  "role": "工作邮件、附件、日历与文件中转。",
+  "referenceCount": 5,
+  "referenceIds": [
+    "QQMAIL717-CLOUD-01",
+    "QQMAIL717-COMPOSE-01",
+    "QQMAIL717-CALENDAR-01",
+    "QQMAIL717-BOX-01",
+    "QQMAIL717-MULTI-01"
+  ],
+  "requiredStates": [
+    "邮箱列表",
+    "收件箱",
+    "邮件详情",
+    "搜索",
+    "写邮件",
+    "附件预览",
+    "文件云盘",
+    "日历",
+    "多窗口"
+  ],
+  "interactionContract": [
+    "邮件列表、阅读、搜索、写信和附件必须可用。"
+  ],
+  "contentInjection": [
+    "注入沈川工作邮件、酒店/车票确认、调查附件及账号验证异常。"
+  ],
+  "officialSource": "https://apps.apple.com/cn/app/qq%E9%82%AE%E7%AE%B1/id473225145",
+  "target": {
+    "viewport": "402x874",
+    "os": "iOS 26.5.2",
+    "language": "简体中文",
+    "appearance": "浅色模式"
+  },
+  "authority": "本目录真实截图优先；没有精确截图的状态只允许从同一App参考组件派生，不允许跨App猜测。"
+}

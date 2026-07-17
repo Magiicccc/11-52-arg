@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.0.0",
+  "sceneId": "P01",
+  "title": "调查手机锁屏",
+  "order": 1,
+  "act": "P",
+  "correctionStage": "R0",
+  "entryConditions": [
+    {
+      "op": "sceneCompleted",
+      "sceneId": "P00"
+    }
+  ],
+  "completionPolicy": "explicitTrigger",
+  "gatesSatisfied": [],
+  "contentRefs": [
+    "lockscreen.investigation.notifications",
+    "wallpaper.group_photo.r0"
+  ],
+  "puzzleRefs": [],
+  "triggerRefs": [
+    "trigger.p01.complete"
+  ],
+  "checkpoint": false,
+  "responseSource": "A",
+  "fallbackPolicy": {
+    "required": true,
+    "strategy": "alternateContentOrArchive"
+  },
+  "exitState": {
+    "nextSceneId": "P02"
+  },
+  "notes": "调查手机锁屏"
+}

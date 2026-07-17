@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0.0",
+  "sceneId": "A5-02",
+  "title": "集中导入与身份替代路线",
+  "order": 43,
+  "act": "A5",
+  "correctionStage": "R5",
+  "entryConditions": [
+    {
+      "op": "sceneCompleted",
+      "sceneId": "A5-01"
+    }
+  ],
+  "completionPolicy": "explicitTrigger",
+  "gatesSatisfied": [],
+  "contentRefs": [
+    "return.central_import",
+    "ending.identity_replacement"
+  ],
+  "puzzleRefs": [
+    "PZ-025"
+  ],
+  "triggerRefs": [
+    "trigger.a5-02.complete"
+  ],
+  "checkpoint": false,
+  "responseSource": "A",
+  "fallbackPolicy": {
+    "required": true,
+    "strategy": "alternateContentOrArchive"
+  },
+  "exitState": {
+    "nextSceneId": "A5-03"
+  },
+  "notes": "集中导入与身份替代路线"
+}

@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "1.0.0",
+  "runId": "W1",
+  "title": "现实修正周目W1",
+  "baseRun": "W0",
+  "operations": [
+    "hide:tieba.floor.417",
+    "variant:zhoulan.blue_mug->nephew",
+    "variant:photo.coffee.230917->single_cup"
+  ],
+  "archiveModeAvailable": true,
+  "fullResetAvailable": true,
+  "mainlineReachability": "full"
+}

@@ -1,0 +1,33 @@
+{
+  "app": "相机",
+  "slug": "camera",
+  "category": "环境/媒体",
+  "priority": "C",
+  "role": "拍摄模拟、取景和权限反馈。",
+  "referenceCount": 1,
+  "referenceIds": [
+    "CAM26-CONTROL-01"
+  ],
+  "requiredStates": [
+    "照片模式",
+    "视频模式",
+    "变焦/曝光",
+    "相册入口",
+    "权限拒绝",
+    "拍摄反馈"
+  ],
+  "interactionContract": [
+    "取景可用游戏场景或占位摄像头模拟；拍摄结果进入游戏相册。"
+  ],
+  "contentInjection": [
+    "可用于保存调查截图或触发一次现实修正。"
+  ],
+  "officialSource": "https://support.apple.com/zh-cn/guide/iphone/welcome/ios",
+  "target": {
+    "viewport": "402x874",
+    "os": "iOS 26.5.2",
+    "language": "简体中文",
+    "appearance": "浅色模式"
+  },
+  "authority": "本目录真实截图优先；没有精确截图的状态只允许从同一App参考组件派生，不允许跨App猜测。"
+}

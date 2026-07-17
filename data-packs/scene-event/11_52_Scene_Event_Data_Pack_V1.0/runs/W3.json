@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "1.0.0",
+  "runId": "W3",
+  "title": "现实修正周目W3",
+  "baseRun": "W0",
+  "operations": [
+    "filter:safari.panbowen->cultural_analysis_only",
+    "reassign:shen.work_and_family->other_people",
+    "earlyErosion:player.identity"
+  ],
+  "archiveModeAvailable": true,
+  "fullResetAvailable": true,
+  "mainlineReachability": "residual"
+}

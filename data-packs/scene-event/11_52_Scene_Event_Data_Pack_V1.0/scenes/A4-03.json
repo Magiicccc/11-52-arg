@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0.0",
+  "sceneId": "A4-03",
+  "title": "验证2023年首次线下见面",
+  "order": 34,
+  "act": "A4",
+  "correctionStage": "R4",
+  "entryConditions": [
+    {
+      "op": "sceneCompleted",
+      "sceneId": "A4-02"
+    }
+  ],
+  "completionPolicy": "explicitTrigger",
+  "gatesSatisfied": [],
+  "contentRefs": [
+    "alipay.coffee.230917",
+    "photo.coffee.230917",
+    "event.ticket.230917"
+  ],
+  "puzzleRefs": [
+    "PZ-018"
+  ],
+  "triggerRefs": [
+    "trigger.a4-03.complete"
+  ],
+  "checkpoint": false,
+  "responseSource": "A",
+  "fallbackPolicy": {
+    "required": true,
+    "strategy": "alternateContentOrArchive"
+  },
+  "exitState": {
+    "nextSceneId": "A4-04"
+  },
+  "notes": "验证2023年首次线下见面"
+}

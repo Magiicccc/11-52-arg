@@ -1,0 +1,34 @@
+{
+  "app": "天气",
+  "slug": "weather",
+  "category": "环境/时间",
+  "priority": "C",
+  "role": "当前位置天气、小时/十日预报和地图。",
+  "referenceCount": 2,
+  "referenceIds": [
+    "WEATHER26-WIND-01",
+    "WEATHER26-MAIN-01"
+  ],
+  "requiredStates": [
+    "主天气页",
+    "小时预报",
+    "十日预报",
+    "地点列表",
+    "天气地图",
+    "风场"
+  ],
+  "interactionContract": [
+    "地点切换、预报滚动和地图层可用。"
+  ],
+  "contentInjection": [
+    "普通环境内容为主；11:52只做极少彩蛋。"
+  ],
+  "officialSource": "https://support.apple.com/zh-cn/guide/iphone/welcome/ios",
+  "target": {
+    "viewport": "402x874",
+    "os": "iOS 26.5.2",
+    "language": "简体中文",
+    "appearance": "浅色模式"
+  },
+  "authority": "本目录真实截图优先；没有精确截图的状态只允许从同一App参考组件派生，不允许跨App猜测。"
+}

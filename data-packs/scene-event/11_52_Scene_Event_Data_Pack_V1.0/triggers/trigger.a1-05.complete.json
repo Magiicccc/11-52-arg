@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "1.0.0",
+  "triggerId": "trigger.a1-05.complete",
+  "enabled": true,
+  "once": true,
+  "priority": 100,
+  "when": {
+    "eventType": "wechat.media.sent",
+    "sceneId": "A1-05"
+  },
+  "conditions": {
+    "op": "all",
+    "conditions": [
+      {
+        "op": "sceneActive",
+        "sceneId": "A1-05"
+      },
+      {
+        "op": "triggerNotConsumed",
+        "triggerId": "trigger.a1-05.complete"
+      }
+    ]
+  },
+  "transactionRef": "tx.a1-05.complete",
+  "responseSource": "H"
+}

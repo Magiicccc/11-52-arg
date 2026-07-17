@@ -1,0 +1,46 @@
+{
+  "targetViewport": {
+    "width": 402,
+    "height": 874,
+    "unit": "css_px"
+  },
+  "secondaryViewport": {
+    "width": 440,
+    "height": 956,
+    "unit": "css_px"
+  },
+  "globalIOSTokens": {
+    "statusBarNominal": 59,
+    "bottomSafeAreaNominal": 34,
+    "minimumTouchTarget": 44
+  },
+  "sourceImages": [
+    {
+      "refId": "NETDISK1329-HOME-01",
+      "pixelSize": "480x1038",
+      "path": "apps/baidunetdisk/raw/NETDISK1329-HOME-01__BAIDUNETDISK_13.29.0_01_home.jpg"
+    },
+    {
+      "refId": "NETDISK1329-SEARCH-01",
+      "pixelSize": "480x1038",
+      "path": "apps/baidunetdisk/raw/NETDISK1329-SEARCH-01__BAIDUNETDISK_13.29.0_02_ai_search.jpg"
+    },
+    {
+      "refId": "NETDISK1329-NOTES-01",
+      "pixelSize": "480x1038",
+      "path": "apps/baidunetdisk/raw/NETDISK1329-NOTES-01__BAIDUNETDISK_13.29.0_03_ai_notes.jpg"
+    },
+    {
+      "refId": "NETDISK1329-SCAN-01",
+      "pixelSize": "480x1038",
+      "path": "apps/baidunetdisk/raw/NETDISK1329-SCAN-01__BAIDUNETDISK_13.29.0_04_scan.jpg"
+    },
+    {
+      "refId": "NETDISK1329-TRANS-01",
+      "pixelSize": "480x1038",
+      "path": "apps/baidunetdisk/raw/NETDISK1329-TRANS-01__BAIDUNETDISK_13.29.0_05_transcription.jpg"
+    }
+  ],
+  "measurementRule": "以raw截图的可见像素几何为准；比例缩放到402×874后测量。无精确直图状态必须复用同App已测组件。",
+  "doNotInferFromWordThumbnail": true
+}

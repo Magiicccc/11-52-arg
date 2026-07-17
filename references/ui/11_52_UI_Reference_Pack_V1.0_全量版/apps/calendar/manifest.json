@@ -1,0 +1,35 @@
+{
+  "app": "日历",
+  "slug": "calendar",
+  "category": "支持证据",
+  "priority": "B",
+  "role": "活动、重复提醒、共同日程和异常日期。",
+  "referenceCount": 1,
+  "referenceIds": [
+    "CAL26-DAY-01"
+  ],
+  "requiredStates": [
+    "月视图",
+    "日视图",
+    "事件详情",
+    "搜索",
+    "新建/编辑",
+    "邀请",
+    "重复事件"
+  ],
+  "interactionContract": [
+    "日期切换、事件详情和搜索可用。",
+    "历史事件和现实时间显示必须分离。"
+  ],
+  "contentInjection": [
+    "注入2023-09-17见面、旧园区行程、工作会议及玩家日程修正。"
+  ],
+  "officialSource": "https://support.apple.com/zh-cn/guide/iphone/welcome/ios",
+  "target": {
+    "viewport": "402x874",
+    "os": "iOS 26.5.2",
+    "language": "简体中文",
+    "appearance": "浅色模式"
+  },
+  "authority": "本目录真实截图优先；没有精确截图的状态只允许从同一App参考组件派生，不允许跨App猜测。"
+}

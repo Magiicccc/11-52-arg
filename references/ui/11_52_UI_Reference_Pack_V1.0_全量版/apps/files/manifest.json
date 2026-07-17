@@ -1,0 +1,36 @@
+{
+  "app": "文件",
+  "slug": "files",
+  "category": "核心文件",
+  "priority": "A",
+  "role": "文件夹、压缩包、预览、下载和损坏文件。",
+  "referenceCount": 1,
+  "referenceIds": [
+    "IOS26-FILES-01"
+  ],
+  "requiredStates": [
+    "浏览位置",
+    "文件列表",
+    "文件预览",
+    "搜索",
+    "下载进度",
+    "压缩/解压",
+    "损坏/无权限",
+    "最近项目"
+  ],
+  "interactionContract": [
+    "文件列表、层级导航、预览和下载状态必须持久化。",
+    "媒体失败须有剧情内降级。"
+  ],
+  "contentInjection": [
+    "注入417_index.json、RETURN程序、录音、地图文件和分布式见证材料。"
+  ],
+  "officialSource": "https://support.apple.com/zh-cn/guide/iphone/welcome/ios",
+  "target": {
+    "viewport": "402x874",
+    "os": "iOS 26.5.2",
+    "language": "简体中文",
+    "appearance": "浅色模式"
+  },
+  "authority": "本目录真实截图优先；没有精确截图的状态只允许从同一App参考组件派生，不允许跨App猜测。"
+}

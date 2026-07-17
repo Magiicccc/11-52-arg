@@ -1,0 +1,41 @@
+{
+  "app": "百度网盘",
+  "slug": "baidunetdisk",
+  "category": "支持证据",
+  "priority": "B",
+  "role": "云端文件、分享、扫描、转写和同步冲突。",
+  "referenceCount": 5,
+  "referenceIds": [
+    "NETDISK1329-HOME-01",
+    "NETDISK1329-SEARCH-01",
+    "NETDISK1329-NOTES-01",
+    "NETDISK1329-SCAN-01",
+    "NETDISK1329-TRANS-01"
+  ],
+  "requiredStates": [
+    "首页",
+    "文件列表",
+    "搜索/AI搜索",
+    "文件详情",
+    "分享",
+    "下载/传输",
+    "在线解压",
+    "扫描",
+    "转写",
+    "笔记"
+  ],
+  "interactionContract": [
+    "文件、传输、分享和搜索必须持久化；云端版本可被现实修正。"
+  ],
+  "contentInjection": [
+    "注入沈川备份、同源副本陷阱、扫描文件、语音转写和云端内容普通化。"
+  ],
+  "officialSource": "https://apps.apple.com/cn/app/%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98/id547166701",
+  "target": {
+    "viewport": "402x874",
+    "os": "iOS 26.5.2",
+    "language": "简体中文",
+    "appearance": "浅色模式"
+  },
+  "authority": "本目录真实截图优先；没有精确截图的状态只允许从同一App参考组件派生，不允许跨App猜测。"
+}

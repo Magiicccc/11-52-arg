@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0.0",
+  "sceneId": "A3-01",
+  "title": "组合现实地点坐标",
+  "order": 22,
+  "act": "A3",
+  "correctionStage": "R3",
+  "entryConditions": [
+    {
+      "op": "sceneCompleted",
+      "sceneId": "A2-11"
+    }
+  ],
+  "completionPolicy": "explicitTrigger",
+  "gatesSatisfied": [],
+  "contentRefs": [
+    "coord.latitude.fragment",
+    "coord.longitude.fragment",
+    "coord.radius.fragment"
+  ],
+  "puzzleRefs": [
+    "PZ-010"
+  ],
+  "triggerRefs": [
+    "trigger.a3-01.complete"
+  ],
+  "checkpoint": false,
+  "responseSource": "A",
+  "fallbackPolicy": {
+    "required": true,
+    "strategy": "alternateContentOrArchive"
+  },
+  "exitState": {
+    "nextSceneId": "A3-02"
+  },
+  "notes": "组合现实地点坐标"
+}

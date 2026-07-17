@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0.0",
+  "sceneId": "A3-10",
+  "title": "播放A3现场视频",
+  "order": 31,
+  "act": "A3",
+  "correctionStage": "R3",
+  "entryConditions": [
+    {
+      "op": "sceneCompleted",
+      "sceneId": "A3-09"
+    }
+  ],
+  "completionPolicy": "explicitTrigger",
+  "gatesSatisfied": [
+    "G6"
+  ],
+  "contentRefs": [
+    "video.site.a3.26_4s"
+  ],
+  "puzzleRefs": [
+    "PZ-016"
+  ],
+  "triggerRefs": [
+    "trigger.a3-10.complete"
+  ],
+  "checkpoint": true,
+  "responseSource": "A",
+  "fallbackPolicy": {
+    "required": true,
+    "strategy": "alternateContentOrArchive"
+  },
+  "exitState": {
+    "nextSceneId": "A4-01"
+  },
+  "notes": "播放A3现场视频"
+}

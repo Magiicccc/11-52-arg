@@ -1,0 +1,41 @@
+{
+  "app": "铁路12306",
+  "slug": "railway12306",
+  "category": "环境/轨迹",
+  "priority": "C",
+  "role": "车票、订单、乘车人和历史行程。",
+  "referenceCount": 7,
+  "referenceIds": [
+    "RAIL596-HOME-01",
+    "RAIL596-A11Y-01",
+    "RAIL596-TRIP-01",
+    "RAIL596-BOARD-01",
+    "RAIL596-HOME-02",
+    "RAIL596-ORDER-01",
+    "RAIL596-HISTORY-01"
+  ],
+  "requiredStates": [
+    "首页查询",
+    "车次列表",
+    "订单列表",
+    "订单详情",
+    "历史订单",
+    "行程详情",
+    "车站大屏",
+    "无障碍模式"
+  ],
+  "interactionContract": [
+    "查询表单、订单和行程详情可进入；不接真实购票。"
+  ],
+  "contentInjection": [
+    "注入沈川与玩家双人订单、天津行程和乘车人缺失。"
+  ],
+  "officialSource": "https://apps.apple.com/cn/app/%E9%93%81%E8%B7%AF12306/id564818797",
+  "target": {
+    "viewport": "402x874",
+    "os": "iOS 26.5.2",
+    "language": "简体中文",
+    "appearance": "浅色模式"
+  },
+  "authority": "本目录真实截图优先；没有精确截图的状态只允许从同一App参考组件派生，不允许跨App猜测。"
+}

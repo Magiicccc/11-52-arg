@@ -1,0 +1,39 @@
+{
+  "app": "百度贴吧",
+  "slug": "tieba",
+  "category": "社区支持",
+  "priority": "B",
+  "role": "楼层、只看楼主、删楼、楼中楼和417结构。",
+  "referenceCount": 4,
+  "referenceIds": [
+    "TB-FEED-01",
+    "TB-POST-01",
+    "TB-INTERACT-01",
+    "TB-AI-01"
+  ],
+  "requiredStates": [
+    "吧首页/信息流",
+    "帖子详情",
+    "楼层列表",
+    "楼中楼",
+    "只看楼主",
+    "搜索",
+    "收藏",
+    "发帖/回复"
+  ],
+  "interactionContract": [
+    "楼层编号、引用、头像、时间、回复和删除状态必须稳定。",
+    "416/417/418必须由内容版本控制。"
+  ],
+  "contentInjection": [
+    "注入潘博文讨论帖、417楼、旧雨17回复和周目删楼版本。"
+  ],
+  "officialSource": "https://apps.apple.com/cn/app/%E7%99%BE%E5%BA%A6%E8%B4%B4%E5%90%A7/id477927812",
+  "target": {
+    "viewport": "402x874",
+    "os": "iOS 26.5.2",
+    "language": "简体中文",
+    "appearance": "浅色模式"
+  },
+  "authority": "本目录真实截图优先；没有精确截图的状态只允许从同一App参考组件派生，不允许跨App猜测。"
+}

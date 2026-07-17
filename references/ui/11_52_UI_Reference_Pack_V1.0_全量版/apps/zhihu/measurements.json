@@ -1,0 +1,46 @@
+{
+  "targetViewport": {
+    "width": 402,
+    "height": 874,
+    "unit": "css_px"
+  },
+  "secondaryViewport": {
+    "width": 440,
+    "height": 956,
+    "unit": "css_px"
+  },
+  "globalIOSTokens": {
+    "statusBarNominal": 59,
+    "bottomSafeAreaNominal": 34,
+    "minimumTouchTarget": 44
+  },
+  "sourceImages": [
+    {
+      "refId": "ZH-HOME-01",
+      "pixelSize": "480x1038",
+      "path": "apps/zhihu/raw/ZH-HOME-01__ZHIHU_11.1.0_01_home_or_answer.jpg"
+    },
+    {
+      "refId": "ZH-AI-01",
+      "pixelSize": "480x1038",
+      "path": "apps/zhihu/raw/ZH-AI-01__ZHIHU_11.1.0_02_ai_chat.jpg"
+    },
+    {
+      "refId": "ZH-PROFILE-01",
+      "pixelSize": "480x1038",
+      "path": "apps/zhihu/raw/ZH-PROFILE-01__ZHIHU_11.1.0_03_profile.jpg"
+    },
+    {
+      "refId": "ZH-KANSHAN-01",
+      "pixelSize": "1080x1920",
+      "path": "apps/zhihu/raw/ZH-KANSHAN-01__ZHIHU_11.1.0_01_kanshan.png"
+    },
+    {
+      "refId": "ZH-IDEAS-01",
+      "pixelSize": "1080x1920",
+      "path": "apps/zhihu/raw/ZH-IDEAS-01__ZHIHU_11.1.0_02_ideas.png"
+    }
+  ],
+  "measurementRule": "以raw截图的可见像素几何为准；比例缩放到402×874后测量。无精确直图状态必须复用同App已测组件。",
+  "doNotInferFromWordThumbnail": true
+}

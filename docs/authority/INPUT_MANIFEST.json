@@ -1,0 +1,112 @@
+{
+  "schemaVersion": "2.0",
+  "repositoryVersion": "V1.0",
+  "generatedAt": "2026-07-17",
+  "authoritativeInputs": [
+    {
+      "order": 1,
+      "role": "世界规则",
+      "path": "docs/bibles/01_World_Bible_V1.0.docx",
+      "sha256": "c0b66b44233e74e74b654a8edeb08e25c5784bf9e8bbd89160757a3eb9a71356"
+    },
+    {
+      "order": 2,
+      "role": "剧情正史与人物",
+      "path": "docs/bibles/02_Narrative_Bible_V1.1.docx",
+      "sha256": "854d357ad0de13e5825d0c843cf27784c7968fff840230e74098d6a089686698"
+    },
+    {
+      "order": 3,
+      "role": "系统合同",
+      "path": "docs/bibles/03_Systems_Bible_V1.3.docx",
+      "sha256": "97a015a41a47d68faaf85c806c323d31eed514127065545953293b4ca48ec4c7"
+    },
+    {
+      "order": 4,
+      "role": "内容与日常叙事",
+      "path": "docs/bibles/04_Content_Bible_V1.2.docx",
+      "sha256": "198ea75811ce1eabd3fd88b09aee6aa2be4239aafd585b31d65c187ea7c055f6"
+    },
+    {
+      "order": 5,
+      "role": "视觉与真实界面规范",
+      "path": "docs/bibles/05_UI_Art_Bible_V1.4.docx",
+      "sha256": "ed2d5d225d440a5ca04415d8460e8489d029003282b132e3d05193153e7947f0"
+    },
+    {
+      "order": 6,
+      "role": "Codex工程实施规则",
+      "path": "docs/bibles/06_Codex_Development_Bible_V1.1.docx",
+      "sha256": "b2f0381e19a06157ecdbf8d0d3c488626912a1e964dce48221bdad2062eda5e7"
+    },
+    {
+      "order": 7,
+      "role": "A3完整内容",
+      "path": "docs/bibles/07A_Content_Production_A3_V1.0.docx",
+      "sha256": "61dc6bbe56264e100aca23282082157b93d3a6b6e21761fbd8fac1715083660e"
+    },
+    {
+      "order": 8,
+      "role": "A4完整内容",
+      "path": "docs/bibles/07B_Content_Production_A4_V1.0.docx",
+      "sha256": "1b9229261f036cef2cb1c9a40a9ebf2cce9bc472ce9140e400c269c6ecfd0f49"
+    },
+    {
+      "order": 9,
+      "role": "A5、结局与周目内容",
+      "path": "docs/bibles/07C_Content_Production_A5_V1.0.docx",
+      "sha256": "5b9f2660ec7c5661019b6faf2c8db5bcabc95e28f00d5364032b1d04e503f495"
+    },
+    {
+      "order": 10,
+      "role": "全谜题、证据与提示",
+      "path": "docs/bibles/08_Puzzle_Evidence_Bible_V1.0.docx",
+      "sha256": "9a1dff107247e6800f72aaece27a9804e7a570754525cb6e4b53d950aa931b51"
+    },
+    {
+      "order": 11,
+      "role": "媒体资产生产合同",
+      "path": "docs/bibles/09_Media_Asset_Bible_V1.0.docx",
+      "sha256": "3decec92f8b0d572ea551f5dcbd987b8ae40f11797ae02b3fade831b8667ea0c"
+    },
+    {
+      "order": 12,
+      "role": "全场景与事件数据说明",
+      "path": "docs/bibles/10_Scene_Event_Data_Bible_V1.0.docx",
+      "sha256": "713d6d84800351ba48428440185fc4672b134775e06904c06fa2e00def77aed4"
+    },
+    {
+      "order": 13,
+      "role": "UI原始视觉事实",
+      "path": "source-packs/11_52_UI_Reference_Pack_V1.0_全量冻结版.zip",
+      "sha256": "61cc3df9e2df077043603ad475f4b4824cb3574b6533e3aafb0ed02b56cd7046"
+    },
+    {
+      "order": 14,
+      "role": "Codex可执行规则包",
+      "path": "source-packs/11_52_Codex_Development_Pack_V1.1.zip",
+      "sha256": "180072f886a20527a2ed405ec7199704326d11df800fb67d3edd5039076cab4d"
+    },
+    {
+      "order": 15,
+      "role": "媒体生产数据包",
+      "path": "source-packs/11_52_Media_Production_Pack_V1.0.zip",
+      "sha256": "5e6fdc8a4832928f1993f3fe643d9b96c16458c394b897c3d63f58402f797962"
+    },
+    {
+      "order": 16,
+      "role": "全场景事件数据包",
+      "path": "source-packs/11_52_Scene_Event_Data_Pack_V1.0.zip",
+      "sha256": "651e9809fe87973356a8965824c4c1af7e962db68968f3ab2ccba4912f1b23b9"
+    }
+  ],
+  "implementationStatus": {
+    "runtime": "P00-A2-11 playable neutral prototype",
+    "fullGameData": "P00-A5-07 structured",
+    "remainingBibles": [
+      "11_QA_Playtest_Bible",
+      "12_Release_Operations_Bible"
+    ],
+    "productionGate": "LOC_RIVER_EDU_OLD_01 unresolved"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "app": "滴滴出行",
+  "slug": "didi",
+  "category": "环境/轨迹",
+  "priority": "C",
+  "role": "车辆选择、历史行程、同行路线和最后地点。",
+  "referenceCount": 5,
+  "referenceIds": [
+    "DIDI80-HOME-01",
+    "DIDI80-VEH-01",
+    "DIDI80-TRIP-01",
+    "DIDI80-HISTORY-01",
+    "DIDI80-ROUTE-01"
+  ],
+  "requiredStates": [
+    "首页",
+    "车型选择",
+    "叫车确认",
+    "进行中行程",
+    "订单历史",
+    "行程详情",
+    "路线推荐"
+  ],
+  "interactionContract": [
+    "地点输入、车型、订单、路线和历史可操作。"
+  ],
+  "contentInjection": [
+    "注入2026-07-14旧园区行程、同行人缺失和玩家手机路线修正。"
+  ],
+  "officialSource": "https://apps.apple.com/cn/app/%E6%BB%B4%E6%BB%B4-%E6%89%93%E8%BD%A6/id554499054",
+  "target": {
+    "viewport": "402x874",
+    "os": "iOS 26.5.2",
+    "language": "简体中文",
+    "appearance": "浅色模式"
+  },
+  "authority": "本目录真实截图优先；没有精确截图的状态只允许从同一App参考组件派生，不允许跨App猜测。"
+}
