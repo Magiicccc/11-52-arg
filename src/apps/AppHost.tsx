@@ -11,6 +11,7 @@ import { CalculatorApp } from "./CalculatorApp";
 import { GenericApp } from "./GenericApp";
 import { BaiduMapApp } from "./BaiduMapApp";
 import { PhoneApp } from "./PhoneApp";
+import { ZhihuApp } from "./ZhihuApp";
 
 export function AppHost({appId}:{appId:string}) {
  if(appId==="app.wechat") return <WeChatApp/>;
@@ -23,5 +24,6 @@ export function AppHost({appId}:{appId:string}) {
  if(appId==="app.calculator") return <CalculatorApp/>;
  if(appId==="app.baidu_map") return <BaiduMapApp/>;
  if(appId==="app.phone") return <PhoneApp/>;
+ if(appId==="app.zhihu") return <ZhihuApp/>;
  const app=appById.get(appId); return <AppChrome title={app?.displayName??appId}><GenericApp appId={appId}/></AppChrome>;
 }

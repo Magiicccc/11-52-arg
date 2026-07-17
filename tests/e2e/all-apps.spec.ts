@@ -14,6 +14,9 @@ test("all visible player phone apps open and return", async ({page}) => {
     await expect(action).toBeVisible();
     await action.click();
     await page.getByTestId("app-back").click();
+    if (!(await page.getByTestId("home-screen").isVisible())) {
+      await page.getByTestId("app-back").click();
+    }
     await expect(page.getByTestId("home-screen")).toBeVisible();
   }
 });

@@ -19,6 +19,7 @@ interface GameContextValue {
   submitPasscode(code: string): boolean;
   emit(type: string, targetId?: string, payload?: JsonValue): void;
   setUiFlag(key: string, value: JsonValue): void;
+  setScrollPosition(route: string, value: number): void;
   reset(): Promise<void>;
 }
 
@@ -96,6 +97,7 @@ export function GameProvider({children}:{children:ReactNode}) {
     },
     emit,
     setUiFlag(key,value) { mutate((draft) => { draft.world.flags[`ui.${key}`]=value; }); },
+    setScrollPosition(route,value) { mutate((draft) => { draft.devices[activeDeviceId].scrollByRoute[route]=value; }); },
     async reset() { await clearSave(); const fresh=createInitialGameState(); setState(fresh); setJournal([]); setReceipts([]); }
   }), [state,ready,activeDeviceId,mutate,emit]);
   return <GameContext.Provider value={value}>{children}</GameContext.Provider>;

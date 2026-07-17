@@ -1,0 +1,196 @@
+{
+  "schemaVersion": 1,
+  "measuredAt": "2026-07-17",
+  "authority": {
+    "referenceId": "IOS26-HOME-01",
+    "path": "references/ui/11_52_UI_Reference_Pack_V1.0_全量版/apps/ios_system/raw/IOS26-HOME-01__ios_home_screen.png",
+    "sourcePixelSize": {
+      "width": 489,
+      "height": 1008
+    },
+    "measurementMethod": "Visible screen and component edges measured in the frozen raw image, then normalized to the 402x874 CSS viewport. The game uses the same measured four-column geometry in a no-widget page state required by the Content Bible."
+  },
+  "sourceMeasurementsPx": {
+    "visibleScreenRect": {
+      "x": 22,
+      "y": 24,
+      "width": 446,
+      "height": 941
+    },
+    "dynamicIslandRect": {
+      "x": 175,
+      "y": 33,
+      "width": 140,
+      "height": 40
+    },
+    "referenceIconRects": [
+      {
+        "column": 1,
+        "x": 53,
+        "y": 335,
+        "width": 73,
+        "height": 70
+      },
+      {
+        "column": 2,
+        "x": 157,
+        "y": 335,
+        "width": 71,
+        "height": 70
+      },
+      {
+        "column": 3,
+        "x": 262,
+        "y": 335,
+        "width": 71,
+        "height": 70
+      },
+      {
+        "column": 4,
+        "x": 366,
+        "y": 335,
+        "width": 71,
+        "height": 70
+      }
+    ],
+    "referenceRowStep": 112,
+    "iconToLabelGap": 5,
+    "dockRect": {
+      "x": 36,
+      "y": 848,
+      "width": 417,
+      "height": 121
+    }
+  },
+  "runtime402x874": {
+    "statusBarHeight": 59,
+    "dynamicIsland": {
+      "top": 9,
+      "width": 126,
+      "height": 37,
+      "borderRadius": 22
+    },
+    "grid": {
+      "columns": 4,
+      "top": 91,
+      "sideInset": 28,
+      "iconSize": 65,
+      "columnGap": 28,
+      "rowStep": 96,
+      "buttonWidth": 78,
+      "minimumTouchTarget": 44
+    },
+    "label": {
+      "gapFromIcon": 4,
+      "fontSize": 12,
+      "lineHeight": 15,
+      "fontWeight": 500,
+      "shadow": "0 1px 2px rgba(0,0,0,.75)"
+    },
+    "badge": {
+      "minimumSize": 20,
+      "horizontalPadding": 5,
+      "offsetTop": -5,
+      "offsetRight": -6,
+      "fontSize": 12,
+      "lineHeight": 20
+    },
+    "pageDots": {
+      "bottom": 120,
+      "dotSize": 6,
+      "gap": 7
+    },
+    "dock": {
+      "left": 14,
+      "right": 14,
+      "bottom": 18,
+      "height": 91,
+      "borderRadius": 34,
+      "iconSize": 62,
+      "horizontalPadding": 20
+    },
+    "homeIndicator": {
+      "bottom": 8,
+      "width": 134,
+      "height": 5,
+      "borderRadius": 3
+    },
+    "wallpaper": {
+      "cropMode": "cover",
+      "focalPoint": "58% 43%",
+      "implementation": "layered CSS gradients derived from the frozen blue and warm lower-right composition; no reference screenshot is shipped as a page background"
+    }
+  },
+  "responsive440x956": {
+    "statusBarHeight": 59,
+    "gridSideInset": 34,
+    "iconSize": 65,
+    "rowStep": 98,
+    "dockLeft": 17,
+    "dockRight": 17,
+    "dockBottom": 20,
+    "dockHeight": 94
+  },
+  "pageComposition": {
+    "dockAppIds": [
+      "app.phone",
+      "app.wechat",
+      "app.safari",
+      "app.photos"
+    ],
+    "page1AppIds": [
+      "app.baidu_map",
+      "app.files",
+      "app.notes",
+      "app.calendar",
+      "app.settings",
+      "app.qqmail",
+      "app.xiaohongshu",
+      "app.douyin"
+    ],
+    "page2AppIds": [
+      "app.zhihu",
+      "app.tieba",
+      "app.toutiao",
+      "app.baidunetdisk",
+      "app.alipay",
+      "app.didi",
+      "app.meituan",
+      "app.taobao",
+      "app.netease_music",
+      "app.wechat_reading",
+      "app.health",
+      "app.weather"
+    ],
+    "page3AppIds": [
+      "app.railway12306",
+      "app.clock",
+      "app.calculator",
+      "app.camera",
+      "app.voice_memos",
+      "app.compass"
+    ]
+  },
+  "runtimeAssetReplacements": {
+    "sourceAtlas": "references/ui/11_52_UI_Reference_Pack_V1.0_全量版/icons/system/ios26_official_icon_grid.webp",
+    "previousPattern": "public/icons/system/<name>.png",
+    "replacementPattern": "public/icons/system/runtime/<name>.png",
+    "method": "Each approved icon was recropped from its frozen atlas cell and received a baked transparent rounded alpha mask. No CSS zoom or crop is used at runtime.",
+    "names": [
+      "calculator",
+      "calendar",
+      "camera",
+      "clock",
+      "compass",
+      "files",
+      "health",
+      "notes",
+      "phone",
+      "photos",
+      "safari",
+      "settings",
+      "voice_memos",
+      "weather"
+    ]
+  }
+}

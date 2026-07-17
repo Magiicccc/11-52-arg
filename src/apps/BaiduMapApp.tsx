@@ -1,6 +1,7 @@
 import { AppChrome } from "@/shell/AppChrome";
 import { useGame } from "@/app/GameContext";
 import { activeBody, getContentItem } from "@/content/selectors";
+import { isQaMode } from "@/lib/qa-mode";
 
 type MapBody = {
   label: string;
@@ -17,6 +18,7 @@ export function BaiduMapApp() {
   const mapItem = getContentItem("a3.map.oldpark");
   const syncItem = getContentItem("a3.player.sync");
   const unlocked = state.content.unlockedContentIds.includes("a3.map.oldpark");
+  const qaMode = isQaMode();
 
   if (activeDeviceId === "player") {
     const sync = syncItem ? activeBody(state, syncItem) as SyncBody : {};
@@ -37,15 +39,15 @@ export function BaiduMapApp() {
   return <AppChrome title="百度地图">
     <div className="map-shell" data-testid={offline ? "map-offline" : "map-online"}>
       <div className={`map-canvas ${offline ? "offline" : ""}`}>
-        <span>{offline ? body.offlineSnapshot : "模拟在线地图 · 临时几何"}</span>
+        <span>{offline ? body.offlineSnapshot : "地图"}</span>
         <b>{body.label}</b>
-        <small>{body.locationRef}</small>
+        {qaMode&&<small>{body.locationRef}</small>}
         <i>非比例示意 · 不含真实地址</i>
       </div>
-      <section className="reference-gap-card"><b>{body.referenceStatus}</b><span>地点包尚未绑定；当前仅显示冻结生产令牌。</span></section>
+      {qaMode&&<section className="reference-gap-card"><b>{body.referenceStatus}</b><span>地点包尚未绑定；当前仅显示冻结生产令牌。</span></section>}
       <div className="map-landmarks">{body.landmarks.map((landmark, index) => <span key={landmark}><i>{index + 1}</i>{landmark}</span>)}</div>
       <button className="secondary-action" data-testid="toggle-map-network" onClick={() => emit("map.network.mode.changed", offline ? "map.mode.online" : "map.mode.offline", { fallback: !offline })}>
-        {offline ? "恢复模拟在线地图" : "模拟地图服务不可用"}
+        {offline ? "重新连接地图" : "使用离线地图"}
       </button>
       {!state.story.completedSceneIds.includes("A3-02") && <button className="primary-action" data-testid="confirm-map-location" onClick={() => emit("map.location.opened", body.locationRef, { landmarks: body.landmarks })}>确认三个现场基准</button>}
     </div>
