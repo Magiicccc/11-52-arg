@@ -9,6 +9,8 @@ import { SettingsApp } from "./SettingsApp";
 import { TiebaApp } from "./TiebaApp";
 import { CalculatorApp } from "./CalculatorApp";
 import { GenericApp } from "./GenericApp";
+import { BaiduMapApp } from "./BaiduMapApp";
+import { PhoneApp } from "./PhoneApp";
 
 export function AppHost({appId}:{appId:string}) {
  if(appId==="app.wechat") return <WeChatApp/>;
@@ -19,5 +21,7 @@ export function AppHost({appId}:{appId:string}) {
  if(appId==="app.settings") return <SettingsApp/>;
  if(appId==="app.tieba") return <TiebaApp/>;
  if(appId==="app.calculator") return <CalculatorApp/>;
+ if(appId==="app.baidu_map") return <BaiduMapApp/>;
+ if(appId==="app.phone") return <PhoneApp/>;
  const app=appById.get(appId); return <AppChrome title={app?.displayName??appId}><GenericApp appId={appId}/></AppChrome>;
 }

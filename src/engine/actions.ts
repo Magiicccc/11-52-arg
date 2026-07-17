@@ -31,12 +31,22 @@ export function applyActions(input: GameState, actions: Action[]): AppliedAction
         if (key in state.world.correctionVector) state.world.correctionVector[key] = Math.max(0, Math.min(100, state.world.correctionVector[key] + action.delta));
         break;
       }
+      case "setCorrectionStage": state.world.correctionStage = action.stage; break;
+      case "activateScene": state.story.currentSceneId = action.sceneId; break;
       case "completeScene": {
         if (!state.story.completedSceneIds.includes(action.sceneId)) state.story.completedSceneIds.push(action.sceneId);
         state.story.currentSceneId = action.sceneId;
         break;
       }
+      case "satisfyGate": state.story.gates[action.gateId] = true; break;
+      case "markEvidence": {
+        const target = action.stage === "confirmed" ? state.evidence.confirmed : action.stage === "interpreted" ? state.evidence.interpreted : state.evidence.discovered;
+        if (!target.includes(action.evidenceId)) target.push(action.evidenceId);
+        if (action.sourceRootId) state.evidence.sourceRoots[action.evidenceId] = action.sourceRootId;
+        break;
+      }
       case "createCheckpoint": if (!state.story.checkpoints.includes(action.checkpointId)) state.story.checkpoints.push(action.checkpointId); break;
+      default: throw new Error(`Unsupported story action: ${String((action as {type?:unknown}).type)}`);
     }
   }
   state.devices.investigation.locked = getPath(state, "world.flags.device.investigation.unlocked") === true ? false : state.devices.investigation.locked;

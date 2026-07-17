@@ -1,0 +1,28 @@
+[
+  {
+    "id": "media.a3.site_photos.temporary",
+    "type": "image-series",
+    "file": "/media/case-001/placeholders/corridor-frame-417.svg",
+    "temporaryFileName": "temporary_P-A3-01_to_P-A3-12_placeholder.svg",
+    "sourceMode": "temporary-existing-placeholder",
+    "status": "temporary",
+    "slotCount": 12,
+    "personReferenceIds": [],
+    "locationReferenceIds": [],
+    "qa": {"continuity": "blocked-formal-media", "artifactCheck": "placeholder", "textAndLogoCheck": "not-applicable"},
+    "fallback": {"type": "text", "contentId": "a3.site.photos"}
+  },
+  {
+    "id": "media.a3.site_video.temporary",
+    "type": "video",
+    "file": "/media/case-001/placeholders/corridor-frame-417.svg",
+    "temporaryFileName": "temporary_A3-10_site_video_placeholder.svg",
+    "sourceMode": "temporary-existing-placeholder",
+    "status": "temporary",
+    "duration": 26.4,
+    "personReferenceIds": [],
+    "locationReferenceIds": [],
+    "qa": {"continuity": "blocked-formal-media", "artifactCheck": "placeholder", "textAndLogoCheck": "not-applicable"},
+    "fallback": {"type": "timeline-transcript", "contentId": "a3.site.video"}
+  }
+]

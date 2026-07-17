@@ -3,6 +3,7 @@ import type { EventReceipt, StoryEvent } from "@/contracts/story-event";
 import type { TriggerDefinition } from "@/contracts/triggers";
 import { applyActions } from "./actions";
 import { evaluateCondition } from "./conditions";
+import { getPath, setPath } from "./path-utils";
 
 export interface EngineResult { state: GameState; journal: StoryEvent[]; receipts: EventReceipt[]; }
 
@@ -17,9 +18,17 @@ export function processStoryEvent(state: GameState, journal: StoryEvent[], recei
   const transactionIds: string[] = [];
   for (const trigger of [...triggers].sort((a,b) => b.priority - a.priority)) {
     if (!trigger.enabled || !matches(event, trigger) || !evaluateCondition(nextState, trigger.conditions)) continue;
-    const transactionId = crypto.randomUUID();
-    const result = applyActions(nextState, trigger.actions);
-    nextState = result.state;
+    const transactionId = trigger.transaction?.idempotencyKey ?? crypto.randomUUID();
+    const committedPath = trigger.transaction ? `world.flags.transactions.${trigger.transaction.idempotencyKey}` : "";
+    if (committedPath && getPath(nextState, committedPath) === true) continue;
+    try {
+      const result = applyActions(nextState, trigger.actions);
+      nextState = result.state;
+      if (committedPath) setPath(nextState as unknown as Record<string, unknown>, committedPath, true);
+    } catch (error) {
+      if (!trigger.transaction?.atomic) throw error;
+      continue;
+    }
     if (trigger.once) nextState.world.flags[`trigger.${trigger.id}.consumed`] = true;
     nextState.world.flags[`trigger.${trigger.id}.source`] = trigger.responseSource;
     triggerIds.push(trigger.id);

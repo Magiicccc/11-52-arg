@@ -9,6 +9,12 @@ export interface TriggerDefinition {
   conditions: Condition;
   actions: Action[];
   responseSource: ResponseSource;
+  transaction?: {
+    id: string;
+    atomic: true;
+    rollbackPolicy: "allOrNothing";
+    idempotencyKey: string;
+  };
 }
 
 export interface EventMatcher {
@@ -36,5 +42,9 @@ export type Action =
   | { type: "showNotification"; deviceId: string; notificationId: string; delayMs?: number }
   | { type: "adjustAnchor"; subjectId: string; anchorType: string; delta: number }
   | { type: "adjustCorrection"; channel: string; delta: number }
+  | { type: "setCorrectionStage"; stage: "R0" | "R1" | "R2" | "R3" | "R4" | "R5" }
+  | { type: "activateScene"; sceneId: string }
   | { type: "completeScene"; sceneId: string }
+  | { type: "satisfyGate"; gateId: string }
+  | { type: "markEvidence"; evidenceId: string; stage: "discovered" | "interpreted" | "confirmed"; sourceRootId?: string }
   | { type: "createCheckpoint"; checkpointId: string };

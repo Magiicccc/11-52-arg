@@ -1,0 +1,359 @@
+[
+  {
+    "id": "trigger.a3.enter",
+    "enabled": true,
+    "once": true,
+    "priority": 120,
+    "when": {"type": "a3.coordinate.started", "targetId": "a3.coordinate.case", "deviceId": "investigation"},
+    "conditions": {"op": "all", "conditions": [{"op": "sceneCompleted", "sceneId": "A2-11"}, {"op": "triggerNotConsumed", "triggerId": "trigger.a3.enter"}]},
+    "actions": [{"type": "unlockContent", "contentId": "a3.coordinate.case"}, {"type": "activateScene", "sceneId": "A3-01"}],
+    "responseSource": "H"
+  },
+  {
+    "id": "trigger.a3.coordinate.exif",
+    "enabled": true,
+    "once": true,
+    "priority": 110,
+    "when": {"type": "coordinate.source.inspected", "targetId": "IMG_0612_145237.HEIC", "deviceId": "investigation"},
+    "conditions": {"op": "triggerNotConsumed", "triggerId": "trigger.a3.coordinate.exif"},
+    "actions": [{"type": "setFlag", "path": "world.flags.a3.coordinate.exif", "value": true}],
+    "responseSource": "H"
+  },
+  {
+    "id": "trigger.a3.coordinate.forum",
+    "enabled": true,
+    "once": true,
+    "priority": 110,
+    "when": {"type": "coordinate.source.inspected", "targetId": "NW01_original_image", "deviceId": "investigation"},
+    "conditions": {"op": "triggerNotConsumed", "triggerId": "trigger.a3.coordinate.forum"},
+    "actions": [{"type": "setFlag", "path": "world.flags.a3.coordinate.forum", "value": true}],
+    "responseSource": "A"
+  },
+  {
+    "id": "trigger.a3.coordinate.call_fragment",
+    "enabled": true,
+    "once": true,
+    "priority": 110,
+    "when": {"type": "coordinate.source.inspected", "targetId": "CY_MAP_CACHE_0714", "deviceId": "investigation"},
+    "conditions": {"op": "triggerNotConsumed", "triggerId": "trigger.a3.coordinate.call_fragment"},
+    "actions": [{"type": "setFlag", "path": "world.flags.a3.coordinate.callFragment", "value": true}],
+    "responseSource": "H"
+  },
+  {
+    "id": "trigger.a3_01.coordinate_assembled",
+    "enabled": true,
+    "once": true,
+    "priority": 100,
+    "when": {"type": "coordinates.assembled", "targetId": "LOC_RIVER_EDU_OLD_01", "deviceId": "investigation"},
+    "conditions": {"op": "all", "conditions": [
+      {"op": "sceneCompleted", "sceneId": "A2-11"},
+      {"op": "flagEquals", "path": "world.flags.a3.coordinate.exif", "value": true},
+      {"op": "flagEquals", "path": "world.flags.a3.coordinate.forum", "value": true},
+      {"op": "flagEquals", "path": "world.flags.a3.coordinate.callFragment", "value": true},
+      {"op": "triggerNotConsumed", "triggerId": "trigger.a3_01.coordinate_assembled"}
+    ]},
+    "actions": [
+      {"type": "markEvidence", "evidenceId": "evidence.a3.coordinate", "stage": "confirmed", "sourceRootId": "source.417_cache"},
+      {"type": "unlockContent", "contentId": "a3.map.oldpark"},
+      {"type": "completeScene", "sceneId": "A3-01"},
+      {"type": "createCheckpoint", "checkpointId": "checkpoint.A3-01"}
+    ],
+    "responseSource": "H"
+  },
+  {
+    "id": "trigger.a3.map.offline",
+    "enabled": true,
+    "once": false,
+    "priority": 95,
+    "when": {"type": "map.network.mode.changed", "targetId": "map.mode.offline", "deviceId": "investigation"},
+    "conditions": {"op": "sceneCompleted", "sceneId": "A3-01"},
+    "actions": [{"type": "setFlag", "path": "devices.investigation.networkMode", "value": "offline"}],
+    "responseSource": "A"
+  },
+  {
+    "id": "trigger.a3.map.online",
+    "enabled": true,
+    "once": false,
+    "priority": 95,
+    "when": {"type": "map.network.mode.changed", "targetId": "map.mode.online", "deviceId": "investigation"},
+    "conditions": {"op": "sceneCompleted", "sceneId": "A3-01"},
+    "actions": [{"type": "setFlag", "path": "devices.investigation.networkMode", "value": "simulated-online"}],
+    "responseSource": "A"
+  },
+  {
+    "id": "trigger.a3_02.map_opened",
+    "enabled": true,
+    "once": true,
+    "priority": 90,
+    "when": {"type": "map.location.opened", "targetId": "LOC_RIVER_EDU_OLD_01", "deviceId": "investigation"},
+    "conditions": {"op": "all", "conditions": [{"op": "sceneCompleted", "sceneId": "A3-01"}, {"op": "triggerNotConsumed", "triggerId": "trigger.a3_02.map_opened"}]},
+    "actions": [{"type": "unlockContent", "contentId": "a3.site.photos"}, {"type": "completeScene", "sceneId": "A3-02"}],
+    "responseSource": "A"
+  },
+  {
+    "id": "trigger.a3.photo.service_door",
+    "enabled": true,
+    "once": true,
+    "priority": 88,
+    "when": {"type": "photo.site.difference.inspected", "targetId": "P-A3-05", "deviceId": "investigation"},
+    "conditions": {"op": "triggerNotConsumed", "triggerId": "trigger.a3.photo.service_door"},
+    "actions": [{"type": "setFlag", "path": "world.flags.a3.photos.serviceDoor", "value": true}],
+    "responseSource": "H"
+  },
+  {
+    "id": "trigger.a3.photo.window",
+    "enabled": true,
+    "once": true,
+    "priority": 88,
+    "when": {"type": "photo.site.difference.inspected", "targetId": "P-A3-06", "deviceId": "investigation"},
+    "conditions": {"op": "triggerNotConsumed", "triggerId": "trigger.a3.photo.window"},
+    "actions": [{"type": "setFlag", "path": "world.flags.a3.photos.window", "value": true}],
+    "responseSource": "H"
+  },
+  {
+    "id": "trigger.a3.photo.bus",
+    "enabled": true,
+    "once": true,
+    "priority": 88,
+    "when": {"type": "photo.site.difference.inspected", "targetId": "P-A3-07", "deviceId": "investigation"},
+    "conditions": {"op": "triggerNotConsumed", "triggerId": "trigger.a3.photo.bus"},
+    "actions": [{"type": "setFlag", "path": "world.flags.a3.photos.bus", "value": true}],
+    "responseSource": "H"
+  },
+  {
+    "id": "trigger.a3_03.photo_series",
+    "enabled": true,
+    "once": true,
+    "priority": 86,
+    "when": {"type": "photo.site.series.opened", "targetId": "a3.site.photos", "deviceId": "investigation"},
+    "conditions": {"op": "all", "conditions": [
+      {"op": "sceneCompleted", "sceneId": "A3-02"},
+      {"op": "flagEquals", "path": "world.flags.a3.photos.serviceDoor", "value": true},
+      {"op": "flagEquals", "path": "world.flags.a3.photos.window", "value": true},
+      {"op": "flagEquals", "path": "world.flags.a3.photos.bus", "value": true},
+      {"op": "triggerNotConsumed", "triggerId": "trigger.a3_03.photo_series"}
+    ]},
+    "actions": [{"type": "completeScene", "sceneId": "A3-03"}],
+    "responseSource": "H"
+  },
+  {
+    "id": "trigger.a3_04.metadata",
+    "enabled": true,
+    "once": true,
+    "priority": 84,
+    "when": {"type": "photo.metadata.signature.confirmed", "targetId": "IMG_0612_144611.HEIC", "deviceId": "investigation"},
+    "conditions": {"op": "all", "conditions": [{"op": "sceneCompleted", "sceneId": "A3-03"}, {"op": "triggerNotConsumed", "triggerId": "trigger.a3_04.metadata"}]},
+    "actions": [{"type": "markEvidence", "evidenceId": "evidence.a3.metadata1152", "stage": "confirmed", "sourceRootId": "source.shenchuan_daily"}, {"type": "unlockContent", "contentId": "a3.unknown.call"}, {"type": "completeScene", "sceneId": "A3-04"}],
+    "responseSource": "H"
+  },
+  {
+    "id": "trigger.a3.audio_fallback",
+    "enabled": true,
+    "once": false,
+    "priority": 83,
+    "when": {"type": "audio.fallback.opened", "deviceId": "investigation"},
+    "conditions": {"op": "sceneCompleted", "sceneId": "A3-04"},
+    "actions": [{"type": "setFlag", "path": "world.flags.a3.audioFallbackUsed", "value": true}],
+    "responseSource": "A"
+  },
+  {
+    "id": "trigger.a3_05.call_answered",
+    "enabled": true,
+    "once": true,
+    "priority": 82,
+    "when": {"type": "unknown.call.completed", "targetId": "call.answered", "deviceId": "investigation"},
+    "conditions": {"op": "all", "conditions": [{"op": "sceneCompleted", "sceneId": "A3-04"}, {"op": "triggerNotConsumed", "triggerId": "trigger.a3_05.call_answered"}]},
+    "actions": [{"type": "setFlag", "path": "world.flags.a3.callPath", "value": "answered"}, {"type": "unlockContent", "contentId": "a3.zhoulan.thread"}, {"type": "completeScene", "sceneId": "A3-05"}, {"type": "createCheckpoint", "checkpointId": "checkpoint.A3-05"}],
+    "responseSource": "P"
+  },
+  {
+    "id": "trigger.a3_05.call_rejected",
+    "enabled": true,
+    "once": true,
+    "priority": 82,
+    "when": {"type": "unknown.call.completed", "targetId": "call.rejected", "deviceId": "investigation"},
+    "conditions": {"op": "all", "conditions": [{"op": "sceneCompleted", "sceneId": "A3-04"}, {"op": "triggerNotConsumed", "triggerId": "trigger.a3_05.call_rejected"}]},
+    "actions": [{"type": "setFlag", "path": "world.flags.a3.callPath", "value": "voicemail"}, {"type": "setFlag", "path": "world.flags.a3.voicemailCreated", "value": true}, {"type": "unlockContent", "contentId": "a3.zhoulan.thread"}, {"type": "completeScene", "sceneId": "A3-05"}, {"type": "createCheckpoint", "checkpointId": "checkpoint.A3-05"}],
+    "responseSource": "P"
+  },
+  {
+    "id": "trigger.a3_06.zhoulan_opened",
+    "enabled": true,
+    "once": true,
+    "priority": 80,
+    "when": {"type": "wechat.thread.zhoulan.opened", "targetId": "thread.zhoulan", "deviceId": "investigation"},
+    "conditions": {"op": "all", "conditions": [{"op": "sceneCompleted", "sceneId": "A3-05"}, {"op": "triggerNotConsumed", "triggerId": "trigger.a3_06.zhoulan_opened"}]},
+    "actions": [{"type": "setFlag", "path": "world.flags.a3.zhoulanInitialDenial", "value": true}, {"type": "completeScene", "sceneId": "A3-06"}],
+    "responseSource": "H"
+  },
+  {
+    "id": "trigger.a3.bluecup_contaminated",
+    "enabled": true,
+    "once": false,
+    "priority": 79,
+    "when": {"type": "wechat.media.contaminated.sent", "targetId": "dossier.blue_mug", "deviceId": "investigation"},
+    "conditions": {"op": "sceneCompleted", "sceneId": "A3-06"},
+    "actions": [{"type": "setFlag", "path": "world.flags.a3.bluecup.status", "value": "contaminated"}, {"type": "unlockContent", "contentId": "a3.bluecup.order"}],
+    "responseSource": "H"
+  },
+  {
+    "id": "trigger.a3.bluecup_clean",
+    "enabled": true,
+    "once": false,
+    "priority": 79,
+    "when": {"type": "wechat.media.clean.sent", "targetId": "photo.blue_mug.clean", "deviceId": "investigation"},
+    "conditions": {"op": "sceneCompleted", "sceneId": "A3-06"},
+    "actions": [{"type": "setFlag", "path": "world.flags.a3.bluecup.status", "value": "clean"}, {"type": "setFlag", "path": "world.flags.a3.bluecup.voiceAvailable", "value": true}, {"type": "unlockContent", "contentId": "a3.bluecup.order"}],
+    "responseSource": "H"
+  },
+  {
+    "id": "trigger.a3.bluecup_voice",
+    "enabled": true,
+    "once": true,
+    "priority": 78,
+    "when": {"type": "audio.voice.played", "targetId": "voice.zhoulan.bluecup.r2", "deviceId": "investigation"},
+    "conditions": {"op": "all", "conditions": [{"op": "flagEquals", "path": "world.flags.a3.bluecup.status", "value": "clean"}, {"op": "triggerNotConsumed", "triggerId": "trigger.a3.bluecup_voice"}]},
+    "actions": [{"type": "setFlag", "path": "world.flags.a3.bluecup.voicePlayed", "value": true}],
+    "responseSource": "H"
+  },
+  {
+    "id": "trigger.a3_07.independent_evidence",
+    "enabled": true,
+    "once": true,
+    "priority": 77,
+    "when": {"type": "content.item.opened", "targetId": "a3.bluecup.order", "deviceId": "investigation"},
+    "conditions": {"op": "all", "conditions": [
+      {"op": "flagEquals", "path": "world.flags.a3.bluecup.voicePlayed", "value": true},
+      {"op": "triggerNotConsumed", "triggerId": "trigger.a3_07.independent_evidence"}
+    ]},
+    "actions": [{"type": "markEvidence", "evidenceId": "evidence.a3.bluecup", "stage": "confirmed", "sourceRootId": "source.shenchuan_daily"}, {"type": "setFlag", "path": "world.flags.a3.bluecup.independentEvidence", "value": true}, {"type": "completeScene", "sceneId": "A3-07"}, {"type": "createCheckpoint", "checkpointId": "checkpoint.A3-07"}],
+    "responseSource": "A"
+  },
+  {
+    "id": "trigger.a3_08.voice_corrected",
+    "enabled": true,
+    "once": true,
+    "priority": 76,
+    "when": {"type": "voice.variant.corrected", "targetId": "voice.zhoulan.bluecup", "deviceId": "investigation"},
+    "conditions": {"op": "all", "conditions": [{"op": "sceneCompleted", "sceneId": "A3-07"}, {"op": "triggerNotConsumed", "triggerId": "trigger.a3_08.voice_corrected"}]},
+    "actions": [{"type": "setContentVariant", "contentId": "a3.zhoulan.thread", "variantId": "a3.zhoulan.thread.r3"}, {"type": "setCorrectionStage", "stage": "R3"}, {"type": "adjustCorrection", "channel": "relationships", "delta": 18}, {"type": "completeScene", "sceneId": "A3-08"}],
+    "responseSource": "C"
+  },
+  {
+    "id": "trigger.a3_09.player_sync",
+    "enabled": true,
+    "once": true,
+    "priority": 75,
+    "when": {"type": "device.player.anchor_change.viewed", "targetId": "player.sync", "deviceId": "player"},
+    "conditions": {"op": "all", "conditions": [{"op": "sceneCompleted", "sceneId": "A3-08"}, {"op": "triggerNotConsumed", "triggerId": "trigger.a3_09.player_sync"}]},
+    "actions": [
+      {"type": "setContentVariant", "contentId": "a3.player.sync", "variantId": "a3.player.sync.r3"},
+      {"type": "unlockContent", "contentId": "a3.player.sync"},
+      {"type": "unlockContent", "contentId": "a3.site.video"},
+      {"type": "setCorrectionStage", "stage": "R3"},
+      {"type": "setFlag", "path": "world.flags.a3.playerSync.contactMom", "value": "李女士"},
+      {"type": "setFlag", "path": "world.flags.a3.playerSync.familyTone", "value": "陌生语气"},
+      {"type": "setFlag", "path": "world.flags.a3.playerSync.mapHome", "value": "收藏地点"},
+      {"type": "setFlag", "path": "world.flags.a3.playerSync.familyAlbumCount", "value": 41},
+      {"type": "setFlag", "path": "world.flags.a3.playerSync.familyPhotoCrop", "value": "三人构图"},
+      {"type": "setFlag", "path": "world.flags.a3.playerSync.axuNoticedAvatar", "value": true},
+      {"type": "setFlag", "path": "world.flags.player.avatarGlitch", "value": true},
+      {"type": "adjustAnchor", "subjectId": "actor.player", "anchorType": "family", "delta": -2},
+      {"type": "adjustAnchor", "subjectId": "actor.player", "anchorType": "home", "delta": -1},
+      {"type": "adjustAnchor", "subjectId": "actor.player", "anchorType": "face", "delta": -1},
+      {"type": "adjustCorrection", "channel": "localDevices", "delta": 25},
+      {"type": "adjustCorrection", "channel": "playerIdentity", "delta": 20},
+      {"type": "completeScene", "sceneId": "A3-09"},
+      {"type": "createCheckpoint", "checkpointId": "checkpoint.A3-09"}
+    ],
+    "responseSource": "C",
+    "transaction": {"id": "transaction.a3_09.player_sync", "atomic": true, "rollbackPolicy": "allOrNothing", "idempotencyKey": "a3_09_player_sync_v1"}
+  },
+  {
+    "id": "trigger.a3.video_fallback",
+    "enabled": true,
+    "once": false,
+    "priority": 70,
+    "when": {"type": "video.fallback.opened", "targetId": "a3.site.video", "deviceId": "investigation"},
+    "conditions": {"op": "sceneCompleted", "sceneId": "A3-09"},
+    "actions": [{"type": "setFlag", "path": "world.flags.a3.videoFallbackUsed", "value": true}],
+    "responseSource": "A"
+  },
+  {
+    "id": "trigger.a3.video.3000",
+    "enabled": true,
+    "once": true,
+    "priority": 69,
+    "when": {"type": "video.playback.progressed", "targetId": "cue.3000", "deviceId": "investigation"},
+    "conditions": {"op": "all", "conditions": [{"op": "sceneCompleted", "sceneId": "A3-09"}, {"op": "triggerNotConsumed", "triggerId": "trigger.a3.video.3000"}]},
+    "actions": [{"type": "unlockContent", "contentId": "a3.site.video"}, {"type": "activateScene", "sceneId": "A3-10"}, {"type": "setFlag", "path": "world.flags.a3.video.progressMs", "value": 3000}],
+    "responseSource": "H"
+  },
+  {
+    "id": "trigger.a3.video.5000",
+    "enabled": true,
+    "once": true,
+    "priority": 68,
+    "when": {"type": "video.playback.progressed", "targetId": "cue.5000", "deviceId": "investigation"},
+    "conditions": {"op": "flagEquals", "path": "world.flags.a3.video.progressMs", "value": 3000},
+    "actions": [{"type": "setFlag", "path": "world.flags.a3.video.progressMs", "value": 5000}],
+    "responseSource": "H"
+  },
+  {
+    "id": "trigger.a3.video.11520",
+    "enabled": true,
+    "once": true,
+    "priority": 67,
+    "when": {"type": "video.playback.progressed", "targetId": "cue.11520", "deviceId": "investigation"},
+    "conditions": {"op": "flagEquals", "path": "world.flags.a3.video.progressMs", "value": 5000},
+    "actions": [{"type": "setFlag", "path": "world.flags.a3.video.progressMs", "value": 11520}],
+    "responseSource": "H"
+  },
+  {
+    "id": "trigger.a3.video.14000",
+    "enabled": true,
+    "once": true,
+    "priority": 66,
+    "when": {"type": "video.playback.progressed", "targetId": "cue.14000", "deviceId": "investigation"},
+    "conditions": {"op": "flagEquals", "path": "world.flags.a3.video.progressMs", "value": 11520},
+    "actions": [{"type": "setFlag", "path": "world.flags.a3.video.progressMs", "value": 14000}],
+    "responseSource": "H"
+  },
+  {
+    "id": "trigger.a3.video.19000",
+    "enabled": true,
+    "once": true,
+    "priority": 65,
+    "when": {"type": "video.playback.progressed", "targetId": "cue.19000", "deviceId": "investigation"},
+    "conditions": {"op": "flagEquals", "path": "world.flags.a3.video.progressMs", "value": 14000},
+    "actions": [{"type": "setFlag", "path": "world.flags.a3.video.progressMs", "value": 19000}],
+    "responseSource": "H"
+  },
+  {
+    "id": "trigger.a3.video.24000",
+    "enabled": true,
+    "once": true,
+    "priority": 64,
+    "when": {"type": "video.playback.progressed", "targetId": "cue.24000", "deviceId": "investigation"},
+    "conditions": {"op": "flagEquals", "path": "world.flags.a3.video.progressMs", "value": 19000},
+    "actions": [{"type": "setFlag", "path": "world.flags.a3.video.progressMs", "value": 24000}],
+    "responseSource": "H"
+  },
+  {
+    "id": "trigger.a3_10.video_completed",
+    "enabled": true,
+    "once": true,
+    "priority": 63,
+    "when": {"type": "video.playback.completed", "targetId": "a3.site.video", "deviceId": "investigation"},
+    "conditions": {"op": "all", "conditions": [{"op": "flagEquals", "path": "world.flags.a3.video.progressMs", "value": 24000}, {"op": "triggerNotConsumed", "triggerId": "trigger.a3_10.video_completed"}]},
+    "actions": [
+      {"type": "markEvidence", "evidenceId": "evidence.a3.second_camera_holder", "stage": "confirmed", "sourceRootId": "source.shenchuan_daily"},
+      {"type": "setFlag", "path": "world.flags.story.a4EntryAvailable", "value": true},
+      {"type": "satisfyGate", "gateId": "G6"},
+      {"type": "completeScene", "sceneId": "A3-10"},
+      {"type": "createCheckpoint", "checkpointId": "checkpoint.A3-10"}
+    ],
+    "responseSource": "H",
+    "transaction": {"id": "transaction.a3_10.checkpoint", "atomic": true, "rollbackPolicy": "allOrNothing", "idempotencyKey": "a3_10_checkpoint_v1"}
+  }
+]

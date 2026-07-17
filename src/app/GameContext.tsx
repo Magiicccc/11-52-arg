@@ -44,7 +44,25 @@ export function GameProvider({children}:{children:ReactNode}) {
 
   const value = useMemo<GameContextValue>(() => ({
     state, ready, activeDeviceId,
-    switchDevice(id) { mutate((draft) => { draft.world.flags.activeDeviceId = id; }); },
+    switchDevice(id) {
+      if (id === "player" && activeDeviceId !== "player" && state.story.completedSceneIds.includes("A3-08") && !state.story.completedSceneIds.includes("A3-09")) {
+        const event = createStoryEvent({
+          type: "device.player.anchor_change.viewed",
+          deviceId: "player",
+          sceneId: state.story.currentSceneId,
+          actorId: "actor.player",
+          targetId: "player.sync",
+          payload: { deviceTransition: "investigation-to-player" }
+        });
+        const result = processStoryEvent(state,journal,receipts,event,triggers);
+        const nextState = structuredClone(result.state);
+        nextState.world.flags.activeDeviceId = id;
+        nextState.revision += 1;
+        setState(nextState); setJournal(result.journal); setReceipts(result.receipts);
+        return;
+      }
+      mutate((draft) => { draft.world.flags.activeDeviceId = id; });
+    },
     openApp(appId) { mutate((draft) => { const d=draft.devices[activeDeviceId]; d.activeAppId=appId; d.appStack=["root"]; d.unreadByApp[appId]=0; }); },
     closeApp() { mutate((draft) => { const d=draft.devices[activeDeviceId]; d.activeAppId=null; d.appStack=[]; }); },
     navigate(route) { mutate((draft) => { draft.devices[activeDeviceId].appStack.push(route); }); },

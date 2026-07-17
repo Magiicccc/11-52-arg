@@ -6,10 +6,12 @@
   "initialSceneId": "P00",
   "appManifestFile": "apps/app-manifests.json",
   "contentFiles": [
-    "apps/content-items.json"
+    "apps/content-items.json",
+    "apps/a3-content-items.json"
   ],
   "triggerFiles": [
-    "triggers/triggers.json"
+    "triggers/triggers.json",
+    "triggers/a3-triggers.json"
   ],
   "contextFiles": [
     "context/registry.json",

@@ -1,0 +1,353 @@
+[
+  {
+    "id": "a3.coordinate.case",
+    "appId": "app.files",
+    "kind": "coordinate-workbench",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.417_cache",
+    "initialVariantId": "a3.coordinate.case.r2",
+    "variants": [
+      {
+        "id": "a3.coordinate.case.r2",
+        "correctionStage": "R2",
+        "reason": "normal",
+        "body": {
+          "title": "组合坐标",
+          "locationRef": "LOC_RIVER_EDU_OLD_01",
+          "referenceStatus": "REFERENCE-GAP",
+          "sourceSlots": [
+            {"slot": "纬度主体", "value": "IMG_0612_145237.HEIC · EXIF"},
+            {"slot": "经度末位", "value": "NW01_original_image · 原图角标"},
+            {"slot": "方向与末两位", "value": "CY_MAP_CACHE_0714 · 通话/号码残片"}
+          ],
+          "radius": "80 米",
+          "checksum": "4-1-7",
+          "notice": "现实地点尚未绑定；只生成生产令牌，不显示或猜测真实地址。"
+        }
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "location",
+      "secondaryFunctions": ["continuity"],
+      "clueRole": "direct",
+      "worldFactIds": ["wf.oldpark"],
+      "characterTraitIds": ["ct.shenchuan.archivist"],
+      "relationshipBeatIds": [],
+      "continuityLinkIds": ["cl.oldpark", "cl.floor417"],
+      "firstReadValue": "要求玩家把三个独立来源放入正确坐标槽位，而不是一键领取地点。",
+      "payoffPolicy": "required"
+    },
+    "metadata": {"slice": "A3-01", "status": "production-token"}
+  },
+  {
+    "id": "a3.map.oldpark",
+    "appId": "app.baidu_map",
+    "kind": "map-contract",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.417_cache",
+    "initialVariantId": "a3.map.oldpark.r2",
+    "variants": [
+      {
+        "id": "a3.map.oldpark.r2",
+        "correctionStage": "R2",
+        "reason": "normal",
+        "body": {
+          "locationRef": "LOC_RIVER_EDU_OLD_01",
+          "label": "旧园区外围 · 临时几何",
+          "referenceStatus": "REFERENCE-GAP",
+          "geometry": "temporary-not-to-scale",
+          "landmarks": ["公交终点站", "红色卷闸门", "L形围墙"],
+          "offlineSnapshot": "冻结离线镜像 · 2026-07-14",
+          "realAddress": null
+        }
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "location",
+      "secondaryFunctions": ["continuity"],
+      "clueRole": "supporting",
+      "worldFactIds": ["wf.oldpark", "wf.device.offline"],
+      "characterTraitIds": [],
+      "relationshipBeatIds": [],
+      "continuityLinkIds": ["cl.oldpark"],
+      "firstReadValue": "用地图和冻结离线镜像确认旧园区外围的三个可比对基准。",
+      "payoffPolicy": "required"
+    },
+    "metadata": {"slice": "A3-02", "status": "temporary", "referenceGap": true}
+  },
+  {
+    "id": "a3.site.photos",
+    "appId": "app.photos",
+    "kind": "photo-series",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "a3.site.photos.r2",
+    "variants": [
+      {
+        "id": "a3.site.photos.r2",
+        "correctionStage": "R2",
+        "reason": "normal",
+        "body": {
+          "assetStatus": "temporary",
+          "placeholderSrc": "/media/case-001/placeholders/corridor-frame-417.svg",
+          "slots": [
+            {"slot": "P-A3-01", "file": "IMG_0612_143906.HEIC", "subject": "公交终点站"},
+            {"slot": "P-A3-02", "file": "IMG_0612_144018.HEIC", "subject": "红色卷闸门"},
+            {"slot": "P-A3-03", "file": "IMG_0612_144126.HEIC", "subject": "L形围墙"},
+            {"slot": "P-A3-04", "file": "IMG_0612_144241.HEIC", "subject": "小卖部收据"},
+            {"slot": "P-A3-05", "file": "IMG_0612_144552.HEIC", "subject": "服务门"},
+            {"slot": "P-A3-06", "file": "IMG_0612_144611.HEIC", "subject": "窗内人影"},
+            {"slot": "P-A3-07", "file": "IMG_0612_144736.HEIC", "subject": "缺失的公交数字"},
+            {"slot": "P-A3-08", "file": "IMG_0612_144812.HEIC", "subject": "墙面裂缝"},
+            {"slot": "P-A3-09", "file": "IMG_0612_144936.HEIC", "subject": "猫"},
+            {"slot": "P-A3-10", "file": "IMG_0612_145104.HEIC", "subject": "施工围挡"},
+            {"slot": "P-A3-11", "file": "IMG_0612_145237.HEIC", "subject": "天空与手指"},
+            {"slot": "P-A3-12", "file": "IMG_0612_145502.HEIC", "subject": "公交车反光"}
+          ],
+          "metadata": {
+            "file": "IMG_0612_144611.HEIC",
+            "size": "3.8 MB",
+            "dateTimeOriginal": "2026-06-12 14:45:52",
+            "fileCreateDate": "1970-01-01 11:52:00",
+            "fileModifyDate": "2026-07-14 11:52:17",
+            "gps": "LOC_RIVER_EDU_OLD_01 · 待绑定",
+            "device": "iPhone（型号字段损坏）",
+            "hash": "SHA-256 已校验 · 原图哈希一致"
+          }
+        }
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "location",
+      "secondaryFunctions": ["chronology", "continuity"],
+      "clueRole": "direct",
+      "worldFactIds": ["wf.oldpark"],
+      "characterTraitIds": ["ct.shenchuan.photo"],
+      "relationshipBeatIds": [],
+      "continuityLinkIds": ["cl.oldpark"],
+      "firstReadValue": "十二个冻结照片槽位把地图基准、现场差异和11:52元数据连接起来。",
+      "payoffPolicy": "required"
+    },
+    "metadata": {"slice": "A3-03/A3-04", "status": "temporary"}
+  },
+  {
+    "id": "a3.unknown.call",
+    "appId": "app.phone",
+    "kind": "call-contract",
+    "ownerId": "actor.pb0425",
+    "sourceRootId": "source.pb_interface",
+    "initialVariantId": "a3.unknown.call.r2",
+    "variants": [
+      {
+        "id": "a3.unknown.call.r2",
+        "correctionStage": "R2",
+        "reason": "P",
+        "body": {
+          "caller": "未知号码",
+          "duration": 8,
+          "events": [
+            {"at": "00:00–00:02", "text": "低风声"},
+            {"at": "00:02–00:05", "text": "钥匙声两次；第一组脚步停止，第二组继续"},
+            {"at": "00:05–00:07", "text": "远处羽毛球落地声"},
+            {"at": "00:07–00:08", "text": "通话断开"}
+          ],
+          "voicemailTranscript": "（低风声）钥匙碰撞两次。第一组脚步停下，第二组脚步继续。远处一声羽毛球落地，随后断线。",
+          "textAlternative": "地图上只有三道门。"
+        }
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "continuity",
+      "secondaryFunctions": ["location"],
+      "clueRole": "supporting",
+      "worldFactIds": ["wf.oldpark"],
+      "characterTraitIds": [],
+      "relationshipBeatIds": [],
+      "continuityLinkIds": ["cl.oldpark"],
+      "firstReadValue": "八秒环境声把第二组脚步、钥匙和羽毛球落地声固定为可访问事件。",
+      "payoffPolicy": "required"
+    },
+    "metadata": {"slice": "A3-05", "status": "text-waveform-fallback"}
+  },
+  {
+    "id": "a3.zhoulan.thread",
+    "appId": "app.wechat",
+    "kind": "thread-contract",
+    "ownerId": "actor.zhoulan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "a3.zhoulan.thread.r2",
+    "variants": [
+      {
+        "id": "a3.zhoulan.thread.r2",
+        "correctionStage": "R2",
+        "reason": "H",
+        "body": {
+          "contact": "妈",
+          "initialReplies": ["沈川？", "不好意思，我不认识这个人。", "这个号怎么会在我通讯录里？"],
+          "safetyReply": "我不知道。你是捡到手机了吗？别发身份证或者地址给我，有事找警察。",
+          "voiceDuration": 18.2,
+          "voiceTranscript": "小川上大学第一年非要买蓝的，杯口磕了我让他扔，他不肯。后来拿它倒热豆浆，左手虎口还烫了一道。你怎么会有这个？",
+          "messageReference": "你刚才说的沈川……",
+          "notificationPreview": "小川上大学第一年……"
+        }
+      },
+      {
+        "id": "a3.zhoulan.thread.r3",
+        "correctionStage": "R3",
+        "replacesVariantId": "a3.zhoulan.thread.r2",
+        "reason": "C",
+        "body": {
+          "contact": "周岚",
+          "voiceDuration": 17.7,
+          "voiceTranscript": "（碗碟声覆盖称呼）我外甥上大学第一年非要买蓝的，杯口磕了我让他扔，他不肯。后来拿它倒热豆浆，左手虎口还烫了一道。你怎么会有这个？",
+          "messageReference": "你刚才说的那个名字……",
+          "correctionMessages": ["我刚才说错了。", "那个杯子是我外甥小陈的，可能你听岔了。", "我们家没有叫沈川的人。", "你把照片删了吧，别再发了。"],
+          "notificationPreview": "小川上大学第一年……",
+          "sameMasterRecording": true
+        }
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "relationship",
+      "secondaryFunctions": ["continuity", "future_loss"],
+      "clueRole": "direct",
+      "worldFactIds": ["wf.shenchuan.family"],
+      "characterTraitIds": ["ct.zhoulan.care"],
+      "relationshipBeatIds": ["rb.shenchuan.zhoulan"],
+      "continuityLinkIds": ["cl.blue_mug"],
+      "firstReadValue": "周岚先否认认识沈川，再由无标签蓝杯触发冻结的生活化盲证。",
+      "recontextualizedValue": "同一母带在R3被环境声覆盖称呼并普通化为外甥记忆。",
+      "payoffPolicy": "required"
+    },
+    "metadata": {"slice": "A3-06/A3-08", "sameMasterRecording": true}
+  },
+  {
+    "id": "a3.bluecup.order",
+    "appId": "app.taobao",
+    "kind": "order",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "a3.bluecup.order.r2",
+    "variants": [
+      {
+        "id": "a3.bluecup.order.r2",
+        "correctionStage": "R2",
+        "reason": "A",
+        "body": {
+          "title": "蓝色搪瓷杯订单",
+          "date": "2016",
+          "status": "独立来源",
+          "note": "订单仅确认蓝杯购买记录，不包含周岚本次证言内容。"
+        }
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "continuity",
+      "secondaryFunctions": ["relationship"],
+      "clueRole": "supporting",
+      "worldFactIds": ["wf.shenchuan.family"],
+      "characterTraitIds": [],
+      "relationshipBeatIds": ["rb.shenchuan.zhoulan"],
+      "continuityLinkIds": ["cl.blue_mug"],
+      "firstReadValue": "用独立订单补足蓝杯证言，污染路径也能借此恢复而不形成死路。",
+      "payoffPolicy": "required"
+    },
+    "metadata": {"slice": "A3-07", "independentSource": true}
+  },
+  {
+    "id": "a3.player.sync",
+    "appId": "app.wechat",
+    "kind": "atomic-sync-contract",
+    "ownerId": "actor.player",
+    "sourceRootId": "source.player_daily",
+    "initialVariantId": "a3.player.sync.r2",
+    "variants": [
+      {
+        "id": "a3.player.sync.r2",
+        "correctionStage": "R2",
+        "reason": "normal",
+        "body": {
+          "momContact": "妈妈",
+          "momTone": "家庭语气",
+          "mapHome": "家",
+          "familyAlbumCount": 42,
+          "familyPhotoCrop": "四人完整构图",
+          "avatar": "玩家头像"
+        }
+      },
+      {
+        "id": "a3.player.sync.r3",
+        "correctionStage": "R3",
+        "replacesVariantId": "a3.player.sync.r2",
+        "reason": "C",
+        "body": {
+          "momContact": "李女士",
+          "momTone": "陌生语气",
+          "momMessages": ["校对员？不好意思，我没存这个号。你找我有什么事吗？", "你是不是发错人了？"],
+          "mapHome": "收藏地点",
+          "familyAlbumCount": 41,
+          "familyPhotoCrop": "三人构图；玩家被自然裁出",
+          "avatar": "系统头像",
+          "axuMessages": ["你怎么又换回系统头像了？", "算了，你这两天说话也怪怪的。晚上还打不打游戏？"]
+        }
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "future_loss",
+      "secondaryFunctions": ["relationship", "location"],
+      "clueRole": "direct",
+      "worldFactIds": ["wf.player.family"],
+      "characterTraitIds": ["ct.axu.friend"],
+      "relationshipBeatIds": ["rb.player.parents", "rb.player.axu"],
+      "continuityLinkIds": [],
+      "firstReadValue": "一个原子版本同时投影玩家联系人、地图、相册、头像和阿序反应。",
+      "payoffPolicy": "required"
+    },
+    "metadata": {"slice": "A3-09", "transaction": "a3_09_player_sync_v1"}
+  },
+  {
+    "id": "a3.site.video",
+    "appId": "app.photos",
+    "kind": "video-contract",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "a3.site.video.r3",
+    "variants": [
+      {
+        "id": "a3.site.video.r3",
+        "correctionStage": "R3",
+        "reason": "normal",
+        "body": {
+          "duration": 26.4,
+          "assetStatus": "temporary",
+          "placeholderSrc": "/media/case-001/placeholders/corridor-frame-417.svg",
+          "created": "2026-07-14 10:58:26",
+          "modified": "2026-07-14 11:52:17",
+          "device": "玩家手机（同型号字段不完整）",
+          "location": "LOC_RIVER_EDU_OLD_01 · 待绑定",
+          "cues": [
+            {"atMs": 3000, "at": "00:03", "text": "先数门"},
+            {"atMs": 5000, "at": "00:05", "text": "我数的是四个"},
+            {"atMs": 11520, "at": "00:11.52", "text": "第二组脚步与钥匙声"},
+            {"atMs": 14000, "at": "00:14", "text": "你留在外面"},
+            {"atMs": 19000, "at": "00:19", "text": "只能看到被裁切的反光"},
+            {"atMs": 24000, "at": "00:24", "text": "镜头被遮挡"}
+          ],
+          "conclusion": "只能确认存在第二名持机者；身份、正脸和手机交付过程均未显示。"
+        }
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "continuity",
+      "secondaryFunctions": ["chronology", "future_loss"],
+      "clueRole": "direct",
+      "worldFactIds": ["wf.oldpark"],
+      "characterTraitIds": [],
+      "relationshipBeatIds": ["rb.shenchuan.player.meeting"],
+      "continuityLinkIds": ["cl.oldpark"],
+      "firstReadValue": "二十六点四秒视频只确认第二名持机者，并把六个冻结时间点做成可恢复进度。",
+      "payoffPolicy": "required"
+    },
+    "metadata": {"slice": "A3-10", "status": "temporary", "noA4IdentityReveal": true}
+  }
+]
