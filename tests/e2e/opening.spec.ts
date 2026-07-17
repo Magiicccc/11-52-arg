@@ -1,4 +1,5 @@
 import { test, expect, type Page } from "@playwright/test";
+import { testEntryUrl } from "./entry-url";
 
 async function unlockInvestigationPhone(page:Page){
   await page.getByTestId("switch-investigation").click();
@@ -11,7 +12,7 @@ async function unlockInvestigationPhone(page:Page){
   await expect(page.getByTestId("home-screen")).toBeVisible();
 }
 
-test.beforeEach(async ({page}) => { await page.goto("/"); });
+test.beforeEach(async ({page}) => { await page.goto(testEntryUrl); });
 
 test("P00-P03: return Chen Yu's call and unlock with 230917", async ({page}) => {
   await expect(page.getByTestId("phone-player")).toBeVisible();

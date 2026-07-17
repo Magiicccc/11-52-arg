@@ -1,4 +1,5 @@
 import { test, expect, type Page } from "@playwright/test";
+import { testEntryUrl } from "./entry-url";
 
 async function unlock(page:Page){
   await page.getByTestId("switch-investigation").click();
@@ -15,7 +16,7 @@ async function closeApp(page:Page){
   await expect(page.getByTestId("home-screen")).toBeVisible();
 }
 
-test.beforeEach(async ({page})=>{ await page.goto("/"); });
+test.beforeEach(async ({page})=>{ await page.goto(testEntryUrl); });
 
 test("P00-A2-11 complete vertical slice is reachable and persists", async ({page})=>{
   await unlock(page);

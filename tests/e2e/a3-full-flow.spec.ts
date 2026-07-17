@@ -1,4 +1,5 @@
 import { test, expect, type Page } from "@playwright/test";
+import { testEntryUrl } from "./entry-url";
 
 async function closeApp(page:Page){
   await page.getByTestId("app-back").click();
@@ -61,7 +62,7 @@ async function reachA2_11(page:Page){
   await expect(page.getByTestId("current-scene")).toContainText("A2-11");
 }
 
-test.beforeEach(async({page})=>{await page.goto("/");});
+test.beforeEach(async({page})=>{await page.goto(testEntryUrl);});
 
 test("new save reaches a recoverable A3-10 without exposing the A4 identity reversal",async({page})=>{
   test.setTimeout(240_000);

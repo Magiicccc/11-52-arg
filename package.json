@@ -19,6 +19,7 @@
     "verify:inputs": "python -X utf8 scripts/verify_authority_inputs.py --project-root .",
     "verify:content": "node scripts/verify_content_references.mjs content/case-001",
     "verify:narrative": "node scripts/verify_narrative_semantics.mjs content/case-001",
+    "verify:scenes": "python -X utf8 data-packs/scene-event/11_52_Scene_Event_Data_Pack_V1.0/scripts/validate_pack.py",
     "verify": "pnpm verify:repo && pnpm verify:inputs && pnpm verify:content && pnpm verify:narrative && pnpm typecheck && pnpm test",
     "qa": "pnpm verify && pnpm test:e2e",
     "verify:repo": "python -X utf8 scripts/verify_integrated_repository.py"

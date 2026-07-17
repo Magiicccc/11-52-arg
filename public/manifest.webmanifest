@@ -1,7 +1,8 @@
 {
   "name": "11:52",
   "short_name": "11:52",
-  "start_url": "/",
+  "start_url": "./",
+  "scope": "./",
   "display": "standalone",
   "background_color": "#08090b",
   "theme_color": "#08090b",

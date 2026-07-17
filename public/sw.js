@@ -1,6 +1,7 @@
 const CACHE = "11-52-v0.1";
 self.addEventListener("install", (event) => {
-  event.waitUntil(caches.open(CACHE).then((cache) => cache.addAll(["/", "/manifest.webmanifest"])));
+  const scope = self.registration.scope;
+  event.waitUntil(caches.open(CACHE).then((cache) => cache.addAll([scope, new URL("manifest.webmanifest", scope).href])));
 });
 self.addEventListener("fetch", (event) => {
   if (event.request.method !== "GET") return;
