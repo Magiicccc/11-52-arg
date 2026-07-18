@@ -8,7 +8,7 @@
   },
   {
     "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/src/main.tsx?t=1784389752325",
+    "url": "http://127.0.0.1:4173/src/main.tsx?t=1784394026797",
     "status": 200,
     "contentType": "text/javascript",
     "fromServiceWorker": false
@@ -36,14 +36,7 @@
   },
   {
     "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/src/app/App.tsx?t=1784389734912",
-    "status": 200,
-    "contentType": "text/javascript",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/node_modules/.pnpm/vite@8.1.5_@types+node@24.10.4/node_modules/vite/dist/client/env.mjs",
+    "url": "http://127.0.0.1:4173/src/app/App.tsx?t=1784394026797",
     "status": 200,
     "contentType": "text/javascript",
     "fromServiceWorker": false
@@ -57,21 +50,21 @@
   },
   {
     "viewport": "402x874",
+    "url": "http://127.0.0.1:4173/node_modules/.pnpm/vite@8.1.5_@types+node@24.10.4/node_modules/vite/dist/client/env.mjs",
+    "status": 200,
+    "contentType": "text/javascript",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "402x874",
+    "url": "http://127.0.0.1:4173/src/styles/global.css?t=1784393746248",
+    "status": 200,
+    "contentType": "text/javascript",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "402x874",
     "url": "http://127.0.0.1:4173/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=b20418dc",
-    "status": 200,
-    "contentType": "text/javascript",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/src/styles/global.css?t=1784389752325",
-    "status": 200,
-    "contentType": "text/javascript",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/src/app/GameRoot.tsx?t=1784389734912",
     "status": 200,
     "contentType": "text/javascript",
     "fromServiceWorker": false
@@ -85,28 +78,7 @@
   },
   {
     "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/src/lib/qa-mode.ts",
-    "status": 200,
-    "contentType": "text/javascript",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/src/shell/PhoneFrame.tsx?t=1784389734912",
-    "status": 200,
-    "contentType": "text/javascript",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/node_modules/.vite/deps/react-dom_client.js?v=b20418dc",
-    "status": 200,
-    "contentType": "text/javascript",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/src/lib/build-meta.ts",
+    "url": "http://127.0.0.1:4173/src/app/GameRoot.tsx?t=1784394026797",
     "status": 200,
     "contentType": "text/javascript",
     "fromServiceWorker": false
@@ -134,14 +106,7 @@
   },
   {
     "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/src/app/InteractionBoundary.tsx",
-    "status": 200,
-    "contentType": "text/javascript",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/src/engine/story-engine.ts",
+    "url": "http://127.0.0.1:4173/node_modules/.vite/deps/react-dom_client.js?v=b20418dc",
     "status": 200,
     "contentType": "text/javascript",
     "fromServiceWorker": false
@@ -155,49 +120,35 @@
   },
   {
     "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/src/shell/StatusBar.tsx",
+    "url": "http://127.0.0.1:4173/src/lib/qa-mode.ts",
     "status": 200,
     "contentType": "text/javascript",
     "fromServiceWorker": false
   },
   {
     "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/src/shell/LockScreen.tsx",
+    "url": "http://127.0.0.1:4173/src/engine/story-engine.ts",
     "status": 200,
     "contentType": "text/javascript",
     "fromServiceWorker": false
   },
   {
     "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/src/shell/HomeScreen.tsx?t=1784388867137",
+    "url": "http://127.0.0.1:4173/src/shell/PhoneFrame.tsx?t=1784394026797",
     "status": 200,
     "contentType": "text/javascript",
     "fromServiceWorker": false
   },
   {
     "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/src/apps/AppHost.tsx?t=1784389734912",
+    "url": "http://127.0.0.1:4173/src/lib/build-meta.ts",
     "status": 200,
     "contentType": "text/javascript",
     "fromServiceWorker": false
   },
   {
     "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/src/shell/PasscodeScreen.tsx",
-    "status": 200,
-    "contentType": "text/javascript",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/src/shell/NotificationToast.tsx",
-    "status": 200,
-    "contentType": "text/javascript",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/node_modules/.vite/deps/react-dom.js?v=b20418dc",
+    "url": "http://127.0.0.1:4173/src/app/InteractionBoundary.tsx",
     "status": 200,
     "contentType": "text/javascript",
     "fromServiceWorker": false
@@ -211,14 +162,14 @@
   },
   {
     "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/content/case-001/apps/content-items.json?import",
+    "url": "http://127.0.0.1:4173/content/case-001/apps/a3-content-items.json?import",
     "status": 200,
     "contentType": "text/javascript",
     "fromServiceWorker": false
   },
   {
     "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/content/case-001/apps/a3-content-items.json?import",
+    "url": "http://127.0.0.1:4173/content/case-001/apps/content-items.json?import",
     "status": 200,
     "contentType": "text/javascript",
     "fromServiceWorker": false
@@ -239,6 +190,20 @@
   },
   {
     "viewport": "402x874",
+    "url": "http://127.0.0.1:4173/content/case-001/triggers/a3-triggers.json?import",
+    "status": 200,
+    "contentType": "text/javascript",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "402x874",
+    "url": "http://127.0.0.1:4173/src/persistence/indexed-db.ts",
+    "status": 200,
+    "contentType": "text/javascript",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "402x874",
     "url": "http://127.0.0.1:4173/src/content/schemas.ts",
     "status": 200,
     "contentType": "text/javascript",
@@ -246,7 +211,7 @@
   },
   {
     "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/content/case-001/triggers/a3-triggers.json?import",
+    "url": "http://127.0.0.1:4173/node_modules/.vite/deps/react-dom.js?v=b20418dc",
     "status": 200,
     "contentType": "text/javascript",
     "fromServiceWorker": false
@@ -267,6 +232,13 @@
   },
   {
     "viewport": "402x874",
+    "url": "http://127.0.0.1:4173/src/shell/StatusBar.tsx",
+    "status": 200,
+    "contentType": "text/javascript",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "402x874",
     "url": "http://127.0.0.1:4173/src/engine/path-utils.ts",
     "status": 200,
     "contentType": "text/javascript",
@@ -274,14 +246,42 @@
   },
   {
     "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/src/persistence/indexed-db.ts",
+    "url": "http://127.0.0.1:4173/src/shell/LockScreen.tsx",
     "status": 200,
     "contentType": "text/javascript",
     "fromServiceWorker": false
   },
   {
     "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/src/content/selectors.ts",
+    "url": "http://127.0.0.1:4173/src/shell/PasscodeScreen.tsx",
+    "status": 200,
+    "contentType": "text/javascript",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "402x874",
+    "url": "http://127.0.0.1:4173/src/shell/NotificationToast.tsx",
+    "status": 200,
+    "contentType": "text/javascript",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "402x874",
+    "url": "http://127.0.0.1:4173/src/apps/AppHost.tsx?t=1784394026797",
+    "status": 200,
+    "contentType": "text/javascript",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "402x874",
+    "url": "http://127.0.0.1:4173/src/shell/HomeScreen.tsx?t=1784388867137",
+    "status": 200,
+    "contentType": "text/javascript",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "402x874",
+    "url": "http://127.0.0.1:4173/node_modules/.vite/deps/idb.js?v=b20418dc",
     "status": 200,
     "contentType": "text/javascript",
     "fromServiceWorker": false
@@ -295,7 +295,7 @@
   },
   {
     "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/src/lib/asset-url.ts",
+    "url": "http://127.0.0.1:4173/src/content/selectors.ts",
     "status": 200,
     "contentType": "text/javascript",
     "fromServiceWorker": false
@@ -309,14 +309,14 @@
   },
   {
     "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/src/apps/WeChatApp.tsx",
+    "url": "http://127.0.0.1:4173/src/apps/NotesApp.tsx",
     "status": 200,
     "contentType": "text/javascript",
     "fromServiceWorker": false
   },
   {
     "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/src/apps/PhotosApp.tsx",
+    "url": "http://127.0.0.1:4173/src/apps/FilesApp.tsx",
     "status": 200,
     "contentType": "text/javascript",
     "fromServiceWorker": false
@@ -330,7 +330,14 @@
   },
   {
     "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/src/apps/NotesApp.tsx",
+    "url": "http://127.0.0.1:4173/src/apps/PhotosApp.tsx",
+    "status": 200,
+    "contentType": "text/javascript",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "402x874",
+    "url": "http://127.0.0.1:4173/src/apps/WeChatApp.tsx?t=1784394026797",
     "status": 200,
     "contentType": "text/javascript",
     "fromServiceWorker": false
@@ -344,7 +351,7 @@
   },
   {
     "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/src/apps/FilesApp.tsx",
+    "url": "http://127.0.0.1:4173/src/apps/CalculatorApp.tsx?t=1784389570846",
     "status": 200,
     "contentType": "text/javascript",
     "fromServiceWorker": false
@@ -365,14 +372,7 @@
   },
   {
     "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/src/apps/CalculatorApp.tsx?t=1784389570846",
-    "status": 200,
-    "contentType": "text/javascript",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/src/apps/BaiduMapApp.tsx",
+    "url": "http://127.0.0.1:4173/src/apps/BaiduMapApp.tsx?t=1784393733351",
     "status": 200,
     "contentType": "text/javascript",
     "fromServiceWorker": false
@@ -380,6 +380,20 @@
   {
     "viewport": "402x874",
     "url": "http://127.0.0.1:4173/src/apps/ZhihuApp.tsx?t=1784389698314",
+    "status": 200,
+    "contentType": "text/javascript",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "402x874",
+    "url": "http://127.0.0.1:4173/src/lib/asset-url.ts",
+    "status": 200,
+    "contentType": "text/javascript",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "402x874",
+    "url": "http://127.0.0.1:4173/src/a3/coordinate-assembly.ts",
     "status": 200,
     "contentType": "text/javascript",
     "fromServiceWorker": false
@@ -394,20 +408,6 @@
   {
     "viewport": "402x874",
     "url": "http://127.0.0.1:4173/src/apps/UtilityApps.tsx?t=1784389713362",
-    "status": 200,
-    "contentType": "text/javascript",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/node_modules/.vite/deps/idb.js?v=b20418dc",
-    "status": 200,
-    "contentType": "text/javascript",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/src/a3/coordinate-assembly.ts",
     "status": 200,
     "contentType": "text/javascript",
     "fromServiceWorker": false
@@ -435,20 +435,6 @@
   },
   {
     "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/calendar.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/settings.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
     "url": "http://127.0.0.1:4173/icons/system/runtime/files.png",
     "status": 200,
     "contentType": "image/png",
@@ -457,6 +443,20 @@
   {
     "viewport": "402x874",
     "url": "http://127.0.0.1:4173/icons/system/runtime/notes.png",
+    "status": 200,
+    "contentType": "image/png",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "402x874",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/calendar.png",
+    "status": 200,
+    "contentType": "image/png",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "402x874",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/settings.png",
     "status": 200,
     "contentType": "image/png",
     "fromServiceWorker": false
@@ -484,6 +484,13 @@
   },
   {
     "viewport": "402x874",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/tieba.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "402x874",
     "url": "http://127.0.0.1:4173/icons/third_party/runtime/zhihu.webp",
     "status": 200,
     "contentType": "image/webp",
@@ -498,28 +505,7 @@
   },
   {
     "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/tieba.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
     "url": "http://127.0.0.1:4173/icons/third_party/runtime/baidunetdisk.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/meituan.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/didi.webp",
     "status": 200,
     "contentType": "image/webp",
     "fromServiceWorker": false
@@ -540,6 +526,20 @@
   },
   {
     "viewport": "402x874",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/didi.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "402x874",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/meituan.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "402x874",
     "url": "http://127.0.0.1:4173/icons/third_party/runtime/netease_music.webp",
     "status": 200,
     "contentType": "image/webp",
@@ -548,13 +548,6 @@
   {
     "viewport": "402x874",
     "url": "http://127.0.0.1:4173/icons/third_party/runtime/wechat_reading.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/railway12306.webp",
     "status": 200,
     "contentType": "image/webp",
     "fromServiceWorker": false
@@ -575,14 +568,14 @@
   },
   {
     "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/clock.png",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/railway12306.webp",
     "status": 200,
-    "contentType": "image/png",
+    "contentType": "image/webp",
     "fromServiceWorker": false
   },
   {
     "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/calculator.png",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/clock.png",
     "status": 200,
     "contentType": "image/png",
     "fromServiceWorker": false
@@ -596,6 +589,13 @@
   },
   {
     "viewport": "402x874",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/calculator.png",
+    "status": 200,
+    "contentType": "image/png",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "402x874",
     "url": "http://127.0.0.1:4173/icons/system/runtime/voice_memos.png",
     "status": 200,
     "contentType": "image/png",
@@ -603,14 +603,14 @@
   },
   {
     "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/phone.png",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/compass.png",
     "status": 200,
     "contentType": "image/png",
     "fromServiceWorker": false
   },
   {
     "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/compass.png",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/phone.png",
     "status": 200,
     "contentType": "image/png",
     "fromServiceWorker": false
@@ -652,7 +652,7 @@
   },
   {
     "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/src/main.tsx?t=1784389752325",
+    "url": "http://127.0.0.1:4173/src/main.tsx?t=1784394026797",
     "status": 304,
     "contentType": null,
     "fromServiceWorker": false
@@ -701,6 +701,13 @@
   },
   {
     "viewport": "402x874",
+    "url": "http://127.0.0.1:4173/src/app/App.tsx?t=1784394026797",
+    "status": 304,
+    "contentType": null,
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "402x874",
     "url": "http://127.0.0.1:4173/node_modules/.pnpm/vite@8.1.5_@types+node@24.10.4/node_modules/vite/dist/client/env.mjs",
     "status": 304,
     "contentType": null,
@@ -708,14 +715,7 @@
   },
   {
     "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/src/app/App.tsx?t=1784389734912",
-    "status": 304,
-    "contentType": null,
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/src/styles/global.css?t=1784389752325",
+    "url": "http://127.0.0.1:4173/src/styles/global.css?t=1784393746248",
     "status": 304,
     "contentType": null,
     "fromServiceWorker": false
@@ -729,7 +729,7 @@
   },
   {
     "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/src/app/GameRoot.tsx?t=1784389734912",
+    "url": "http://127.0.0.1:4173/src/app/GameRoot.tsx?t=1784394026797",
     "status": 304,
     "contentType": null,
     "fromServiceWorker": false
@@ -771,7 +771,7 @@
   },
   {
     "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/src/shell/PhoneFrame.tsx?t=1784389734912",
+    "url": "http://127.0.0.1:4173/src/shell/PhoneFrame.tsx?t=1784394026797",
     "status": 304,
     "contentType": null,
     "fromServiceWorker": false
@@ -848,6 +848,13 @@
   },
   {
     "viewport": "402x874",
+    "url": "http://127.0.0.1:4173/node_modules/.vite/deps/zod.js?v=b20418dc",
+    "status": 200,
+    "contentType": "text/javascript",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "402x874",
     "url": "http://127.0.0.1:4173/src/engine/actions.ts",
     "status": 304,
     "contentType": null,
@@ -858,13 +865,6 @@
     "url": "http://127.0.0.1:4173/src/engine/conditions.ts",
     "status": 304,
     "contentType": null,
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/node_modules/.vite/deps/zod.js?v=b20418dc",
-    "status": 200,
-    "contentType": "text/javascript",
     "fromServiceWorker": false
   },
   {
@@ -897,16 +897,16 @@
   },
   {
     "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/src/shell/PasscodeScreen.tsx",
-    "status": 304,
-    "contentType": null,
+    "url": "http://127.0.0.1:4173/node_modules/.vite/deps/idb.js?v=b20418dc",
+    "status": 200,
+    "contentType": "text/javascript",
     "fromServiceWorker": false
   },
   {
     "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/node_modules/.vite/deps/idb.js?v=b20418dc",
-    "status": 200,
-    "contentType": "text/javascript",
+    "url": "http://127.0.0.1:4173/src/shell/PasscodeScreen.tsx",
+    "status": 304,
+    "contentType": null,
     "fromServiceWorker": false
   },
   {
@@ -918,7 +918,7 @@
   },
   {
     "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/src/apps/AppHost.tsx?t=1784389734912",
+    "url": "http://127.0.0.1:4173/src/apps/AppHost.tsx?t=1784394026797",
     "status": 304,
     "contentType": null,
     "fromServiceWorker": false
@@ -960,7 +960,7 @@
   },
   {
     "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/src/apps/WeChatApp.tsx",
+    "url": "http://127.0.0.1:4173/src/apps/WeChatApp.tsx?t=1784394026797",
     "status": 304,
     "contentType": null,
     "fromServiceWorker": false
@@ -1016,14 +1016,14 @@
   },
   {
     "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/src/apps/BaiduMapApp.tsx",
+    "url": "http://127.0.0.1:4173/src/apps/ZhihuApp.tsx?t=1784389698314",
     "status": 304,
     "contentType": null,
     "fromServiceWorker": false
   },
   {
     "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/src/apps/PhoneApp.tsx",
+    "url": "http://127.0.0.1:4173/src/apps/BaiduMapApp.tsx?t=1784393733351",
     "status": 304,
     "contentType": null,
     "fromServiceWorker": false
@@ -1037,7 +1037,7 @@
   },
   {
     "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/src/apps/ZhihuApp.tsx?t=1784389698314",
+    "url": "http://127.0.0.1:4173/src/apps/PhoneApp.tsx",
     "status": 304,
     "contentType": null,
     "fromServiceWorker": false
@@ -1282,7 +1282,217 @@
   },
   {
     "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/src/apps/DeidentifiedMap.tsx",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/baidu_map.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "402x874",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/files.png",
+    "status": 200,
+    "contentType": "image/png",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "402x874",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/notes.png",
+    "status": 200,
+    "contentType": "image/png",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "402x874",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/calendar.png",
+    "status": 200,
+    "contentType": "image/png",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "402x874",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/settings.png",
+    "status": 200,
+    "contentType": "image/png",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "402x874",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/qqmail.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "402x874",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/xiaohongshu.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "402x874",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/douyin.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "402x874",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/zhihu.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "402x874",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/tieba.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "402x874",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/toutiao.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "402x874",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/baidunetdisk.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "402x874",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/alipay.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "402x874",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/didi.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "402x874",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/meituan.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "402x874",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/taobao.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "402x874",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/netease_music.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "402x874",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/wechat_reading.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "402x874",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/health.png",
+    "status": 200,
+    "contentType": "image/png",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "402x874",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/weather.png",
+    "status": 200,
+    "contentType": "image/png",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "402x874",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/railway12306.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "402x874",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/clock.png",
+    "status": 200,
+    "contentType": "image/png",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "402x874",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/calculator.png",
+    "status": 200,
+    "contentType": "image/png",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "402x874",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/camera.png",
+    "status": 200,
+    "contentType": "image/png",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "402x874",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/voice_memos.png",
+    "status": 200,
+    "contentType": "image/png",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "402x874",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/compass.png",
+    "status": 200,
+    "contentType": "image/png",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "402x874",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/phone.png",
+    "status": 200,
+    "contentType": "image/png",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "402x874",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/wechat.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "402x874",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/safari.png",
+    "status": 200,
+    "contentType": "image/png",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "402x874",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/photos.png",
+    "status": 200,
+    "contentType": "image/png",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "402x874",
+    "url": "http://127.0.0.1:4173/src/apps/DeidentifiedMap.tsx?t=1784393733351",
     "status": 200,
     "contentType": "text/javascript",
     "fromServiceWorker": false
@@ -1303,9 +1513,219 @@
   },
   {
     "viewport": "402x874",
-    "url": "blob:http://127.0.0.1:4173/485e1eca-db10-4b79-9c6b-acd88459b752",
+    "url": "blob:http://127.0.0.1:4173/e7f0fa9c-47d6-4960-8019-c98ec0fa1620",
     "status": 200,
     "contentType": "text/javascript",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "402x874",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/baidu_map.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "402x874",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/files.png",
+    "status": 200,
+    "contentType": "image/png",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "402x874",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/notes.png",
+    "status": 200,
+    "contentType": "image/png",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "402x874",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/calendar.png",
+    "status": 200,
+    "contentType": "image/png",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "402x874",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/settings.png",
+    "status": 200,
+    "contentType": "image/png",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "402x874",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/qqmail.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "402x874",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/xiaohongshu.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "402x874",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/douyin.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "402x874",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/zhihu.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "402x874",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/tieba.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "402x874",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/toutiao.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "402x874",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/baidunetdisk.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "402x874",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/alipay.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "402x874",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/didi.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "402x874",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/meituan.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "402x874",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/taobao.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "402x874",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/netease_music.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "402x874",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/wechat_reading.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "402x874",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/health.png",
+    "status": 200,
+    "contentType": "image/png",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "402x874",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/weather.png",
+    "status": 200,
+    "contentType": "image/png",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "402x874",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/railway12306.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "402x874",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/clock.png",
+    "status": 200,
+    "contentType": "image/png",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "402x874",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/calculator.png",
+    "status": 200,
+    "contentType": "image/png",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "402x874",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/camera.png",
+    "status": 200,
+    "contentType": "image/png",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "402x874",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/voice_memos.png",
+    "status": 200,
+    "contentType": "image/png",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "402x874",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/compass.png",
+    "status": 200,
+    "contentType": "image/png",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "402x874",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/phone.png",
+    "status": 200,
+    "contentType": "image/png",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "402x874",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/wechat.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "402x874",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/safari.png",
+    "status": 200,
+    "contentType": "image/png",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "402x874",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/photos.png",
+    "status": 200,
+    "contentType": "image/png",
     "fromServiceWorker": false
   },
   {
@@ -1380,846 +1800,6 @@
   },
   {
     "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/notes.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/files.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/calendar.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/settings.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/qqmail.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/xiaohongshu.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/douyin.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/zhihu.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/tieba.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/toutiao.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/baidunetdisk.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/alipay.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/didi.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/meituan.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/taobao.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/netease_music.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/wechat_reading.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/health.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/weather.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/railway12306.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/clock.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/calculator.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/camera.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/voice_memos.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/compass.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/phone.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/wechat.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/safari.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/photos.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/baidu_map.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/files.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/notes.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/calendar.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/settings.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/qqmail.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/xiaohongshu.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/douyin.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/zhihu.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/tieba.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/toutiao.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/baidunetdisk.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/alipay.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/didi.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/meituan.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/taobao.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/netease_music.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/wechat_reading.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/health.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/weather.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/railway12306.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/clock.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/calculator.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/camera.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/voice_memos.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/compass.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/phone.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/wechat.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/safari.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/photos.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/baidu_map.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/files.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/notes.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/calendar.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/settings.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/qqmail.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/xiaohongshu.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/douyin.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/zhihu.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/tieba.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/toutiao.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/baidunetdisk.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/alipay.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/didi.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/meituan.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/taobao.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/netease_music.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/wechat_reading.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/health.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/weather.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/railway12306.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/clock.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/calculator.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/camera.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/voice_memos.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/compass.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/phone.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/wechat.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/safari.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/photos.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/baidu_map.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/files.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/notes.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/calendar.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/settings.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/qqmail.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/xiaohongshu.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/douyin.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/zhihu.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/tieba.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/toutiao.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/baidunetdisk.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/alipay.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/didi.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/meituan.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/taobao.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/netease_music.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/wechat_reading.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/health.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/weather.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/railway12306.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/clock.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/calculator.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/camera.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/voice_memos.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/compass.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/phone.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/wechat.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/safari.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/photos.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/baidu_map.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "402x874",
     "url": "http://127.0.0.1:4173/icons/system/runtime/files.png",
     "status": 200,
     "contentType": "image/png",
@@ -2640,7 +2220,7 @@
   },
   {
     "viewport": "440x956",
-    "url": "http://127.0.0.1:4173/src/main.tsx?t=1784389752325",
+    "url": "http://127.0.0.1:4173/src/main.tsx?t=1784394026797",
     "status": 200,
     "contentType": "text/javascript",
     "fromServiceWorker": false
@@ -2668,7 +2248,7 @@
   },
   {
     "viewport": "440x956",
-    "url": "http://127.0.0.1:4173/src/app/App.tsx?t=1784389734912",
+    "url": "http://127.0.0.1:4173/src/app/App.tsx?t=1784394026797",
     "status": 200,
     "contentType": "text/javascript",
     "fromServiceWorker": false
@@ -2689,6 +2269,13 @@
   },
   {
     "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/src/styles/global.css?t=1784393746248",
+    "status": 200,
+    "contentType": "text/javascript",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
     "url": "http://127.0.0.1:4173/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=b20418dc",
     "status": 200,
     "contentType": "text/javascript",
@@ -2696,7 +2283,7 @@
   },
   {
     "viewport": "440x956",
-    "url": "http://127.0.0.1:4173/src/styles/global.css?t=1784389752325",
+    "url": "http://127.0.0.1:4173/src/app/GameRoot.tsx?t=1784394026797",
     "status": 200,
     "contentType": "text/javascript",
     "fromServiceWorker": false
@@ -2710,7 +2297,35 @@
   },
   {
     "viewport": "440x956",
-    "url": "http://127.0.0.1:4173/src/app/GameRoot.tsx?t=1784389734912",
+    "url": "http://127.0.0.1:4173/node_modules/.vite/deps/react-dom_client.js?v=b20418dc",
+    "status": 200,
+    "contentType": "text/javascript",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/src/shell/PhoneFrame.tsx?t=1784394026797",
+    "status": 200,
+    "contentType": "text/javascript",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/src/lib/qa-mode.ts",
+    "status": 200,
+    "contentType": "text/javascript",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/src/lib/build-meta.ts",
+    "status": 200,
+    "contentType": "text/javascript",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/src/app/InteractionBoundary.tsx",
     "status": 200,
     "contentType": "text/javascript",
     "fromServiceWorker": false
@@ -2718,13 +2333,6 @@
   {
     "viewport": "440x956",
     "url": "http://127.0.0.1:4173/src/content/content-pack.ts",
-    "status": 200,
-    "contentType": "text/javascript",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "440x956",
-    "url": "http://127.0.0.1:4173/node_modules/.vite/deps/react-dom_client.js?v=b20418dc",
     "status": 200,
     "contentType": "text/javascript",
     "fromServiceWorker": false
@@ -2759,28 +2367,49 @@
   },
   {
     "viewport": "440x956",
-    "url": "http://127.0.0.1:4173/src/lib/build-meta.ts",
+    "url": "http://127.0.0.1:4173/src/shell/StatusBar.tsx",
     "status": 200,
     "contentType": "text/javascript",
     "fromServiceWorker": false
   },
   {
     "viewport": "440x956",
-    "url": "http://127.0.0.1:4173/src/lib/qa-mode.ts",
+    "url": "http://127.0.0.1:4173/src/shell/LockScreen.tsx",
     "status": 200,
     "contentType": "text/javascript",
     "fromServiceWorker": false
   },
   {
     "viewport": "440x956",
-    "url": "http://127.0.0.1:4173/src/shell/PhoneFrame.tsx?t=1784389734912",
+    "url": "http://127.0.0.1:4173/node_modules/.vite/deps/react-dom.js?v=b20418dc",
     "status": 200,
     "contentType": "text/javascript",
     "fromServiceWorker": false
   },
   {
     "viewport": "440x956",
-    "url": "http://127.0.0.1:4173/src/app/InteractionBoundary.tsx",
+    "url": "http://127.0.0.1:4173/src/shell/PasscodeScreen.tsx",
+    "status": 200,
+    "contentType": "text/javascript",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/src/shell/HomeScreen.tsx?t=1784388867137",
+    "status": 200,
+    "contentType": "text/javascript",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/src/apps/AppHost.tsx?t=1784394026797",
+    "status": 200,
+    "contentType": "text/javascript",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/src/shell/NotificationToast.tsx",
     "status": 200,
     "contentType": "text/javascript",
     "fromServiceWorker": false
@@ -2808,6 +2437,13 @@
   },
   {
     "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/content/case-001/triggers/triggers.json?import",
+    "status": 200,
+    "contentType": "text/javascript",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
     "url": "http://127.0.0.1:4173/content/case-001/apps/ui-pass2-content-items.json?import",
     "status": 200,
     "contentType": "text/javascript",
@@ -2822,21 +2458,7 @@
   },
   {
     "viewport": "440x956",
-    "url": "http://127.0.0.1:4173/src/content/schemas.ts",
-    "status": 200,
-    "contentType": "text/javascript",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "440x956",
     "url": "http://127.0.0.1:4173/src/engine/conditions.ts",
-    "status": 200,
-    "contentType": "text/javascript",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "440x956",
-    "url": "http://127.0.0.1:4173/src/engine/actions.ts",
     "status": 200,
     "contentType": "text/javascript",
     "fromServiceWorker": false
@@ -2850,63 +2472,21 @@
   },
   {
     "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/src/engine/actions.ts",
+    "status": 200,
+    "contentType": "text/javascript",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/src/content/schemas.ts",
+    "status": 200,
+    "contentType": "text/javascript",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
     "url": "http://127.0.0.1:4173/src/persistence/indexed-db.ts",
-    "status": 200,
-    "contentType": "text/javascript",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "440x956",
-    "url": "http://127.0.0.1:4173/node_modules/.vite/deps/react-dom.js?v=b20418dc",
-    "status": 200,
-    "contentType": "text/javascript",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "440x956",
-    "url": "http://127.0.0.1:4173/src/shell/StatusBar.tsx",
-    "status": 200,
-    "contentType": "text/javascript",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "440x956",
-    "url": "http://127.0.0.1:4173/src/shell/LockScreen.tsx",
-    "status": 200,
-    "contentType": "text/javascript",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "440x956",
-    "url": "http://127.0.0.1:4173/src/shell/PasscodeScreen.tsx",
-    "status": 200,
-    "contentType": "text/javascript",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "440x956",
-    "url": "http://127.0.0.1:4173/src/apps/AppHost.tsx?t=1784389734912",
-    "status": 200,
-    "contentType": "text/javascript",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "440x956",
-    "url": "http://127.0.0.1:4173/src/shell/NotificationToast.tsx",
-    "status": 200,
-    "contentType": "text/javascript",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "440x956",
-    "url": "http://127.0.0.1:4173/src/shell/HomeScreen.tsx?t=1784388867137",
-    "status": 200,
-    "contentType": "text/javascript",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "440x956",
-    "url": "http://127.0.0.1:4173/node_modules/.vite/deps/idb.js?v=b20418dc",
     "status": 200,
     "contentType": "text/javascript",
     "fromServiceWorker": false
@@ -2927,21 +2507,14 @@
   },
   {
     "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/src/lib/asset-url.ts",
+    "status": 200,
+    "contentType": "text/javascript",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
     "url": "http://127.0.0.1:4173/src/shell/AppChrome.tsx",
-    "status": 200,
-    "contentType": "text/javascript",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "440x956",
-    "url": "http://127.0.0.1:4173/content/case-001/triggers/triggers.json?import",
-    "status": 200,
-    "contentType": "text/javascript",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "440x956",
-    "url": "http://127.0.0.1:4173/src/apps/TiebaApp.tsx",
     "status": 200,
     "contentType": "text/javascript",
     "fromServiceWorker": false
@@ -2969,21 +2542,7 @@
   },
   {
     "viewport": "440x956",
-    "url": "http://127.0.0.1:4173/src/apps/PhoneApp.tsx",
-    "status": 200,
-    "contentType": "text/javascript",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "440x956",
-    "url": "http://127.0.0.1:4173/src/apps/CalculatorApp.tsx?t=1784389570846",
-    "status": 200,
-    "contentType": "text/javascript",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "440x956",
-    "url": "http://127.0.0.1:4173/src/apps/BaiduMapApp.tsx",
+    "url": "http://127.0.0.1:4173/src/apps/WeChatApp.tsx?t=1784394026797",
     "status": 200,
     "contentType": "text/javascript",
     "fromServiceWorker": false
@@ -2997,6 +2556,20 @@
   },
   {
     "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/src/apps/TiebaApp.tsx",
+    "status": 200,
+    "contentType": "text/javascript",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/src/apps/CalculatorApp.tsx?t=1784389570846",
+    "status": 200,
+    "contentType": "text/javascript",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
     "url": "http://127.0.0.1:4173/src/apps/SettingsApp.tsx?t=1784389601886",
     "status": 200,
     "contentType": "text/javascript",
@@ -3004,14 +2577,14 @@
   },
   {
     "viewport": "440x956",
-    "url": "http://127.0.0.1:4173/src/apps/WeChatApp.tsx",
+    "url": "http://127.0.0.1:4173/src/apps/PhoneApp.tsx",
     "status": 200,
     "contentType": "text/javascript",
     "fromServiceWorker": false
   },
   {
     "viewport": "440x956",
-    "url": "http://127.0.0.1:4173/src/lib/asset-url.ts",
+    "url": "http://127.0.0.1:4173/src/apps/BaiduMapApp.tsx?t=1784393733351",
     "status": 200,
     "contentType": "text/javascript",
     "fromServiceWorker": false
@@ -3032,14 +2605,7 @@
   },
   {
     "viewport": "440x956",
-    "url": "http://127.0.0.1:4173/src/apps/PlatformApps.tsx?t=1784389688201",
-    "status": 200,
-    "contentType": "text/javascript",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "440x956",
-    "url": "http://127.0.0.1:4173/node_modules/.vite/deps/zod.js?v=b20418dc",
+    "url": "http://127.0.0.1:4173/node_modules/.vite/deps/idb.js?v=b20418dc",
     "status": 200,
     "contentType": "text/javascript",
     "fromServiceWorker": false
@@ -3060,7 +2626,42 @@
   },
   {
     "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/src/apps/PlatformApps.tsx?t=1784389688201",
+    "status": 200,
+    "contentType": "text/javascript",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/node_modules/.vite/deps/zod.js?v=b20418dc",
+    "status": 200,
+    "contentType": "text/javascript",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
     "url": "http://127.0.0.1:4173/icons/third_party/runtime/baidu_map.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/files.png",
+    "status": 200,
+    "contentType": "image/png",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/settings.png",
+    "status": 200,
+    "contentType": "image/png",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/qqmail.webp",
     "status": 200,
     "contentType": "image/webp",
     "fromServiceWorker": false
@@ -3081,21 +2682,7 @@
   },
   {
     "viewport": "440x956",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/settings.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "440x956",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/files.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "440x956",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/qqmail.webp",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/xiaohongshu.webp",
     "status": 200,
     "contentType": "image/webp",
     "fromServiceWorker": false
@@ -3109,7 +2696,7 @@
   },
   {
     "viewport": "440x956",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/xiaohongshu.webp",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/tieba.webp",
     "status": 200,
     "contentType": "image/webp",
     "fromServiceWorker": false
@@ -3117,13 +2704,6 @@
   {
     "viewport": "440x956",
     "url": "http://127.0.0.1:4173/icons/third_party/runtime/zhihu.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "440x956",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/tieba.webp",
     "status": 200,
     "contentType": "image/webp",
     "fromServiceWorker": false
@@ -3151,13 +2731,6 @@
   },
   {
     "viewport": "440x956",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/didi.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "440x956",
     "url": "http://127.0.0.1:4173/icons/third_party/runtime/meituan.webp",
     "status": 200,
     "contentType": "image/webp",
@@ -3165,7 +2738,7 @@
   },
   {
     "viewport": "440x956",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/netease_music.webp",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/didi.webp",
     "status": 200,
     "contentType": "image/webp",
     "fromServiceWorker": false
@@ -3173,6 +2746,13 @@
   {
     "viewport": "440x956",
     "url": "http://127.0.0.1:4173/icons/third_party/runtime/taobao.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/netease_music.webp",
     "status": 200,
     "contentType": "image/webp",
     "fromServiceWorker": false
@@ -3193,16 +2773,16 @@
   },
   {
     "viewport": "440x956",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/weather.png",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/railway12306.webp",
     "status": 200,
-    "contentType": "image/png",
+    "contentType": "image/webp",
     "fromServiceWorker": false
   },
   {
     "viewport": "440x956",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/railway12306.webp",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/weather.png",
     "status": 200,
-    "contentType": "image/webp",
+    "contentType": "image/png",
     "fromServiceWorker": false
   },
   {
@@ -3284,7 +2864,7 @@
   },
   {
     "viewport": "440x956",
-    "url": "http://127.0.0.1:4173/src/main.tsx?t=1784389752325",
+    "url": "http://127.0.0.1:4173/src/main.tsx?t=1784394026797",
     "status": 304,
     "contentType": null,
     "fromServiceWorker": false
@@ -3312,20 +2892,6 @@
   },
   {
     "viewport": "440x956",
-    "url": "http://127.0.0.1:4173/@react-refresh",
-    "status": 304,
-    "contentType": null,
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "440x956",
-    "url": "http://127.0.0.1:4173/node_modules/.pnpm/vite@8.1.5_@types+node@24.10.4/node_modules/vite/dist/client/env.mjs",
-    "status": 304,
-    "contentType": null,
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "440x956",
     "url": "http://127.0.0.1:4173/node_modules/.vite/deps/rolldown-runtime-EAsCxrDo.js?v=b20418dc",
     "status": 200,
     "contentType": "text/javascript",
@@ -3340,14 +2906,28 @@
   },
   {
     "viewport": "440x956",
-    "url": "http://127.0.0.1:4173/src/app/App.tsx?t=1784389734912",
+    "url": "http://127.0.0.1:4173/@react-refresh",
     "status": 304,
     "contentType": null,
     "fromServiceWorker": false
   },
   {
     "viewport": "440x956",
-    "url": "http://127.0.0.1:4173/src/styles/global.css?t=1784389752325",
+    "url": "http://127.0.0.1:4173/node_modules/.pnpm/vite@8.1.5_@types+node@24.10.4/node_modules/vite/dist/client/env.mjs",
+    "status": 304,
+    "contentType": null,
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/src/app/App.tsx?t=1784394026797",
+    "status": 304,
+    "contentType": null,
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/src/styles/global.css?t=1784393746248",
     "status": 304,
     "contentType": null,
     "fromServiceWorker": false
@@ -3361,14 +2941,7 @@
   },
   {
     "viewport": "440x956",
-    "url": "http://127.0.0.1:4173/src/app/GameRoot.tsx?t=1784389734912",
-    "status": 304,
-    "contentType": null,
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "440x956",
-    "url": "http://127.0.0.1:4173/src/engine/event-factory.ts",
+    "url": "http://127.0.0.1:4173/src/app/GameRoot.tsx?t=1784394026797",
     "status": 304,
     "contentType": null,
     "fromServiceWorker": false
@@ -3389,6 +2962,13 @@
   },
   {
     "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/src/engine/event-factory.ts",
+    "status": 304,
+    "contentType": null,
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
     "url": "http://127.0.0.1:4173/src/engine/story-engine.ts",
     "status": 304,
     "contentType": null,
@@ -3403,14 +2983,7 @@
   },
   {
     "viewport": "440x956",
-    "url": "http://127.0.0.1:4173/src/shell/PhoneFrame.tsx?t=1784389734912",
-    "status": 304,
-    "contentType": null,
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "440x956",
-    "url": "http://127.0.0.1:4173/src/app/InteractionBoundary.tsx",
+    "url": "http://127.0.0.1:4173/src/shell/PhoneFrame.tsx?t=1784394026797",
     "status": 304,
     "contentType": null,
     "fromServiceWorker": false
@@ -3425,6 +2998,13 @@
   {
     "viewport": "440x956",
     "url": "http://127.0.0.1:4173/src/lib/build-meta.ts",
+    "status": 304,
+    "contentType": null,
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/src/app/InteractionBoundary.tsx",
     "status": 304,
     "contentType": null,
     "fromServiceWorker": false
@@ -3508,6 +3088,13 @@
   },
   {
     "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/node_modules/.vite/deps/zod.js?v=b20418dc",
+    "status": 200,
+    "contentType": "text/javascript",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
     "url": "http://127.0.0.1:4173/src/shell/StatusBar.tsx",
     "status": 304,
     "contentType": null,
@@ -3529,13 +3116,6 @@
   },
   {
     "viewport": "440x956",
-    "url": "http://127.0.0.1:4173/node_modules/.vite/deps/zod.js?v=b20418dc",
-    "status": 200,
-    "contentType": "text/javascript",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "440x956",
     "url": "http://127.0.0.1:4173/src/shell/HomeScreen.tsx?t=1784388867137",
     "status": 304,
     "contentType": null,
@@ -3543,14 +3123,7 @@
   },
   {
     "viewport": "440x956",
-    "url": "http://127.0.0.1:4173/src/apps/AppHost.tsx?t=1784389734912",
-    "status": 304,
-    "contentType": null,
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "440x956",
-    "url": "http://127.0.0.1:4173/src/shell/NotificationToast.tsx",
+    "url": "http://127.0.0.1:4173/src/apps/AppHost.tsx?t=1784394026797",
     "status": 304,
     "contentType": null,
     "fromServiceWorker": false
@@ -3560,6 +3133,13 @@
     "url": "http://127.0.0.1:4173/node_modules/.vite/deps/idb.js?v=b20418dc",
     "status": 200,
     "contentType": "text/javascript",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/src/shell/NotificationToast.tsx",
+    "status": 304,
+    "contentType": null,
     "fromServiceWorker": false
   },
   {
@@ -3592,7 +3172,7 @@
   },
   {
     "viewport": "440x956",
-    "url": "http://127.0.0.1:4173/src/apps/WeChatApp.tsx",
+    "url": "http://127.0.0.1:4173/src/apps/WeChatApp.tsx?t=1784394026797",
     "status": 304,
     "contentType": null,
     "fromServiceWorker": false
@@ -3648,14 +3228,7 @@
   },
   {
     "viewport": "440x956",
-    "url": "http://127.0.0.1:4173/src/apps/BaiduMapApp.tsx",
-    "status": 304,
-    "contentType": null,
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "440x956",
-    "url": "http://127.0.0.1:4173/src/apps/PhoneApp.tsx",
+    "url": "http://127.0.0.1:4173/src/apps/BaiduMapApp.tsx?t=1784393733351",
     "status": 304,
     "contentType": null,
     "fromServiceWorker": false
@@ -3669,7 +3242,7 @@
   },
   {
     "viewport": "440x956",
-    "url": "http://127.0.0.1:4173/src/apps/PlatformApps.tsx?t=1784389688201",
+    "url": "http://127.0.0.1:4173/src/apps/PhoneApp.tsx",
     "status": 304,
     "contentType": null,
     "fromServiceWorker": false
@@ -3677,6 +3250,13 @@
   {
     "viewport": "440x956",
     "url": "http://127.0.0.1:4173/src/apps/UtilityApps.tsx?t=1784389713362",
+    "status": 304,
+    "contentType": null,
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/src/apps/PlatformApps.tsx?t=1784389688201",
     "status": 304,
     "contentType": null,
     "fromServiceWorker": false
@@ -3781,21 +3361,7 @@
   },
   {
     "viewport": "440x956",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/meituan.webp",
-    "status": 304,
-    "contentType": null,
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "440x956",
     "url": "http://127.0.0.1:4173/icons/third_party/runtime/alipay.webp",
-    "status": 304,
-    "contentType": null,
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "440x956",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/netease_music.webp",
     "status": 304,
     "contentType": null,
     "fromServiceWorker": false
@@ -3809,7 +3375,21 @@
   },
   {
     "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/meituan.webp",
+    "status": 304,
+    "contentType": null,
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
     "url": "http://127.0.0.1:4173/icons/third_party/runtime/taobao.webp",
+    "status": 304,
+    "contentType": null,
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/netease_music.webp",
     "status": 304,
     "contentType": null,
     "fromServiceWorker": false
@@ -3914,7 +3494,7 @@
   },
   {
     "viewport": "440x956",
-    "url": "http://127.0.0.1:4173/src/apps/DeidentifiedMap.tsx",
+    "url": "http://127.0.0.1:4173/src/apps/DeidentifiedMap.tsx?t=1784393733351",
     "status": 200,
     "contentType": "text/javascript",
     "fromServiceWorker": false
@@ -3935,9 +3515,219 @@
   },
   {
     "viewport": "440x956",
-    "url": "blob:http://127.0.0.1:4173/1ddf7fd8-8b5d-4a46-a56f-3e1b4ec8338a",
+    "url": "blob:http://127.0.0.1:4173/a93505ea-ada1-4491-b037-b8bcbeec366b",
     "status": 200,
     "contentType": "text/javascript",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/baidu_map.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/files.png",
+    "status": 200,
+    "contentType": "image/png",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/notes.png",
+    "status": 200,
+    "contentType": "image/png",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/calendar.png",
+    "status": 200,
+    "contentType": "image/png",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/settings.png",
+    "status": 200,
+    "contentType": "image/png",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/qqmail.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/xiaohongshu.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/douyin.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/zhihu.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/tieba.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/toutiao.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/baidunetdisk.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/alipay.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/didi.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/meituan.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/taobao.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/netease_music.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/wechat_reading.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/health.png",
+    "status": 200,
+    "contentType": "image/png",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/weather.png",
+    "status": 200,
+    "contentType": "image/png",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/railway12306.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/clock.png",
+    "status": 200,
+    "contentType": "image/png",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/calculator.png",
+    "status": 200,
+    "contentType": "image/png",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/camera.png",
+    "status": 200,
+    "contentType": "image/png",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/voice_memos.png",
+    "status": 200,
+    "contentType": "image/png",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/compass.png",
+    "status": 200,
+    "contentType": "image/png",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/phone.png",
+    "status": 200,
+    "contentType": "image/png",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/wechat.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/safari.png",
+    "status": 200,
+    "contentType": "image/png",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/photos.png",
+    "status": 200,
+    "contentType": "image/png",
     "fromServiceWorker": false
   },
   {
@@ -3970,14 +3760,14 @@
   },
   {
     "viewport": "440x956",
-    "url": "http://127.0.0.1:4173/media/case-001/daily/temporary-train-tote.jpg",
+    "url": "http://127.0.0.1:4173/media/case-001/daily/temporary-noodle-bowl.jpg",
     "status": 200,
     "contentType": "image/jpeg",
     "fromServiceWorker": false
   },
   {
     "viewport": "440x956",
-    "url": "http://127.0.0.1:4173/media/case-001/daily/temporary-noodle-bowl.jpg",
+    "url": "http://127.0.0.1:4173/media/case-001/daily/temporary-train-tote.jpg",
     "status": 200,
     "contentType": "image/jpeg",
     "fromServiceWorker": false
@@ -4424,6 +4214,636 @@
     "fromServiceWorker": false
   },
   {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/baidu_map.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/files.png",
+    "status": 200,
+    "contentType": "image/png",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/notes.png",
+    "status": 200,
+    "contentType": "image/png",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/calendar.png",
+    "status": 200,
+    "contentType": "image/png",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/settings.png",
+    "status": 200,
+    "contentType": "image/png",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/qqmail.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/xiaohongshu.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/douyin.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/zhihu.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/tieba.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/toutiao.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/baidunetdisk.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/alipay.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/didi.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/meituan.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/taobao.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/netease_music.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/wechat_reading.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/health.png",
+    "status": 200,
+    "contentType": "image/png",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/weather.png",
+    "status": 200,
+    "contentType": "image/png",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/railway12306.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/clock.png",
+    "status": 200,
+    "contentType": "image/png",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/calculator.png",
+    "status": 200,
+    "contentType": "image/png",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/camera.png",
+    "status": 200,
+    "contentType": "image/png",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/voice_memos.png",
+    "status": 200,
+    "contentType": "image/png",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/compass.png",
+    "status": 200,
+    "contentType": "image/png",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/phone.png",
+    "status": 200,
+    "contentType": "image/png",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/wechat.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/safari.png",
+    "status": 200,
+    "contentType": "image/png",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/photos.png",
+    "status": 200,
+    "contentType": "image/png",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/baidu_map.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/files.png",
+    "status": 200,
+    "contentType": "image/png",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/notes.png",
+    "status": 200,
+    "contentType": "image/png",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/calendar.png",
+    "status": 200,
+    "contentType": "image/png",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/settings.png",
+    "status": 200,
+    "contentType": "image/png",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/qqmail.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/xiaohongshu.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/douyin.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/zhihu.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/tieba.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/toutiao.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/baidunetdisk.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/alipay.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/didi.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/meituan.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/taobao.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/netease_music.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/wechat_reading.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/health.png",
+    "status": 200,
+    "contentType": "image/png",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/weather.png",
+    "status": 200,
+    "contentType": "image/png",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/railway12306.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/clock.png",
+    "status": 200,
+    "contentType": "image/png",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/calculator.png",
+    "status": 200,
+    "contentType": "image/png",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/camera.png",
+    "status": 200,
+    "contentType": "image/png",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/voice_memos.png",
+    "status": 200,
+    "contentType": "image/png",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/compass.png",
+    "status": 200,
+    "contentType": "image/png",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/phone.png",
+    "status": 200,
+    "contentType": "image/png",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/wechat.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/safari.png",
+    "status": 200,
+    "contentType": "image/png",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/photos.png",
+    "status": 200,
+    "contentType": "image/png",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/baidu_map.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/files.png",
+    "status": 200,
+    "contentType": "image/png",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/notes.png",
+    "status": 200,
+    "contentType": "image/png",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/calendar.png",
+    "status": 200,
+    "contentType": "image/png",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/settings.png",
+    "status": 200,
+    "contentType": "image/png",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/qqmail.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/xiaohongshu.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/douyin.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/zhihu.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/tieba.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/toutiao.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/baidunetdisk.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/alipay.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/didi.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/meituan.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/taobao.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/netease_music.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/wechat_reading.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/health.png",
+    "status": 200,
+    "contentType": "image/png",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/weather.png",
+    "status": 200,
+    "contentType": "image/png",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/railway12306.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/clock.png",
+    "status": 200,
+    "contentType": "image/png",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/calculator.png",
+    "status": 200,
+    "contentType": "image/png",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/camera.png",
+    "status": 200,
+    "contentType": "image/png",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/voice_memos.png",
+    "status": 200,
+    "contentType": "image/png",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/compass.png",
+    "status": 200,
+    "contentType": "image/png",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/phone.png",
+    "status": 200,
+    "contentType": "image/png",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/wechat.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/safari.png",
+    "status": 200,
+    "contentType": "image/png",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "440x956",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/photos.png",
+    "status": 200,
+    "contentType": "image/png",
+    "fromServiceWorker": false
+  },
+  {
     "viewport": "1440x1000",
     "url": "http://127.0.0.1:4173/",
     "status": 200,
@@ -4432,7 +4852,7 @@
   },
   {
     "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/src/main.tsx?t=1784389752325",
+    "url": "http://127.0.0.1:4173/src/main.tsx?t=1784394026797",
     "status": 200,
     "contentType": "text/javascript",
     "fromServiceWorker": false
@@ -4460,14 +4880,7 @@
   },
   {
     "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/src/app/App.tsx?t=1784389734912",
-    "status": 200,
-    "contentType": "text/javascript",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=b20418dc",
+    "url": "http://127.0.0.1:4173/src/app/App.tsx?t=1784394026797",
     "status": 200,
     "contentType": "text/javascript",
     "fromServiceWorker": false
@@ -4481,6 +4894,13 @@
   },
   {
     "viewport": "1440x1000",
+    "url": "http://127.0.0.1:4173/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=b20418dc",
+    "status": 200,
+    "contentType": "text/javascript",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "1440x1000",
     "url": "http://127.0.0.1:4173/node_modules/.vite/deps/rolldown-runtime-EAsCxrDo.js?v=b20418dc",
     "status": 200,
     "contentType": "text/javascript",
@@ -4488,7 +4908,14 @@
   },
   {
     "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/src/styles/global.css?t=1784389752325",
+    "url": "http://127.0.0.1:4173/src/styles/global.css?t=1784393746248",
+    "status": 200,
+    "contentType": "text/javascript",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "1440x1000",
+    "url": "http://127.0.0.1:4173/src/app/GameRoot.tsx?t=1784394026797",
     "status": 200,
     "contentType": "text/javascript",
     "fromServiceWorker": false
@@ -4502,13 +4929,6 @@
   },
   {
     "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/src/app/GameRoot.tsx?t=1784389734912",
-    "status": 200,
-    "contentType": "text/javascript",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
     "url": "http://127.0.0.1:4173/node_modules/.vite/deps/react-dom_client.js?v=b20418dc",
     "status": 200,
     "contentType": "text/javascript",
@@ -4516,35 +4936,7 @@
   },
   {
     "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/src/content/content-pack.ts",
-    "status": 200,
-    "contentType": "text/javascript",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/src/engine/initial-state.ts",
-    "status": 200,
-    "contentType": "text/javascript",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/src/engine/event-factory.ts",
-    "status": 200,
-    "contentType": "text/javascript",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/src/engine/story-engine.ts",
-    "status": 200,
-    "contentType": "text/javascript",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/src/persistence/save-service.ts",
+    "url": "http://127.0.0.1:4173/src/shell/PhoneFrame.tsx?t=1784394026797",
     "status": 200,
     "contentType": "text/javascript",
     "fromServiceWorker": false
@@ -4565,7 +4957,21 @@
   },
   {
     "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/src/shell/PhoneFrame.tsx?t=1784389734912",
+    "url": "http://127.0.0.1:4173/src/content/content-pack.ts",
+    "status": 200,
+    "contentType": "text/javascript",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "1440x1000",
+    "url": "http://127.0.0.1:4173/src/engine/event-factory.ts",
+    "status": 200,
+    "contentType": "text/javascript",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "1440x1000",
+    "url": "http://127.0.0.1:4173/src/engine/initial-state.ts",
     "status": 200,
     "contentType": "text/javascript",
     "fromServiceWorker": false
@@ -4579,7 +4985,63 @@
   },
   {
     "viewport": "1440x1000",
+    "url": "http://127.0.0.1:4173/src/engine/story-engine.ts",
+    "status": 200,
+    "contentType": "text/javascript",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "1440x1000",
+    "url": "http://127.0.0.1:4173/src/persistence/save-service.ts",
+    "status": 200,
+    "contentType": "text/javascript",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "1440x1000",
     "url": "http://127.0.0.1:4173/node_modules/.vite/deps/react-dom.js?v=b20418dc",
+    "status": 200,
+    "contentType": "text/javascript",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "1440x1000",
+    "url": "http://127.0.0.1:4173/src/shell/StatusBar.tsx",
+    "status": 200,
+    "contentType": "text/javascript",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "1440x1000",
+    "url": "http://127.0.0.1:4173/src/shell/LockScreen.tsx",
+    "status": 200,
+    "contentType": "text/javascript",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "1440x1000",
+    "url": "http://127.0.0.1:4173/src/shell/PasscodeScreen.tsx",
+    "status": 200,
+    "contentType": "text/javascript",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "1440x1000",
+    "url": "http://127.0.0.1:4173/src/apps/AppHost.tsx?t=1784394026797",
+    "status": 200,
+    "contentType": "text/javascript",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "1440x1000",
+    "url": "http://127.0.0.1:4173/src/shell/NotificationToast.tsx",
+    "status": 200,
+    "contentType": "text/javascript",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "1440x1000",
+    "url": "http://127.0.0.1:4173/src/shell/HomeScreen.tsx?t=1784388867137",
     "status": 200,
     "contentType": "text/javascript",
     "fromServiceWorker": false
@@ -4628,7 +5090,7 @@
   },
   {
     "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/src/engine/actions.ts",
+    "url": "http://127.0.0.1:4173/content/case-001/triggers/a3-triggers.json?import",
     "status": 200,
     "contentType": "text/javascript",
     "fromServiceWorker": false
@@ -4649,70 +5111,7 @@
   },
   {
     "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/content/case-001/triggers/a3-triggers.json?import",
-    "status": 200,
-    "contentType": "text/javascript",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/src/persistence/indexed-db.ts",
-    "status": 200,
-    "contentType": "text/javascript",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/src/shell/LockScreen.tsx",
-    "status": 200,
-    "contentType": "text/javascript",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/src/shell/PasscodeScreen.tsx",
-    "status": 200,
-    "contentType": "text/javascript",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/src/shell/StatusBar.tsx",
-    "status": 200,
-    "contentType": "text/javascript",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/src/shell/NotificationToast.tsx",
-    "status": 200,
-    "contentType": "text/javascript",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/src/apps/AppHost.tsx?t=1784389734912",
-    "status": 200,
-    "contentType": "text/javascript",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/src/shell/HomeScreen.tsx?t=1784388867137",
-    "status": 200,
-    "contentType": "text/javascript",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/node_modules/.vite/deps/idb.js?v=b20418dc",
-    "status": 200,
-    "contentType": "text/javascript",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/src/content/selectors.ts",
+    "url": "http://127.0.0.1:4173/src/engine/actions.ts",
     "status": 200,
     "contentType": "text/javascript",
     "fromServiceWorker": false
@@ -4726,21 +5125,21 @@
   },
   {
     "viewport": "1440x1000",
+    "url": "http://127.0.0.1:4173/src/persistence/indexed-db.ts",
+    "status": 200,
+    "contentType": "text/javascript",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "1440x1000",
+    "url": "http://127.0.0.1:4173/src/content/selectors.ts",
+    "status": 200,
+    "contentType": "text/javascript",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "1440x1000",
     "url": "http://127.0.0.1:4173/src/shell/AppChrome.tsx",
-    "status": 200,
-    "contentType": "text/javascript",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/src/apps/WeChatApp.tsx",
-    "status": 200,
-    "contentType": "text/javascript",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/src/apps/SafariApp.tsx?t=1784389734912",
     "status": 200,
     "contentType": "text/javascript",
     "fromServiceWorker": false
@@ -4754,20 +5153,6 @@
   },
   {
     "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/src/apps/PhotosApp.tsx",
-    "status": 200,
-    "contentType": "text/javascript",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/src/apps/TiebaApp.tsx",
-    "status": 200,
-    "contentType": "text/javascript",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
     "url": "http://127.0.0.1:4173/src/apps/CalculatorApp.tsx?t=1784389570846",
     "status": 200,
     "contentType": "text/javascript",
@@ -4775,7 +5160,7 @@
   },
   {
     "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/src/apps/SettingsApp.tsx?t=1784389601886",
+    "url": "http://127.0.0.1:4173/src/apps/PhotosApp.tsx",
     "status": 200,
     "contentType": "text/javascript",
     "fromServiceWorker": false
@@ -4789,6 +5174,34 @@
   },
   {
     "viewport": "1440x1000",
+    "url": "http://127.0.0.1:4173/src/apps/SettingsApp.tsx?t=1784389601886",
+    "status": 200,
+    "contentType": "text/javascript",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "1440x1000",
+    "url": "http://127.0.0.1:4173/src/apps/SafariApp.tsx?t=1784389734912",
+    "status": 200,
+    "contentType": "text/javascript",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "1440x1000",
+    "url": "http://127.0.0.1:4173/src/apps/TiebaApp.tsx",
+    "status": 200,
+    "contentType": "text/javascript",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "1440x1000",
+    "url": "http://127.0.0.1:4173/src/apps/WeChatApp.tsx?t=1784394026797",
+    "status": 200,
+    "contentType": "text/javascript",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "1440x1000",
     "url": "http://127.0.0.1:4173/src/apps/PhoneApp.tsx",
     "status": 200,
     "contentType": "text/javascript",
@@ -4796,14 +5209,7 @@
   },
   {
     "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/src/apps/BaiduMapApp.tsx",
-    "status": 200,
-    "contentType": "text/javascript",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/src/lib/asset-url.ts",
+    "url": "http://127.0.0.1:4173/src/apps/BaiduMapApp.tsx?t=1784393733351",
     "status": 200,
     "contentType": "text/javascript",
     "fromServiceWorker": false
@@ -4817,7 +5223,7 @@
   },
   {
     "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/src/apps/UtilityApps.tsx?t=1784389713362",
+    "url": "http://127.0.0.1:4173/src/lib/asset-url.ts",
     "status": 200,
     "contentType": "text/javascript",
     "fromServiceWorker": false
@@ -4831,6 +5237,13 @@
   },
   {
     "viewport": "1440x1000",
+    "url": "http://127.0.0.1:4173/src/apps/UtilityApps.tsx?t=1784389713362",
+    "status": 200,
+    "contentType": "text/javascript",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "1440x1000",
     "url": "http://127.0.0.1:4173/src/a3/coordinate-assembly.ts",
     "status": 200,
     "contentType": "text/javascript",
@@ -4838,7 +5251,7 @@
   },
   {
     "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/node_modules/.vite/deps/zod.js?v=b20418dc",
+    "url": "http://127.0.0.1:4173/node_modules/.vite/deps/idb.js?v=b20418dc",
     "status": 200,
     "contentType": "text/javascript",
     "fromServiceWorker": false
@@ -4846,6 +5259,13 @@
   {
     "viewport": "1440x1000",
     "url": "http://127.0.0.1:4173/src/content/realism-life-data.ts",
+    "status": 200,
+    "contentType": "text/javascript",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "1440x1000",
+    "url": "http://127.0.0.1:4173/node_modules/.vite/deps/zod.js?v=b20418dc",
     "status": 200,
     "contentType": "text/javascript",
     "fromServiceWorker": false
@@ -4985,16 +5405,16 @@
   },
   {
     "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/weather.png",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/railway12306.webp",
     "status": 200,
-    "contentType": "image/png",
+    "contentType": "image/webp",
     "fromServiceWorker": false
   },
   {
     "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/railway12306.webp",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/weather.png",
     "status": 200,
-    "contentType": "image/webp",
+    "contentType": "image/png",
     "fromServiceWorker": false
   },
   {
@@ -5013,14 +5433,14 @@
   },
   {
     "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/voice_memos.png",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/camera.png",
     "status": 200,
     "contentType": "image/png",
     "fromServiceWorker": false
   },
   {
     "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/camera.png",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/voice_memos.png",
     "status": 200,
     "contentType": "image/png",
     "fromServiceWorker": false
@@ -5034,16 +5454,16 @@
   },
   {
     "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/wechat.webp",
+    "url": "http://127.0.0.1:4173/icons/system/runtime/phone.png",
     "status": 200,
-    "contentType": "image/webp",
+    "contentType": "image/png",
     "fromServiceWorker": false
   },
   {
     "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/phone.png",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/wechat.webp",
     "status": 200,
-    "contentType": "image/png",
+    "contentType": "image/webp",
     "fromServiceWorker": false
   },
   {
@@ -5076,7 +5496,7 @@
   },
   {
     "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/src/main.tsx?t=1784389752325",
+    "url": "http://127.0.0.1:4173/src/main.tsx?t=1784394026797",
     "status": 304,
     "contentType": null,
     "fromServiceWorker": false
@@ -5132,14 +5552,14 @@
   },
   {
     "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/src/app/App.tsx?t=1784389734912",
+    "url": "http://127.0.0.1:4173/src/app/App.tsx?t=1784394026797",
     "status": 304,
     "contentType": null,
     "fromServiceWorker": false
   },
   {
     "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/src/styles/global.css?t=1784389752325",
+    "url": "http://127.0.0.1:4173/src/styles/global.css?t=1784393746248",
     "status": 304,
     "contentType": null,
     "fromServiceWorker": false
@@ -5153,7 +5573,7 @@
   },
   {
     "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/src/app/GameRoot.tsx?t=1784389734912",
+    "url": "http://127.0.0.1:4173/src/app/GameRoot.tsx?t=1784394026797",
     "status": 304,
     "contentType": null,
     "fromServiceWorker": false
@@ -5195,7 +5615,7 @@
   },
   {
     "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/src/shell/PhoneFrame.tsx?t=1784389734912",
+    "url": "http://127.0.0.1:4173/src/shell/PhoneFrame.tsx?t=1784394026797",
     "status": 304,
     "contentType": null,
     "fromServiceWorker": false
@@ -5272,13 +5692,6 @@
   },
   {
     "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/node_modules/.vite/deps/zod.js?v=b20418dc",
-    "status": 200,
-    "contentType": "text/javascript",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
     "url": "http://127.0.0.1:4173/src/engine/actions.ts",
     "status": 304,
     "contentType": null,
@@ -5303,6 +5716,13 @@
     "url": "http://127.0.0.1:4173/src/persistence/indexed-db.ts",
     "status": 304,
     "contentType": null,
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "1440x1000",
+    "url": "http://127.0.0.1:4173/node_modules/.vite/deps/zod.js?v=b20418dc",
+    "status": 200,
+    "contentType": "text/javascript",
     "fromServiceWorker": false
   },
   {
@@ -5335,7 +5755,14 @@
   },
   {
     "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/src/apps/AppHost.tsx?t=1784389734912",
+    "url": "http://127.0.0.1:4173/node_modules/.vite/deps/idb.js?v=b20418dc",
+    "status": 200,
+    "contentType": "text/javascript",
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "1440x1000",
+    "url": "http://127.0.0.1:4173/src/apps/AppHost.tsx?t=1784394026797",
     "status": 304,
     "contentType": null,
     "fromServiceWorker": false
@@ -5345,13 +5772,6 @@
     "url": "http://127.0.0.1:4173/src/shell/NotificationToast.tsx",
     "status": 304,
     "contentType": null,
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/node_modules/.vite/deps/idb.js?v=b20418dc",
-    "status": 200,
-    "contentType": "text/javascript",
     "fromServiceWorker": false
   },
   {
@@ -5384,7 +5804,7 @@
   },
   {
     "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/src/apps/WeChatApp.tsx",
+    "url": "http://127.0.0.1:4173/src/apps/WeChatApp.tsx?t=1784394026797",
     "status": 304,
     "contentType": null,
     "fromServiceWorker": false
@@ -5433,7 +5853,14 @@
   },
   {
     "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/src/apps/BaiduMapApp.tsx",
+    "url": "http://127.0.0.1:4173/src/apps/CalculatorApp.tsx?t=1784389570846",
+    "status": 304,
+    "contentType": null,
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "1440x1000",
+    "url": "http://127.0.0.1:4173/src/apps/BaiduMapApp.tsx?t=1784393733351",
     "status": 304,
     "contentType": null,
     "fromServiceWorker": false
@@ -5441,13 +5868,6 @@
   {
     "viewport": "1440x1000",
     "url": "http://127.0.0.1:4173/src/apps/PhoneApp.tsx",
-    "status": 304,
-    "contentType": null,
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/src/apps/CalculatorApp.tsx?t=1784389570846",
     "status": 304,
     "contentType": null,
     "fromServiceWorker": false
@@ -5559,6 +5979,13 @@
   },
   {
     "viewport": "1440x1000",
+    "url": "http://127.0.0.1:4173/icons/third_party/runtime/toutiao.webp",
+    "status": 304,
+    "contentType": null,
+    "fromServiceWorker": false
+  },
+  {
+    "viewport": "1440x1000",
     "url": "http://127.0.0.1:4173/icons/third_party/runtime/baidunetdisk.webp",
     "status": 304,
     "contentType": null,
@@ -5567,13 +5994,6 @@
   {
     "viewport": "1440x1000",
     "url": "http://127.0.0.1:4173/icons/third_party/runtime/alipay.webp",
-    "status": 304,
-    "contentType": null,
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/toutiao.webp",
     "status": 304,
     "contentType": null,
     "fromServiceWorker": false
@@ -5706,7 +6126,7 @@
   },
   {
     "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/src/apps/DeidentifiedMap.tsx",
+    "url": "http://127.0.0.1:4173/src/apps/DeidentifiedMap.tsx?t=1784393733351",
     "status": 200,
     "contentType": "text/javascript",
     "fromServiceWorker": false
@@ -5727,219 +6147,9 @@
   },
   {
     "viewport": "1440x1000",
-    "url": "blob:http://127.0.0.1:4173/cee87d81-213e-46f0-9004-79edbc00357d",
+    "url": "blob:http://127.0.0.1:4173/22db9879-9202-4154-be02-5c1601a542dc",
     "status": 200,
     "contentType": "text/javascript",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/baidu_map.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/files.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/notes.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/calendar.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/settings.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/qqmail.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/xiaohongshu.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/douyin.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/zhihu.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/tieba.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/toutiao.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/baidunetdisk.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/alipay.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/didi.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/meituan.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/taobao.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/netease_music.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/wechat_reading.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/health.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/weather.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/railway12306.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/clock.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/calculator.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/camera.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/voice_memos.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/compass.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/phone.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/wechat.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/safari.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/photos.png",
-    "status": 200,
-    "contentType": "image/png",
     "fromServiceWorker": false
   },
   {
@@ -6213,636 +6423,6 @@
     "url": "http://127.0.0.1:4173/media/case-001/daily/temporary-balcony-plants.jpg",
     "status": 200,
     "contentType": "image/jpeg",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/baidu_map.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/files.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/notes.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/calendar.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/settings.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/qqmail.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/xiaohongshu.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/douyin.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/zhihu.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/tieba.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/toutiao.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/baidunetdisk.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/alipay.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/didi.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/meituan.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/taobao.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/netease_music.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/wechat_reading.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/health.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/weather.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/railway12306.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/clock.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/calculator.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/camera.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/voice_memos.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/compass.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/phone.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/wechat.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/safari.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/photos.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/baidu_map.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/files.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/notes.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/calendar.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/settings.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/qqmail.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/xiaohongshu.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/douyin.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/zhihu.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/tieba.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/toutiao.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/baidunetdisk.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/alipay.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/didi.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/meituan.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/taobao.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/netease_music.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/wechat_reading.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/health.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/weather.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/railway12306.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/clock.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/calculator.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/camera.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/voice_memos.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/compass.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/phone.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/wechat.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/safari.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/photos.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/baidu_map.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/files.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/notes.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/calendar.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/settings.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/qqmail.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/xiaohongshu.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/douyin.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/zhihu.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/tieba.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/toutiao.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/baidunetdisk.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/alipay.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/didi.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/meituan.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/taobao.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/netease_music.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/wechat_reading.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/health.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/weather.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/railway12306.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/clock.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/calculator.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/camera.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/voice_memos.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/compass.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/phone.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/third_party/runtime/wechat.webp",
-    "status": 200,
-    "contentType": "image/webp",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/safari.png",
-    "status": 200,
-    "contentType": "image/png",
-    "fromServiceWorker": false
-  },
-  {
-    "viewport": "1440x1000",
-    "url": "http://127.0.0.1:4173/icons/system/runtime/photos.png",
-    "status": 200,
-    "contentType": "image/png",
     "fromServiceWorker": false
   },
   {

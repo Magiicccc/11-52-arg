@@ -1,9 +1,9 @@
 # 全站交互有效性审计
 
-- 地址：http://127.0.0.1:4173/
-- 审计时间：2026-07-18T16:15:54.466Z
-- 可见控件：798
-- WORKS：793
+- 地址：https://magiicccc.github.io/11-52-arg/
+- 审计时间：2026-07-18T16:52:40.340Z
+- 可见控件：780
+- WORKS：775
 - DISABLED：5
 - BROKEN：0
 
@@ -12,7 +12,7 @@
 | app.wechat | 26 | 26 | 0 | 0 |
 | app.photos | 6 | 6 | 0 | 0 |
 | app.safari | 10 | 10 | 0 | 0 |
-| app.baidu_map | 83 | 83 | 0 | 0 |
+| app.baidu_map | 65 | 65 | 0 | 0 |
 | app.phone | 4 | 4 | 0 | 0 |
 | app.files | 4 | 4 | 0 | 0 |
 | app.notes | 6 | 6 | 0 | 0 |

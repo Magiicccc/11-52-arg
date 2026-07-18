@@ -153,7 +153,7 @@ export function DeidentifiedMap({
       mapRef.current = map;
       map.addControl(new maplibregl.NavigationControl({ showCompass: false, visualizePitch: false }), "bottom-right");
       map.on("load", () => {
-        markersRef.current = temporaryMapPois.map((poi) => {
+        const poiMarkers = temporaryMapPois.map((poi) => {
           const element = document.createElement("button");
           element.className = "map-poi-marker";
           element.type = "button";
@@ -165,6 +165,24 @@ export function DeidentifiedMap({
             .setLngLat(toCoordinate(poi.x, poi.y))
             .addTo(map);
         });
+        const roadMarkers = roadLines.map((road) => {
+          const element = document.createElement("span");
+          element.className = `map-road-name ${road.width}`;
+          element.textContent = road.name;
+          element.setAttribute("aria-hidden", "true");
+          const midpoint = road.coordinates[Math.floor(road.coordinates.length / 2)]!;
+          return new maplibregl.Marker({ element, anchor: "center" })
+            .setLngLat(midpoint)
+            .addTo(map);
+        });
+        const currentLocation = document.createElement("span");
+        currentLocation.className = "map-current-location";
+        currentLocation.setAttribute("aria-label", "当前模拟位置");
+        currentLocation.innerHTML = "<i></i>";
+        const currentMarker = new maplibregl.Marker({ element: currentLocation, anchor: "center" })
+          .setLngLat([0, 0])
+          .addTo(map);
+        markersRef.current = [...poiMarkers, ...roadMarkers, currentMarker];
         callbacksRef.current.onReady();
       });
       map.on("moveend", () => {

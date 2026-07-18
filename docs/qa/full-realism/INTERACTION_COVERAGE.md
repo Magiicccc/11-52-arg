@@ -1,11 +1,10 @@
 # 全站交互覆盖门禁
 
-- 地址：http://127.0.0.1:4173/
-- 审计时间：2026-07-18T16:15:54.467Z
-- 可见控件：798
-- WORKS：793
+- 地址：https://magiicccc.github.io/11-52-arg/
+- 审计时间：2026-07-18T16:52:40.340Z
+- 可见控件：780
+- WORKS：775
 - DISABLED：5
-- BLOCKED-BY-STORY：0
 - BROKEN：0
 
 | App | 控件 | WORKS | DISABLED | BROKEN |
@@ -13,7 +12,7 @@
 | app.wechat | 26 | 26 | 0 | 0 |
 | app.photos | 6 | 6 | 0 | 0 |
 | app.safari | 10 | 10 | 0 | 0 |
-| app.baidu_map | 83 | 83 | 0 | 0 |
+| app.baidu_map | 65 | 65 | 0 | 0 |
 | app.phone | 4 | 4 | 0 | 0 |
 | app.files | 4 | 4 | 0 | 0 |
 | app.notes | 6 | 6 | 0 | 0 |
@@ -41,4 +40,4 @@
 | app.voice_memos | 14 | 14 | 0 | 0 |
 | app.compass | 6 | 6 | 0 | 0 |
 
-门禁：`broken == 0`。有效控件必须产生可见 DOM 变化、GameState 变化、规范 StoryEvent 或有效表单提交；合理禁用控件具有原生禁用状态，不计为静默失败。
+所有被审计的可见控件均有稳定交互 ID，并产生可见 DOM 变化、规范状态事件或有效表单提交。

@@ -2,10 +2,10 @@
   {
     "viewport": "402x874",
     "httpStatus": 200,
-    "wallClockMs": 6572,
+    "wallClockMs": 4871,
     "navigation": {
-      "domContentLoaded": 262.80000001192093,
-      "loadEvent": 263.30000001192093,
+      "domContentLoaded": 266.90000000596046,
+      "loadEvent": 267.5,
       "transferSize": 300,
       "decodedBodySize": 645
     }
@@ -13,10 +13,10 @@
   {
     "viewport": "440x956",
     "httpStatus": 200,
-    "wallClockMs": 3335,
+    "wallClockMs": 1372,
     "navigation": {
-      "domContentLoaded": 327.69999998807907,
-      "loadEvent": 328.19999998807907,
+      "domContentLoaded": 355.30000001192093,
+      "loadEvent": 355.7000000178814,
       "transferSize": 300,
       "decodedBodySize": 645
     }
@@ -24,10 +24,10 @@
   {
     "viewport": "1440x1000",
     "httpStatus": 200,
-    "wallClockMs": 1572,
+    "wallClockMs": 1530,
     "navigation": {
-      "domContentLoaded": 265.2000000178814,
-      "loadEvent": 265.60000002384186,
+      "domContentLoaded": 177.19999998807907,
+      "loadEvent": 177.59999999403954,
       "transferSize": 300,
       "decodedBodySize": 645
     }

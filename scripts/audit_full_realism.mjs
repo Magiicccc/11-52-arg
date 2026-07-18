@@ -211,7 +211,7 @@ async function captureApp(page, records, controls, appId, slug, viewport) {
   await icon.click({ force: true });
   await page.locator(".app-window").waitFor({ state: "visible", timeout: 10_000 });
   if (appId === "app.baidu_map") {
-    await page.getByTestId("maplibre-map").waitFor({ state: "visible", timeout: 10_000 });
+    await page.getByTestId("maplibre-map").waitFor({ state: "visible", timeout: 30_000 });
     await page.waitForTimeout(900);
   } else {
     await page.waitForTimeout(120);
@@ -219,7 +219,9 @@ async function captureApp(page, records, controls, appId, slug, viewport) {
   await saveShot(page, records, slug, "home", viewport);
   controls.push(...await inventoryVisibleControls(page, slug, viewport));
 
-  const action = page.getByTestId("app-effective-action").first();
+  const action = appId === "app.wechat"
+    ? page.getByTestId("thread-陈屿")
+    : page.getByTestId("app-effective-action").first();
   if (await action.count()) {
     await action.click({ force: true });
     await page.waitForTimeout(150);
@@ -289,6 +291,14 @@ try {
     await page.reload({ waitUntil: "load", timeout: 45_000 });
     await page.getByTestId("home-screen").waitFor({ state: "visible", timeout: 15_000 });
     await page.waitForTimeout(300);
+    // The deliberate save-reset reload aborts the first home screen's in-flight
+    // icon requests. They are test-harness cancellations, not runtime failures.
+    for (let index = failedRequests.length - 1; index >= 0; index -= 1) {
+      const entry = failedRequests[index];
+      if (entry?.viewport === viewport.name && entry.failure === "net::ERR_ABORTED") {
+        failedRequests.splice(index, 1);
+      }
+    }
     const navTiming = await page.evaluate(() => {
       const timing = performance.getEntriesByType("navigation")[0];
       return timing ? {

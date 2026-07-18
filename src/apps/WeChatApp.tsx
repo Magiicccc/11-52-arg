@@ -1,10 +1,11 @@
-import { useMemo, useState } from "react";
+import { useMemo, useState, type CSSProperties } from "react";
 import { AppChrome } from "@/shell/AppChrome";
 import { useGame } from "@/app/GameContext";
 import { activeBody, getContentItem, unlockedItemsForApp } from "@/content/selectors";
 import type { ContentItem } from "@/contracts/content";
 import { getPath } from "@/engine/path-utils";
 import { ordinaryWechatThreads, ordinaryXhsNotes, type OrdinaryMessage } from "@/content/realism-life-data";
+import { generatedAvatar } from "@/content/avatar-assets";
 
 type SearchResult = { app?: string; title?: string; detail?: string };
 type Body={
@@ -31,6 +32,13 @@ type Body={
   momMessages?:string[];
   axuMessages?:string[];
 };
+
+function chatAvatarStyle(peerSlot:number):CSSProperties {
+  return {
+    "--wechat-peer-avatar": `url("${generatedAvatar(peerSlot)}")`,
+    "--wechat-self-avatar": `url("${generatedAvatar(120)}")`
+  } as CSSProperties;
+}
 
 export function WeChatApp(){
   const {state,activeDeviceId,emit,setUiFlag}=useGame();
@@ -113,7 +121,7 @@ export function WeChatApp(){
     const voicePlayed=getPath(state,"world.flags.a3.bluecup.voicePlayed")===true;
     const corrected=state.story.completedSceneIds.includes("A3-08");
     return <AppChrome title={zhoulanBody.contact??"周岚"} actions={<button data-testid="wechat-conversations" onClick={()=>setThread(null)}>会话</button>}>
-      <div className="chat-thread" data-testid="zhoulan-thread">
+      <div className="chat-thread wechat-chat-with-avatars" data-testid="zhoulan-thread" style={chatAvatarStyle(19)}>
         {!state.story.completedSceneIds.includes("A3-06")&&<button className="primary-action" data-testid="contact-zhoulan" onClick={()=>emit("wechat.thread.zhoulan.opened","thread.zhoulan",{sentText:"您好，我在整理沈川留下的东西。"})}>发送：您好，我在整理沈川留下的东西。</button>}
         {state.story.completedSceneIds.includes("A3-06")&&<><div className="bubble mine">您好，我在整理沈川留下的东西。</div>{(zhoulanBody.initialReplies??["沈川？","不好意思，我不认识这个人。","这个号怎么会在我通讯录里？"]).map(text=><div className="bubble theirs" key={text}>{text}</div>)}</>}
         {state.story.completedSceneIds.includes("A3-06")&&!status&&<div className="blind-validation-actions">
@@ -140,10 +148,12 @@ export function WeChatApp(){
     </AppChrome>;
   }
 
-  if(thread) return <AppChrome title={ordinaryForThread?.title??thread} actions={<div className="wechat-chat-header-actions"><button aria-label="搜索聊天记录" onClick={()=>setShowThreadSearch(value=>!value)}>⌕</button><button aria-label="聊天信息" onClick={()=>setShowThreadInfo(value=>!value)}>•••</button><button data-testid="wechat-conversations" onClick={()=>setThread(null)}>会话</button></div>}>
-    <div className="chat-thread">
+  if(thread) {
+    const peerIndex=Math.max(0,ordinaryWechatThreads.findIndex(item=>item.id===thread||item.title===thread));
+    return <AppChrome title={ordinaryForThread?.title??thread} actions={<div className="wechat-chat-header-actions"><button aria-label="搜索聊天记录" onClick={()=>setShowThreadSearch(value=>!value)}>⌕</button><button aria-label="聊天信息" onClick={()=>setShowThreadInfo(value=>!value)}>•••</button><button data-testid="wechat-conversations" onClick={()=>setThread(null)}>会话</button></div>}>
+    <div className="chat-thread wechat-chat-with-avatars" style={chatAvatarStyle(peerIndex)}>
       {showThreadSearch&&<section className="wechat-thread-search"><input autoFocus value={threadQuery} onChange={event=>setThreadQuery(event.target.value)} placeholder="搜索聊天记录"/><b>{ordinaryForThread?.messages.filter(message=>!threadQuery.trim()||message.text.includes(threadQuery.trim())).length??0} 条结果</b></section>}
-      {showThreadInfo&&<section className="wechat-thread-info"><header><span className="avatar">{ordinaryForThread?.avatar??thread.slice(0,1)}</span><b>{ordinaryForThread?.title??thread}</b></header><button onClick={()=>setUiFlag(`wechat.pinned.${thread}`,true)}>置顶聊天</button><button onClick={()=>setUiFlag(`wechat.muted.${thread}`,true)}>消息免打扰</button><button onClick={()=>setShowThreadSearch(true)}>查找聊天内容</button></section>}
+      {showThreadInfo&&<section className="wechat-thread-info"><header><img className="avatar" src={generatedAvatar(Math.max(0,ordinaryWechatThreads.findIndex(item=>item.id===thread||item.title===thread)))} alt="联系人头像"/><b>{ordinaryForThread?.title??thread}</b></header><button onClick={()=>setUiFlag(`wechat.pinned.${thread}`,true)}>置顶聊天</button><button onClick={()=>setUiFlag(`wechat.muted.${thread}`,true)}>消息免打扰</button><button onClick={()=>setShowThreadSearch(true)}>查找聊天内容</button></section>}
       {ordinaryForThread?.messages
         .filter(message=>!showThreadSearch||!threadQuery.trim()||message.text.includes(threadQuery.trim()))
         .map(message=><OrdinaryWechatMessage message={message} key={message.id} menuOpen={messageMenuId===message.id} onMenu={()=>setMessageMenuId(value=>value===message.id?null:message.id)} onAction={(action)=>{setUiFlag(`wechat.message.${action}.${message.id}`,true);emit("content.item.interacted",message.id,{action,source:"P"});setMessageMenuId(null)}}/>)}
@@ -176,21 +186,22 @@ export function WeChatApp(){
       />
     </div>
   </AppChrome>;
+  }
 
   if(tab==="通讯录") return <WechatScaffold tab={tab} onTab={setTab}>
     <header className="wechat-section-header"><strong>通讯录</strong><button onClick={()=>setShowMenu(value=>!value)}>添加朋友</button></header>
     <div className="wechat-contact-tools">{["新的朋友","仅聊天的朋友","群聊","标签","公众号"].map(label=><button key={label} onClick={()=>emit("content.item.interacted","app.wechat",{surface:"contacts",label,source:"P"})}><span>{label.slice(0,1)}</span><b>{label}</b><i>›</i></button>)}</div>
-    <div className="wechat-contact-list"><h2>联系人</h2>{ordinaryWechatThreads.filter(item=>!item.group).map(item=><button key={item.id} onClick={()=>setThread(item.title==="陈屿"||item.title==="文件传输助手"?item.title:item.id)}><span className="avatar">{item.avatar}</span><b>{item.title}</b></button>)}</div>
+    <div className="wechat-contact-list"><h2>联系人</h2>{ordinaryWechatThreads.filter(item=>!item.group).map((item,index)=><button key={item.id} onClick={()=>setThread(item.title==="陈屿"||item.title==="文件传输助手"?item.title:item.id)}><img className="avatar" src={generatedAvatar(index)} alt={`${item.title}头像`}/><b>{item.title}</b></button>)}</div>
   </WechatScaffold>;
 
   if(tab==="发现") return <WechatScaffold tab={tab} onTab={setTab}>
     <header className="wechat-section-header"><strong>发现</strong></header>
     <div className="wechat-discover-menu">{["朋友圈","视频号","直播","扫一扫","摇一摇","看一看","搜一搜","附近"].map((label,index)=><button key={label} onClick={()=>setUiFlag(`wechat.discovery.${label}`,true)}><span>{["◎","▶","▣","⌗","↔","◉","⌕","⌖"][index]}</span><b>{label}</b><i>›</i></button>)}</div>
-    <section className="wechat-moments-preview"><header><b>朋友圈</b><span>最近动态</span></header>{ordinaryXhsNotes.slice(0,8).map(note=><article key={note.id}><span className="avatar">{note.avatar}</span><div><b>{note.author}</b><p>{note.title}</p><img src={note.media} alt="普通生活动态"/><small>{note.date}</small></div></article>)}</section>
+    <section className="wechat-moments-preview"><header><b>朋友圈</b><span>最近动态</span></header>{ordinaryXhsNotes.slice(0,8).map((note,index)=><article key={note.id}><img className="avatar" src={generatedAvatar(20+index)} alt={`${note.author}头像`}/><div><b>{note.author}</b><p>{note.title}</p><img src={note.media} alt="普通生活动态"/><small>{note.date}</small></div></article>)}</section>
   </WechatScaffold>;
 
   if(tab==="我") return <WechatScaffold tab={tab} onTab={setTab}>
-    <section className="wechat-me-card"><span className="avatar">川</span><div><h1>川流档案</h1><p>微信号：chuanliu_archive</p><small>＋ 状态</small></div><button onClick={()=>setUiFlag("wechat.me.qrVisible",true)}>二维码</button></section>
+    <section className="wechat-me-card"><img className="avatar" src={generatedAvatar(120)} alt="川流档案头像"/><div><h1>川流档案</h1><p>微信号：chuanliu_archive</p><small>＋ 状态</small></div><button onClick={()=>setUiFlag("wechat.me.qrVisible",true)}>二维码</button></section>
     <div className="wechat-me-menu">{["服务","收藏","朋友圈","卡包","表情","设置"].map(label=><button key={label} onClick={()=>setUiFlag(`wechat.me.${label}`,true)}><span>{label.slice(0,1)}</span><b>{label}</b><i>›</i></button>)}</div>
   </WechatScaffold>;
 
@@ -208,7 +219,7 @@ export function WeChatApp(){
         {(searchBody?.results??[]).map((result,index)=><article key={`${result.app}-${index}`}><span>{result.app}</span><b>{result.title}</b><small>{result.detail}</small></article>)}
       </>}
     </section>}
-    <div className="list">{threads.map(name=>{
+    <div className="list">{threads.map((name,index)=>{
       const ordinary=ordinaryWechatThreads.find(item=>item.id===name||item.title===name);
       const displayName=name==="__zhoulan"?(zhoulanBody?.contact??"周岚"):(ordinary?.title??name);
       const sourceName=name===momLabel&&playerSynced?"妈妈":name;
@@ -216,7 +227,7 @@ export function WeChatApp(){
       const body=last?activeBody(state,last) as Body:undefined;
       const preview=name==="__zhoulan"?(zhoulanBody?.notificationPreview??"这个号怎么会在我通讯录里？"):body?.text??body?.transcript??(name==="文件传输助手"?"本机文件与传输记录":"暂无新消息");
       return <button className="list-row" data-testid={name==="__zhoulan"?"thread-周岚":`thread-${displayName}`} key={name} onClick={()=>{setThread(name);setShowSearch(false)}}>
-        <span className="avatar">{ordinary?.avatar??displayName.slice(0,1)}</span><span><b>{displayName}</b><small>{ordinary?.messages.at(-1)?.text??preview}</small></span><time>{ordinary?.messages.at(-1)?.time??body?.time??""}</time>
+        <img className="avatar" src={generatedAvatar(index)} alt={`${displayName}头像`}/><span><b>{displayName}</b><small>{ordinary?.messages.at(-1)?.text??preview}</small></span><time>{ordinary?.messages.at(-1)?.time??body?.time??""}</time>
       </button>;
     })}</div>
   </WechatScaffold>;

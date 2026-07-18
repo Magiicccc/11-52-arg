@@ -1,1 +1,26 @@
-[]
+[
+  {
+    "viewport": "402x874",
+    "type": "warning",
+    "text": "[.WebGL-0x6714001b6c00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+    "url": "https://magiicccc.github.io/11-52-arg/"
+  },
+  {
+    "viewport": "402x874",
+    "type": "warning",
+    "text": "[.WebGL-0x6714001b6c00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+    "url": "https://magiicccc.github.io/11-52-arg/"
+  },
+  {
+    "viewport": "402x874",
+    "type": "warning",
+    "text": "[.WebGL-0x6714001b6c00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+    "url": "https://magiicccc.github.io/11-52-arg/"
+  },
+  {
+    "viewport": "402x874",
+    "type": "warning",
+    "text": "[.WebGL-0x6714001b6c00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)",
+    "url": "https://magiicccc.github.io/11-52-arg/"
+  }
+]

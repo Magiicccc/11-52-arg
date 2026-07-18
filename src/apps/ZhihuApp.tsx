@@ -1,5 +1,6 @@
 import { useLayoutEffect, useMemo, useRef, useState } from "react";
 import { useGame } from "@/app/GameContext";
+import { generatedAvatar } from "@/content/avatar-assets";
 import { activeBody, getContentItem } from "@/content/selectors";
 
 type ZhihuView = "home" | "ideas" | "profile" | "search" | "detail" | "comments" | "not-found" | "archive";
@@ -194,7 +195,11 @@ function ZhihuIcon({name}:{name:"menu"|"search"|"plus"|"back"|"share"|"home"|"me
 }
 
 function Avatar({mark,color}:{mark:string;color:string}) {
-  return <span className="zhihu-avatar" style={{background:color}} aria-hidden="true">{mark}</span>;
+  const slots:Record<string,number>={
+    研:96,页:97,河:98,光:99,本:100,西:101,网:102,纲:103,八:104,雨:105,
+    橙:106,南:107,普:108,川:120
+  };
+  return <img className="zhihu-avatar" src={generatedAvatar(slots[mark]??109)} alt="" style={{background:color}} aria-hidden="true"/>;
 }
 
 export function ZhihuApp() {
