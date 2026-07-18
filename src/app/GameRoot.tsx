@@ -3,13 +3,14 @@ import { useGame } from "./GameContext";
 import { PhoneFrame } from "@/shell/PhoneFrame";
 import { isQaMode } from "@/lib/qa-mode";
 import { buildMeta } from "@/lib/build-meta";
+import { InteractionBoundary } from "./InteractionBoundary";
 
 export function GameRoot() {
   const { ready, activeDeviceId, switchDevice, reset, state } = useGame();
   const pointerStart=useRef<number|null>(null);
   const qaMode=isQaMode();
   if (!ready) return <main className="loading">正在恢复本地设备……</main>;
-  return <main
+  return <InteractionBoundary><main
     className={`prototype-stage ${qaMode?"qa-mode":""}`}
     onPointerDown={event=>{
       const width=event.currentTarget.getBoundingClientRect().width;
@@ -35,5 +36,5 @@ export function GameRoot() {
     {qaMode&&<aside className="prototype-status" aria-label="QA 状态">
       <span data-testid="current-scene">场景：{state.story.currentSceneId}</span><span>修正：{state.world.correctionStage}</span><span>修订：{state.revision}</span>
     </aside>}
-  </main>;
+  </main></InteractionBoundary>;
 }

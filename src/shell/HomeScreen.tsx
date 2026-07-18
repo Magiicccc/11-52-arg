@@ -7,9 +7,17 @@ import { assetUrl } from "@/lib/asset-url";
 
 const dockAppIds = ["app.phone", "app.wechat", "app.safari", "app.photos"];
 const pageAppIds = [
-  ["app.baidu_map", "app.files", "app.notes", "app.calendar", "app.settings", "app.qqmail", "app.xiaohongshu", "app.douyin"],
-  ["app.zhihu", "app.tieba", "app.toutiao", "app.baidunetdisk", "app.alipay", "app.didi", "app.meituan", "app.taobao", "app.netease_music", "app.wechat_reading", "app.health", "app.weather"],
-  ["app.railway12306", "app.clock", "app.calculator", "app.camera", "app.voice_memos", "app.compass"]
+  [
+    "app.baidu_map", "app.files", "app.notes", "app.calendar",
+    "app.settings", "app.qqmail", "app.xiaohongshu", "app.douyin",
+    "app.zhihu", "app.tieba", "app.toutiao", "app.baidunetdisk",
+    "app.alipay", "app.didi", "app.meituan", "app.taobao"
+  ],
+  [
+    "app.netease_music", "app.wechat_reading", "app.health", "app.weather",
+    "app.railway12306", "app.clock", "app.calculator", "app.camera",
+    "app.voice_memos", "app.compass"
+  ]
 ];
 
 type IconOpticalCalibration = {

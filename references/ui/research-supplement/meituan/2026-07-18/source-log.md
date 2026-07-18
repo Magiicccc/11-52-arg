@@ -1,0 +1,25 @@
+# 美团 research supplement
+
+- Research date: 2026-07-18
+- Platform: iPhone / iOS 26.5.2 target
+- Locale: zh-CN
+- Appearance: light
+- Current verification: Frozen 2026 reference retained; official product URL recorded for follow-up drift review
+- Official source: https://apps.apple.com/cn/app/%E7%BE%8E%E5%9B%A2/id423084029
+- Frozen source directory: `references/ui/11_52_UI_Reference_Pack_V1.0_全量版/apps/meituan`
+
+## Frozen source log
+
+# 来源日志
+
+- App：美团
+- 类别：环境/生活
+- 游戏角色：餐饮、外卖、团购和双人订单。
+
+| 参考ID | 页面 | 版本/代际 | 来源类型 | 来源 | 置信度 |
+|---|---|---|---|---|---|
+| MT-HOME-01 | 首页与频道 | 美团 12.61.202【截图来源标注】 | 近期公开iPhone截图 | https://img.ddooo.com/uppic/20260611/6754b534f36c151b220d2c2fa4589f6b.jpg | 中 |
+| MT-SEARCH-01 | 团购搜索 | 美团 12.61.202【截图来源标注】 | 近期公开iPhone截图 | https://img.ddooo.com/uppic/20260611/8c88d9a6133c42550ce01dbb3ad67507.jpg | 中 |
+| MT-DELIVERY-01 | 外卖页面 | 美团 12.61.202【截图来源标注】 | 近期公开iPhone截图 | https://img.ddooo.com/uppic/20260611/234a40ee40c1ebdb63006e1411bf6382.jpg | 中 |
+
+> 公开截图用于私人测试期的视觉复刻。最终实现仍需用DOM/CSS重建，不得把截图整页作为背景。

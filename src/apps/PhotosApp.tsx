@@ -28,7 +28,7 @@ type VideoBody={
 type SyncBody={familyAlbumCount?:number;familyPhotoCrop?:string};
 
 export function PhotosApp(){
-  const {state,activeDeviceId,emit}=useGame();
+  const {state,activeDeviceId,emit,setUiFlag}=useGame();
   const [selected,setSelected]=useState<string|null>(null);
   const [siteSlot,setSiteSlot]=useState<string|null>(null);
   const [selectMode,setSelectMode]=useState(false);
@@ -109,6 +109,6 @@ export function PhotosApp(){
       {activeDeviceId==="investigation"&&siteUnlocked&&<button data-testid="photo-a3.site.photos" onClick={()=>setSelected("a3.site.photos")}><img src={assetUrl("/media/case-001/placeholders/corridor-frame-417.svg")} alt="现场照片"/><span>现场照片 · 12</span></button>}
       {activeDeviceId==="investigation"&&videoUnlocked&&<button data-testid="photo-a3.site.video" onClick={()=>setSelected("a3.site.video")}><img src={assetUrl("/media/case-001/placeholders/corridor-frame-417.svg")} alt="现场视频"/><span>现场视频 · 26.4秒</span></button>}
     </div>
-    {list.length===0&&!siteUnlocked&&!videoUnlocked&&<button className="empty-state" data-testid="app-effective-action">没有照片 · 点击刷新</button>}
+    {list.length===0&&!siteUnlocked&&!videoUnlocked&&<button className="empty-state" data-testid="app-effective-action" onClick={()=>{setUiFlag(`photos.refreshed.${activeDeviceId}`,true);emit("app.view.changed","app.photos",{view:"refresh",source:"P"})}}>没有照片 · 点击刷新</button>}
   </AppChrome>;
 }

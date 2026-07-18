@@ -26,8 +26,8 @@ export function LockScreen({deviceId}:{deviceId:DeviceId}) {
     <div className="lock-date">7月15日 星期三</div><div className="lock-time">11:52</div>
     <div className="lock-clue-card"><span>照片回忆</span><strong>桥下咖啡 · 2023.09.17</strong><small>两张车票 · 两杯咖啡</small></div>
     <div className="lock-notifications">
-      <button><b>百度贴吧</b><span>你关注的回答已删除</span></button>
-      <button><b>百度网盘</b><span>1个文件等待同步</span></button>
+      <button onClick={()=>{emit("notification.opened","app.tieba",{source:"P"});openApp("app.tieba")}}><b>百度贴吧</b><span>你关注的回答已删除</span></button>
+      <button onClick={()=>{emit("notification.opened","app.baidunetdisk",{source:"P"});openApp("app.baidunetdisk")}}><b>百度网盘</b><span>1个文件等待同步</span></button>
       <button data-testid="lock-call-chenyu" onClick={returnCall}><b>陈屿</b><span>{callReturned?"刚刚已回拨":"未接来电 · 点按回拨"}</span></button>
     </div>
     {failures>0&&<p className="lock-error">密码不正确（{failures}）</p>}

@@ -1,0 +1,168 @@
+{
+  "schemaVersion": 1,
+  "status": "temporary",
+  "scope": "ordinary non-mainline lifestyle media",
+  "generatedAt": "2026-07-18",
+  "authority": "Media Asset Bible V1.0 ordinary-life allowance; never a clue source",
+  "constraints": [
+    "No recognizable face or identity",
+    "No bound real-world location or readable address",
+    "No new anomaly, clue, formal prop, dialogue, or puzzle information",
+    "AI artifacts must never be interpreted as evidence"
+  ],
+  "assets": [
+    {
+      "id": "daily.temporary.rainy-cafe",
+      "path": "/media/case-001/daily/temporary-rainy-cafe.jpg",
+      "kind": "image",
+      "width": 720,
+      "height": 900,
+      "bytes": 140466,
+      "sha256": "e29e20b37239959fa25c207efcdbd8de11ef8b8a8d82f91b42619504b08d4193",
+      "source": "built-in image generation",
+      "promptSummary": "Anonymous rainy cafe table, plain cup and folded umbrella; no identity, brand, readable text, address, clue, or anomaly.",
+      "qa": {
+        "recognizableFace": false,
+        "readableAddress": false,
+        "formalClue": false,
+        "approvedUse": ["ordinary social feed", "ordinary message preview", "ordinary short-video cover"]
+      }
+    },
+    {
+      "id": "daily.temporary.archive-desk",
+      "path": "/media/case-001/daily/temporary-archive-desk.jpg",
+      "kind": "image",
+      "width": 720,
+      "height": 900,
+      "bytes": 104011,
+      "sha256": "0be22927f22ca0f96a7097814c88fdb550f248d0cf9540fe16d9c824be8abc48",
+      "source": "built-in image generation",
+      "promptSummary": "Anonymous home desk with closed laptop, external drive, notebook and cables; no UI, text, identity, clue, or anomaly.",
+      "qa": {
+        "recognizableFace": false,
+        "readableAddress": false,
+        "formalClue": false,
+        "approvedUse": ["ordinary social feed", "ordinary message preview", "ordinary short-video cover"]
+      }
+    },
+    {
+      "id": "daily.temporary.weekday-lunch",
+      "path": "/media/case-001/daily/temporary-weekday-lunch.jpg",
+      "kind": "image",
+      "width": 720,
+      "height": 900,
+      "bytes": 134693,
+      "sha256": "3943c355a9b5a976b7e920bc15cb9f6579ab3398adc6ab531542577f5a0b6f70",
+      "source": "built-in image generation",
+      "promptSummary": "Simple weekday lunch with rice, vegetables and soup; no people, branding, receipt, address, clue, or anomaly.",
+      "qa": {
+        "recognizableFace": false,
+        "readableAddress": false,
+        "formalClue": false,
+        "approvedUse": ["ordinary social feed", "ordinary message preview", "ordinary short-video cover"]
+      }
+    },
+    {
+      "id": "daily.temporary.cat-window",
+      "path": "/media/case-001/daily/temporary-cat-window.jpg",
+      "kind": "image",
+      "width": 720,
+      "height": 900,
+      "bytes": 127464,
+      "sha256": "17bf97329e2408965d99dc8fa817214a572660421139238b1aa7251f523e2d3f",
+      "source": "built-in image generation; mechanically cropped from a six-panel ordinary-life source sheet",
+      "promptSummary": "Tabby cat asleep at a plain window; no identity, address, branding, clue, or anomaly.",
+      "qa": {
+        "recognizableFace": false,
+        "readableAddress": false,
+        "formalClue": false,
+        "approvedUse": ["ordinary social feed", "ordinary moments post", "ordinary short-video cover"]
+      }
+    },
+    {
+      "id": "daily.temporary.train-tote",
+      "path": "/media/case-001/daily/temporary-train-tote.jpg",
+      "kind": "image",
+      "width": 720,
+      "height": 900,
+      "bytes": 107176,
+      "sha256": "17dc38c5b04080967dab59ede130cc25fae39b4dc96dc606a09dc8f4deb1ea62",
+      "source": "built-in image generation; mechanically cropped from a six-panel ordinary-life source sheet",
+      "promptSummary": "Anonymous canvas tote on a train seat; no readable ticket, logo, person, address, clue, or anomaly.",
+      "qa": {
+        "recognizableFace": false,
+        "readableAddress": false,
+        "formalClue": false,
+        "approvedUse": ["ordinary social feed", "ordinary travel post", "ordinary short-video cover"]
+      }
+    },
+    {
+      "id": "daily.temporary.summer-outfit",
+      "path": "/media/case-001/daily/temporary-summer-outfit.jpg",
+      "kind": "image",
+      "width": 720,
+      "height": 900,
+      "bytes": 94543,
+      "sha256": "29fc01f909506d2fb0cf32ada7a60638b5d020827e872d7cff0cd9e62b7825e6",
+      "source": "built-in image generation; mechanically cropped from a six-panel ordinary-life source sheet",
+      "promptSummary": "Simple unbranded summer outfit flat-lay; no person, text, clue, or anomaly.",
+      "qa": {
+        "recognizableFace": false,
+        "readableAddress": false,
+        "formalClue": false,
+        "approvedUse": ["ordinary social feed", "ordinary outfit post"]
+      }
+    },
+    {
+      "id": "daily.temporary.rainy-street",
+      "path": "/media/case-001/daily/temporary-rainy-street.jpg",
+      "kind": "image",
+      "width": 720,
+      "height": 900,
+      "bytes": 150473,
+      "sha256": "84a4325b5f5cf02d82b4cd0a0b2ff92bd9deb85e13054706873ab470e5e756cc",
+      "source": "built-in image generation; mechanically cropped from a six-panel ordinary-life source sheet",
+      "promptSummary": "Deidentified tree-lined street after rain; no readable address, person, clue, or anomaly.",
+      "qa": {
+        "recognizableFace": false,
+        "readableAddress": false,
+        "formalClue": false,
+        "approvedUse": ["ordinary social feed", "ordinary city post", "ordinary short-video cover"]
+      }
+    },
+    {
+      "id": "daily.temporary.noodle-bowl",
+      "path": "/media/case-001/daily/temporary-noodle-bowl.jpg",
+      "kind": "image",
+      "width": 720,
+      "height": 900,
+      "bytes": 116517,
+      "sha256": "bc38fe263b74c2db01e54a8a11ebd311c1b050e99cc89e0bd54d8923e0aa5e7a",
+      "source": "built-in image generation; mechanically cropped from a six-panel ordinary-life source sheet",
+      "promptSummary": "Ordinary bowl of noodles at a small restaurant; no people, receipt, address, clue, or anomaly.",
+      "qa": {
+        "recognizableFace": false,
+        "readableAddress": false,
+        "formalClue": false,
+        "approvedUse": ["ordinary social feed", "ordinary food post", "ordinary short-video cover"]
+      }
+    },
+    {
+      "id": "daily.temporary.balcony-plants",
+      "path": "/media/case-001/daily/temporary-balcony-plants.jpg",
+      "kind": "image",
+      "width": 720,
+      "height": 900,
+      "bytes": 148468,
+      "sha256": "53288e7ecc8dc9be4b46fb06658bd38767e3e1ccc9a1b92f64d803f2661ed861",
+      "source": "built-in image generation; mechanically cropped from a six-panel ordinary-life source sheet",
+      "promptSummary": "Houseplants and closed book on an anonymous balcony; no readable text, address, clue, or anomaly.",
+      "qa": {
+        "recognizableFace": false,
+        "readableAddress": false,
+        "formalClue": false,
+        "approvedUse": ["ordinary social feed", "ordinary home post"]
+      }
+    }
+  ]
+}

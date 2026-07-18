@@ -243,6 +243,10 @@ export function ZhihuApp() {
   const [selectedId,setSelectedId]=useState(formalItem.id);
   const [query,setQuery]=useState("");
   const [searchQuery,setSearchQuery]=useState("");
+  const [feedTab,setFeedTab]=useState("推荐");
+  const [profileTab,setProfileTab]=useState("动态");
+  const [searchTab,setSearchTab]=useState("综合");
+  const [notice,setNotice]=useState("");
   const scrollRef=useRef<HTMLDivElement>(null);
   const selected=feed.find(item=>item.id===selectedId)??formalItem;
   const liked=state.world.flags[`ui.zhihu.liked.${selected.id}`]===true;
@@ -251,16 +255,16 @@ export function ZhihuApp() {
 
   useLayoutEffect(()=>{
     if(scrollRef.current) scrollRef.current.scrollTop=state.devices[activeDeviceId].scrollByRoute[routeKey]??0;
-  },[activeDeviceId,routeKey,state.devices]);
+  },[activeDeviceId,routeKey]);
 
   const rememberScroll=()=>{
     if(scrollRef.current) setScrollPosition(routeKey,scrollRef.current.scrollTop);
   };
   const openItem=(item:ZhihuItem)=>{
     const currentScroll=scrollRef.current?.scrollTop??0;
+    setScrollPosition(routeKey,currentScroll);
     setSelectedId(item.id);
     emit(item.notFound?"browser.page.opened":"content.item.opened",item.contentId??item.id,{surface:"zhihu"});
-    setScrollPosition(routeKey,currentScroll);
     setView(item.notFound?"not-found":"detail");
   };
   const backWithinApp=()=>{
@@ -274,31 +278,37 @@ export function ZhihuApp() {
     const needle=searchQuery.trim().toLowerCase();
     return !needle||`${item.title}${item.excerpt}${item.topics.join("")}`.toLowerCase().includes(needle);
   });
+  const act=(action:string,target="app.zhihu")=>{
+    setNotice(action);
+    emit("content.item.interacted",target,{action,source:"P"});
+  };
 
   if(view==="ideas") {
     return <div className="app-window zhihu-app" data-testid="zhihu-ideas">
-      <header className="zhihu-page-header"><button data-testid="app-back" aria-label="返回首页" onClick={backWithinApp}><ZhihuIcon name="back"/></button><strong>想法</strong><button aria-label="发布"><ZhihuIcon name="plus"/></button></header>
+      <header className="zhihu-page-header"><button data-testid="app-back" aria-label="返回首页" onClick={backWithinApp}><ZhihuIcon name="back"/></button><strong>想法</strong><button aria-label="发布" onClick={()=>act("打开想法发布器")}><ZhihuIcon name="plus"/></button></header>
+      {notice&&<div className="zhihu-action-feedback">{notice}</div>}
       <div className="zhihu-scroll zhihu-ideas-feed" ref={scrollRef}>
         {feed.filter(item=>!item.notFound).slice(0,8).map((item,index)=><article key={item.id}>
-          <header><Avatar mark={item.authorMark} color={item.authorColor}/><div><b>{item.author}</b><small>{index+2} 小时前</small></div><button>关注</button></header>
+          <header><Avatar mark={item.authorMark} color={item.authorColor}/><div><b>{item.author}</b><small>{index+2} 小时前</small></div><button onClick={()=>act(`已关注 ${item.author}`,item.id)}>关注</button></header>
           <p>{item.excerpt}</p>
-          <footer><button>赞同 {item.upvotes}</button><button onClick={()=>openItem(item)}>评论 {item.comments}</button><button>收藏</button></footer>
+          <footer><button onClick={()=>act(`已赞同 ${item.title}`,item.id)}>赞同 {item.upvotes}</button><button onClick={()=>openItem(item)}>评论 {item.comments}</button><button onClick={()=>act(`已收藏 ${item.title}`,item.id)}>收藏</button></footer>
         </article>)}
       </div>
-      <nav className="zhihu-bottom-nav"><button onClick={()=>setView("home")}><ZhihuIcon name="home"/><span>首页</span></button><button className="active"><span className="zhihu-kanshan">想</span><span>想法</span></button><button className="create"><ZhihuIcon name="plus"/><span>创作</span></button><button><ZhihuIcon name="message"/><span>消息</span></button><button onClick={()=>setView("profile")}><ZhihuIcon name="person"/><span>我的</span></button></nav>
+      <nav className="zhihu-bottom-nav"><button onClick={()=>setView("home")}><ZhihuIcon name="home"/><span>首页</span></button><button className="active" onClick={()=>setView("ideas")}><span className="zhihu-kanshan">想</span><span>想法</span></button><button className="create" onClick={()=>act("打开创作中心")}><ZhihuIcon name="plus"/><span>创作</span></button><button onClick={()=>act("消息中心 · 3 条未读")}><ZhihuIcon name="message"/><span>消息</span></button><button onClick={()=>setView("profile")}><ZhihuIcon name="person"/><span>我的</span></button></nav>
     </div>;
   }
 
   if(view==="profile") {
     return <div className="app-window zhihu-app" data-testid="zhihu-profile">
-      <header className="zhihu-page-header"><button data-testid="app-back" aria-label="返回首页" onClick={backWithinApp}><ZhihuIcon name="back"/></button><strong>我的</strong><button aria-label="设置">•••</button></header>
+      <header className="zhihu-page-header"><button data-testid="app-back" aria-label="返回首页" onClick={backWithinApp}><ZhihuIcon name="back"/></button><strong>我的</strong><button aria-label="设置" onClick={()=>act("打开设置")}>•••</button></header>
+      {notice&&<div className="zhihu-action-feedback">{notice}</div>}
       <div className="zhihu-scroll zhihu-profile-page" ref={scrollRef}>
-        <section className="zhihu-profile-card"><Avatar mark="川" color="#1772f6"/><div><h1>川流档案</h1><p>用户研究 / 城市摄影</p></div><button>编辑资料</button></section>
+        <section className="zhihu-profile-card"><Avatar mark="川" color="#1772f6"/><div><h1>川流档案</h1><p>用户研究 / 城市摄影</p></div><button onClick={()=>act("进入资料编辑")}>编辑资料</button></section>
         <section className="zhihu-profile-stats"><span><b>28</b>创作</span><span><b>1,642</b>赞同</span><span><b>316</b>收藏</span><span><b>87</b>关注</span></section>
-        <nav className="zhihu-profile-tabs"><button className="active">动态</button><button>回答</button><button>想法</button><button>收藏</button></nav>
+        <nav className="zhihu-profile-tabs">{["动态","回答","想法","收藏"].map(label=><button className={profileTab===label?"active":""} key={label} onClick={()=>{setProfileTab(label);act(`个人页：${label}`)}}>{label}</button>)}</nav>
         {feed.filter(item=>item.author==="川流档案").map(item=><QuestionCard item={item} key={item.id} onOpen={()=>openItem(item)}/>)}
       </div>
-      <nav className="zhihu-bottom-nav"><button onClick={()=>setView("home")}><ZhihuIcon name="home"/><span>首页</span></button><button onClick={()=>setView("ideas")}><span className="zhihu-kanshan">想</span><span>想法</span></button><button className="create"><ZhihuIcon name="plus"/><span>创作</span></button><button><ZhihuIcon name="message"/><span>消息</span></button><button className="active"><ZhihuIcon name="person"/><span>我的</span></button></nav>
+      <nav className="zhihu-bottom-nav"><button onClick={()=>setView("home")}><ZhihuIcon name="home"/><span>首页</span></button><button onClick={()=>setView("ideas")}><span className="zhihu-kanshan">想</span><span>想法</span></button><button className="create" onClick={()=>act("打开创作中心")}><ZhihuIcon name="plus"/><span>创作</span></button><button onClick={()=>act("消息中心 · 3 条未读")}><ZhihuIcon name="message"/><span>消息</span></button><button className="active" onClick={()=>setView("profile")}><ZhihuIcon name="person"/><span>我的</span></button></nav>
     </div>;
   }
 
@@ -307,8 +317,9 @@ export function ZhihuApp() {
       <header className="zhihu-page-header">
         <button data-testid="app-back" aria-label="返回" onClick={backWithinApp}><ZhihuIcon name="back"/></button>
         <strong>知乎</strong>
-        <button aria-label="分享"><ZhihuIcon name="share"/></button>
+        <button aria-label="分享" onClick={()=>act("已打开分享面板","page.zhihu.deleted.01")}><ZhihuIcon name="share"/></button>
       </header>
+      {notice&&<div className="zhihu-action-feedback">{notice}</div>}
       <div className="zhihu-scroll zhihu-404-scroll" ref={scrollRef}>
         {view==="not-found"?<>
           <section className="zhihu-error-card">
@@ -344,7 +355,8 @@ export function ZhihuApp() {
         </form>
         <button data-testid="zhihu-search-submit" onClick={()=>{setSearchQuery(query);setUiFlag("zhihu.lastSearch",query);emit("app.search.submitted","app.zhihu",{query})}}>搜索</button>
       </header>
-      <nav className="zhihu-search-tabs"><button className="active">综合</button><button>用户</button><button>话题</button></nav>
+      <nav className="zhihu-search-tabs">{["综合","用户","话题"].map(label=><button className={searchTab===label?"active":""} key={label} onClick={()=>{setSearchTab(label);act(`搜索筛选：${label}`)}}>{label}</button>)}</nav>
+      {notice&&<div className="zhihu-action-feedback">{notice}</div>}
       <div className="zhihu-scroll" ref={scrollRef}>
         <div className="zhihu-result-summary">{searchQuery?`“${searchQuery}”的相关内容`:"搜索历史与推荐"}</div>
         {searchResults.map(item=><QuestionCard item={item} key={item.id} onOpen={()=>openItem(item)}/>)}
@@ -358,16 +370,17 @@ export function ZhihuApp() {
       <header className="zhihu-page-header">
         <button data-testid="app-back" aria-label="返回回答" onClick={backWithinApp}><ZhihuIcon name="back"/></button>
         <strong>{selected.comments} 条评论</strong>
-        <button aria-label="更多">•••</button>
+        <button aria-label="更多" onClick={()=>act("评论区更多选项",selected.id)}>•••</button>
       </header>
+      {notice&&<div className="zhihu-action-feedback">{notice}</div>}
       <div className="zhihu-scroll zhihu-comments-list" ref={scrollRef}>
-        <div className="zhihu-comment-sort"><b>评论</b><button>默认排序⌄</button></div>
+        <div className="zhihu-comment-sort"><b>评论</b><button onClick={()=>act("评论排序：按时间",selected.id)}>默认排序⌄</button></div>
         {comments.map(comment=><article className="zhihu-comment" key={comment.author}>
           <Avatar mark={comment.mark} color={comment.color}/>
-          <div><b>{comment.author}</b><p>{comment.text}</p><footer><time>{comment.time}</time><span>♡ {comment.likes}</span><button>回复</button></footer></div>
+          <div><b>{comment.author}</b><p>{comment.text}</p><footer><time>{comment.time}</time><span>♡ {comment.likes}</span><button onClick={()=>act(`回复 ${comment.author}`,selected.id)}>回复</button></footer></div>
         </article>)}
       </div>
-      <div className="zhihu-comment-composer"><button>写评论…</button><span>♡</span><span>☆</span></div>
+      <div className="zhihu-comment-composer"><button onClick={()=>act("评论编辑器已打开",selected.id)}>写评论…</button><span>♡</span><span>☆</span></div>
     </div>;
   }
 
@@ -376,21 +389,22 @@ export function ZhihuApp() {
       <header className="zhihu-page-header">
         <button data-testid="app-back" aria-label="返回" onClick={backWithinApp}><ZhihuIcon name="back"/></button>
         <strong>问题</strong>
-        <button aria-label="分享"><ZhihuIcon name="share"/></button>
+        <button aria-label="分享" onClick={()=>act("已打开分享面板",selected.id)}><ZhihuIcon name="share"/></button>
       </header>
+      {notice&&<div className="zhihu-action-feedback">{notice}</div>}
       <div className="zhihu-scroll zhihu-detail-scroll" ref={scrollRef}>
         <article className="zhihu-question">
           <div className="zhihu-topic-row">{selected.topics.map(topic=><span key={topic}>{topic}</span>)}</div>
           <h1>{selected.title}</h1>
           <p>{selected.excerpt}</p>
           <div className="zhihu-question-meta"><span>{selected.comments+12} 人关注</span><span>{selected.comments} 个回答</span></div>
-          <div className="zhihu-question-buttons"><button className="follow">关注问题</button><button>写回答</button><button>邀请回答</button></div>
+          <div className="zhihu-question-buttons"><button className="follow" onClick={()=>act("已关注问题",selected.id)}>关注问题</button><button onClick={()=>act("回答编辑器已打开",selected.id)}>写回答</button><button onClick={()=>act("邀请回答面板已打开",selected.id)}>邀请回答</button></div>
         </article>
         <article className="zhihu-answer">
-          <header><Avatar mark={selected.authorMark} color={selected.authorColor}/><div><b>{selected.author}</b><span>{selected.credential}</span></div><button>关注</button></header>
+          <header><Avatar mark={selected.authorMark} color={selected.authorColor}/><div><b>{selected.author}</b><span>{selected.credential}</span></div><button onClick={()=>act(`已关注 ${selected.author}`,selected.id)}>关注</button></header>
           <div className="zhihu-answer-voters">{selected.upvotes.toLocaleString("zh-CN")} 人赞同了该回答</div>
           {selected.body.map((paragraph,index)=><p key={index}>{paragraph}</p>)}
-          <button className="zhihu-expand">展开阅读全文⌄</button>
+          <button className="zhihu-expand" onClick={()=>act("已展开全文",selected.id)}>展开阅读全文⌄</button>
           <footer className="zhihu-answer-meta">编辑于 2026-07-12 · 著作权归作者所有</footer>
         </article>
         <section className="zhihu-related">
@@ -402,7 +416,7 @@ export function ZhihuApp() {
         <button className={liked?"active":""} data-testid="zhihu-like" onClick={()=>{emit("content.item.interacted",selected.contentId??selected.id,{action:"upvote",active:!liked});setUiFlag(`zhihu.liked.${selected.id}`,!liked)}}>▲ {liked?"已赞同":`赞同 ${selected.upvotes}`}</button>
         <button onClick={()=>setView("comments")}>评论 {selected.comments}</button>
         <button className={saved?"active":""} data-testid="zhihu-save" onClick={()=>{emit("content.item.interacted",selected.contentId??selected.id,{action:"save",active:!saved});setUiFlag(`zhihu.saved.${selected.id}`,!saved)}}>{saved?"已收藏":"收藏"}</button>
-        <button>喜欢</button>
+        <button onClick={()=>act("已喜欢",selected.id)}>喜欢</button>
       </div>
     </div>;
   }
@@ -411,18 +425,19 @@ export function ZhihuApp() {
     <header className="zhihu-home-header">
       <button data-testid="app-back" aria-label="退出知乎" onClick={goBack}><ZhihuIcon name="menu"/></button>
       <strong>知乎</strong>
-      <div><button data-testid="zhihu-open-search" aria-label="搜索" onClick={()=>setView("search")}><ZhihuIcon name="search"/></button><button aria-label="发布"><ZhihuIcon name="plus"/></button></div>
+      <div><button data-testid="zhihu-open-search" aria-label="搜索" onClick={()=>setView("search")}><ZhihuIcon name="search"/></button><button aria-label="发布" onClick={()=>act("打开创作中心")}><ZhihuIcon name="plus"/></button></div>
     </header>
-    <nav className="zhihu-feed-tabs"><button>关注</button><button className="active">推荐</button><button>热榜</button></nav>
+    {notice&&<div className="zhihu-action-feedback">{notice}</div>}
+    <nav className="zhihu-feed-tabs">{["关注","推荐","热榜"].map(label=><button className={feedTab===label?"active":""} key={label} onClick={()=>{setFeedTab(label);act(`首页频道：${label}`)}}>{label}</button>)}</nav>
     <div className="zhihu-scroll zhihu-feed" ref={scrollRef}>
       <section className="zhihu-greeting"><b>早上好，朋友</b><span>为你推荐值得认真读完的回答</span></section>
       {feed.map((item,index)=><QuestionCard item={item} key={item.id} onOpen={()=>openItem(item)} effective={index===0}/>)}
     </div>
     <nav className="zhihu-bottom-nav" aria-label="知乎底部导航">
-      <button className="active"><ZhihuIcon name="home"/><span>首页</span></button>
+      <button className="active" onClick={()=>{setView("home");act("已回到首页")}}><ZhihuIcon name="home"/><span>首页</span></button>
       <button onClick={()=>setView("ideas")}><span className="zhihu-kanshan">想</span><span>想法</span></button>
-      <button className="create"><ZhihuIcon name="plus"/><span>创作</span></button>
-      <button><ZhihuIcon name="message"/><span>消息</span></button>
+      <button className="create" onClick={()=>act("打开创作中心")}><ZhihuIcon name="plus"/><span>创作</span></button>
+      <button onClick={()=>act("消息中心 · 3 条未读")}><ZhihuIcon name="message"/><span>消息</span></button>
       <button onClick={()=>setView("profile")}><ZhihuIcon name="person"/><span>我的</span></button>
     </nav>
   </div>;

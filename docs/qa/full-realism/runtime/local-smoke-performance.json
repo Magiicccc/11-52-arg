@@ -1,0 +1,35 @@
+[
+  {
+    "viewport": "402x874",
+    "httpStatus": 200,
+    "wallClockMs": 1248,
+    "navigation": {
+      "domContentLoaded": 115.09999999403954,
+      "loadEvent": 116.69999998807907,
+      "transferSize": 300,
+      "decodedBodySize": 772
+    }
+  },
+  {
+    "viewport": "440x956",
+    "httpStatus": 200,
+    "wallClockMs": 898,
+    "navigation": {
+      "domContentLoaded": 144.59999999403954,
+      "loadEvent": 145.90000000596046,
+      "transferSize": 300,
+      "decodedBodySize": 772
+    }
+  },
+  {
+    "viewport": "1440x1000",
+    "httpStatus": 200,
+    "wallClockMs": 898,
+    "navigation": {
+      "domContentLoaded": 144.90000000596046,
+      "loadEvent": 146.30000001192093,
+      "transferSize": 300,
+      "decodedBodySize": 772
+    }
+  }
+]

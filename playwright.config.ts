@@ -8,6 +8,7 @@ const chromiumExecutablePath = process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH;
 
 export default defineConfig({
   testDir: "./tests/e2e",
+  outputDir: "test-results/playwright-artifacts",
   fullyParallel: true,
   workers: 2,
   timeout: 45_000,

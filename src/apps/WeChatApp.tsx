@@ -4,6 +4,7 @@ import { useGame } from "@/app/GameContext";
 import { activeBody, getContentItem, unlockedItemsForApp } from "@/content/selectors";
 import type { ContentItem } from "@/contracts/content";
 import { getPath } from "@/engine/path-utils";
+import { ordinaryWechatThreads, ordinaryXhsNotes, type OrdinaryMessage } from "@/content/realism-life-data";
 
 type SearchResult = { app?: string; title?: string; detail?: string };
 type Body={
@@ -32,11 +33,21 @@ type Body={
 };
 
 export function WeChatApp(){
-  const {state,activeDeviceId,emit}=useGame();
-  const [thread,setThread]=useState<string|null>(null);
-  const [query,setQuery]=useState("");
+  const {state,activeDeviceId,emit,setUiFlag}=useGame();
+  const [thread,setThreadState]=useState<string|null>(null);
+  const savedTab=state.world.flags[`ui.wechat.tab.${activeDeviceId}`];
+  const [tab,setTabState]=useState(typeof savedTab==="string"?savedTab:"微信");
+  const savedQuery=state.world.flags[`ui.wechat.query.${activeDeviceId}`];
+  const [query,setQueryState]=useState(typeof savedQuery==="string"?savedQuery:"");
   const [showSearch,setShowSearch]=useState(false);
   const [played,setPlayed]=useState<string[]>([]);
+  const [showMenu,setShowMenu]=useState(false);
+  const [showExtras,setShowExtras]=useState(false);
+  const [showThreadSearch,setShowThreadSearch]=useState(false);
+  const [showThreadInfo,setShowThreadInfo]=useState(false);
+  const [threadQuery,setThreadQuery]=useState("");
+  const [messageMenuId,setMessageMenuId]=useState<string|null>(null);
+  const [composerText,setComposerText]=useState("");
   const items=unlockedItemsForApp(state,"app.wechat");
   const zhoulanItem=getContentItem("a3.zhoulan.thread");
   const zhoulanBody=zhoulanItem?activeBody(state,zhoulanItem) as Body:undefined;
@@ -45,9 +56,23 @@ export function WeChatApp(){
   const syncBody=syncItem?activeBody(state,syncItem) as Body:undefined;
   const playerSynced=state.story.completedSceneIds.includes("A3-09");
   const momLabel=playerSynced?(syncBody?.momContact??"李女士"):"妈妈";
+  const setThread=(value:string|null)=>{
+    setThreadState(value);
+  };
+  const setTab=(value:string)=>{
+    setTabState(value);
+    setUiFlag(`wechat.tab.${activeDeviceId}`,value);
+    emit("app.view.changed","app.wechat",{view:value});
+  };
+  const setQuery=(value:string)=>{
+    setQueryState(value);
+    setUiFlag(`wechat.query.${activeDeviceId}`,value);
+  };
+  const ordinaryKeys=ordinaryWechatThreads.map((ordinary)=>ordinary.title==="陈屿"||ordinary.title==="文件传输助手"?ordinary.title:ordinary.id);
   const threads=activeDeviceId==="player"
-    ?[momLabel,"爸爸","阿序"]
-    :["陈屿","妈","文件传输助手",...(state.content.unlockedContentIds.includes("message.pb_0425.01")?["PB_0425"]:[]),...(zhoulanUnlocked?["__zhoulan"]:[])];
+    ?[momLabel,"爸爸","阿序",...ordinaryKeys.filter(key=>key!=="陈屿")]
+    :[...ordinaryKeys,"妈",...(state.content.unlockedContentIds.includes("message.pb_0425.01")?["PB_0425"]:[]),...(zhoulanUnlocked?["__zhoulan"]:[])];
+  const ordinaryForThread=ordinaryWechatThreads.find((ordinary)=>ordinary.id===thread||ordinary.title===thread);
 
   const searchItem=getContentItem("search.shenchuan.results");
   const searchBody=searchItem?activeBody(state,searchItem) as Body:undefined;
@@ -66,6 +91,15 @@ export function WeChatApp(){
     if(thread==="文件传输助手"&&fileTransferItem) result.push(fileTransferItem);
     return result;
   },[items,state,thread,fileTransferItem]);
+  const sentMessages=thread?state.world.flags[`ui.wechat.sent.${thread}`]:undefined;
+  const customMessages=Array.isArray(sentMessages)?sentMessages.filter((value):value is string=>typeof value==="string"):[];
+  const sendMessage=()=>{
+    const value=composerText.trim();
+    if(!thread||!value)return;
+    setUiFlag(`wechat.sent.${thread}`,[...customMessages,value]);
+    emit("message.text.sent",thread,{text:value,source:"P"});
+    setComposerText("");
+  };
 
   const runSearch=(event:React.FormEvent)=>{
     event.preventDefault();
@@ -93,14 +127,26 @@ export function WeChatApp(){
         </div>}</>}
         {voicePlayed&&!state.story.completedSceneIds.includes("A3-07")&&<p className="evidence-instruction">盲证已取得。请到淘宝打开“蓝色搪瓷杯订单”作为独立来源；污染路径也必须完成此补足。</p>}
         {state.story.completedSceneIds.includes("A3-07")&&!corrected&&<button className="primary-action" data-testid="reopen-zhoulan-r3" onClick={()=>emit("voice.variant.corrected","voice.zhoulan.bluecup",{from:"R2",to:"R3",sameMaster:true})}>重新进入会话并核对原语音</button>}
-        {corrected&&<section className="correction-thread" data-testid="zhoulan-r3"><div className="bubble theirs"><button className="voice-message"><span>▶︎</span><i>{zhoulanBody.voiceDuration}″</i><em>同一母带 · R3</em></button><span className="voice-transcript">{zhoulanBody.voiceTranscript}</span></div>{(zhoulanBody.correctionMessages??[]).map(text=><div className="bubble theirs" key={text}>{text}</div>)}<p>原通知预览暂存残片：{zhoulanBody.notificationPreview}</p></section>}
-        <div className="chat-composer"><button>＋</button><input aria-label="消息" placeholder="发消息"/><button>发送</button></div>
+        {corrected&&<section className="correction-thread" data-testid="zhoulan-r3"><div className="bubble theirs"><button className="voice-message" onClick={()=>emit("audio.voice.played","voice.zhoulan.bluecup.r3",{duration:zhoulanBody.voiceDuration??18.2,sameMaster:true,source:"P"})}><span>▶︎</span><i>{zhoulanBody.voiceDuration}″</i><em>同一母带 · R3</em></button><span className="voice-transcript">{zhoulanBody.voiceTranscript}</span></div>{(zhoulanBody.correctionMessages??[]).map(text=><div className="bubble theirs" key={text}>{text}</div>)}<p>原通知预览暂存残片：{zhoulanBody.notificationPreview}</p></section>}
+        <WechatComposer
+          text={composerText}
+          onText={setComposerText}
+          onSend={sendMessage}
+          showExtras={showExtras}
+          onToggleExtras={()=>setShowExtras(value=>!value)}
+          onExtra={(type)=>emit("message.attachment.picker.opened","thread.zhoulan",{type,source:"P"})}
+        />
       </div>
     </AppChrome>;
   }
 
-  if(thread) return <AppChrome title={thread} actions={<button data-testid="wechat-conversations" onClick={()=>setThread(null)}>会话</button>}>
+  if(thread) return <AppChrome title={ordinaryForThread?.title??thread} actions={<div className="wechat-chat-header-actions"><button aria-label="搜索聊天记录" onClick={()=>setShowThreadSearch(value=>!value)}>⌕</button><button aria-label="聊天信息" onClick={()=>setShowThreadInfo(value=>!value)}>•••</button><button data-testid="wechat-conversations" onClick={()=>setThread(null)}>会话</button></div>}>
     <div className="chat-thread">
+      {showThreadSearch&&<section className="wechat-thread-search"><input autoFocus value={threadQuery} onChange={event=>setThreadQuery(event.target.value)} placeholder="搜索聊天记录"/><b>{ordinaryForThread?.messages.filter(message=>!threadQuery.trim()||message.text.includes(threadQuery.trim())).length??0} 条结果</b></section>}
+      {showThreadInfo&&<section className="wechat-thread-info"><header><span className="avatar">{ordinaryForThread?.avatar??thread.slice(0,1)}</span><b>{ordinaryForThread?.title??thread}</b></header><button onClick={()=>setUiFlag(`wechat.pinned.${thread}`,true)}>置顶聊天</button><button onClick={()=>setUiFlag(`wechat.muted.${thread}`,true)}>消息免打扰</button><button onClick={()=>setShowThreadSearch(true)}>查找聊天内容</button></section>}
+      {ordinaryForThread?.messages
+        .filter(message=>!showThreadSearch||!threadQuery.trim()||message.text.includes(threadQuery.trim()))
+        .map(message=><OrdinaryWechatMessage message={message} key={message.id} menuOpen={messageMenuId===message.id} onMenu={()=>setMessageMenuId(value=>value===message.id?null:message.id)} onAction={(action)=>{setUiFlag(`wechat.message.${action}.${message.id}`,true);emit("content.item.interacted",message.id,{action,source:"P"});setMessageMenuId(null)}}/>)}
       {threadItems.map(item=>{
         const b=activeBody(state,item) as Body;
         const isVoice=item.kind==="voice";
@@ -119,11 +165,38 @@ export function WeChatApp(){
       {thread==="陈屿"&&state.story.completedSceneIds.includes("A1-05")&&!state.story.completedSceneIds.includes("A1-06")&&<button className="primary-action" data-testid="share-photo-chenyu" onClick={()=>emit("message.attachment.sent","photo.shenchuan.group.01",{})}>把“桥下咖啡”照片发给陈屿</button>}
       {playerSynced&&thread===momLabel&&(syncBody?.momMessages??[]).map(text=><div className="bubble theirs" key={text}>{text}</div>)}
       {playerSynced&&thread==="阿序"&&(syncBody?.axuMessages??[]).map(text=><div className="bubble theirs" key={text}>{text}</div>)}
-      <div className="chat-composer"><button>＋</button><input aria-label="消息" placeholder="发消息"/><button>发送</button></div>
+      {customMessages.map((text,index)=><div className="bubble mine" key={`custom-${index}`}><span>{text}</span><small>刚刚</small></div>)}
+      <WechatComposer
+        text={composerText}
+        onText={setComposerText}
+        onSend={sendMessage}
+        showExtras={showExtras}
+        onToggleExtras={()=>setShowExtras(value=>!value)}
+        onExtra={(type)=>emit("message.attachment.picker.opened",thread,{type,source:"P"})}
+      />
     </div>
   </AppChrome>;
 
-  return <AppChrome title="微信" actions={<button data-testid="app-effective-action" onClick={()=>setShowSearch(v=>!v)}>＋</button>}>
+  if(tab==="通讯录") return <WechatScaffold tab={tab} onTab={setTab}>
+    <header className="wechat-section-header"><strong>通讯录</strong><button onClick={()=>setShowMenu(value=>!value)}>添加朋友</button></header>
+    <div className="wechat-contact-tools">{["新的朋友","仅聊天的朋友","群聊","标签","公众号"].map(label=><button key={label} onClick={()=>emit("content.item.interacted","app.wechat",{surface:"contacts",label,source:"P"})}><span>{label.slice(0,1)}</span><b>{label}</b><i>›</i></button>)}</div>
+    <div className="wechat-contact-list"><h2>联系人</h2>{ordinaryWechatThreads.filter(item=>!item.group).map(item=><button key={item.id} onClick={()=>setThread(item.title==="陈屿"||item.title==="文件传输助手"?item.title:item.id)}><span className="avatar">{item.avatar}</span><b>{item.title}</b></button>)}</div>
+  </WechatScaffold>;
+
+  if(tab==="发现") return <WechatScaffold tab={tab} onTab={setTab}>
+    <header className="wechat-section-header"><strong>发现</strong></header>
+    <div className="wechat-discover-menu">{["朋友圈","视频号","直播","扫一扫","摇一摇","看一看","搜一搜","附近"].map((label,index)=><button key={label} onClick={()=>setUiFlag(`wechat.discovery.${label}`,true)}><span>{["◎","▶","▣","⌗","↔","◉","⌕","⌖"][index]}</span><b>{label}</b><i>›</i></button>)}</div>
+    <section className="wechat-moments-preview"><header><b>朋友圈</b><span>最近动态</span></header>{ordinaryXhsNotes.slice(0,8).map(note=><article key={note.id}><span className="avatar">{note.avatar}</span><div><b>{note.author}</b><p>{note.title}</p><img src={note.media} alt="普通生活动态"/><small>{note.date}</small></div></article>)}</section>
+  </WechatScaffold>;
+
+  if(tab==="我") return <WechatScaffold tab={tab} onTab={setTab}>
+    <section className="wechat-me-card"><span className="avatar">川</span><div><h1>川流档案</h1><p>微信号：chuanliu_archive</p><small>＋ 状态</small></div><button onClick={()=>setUiFlag("wechat.me.qrVisible",true)}>二维码</button></section>
+    <div className="wechat-me-menu">{["服务","收藏","朋友圈","卡包","表情","设置"].map(label=><button key={label} onClick={()=>setUiFlag(`wechat.me.${label}`,true)}><span>{label.slice(0,1)}</span><b>{label}</b><i>›</i></button>)}</div>
+  </WechatScaffold>;
+
+  return <WechatScaffold tab={tab} onTab={setTab}>
+    <header className="wechat-section-header"><strong>微信</strong><div><button data-testid="app-effective-action" aria-label="搜索" onClick={()=>setShowSearch(value=>!value)}>⌕</button><button aria-label="更多" onClick={()=>setShowMenu(value=>!value)}>＋</button></div></header>
+    {showMenu&&<div className="wechat-plus-menu">{["发起群聊","添加朋友","扫一扫","收付款"].map(label=><button key={label} onClick={()=>{setShowMenu(false);emit("content.item.interacted","app.wechat",{surface:"plus-menu",label,source:"P"})}}>{label}</button>)}</div>}
     <form className="wechat-search" onSubmit={runSearch}>
       <input data-testid="wechat-search-input" value={query} onChange={event=>{setQuery(event.target.value);setShowSearch(false)}} placeholder="搜索" aria-label="微信搜索"/>
       <button data-testid="wechat-search-submit">搜索</button>
@@ -136,14 +209,59 @@ export function WeChatApp(){
       </>}
     </section>}
     <div className="list">{threads.map(name=>{
-      const displayName=name==="__zhoulan"?(zhoulanBody?.contact??"周岚"):name;
+      const ordinary=ordinaryWechatThreads.find(item=>item.id===name||item.title===name);
+      const displayName=name==="__zhoulan"?(zhoulanBody?.contact??"周岚"):(ordinary?.title??name);
       const sourceName=name===momLabel&&playerSynced?"妈妈":name;
       const last=items.filter(i=>(activeBody(state,i) as Body)?.thread===sourceName).at(-1);
       const body=last?activeBody(state,last) as Body:undefined;
       const preview=name==="__zhoulan"?(zhoulanBody?.notificationPreview??"这个号怎么会在我通讯录里？"):body?.text??body?.transcript??(name==="文件传输助手"?"本机文件与传输记录":"暂无新消息");
       return <button className="list-row" data-testid={name==="__zhoulan"?"thread-周岚":`thread-${displayName}`} key={name} onClick={()=>{setThread(name);setShowSearch(false)}}>
-        <span className="avatar">{displayName.slice(0,1)}</span><span><b>{displayName}</b><small>{preview}</small></span><time>{body?.time??""}</time>
+        <span className="avatar">{ordinary?.avatar??displayName.slice(0,1)}</span><span><b>{displayName}</b><small>{ordinary?.messages.at(-1)?.text??preview}</small></span><time>{ordinary?.messages.at(-1)?.time??body?.time??""}</time>
       </button>;
     })}</div>
-  </AppChrome>;
+  </WechatScaffold>;
+}
+
+function OrdinaryWechatMessage({
+  message,menuOpen,onMenu,onAction
+}:{
+  message:OrdinaryMessage;
+  menuOpen:boolean;
+  onMenu():void;
+  onAction(action:string):void;
+}) {
+  const mine=message.sender==="self";
+  return <div className={`bubble ${mine?"mine":"theirs"} wechat-message-${message.type}`} role="button" tabIndex={0} aria-label="点按或长按消息" onClick={onMenu} onContextMenu={event=>{event.preventDefault();onMenu()}} onKeyDown={event=>{if(event.key==="Enter")onMenu()}}>
+    {message.type!=="text"&&<span className="wechat-message-kind">{{
+      image:"图片",voice:`语音 ${message.duration??0}″`,file:"文件",location:"位置",link:"链接",sticker:"表情",quote:"引用",recalled:"已撤回",payment:"转账",text:""
+    }[message.type]}</span>}
+    <span>{message.text}</span>
+    <small>{message.time}</small>
+    {menuOpen&&<aside className="wechat-message-menu">{["复制","引用","收藏","删除"].map(action=><button key={action} onClick={event=>{event.stopPropagation();onAction(action)}}>{action}</button>)}</aside>}
+  </div>;
+}
+
+function WechatComposer({
+  text,onText,onSend,showExtras,onToggleExtras,onExtra
+}:{
+  text:string;
+  onText(value:string):void;
+  onSend():void;
+  showExtras:boolean;
+  onToggleExtras():void;
+  onExtra(type:string):void;
+}) {
+  return <>
+    {showExtras&&<div className="wechat-extra-panel">{["照片","拍摄","视频通话","位置","红包","文件"].map(type=><button key={type} onClick={()=>onExtra(type)}><span>{type.slice(0,1)}</span>{type}</button>)}</div>}
+    <div className="chat-composer"><button aria-label="语音输入" onClick={()=>onExtra("语音输入")}>◉</button><input aria-label="消息" value={text} onChange={event=>onText(event.target.value)} placeholder="发消息"/><button aria-label="表情" onClick={()=>onExtra("表情")}>☺</button><button aria-label="更多消息类型" onClick={onToggleExtras}>＋</button><button disabled={!text.trim()} onClick={onSend}>发送</button></div>
+  </>;
+}
+
+function WechatScaffold({children,tab,onTab}:{children:React.ReactNode;tab:string;onTab(value:string):void}) {
+  const {goBack}=useGame();
+  return <div className="app-window wechat-real" data-testid="wechat-home">
+    <button className="platform-close-hit" data-testid="app-back" aria-label="退出微信" onClick={goBack}/>
+    <div className="wechat-page-scroll">{children}</div>
+    <nav className="wechat-bottom-nav" aria-label="微信底部导航">{["微信","通讯录","发现","我"].map(label=><button className={tab===label?"active":""} key={label} onClick={()=>onTab(label)}><span>{label==="微信"?"◌":label==="通讯录"?"♙":label==="发现"?"◎":"♙"}</span><b>{label}</b></button>)}</nav>
+  </div>;
 }

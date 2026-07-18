@@ -1,0 +1,27 @@
+# 抖音 research supplement
+
+- Research date: 2026-07-18
+- Platform: iPhone / iOS 26.5.2 target
+- Locale: zh-CN
+- Appearance: light
+- Current verification: Frozen 2026 reference retained; official product URL recorded for follow-up drift review
+- Official source: https://apps.apple.com/mo/app/%E6%8A%96%E9%9F%B3-douyin/id1142110895
+- Frozen source directory: `references/ui/11_52_UI_Reference_Pack_V1.0_全量版/apps/douyin`
+
+## Frozen source log
+
+# 来源日志
+
+- App：抖音
+- 类别：社区支持
+- 游戏角色：短视频、异常帧、评论和浏览历史。
+
+| 参考ID | 页面 | 版本/代际 | 来源类型 | 来源 | 置信度 |
+|---|---|---|---|---|---|
+| DY-FEED-01 | 体验页/视频流 | 抖音 39.6.0 | 近期公开iPhone宣传/实拍 | https://img.ddooo.com/uppic/20250312/4e1f596a81eb9820f895a27430fc18a6.png | 中 |
+| DY-VIDEO-01 | 推荐视频页 | 抖音 39.6.0 | 近期公开iPhone宣传/实拍 | https://img.ddooo.com/uppic/20250312/b509ac131c57e8a701fa7a0db38f75d4.png | 中 |
+| DY-LIVE-01 | 直播页面 | 抖音 39.6.0 | 近期公开iPhone宣传/实拍 | https://img.ddooo.com/uppic/20250312/a566803bb6943e19fdc3ed4223f9a52b.png | 中 |
+| DY-CHALLENGE-01 | 挑战/活动入口 | 抖音 39.6.0 | 近期公开截图 | 来源页面未保留【未经验证】 | 中低 |
+| DY-SEARCH-01 | 搜索页面 | 抖音 39.6.0 | 近期公开截图 | 来源页面未保留【未经验证】 | 中低 |
+
+> 公开截图用于私人测试期的视觉复刻。最终实现仍需用DOM/CSS重建，不得把截图整页作为背景。

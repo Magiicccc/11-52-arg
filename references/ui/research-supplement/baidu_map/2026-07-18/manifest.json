@@ -1,0 +1,17 @@
+{
+  "supplementVersion": "1.0",
+  "researchedAt": "2026-07-18",
+  "app": "百度地图",
+  "slug": "baidu_map",
+  "target": {
+    "viewport": "402x874",
+    "os": "iOS 26.5.2",
+    "language": "简体中文",
+    "appearance": "浅色模式"
+  },
+  "officialSource": "https://apps.apple.com/cn/app/%E7%99%BE%E5%BA%A6%E5%9C%B0%E5%9B%BE/id452186370",
+  "frozenReferencePath": "references/ui/11_52_UI_Reference_Pack_V1.0_全量版/apps/baidu_map",
+  "verification": "Official App Store/product source rechecked on 2026-07-18",
+  "authority": "Frozen raw screenshots remain the visual authority. Current sources may identify drift but cannot override a frozen reference without a documented conflict.",
+  "greyReleaseStatus": "unknown; do not reproduce unverified grey-release modules"
+}

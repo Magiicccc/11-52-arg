@@ -1,0 +1,17 @@
+{
+  "supplementVersion": "1.0",
+  "researchedAt": "2026-07-18",
+  "app": "美团",
+  "slug": "meituan",
+  "target": {
+    "viewport": "402x874",
+    "os": "iOS 26.5.2",
+    "language": "简体中文",
+    "appearance": "浅色模式"
+  },
+  "officialSource": "https://apps.apple.com/cn/app/%E7%BE%8E%E5%9B%A2/id423084029",
+  "frozenReferencePath": "references/ui/11_52_UI_Reference_Pack_V1.0_全量版/apps/meituan",
+  "verification": "Frozen 2026 reference retained; official product URL recorded for follow-up drift review",
+  "authority": "Frozen raw screenshots remain the visual authority. Current sources may identify drift but cannot override a frozen reference without a documented conflict.",
+  "greyReleaseStatus": "unknown; do not reproduce unverified grey-release modules"
+}

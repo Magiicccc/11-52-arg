@@ -1,0 +1,17 @@
+{
+  "supplementVersion": "1.0",
+  "researchedAt": "2026-07-18",
+  "app": "微信",
+  "slug": "wechat",
+  "target": {
+    "viewport": "402x874",
+    "os": "iOS 26.5.2",
+    "language": "简体中文",
+    "appearance": "浅色模式"
+  },
+  "officialSource": "https://apps.apple.com/cn/app/%E5%BE%AE%E4%BF%A1/id414478124",
+  "frozenReferencePath": "references/ui/11_52_UI_Reference_Pack_V1.0_全量版/apps/wechat",
+  "verification": "Official App Store/product source rechecked on 2026-07-18",
+  "authority": "Frozen raw screenshots remain the visual authority. Current sources may identify drift but cannot override a frozen reference without a documented conflict.",
+  "greyReleaseStatus": "unknown; do not reproduce unverified grey-release modules"
+}

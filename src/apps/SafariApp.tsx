@@ -41,9 +41,10 @@ export function SafariApp(){
     }
   };
 
-  return <AppChrome title="Safari" actions={<button onClick={()=>setPage("start")}>标签页</button>}>
+  return <AppChrome title="Safari" actions={<button onClick={()=>{setPage(current=>current==="tabs"?"start":"tabs");emit("app.view.changed","app.safari",{view:"tabs",source:"P"})}}>标签页</button>}>
     <div className="safari-shell">
       <div className="address-bar">{page==="start"?"搜索或输入网站名称":page}</div>
+      {page==="tabs"&&<section className="safari-tabs-page"><h2>标签页</h2><button onClick={()=>setPage("start")}><b>起始页</b><span>搜索或输入网站名称</span></button><button onClick={()=>setPage("results")}><b>搜索结果</b><span>{query||"最近搜索"}</span></button><button onClick={()=>{setQuery("");setPage("start");emit("content.item.created","app.safari",{surface:"new-tab",source:"P"})}}>＋ 新建标签页</button></section>}
       {page==="start"&&<>
         <form className="browser-search" onSubmit={e=>{e.preventDefault();search(query)}}>
           <input data-testid="safari-search-input" value={query} onChange={e=>setQuery(e.target.value)} placeholder="搜索互联网"/>

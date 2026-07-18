@@ -1,0 +1,63 @@
+{
+  "researchedAt": "2026-07-18",
+  "app": "铁路12306",
+  "viewport": "402x874",
+  "inheritedFrom": "references/ui/11_52_UI_Reference_Pack_V1.0_全量版/apps/railway12306/measurements.json",
+  "measurements": {
+    "targetViewport": {
+      "width": 402,
+      "height": 874,
+      "unit": "css_px"
+    },
+    "secondaryViewport": {
+      "width": 440,
+      "height": 956,
+      "unit": "css_px"
+    },
+    "globalIOSTokens": {
+      "statusBarNominal": 59,
+      "bottomSafeAreaNominal": 34,
+      "minimumTouchTarget": 44
+    },
+    "sourceImages": [
+      {
+        "refId": "RAIL596-HOME-01",
+        "pixelSize": "480x853",
+        "path": "apps/railway12306/raw/RAIL596-HOME-01__RAIL12306_5.9.6_01_home_structure.jpg"
+      },
+      {
+        "refId": "RAIL596-A11Y-01",
+        "pixelSize": "480x853",
+        "path": "apps/railway12306/raw/RAIL596-A11Y-01__RAIL12306_5.9.6_02_accessibility.jpg"
+      },
+      {
+        "refId": "RAIL596-TRIP-01",
+        "pixelSize": "480x853",
+        "path": "apps/railway12306/raw/RAIL596-TRIP-01__RAIL12306_5.9.6_03_trip_detail.jpg"
+      },
+      {
+        "refId": "RAIL596-BOARD-01",
+        "pixelSize": "480x853",
+        "path": "apps/railway12306/raw/RAIL596-BOARD-01__RAIL12306_5.9.6_04_station_board.jpg"
+      },
+      {
+        "refId": "RAIL596-HOME-02",
+        "pixelSize": "480x1022",
+        "path": "apps/railway12306/raw/RAIL596-HOME-02__RAIL12306_5.9.6_05_home_real.jpg"
+      },
+      {
+        "refId": "RAIL596-ORDER-01",
+        "pixelSize": "480x1022",
+        "path": "apps/railway12306/raw/RAIL596-ORDER-01__RAIL12306_5.9.6_06_orders.jpg"
+      },
+      {
+        "refId": "RAIL596-HISTORY-01",
+        "pixelSize": "480x1022",
+        "path": "apps/railway12306/raw/RAIL596-HISTORY-01__RAIL12306_5.9.6_07_history.jpg"
+      }
+    ],
+    "measurementRule": "以raw截图的可见像素几何为准；比例缩放到402×874后测量。无精确直图状态必须复用同App已测组件。",
+    "doNotInferFromWordThumbnail": true
+  },
+  "measurementPolicy": "No cross-app interpolation. Runtime deviations must be recorded in the per-app QA report."
+}

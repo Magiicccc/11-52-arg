@@ -1,4 +1,4 @@
-import { createContext, useCallback, useContext, useEffect, useMemo, useState, type ReactNode } from "react";
+import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import type { DeviceId, GameState, JsonValue } from "@/contracts/game-state";
 import type { EventReceipt, StoryEvent } from "@/contracts/story-event";
 import { triggers } from "@/content/content-pack";
@@ -30,18 +30,43 @@ export function GameProvider({children}:{children:ReactNode}) {
   const [journal,setJournal] = useState<StoryEvent[]>([]);
   const [receipts,setReceipts] = useState<EventReceipt[]>([]);
   const [ready,setReady] = useState(false);
+  const stateRef=useRef(state);
+  const journalRef=useRef(journal);
+  const receiptsRef=useRef(receipts);
+  stateRef.current=state;
+  journalRef.current=journal;
+  receiptsRef.current=receipts;
 
   useEffect(() => { void loadSave().then((save) => { if (save) { setState(save.snapshot); setJournal(save.journal); setReceipts(save.receipts); } setReady(true); }); }, []);
   useEffect(() => { if (ready) void commitSave(state,journal,receipts); }, [state,journal,receipts,ready]);
 
   const activeDeviceId = (state.world.flags.activeDeviceId === "investigation" ? "investigation" : "player") as DeviceId;
-  const mutate = useCallback((fn:(draft:GameState)=>void) => setState((current) => { const draft=structuredClone(current); fn(draft); draft.revision += 1; return draft; }), []);
+  const activeDeviceIdRef=useRef(activeDeviceId);
+  activeDeviceIdRef.current=activeDeviceId;
+  const mutate = useCallback((fn:(draft:GameState)=>void) => {
+    const draft=structuredClone(stateRef.current);
+    fn(draft);
+    draft.revision += 1;
+    stateRef.current=draft;
+    setState(draft);
+  }, []);
 
   const emit = useCallback((type:string,targetId?:string,payload:JsonValue={}) => {
-    const event = createStoryEvent({type,deviceId:activeDeviceId,sceneId:state.story.currentSceneId,actorId:"actor.player",targetId,payload});
-    const result = processStoryEvent(state,journal,receipts,event,triggers);
+    const currentState=stateRef.current;
+    const event = createStoryEvent({
+      type,
+      deviceId:activeDeviceIdRef.current,
+      sceneId:currentState.story.currentSceneId,
+      actorId:"actor.player",
+      targetId,
+      payload
+    });
+    const result = processStoryEvent(currentState,journalRef.current,receiptsRef.current,event,triggers);
+    stateRef.current=result.state;
+    journalRef.current=result.journal;
+    receiptsRef.current=result.receipts;
     setState(result.state); setJournal(result.journal); setReceipts(result.receipts);
-  }, [activeDeviceId,state,journal,receipts]);
+  }, []);
 
   const value = useMemo<GameContextValue>(() => ({
     state, ready, activeDeviceId,

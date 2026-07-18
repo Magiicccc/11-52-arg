@@ -1,0 +1,17 @@
+{
+  "supplementVersion": "1.0",
+  "researchedAt": "2026-07-18",
+  "app": "百度网盘",
+  "slug": "baidunetdisk",
+  "target": {
+    "viewport": "402x874",
+    "os": "iOS 26.5.2",
+    "language": "简体中文",
+    "appearance": "浅色模式"
+  },
+  "officialSource": "https://apps.apple.com/cn/app/%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98/id547166701",
+  "frozenReferencePath": "references/ui/11_52_UI_Reference_Pack_V1.0_全量版/apps/baidunetdisk",
+  "verification": "Frozen 2026 reference retained; official product URL recorded for follow-up drift review",
+  "authority": "Frozen raw screenshots remain the visual authority. Current sources may identify drift but cannot override a frozen reference without a documented conflict.",
+  "greyReleaseStatus": "unknown; do not reproduce unverified grey-release modules"
+}

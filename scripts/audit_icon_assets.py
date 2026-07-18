@@ -8,7 +8,10 @@ from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[1]
 MANIFEST_PATH = ROOT / "content" / "case-001" / "apps" / "app-manifests.json"
-REPORT_DIR = ROOT / "docs" / "qa" / "live-site"
+REPORT_DIRS = [
+    ROOT / "docs" / "qa" / "live-site",
+    ROOT / "docs" / "qa" / "full-realism",
+]
 REFERENCE_ROOT = next((ROOT / "references" / "ui").glob("*"))
 
 
@@ -90,12 +93,6 @@ def main() -> None:
                 "needsCssChange": False,
             })
 
-    REPORT_DIR.mkdir(parents=True, exist_ok=True)
-    (REPORT_DIR / "icon-asset-audit.json").write_text(
-        json.dumps(rows, ensure_ascii=False, indent=2) + "\n",
-        encoding="utf-8",
-    )
-
     lines = [
         "# GitHub Pages 图标资产审计",
         "",
@@ -127,7 +124,13 @@ def main() -> None:
         "- 第三方 WebP 仅是冻结 PNG 的无损传输副本；逐像素一致性由 `scripts/prepare_runtime_icons.py` 验证。",
         "",
     ]
-    (REPORT_DIR / "ICON_ASSET_AUDIT.md").write_text("\n".join(lines), encoding="utf-8")
+    for report_dir in REPORT_DIRS:
+        report_dir.mkdir(parents=True, exist_ok=True)
+        (report_dir / "icon-asset-audit.json").write_text(
+            json.dumps(rows, ensure_ascii=False, indent=2) + "\n",
+            encoding="utf-8",
+        )
+        (report_dir / "ICON_ASSET_AUDIT.md").write_text("\n".join(lines), encoding="utf-8")
 
 
 if __name__ == "__main__":

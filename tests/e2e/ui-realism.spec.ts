@@ -41,9 +41,9 @@ test("home screen uses measured icon geometry and numeric badges",async ({page})
   await expect(page.locator(".app-badge")).toHaveCount(1);
   await expect(page.locator(".app-badge")).toHaveText("3");
   await expect(page.locator(".app-badge:empty")).toHaveCount(0);
-  await expect(page.locator(".home-page").first().locator(".app-icon-button")).toHaveCount(8);
+  await expect(page.locator(".home-page").first().locator(".app-icon-button")).toHaveCount(16);
   await expect(page.locator(".home-dock .app-icon-button")).toHaveCount(4);
-  await expect(page.locator(".page-dots i")).toHaveCount(3);
+  await expect(page.locator(".page-dots i")).toHaveCount(2);
   await expect(page.locator(".prototype-toolbar,.prototype-status")).toHaveCount(0);
 
   const icons=page.locator(".home-page").first().locator(".icon-wrap");

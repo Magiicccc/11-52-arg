@@ -1,0 +1,53 @@
+{
+  "researchedAt": "2026-07-18",
+  "app": "QQ邮箱",
+  "viewport": "402x874",
+  "inheritedFrom": "references/ui/11_52_UI_Reference_Pack_V1.0_全量版/apps/qqmail/measurements.json",
+  "measurements": {
+    "targetViewport": {
+      "width": 402,
+      "height": 874,
+      "unit": "css_px"
+    },
+    "secondaryViewport": {
+      "width": 440,
+      "height": 956,
+      "unit": "css_px"
+    },
+    "globalIOSTokens": {
+      "statusBarNominal": 59,
+      "bottomSafeAreaNominal": 34,
+      "minimumTouchTarget": 44
+    },
+    "sourceImages": [
+      {
+        "refId": "QQMAIL717-CLOUD-01",
+        "pixelSize": "480x1038",
+        "path": "apps/qqmail/raw/QQMAIL717-CLOUD-01__QQMAIL_7.1.6_01_file_cloud.jpg"
+      },
+      {
+        "refId": "QQMAIL717-COMPOSE-01",
+        "pixelSize": "480x1038",
+        "path": "apps/qqmail/raw/QQMAIL717-COMPOSE-01__QQMAIL_7.1.6_02_compose.jpg"
+      },
+      {
+        "refId": "QQMAIL717-CALENDAR-01",
+        "pixelSize": "480x1038",
+        "path": "apps/qqmail/raw/QQMAIL717-CALENDAR-01__QQMAIL_7.1.6_03_calendar.jpg"
+      },
+      {
+        "refId": "QQMAIL717-BOX-01",
+        "pixelSize": "480x1038",
+        "path": "apps/qqmail/raw/QQMAIL717-BOX-01__QQMAIL_7.1.6_04_mailboxes.jpg"
+      },
+      {
+        "refId": "QQMAIL717-MULTI-01",
+        "pixelSize": "480x1038",
+        "path": "apps/qqmail/raw/QQMAIL717-MULTI-01__QQMAIL_7.1.6_05_multiwindow.jpg"
+      }
+    ],
+    "measurementRule": "以raw截图的可见像素几何为准；比例缩放到402×874后测量。无精确直图状态必须复用同App已测组件。",
+    "doNotInferFromWordThumbnail": true
+  },
+  "measurementPolicy": "No cross-app interpolation. Runtime deviations must be recorded in the per-app QA report."
+}

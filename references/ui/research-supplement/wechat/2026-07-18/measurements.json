@@ -1,0 +1,68 @@
+{
+  "researchedAt": "2026-07-18",
+  "app": "微信",
+  "viewport": "402x874",
+  "inheritedFrom": "references/ui/11_52_UI_Reference_Pack_V1.0_全量版/apps/wechat/measurements.json",
+  "measurements": {
+    "targetViewport": {
+      "width": 402,
+      "height": 874,
+      "unit": "css_px"
+    },
+    "secondaryViewport": {
+      "width": 440,
+      "height": 956,
+      "unit": "css_px"
+    },
+    "globalIOSTokens": {
+      "statusBarNominal": 59,
+      "bottomSafeAreaNominal": 34,
+      "minimumTouchTarget": 44
+    },
+    "sourceImages": [
+      {
+        "refId": "WX-LIST-01",
+        "pixelSize": "392x696",
+        "path": "apps/wechat/raw/WX-LIST-01__WECHAT_8.0.75_09_message_list_appstore.png"
+      },
+      {
+        "refId": "WX-GROUP-01",
+        "pixelSize": "392x696",
+        "path": "apps/wechat/raw/WX-GROUP-01__WECHAT_8.0.75_10_group_chat_appstore.png"
+      },
+      {
+        "refId": "WX-VOICE-01",
+        "pixelSize": "392x696",
+        "path": "apps/wechat/raw/WX-VOICE-01__WECHAT_8.0.75_11_voice_input_appstore.png"
+      },
+      {
+        "refId": "WX-FILE-01",
+        "pixelSize": "1080x818",
+        "path": "apps/wechat/raw/WX-FILE-01__WECHAT_8.0.75_02_large_video_as_file.jpg"
+      },
+      {
+        "refId": "WX-MOMENT-01",
+        "pixelSize": "1080x1377",
+        "path": "apps/wechat/raw/WX-MOMENT-01__WECHAT_8.0.75_03_moments_search_entry.jpg"
+      },
+      {
+        "refId": "WX-MOMENT-02",
+        "pixelSize": "1068x1422",
+        "path": "apps/wechat/raw/WX-MOMENT-02__WECHAT_8.0.75_04_moments_search_results.jpg"
+      },
+      {
+        "refId": "WX-PLUS-01",
+        "pixelSize": "652x872",
+        "path": "apps/wechat/raw/WX-PLUS-01__WECHAT_8.0.75_07_chat_plus_panel.webp"
+      },
+      {
+        "refId": "WX-SELECT-01",
+        "pixelSize": "650x334",
+        "path": "apps/wechat/raw/WX-SELECT-01__WECHAT_8.0.75_08_multi_select_toolbar.webp"
+      }
+    ],
+    "measurementRule": "以raw截图的可见像素几何为准；比例缩放到402×874后测量。无精确直图状态必须复用同App已测组件。",
+    "doNotInferFromWordThumbnail": true
+  },
+  "measurementPolicy": "No cross-app interpolation. Runtime deviations must be recorded in the per-app QA report."
+}

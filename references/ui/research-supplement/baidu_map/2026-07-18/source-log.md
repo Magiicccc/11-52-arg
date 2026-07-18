@@ -1,0 +1,25 @@
+# 百度地图 research supplement
+
+- Research date: 2026-07-18
+- Platform: iPhone / iOS 26.5.2 target
+- Locale: zh-CN
+- Appearance: light
+- Current verification: Official App Store/product source rechecked on 2026-07-18
+- Official source: https://apps.apple.com/cn/app/%E7%99%BE%E5%BA%A6%E5%9C%B0%E5%9B%BE/id452186370
+- Frozen source directory: `references/ui/11_52_UI_Reference_Pack_V1.0_全量版/apps/baidu_map`
+
+## Frozen source log
+
+# 来源日志
+
+- App：百度地图
+- 类别：核心现实锚点
+- 游戏角色：验证现实地点、坐标、路线、收藏与街景对比。
+
+| 参考ID | 页面 | 版本/代际 | 来源类型 | 来源 | 置信度 |
+|---|---|---|---|---|---|
+| MAP-HOME-01 | 地图首页 | 百度地图近期版本【未经验证】 | 近期公开iPhone截图 | 来源页面未保留【未经验证】 | 中 |
+| MAP-SEARCH-01 | 搜索结果 | 百度地图近期版本【未经验证】 | 近期公开iPhone截图 | 来源页面未保留【未经验证】 | 中 |
+| MAP-FAV-01 | 收藏地点 | 百度地图近期版本【未经验证】 | 近期公开iPhone截图 | 来源页面未保留【未经验证】 | 中 |
+
+> 公开截图用于私人测试期的视觉复刻。最终实现仍需用DOM/CSS重建，不得把截图整页作为背景。

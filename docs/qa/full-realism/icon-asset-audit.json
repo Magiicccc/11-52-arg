@@ -1,0 +1,962 @@
+[
+  {
+    "appName": "微信",
+    "appId": "app.wechat",
+    "currentAssetPath": "/icons/third_party/runtime/wechat.webp",
+    "frozenSourcePath": "references/ui/11_52_UI_Reference_Pack_V1.0_全量版/third_party/wechat.png",
+    "pixelSize": {
+      "width": 256,
+      "height": 256
+    },
+    "format": "WEBP",
+    "hasAlpha": true,
+    "transparentEdgePx": {
+      "left": 0,
+      "top": 0,
+      "right": 0,
+      "bottom": 0
+    },
+    "hasOpaqueWhiteBackground": false,
+    "fromFrozenIcons": true,
+    "sourceRelationship": "pixel-identical WebP derived from frozen third-party PNG",
+    "cssContainer": {
+      "width": "65px (Dock 62px)",
+      "height": "65px (Dock 62px)",
+      "padding": 0,
+      "border": 0,
+      "background": "transparent",
+      "outerBorderRadius": 0,
+      "objectFit": "cover"
+    },
+    "needsAssetReplacement": false,
+    "needsCssChange": false
+  },
+  {
+    "appName": "照片",
+    "appId": "app.photos",
+    "currentAssetPath": "/icons/system/runtime/photos.png",
+    "frozenSourcePath": "references/ui/11_52_UI_Reference_Pack_V1.0_全量版/system/photos.png",
+    "pixelSize": {
+      "width": 256,
+      "height": 256
+    },
+    "format": "PNG",
+    "hasAlpha": true,
+    "transparentEdgePx": {
+      "left": 0,
+      "top": 0,
+      "right": 0,
+      "bottom": 0
+    },
+    "hasOpaqueWhiteBackground": false,
+    "fromFrozenIcons": true,
+    "sourceRelationship": "runtime crop derived from frozen iOS atlas",
+    "cssContainer": {
+      "width": "65px (Dock 62px)",
+      "height": "65px (Dock 62px)",
+      "padding": 0,
+      "border": 0,
+      "background": "transparent",
+      "outerBorderRadius": 0,
+      "objectFit": "cover"
+    },
+    "needsAssetReplacement": false,
+    "needsCssChange": false
+  },
+  {
+    "appName": "Safari",
+    "appId": "app.safari",
+    "currentAssetPath": "/icons/system/runtime/safari.png",
+    "frozenSourcePath": "references/ui/11_52_UI_Reference_Pack_V1.0_全量版/system/safari.png",
+    "pixelSize": {
+      "width": 256,
+      "height": 256
+    },
+    "format": "PNG",
+    "hasAlpha": true,
+    "transparentEdgePx": {
+      "left": 0,
+      "top": 0,
+      "right": 0,
+      "bottom": 0
+    },
+    "hasOpaqueWhiteBackground": false,
+    "fromFrozenIcons": true,
+    "sourceRelationship": "runtime crop derived from frozen iOS atlas",
+    "cssContainer": {
+      "width": "65px (Dock 62px)",
+      "height": "65px (Dock 62px)",
+      "padding": 0,
+      "border": 0,
+      "background": "transparent",
+      "outerBorderRadius": 0,
+      "objectFit": "cover"
+    },
+    "needsAssetReplacement": false,
+    "needsCssChange": false
+  },
+  {
+    "appName": "百度地图",
+    "appId": "app.baidu_map",
+    "currentAssetPath": "/icons/third_party/runtime/baidu_map.webp",
+    "frozenSourcePath": "references/ui/11_52_UI_Reference_Pack_V1.0_全量版/third_party/baidu_map.png",
+    "pixelSize": {
+      "width": 256,
+      "height": 256
+    },
+    "format": "WEBP",
+    "hasAlpha": true,
+    "transparentEdgePx": {
+      "left": 0,
+      "top": 0,
+      "right": 0,
+      "bottom": 0
+    },
+    "hasOpaqueWhiteBackground": false,
+    "fromFrozenIcons": true,
+    "sourceRelationship": "pixel-identical WebP derived from frozen third-party PNG",
+    "cssContainer": {
+      "width": "65px (Dock 62px)",
+      "height": "65px (Dock 62px)",
+      "padding": 0,
+      "border": 0,
+      "background": "transparent",
+      "outerBorderRadius": 0,
+      "objectFit": "cover"
+    },
+    "needsAssetReplacement": false,
+    "needsCssChange": false
+  },
+  {
+    "appName": "电话",
+    "appId": "app.phone",
+    "currentAssetPath": "/icons/system/runtime/phone.png",
+    "frozenSourcePath": "references/ui/11_52_UI_Reference_Pack_V1.0_全量版/system/phone.png",
+    "pixelSize": {
+      "width": 256,
+      "height": 256
+    },
+    "format": "PNG",
+    "hasAlpha": true,
+    "transparentEdgePx": {
+      "left": 0,
+      "top": 0,
+      "right": 0,
+      "bottom": 0
+    },
+    "hasOpaqueWhiteBackground": false,
+    "fromFrozenIcons": true,
+    "sourceRelationship": "runtime crop derived from frozen iOS atlas",
+    "cssContainer": {
+      "width": "65px (Dock 62px)",
+      "height": "65px (Dock 62px)",
+      "padding": 0,
+      "border": 0,
+      "background": "transparent",
+      "outerBorderRadius": 0,
+      "objectFit": "cover"
+    },
+    "needsAssetReplacement": false,
+    "needsCssChange": false
+  },
+  {
+    "appName": "文件",
+    "appId": "app.files",
+    "currentAssetPath": "/icons/system/runtime/files.png",
+    "frozenSourcePath": "references/ui/11_52_UI_Reference_Pack_V1.0_全量版/system/files.png",
+    "pixelSize": {
+      "width": 256,
+      "height": 256
+    },
+    "format": "PNG",
+    "hasAlpha": true,
+    "transparentEdgePx": {
+      "left": 0,
+      "top": 0,
+      "right": 0,
+      "bottom": 0
+    },
+    "hasOpaqueWhiteBackground": false,
+    "fromFrozenIcons": true,
+    "sourceRelationship": "runtime crop derived from frozen iOS atlas",
+    "cssContainer": {
+      "width": "65px (Dock 62px)",
+      "height": "65px (Dock 62px)",
+      "padding": 0,
+      "border": 0,
+      "background": "transparent",
+      "outerBorderRadius": 0,
+      "objectFit": "cover"
+    },
+    "needsAssetReplacement": false,
+    "needsCssChange": false
+  },
+  {
+    "appName": "备忘录",
+    "appId": "app.notes",
+    "currentAssetPath": "/icons/system/runtime/notes.png",
+    "frozenSourcePath": "references/ui/11_52_UI_Reference_Pack_V1.0_全量版/system/notes.png",
+    "pixelSize": {
+      "width": 256,
+      "height": 256
+    },
+    "format": "PNG",
+    "hasAlpha": true,
+    "transparentEdgePx": {
+      "left": 0,
+      "top": 0,
+      "right": 0,
+      "bottom": 0
+    },
+    "hasOpaqueWhiteBackground": false,
+    "fromFrozenIcons": true,
+    "sourceRelationship": "runtime crop derived from frozen iOS atlas",
+    "cssContainer": {
+      "width": "65px (Dock 62px)",
+      "height": "65px (Dock 62px)",
+      "padding": 0,
+      "border": 0,
+      "background": "transparent",
+      "outerBorderRadius": 0,
+      "objectFit": "cover"
+    },
+    "needsAssetReplacement": false,
+    "needsCssChange": false
+  },
+  {
+    "appName": "日历",
+    "appId": "app.calendar",
+    "currentAssetPath": "/icons/system/runtime/calendar.png",
+    "frozenSourcePath": "references/ui/11_52_UI_Reference_Pack_V1.0_全量版/system/calendar.png",
+    "pixelSize": {
+      "width": 256,
+      "height": 256
+    },
+    "format": "PNG",
+    "hasAlpha": true,
+    "transparentEdgePx": {
+      "left": 0,
+      "top": 0,
+      "right": 0,
+      "bottom": 0
+    },
+    "hasOpaqueWhiteBackground": false,
+    "fromFrozenIcons": true,
+    "sourceRelationship": "runtime crop derived from frozen iOS atlas",
+    "cssContainer": {
+      "width": "65px (Dock 62px)",
+      "height": "65px (Dock 62px)",
+      "padding": 0,
+      "border": 0,
+      "background": "transparent",
+      "outerBorderRadius": 0,
+      "objectFit": "cover"
+    },
+    "needsAssetReplacement": false,
+    "needsCssChange": false
+  },
+  {
+    "appName": "设置",
+    "appId": "app.settings",
+    "currentAssetPath": "/icons/system/runtime/settings.png",
+    "frozenSourcePath": "references/ui/11_52_UI_Reference_Pack_V1.0_全量版/system/settings.png",
+    "pixelSize": {
+      "width": 256,
+      "height": 256
+    },
+    "format": "PNG",
+    "hasAlpha": true,
+    "transparentEdgePx": {
+      "left": 0,
+      "top": 0,
+      "right": 0,
+      "bottom": 0
+    },
+    "hasOpaqueWhiteBackground": false,
+    "fromFrozenIcons": true,
+    "sourceRelationship": "runtime crop derived from frozen iOS atlas",
+    "cssContainer": {
+      "width": "65px (Dock 62px)",
+      "height": "65px (Dock 62px)",
+      "padding": 0,
+      "border": 0,
+      "background": "transparent",
+      "outerBorderRadius": 0,
+      "objectFit": "cover"
+    },
+    "needsAssetReplacement": false,
+    "needsCssChange": false
+  },
+  {
+    "appName": "小红书",
+    "appId": "app.xiaohongshu",
+    "currentAssetPath": "/icons/third_party/runtime/xiaohongshu.webp",
+    "frozenSourcePath": "references/ui/11_52_UI_Reference_Pack_V1.0_全量版/third_party/xiaohongshu.png",
+    "pixelSize": {
+      "width": 256,
+      "height": 256
+    },
+    "format": "WEBP",
+    "hasAlpha": true,
+    "transparentEdgePx": {
+      "left": 0,
+      "top": 0,
+      "right": 0,
+      "bottom": 0
+    },
+    "hasOpaqueWhiteBackground": false,
+    "fromFrozenIcons": true,
+    "sourceRelationship": "pixel-identical WebP derived from frozen third-party PNG",
+    "cssContainer": {
+      "width": "65px (Dock 62px)",
+      "height": "65px (Dock 62px)",
+      "padding": 0,
+      "border": 0,
+      "background": "transparent",
+      "outerBorderRadius": 0,
+      "objectFit": "cover"
+    },
+    "needsAssetReplacement": false,
+    "needsCssChange": false
+  },
+  {
+    "appName": "抖音",
+    "appId": "app.douyin",
+    "currentAssetPath": "/icons/third_party/runtime/douyin.webp",
+    "frozenSourcePath": "references/ui/11_52_UI_Reference_Pack_V1.0_全量版/third_party/douyin.png",
+    "pixelSize": {
+      "width": 256,
+      "height": 256
+    },
+    "format": "WEBP",
+    "hasAlpha": true,
+    "transparentEdgePx": {
+      "left": 0,
+      "top": 0,
+      "right": 0,
+      "bottom": 0
+    },
+    "hasOpaqueWhiteBackground": false,
+    "fromFrozenIcons": true,
+    "sourceRelationship": "pixel-identical WebP derived from frozen third-party PNG",
+    "cssContainer": {
+      "width": "65px (Dock 62px)",
+      "height": "65px (Dock 62px)",
+      "padding": 0,
+      "border": 0,
+      "background": "transparent",
+      "outerBorderRadius": 0,
+      "objectFit": "cover"
+    },
+    "needsAssetReplacement": false,
+    "needsCssChange": false
+  },
+  {
+    "appName": "知乎",
+    "appId": "app.zhihu",
+    "currentAssetPath": "/icons/third_party/runtime/zhihu.webp",
+    "frozenSourcePath": "references/ui/11_52_UI_Reference_Pack_V1.0_全量版/third_party/zhihu.png",
+    "pixelSize": {
+      "width": 256,
+      "height": 256
+    },
+    "format": "WEBP",
+    "hasAlpha": true,
+    "transparentEdgePx": {
+      "left": 0,
+      "top": 0,
+      "right": 0,
+      "bottom": 0
+    },
+    "hasOpaqueWhiteBackground": false,
+    "fromFrozenIcons": true,
+    "sourceRelationship": "pixel-identical WebP derived from frozen third-party PNG",
+    "cssContainer": {
+      "width": "65px (Dock 62px)",
+      "height": "65px (Dock 62px)",
+      "padding": 0,
+      "border": 0,
+      "background": "transparent",
+      "outerBorderRadius": 0,
+      "objectFit": "cover"
+    },
+    "needsAssetReplacement": false,
+    "needsCssChange": false
+  },
+  {
+    "appName": "百度贴吧",
+    "appId": "app.tieba",
+    "currentAssetPath": "/icons/third_party/runtime/tieba.webp",
+    "frozenSourcePath": "references/ui/11_52_UI_Reference_Pack_V1.0_全量版/third_party/tieba.png",
+    "pixelSize": {
+      "width": 256,
+      "height": 256
+    },
+    "format": "WEBP",
+    "hasAlpha": true,
+    "transparentEdgePx": {
+      "left": 0,
+      "top": 0,
+      "right": 0,
+      "bottom": 0
+    },
+    "hasOpaqueWhiteBackground": false,
+    "fromFrozenIcons": true,
+    "sourceRelationship": "pixel-identical WebP derived from frozen third-party PNG",
+    "cssContainer": {
+      "width": "65px (Dock 62px)",
+      "height": "65px (Dock 62px)",
+      "padding": 0,
+      "border": 0,
+      "background": "transparent",
+      "outerBorderRadius": 0,
+      "objectFit": "cover"
+    },
+    "needsAssetReplacement": false,
+    "needsCssChange": false
+  },
+  {
+    "appName": "今日头条",
+    "appId": "app.toutiao",
+    "currentAssetPath": "/icons/third_party/runtime/toutiao.webp",
+    "frozenSourcePath": "references/ui/11_52_UI_Reference_Pack_V1.0_全量版/third_party/toutiao.png",
+    "pixelSize": {
+      "width": 256,
+      "height": 256
+    },
+    "format": "WEBP",
+    "hasAlpha": true,
+    "transparentEdgePx": {
+      "left": 0,
+      "top": 0,
+      "right": 0,
+      "bottom": 0
+    },
+    "hasOpaqueWhiteBackground": false,
+    "fromFrozenIcons": true,
+    "sourceRelationship": "pixel-identical WebP derived from frozen third-party PNG",
+    "cssContainer": {
+      "width": "65px (Dock 62px)",
+      "height": "65px (Dock 62px)",
+      "padding": 0,
+      "border": 0,
+      "background": "transparent",
+      "outerBorderRadius": 0,
+      "objectFit": "cover"
+    },
+    "needsAssetReplacement": false,
+    "needsCssChange": false
+  },
+  {
+    "appName": "QQ邮箱",
+    "appId": "app.qqmail",
+    "currentAssetPath": "/icons/third_party/runtime/qqmail.webp",
+    "frozenSourcePath": "references/ui/11_52_UI_Reference_Pack_V1.0_全量版/third_party/qqmail.png",
+    "pixelSize": {
+      "width": 256,
+      "height": 256
+    },
+    "format": "WEBP",
+    "hasAlpha": true,
+    "transparentEdgePx": {
+      "left": 0,
+      "top": 0,
+      "right": 0,
+      "bottom": 0
+    },
+    "hasOpaqueWhiteBackground": false,
+    "fromFrozenIcons": true,
+    "sourceRelationship": "pixel-identical WebP derived from frozen third-party PNG",
+    "cssContainer": {
+      "width": "65px (Dock 62px)",
+      "height": "65px (Dock 62px)",
+      "padding": 0,
+      "border": 0,
+      "background": "transparent",
+      "outerBorderRadius": 0,
+      "objectFit": "cover"
+    },
+    "needsAssetReplacement": false,
+    "needsCssChange": false
+  },
+  {
+    "appName": "百度网盘",
+    "appId": "app.baidunetdisk",
+    "currentAssetPath": "/icons/third_party/runtime/baidunetdisk.webp",
+    "frozenSourcePath": "references/ui/11_52_UI_Reference_Pack_V1.0_全量版/third_party/baidunetdisk.png",
+    "pixelSize": {
+      "width": 256,
+      "height": 256
+    },
+    "format": "WEBP",
+    "hasAlpha": true,
+    "transparentEdgePx": {
+      "left": 0,
+      "top": 0,
+      "right": 0,
+      "bottom": 0
+    },
+    "hasOpaqueWhiteBackground": false,
+    "fromFrozenIcons": true,
+    "sourceRelationship": "pixel-identical WebP derived from frozen third-party PNG",
+    "cssContainer": {
+      "width": "65px (Dock 62px)",
+      "height": "65px (Dock 62px)",
+      "padding": 0,
+      "border": 0,
+      "background": "transparent",
+      "outerBorderRadius": 0,
+      "objectFit": "cover"
+    },
+    "needsAssetReplacement": false,
+    "needsCssChange": false
+  },
+  {
+    "appName": "支付宝",
+    "appId": "app.alipay",
+    "currentAssetPath": "/icons/third_party/runtime/alipay.webp",
+    "frozenSourcePath": "references/ui/11_52_UI_Reference_Pack_V1.0_全量版/third_party/alipay.png",
+    "pixelSize": {
+      "width": 256,
+      "height": 256
+    },
+    "format": "WEBP",
+    "hasAlpha": true,
+    "transparentEdgePx": {
+      "left": 0,
+      "top": 0,
+      "right": 0,
+      "bottom": 0
+    },
+    "hasOpaqueWhiteBackground": false,
+    "fromFrozenIcons": true,
+    "sourceRelationship": "pixel-identical WebP derived from frozen third-party PNG",
+    "cssContainer": {
+      "width": "65px (Dock 62px)",
+      "height": "65px (Dock 62px)",
+      "padding": 0,
+      "border": 0,
+      "background": "transparent",
+      "outerBorderRadius": 0,
+      "objectFit": "cover"
+    },
+    "needsAssetReplacement": false,
+    "needsCssChange": false
+  },
+  {
+    "appName": "滴滴出行",
+    "appId": "app.didi",
+    "currentAssetPath": "/icons/third_party/runtime/didi.webp",
+    "frozenSourcePath": "references/ui/11_52_UI_Reference_Pack_V1.0_全量版/third_party/didi.png",
+    "pixelSize": {
+      "width": 256,
+      "height": 256
+    },
+    "format": "WEBP",
+    "hasAlpha": true,
+    "transparentEdgePx": {
+      "left": 0,
+      "top": 0,
+      "right": 0,
+      "bottom": 0
+    },
+    "hasOpaqueWhiteBackground": false,
+    "fromFrozenIcons": true,
+    "sourceRelationship": "pixel-identical WebP derived from frozen third-party PNG",
+    "cssContainer": {
+      "width": "65px (Dock 62px)",
+      "height": "65px (Dock 62px)",
+      "padding": 0,
+      "border": 0,
+      "background": "transparent",
+      "outerBorderRadius": 0,
+      "objectFit": "cover"
+    },
+    "needsAssetReplacement": false,
+    "needsCssChange": false
+  },
+  {
+    "appName": "美团",
+    "appId": "app.meituan",
+    "currentAssetPath": "/icons/third_party/runtime/meituan.webp",
+    "frozenSourcePath": "references/ui/11_52_UI_Reference_Pack_V1.0_全量版/third_party/meituan.png",
+    "pixelSize": {
+      "width": 256,
+      "height": 256
+    },
+    "format": "WEBP",
+    "hasAlpha": true,
+    "transparentEdgePx": {
+      "left": 0,
+      "top": 0,
+      "right": 0,
+      "bottom": 0
+    },
+    "hasOpaqueWhiteBackground": false,
+    "fromFrozenIcons": true,
+    "sourceRelationship": "pixel-identical WebP derived from frozen third-party PNG",
+    "cssContainer": {
+      "width": "65px (Dock 62px)",
+      "height": "65px (Dock 62px)",
+      "padding": 0,
+      "border": 0,
+      "background": "transparent",
+      "outerBorderRadius": 0,
+      "objectFit": "cover"
+    },
+    "needsAssetReplacement": false,
+    "needsCssChange": false
+  },
+  {
+    "appName": "淘宝",
+    "appId": "app.taobao",
+    "currentAssetPath": "/icons/third_party/runtime/taobao.webp",
+    "frozenSourcePath": "references/ui/11_52_UI_Reference_Pack_V1.0_全量版/third_party/taobao.png",
+    "pixelSize": {
+      "width": 256,
+      "height": 256
+    },
+    "format": "WEBP",
+    "hasAlpha": true,
+    "transparentEdgePx": {
+      "left": 0,
+      "top": 0,
+      "right": 0,
+      "bottom": 0
+    },
+    "hasOpaqueWhiteBackground": false,
+    "fromFrozenIcons": true,
+    "sourceRelationship": "pixel-identical WebP derived from frozen third-party PNG",
+    "cssContainer": {
+      "width": "65px (Dock 62px)",
+      "height": "65px (Dock 62px)",
+      "padding": 0,
+      "border": 0,
+      "background": "transparent",
+      "outerBorderRadius": 0,
+      "objectFit": "cover"
+    },
+    "needsAssetReplacement": false,
+    "needsCssChange": false
+  },
+  {
+    "appName": "网易云音乐",
+    "appId": "app.netease_music",
+    "currentAssetPath": "/icons/third_party/runtime/netease_music.webp",
+    "frozenSourcePath": "references/ui/11_52_UI_Reference_Pack_V1.0_全量版/third_party/netease_music.png",
+    "pixelSize": {
+      "width": 256,
+      "height": 256
+    },
+    "format": "WEBP",
+    "hasAlpha": true,
+    "transparentEdgePx": {
+      "left": 0,
+      "top": 0,
+      "right": 0,
+      "bottom": 0
+    },
+    "hasOpaqueWhiteBackground": false,
+    "fromFrozenIcons": true,
+    "sourceRelationship": "pixel-identical WebP derived from frozen third-party PNG",
+    "cssContainer": {
+      "width": "65px (Dock 62px)",
+      "height": "65px (Dock 62px)",
+      "padding": 0,
+      "border": 0,
+      "background": "transparent",
+      "outerBorderRadius": 0,
+      "objectFit": "cover"
+    },
+    "needsAssetReplacement": false,
+    "needsCssChange": false
+  },
+  {
+    "appName": "微信读书",
+    "appId": "app.wechat_reading",
+    "currentAssetPath": "/icons/third_party/runtime/wechat_reading.webp",
+    "frozenSourcePath": "references/ui/11_52_UI_Reference_Pack_V1.0_全量版/third_party/wechat_reading.png",
+    "pixelSize": {
+      "width": 256,
+      "height": 256
+    },
+    "format": "WEBP",
+    "hasAlpha": true,
+    "transparentEdgePx": {
+      "left": 0,
+      "top": 0,
+      "right": 0,
+      "bottom": 0
+    },
+    "hasOpaqueWhiteBackground": false,
+    "fromFrozenIcons": true,
+    "sourceRelationship": "pixel-identical WebP derived from frozen third-party PNG",
+    "cssContainer": {
+      "width": "65px (Dock 62px)",
+      "height": "65px (Dock 62px)",
+      "padding": 0,
+      "border": 0,
+      "background": "transparent",
+      "outerBorderRadius": 0,
+      "objectFit": "cover"
+    },
+    "needsAssetReplacement": false,
+    "needsCssChange": false
+  },
+  {
+    "appName": "铁路12306",
+    "appId": "app.railway12306",
+    "currentAssetPath": "/icons/third_party/runtime/railway12306.webp",
+    "frozenSourcePath": "references/ui/11_52_UI_Reference_Pack_V1.0_全量版/third_party/railway12306.png",
+    "pixelSize": {
+      "width": 256,
+      "height": 256
+    },
+    "format": "WEBP",
+    "hasAlpha": true,
+    "transparentEdgePx": {
+      "left": 0,
+      "top": 0,
+      "right": 0,
+      "bottom": 0
+    },
+    "hasOpaqueWhiteBackground": false,
+    "fromFrozenIcons": true,
+    "sourceRelationship": "pixel-identical WebP derived from frozen third-party PNG",
+    "cssContainer": {
+      "width": "65px (Dock 62px)",
+      "height": "65px (Dock 62px)",
+      "padding": 0,
+      "border": 0,
+      "background": "transparent",
+      "outerBorderRadius": 0,
+      "objectFit": "cover"
+    },
+    "needsAssetReplacement": false,
+    "needsCssChange": false
+  },
+  {
+    "appName": "健康",
+    "appId": "app.health",
+    "currentAssetPath": "/icons/system/runtime/health.png",
+    "frozenSourcePath": "references/ui/11_52_UI_Reference_Pack_V1.0_全量版/system/health.png",
+    "pixelSize": {
+      "width": 256,
+      "height": 256
+    },
+    "format": "PNG",
+    "hasAlpha": true,
+    "transparentEdgePx": {
+      "left": 0,
+      "top": 0,
+      "right": 0,
+      "bottom": 0
+    },
+    "hasOpaqueWhiteBackground": false,
+    "fromFrozenIcons": true,
+    "sourceRelationship": "runtime crop derived from frozen iOS atlas",
+    "cssContainer": {
+      "width": "65px (Dock 62px)",
+      "height": "65px (Dock 62px)",
+      "padding": 0,
+      "border": 0,
+      "background": "transparent",
+      "outerBorderRadius": 0,
+      "objectFit": "cover"
+    },
+    "needsAssetReplacement": false,
+    "needsCssChange": false
+  },
+  {
+    "appName": "天气",
+    "appId": "app.weather",
+    "currentAssetPath": "/icons/system/runtime/weather.png",
+    "frozenSourcePath": "references/ui/11_52_UI_Reference_Pack_V1.0_全量版/system/weather.png",
+    "pixelSize": {
+      "width": 256,
+      "height": 256
+    },
+    "format": "PNG",
+    "hasAlpha": true,
+    "transparentEdgePx": {
+      "left": 0,
+      "top": 0,
+      "right": 0,
+      "bottom": 0
+    },
+    "hasOpaqueWhiteBackground": false,
+    "fromFrozenIcons": true,
+    "sourceRelationship": "runtime crop derived from frozen iOS atlas",
+    "cssContainer": {
+      "width": "65px (Dock 62px)",
+      "height": "65px (Dock 62px)",
+      "padding": 0,
+      "border": 0,
+      "background": "transparent",
+      "outerBorderRadius": 0,
+      "objectFit": "cover"
+    },
+    "needsAssetReplacement": false,
+    "needsCssChange": false
+  },
+  {
+    "appName": "时钟",
+    "appId": "app.clock",
+    "currentAssetPath": "/icons/system/runtime/clock.png",
+    "frozenSourcePath": "references/ui/11_52_UI_Reference_Pack_V1.0_全量版/system/clock.png",
+    "pixelSize": {
+      "width": 256,
+      "height": 256
+    },
+    "format": "PNG",
+    "hasAlpha": true,
+    "transparentEdgePx": {
+      "left": 0,
+      "top": 0,
+      "right": 0,
+      "bottom": 0
+    },
+    "hasOpaqueWhiteBackground": false,
+    "fromFrozenIcons": true,
+    "sourceRelationship": "runtime crop derived from frozen iOS atlas",
+    "cssContainer": {
+      "width": "65px (Dock 62px)",
+      "height": "65px (Dock 62px)",
+      "padding": 0,
+      "border": 0,
+      "background": "transparent",
+      "outerBorderRadius": 0,
+      "objectFit": "cover"
+    },
+    "needsAssetReplacement": false,
+    "needsCssChange": false
+  },
+  {
+    "appName": "计算器",
+    "appId": "app.calculator",
+    "currentAssetPath": "/icons/system/runtime/calculator.png",
+    "frozenSourcePath": "references/ui/11_52_UI_Reference_Pack_V1.0_全量版/system/calculator.png",
+    "pixelSize": {
+      "width": 256,
+      "height": 256
+    },
+    "format": "PNG",
+    "hasAlpha": true,
+    "transparentEdgePx": {
+      "left": 0,
+      "top": 0,
+      "right": 0,
+      "bottom": 0
+    },
+    "hasOpaqueWhiteBackground": false,
+    "fromFrozenIcons": true,
+    "sourceRelationship": "runtime crop derived from frozen iOS atlas",
+    "cssContainer": {
+      "width": "65px (Dock 62px)",
+      "height": "65px (Dock 62px)",
+      "padding": 0,
+      "border": 0,
+      "background": "transparent",
+      "outerBorderRadius": 0,
+      "objectFit": "cover"
+    },
+    "needsAssetReplacement": false,
+    "needsCssChange": false
+  },
+  {
+    "appName": "相机",
+    "appId": "app.camera",
+    "currentAssetPath": "/icons/system/runtime/camera.png",
+    "frozenSourcePath": "references/ui/11_52_UI_Reference_Pack_V1.0_全量版/system/camera.png",
+    "pixelSize": {
+      "width": 256,
+      "height": 256
+    },
+    "format": "PNG",
+    "hasAlpha": true,
+    "transparentEdgePx": {
+      "left": 0,
+      "top": 0,
+      "right": 0,
+      "bottom": 0
+    },
+    "hasOpaqueWhiteBackground": false,
+    "fromFrozenIcons": true,
+    "sourceRelationship": "runtime crop derived from frozen iOS atlas",
+    "cssContainer": {
+      "width": "65px (Dock 62px)",
+      "height": "65px (Dock 62px)",
+      "padding": 0,
+      "border": 0,
+      "background": "transparent",
+      "outerBorderRadius": 0,
+      "objectFit": "cover"
+    },
+    "needsAssetReplacement": false,
+    "needsCssChange": false
+  },
+  {
+    "appName": "语音备忘录",
+    "appId": "app.voice_memos",
+    "currentAssetPath": "/icons/system/runtime/voice_memos.png",
+    "frozenSourcePath": "references/ui/11_52_UI_Reference_Pack_V1.0_全量版/system/voice_memos.png",
+    "pixelSize": {
+      "width": 256,
+      "height": 256
+    },
+    "format": "PNG",
+    "hasAlpha": true,
+    "transparentEdgePx": {
+      "left": 0,
+      "top": 0,
+      "right": 0,
+      "bottom": 0
+    },
+    "hasOpaqueWhiteBackground": false,
+    "fromFrozenIcons": true,
+    "sourceRelationship": "runtime crop derived from frozen iOS atlas",
+    "cssContainer": {
+      "width": "65px (Dock 62px)",
+      "height": "65px (Dock 62px)",
+      "padding": 0,
+      "border": 0,
+      "background": "transparent",
+      "outerBorderRadius": 0,
+      "objectFit": "cover"
+    },
+    "needsAssetReplacement": false,
+    "needsCssChange": false
+  },
+  {
+    "appName": "指南针",
+    "appId": "app.compass",
+    "currentAssetPath": "/icons/system/runtime/compass.png",
+    "frozenSourcePath": "references/ui/11_52_UI_Reference_Pack_V1.0_全量版/system/compass.png",
+    "pixelSize": {
+      "width": 256,
+      "height": 256
+    },
+    "format": "PNG",
+    "hasAlpha": true,
+    "transparentEdgePx": {
+      "left": 0,
+      "top": 0,
+      "right": 0,
+      "bottom": 0
+    },
+    "hasOpaqueWhiteBackground": false,
+    "fromFrozenIcons": true,
+    "sourceRelationship": "runtime crop derived from frozen iOS atlas",
+    "cssContainer": {
+      "width": "65px (Dock 62px)",
+      "height": "65px (Dock 62px)",
+      "padding": 0,
+      "border": 0,
+      "background": "transparent",
+      "outerBorderRadius": 0,
+      "objectFit": "cover"
+    },
+    "needsAssetReplacement": false,
+    "needsCssChange": false
+  }
+]

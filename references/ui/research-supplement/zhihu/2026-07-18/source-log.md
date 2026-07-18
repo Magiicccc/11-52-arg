@@ -1,0 +1,27 @@
+# 知乎 research supplement
+
+- Research date: 2026-07-18
+- Platform: iPhone / iOS 26.5.2 target
+- Locale: zh-CN
+- Appearance: light
+- Current verification: Frozen 2026 reference retained; official product URL recorded for follow-up drift review
+- Official source: https://apps.apple.com/cn/app/%E7%9F%A5%E4%B9%8E/id432274380
+- Frozen source directory: `references/ui/11_52_UI_Reference_Pack_V1.0_全量版/apps/zhihu`
+
+## Frozen source log
+
+# 来源日志
+
+- App：知乎
+- 类别：社区支持
+- 游戏角色：潘博文原帖、问答、技术解释和404入口。
+
+| 参考ID | 页面 | 版本/代际 | 来源类型 | 来源 | 置信度 |
+|---|---|---|---|---|---|
+| ZH-HOME-01 | 首页/回答页 | 知乎 11.1.0【未经验证：截图来源标注】 | 近期公开iPhone截图 | https://img.ddooo.com/uppic/20260715/9252e4e9a255a0d7d0815dd6f84f4acc.jpg | 中 |
+| ZH-AI-01 | AI对话 | 知乎 11.1.0【未经验证：截图来源标注】 | 近期公开iPhone截图 | https://img.ddooo.com/uppic/20260715/cabaa3276f692177d86ae6ddbf65598a.jpg | 中 |
+| ZH-PROFILE-01 | 个人主页 | 知乎 11.1.0【未经验证：截图来源标注】 | 近期公开iPhone截图 | https://img.ddooo.com/uppic/20260715/3ed15d0c251bb6ac0060fbf1ae26c5af.jpg | 中 |
+| ZH-KANSHAN-01 | AI看山模块 | 知乎 11.1.0【未经验证】 | 近期公开截图 | 来源页面未保留【未经验证】 | 中低 |
+| ZH-IDEAS-01 | 想法流 | 知乎 11.1.0【未经验证】 | 近期公开截图 | 来源页面未保留【未经验证】 | 中低 |
+
+> 公开截图用于私人测试期的视觉复刻。最终实现仍需用DOM/CSS重建，不得把截图整页作为背景。

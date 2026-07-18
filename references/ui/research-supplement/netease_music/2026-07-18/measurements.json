@@ -1,0 +1,38 @@
+{
+  "researchedAt": "2026-07-18",
+  "app": "网易云音乐",
+  "viewport": "402x874",
+  "inheritedFrom": "references/ui/11_52_UI_Reference_Pack_V1.0_全量版/apps/netease_music/measurements.json",
+  "measurements": {
+    "targetViewport": {
+      "width": 402,
+      "height": 874,
+      "unit": "css_px"
+    },
+    "secondaryViewport": {
+      "width": 440,
+      "height": 956,
+      "unit": "css_px"
+    },
+    "globalIOSTokens": {
+      "statusBarNominal": 59,
+      "bottomSafeAreaNominal": 34,
+      "minimumTouchTarget": 44
+    },
+    "sourceImages": [
+      {
+        "refId": "NCM-HOME-01",
+        "pixelSize": "480x800",
+        "path": "apps/netease_music/raw/NCM-HOME-01__NETEASE_9.5.45_01_home.jpg"
+      },
+      {
+        "refId": "NCM-PLAYER-01",
+        "pixelSize": "480x800",
+        "path": "apps/netease_music/raw/NCM-PLAYER-01__NETEASE_9.5.45_03_player.jpg"
+      }
+    ],
+    "measurementRule": "以raw截图的可见像素几何为准；比例缩放到402×874后测量。无精确直图状态必须复用同App已测组件。",
+    "doNotInferFromWordThumbnail": true
+  },
+  "measurementPolicy": "No cross-app interpolation. Runtime deviations must be recorded in the per-app QA report."
+}

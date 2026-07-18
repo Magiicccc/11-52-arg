@@ -1,0 +1,68 @@
+{
+  "researchedAt": "2026-07-18",
+  "app": "小红书",
+  "viewport": "402x874",
+  "inheritedFrom": "references/ui/11_52_UI_Reference_Pack_V1.0_全量版/apps/xiaohongshu/measurements.json",
+  "measurements": {
+    "targetViewport": {
+      "width": 402,
+      "height": 874,
+      "unit": "css_px"
+    },
+    "secondaryViewport": {
+      "width": 440,
+      "height": 956,
+      "unit": "css_px"
+    },
+    "globalIOSTokens": {
+      "statusBarNominal": 59,
+      "bottomSafeAreaNominal": 34,
+      "minimumTouchTarget": 44
+    },
+    "sourceImages": [
+      {
+        "refId": "XHS-DISCOVER-01",
+        "pixelSize": "166x296",
+        "path": "apps/xiaohongshu/raw/XHS-DISCOVER-01__XHS_2026_07_09_01_discover.png"
+      },
+      {
+        "refId": "XHS-POST-01",
+        "pixelSize": "166x296",
+        "path": "apps/xiaohongshu/raw/XHS-POST-01__XHS_2026_07_09_02_post.png"
+      },
+      {
+        "refId": "XHS-VIDEO-01",
+        "pixelSize": "166x296",
+        "path": "apps/xiaohongshu/raw/XHS-VIDEO-01__XHS_2026_07_09_03_video.png"
+      },
+      {
+        "refId": "XHS-CHAT-01",
+        "pixelSize": "166x296",
+        "path": "apps/xiaohongshu/raw/XHS-CHAT-01__XHS_2026_07_09_04_chat.png"
+      },
+      {
+        "refId": "XHS-PUBLISH-01",
+        "pixelSize": "2000x1333",
+        "path": "apps/xiaohongshu/raw/XHS-PUBLISH-01__XHS_2025_02_posting_templates_album.png"
+      },
+      {
+        "refId": "XHS-PROFILE-01",
+        "pixelSize": "2332x2316",
+        "path": "apps/xiaohongshu/raw/XHS-PROFILE-01__XHS_2025_03_profile_sidebar_settings.png"
+      },
+      {
+        "refId": "XHS-PUBLISH-02",
+        "pixelSize": "879x558",
+        "path": "apps/xiaohongshu/raw/XHS-PUBLISH-02__XHS_2025Q4_01_publish_advanced_live.png"
+      },
+      {
+        "refId": "XHS-PROFILE-02",
+        "pixelSize": "336x734",
+        "path": "apps/xiaohongshu/raw/XHS-PROFILE-02__XHS_2025Q4_02_profile_live_report.png"
+      }
+    ],
+    "measurementRule": "以raw截图的可见像素几何为准；比例缩放到402×874后测量。无精确直图状态必须复用同App已测组件。",
+    "doNotInferFromWordThumbnail": true
+  },
+  "measurementPolicy": "No cross-app interpolation. Runtime deviations must be recorded in the per-app QA report."
+}

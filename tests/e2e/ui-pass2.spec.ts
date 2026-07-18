@@ -63,10 +63,9 @@ test("status bar follows device projection and home pages remain swipeable",asyn
   await expect(page.locator(".status-icons")).toHaveAttribute("data-network","cellular");
   await expect(page.locator(".status-icons")).toHaveAttribute("aria-label",/5G，电量 78%/);
   const pages=page.locator(".home-pages");
+  await expect(page.locator(".page-dots i")).toHaveCount(2);
   await pages.evaluate(element=>{element.scrollLeft=element.clientWidth});
   await expect(page.locator(".page-dots i").nth(1)).toHaveClass(/active/);
-  await pages.evaluate(element=>{element.scrollLeft=element.clientWidth*2});
-  await expect(page.locator(".page-dots i").nth(2)).toHaveClass(/active/);
   const viewport=page.viewportSize()!;
   const stage=page.locator(".prototype-stage");
   await stage.dispatchEvent("pointerdown",{clientX:viewport.width-8,clientY:viewport.height/2,pointerId:1,pointerType:"touch"});
