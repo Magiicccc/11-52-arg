@@ -2,7 +2,7 @@ import { useLayoutEffect, useMemo, useRef, useState } from "react";
 import { useGame } from "@/app/GameContext";
 import { activeBody, getContentItem } from "@/content/selectors";
 
-type ZhihuView = "home" | "search" | "detail" | "comments" | "not-found" | "archive";
+type ZhihuView = "home" | "ideas" | "profile" | "search" | "detail" | "comments" | "not-found" | "archive";
 type ZhihuItem = {
   id: string;
   contentId?: string;
@@ -275,6 +275,33 @@ export function ZhihuApp() {
     return !needle||`${item.title}${item.excerpt}${item.topics.join("")}`.toLowerCase().includes(needle);
   });
 
+  if(view==="ideas") {
+    return <div className="app-window zhihu-app" data-testid="zhihu-ideas">
+      <header className="zhihu-page-header"><button data-testid="app-back" aria-label="返回首页" onClick={backWithinApp}><ZhihuIcon name="back"/></button><strong>想法</strong><button aria-label="发布"><ZhihuIcon name="plus"/></button></header>
+      <div className="zhihu-scroll zhihu-ideas-feed" ref={scrollRef}>
+        {feed.filter(item=>!item.notFound).slice(0,8).map((item,index)=><article key={item.id}>
+          <header><Avatar mark={item.authorMark} color={item.authorColor}/><div><b>{item.author}</b><small>{index+2} 小时前</small></div><button>关注</button></header>
+          <p>{item.excerpt}</p>
+          <footer><button>赞同 {item.upvotes}</button><button onClick={()=>openItem(item)}>评论 {item.comments}</button><button>收藏</button></footer>
+        </article>)}
+      </div>
+      <nav className="zhihu-bottom-nav"><button onClick={()=>setView("home")}><ZhihuIcon name="home"/><span>首页</span></button><button className="active"><span className="zhihu-kanshan">想</span><span>想法</span></button><button className="create"><ZhihuIcon name="plus"/><span>创作</span></button><button><ZhihuIcon name="message"/><span>消息</span></button><button onClick={()=>setView("profile")}><ZhihuIcon name="person"/><span>我的</span></button></nav>
+    </div>;
+  }
+
+  if(view==="profile") {
+    return <div className="app-window zhihu-app" data-testid="zhihu-profile">
+      <header className="zhihu-page-header"><button data-testid="app-back" aria-label="返回首页" onClick={backWithinApp}><ZhihuIcon name="back"/></button><strong>我的</strong><button aria-label="设置">•••</button></header>
+      <div className="zhihu-scroll zhihu-profile-page" ref={scrollRef}>
+        <section className="zhihu-profile-card"><Avatar mark="川" color="#1772f6"/><div><h1>川流档案</h1><p>用户研究 / 城市摄影</p></div><button>编辑资料</button></section>
+        <section className="zhihu-profile-stats"><span><b>28</b>创作</span><span><b>1,642</b>赞同</span><span><b>316</b>收藏</span><span><b>87</b>关注</span></section>
+        <nav className="zhihu-profile-tabs"><button className="active">动态</button><button>回答</button><button>想法</button><button>收藏</button></nav>
+        {feed.filter(item=>item.author==="川流档案").map(item=><QuestionCard item={item} key={item.id} onOpen={()=>openItem(item)}/>)}
+      </div>
+      <nav className="zhihu-bottom-nav"><button onClick={()=>setView("home")}><ZhihuIcon name="home"/><span>首页</span></button><button onClick={()=>setView("ideas")}><span className="zhihu-kanshan">想</span><span>想法</span></button><button className="create"><ZhihuIcon name="plus"/><span>创作</span></button><button><ZhihuIcon name="message"/><span>消息</span></button><button className="active"><ZhihuIcon name="person"/><span>我的</span></button></nav>
+    </div>;
+  }
+
   if(view==="not-found"||view==="archive") {
     return <div className="app-window zhihu-app" data-testid="zhihu-404">
       <header className="zhihu-page-header">
@@ -393,10 +420,10 @@ export function ZhihuApp() {
     </div>
     <nav className="zhihu-bottom-nav" aria-label="知乎底部导航">
       <button className="active"><ZhihuIcon name="home"/><span>首页</span></button>
-      <button><span className="zhihu-kanshan">山</span><span>看山</span></button>
+      <button onClick={()=>setView("ideas")}><span className="zhihu-kanshan">想</span><span>想法</span></button>
       <button className="create"><ZhihuIcon name="plus"/><span>创作</span></button>
       <button><ZhihuIcon name="message"/><span>消息</span></button>
-      <button><ZhihuIcon name="person"/><span>我的</span></button>
+      <button onClick={()=>setView("profile")}><ZhihuIcon name="person"/><span>我的</span></button>
     </nav>
   </div>;
 }

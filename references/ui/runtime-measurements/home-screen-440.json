@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 2,
+  "viewport": {"width": 440, "height": 956, "unit": "css_px"},
+  "authority": {
+    "reference": "references/ui/11_52_UI_Reference_Pack_V1.0_全量版/apps/ios_system/raw/IOS26-HOME-01__ios_home_screen.png",
+    "method": "proportional verification of the 402px frozen measurement with fixed 65px icon geometry",
+    "measuredAt": "2026-07-18"
+  },
+  "tokens": {
+    "--ios-status-height": 59,
+    "--ios-icon-size": 65,
+    "--ios-icon-optical-scale": 1,
+    "--ios-grid-column-gap": 37,
+    "--ios-grid-row-gap": 33,
+    "--ios-label-gap": 4,
+    "--ios-dock-height": 94,
+    "--ios-dock-bottom": 20,
+    "--ios-page-indicator-bottom": 124
+  },
+  "geometry": {
+    "dynamicIsland": {"x": 157, "y": 9, "width": 126, "height": 37, "radius": 22},
+    "grid": {
+      "top": 91,
+      "sideInset": 34,
+      "columnCenters": [66.5, 168.5, 270.5, 372.5],
+      "rowCenters": [123.5, 221.5, 319.5],
+      "rowStep": 98
+    },
+    "label": {"fontSize": 12, "lineHeight": 15, "fontWeight": 500, "shadow": "0 1px 2px rgba(0,0,0,.8)"},
+    "pageDots": {"diameter": 6, "gap": 7, "bottom": 124},
+    "dock": {"x": 17, "y": 842, "width": 406, "height": 94, "radius": 34, "iconSize": 62, "iconCenters": [78.75, 169.25, 259.75, 350.25]},
+    "homeIndicator": {"x": 153, "y": 943, "width": 134, "height": 5}
+  },
+  "iconAssetAnalysis": {
+    "runtimeCanvas": "256x256",
+    "alphaEdge": [0, 0, 0, 0],
+    "nonTransparentBounds": [0, 0, 256, 256],
+    "contentOccupancy": 1,
+    "finding": "The same frozen runtime assets are used at both viewports. Icons keep a fixed 65px canvas; only measured grid and dock spacing change."
+  },
+  "opticalCalibration": {
+    "default": {"opticalScale": 1, "opticalOffsetX": 0, "opticalOffsetY": 0},
+    "app.calendar": {"opticalScale": 1, "opticalOffsetX": 0, "opticalOffsetY": 0},
+    "app.health": {"opticalScale": 1, "opticalOffsetX": 0, "opticalOffsetY": 0},
+    "app.voice_memos": {"opticalScale": 1, "opticalOffsetX": 0, "opticalOffsetY": 0},
+    "app.netease_music": {"opticalScale": 1, "opticalOffsetX": 0, "opticalOffsetY": 0},
+    "app.wechat_reading": {"opticalScale": 1, "opticalOffsetX": 0, "opticalOffsetY": 0},
+    "app.railway12306": {"opticalScale": 1, "opticalOffsetX": 0, "opticalOffsetY": 0}
+  }
+}

@@ -34,7 +34,7 @@ function usePlatformScroll(route: string) {
   const ref = useRef<HTMLDivElement>(null);
   useLayoutEffect(() => {
     if (ref.current) ref.current.scrollTop = state.devices[activeDeviceId].scrollByRoute[route] ?? 0;
-  }, [activeDeviceId, route, state.devices]);
+  });
   return {
     ref,
     remember() {
@@ -137,9 +137,9 @@ export function XiaohongshuApp() {
           data-testid={index === 0 ? "app-effective-action" : undefined}
           key={item.id}
           onClick={() => {
-            scroll.remember();
             setSelectedId(item.id);
             emit("content.item.opened", item.id, { surface: "xiaohongshu" });
+            scroll.remember();
           }}
         >
           <span className={`xhs-cover tone-${index % 2}`} aria-hidden="true"/>
@@ -156,10 +156,19 @@ export function XiaohongshuApp() {
 
 export function DouyinApp() {
   const { state, goBack, emit, setUiFlag } = useGame();
-  const item = unlockedItemsForApp(state, "app.douyin")[0];
+  const items = unlockedItemsForApp(state, "app.douyin");
+  const storedIndex=Number(state.world.flags["ui.douyin.feedIndex"]??0);
+  const currentIndex=Math.max(0,Math.min(items.length-1,Number.isFinite(storedIndex)?storedIndex:0));
+  const item = items[currentIndex];
   const body = item ? activeBody(state, item) as Body : {};
   const [paused, setPaused] = useState(false);
   const saved = item ? state.world.flags[`ui.douyin.saved.${item.id}`] === true : false;
+  const changeVideo=(direction:number)=>{
+    if(items.length===0)return;
+    const next=(currentIndex+direction+items.length)%items.length;
+    setUiFlag("douyin.feedIndex",next);
+    emit("app.view.changed","app.douyin",{view:"feed",index:next});
+  };
   return <div className="app-window platform-app douyin-app" data-testid="douyin-home">
     <header className="douyin-header">
       <button aria-label="直播">LIVE</button>
@@ -194,6 +203,7 @@ export function DouyinApp() {
       <p>{text(body, "caption", "暂无视频说明")}</p>
       <span>♫ 原声 · {text(body, "author", "城市边角")}</span>
     </section>
+    <div className="douyin-feed-controls"><button onClick={()=>changeVideo(-1)}>上一条</button><span>{currentIndex+1} / {items.length}</span><button onClick={()=>changeVideo(1)}>下一条</button></div>
     <PlatformBottomNav items={["首页", "朋友", "＋", "消息", "我"]} active="首页"/>
     <button className="platform-close-hit" data-testid="app-back" aria-label="退出抖音" onClick={goBack}/>
   </div>;
@@ -203,6 +213,7 @@ export function ToutiaoApp() {
   const { state, goBack, emit } = useGame();
   const items = unlockedItemsForApp(state, "app.toutiao");
   const [selectedId, setSelectedId] = useState<string | null>(null);
+  const scroll = usePlatformScroll("toutiao.home");
   const selected = items.find((item) => item.id === selectedId);
   if (selected) {
     const body = activeBody(state, selected) as Body;
@@ -219,12 +230,13 @@ export function ToutiaoApp() {
   return <div className="app-window platform-app toutiao-app" data-testid="toutiao-home">
     <header className="toutiao-home-header"><strong>今日头条</strong><button aria-label="搜索">⌕</button><button aria-label="发布">＋</button></header>
     <nav className="toutiao-tabs"><button>关注</button><button className="active">推荐</button><button>热榜</button><button>杭州</button><button>视频</button></nav>
-    <div className="platform-scroll toutiao-feed">
+    <div className="platform-scroll toutiao-feed" ref={scroll.ref}>
       {items.map((item, index) => {
         const body = activeBody(state, item) as Body;
         return <button data-testid={index === 0 ? "app-effective-action" : undefined} className="toutiao-card" key={item.id} onClick={() => {
           setSelectedId(item.id);
           emit("content.item.opened", item.id, { surface: "toutiao" });
+          scroll.remember();
         }}>
           <b>{text(body, "title")}</b>
           <p>{text(body, "summary")}</p>
@@ -242,6 +254,7 @@ export function QQMailApp() {
   const { state, goBack, emit } = useGame();
   const items = unlockedItemsForApp(state, "app.qqmail");
   const [selectedId, setSelectedId] = useState<string | null>(null);
+  const scroll = usePlatformScroll("qqmail.home");
   const selected = items.find((item) => item.id === selectedId);
   if (selected) {
     const body = activeBody(state, selected) as Body;
@@ -258,13 +271,14 @@ export function QQMailApp() {
   return <div className="app-window platform-app qqmail-app" data-testid="qqmail-home">
     <header className="qqmail-header"><button aria-label="头像" className="mail-account">沈</button><strong>收件箱</strong><div><button aria-label="搜索">⌕</button><button aria-label="写邮件">＋</button></div></header>
     <div className="mail-search">搜索邮件</div>
-    <div className="platform-scroll mail-list">
+    <div className="platform-scroll mail-list" ref={scroll.ref}>
       <section className="mail-folders"><button>所有未读 <b>{items.length}</b></button><button>星标邮件</button><button>附件管理</button></section>
       {items.map((item, index) => {
         const body = activeBody(state, item) as Body;
         return <button data-testid={index === 0 ? "app-effective-action" : undefined} className="mail-row" key={item.id} onClick={() => {
           setSelectedId(item.id);
           emit("content.item.opened", item.id, { surface: "qqmail" });
+          scroll.remember();
         }}>
           <span className="mail-unread"/>
           <div><b>{text(body, "from")}</b><strong>{text(body, "subject")}</strong><p>{text(body, "preview")}</p></div>
@@ -281,6 +295,7 @@ export function BaiduNetdiskApp() {
   const { state, goBack, emit } = useGame();
   const items = unlockedItemsForApp(state, "app.baidunetdisk");
   const [selectedId, setSelectedId] = useState<string | null>(null);
+  const scroll = usePlatformScroll("baidunetdisk.home");
   const selected = items.find((item) => item.id === selectedId);
   if (selected) {
     const body = activeBody(state, selected) as Body;
@@ -297,7 +312,7 @@ export function BaiduNetdiskApp() {
   return <div className="app-window platform-app netdisk-app" data-testid="baidunetdisk-home">
     <header className="netdisk-header"><span className="netdisk-account">沈</span><div><b>百度网盘</b><small>安全保存每一份文件</small></div><button>＋</button></header>
     <div className="netdisk-search">搜索网盘文件</div>
-    <div className="platform-scroll netdisk-home">
+    <div className="platform-scroll netdisk-home" ref={scroll.ref}>
       <section className="netdisk-shortcuts">{["图片", "视频", "文档", "音频", "压缩包"].map((label) => <button key={label}><i>{label.slice(0, 1)}</i>{label}</button>)}</section>
       <section className="netdisk-storage"><b>存储空间</b><span>查看详情</span><i><b/></i></section>
       <h2>最近</h2>
@@ -306,6 +321,7 @@ export function BaiduNetdiskApp() {
         return <button data-testid={index === 0 ? "app-effective-action" : undefined} className="netdisk-file-row" key={item.id} onClick={() => {
           setSelectedId(item.id);
           emit("content.item.opened", item.id, { surface: "baidunetdisk" });
+          scroll.remember();
         }}>
           <span>ZIP</span><div><b>{text(body, "name")}</b><small>{text(body, "size")} · {text(body, "status")}</small></div><i>•••</i>
         </button>;
@@ -320,6 +336,7 @@ export function AlipayApp() {
   const { state, goBack, emit } = useGame();
   const items = unlockedItemsForApp(state, "app.alipay");
   const [selectedId, setSelectedId] = useState<string | null>(null);
+  const scroll = usePlatformScroll("alipay.home");
   const selected = items.find((item) => item.id === selectedId);
   if (selected) {
     const body = activeBody(state, selected) as Body;
@@ -334,7 +351,7 @@ export function AlipayApp() {
   }
   return <div className="app-window platform-app alipay-app" data-testid="alipay-home">
     <header className="alipay-header"><button>杭州⌄</button><div>搜索</div><button>＋</button></header>
-    <div className="platform-scroll alipay-home">
+    <div className="platform-scroll alipay-home" ref={scroll.ref}>
       <section className="alipay-primary">{["扫一扫", "付钱/收钱", "出行", "卡包"].map((label) => <button key={label}><i>{label.slice(0, 1)}</i>{label}</button>)}</section>
       <section className="alipay-services">{["饿了么", "市民中心", "生活缴费", "医保码", "转账", "余额宝", "我的快递", "更多"].map((label) => <button key={label}><i>{label.slice(0, 1)}</i>{label}</button>)}</section>
       <section className="alipay-bills"><header><b>最近账单</b><span>全部</span></header>{items.map((item, index) => {
@@ -342,6 +359,7 @@ export function AlipayApp() {
         return <button data-testid={index === 0 ? "app-effective-action" : undefined} key={item.id} onClick={() => {
           setSelectedId(item.id);
           emit("content.item.opened", item.id, { surface: "alipay" });
+          scroll.remember();
         }}><span className="alipay-merchant-mark">支</span><div><b>{text(body, "merchant")}</b><small>{text(body, "date")}</small></div><strong>−{number(body, "amount").toFixed(2)}</strong></button>;
       })}</section>
     </div>
@@ -389,6 +407,7 @@ export function MeituanApp() {
   const { state, goBack, emit } = useGame();
   const items = unlockedItemsForApp(state, "app.meituan");
   const [selectedId, setSelectedId] = useState<string | null>(null);
+  const scroll = usePlatformScroll("meituan.home");
   const selected = items.find((item) => item.id === selectedId);
   if (selected) {
     const body = activeBody(state, selected) as Body;
@@ -404,7 +423,7 @@ export function MeituanApp() {
   }
   return <div className="app-window platform-app meituan-app" data-testid="meituan-home">
     <header className="meituan-header"><button>杭州⌄</button><div>搜索商家、商品</div><button>＋</button></header>
-    <div className="platform-scroll meituan-home">
+    <div className="platform-scroll meituan-home" ref={scroll.ref}>
       <section className="meituan-categories">{["美食", "外卖", "酒店", "休闲玩乐", "电影", "打车", "买药", "全部"].map((label) => <button key={label}><i>{label.slice(0, 1)}</i>{label}</button>)}</section>
       <section className="meituan-banner"><b>吃喝玩乐 都在美团</b><span>问美团，都安排</span></section>
       <section className="meituan-orders"><header><b>我的订单</b><span>全部订单</span></header>{items.map((item, index) => {
@@ -412,8 +431,10 @@ export function MeituanApp() {
         return <button data-testid={index === 0 ? "app-effective-action" : undefined} key={item.id} onClick={() => {
           setSelectedId(item.id);
           emit("content.item.opened", item.id, { surface: "meituan" });
+          scroll.remember();
         }}><span className="meituan-shop-mark">店</span><div><b>{text(body, "merchant")}</b><small>{stringList(body, "items").join("、")}</small><time>{text(body, "date")}</time></div><strong>¥{number(body, "amount").toFixed(2)}</strong></button>;
       })}</section>
+      <section className="meituan-everyday"><header><b>常点商家</b><span>来自历史订单</span></header>{["牛肉饭","馄饨","咖啡"].map((label,index)=><button key={label} onClick={()=>emit("content.item.opened","app.meituan",{surface:"everyday",label,index})}><span>{label.slice(0,1)}</span><div><b>{label}</b><small>普通生活订单 · 查看历史记录</small></div><i>›</i></button>)}</section>
     </div>
     <PlatformBottomNav items={["首页", "视频", "消息", "购物车", "我的"]} active="首页"/>
     <button className="platform-close-hit" data-testid="app-back" aria-label="退出美团" onClick={goBack}/>
@@ -424,6 +445,7 @@ export function TaobaoApp() {
   const { state, goBack, emit } = useGame();
   const items = unlockedItemsForApp(state, "app.taobao");
   const [selectedId, setSelectedId] = useState<string | null>(null);
+  const scroll = usePlatformScroll("taobao.home");
   const selected = items.find((item) => item.id === selectedId);
   if (selected) {
     const body = activeBody(state, selected) as Body;
@@ -441,7 +463,7 @@ export function TaobaoApp() {
   return <div className="app-window platform-app taobao-app" data-testid="taobao-home">
     <header className="taobao-header"><div>搜索淘宝商品</div><button>搜索</button></header>
     <nav className="taobao-tabs"><button className="active">推荐</button><button>闪购</button><button>小时达</button><button>百亿补贴</button></nav>
-    <div className="platform-scroll taobao-home">
+    <div className="platform-scroll taobao-home" ref={scroll.ref}>
       <section className="taobao-categories">{["天猫", "聚划算", "淘金币", "闲鱼", "充值", "旅行", "领券", "分类"].map((label) => <button key={label}><i>{label.slice(0, 1)}</i>{label}</button>)}</section>
       <h2>我的订单</h2>
       <div className="taobao-order-grid">{items.map((item, index) => {
@@ -453,6 +475,7 @@ export function TaobaoApp() {
           onClick={() => {
             setSelectedId(item.id);
             emit("content.item.opened", item.id, { surface: "taobao" });
+            scroll.remember();
           }}
         >
           <span className={`taobao-thumb tone-${index % 2}`}>商品图片</span>
@@ -461,7 +484,8 @@ export function TaobaoApp() {
           {typeof body.amount === "number" && <strong>¥{number(body, "amount").toFixed(2)}</strong>}
         </button>;
       })}</div>
-    </div>
+      <section className="taobao-everyday"><header><b>收藏与历史</b><span>共 17 笔订单</span></header>{["相机配件","旧地图册","搪瓷杯修补漆","移动电源","录音笔"].map((label,index)=><button key={label} onClick={()=>emit("content.item.opened","app.taobao",{surface:"favorites",label,index})}><span>{label.slice(0,1)}</span><div><b>{label}</b><small>{index<3?"收藏夹":"历史订单"}</small></div></button>)}</section>
+      </div>
     <PlatformBottomNav items={["首页", "视频", "消息", "购物车", "我的淘宝"]} active="首页"/>
     <button className="platform-close-hit" data-testid="app-back" aria-label="退出淘宝" onClick={goBack}/>
   </div>;

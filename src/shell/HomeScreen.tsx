@@ -1,4 +1,4 @@
-import { useRef, useState, type UIEvent } from "react";
+import { useRef, useState, type CSSProperties, type UIEvent } from "react";
 import type { DeviceId } from "@/contracts/game-state";
 import { appManifests } from "@/content/content-pack";
 import { useGame } from "@/app/GameContext";
@@ -11,6 +11,27 @@ const pageAppIds = [
   ["app.zhihu", "app.tieba", "app.toutiao", "app.baidunetdisk", "app.alipay", "app.didi", "app.meituan", "app.taobao", "app.netease_music", "app.wechat_reading", "app.health", "app.weather"],
   ["app.railway12306", "app.clock", "app.calculator", "app.camera", "app.voice_memos", "app.compass"]
 ];
+
+type IconOpticalCalibration = {
+  opticalScale: number;
+  opticalOffsetX: number;
+  opticalOffsetY: number;
+};
+
+const defaultOpticalCalibration: IconOpticalCalibration = {
+  opticalScale: 1,
+  opticalOffsetX: 0,
+  opticalOffsetY: 0
+};
+
+const iconOpticalCalibration: Record<string, IconOpticalCalibration> = {
+  "app.calendar": { opticalScale: 1, opticalOffsetX: 0, opticalOffsetY: 0 },
+  "app.health": { opticalScale: 1, opticalOffsetX: 0, opticalOffsetY: 0 },
+  "app.voice_memos": { opticalScale: 1, opticalOffsetX: 0, opticalOffsetY: 0 },
+  "app.netease_music": { opticalScale: 1, opticalOffsetX: 0, opticalOffsetY: 0 },
+  "app.wechat_reading": { opticalScale: 1, opticalOffsetX: 0, opticalOffsetY: 0 },
+  "app.railway12306": { opticalScale: 1, opticalOffsetX: 0, opticalOffsetY: 0 }
+};
 
 function runtimeIconPath(path: string): string {
   if (path.startsWith("/icons/system/")) {
@@ -51,9 +72,19 @@ export function HomeScreen({deviceId}:{deviceId:DeviceId}){
   };
   const renderIcon=(app:(typeof apps)[number],location:"page"|"dock")=>{
     const badgeCount=state.devices[deviceId].unreadByApp[app.id]??0;
+    const optical=iconOpticalCalibration[app.id]??defaultOpticalCalibration;
+    const opticalStyle={
+      "--app-icon-optical-scale": optical.opticalScale,
+      "--app-icon-optical-offset-x": `${optical.opticalOffsetX}px`,
+      "--app-icon-optical-offset-y": `${optical.opticalOffsetY}px`
+    } as CSSProperties;
     return <button
       className={`app-icon-button app-icon-${location}`}
       data-testid={`app-${app.id}`}
+      data-optical-scale={optical.opticalScale}
+      data-optical-offset-x={optical.opticalOffsetX}
+      data-optical-offset-y={optical.opticalOffsetY}
+      style={opticalStyle}
       key={app.id}
       onClick={()=>openApp(app.id)}
       aria-label={badgeCount>0?`${app.displayName}，${badgeCount} 条未读`:app.displayName}

@@ -7,7 +7,8 @@
   "appManifestFile": "apps/app-manifests.json",
   "contentFiles": [
     "apps/content-items.json",
-    "apps/a3-content-items.json"
+    "apps/a3-content-items.json",
+    "apps/ui-pass2-content-items.json"
   ],
   "triggerFiles": [
     "triggers/triggers.json",

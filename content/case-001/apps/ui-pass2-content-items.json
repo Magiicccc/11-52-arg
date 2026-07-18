@@ -1,0 +1,1323 @@
+[
+  {
+    "id": "post.xhs.corridor.01",
+    "appId": "app.xiaohongshu",
+    "kind": "post",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "post.xhs.corridor.01.v0",
+    "variants": [
+      {
+        "id": "post.xhs.corridor.01.v0",
+        "correctionStage": "R0",
+        "body": {
+          "title": "一段比地图上更长的走廊。",
+          "text": "城市照片。",
+          "date": "2023-10-06",
+          "likes": 97,
+          "comments": 7
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "world_context",
+      "secondaryFunctions": [],
+      "clueRole": "none",
+      "worldFactIds": [
+        "wf.hangzhou.daily"
+      ],
+      "characterTraitIds": [],
+      "relationshipBeatIds": [],
+      "continuityLinkIds": [],
+      "firstReadValue": "补充城市摄影这一普通生活兴趣。",
+      "payoffPolicy": "none"
+    },
+    "metadata": {
+      "visibleAtStart": true,
+      "slice": "daily"
+    }
+  },
+  {
+    "id": "post.xhs.archive.tutorial",
+    "appId": "app.xiaohongshu",
+    "kind": "post",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "post.xhs.archive.tutorial.v0",
+    "variants": [
+      {
+        "id": "post.xhs.archive.tutorial.v0",
+        "correctionStage": "R0",
+        "body": {
+          "title": "我怎么给网页做本地存档",
+          "text": "离线保存、文件命名与校验记录。",
+          "date": "2024-01-03",
+          "likes": 3812,
+          "comments": 126
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "habit",
+      "secondaryFunctions": [
+        "profession"
+      ],
+      "clueRole": "none",
+      "worldFactIds": [
+        "wf.shenchuan.job"
+      ],
+      "characterTraitIds": [],
+      "relationshipBeatIds": [],
+      "continuityLinkIds": [],
+      "firstReadValue": "呈现账号长期稳定的资料整理习惯。",
+      "payoffPolicy": "optional"
+    },
+    "metadata": {
+      "visibleAtStart": true,
+      "slice": "daily"
+    }
+  },
+  {
+    "id": "post.xhs.bluecup.20240316",
+    "appId": "app.xiaohongshu",
+    "kind": "post",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "post.xhs.bluecup.20240316.v0",
+    "variants": [
+      {
+        "id": "post.xhs.bluecup.20240316.v0",
+        "correctionStage": "R0",
+        "body": {
+          "title": "周女士寄来的蓝色搪瓷杯。",
+          "text": "杯沿有一点旧掉漆。",
+          "date": "2024-03-16",
+          "likes": 271,
+          "comments": 23
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "relationship",
+      "secondaryFunctions": [],
+      "clueRole": "supporting",
+      "worldFactIds": [
+        "wf.shenchuan.family"
+      ],
+      "characterTraitIds": [],
+      "relationshipBeatIds": [],
+      "continuityLinkIds": [],
+      "firstReadValue": "以生活物件建立普通家庭关系。",
+      "payoffPolicy": "required"
+    },
+    "metadata": {
+      "visibleAtStart": true,
+      "slice": "daily"
+    }
+  },
+  {
+    "id": "post.xhs.rain.walk",
+    "appId": "app.xiaohongshu",
+    "kind": "post",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "post.xhs.rain.walk.v0",
+    "variants": [
+      {
+        "id": "post.xhs.rain.walk.v0",
+        "correctionStage": "R0",
+        "body": {
+          "title": "杭州下雨时适合走没有目的的路。",
+          "text": "六张城市照片。",
+          "date": "2024-05-21",
+          "likes": 188,
+          "comments": 12
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "world_context",
+      "secondaryFunctions": [],
+      "clueRole": "none",
+      "worldFactIds": [
+        "wf.hangzhou.daily"
+      ],
+      "characterTraitIds": [],
+      "relationshipBeatIds": [],
+      "continuityLinkIds": [],
+      "firstReadValue": "增加普通城市生活和摄影内容。",
+      "payoffPolicy": "none"
+    },
+    "metadata": {
+      "visibleAtStart": true,
+      "slice": "daily"
+    }
+  },
+  {
+    "id": "post.xhs.cat.interview",
+    "appId": "app.xiaohongshu",
+    "kind": "post",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "post.xhs.cat.interview.v0",
+    "variants": [
+      {
+        "id": "post.xhs.cat.interview.v0",
+        "correctionStage": "R0",
+        "body": {
+          "title": "这只猫拒绝参与任何用户访谈。",
+          "text": "猫咖随手拍。",
+          "date": "2024-08-02",
+          "likes": 624,
+          "comments": 31
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "world_context",
+      "secondaryFunctions": [
+        "profession"
+      ],
+      "clueRole": "none",
+      "worldFactIds": [
+        "wf.hangzhou.daily"
+      ],
+      "characterTraitIds": [],
+      "relationshipBeatIds": [],
+      "continuityLinkIds": [],
+      "firstReadValue": "用轻松日常内容平衡案件信息。",
+      "payoffPolicy": "none"
+    },
+    "metadata": {
+      "visibleAtStart": true,
+      "slice": "daily"
+    }
+  },
+  {
+    "id": "post.xhs.offline.save",
+    "appId": "app.xiaohongshu",
+    "kind": "post",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "post.xhs.offline.save.v0",
+    "variants": [
+      {
+        "id": "post.xhs.offline.save.v0",
+        "correctionStage": "R0",
+        "body": {
+          "title": "离线保存不是截图：给资料党的一点习惯",
+          "text": "网页存档需要保留来源、时间和文件校验。",
+          "date": "2024-11-11",
+          "likes": 1206,
+          "comments": 84
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "habit",
+      "secondaryFunctions": [
+        "profession"
+      ],
+      "clueRole": "none",
+      "worldFactIds": [
+        "wf.hangzhou.daily"
+      ],
+      "characterTraitIds": [],
+      "relationshipBeatIds": [],
+      "continuityLinkIds": [],
+      "firstReadValue": "展示角色的正常知识输出与工作习惯。",
+      "payoffPolicy": "optional"
+    },
+    "metadata": {
+      "visibleAtStart": true,
+      "slice": "daily"
+    }
+  },
+  {
+    "id": "post.xhs.oldbuilding",
+    "appId": "app.xiaohongshu",
+    "kind": "post",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "post.xhs.oldbuilding.v0",
+    "variants": [
+      {
+        "id": "post.xhs.oldbuilding.v0",
+        "correctionStage": "R0",
+        "body": {
+          "title": "旧校舍外墙与同一个下午。",
+          "text": "建筑摄影。",
+          "date": "2025-03-23",
+          "likes": 146,
+          "comments": 19
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "world_context",
+      "secondaryFunctions": [],
+      "clueRole": "supporting",
+      "worldFactIds": [
+        "wf.oldpark"
+      ],
+      "characterTraitIds": [],
+      "relationshipBeatIds": [],
+      "continuityLinkIds": [],
+      "firstReadValue": "以建筑摄影提供轻度地点前史。",
+      "payoffPolicy": "optional"
+    },
+    "metadata": {
+      "visibleAtStart": true,
+      "slice": "daily"
+    }
+  },
+  {
+    "id": "post.xhs.page.difference",
+    "appId": "app.xiaohongshu",
+    "kind": "post",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "post.xhs.page.difference.v0",
+    "variants": [
+      {
+        "id": "post.xhs.page.difference.v0",
+        "correctionStage": "R0",
+        "body": {
+          "title": "同一网页、同一秒、两台设备，正文不一样。",
+          "text": "我知道网页会删改，缓存会错，截图会压缩。问题是两台设备同时在线、同一秒打开同一地址，一台显示416/418，另一台显示416/417/418。清缓存、换网络、抓响应体都试过。不是求灵异解释，只想找一个普通原因。",
+          "date": "2025-09-21",
+          "likes": 173,
+          "comments": 57
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "world_context",
+      "secondaryFunctions": [
+        "habit"
+      ],
+      "clueRole": "supporting",
+      "worldFactIds": [
+        "wf.floor417"
+      ],
+      "characterTraitIds": [],
+      "relationshipBeatIds": [],
+      "continuityLinkIds": [],
+      "firstReadValue": "保留正式异常内容但使其只占信息流少数。",
+      "payoffPolicy": "required"
+    },
+    "metadata": {
+      "visibleAtStart": true,
+      "slice": "daily"
+    }
+  },
+  {
+    "id": "post.xhs.417.gap",
+    "appId": "app.xiaohongshu",
+    "kind": "post",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "post.xhs.417.gap.v0",
+    "variants": [
+      {
+        "id": "post.xhs.417.gap.v0",
+        "correctionStage": "R0",
+        "body": {
+          "title": "416之后为什么直接是418？",
+          "text": "两张页面截图。",
+          "date": "2026-05-19",
+          "likes": 89,
+          "comments": 41
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "world_context",
+      "secondaryFunctions": [],
+      "clueRole": "supporting",
+      "worldFactIds": [
+        "wf.floor417"
+      ],
+      "characterTraitIds": [],
+      "relationshipBeatIds": [],
+      "continuityLinkIds": [],
+      "firstReadValue": "用少量异常内容延续平台记录。",
+      "payoffPolicy": "optional"
+    },
+    "metadata": {
+      "visibleAtStart": true,
+      "slice": "daily"
+    }
+  },
+  {
+    "id": "post.xhs.park.walk",
+    "appId": "app.xiaohongshu",
+    "kind": "post",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "post.xhs.park.walk.v0",
+    "variants": [
+      {
+        "id": "post.xhs.park.walk.v0",
+        "correctionStage": "R0",
+        "body": {
+          "title": "滨河旧园区外围散步。",
+          "text": "五张外围照片，没有进入封闭区域。",
+          "date": "2026-06-07",
+          "likes": 212,
+          "comments": 36
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "world_context",
+      "secondaryFunctions": [
+        "world_context"
+      ],
+      "clueRole": "supporting",
+      "worldFactIds": [
+        "wf.oldpark"
+      ],
+      "characterTraitIds": [],
+      "relationshipBeatIds": [],
+      "continuityLinkIds": [],
+      "firstReadValue": "提供外围散步记录而不绑定现实地点。",
+      "payoffPolicy": "optional"
+    },
+    "metadata": {
+      "visibleAtStart": true,
+      "slice": "daily"
+    }
+  },
+  {
+    "id": "post.xhs.bluecup.paint",
+    "appId": "app.xiaohongshu",
+    "kind": "post",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "post.xhs.bluecup.paint.v0",
+    "variants": [
+      {
+        "id": "post.xhs.bluecup.paint.v0",
+        "correctionStage": "R0",
+        "body": {
+          "title": "蓝杯子又掉了一块漆。",
+          "text": "日常记录。",
+          "date": "2026-06-18",
+          "likes": 154,
+          "comments": 15
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "world_context",
+      "secondaryFunctions": [
+        "relationship"
+      ],
+      "clueRole": "supporting",
+      "worldFactIds": [
+        "wf.shenchuan.family"
+      ],
+      "characterTraitIds": [],
+      "relationshipBeatIds": [],
+      "continuityLinkIds": [],
+      "firstReadValue": "重复出现家庭物件但保持日常语气。",
+      "payoffPolicy": "optional"
+    },
+    "metadata": {
+      "visibleAtStart": true,
+      "slice": "daily"
+    }
+  },
+  {
+    "id": "post.xhs.verify.three",
+    "appId": "app.xiaohongshu",
+    "kind": "post",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "post.xhs.verify.three.v0",
+    "variants": [
+      {
+        "id": "post.xhs.verify.three.v0",
+        "correctionStage": "R0",
+        "body": {
+          "title": "三件事验证法。",
+          "text": "仅朋友可见。",
+          "date": "2026-07-02",
+          "likes": 23,
+          "comments": 9
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "habit",
+      "secondaryFunctions": [],
+      "clueRole": "supporting",
+      "worldFactIds": [
+        "wf.shenchuan.job"
+      ],
+      "characterTraitIds": [],
+      "relationshipBeatIds": [],
+      "continuityLinkIds": [],
+      "firstReadValue": "表现角色对独立验证的长期习惯。",
+      "payoffPolicy": "optional"
+    },
+    "metadata": {
+      "visibleAtStart": true,
+      "slice": "daily"
+    }
+  },
+  {
+    "id": "post.xhs.pause.organizing",
+    "appId": "app.xiaohongshu",
+    "kind": "post",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "post.xhs.pause.organizing.v0",
+    "variants": [
+      {
+        "id": "post.xhs.pause.organizing.v0",
+        "correctionStage": "R0",
+        "body": {
+          "title": "今天先不整理。",
+          "text": "空桌和两把椅子。",
+          "date": "2026-07-13",
+          "likes": 31,
+          "comments": 6
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "emotional_contrast",
+      "secondaryFunctions": [
+        "world_context"
+      ],
+      "clueRole": "none",
+      "worldFactIds": [
+        "wf.hangzhou.daily"
+      ],
+      "characterTraitIds": [],
+      "relationshipBeatIds": [],
+      "continuityLinkIds": [],
+      "firstReadValue": "以普通情绪状态收束近期内容。",
+      "payoffPolicy": "none"
+    },
+    "metadata": {
+      "visibleAtStart": true,
+      "slice": "daily"
+    }
+  },
+  {
+    "id": "douyin.video.archive",
+    "appId": "app.douyin",
+    "kind": "video",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "douyin.video.archive.v0",
+    "variants": [
+      {
+        "id": "douyin.video.archive.v0",
+        "correctionStage": "R0",
+        "body": {
+          "author": "川流档案",
+          "caption": "三分钟做网页离线存档",
+          "likes": 26000,
+          "comments": 412
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "profession",
+      "secondaryFunctions": [],
+      "clueRole": "none",
+      "worldFactIds": [
+        "wf.shenchuan.job"
+      ],
+      "characterTraitIds": [],
+      "relationshipBeatIds": [],
+      "continuityLinkIds": [],
+      "firstReadValue": "展示正常的资料整理教程内容。",
+      "payoffPolicy": "none"
+    },
+    "metadata": {
+      "visibleAtStart": true,
+      "slice": "daily"
+    }
+  },
+  {
+    "id": "douyin.video.rainwalk",
+    "appId": "app.douyin",
+    "kind": "video",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "douyin.video.rainwalk.v0",
+    "variants": [
+      {
+        "id": "douyin.video.rainwalk.v0",
+        "correctionStage": "R0",
+        "body": {
+          "author": "城市边角",
+          "caption": "杭州雨天散步",
+          "likes": 4128,
+          "comments": 126
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "world_context",
+      "secondaryFunctions": [],
+      "clueRole": "none",
+      "worldFactIds": [
+        "wf.hangzhou.daily"
+      ],
+      "characterTraitIds": [],
+      "relationshipBeatIds": [],
+      "continuityLinkIds": [],
+      "firstReadValue": "增加普通城市散步视频。",
+      "payoffPolicy": "none"
+    },
+    "metadata": {
+      "visibleAtStart": true,
+      "slice": "daily"
+    }
+  },
+  {
+    "id": "douyin.video.park.outside",
+    "appId": "app.douyin",
+    "kind": "video",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "douyin.video.park.outside.v0",
+    "variants": [
+      {
+        "id": "douyin.video.park.outside.v0",
+        "correctionStage": "R0",
+        "body": {
+          "author": "城市边角",
+          "caption": "旧园区外围，不建议进去",
+          "likes": 1087,
+          "comments": 63
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "world_context",
+      "secondaryFunctions": [],
+      "clueRole": "supporting",
+      "worldFactIds": [
+        "wf.oldpark"
+      ],
+      "characterTraitIds": [],
+      "relationshipBeatIds": [],
+      "continuityLinkIds": [],
+      "firstReadValue": "提供外围环境但明确不鼓励进入。",
+      "payoffPolicy": "optional"
+    },
+    "metadata": {
+      "visibleAtStart": true,
+      "slice": "daily"
+    }
+  },
+  {
+    "id": "douyin.draft.corridor",
+    "appId": "app.douyin",
+    "kind": "draft",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "douyin.draft.corridor.v0",
+    "variants": [
+      {
+        "id": "douyin.draft.corridor.v0",
+        "correctionStage": "R0",
+        "body": {
+          "author": "草稿箱",
+          "caption": "draft_corridor_0714.mp4 · 00:14",
+          "likes": 0,
+          "comments": 0
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "continuity",
+      "secondaryFunctions": [],
+      "clueRole": "supporting",
+      "worldFactIds": [
+        "wf.hangzhou.daily"
+      ],
+      "characterTraitIds": [],
+      "relationshipBeatIds": [],
+      "continuityLinkIds": [],
+      "firstReadValue": "保留正式草稿文件名与时长信息。",
+      "payoffPolicy": "required"
+    },
+    "metadata": {
+      "visibleAtStart": true,
+      "slice": "daily"
+    }
+  },
+  {
+    "id": "news.toutiao.transport",
+    "appId": "app.toutiao",
+    "kind": "article",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "news.toutiao.transport.v0",
+    "variants": [
+      {
+        "id": "news.toutiao.transport.v0",
+        "correctionStage": "R0",
+        "body": {
+          "title": "本周城市公共交通出行提示",
+          "summary": "部分线路调整运营时间，出行前请查看官方公告。",
+          "date": "2026-07-14"
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "world_context",
+      "secondaryFunctions": [],
+      "clueRole": "none",
+      "worldFactIds": [
+        "wf.hangzhou.daily"
+      ],
+      "characterTraitIds": [],
+      "relationshipBeatIds": [],
+      "continuityLinkIds": [],
+      "firstReadValue": "提供普通城市公共信息。",
+      "payoffPolicy": "none"
+    },
+    "metadata": {
+      "visibleAtStart": true,
+      "slice": "daily"
+    }
+  },
+  {
+    "id": "news.toutiao.weather",
+    "appId": "app.toutiao",
+    "kind": "article",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "news.toutiao.weather.v0",
+    "variants": [
+      {
+        "id": "news.toutiao.weather.v0",
+        "correctionStage": "R0",
+        "body": {
+          "title": "阵雨天气持续，午后出行注意防滑",
+          "summary": "气象部门提示短时阵雨可能影响晚高峰。",
+          "date": "2026-07-15"
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "world_context",
+      "secondaryFunctions": [],
+      "clueRole": "none",
+      "worldFactIds": [
+        "wf.hangzhou.daily"
+      ],
+      "characterTraitIds": [],
+      "relationshipBeatIds": [],
+      "continuityLinkIds": [],
+      "firstReadValue": "补充与天气一致的普通新闻。",
+      "payoffPolicy": "none"
+    },
+    "metadata": {
+      "visibleAtStart": true,
+      "slice": "daily"
+    }
+  },
+  {
+    "id": "news.toutiao.archive",
+    "appId": "app.toutiao",
+    "kind": "article",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "news.toutiao.archive.v0",
+    "variants": [
+      {
+        "id": "news.toutiao.archive.v0",
+        "correctionStage": "R0",
+        "body": {
+          "title": "个人数字资料如何做好长期备份",
+          "summary": "专家建议保留原文件、校验值和至少一份离线副本。",
+          "date": "2026-07-12"
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "profession",
+      "secondaryFunctions": [],
+      "clueRole": "none",
+      "worldFactIds": [
+        "wf.shenchuan.job"
+      ],
+      "characterTraitIds": [],
+      "relationshipBeatIds": [],
+      "continuityLinkIds": [],
+      "firstReadValue": "以公共知识文章承接存档习惯。",
+      "payoffPolicy": "none"
+    },
+    "metadata": {
+      "visibleAtStart": true,
+      "slice": "daily"
+    }
+  },
+  {
+    "id": "news.toutiao.renewal",
+    "appId": "app.toutiao",
+    "kind": "article",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "news.toutiao.renewal.v0",
+    "variants": [
+      {
+        "id": "news.toutiao.renewal.v0",
+        "correctionStage": "R0",
+        "body": {
+          "title": "旧建筑更新项目开放公众意见征集",
+          "summary": "规划部门将就公共空间改造方案征集意见。",
+          "date": "2026-07-10"
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "world_context",
+      "secondaryFunctions": [
+        "world_context"
+      ],
+      "clueRole": "none",
+      "worldFactIds": [
+        "wf.hangzhou.daily"
+      ],
+      "characterTraitIds": [],
+      "relationshipBeatIds": [],
+      "continuityLinkIds": [],
+      "firstReadValue": "增加普通城市更新背景。",
+      "payoffPolicy": "none"
+    },
+    "metadata": {
+      "visibleAtStart": true,
+      "slice": "daily"
+    }
+  },
+  {
+    "id": "mail.qq.recruiting",
+    "appId": "app.qqmail",
+    "kind": "mail",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "mail.qq.recruiting.v0",
+    "variants": [
+      {
+        "id": "mail.qq.recruiting.v0",
+        "correctionStage": "R0",
+        "body": {
+          "from": "用户研究招募组",
+          "subject": "本周受访者排期确认",
+          "preview": "周三与周五的访谈时间已确认，请更新提纲版本。",
+          "date": "7月10日"
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "profession",
+      "secondaryFunctions": [],
+      "clueRole": "none",
+      "worldFactIds": [
+        "wf.shenchuan.job"
+      ],
+      "characterTraitIds": [],
+      "relationshipBeatIds": [],
+      "continuityLinkIds": [],
+      "firstReadValue": "建立日常工作邮件密度。",
+      "payoffPolicy": "none"
+    },
+    "metadata": {
+      "visibleAtStart": true,
+      "slice": "daily"
+    }
+  },
+  {
+    "id": "mail.qq.receipt",
+    "appId": "app.qqmail",
+    "kind": "mail",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "mail.qq.receipt.v0",
+    "variants": [
+      {
+        "id": "mail.qq.receipt.v0",
+        "correctionStage": "R0",
+        "body": {
+          "from": "云服务通知",
+          "subject": "月度账单已生成",
+          "preview": "本月存储服务账单可在账户中心查看。",
+          "date": "7月6日"
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "world_context",
+      "secondaryFunctions": [],
+      "clueRole": "none",
+      "worldFactIds": [
+        "wf.shenchuan.job"
+      ],
+      "characterTraitIds": [],
+      "relationshipBeatIds": [],
+      "continuityLinkIds": [],
+      "firstReadValue": "增加普通账户通知邮件。",
+      "payoffPolicy": "none"
+    },
+    "metadata": {
+      "visibleAtStart": true,
+      "slice": "daily"
+    }
+  },
+  {
+    "id": "mail.qq.photo.club",
+    "appId": "app.qqmail",
+    "kind": "mail",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "mail.qq.photo.club.v0",
+    "variants": [
+      {
+        "id": "mail.qq.photo.club.v0",
+        "correctionStage": "R0",
+        "body": {
+          "from": "城市摄影小组",
+          "subject": "周末外拍集合说明",
+          "preview": "如遇阵雨活动顺延，请勿进入封闭区域。",
+          "date": "7月4日"
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "world_context",
+      "secondaryFunctions": [
+        "relationship"
+      ],
+      "clueRole": "none",
+      "worldFactIds": [
+        "wf.shenchuan.job"
+      ],
+      "characterTraitIds": [],
+      "relationshipBeatIds": [],
+      "continuityLinkIds": [],
+      "firstReadValue": "补充正常兴趣社群往来。",
+      "payoffPolicy": "none"
+    },
+    "metadata": {
+      "visibleAtStart": true,
+      "slice": "daily"
+    }
+  },
+  {
+    "id": "netdisk.folder.photos",
+    "appId": "app.baidunetdisk",
+    "kind": "folder",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "netdisk.folder.photos.v0",
+    "variants": [
+      {
+        "id": "netdisk.folder.photos.v0",
+        "correctionStage": "R0",
+        "body": {
+          "name": "城市照片",
+          "status": "已同步",
+          "size": "1.6 GB"
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "habit",
+      "secondaryFunctions": [],
+      "clueRole": "none",
+      "worldFactIds": [
+        "wf.shenchuan.job"
+      ],
+      "characterTraitIds": [],
+      "relationshipBeatIds": [],
+      "continuityLinkIds": [],
+      "firstReadValue": "展示正常照片归档目录。",
+      "payoffPolicy": "none"
+    },
+    "metadata": {
+      "visibleAtStart": true,
+      "slice": "daily"
+    }
+  },
+  {
+    "id": "netdisk.folder.research",
+    "appId": "app.baidunetdisk",
+    "kind": "folder",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "netdisk.folder.research.v0",
+    "variants": [
+      {
+        "id": "netdisk.folder.research.v0",
+        "correctionStage": "R0",
+        "body": {
+          "name": "用户研究",
+          "status": "已同步",
+          "size": "2.1 GB"
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "profession",
+      "secondaryFunctions": [],
+      "clueRole": "none",
+      "worldFactIds": [
+        "wf.shenchuan.job"
+      ],
+      "characterTraitIds": [],
+      "relationshipBeatIds": [],
+      "continuityLinkIds": [],
+      "firstReadValue": "展示工作文件的常规目录结构。",
+      "payoffPolicy": "none"
+    },
+    "metadata": {
+      "visibleAtStart": true,
+      "slice": "daily"
+    }
+  },
+  {
+    "id": "netdisk.folder.offline",
+    "appId": "app.baidunetdisk",
+    "kind": "folder",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "netdisk.folder.offline.v0",
+    "variants": [
+      {
+        "id": "netdisk.folder.offline.v0",
+        "correctionStage": "R0",
+        "body": {
+          "name": "网页离线存档",
+          "status": "仅本机可用",
+          "size": "742 MB"
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "habit",
+      "secondaryFunctions": [],
+      "clueRole": "supporting",
+      "worldFactIds": [
+        "wf.shenchuan.job"
+      ],
+      "characterTraitIds": [],
+      "relationshipBeatIds": [],
+      "continuityLinkIds": [],
+      "firstReadValue": "提供存档文件夹但不直接给出结论。",
+      "payoffPolicy": "optional"
+    },
+    "metadata": {
+      "visibleAtStart": true,
+      "slice": "daily"
+    }
+  },
+  {
+    "id": "netdisk.folder.audio",
+    "appId": "app.baidunetdisk",
+    "kind": "folder",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "netdisk.folder.audio.v0",
+    "variants": [
+      {
+        "id": "netdisk.folder.audio.v0",
+        "correctionStage": "R0",
+        "body": {
+          "name": "环境录音",
+          "status": "已同步",
+          "size": "386 MB"
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "world_context",
+      "secondaryFunctions": [
+        "habit"
+      ],
+      "clueRole": "none",
+      "worldFactIds": [
+        "wf.shenchuan.job"
+      ],
+      "characterTraitIds": [],
+      "relationshipBeatIds": [],
+      "continuityLinkIds": [],
+      "firstReadValue": "增加普通环境录音目录。",
+      "payoffPolicy": "none"
+    },
+    "metadata": {
+      "visibleAtStart": true,
+      "slice": "daily"
+    }
+  },
+  {
+    "id": "alipay.bill.grocery",
+    "appId": "app.alipay",
+    "kind": "transaction",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "alipay.bill.grocery.v0",
+    "variants": [
+      {
+        "id": "alipay.bill.grocery.v0",
+        "correctionStage": "R0",
+        "body": {
+          "merchant": "社区便利店",
+          "date": "2026-07-14 19:26",
+          "amount": 32.8
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "world_context",
+      "secondaryFunctions": [],
+      "clueRole": "none",
+      "worldFactIds": [
+        "wf.hangzhou.daily"
+      ],
+      "characterTraitIds": [],
+      "relationshipBeatIds": [],
+      "continuityLinkIds": [],
+      "firstReadValue": "补充普通生活消费记录。",
+      "payoffPolicy": "none"
+    },
+    "metadata": {
+      "visibleAtStart": true,
+      "slice": "daily"
+    }
+  },
+  {
+    "id": "alipay.bill.transit",
+    "appId": "app.alipay",
+    "kind": "transaction",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "alipay.bill.transit.v0",
+    "variants": [
+      {
+        "id": "alipay.bill.transit.v0",
+        "correctionStage": "R0",
+        "body": {
+          "merchant": "公共交通乘车码",
+          "date": "2026-07-14 08:42",
+          "amount": 4
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "world_context",
+      "secondaryFunctions": [],
+      "clueRole": "none",
+      "worldFactIds": [
+        "wf.hangzhou.daily"
+      ],
+      "characterTraitIds": [],
+      "relationshipBeatIds": [],
+      "continuityLinkIds": [],
+      "firstReadValue": "补充普通通勤消费记录。",
+      "payoffPolicy": "none"
+    },
+    "metadata": {
+      "visibleAtStart": true,
+      "slice": "daily"
+    }
+  },
+  {
+    "id": "alipay.bill.cafe",
+    "appId": "app.alipay",
+    "kind": "transaction",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "alipay.bill.cafe.v0",
+    "variants": [
+      {
+        "id": "alipay.bill.cafe.v0",
+        "correctionStage": "R0",
+        "body": {
+          "merchant": "街角咖啡",
+          "date": "2026-07-12 15:11",
+          "amount": 28
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "world_context",
+      "secondaryFunctions": [],
+      "clueRole": "none",
+      "worldFactIds": [
+        "wf.hangzhou.daily"
+      ],
+      "characterTraitIds": [],
+      "relationshipBeatIds": [],
+      "continuityLinkIds": [],
+      "firstReadValue": "补充普通咖啡消费记录。",
+      "payoffPolicy": "none"
+    },
+    "metadata": {
+      "visibleAtStart": true,
+      "slice": "daily"
+    }
+  },
+  {
+    "id": "trip.didi.commute",
+    "appId": "app.didi",
+    "kind": "trip",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "trip.didi.commute.v0",
+    "variants": [
+      {
+        "id": "trip.didi.commute.v0",
+        "correctionStage": "R0",
+        "body": {
+          "date": "2026-07-12 18:20",
+          "from": "公司",
+          "to": "住处附近",
+          "status": "已完成"
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "world_context",
+      "secondaryFunctions": [],
+      "clueRole": "none",
+      "worldFactIds": [
+        "wf.hangzhou.daily"
+      ],
+      "characterTraitIds": [],
+      "relationshipBeatIds": [],
+      "continuityLinkIds": [],
+      "firstReadValue": "补充普通下班行程。",
+      "payoffPolicy": "none"
+    },
+    "metadata": {
+      "visibleAtStart": true,
+      "slice": "daily"
+    }
+  },
+  {
+    "id": "trip.didi.photo",
+    "appId": "app.didi",
+    "kind": "trip",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "trip.didi.photo.v0",
+    "variants": [
+      {
+        "id": "trip.didi.photo.v0",
+        "correctionStage": "R0",
+        "body": {
+          "date": "2026-07-06 09:18",
+          "from": "住处附近",
+          "to": "城市摄影集合点",
+          "status": "已完成"
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "world_context",
+      "secondaryFunctions": [
+        "relationship"
+      ],
+      "clueRole": "none",
+      "worldFactIds": [
+        "wf.hangzhou.daily"
+      ],
+      "characterTraitIds": [],
+      "relationshipBeatIds": [],
+      "continuityLinkIds": [],
+      "firstReadValue": "补充正常摄影活动行程。",
+      "payoffPolicy": "none"
+    },
+    "metadata": {
+      "visibleAtStart": true,
+      "slice": "daily"
+    }
+  },
+  {
+    "id": "trip.didi.station",
+    "appId": "app.didi",
+    "kind": "trip",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "trip.didi.station.v0",
+    "variants": [
+      {
+        "id": "trip.didi.station.v0",
+        "correctionStage": "R0",
+        "body": {
+          "date": "2026-06-29 14:05",
+          "from": "杭州东站",
+          "to": "住处附近",
+          "status": "已完成"
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "world_context",
+      "secondaryFunctions": [],
+      "clueRole": "none",
+      "worldFactIds": [
+        "wf.hangzhou.daily"
+      ],
+      "characterTraitIds": [],
+      "relationshipBeatIds": [],
+      "continuityLinkIds": [],
+      "firstReadValue": "补充普通返程轨迹。",
+      "payoffPolicy": "none"
+    },
+    "metadata": {
+      "visibleAtStart": true,
+      "slice": "daily"
+    }
+  },
+  {"id":"news.toutiao.nw01","appId":"app.toutiao","kind":"article","ownerId":"actor.shenchuan","sourceRootId":"source.shenchuan_daily","initialVariantId":"news.toutiao.nw01.v0","variants":[{"id":"news.toutiao.nw01.v0","correctionStage":"R0","body":{"title":"旧滨河职教园外围改造完成","summary":"正常城市更新；配图与沈川照片建筑细节不同。","date":"旧闻"},"reason":"normal"}],"narrative":{"primaryFunction":"world_context","secondaryFunctions":["location"],"clueRole":"supporting","worldFactIds":["wf.oldpark"],"characterTraitIds":[],"relationshipBeatIds":[],"continuityLinkIds":[],"firstReadValue":"按内容圣经保留旧园区外围改造报道。","payoffPolicy":"required"},"metadata":{"visibleAtStart":true,"slice":"daily"}},
+  {"id":"news.toutiao.nw02","appId":"app.toutiao","kind":"article","ownerId":"actor.shenchuan","sourceRootId":"source.shenchuan_daily","initialVariantId":"news.toutiao.nw02.v0","variants":[{"id":"news.toutiao.nw02.v0","correctionStage":"R0","body":{"title":"某市人口流动数据保持稳定","summary":"回应网上“连续失踪”讨论，数据未见异常。","date":"旧闻"},"reason":"normal"}],"narrative":{"primaryFunction":"world_context","secondaryFunctions":[],"clueRole":"supporting","worldFactIds":["wf.hangzhou.daily"],"characterTraitIds":[],"relationshipBeatIds":[],"continuityLinkIds":[],"firstReadValue":"保留数据层面的正常解释视角。","payoffPolicy":"optional"},"metadata":{"visibleAtStart":true,"slice":"daily"}},
+  {"id":"news.toutiao.nw03","appId":"app.toutiao","kind":"article","ownerId":"actor.shenchuan","sourceRootId":"source.shenchuan_daily","initialVariantId":"news.toutiao.nw03.v0","variants":[{"id":"news.toutiao.nw03.v0","correctionStage":"R0","body":{"title":"身份核验类求助增加，警方称未形成案件关联","summary":"报案人坚持某人存在，但无户籍、社保、学校或医疗记录。","date":"旧闻"},"reason":"normal"}],"narrative":{"primaryFunction":"world_context","secondaryFunctions":["theme"],"clueRole":"supporting","worldFactIds":["wf.floor417"],"characterTraitIds":[],"relationshipBeatIds":[],"continuityLinkIds":[],"firstReadValue":"保留官方未形成案件关联的模棱报道。","payoffPolicy":"optional"},"metadata":{"visibleAtStart":true,"slice":"daily"}},
+  {"id":"news.toutiao.nw04","appId":"app.toutiao","kind":"article","ownerId":"actor.shenchuan","sourceRootId":"source.shenchuan_daily","initialVariantId":"news.toutiao.nw04.v0","variants":[{"id":"news.toutiao.nw04.v0","correctionStage":"R0","body":{"title":"网络都市传说为何会制造共同记忆","summary":"普通传播学报道，提供合理怀疑视角。","date":"旧闻"},"reason":"normal"}],"narrative":{"primaryFunction":"theme","secondaryFunctions":["platform_culture"],"clueRole":"none","worldFactIds":["wf.floor417"],"characterTraitIds":[],"relationshipBeatIds":[],"continuityLinkIds":[],"firstReadValue":"提供传播学层面的合理怀疑视角。","payoffPolicy":"none"},"metadata":{"visibleAtStart":true,"slice":"daily"}},
+  {"id":"news.toutiao.nw05","appId":"app.toutiao","kind":"article","ownerId":"actor.shenchuan","sourceRootId":"source.shenchuan_daily","initialVariantId":"news.toutiao.nw05.v0","variants":[{"id":"news.toutiao.nw05.v0","correctionStage":"R0","body":{"title":"旧校舍拆除照片征集","summary":"评论区有人说“我昨天还看见楼在”后被折叠。","date":"旧闻"},"reason":"normal"}],"narrative":{"primaryFunction":"world_context","secondaryFunctions":["location"],"clueRole":"supporting","worldFactIds":["wf.oldpark"],"characterTraitIds":[],"relationshipBeatIds":[],"continuityLinkIds":[],"firstReadValue":"保留内容圣经冻结的旧校舍报道。","payoffPolicy":"optional"},"metadata":{"visibleAtStart":true,"slice":"daily"}}
+]

@@ -96,6 +96,8 @@ jobs:
         run: pnpm build
         env:
           VITE_BASE_PATH: /11-52-arg/
+          VITE_GIT_COMMIT: ${{ github.sha }}
+          VITE_WORKFLOW_RUN: ${{ github.run_id }}
 
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v4

@@ -8,7 +8,6 @@ import { FilesApp } from "./FilesApp";
 import { SettingsApp } from "./SettingsApp";
 import { TiebaApp } from "./TiebaApp";
 import { CalculatorApp } from "./CalculatorApp";
-import { GenericApp } from "./GenericApp";
 import { BaiduMapApp } from "./BaiduMapApp";
 import { PhoneApp } from "./PhoneApp";
 import { ZhihuApp } from "./ZhihuApp";
@@ -23,6 +22,18 @@ import {
   ToutiaoApp,
   XiaohongshuApp
 } from "./PlatformApps";
+import {
+  CalendarApp,
+  CameraApp,
+  ClockApp,
+  CompassApp,
+  HealthApp,
+  NeteaseMusicApp,
+  Railway12306App,
+  VoiceMemosApp,
+  WeatherApp,
+  WechatReadingApp
+} from "./UtilityApps";
 
 export function AppHost({appId}:{appId:string}) {
  if(appId==="app.wechat") return <WeChatApp/>;
@@ -45,5 +56,16 @@ export function AppHost({appId}:{appId:string}) {
  if(appId==="app.didi") return <DidiApp/>;
  if(appId==="app.meituan") return <MeituanApp/>;
  if(appId==="app.taobao") return <TaobaoApp/>;
- const app=appById.get(appId); return <AppChrome title={app?.displayName??appId}><GenericApp appId={appId}/></AppChrome>;
+ if(appId==="app.calendar") return <CalendarApp/>;
+ if(appId==="app.netease_music") return <NeteaseMusicApp/>;
+ if(appId==="app.wechat_reading") return <WechatReadingApp/>;
+ if(appId==="app.railway12306") return <Railway12306App/>;
+ if(appId==="app.health") return <HealthApp/>;
+ if(appId==="app.weather") return <WeatherApp/>;
+ if(appId==="app.clock") return <ClockApp/>;
+ if(appId==="app.camera") return <CameraApp/>;
+ if(appId==="app.voice_memos") return <VoiceMemosApp/>;
+ if(appId==="app.compass") return <CompassApp/>;
+ const app=appById.get(appId);
+ return <AppChrome title={app?.displayName??"应用"}><div className="empty-state">此应用不可用</div></AppChrome>;
 }

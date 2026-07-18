@@ -2,6 +2,7 @@ import { useRef } from "react";
 import { useGame } from "./GameContext";
 import { PhoneFrame } from "@/shell/PhoneFrame";
 import { isQaMode } from "@/lib/qa-mode";
+import { buildMeta } from "@/lib/build-meta";
 
 export function GameRoot() {
   const { ready, activeDeviceId, switchDevice, reset, state } = useGame();
@@ -23,7 +24,7 @@ export function GameRoot() {
     }}
   >
     {qaMode&&<section className="prototype-toolbar" aria-label="QA 控制">
-      <div><strong>11:52</strong><span>可运行仓库 V0.1 · 视觉层待按冻结截图精修</span></div>
+      <div><strong>11:52</strong><span data-testid="qa-build-meta">build {buildMeta.commit.slice(0,12)} · workflow {buildMeta.workflowRun}</span></div>
       <div className="device-tabs" role="tablist">
         <button data-testid="switch-player" className={activeDeviceId==="player"?"active":""} onClick={()=>switchDevice("player")}>我的手机</button>
         <button data-testid="switch-investigation" className={activeDeviceId==="investigation"?"active":""} onClick={()=>switchDevice("investigation")}>调查手机</button>
