@@ -3,7 +3,7 @@
 ## 结论
 
 - 已移除玩家可见联系人、作者、发件人和账户页中的单字头像占位。
-- 当前头像包包含 128 个本地 SVG 图片，文件路径、seed 与 SHA-256 均唯一。
+- 当前头像包包含 128 个本地 PNG 运行时图片与对应 SVG 生成母版，文件路径、seed 与 SHA-256 均唯一。
 - 头像在构建时由固定 slot 映射，不依赖运行时随机数或外部网络；GitHub Pages 离线缓存与子路径部署均可正常加载。
 - 头像仅承担视觉身份区分，不是线索，也不改变任何 StoryEvent、GameState、剧情文本或触发器。
 
@@ -13,8 +13,9 @@
 - 生成脚本：`scripts/generate_avatar_assets.mjs`。
 - 资产目录：`public/media/case-001/avatars/`。
 - 可机读清单：`content/case-001/media/generated-avatar-manifest.json`。
-- 生成风格：Avataaars、Lorelei、Adventurer、Personas。
+- 生成风格：Lorelei、Adventurer、Personas；排除容易产生夸张表情的头像风格。
 - 每个文件的 creator、license、source URL、seed 与 SHA-256 均记录在 manifest。
+- 运行时使用 128×128 PNG，避免移动端与 CI 浏览器并发解码复杂 SVG 时出现偶发延迟；SVG 母版继续保留以便审计和可重复生产。
 - 文档：
   - https://www.dicebear.com/how-to-use/http-api/
   - https://www.dicebear.com/licenses/

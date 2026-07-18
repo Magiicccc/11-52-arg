@@ -35,7 +35,7 @@ test("communication and social apps use loaded custom avatar images", async ({ p
     self: getComputedStyle(node).getPropertyValue("--wechat-self-avatar")
   }));
   expect(avatarVariables.peer).toContain("generated-avatar-");
-  expect(avatarVariables.self).toContain("generated-avatar-121.svg");
+  expect(avatarVariables.self).toContain("generated-avatar-121.png");
   await page.getByTestId("wechat-conversations").click();
   await page.getByTestId("app-back").click();
 

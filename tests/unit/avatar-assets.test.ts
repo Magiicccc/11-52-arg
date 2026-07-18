@@ -20,12 +20,12 @@ describe("generated avatar asset pack", () => {
     expect(new Set(manifest.assets.map((asset) => asset.path)).size).toBe(GENERATED_AVATAR_COUNT);
     expect(new Set(manifest.assets.map((asset) => asset.seed)).size).toBe(GENERATED_AVATAR_COUNT);
     expect(new Set(manifest.assets.map((asset) => asset.sha256)).size).toBe(GENERATED_AVATAR_COUNT);
-    expect(manifest.assets.every((asset, index) => asset.slot === index && asset.path.endsWith(".svg"))).toBe(true);
+    expect(manifest.assets.every((asset, index) => asset.slot === index && asset.path.endsWith(".png"))).toBe(true);
   });
 
   it("maps every visible slot to a base-aware local asset URL", () => {
     for (let slot = 0; slot < GENERATED_AVATAR_COUNT; slot += 1) {
-      expect(generatedAvatar(slot)).toMatch(new RegExp(`media/case-001/avatars/generated-avatar-${String(slot + 1).padStart(3, "0")}\\.svg$`));
+      expect(generatedAvatar(slot)).toMatch(new RegExp(`media/case-001/avatars/generated-avatar-${String(slot + 1).padStart(3, "0")}\\.png$`));
     }
   });
 });

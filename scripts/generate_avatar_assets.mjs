@@ -1,12 +1,12 @@
 import { createHash } from "node:crypto";
 import { mkdir, writeFile } from "node:fs/promises";
 import path from "node:path";
+import { chromium } from "@playwright/test";
 
 const root = process.cwd();
 const outputDir = path.join(root, "public", "media", "case-001", "avatars");
 const manifestPath = path.join(root, "content", "case-001", "media", "generated-avatar-manifest.json");
 const styles = [
-  { id: "avataaars", creator: "Pablo Stanley", license: "Free for personal and commercial use" },
   { id: "lorelei", creator: "Lisa Wischofsky", license: "CC BY 4.0" },
   { id: "adventurer", creator: "Lisa Wischofsky", license: "CC BY 4.0" },
   { id: "personas", creator: "Draftbit", license: "CC0 1.0" }
@@ -16,6 +16,8 @@ const count = 128;
 
 await mkdir(outputDir, { recursive: true });
 const assets = [];
+const browser = await chromium.launch({ args: ["--no-sandbox", "--disable-dev-shm-usage"] });
+const page = await browser.newPage({ viewport: { width: 128, height: 128 }, deviceScaleFactor: 1 });
 for (let index = 0; index < count; index += 1) {
   const ordinal = String(index + 1).padStart(3, "0");
   const style = styles[index % styles.length];
@@ -26,21 +28,28 @@ for (let index = 0; index < count; index += 1) {
   if (!response.ok) throw new Error(`Avatar ${ordinal} failed: ${response.status} ${response.statusText}`);
   const svg = await response.text();
   if (!svg.includes("<svg")) throw new Error(`Avatar ${ordinal} did not return SVG`);
-  const filename = `generated-avatar-${ordinal}.svg`;
-  await writeFile(path.join(outputDir, filename), svg, "utf8");
+  const sourceFilename = `generated-avatar-${ordinal}.svg`;
+  const runtimeFilename = `generated-avatar-${ordinal}.png`;
+  await writeFile(path.join(outputDir, sourceFilename), svg, "utf8");
+  await page.setContent(`<style>html,body{width:128px;height:128px;margin:0;overflow:hidden}svg{width:128px;height:128px;display:block}</style>${svg}`, { waitUntil: "load" });
+  const png = await page.screenshot({ type: "png", omitBackground: true });
+  await writeFile(path.join(outputDir, runtimeFilename), png);
   assets.push({
     slot: index,
     id: `avatar.generated.${ordinal}`,
-    path: `/media/case-001/avatars/${filename}`,
+    path: `/media/case-001/avatars/${runtimeFilename}`,
+    sourceSvgPath: `/media/case-001/avatars/${sourceFilename}`,
     style: style.id,
     seed,
     creator: style.creator,
     license: style.license,
     sourceUrl: url,
-    sha256: createHash("sha256").update(svg).digest("hex"),
+    sha256: createHash("sha256").update(png).digest("hex"),
+    sourceSvgSha256: createHash("sha256").update(svg).digest("hex"),
     generatedAt: new Date().toISOString()
   });
 }
+await browser.close();
 
 const manifest = {
   schemaVersion: 1,
