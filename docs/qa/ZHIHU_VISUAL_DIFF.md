@@ -1,75 +1,71 @@
-# 知乎视觉差异报告
+# GitHub Pages 知乎视觉差异
 
-日期：2026-07-17
+日期：2026-07-18
 
-分支：`fix/ui-realism-pass-1`
+测试地址：<https://magiicccc.github.io/11-52-arg/>
 
 测试视口：402×874、440×956
 
-## 对照范围
+## 三方证据
 
-冻结参考以 `references/ui/11_52_UI_Reference_Pack_V1.0_全量版/apps/zhihu/` 为准，主要结构参考为：
+冻结参考根目录：
 
-- `raw/ZH-HOME-01__ZHIHU_11.1.0_01_home_or_answer.jpg`
-- `annotated/ZH-HOME-01__annotated.jpg`
-- `manifest.json`
-- `measurements.json`
-- `state-matrix.md`
-- `implementation-contract.md`
+`references/ui/11_52_UI_Reference_Pack_V1.0_全量版/apps/zhihu/`
 
-改动前基线为 `docs/qa/ui-current/current-zhihu-screen.png`。该页面由 `GenericApp` 生成，仅有重复标题、两条剧情内容、灰色文字头像和大片空白。
+主要冻结截图：
 
-## 改动后截图
+`raw/ZH-HOME-01__ZHIHU_11.1.0_01_home_or_answer.jpg`
 
-自动截图由 `tests/e2e/ui-realism.spec.ts` 生成，位于 `test-results/visual/zhihu/`：
+| 状态 | before 线上截图 | 冻结参考 | after 线上截图 |
+| --- | --- | --- | --- |
+| 首页 | `test-results/live-before/zhihu-home-402x874.png` | `raw/ZH-HOME-01__ZHIHU_11.1.0_01_home_or_answer.jpg` | `test-results/live-after/zhihu-home-402x874.png` |
+| 搜索结果 | `test-results/live-before/zhihu-search-402x874.png` | `measurements.json`、`implementation-contract.md` | `test-results/live-after/zhihu-search-402x874.png` |
+| 问题详情 | `test-results/live-before/zhihu-question-402x874.png` | `state-matrix.md` | `test-results/live-after/zhihu-question-402x874.png` |
+| 评论区 | `test-results/live-before/zhihu-comments-402x874.png` | `state-matrix.md` | `test-results/live-after/zhihu-comments-402x874.png` |
+| 404 | `test-results/live-before/zhihu-404-402x874.png` | `implementation-contract.md` | `test-results/live-after/zhihu-404-402x874.png` |
+| 缓存入口 | `test-results/live-before/zhihu-cache-after-402x874.png` | `implementation-contract.md` | `test-results/live-after/zhihu-cache-after-402x874.png` |
 
-| 状态 | 402×874 | 440×956 |
-| --- | --- | --- |
-| 首页 | `home-402.png` | `home-440.png` |
-| 搜索结果 | `search-402.png` | `search-440.png` |
-| 问题详情 | `detail-402.png` | `detail-440.png` |
-| 评论区 | `comments-402.png` | `comments-440.png` |
-| 404 | `404-402.png` | `404-440.png` |
-| 缓存入口出现 | `cache-entry-before-402.png` | `cache-entry-before-440.png` |
-| 缓存记录展开 | `cache-entry-after-402.png` | `cache-entry-after-440.png` |
+before 与 after 均由 Playwright 直接访问 GitHub Pages 生成。before 截图记录了 CSS 请求遭连接重置后的真实未样式化状态；after 截图仅在审计脚本确认 `.prototype-stage` 的生产 CSS 已应用后生成。
 
-主屏幕前后对照：
+## 专用结构
 
-- 改动前：`docs/qa/ui-current/current-home-screen.png`
-- 改动后：`test-results/visual/home/home-402.png`、`home-440.png`
+知乎不经过 `GenericApp`。运行时使用 `ZhihuApp`，其内部具有以下独立视图状态：
 
-## 结构差异
+- 首页推荐流；
+- 搜索结果；
+- 问题详情；
+- 评论区；
+- 404 失效页；
+- 页面底部归档元数据与缓存入口。
 
-| 项目 | 改动前 | 改动后 |
-| --- | --- | --- |
-| 页面宿主 | `GenericApp` 通用模板 | `ZhihuApp` 专用页面 |
-| 首页导航 | 通用返回栏和重复标题 | 知乎顶部栏、关注/推荐/热榜、底部导航 |
-| 内容密度 | 2 条主线条目 | 12 条混合内容，可继续滚动 |
-| 卡片语法 | 统一灰色方块和两行列表 | 标题、作者、身份、摘要、赞同、评论、收藏 |
-| 内容比例 | 直接剧情内容占全部 | 普通技术/用户研究/城市生活/摄影/文件管理为主体，正式内容占少数 |
-| 详情层级 | 字段表 | 问题、描述、话题、关注/回答、作者、正文、相关推荐、底部操作 |
-| 评论 | 无 | 独立评论页和排序栏 |
-| 搜索 | 无 | 搜索输入、结果分类和平台式结果列表 |
-| 404 | 普通列表项 | 独立失效页；缓存入口位于首屏以下的存档元数据 |
-| 状态保存 | 组件内临时状态 | 点赞、收藏与滚动位置写入现有统一状态并在刷新后恢复 |
+首页具有顶部导航、关注/推荐/热榜、问题卡片、作者与身份、摘要、赞同、评论、收藏和底部导航。详情具有问题标题、描述、话题、关注、回答数量、作者、正文、展开、赞同、评论、收藏、分享。404 首先呈现平台失效页，隐藏入口位于页面底部归档元数据，不是显眼谜题按钮。
 
-## 内容与权威约束
+## 已修复
 
-- `zhihu.answer.01` 的冻结问题和回答正文通过内容选择器读取，没有改写。
-- `page.zhihu.deleted.01` 的冻结失效页标题和归档时间通过内容选择器读取，没有改写。
-- 普通内容只用于复刻信息密度和生活世界，不创建新谜题、答案、角色关系、异常或剧情门。
-- 所有内容打开、点赞和收藏行为继续发出规范 StoryEvent；UI 状态复用现有 `world.flags` 与 `scrollByRoute`，未改变 GameState 合同。
-- 缓存入口不再是首屏显眼的谜题按钮，必须先进入 404 再向下滚动到页面存档元数据。
+- 不再是“标题 + 两条列表 + 大片空白”的通用模板。
+- 内容卡片密度、分隔、字体层级、作者身份和互动信息接近冻结 iPhone 结构。
+- 首页、搜索、详情、评论、404 和缓存入口都能在线打开。
+- 点赞、收藏、返回滚动位置和刷新恢复由 Playwright 覆盖。
+- 正常玩家模式不显示交互等级、本地模拟账号、Content ID、Scene ID 或 Trigger ID。
+- `zhihu.answer.01` 与 `page.zhihu.deleted.01` 的冻结正文继续从现有内容选择器读取，没有改写正式内容。
 
-## 自动检查结果
+## 内容真实性边界
 
-`tests/e2e/ui-realism.spec.ts` 在两个视口共 8 项通过，覆盖：
+现有知乎首页含 10 条生活向静态 UI 卡片和少量正式内容，主题覆盖互联网、缓存、用户研究、城市生活、摄影和文件管理。静态卡片有 `narrativeFunction` 分类，但尚未进入正式 Content Registry，也没有完整 NarrativeMetadata。因此本轮保留其既有结构，不新增或随机生成帖子，并将知乎评级保持为 `PARTIAL`。
 
-- 主屏幕四列几何、Dock、页面圆点和数字角标；
-- 知乎首页、搜索、详情、评论、404、缓存入口前后；
-- 点赞、收藏、返回滚动位置与刷新恢复；
-- 30 个玩家手机 App 的正常模式开屏、返回及开发标签扫描。
+## 尚未达到冻结参考
 
-## 尚未达到冻结包完整状态矩阵的部分
+- “想法流、个人主页、AI 模块”没有覆盖冻结 state matrix 的完整状态。
+- 评论层级、长回答排版、图片媒体和部分操作动画未逐像素复刻。
+- 中性字标头像不是正式人物媒体；本轮没有生成或引入未授权人物正脸。
+- 生活向静态卡片需要内容团队依据 Content Bible 补齐正式 NarrativeMetadata 后，才能作为生产内容验收。
+- 部分图标与平台字体使用系统替代字形，存在细微视觉差异。
 
-本轮按用户明确收窄的第一阶段只完成主屏幕与知乎核心路径。知乎冻结 manifest 中的“想法流、个人主页、AI 模块”尚未制作专用页面；首页头像目前为本地生成的中性字标，未引入未授权人物照片；评论层级和长回答展开已具备结构，但仍未达到逐像素官方素材复刻。上述缺口不影响本轮要求的首页、搜索、详情、评论、404 与缓存入口流程。
+## 自动验证
+
+以下检查在 402×874 与 440×956 均通过：
+
+- 知乎首页、搜索、问题详情、评论、404、缓存入口；
+- 点赞、收藏和滚动位置刷新恢复；
+- 正常玩家模式开发标签扫描；
+- GitHub Pages online-test 20/20 总体通过。

@@ -94,7 +94,10 @@ async function screenshot(page, name) {
     animations: "disabled"
   });
   const broken = await page.locator("img").evaluateAll((images) => images
-    .filter((image) => !image.complete || image.naturalWidth === 0)
+    // naturalWidth is the reliable broken-resource signal after the load/decode
+    // wait above. Chromium can briefly leave `complete` false after a retry even
+    // when decoded pixels are already available.
+    .filter((image) => image.naturalWidth === 0)
     .map((image) => ({ src: image.currentSrc || image.src, complete: image.complete, naturalWidth: image.naturalWidth })));
   for (const image of broken) brokenImages.push({ phase, screenshot: name, ...image });
 }
@@ -111,12 +114,23 @@ async function clearSave(page) {
 
 async function gotoWithRetry(page, url) {
   let lastError;
-  for (let attempt = 1; attempt <= 3; attempt += 1) {
+  const maxAttempts = 6;
+  for (let attempt = 1; attempt <= maxAttempts; attempt += 1) {
     try {
-      return await page.goto(url, { waitUntil: "load", timeout: 45_000 });
+      const response = await page.goto(url, { waitUntil: "load", timeout: 45_000 });
+      await page.waitForSelector(".prototype-stage", { state: "attached", timeout: 8_000 });
+      const stylesheetApplied = await page.locator(".prototype-stage").evaluate(
+        (element) => getComputedStyle(element).display === "flex"
+      );
+      if (!stylesheetApplied) {
+        throw new Error("Production stylesheet did not apply");
+      }
+      return response;
     } catch (error) {
       lastError = error;
-      if (attempt < 3) await page.waitForTimeout(attempt * 1_000);
+      if (attempt < maxAttempts) {
+        await page.waitForTimeout(Math.min(12_000, 2 ** (attempt - 1) * 1_000));
+      }
     }
   }
   throw lastError;

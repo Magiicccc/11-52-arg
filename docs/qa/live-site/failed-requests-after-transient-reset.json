@@ -1,0 +1,50 @@
+[
+  {
+    "phase": "after",
+    "viewport": "402x874",
+    "url": "https://magiicccc.github.io/11-52-arg/assets/index-kpi-lFz2.css",
+    "method": "GET",
+    "resourceType": "stylesheet",
+    "failure": "net::ERR_CONNECTION_RESET"
+  },
+  {
+    "phase": "after",
+    "viewport": "402x874",
+    "url": "https://magiicccc.github.io/11-52-arg/icons/system/runtime/calendar.png",
+    "method": "GET",
+    "resourceType": "image",
+    "failure": "net::ERR_CONNECTION_RESET"
+  },
+  {
+    "phase": "after",
+    "viewport": "402x874",
+    "url": "https://magiicccc.github.io/11-52-arg/icons/third_party/runtime/zhihu.webp",
+    "method": "GET",
+    "resourceType": "image",
+    "failure": "net::ERR_CONNECTION_RESET"
+  },
+  {
+    "phase": "after",
+    "viewport": "402x874",
+    "url": "https://magiicccc.github.io/11-52-arg/icons/third_party/runtime/alipay.webp",
+    "method": "GET",
+    "resourceType": "image",
+    "failure": "net::ERR_CONNECTION_RESET"
+  },
+  {
+    "phase": "after",
+    "viewport": "402x874",
+    "url": "https://magiicccc.github.io/11-52-arg/icons/third_party/runtime/wechat_reading.webp",
+    "method": "GET",
+    "resourceType": "image",
+    "failure": "net::ERR_CONNECTION_RESET"
+  },
+  {
+    "phase": "after",
+    "viewport": "440x956",
+    "url": "https://magiicccc.github.io/11-52-arg/",
+    "method": "GET",
+    "resourceType": "document",
+    "failure": "net::ERR_CONNECTION_RESET"
+  }
+]
