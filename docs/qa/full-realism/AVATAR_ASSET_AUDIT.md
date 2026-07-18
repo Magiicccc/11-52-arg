@@ -58,6 +58,10 @@
 - 截图与运行时日志：`test-results/full-realism/avatar-pass/`
   - 28 张双视口页面及头像联系表截图；
   - `runtime-audit.json` 中 console error 为 0、failed request 为 0。
+- 真实 GitHub Pages 复验：`test-results/full-realism/avatar-pass-online/`
+  - 28 张直接来自 `https://magiicccc.github.io/11-52-arg/` 的双视口截图；
+  - 线上头像专项 Playwright 4/4 通过；
+  - console error 为 0、非导航取消类 failed request 为 0。
 
 ## 视觉复核
 

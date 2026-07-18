@@ -3,7 +3,8 @@ import { mkdir, rm, writeFile } from "node:fs/promises";
 import path from "node:path";
 
 const root = process.cwd();
-const outputRoot = path.join(root, "test-results", "full-realism", "avatar-pass");
+const phase = process.env.AVATAR_CAPTURE_PHASE ?? "avatar-pass";
+const outputRoot = path.join(root, "test-results", "full-realism", phase);
 const baseUrl = process.env.PLAYWRIGHT_BASE_URL ?? "http://127.0.0.1:4173/";
 const appCases = [
   ["wechat", "app.wechat"],
@@ -31,10 +32,11 @@ for (const viewport of [{ width: 402, height: 874 }, { width: 440, height: 956 }
   page.on("console", (message) => {
     if (message.type() === "error") consoleErrors.push(message.text());
   });
-  page.on("requestfailed", (request) => failedRequests.push({
-    url: request.url(),
-    error: request.failure()?.errorText ?? "unknown"
-  }));
+  page.on("requestfailed", (request) => {
+    const error = request.failure()?.errorText ?? "unknown";
+    if (error === "net::ERR_ABORTED") return;
+    failedRequests.push({ url: request.url(), error });
+  });
 
   for (const [label, appId] of appCases) {
     await page.goto(`${baseUrl}${baseUrl.includes("?") ? "&" : "?"}qa=1`, { waitUntil: "networkidle" });

@@ -11,11 +11,10 @@ async function openApp(page: Page, appId: string) {
 async function expectLoadedImages(page: Page, selector: string, minimum: number) {
   const images = page.locator(selector);
   await expect.poll(() => images.count()).toBeGreaterThanOrEqual(minimum);
-  const loaded = await images.evaluateAll((nodes) => nodes.every((node) => {
+  await expect.poll(() => images.evaluateAll((nodes) => nodes.every((node) => {
     const image = node as HTMLImageElement;
     return image.complete && image.naturalWidth > 0 && image.naturalHeight > 0;
-  }));
-  expect(loaded).toBe(true);
+  })), { timeout: 15_000 }).toBe(true);
 }
 
 test.beforeEach(async ({ page }) => {
