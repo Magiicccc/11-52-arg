@@ -5,6 +5,24 @@ on:
     branches:
       - main
   workflow_dispatch:
+    inputs:
+      ui_capture_phase:
+        description: Optional UI realism capture phase
+        required: false
+        default: none
+        type: choice
+        options:
+          - none
+          - before
+          - after
+      capture_target_commit:
+        description: Commit currently serving the capture target
+        required: false
+        type: string
+      capture_target_workflow:
+        description: Workflow run currently serving the capture target
+        required: false
+        type: string
 
 permissions:
   contents: read
@@ -48,6 +66,28 @@ jobs:
 
       - name: Run unit tests
         run: pnpm test
+
+      - name: Install Chromium for baseline capture
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.ui_capture_phase == 'before' }}
+        run: pnpm exec playwright install --with-deps chromium
+
+      - name: Capture current deployed UI baseline
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.ui_capture_phase == 'before' }}
+        run: node scripts/capture_ui_pass2.mjs
+        env:
+          LIVE_SITE_URL: https://magiicccc.github.io/11-52-arg/
+          UI_PASS_2_PHASE: before
+          DEPLOYED_COMMIT: ${{ inputs.capture_target_commit }}
+          DEPLOYED_WORKFLOW: ${{ inputs.capture_target_workflow }}
+
+      - name: Upload UI baseline artifact
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.ui_capture_phase == 'before' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: ui-pass-2-before
+          path: test-results/ui-pass-2/before
+          if-no-files-found: error
+          retention-days: 30
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
@@ -101,3 +141,21 @@ jobs:
         run: pnpm exec playwright test
         env:
           PLAYWRIGHT_BASE_URL: ${{ needs.deploy.outputs.page_url }}
+
+      - name: Capture deployed UI result
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.ui_capture_phase == 'after' }}
+        run: node scripts/capture_ui_pass2.mjs
+        env:
+          LIVE_SITE_URL: ${{ needs.deploy.outputs.page_url }}
+          UI_PASS_2_PHASE: after
+          DEPLOYED_COMMIT: ${{ github.sha }}
+          DEPLOYED_WORKFLOW: ${{ github.run_id }}
+
+      - name: Upload UI result artifact
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.ui_capture_phase == 'after' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: ui-pass-2-after
+          path: test-results/ui-pass-2/after
+          if-no-files-found: error
+          retention-days: 30
