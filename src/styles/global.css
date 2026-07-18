@@ -252,6 +252,297 @@ button,input{font:inherit}
 .zhihu-archive-panel dt{color:#8590a6}
 .zhihu-archive-panel dd{margin:0}
 .zhihu-archive-panel>button{width:100%;margin-top:18px;padding:10px;border:0;border-radius:4px;background:#1772f6;color:#fff}
+
+/* Platform-specific supporting apps. Content comes only from the frozen content registry. */
+.platform-app{position:relative;overflow:hidden;background:#fff}
+.platform-app button{font:inherit}
+.platform-scroll{min-height:0;flex:1;overflow:auto;overscroll-behavior:contain;scrollbar-width:none}
+.platform-scroll::-webkit-scrollbar{display:none}
+.platform-close-hit{position:absolute;z-index:40;top:0;left:0;width:42px;height:42px;border:0;background:transparent;opacity:0}
+.platform-detail-header{height:50px;flex:0 0 50px;display:grid;grid-template-columns:52px 1fr 52px;align-items:center;background:#fff;border-bottom:1px solid #ececef}
+.platform-detail-header button{height:44px;border:0;background:transparent}
+.platform-detail-header strong{text-align:center;font-size:17px}
+.platform-detail-header>button:last-child{color:#7a7d82}
+.platform-back{font-size:34px;line-height:1;text-align:left;padding:0 0 3px 15px}
+.platform-bottom-nav{height:58px;flex:0 0 58px;padding:5px 4px 10px;display:grid;grid-auto-flow:column;grid-auto-columns:1fr;align-items:center;background:#fff;border-top:1px solid #ececef}
+.platform-bottom-nav button{height:42px;border:0;background:transparent;color:#8a8d92;font-size:11px}
+.platform-bottom-nav button.active{color:#111;font-weight:700}
+
+/* Xiaohongshu */
+.xhs-app{background:#fff;color:#222}
+.xhs-home-header{height:50px;flex:0 0 50px;padding:0 10px;display:grid;grid-template-columns:42px 1fr 42px;align-items:center;background:#fff}
+.xhs-home-header>button{height:44px;border:0;background:transparent;font-size:21px}
+.xhs-home-header nav{height:100%;display:flex;align-items:center;justify-content:center;gap:22px}
+.xhs-home-header nav button{position:relative;height:100%;border:0;background:transparent;color:#777;font-size:15px}
+.xhs-home-header nav button.active{color:#111;font-weight:700}
+.xhs-home-header nav button.active:after{content:"";position:absolute;left:50%;bottom:2px;width:22px;height:3px;border-radius:2px;background:#ff2442;transform:translateX(-50%)}
+.xhs-topic-tabs{height:38px;flex:0 0 38px;padding:0 10px;display:flex;gap:6px;overflow:hidden;border-bottom:1px solid #f1f1f1}
+.xhs-topic-tabs button{min-width:52px;border:0;background:transparent;color:#777;font-size:12px}
+.xhs-topic-tabs button.active{color:#222;font-weight:650}
+.xhs-feed{padding:4px 6px 16px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-content:start;gap:10px 6px;background:#fff}
+.xhs-card{min-width:0;border:0;background:#fff;padding:0;text-align:left;color:#222}
+.xhs-card .xhs-cover{display:block;width:100%;aspect-ratio:.84;border-radius:5px;background:linear-gradient(145deg,#8aa5ae,#465b66 55%,#d5b17a)}
+.xhs-card .xhs-cover.tone-1{background:linear-gradient(145deg,#d8c4a3,#b67954 46%,#53666d)}
+.xhs-card>b{display:-webkit-box;margin:7px 4px 5px;font-size:14px;line-height:1.42;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.xhs-card small{margin:0 4px;display:flex;align-items:center;gap:5px;color:#8b8b8b;font-size:10px}
+.xhs-card small i{width:20px;height:20px;border-radius:50%;display:grid;place-items:center;background:#607d8b;color:#fff;font-style:normal}
+.xhs-card small span{margin-left:auto}
+.xhs-feed-end{grid-column:1/-1;padding:16px 0 8px;text-align:center;color:#aaa;font-size:11px}
+.xhs-note-detail{background:#fff;padding-bottom:20px}
+.xhs-note-media{height:360px;display:flex;align-items:flex-end;padding:16px;background:linear-gradient(160deg,#708d9a,#c3a174 56%,#283c45);color:#fff}
+.xhs-note-media span{font-size:11px;text-shadow:0 1px 3px #000}
+.xhs-note-detail>header{height:58px;padding:0 15px;display:grid;grid-template-columns:34px 1fr 58px;gap:9px;align-items:center}
+.xhs-note-detail>header button{height:30px;border:1px solid #ff2442;border-radius:15px;background:#fff;color:#ff2442;font-size:12px}
+.xhs-avatar{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:#526f7b;color:#fff}
+.xhs-note-detail h1{margin:10px 15px 8px;font-size:20px}
+.xhs-note-detail>p{margin:0 15px;font-size:15px;line-height:1.72}
+.xhs-tags{display:flex;gap:8px;margin:13px 15px 8px;color:#315f91;font-size:13px}
+.xhs-note-detail>time{margin:0 15px;color:#aaa;font-size:11px}
+.xhs-comments{margin-top:16px;padding:15px;border-top:1px solid #eee}
+.xhs-comments p{color:#777;font-size:13px}
+.xhs-detail-actions{height:56px;flex:0 0 56px;padding:7px 9px 10px;display:grid;grid-template-columns:1.4fr repeat(3,1fr);gap:3px;border-top:1px solid #eee;background:#fff}
+.xhs-detail-actions button{border:0;background:transparent;font-size:11px}
+.xhs-detail-actions button:first-child{border-radius:18px;background:#f2f2f4;color:#999;text-align:left;padding-left:14px}
+.xhs-detail-actions button.active{color:#ff2442}
+
+/* Douyin */
+.douyin-app{background:#08080b;color:#fff}
+.phone-screen:has(.douyin-app) .status-bar{color:#fff}
+.douyin-header{position:absolute;z-index:4;top:59px;left:0;right:0;height:52px;padding:0 12px;display:grid;grid-template-columns:56px 1fr 56px;align-items:center;background:linear-gradient(#0008,transparent)}
+.douyin-header button{height:44px;border:0;background:transparent;color:#fff}
+.douyin-header nav{display:flex;justify-content:center;gap:24px}
+.douyin-header nav button{position:relative;font-size:16px;color:#ccc}
+.douyin-header nav .active{color:#fff;font-weight:700}
+.douyin-header nav .active:after{content:"";position:absolute;left:50%;bottom:4px;width:22px;height:3px;background:#fff;transform:translateX(-50%)}
+.douyin-stage{position:absolute;inset:59px 0 58px;border:0;background:linear-gradient(180deg,#5b7180,#9f8270 54%,#202a30);overflow:hidden}
+.douyin-skyline{position:absolute;left:-5%;right:-5%;bottom:0;height:43%;background:linear-gradient(175deg,transparent 18%,#182027 19% 36%,transparent 37%),linear-gradient(188deg,transparent 35%,#293840 36% 65%,#101519 66%)}
+.douyin-play-state{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-size:58px;color:#fff9;text-shadow:0 2px 8px #000}
+.douyin-actions{position:absolute;z-index:5;right:8px;bottom:128px;width:52px;display:grid;gap:13px}
+.douyin-actions button{border:0;background:transparent;color:#fff;display:flex;flex-direction:column;align-items:center;font-size:29px;text-shadow:0 1px 3px #000}
+.douyin-actions button small{font-size:10px;margin-top:2px}
+.douyin-actions button.active{color:#ffd84e}
+.douyin-actions button:first-child{position:relative}
+.douyin-avatar{width:43px;height:43px;border:2px solid #fff;border-radius:50%;display:grid;place-items:center;background:#537385;font-size:13px}
+.douyin-actions button:first-child b{position:absolute;bottom:-5px;width:17px;height:17px;border-radius:50%;background:#fe2c55;font-size:15px;line-height:17px}
+.douyin-caption{position:absolute;z-index:4;left:12px;right:70px;bottom:70px;text-shadow:0 1px 3px #000}
+.douyin-caption b{font-size:14px}
+.douyin-caption p{margin:7px 0;font-size:13px;line-height:1.5}
+.douyin-caption span{font-size:11px}
+.douyin-app .platform-bottom-nav{position:absolute;z-index:6;left:0;right:0;bottom:0;background:#07070a;border-color:#29292d}
+.douyin-app .platform-bottom-nav button{color:#aaa}
+.douyin-app .platform-bottom-nav button.active{color:#fff}
+
+/* Toutiao */
+.toutiao-app{background:#f5f5f5}
+.toutiao-home-header{height:50px;display:grid;grid-template-columns:1fr 46px 46px;align-items:center;padding-left:15px;background:#fff}
+.toutiao-home-header strong{font-size:21px;color:#f04142}
+.toutiao-home-header button{height:44px;border:0;background:transparent;font-size:20px}
+.toutiao-tabs{height:42px;display:flex;overflow:hidden;background:#fff;border-bottom:1px solid #eee}
+.toutiao-tabs button{position:relative;min-width:63px;border:0;background:transparent;color:#555}
+.toutiao-tabs button.active{color:#e33;font-weight:700}
+.toutiao-tabs button.active:after{content:"";position:absolute;left:50%;bottom:2px;width:18px;height:3px;background:#e33;transform:translateX(-50%)}
+.toutiao-feed{background:#f5f5f5}
+.toutiao-card{width:100%;padding:15px;border:0;border-bottom:1px solid #eee;background:#fff;text-align:left}
+.toutiao-card>b{font-size:18px;line-height:1.45}
+.toutiao-card p{margin:8px 0;color:#555;font-size:14px;line-height:1.55}
+.toutiao-card small{color:#999;font-size:11px}
+.toutiao-hot{margin-top:10px;padding:15px;background:#fff}
+.toutiao-hot header{display:flex;justify-content:space-between}
+.toutiao-hot header b{color:#e33}
+.toutiao-hot header span{font-size:11px;color:#999}
+.toutiao-hot ol{margin:12px 0 0;padding-left:25px}
+.toutiao-hot li{padding:8px 0;border-bottom:1px solid #eee}
+.toutiao-article{padding:20px 18px 80px;background:#fff}
+.toutiao-article h1{margin:0 0 14px;font-size:25px;line-height:1.42}
+.toutiao-article>div{display:flex;gap:12px;align-items:center;color:#999;font-size:12px}
+.toutiao-source{color:#e33}
+.toutiao-article p{font-size:17px;line-height:1.85;text-align:justify}
+.toutiao-article footer{margin-top:30px;color:#999;font-size:12px}
+.toutiao-actions{height:52px;padding:6px 10px 10px;display:grid;grid-template-columns:1fr 42px 42px 42px;gap:5px;border-top:1px solid #eee;background:#fff}
+.toutiao-actions button{border:0;background:transparent}
+.toutiao-actions button:first-child{border-radius:18px;background:#f2f3f5;color:#999;text-align:left;padding-left:14px}
+
+/* QQ Mail */
+.qqmail-app{background:#f4f5f7}
+.qqmail-header{height:50px;padding:0 12px;display:grid;grid-template-columns:54px 1fr 86px;align-items:center;background:#fff;border-bottom:1px solid #eee}
+.qqmail-header strong{text-align:center;font-size:17px}
+.qqmail-header>div{display:flex}
+.qqmail-header button{height:42px;border:0;background:transparent;color:#1688f8}
+.mail-account{width:34px!important;height:34px!important;border-radius:50%!important;background:#303c55!important;color:#fff!important}
+.mail-search{height:36px;margin:8px 12px;padding:9px 13px;border-radius:9px;background:#e7e8eb;color:#999;font-size:12px}
+.mail-folders{margin-bottom:8px;background:#fff}
+.mail-folders button{width:100%;height:44px;padding:0 15px;border:0;border-bottom:1px solid #eee;background:#fff;text-align:left}
+.mail-folders button b{float:right;color:#1688f8}
+.mail-row{width:100%;min-height:84px;padding:11px 13px;display:grid;grid-template-columns:7px 1fr 52px;gap:8px;border:0;border-bottom:1px solid #eee;background:#fff;text-align:left}
+.mail-unread{width:7px;height:7px;margin-top:6px;border-radius:50%;background:#1688f8}
+.mail-row div{min-width:0;display:flex;flex-direction:column}
+.mail-row div>b{font-size:14px}
+.mail-row div>strong{margin-top:2px;font-size:13px}
+.mail-row p{margin:2px 0 0;color:#888;font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mail-row time{font-size:10px;color:#999;text-align:right}
+.mail-detail{padding:20px 17px;background:#fff;min-height:100%}
+.mail-detail h1{margin:0 0 20px;font-size:22px}
+.mail-detail header{display:grid;grid-template-columns:42px 1fr;gap:10px;align-items:center}
+.mail-avatar{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:#1688f8;color:#fff}
+.mail-detail header div{display:flex;flex-direction:column}
+.mail-detail header small{color:#999}
+.mail-detail p{font-size:16px;line-height:1.8}
+.mail-actions{height:54px;padding:7px 8px 11px;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid #eee;background:#fff}
+.mail-actions button{border:0;background:transparent;color:#1688f8}
+
+/* Baidu Netdisk */
+.netdisk-app{background:#f6f8fc}
+.netdisk-header{height:58px;padding:0 14px;display:grid;grid-template-columns:42px 1fr 42px;gap:9px;align-items:center;background:#fff}
+.netdisk-account{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:#2b7cff;color:#fff}
+.netdisk-header div{display:flex;flex-direction:column}
+.netdisk-header small{color:#999;font-size:10px}
+.netdisk-header button{height:42px;border:0;background:transparent;color:#2b7cff;font-size:22px}
+.netdisk-search{height:37px;margin:8px 13px;padding:10px 13px;border-radius:18px;background:#edf0f5;color:#9297a1;font-size:12px}
+.netdisk-home{padding:3px 13px 18px}
+.netdisk-shortcuts{display:grid;grid-template-columns:repeat(5,1fr);padding:12px 5px;background:#fff;border-radius:13px}
+.netdisk-shortcuts button{border:0;background:transparent;display:flex;flex-direction:column;align-items:center;gap:6px;font-size:10px}
+.netdisk-shortcuts i{width:35px;height:35px;border-radius:11px;display:grid;place-items:center;background:#e6f0ff;color:#2b7cff;font-style:normal}
+.netdisk-storage{margin-top:10px;padding:13px;border-radius:13px;background:#fff;display:grid;grid-template-columns:1fr auto;gap:9px;font-size:12px}
+.netdisk-storage>span{color:#999}
+.netdisk-storage>i{grid-column:1/-1;height:4px;border-radius:2px;background:#edf0f5}
+.netdisk-storage>i b{display:block;width:28%;height:100%;border-radius:2px;background:#2b7cff}
+.netdisk-home h2{font-size:17px}
+.netdisk-file-row{width:100%;height:66px;padding:8px 4px;display:grid;grid-template-columns:44px 1fr 32px;gap:9px;align-items:center;border:0;border-bottom:1px solid #e9ebef;background:transparent;text-align:left}
+.netdisk-file-row>span,.netdisk-file-icon{width:42px;height:42px;border-radius:8px;display:grid;place-items:center;background:#7568ee;color:#fff;font-size:10px}
+.netdisk-file-row div{display:flex;flex-direction:column;gap:4px}
+.netdisk-file-row small{color:#999}
+.netdisk-file-row>i{font-style:normal;color:#999}
+.netdisk-file-detail{min-height:100%;padding:80px 22px;text-align:center;background:#fff}
+.netdisk-file-detail .netdisk-file-icon{margin:0 auto;width:72px;height:72px;font-size:17px}
+.netdisk-file-detail h1{font-size:19px}
+.netdisk-file-detail p{color:#999}
+.netdisk-file-detail button{display:block;width:100%;margin-top:13px;padding:12px;border:0;border-radius:22px;background:#2b7cff;color:#fff}
+.netdisk-file-detail button:last-child{background:#edf4ff;color:#2b7cff}
+
+/* Alipay */
+.alipay-app{background:#f4f6f9}
+.alipay-header{height:53px;padding:0 11px;display:grid;grid-template-columns:58px 1fr 42px;gap:7px;align-items:center;background:#1677ff;color:#fff}
+.alipay-header button{height:42px;border:0;background:transparent;color:#fff}
+.alipay-header div{height:35px;padding:9px 12px;border-radius:18px;background:#fff;color:#999;font-size:12px}
+.alipay-primary{padding:18px 9px;display:grid;grid-template-columns:repeat(4,1fr);background:#1677ff;color:#fff}
+.alipay-primary button{border:0;background:transparent;color:#fff;display:flex;flex-direction:column;gap:7px;align-items:center;font-size:11px}
+.alipay-primary i{width:34px;height:34px;border:1px solid #fff;border-radius:9px;display:grid;place-items:center;font-style:normal;font-size:16px}
+.alipay-services{margin:10px;padding:14px 7px;display:grid;grid-template-columns:repeat(4,1fr);gap:16px 3px;border-radius:13px;background:#fff}
+.alipay-services button{border:0;background:transparent;display:flex;flex-direction:column;align-items:center;gap:6px;font-size:10px}
+.alipay-services i{width:31px;height:31px;border-radius:9px;display:grid;place-items:center;background:#edf5ff;color:#1677ff;font-style:normal}
+.alipay-bills{margin:10px;border-radius:13px;background:#fff;overflow:hidden}
+.alipay-bills header{padding:14px;display:flex;justify-content:space-between}
+.alipay-bills header span{color:#999;font-size:11px}
+.alipay-bills>button{width:100%;height:65px;padding:8px 13px;display:grid;grid-template-columns:42px 1fr auto;gap:9px;align-items:center;border:0;border-top:1px solid #eee;background:#fff;text-align:left}
+.alipay-merchant-mark{width:38px;height:38px;border-radius:10px;display:grid;place-items:center;background:#1677ff;color:#fff}
+.alipay-bills button div{display:flex;flex-direction:column}
+.alipay-bills small{color:#999}
+.alipay-bill-detail{margin:14px;padding:28px 17px;border-radius:12px;background:#fff;text-align:center}
+.alipay-bill-detail>.alipay-merchant-mark{margin:0 auto 9px}
+.alipay-bill-detail h1{margin:12px 0;font-size:34px}
+.alipay-bill-detail p{color:#18a058}
+.alipay-bill-detail dl{margin-top:30px;text-align:left}
+.alipay-bill-detail dl div{display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid #eee;font-size:13px}
+.alipay-bill-detail dt{color:#999}
+.alipay-bill-detail dd{margin:0}
+
+/* Didi */
+.didi-app{background:#f4f5f7}
+.didi-header{position:absolute;z-index:4;top:59px;left:0;right:0;height:48px;padding:0 12px;display:flex;justify-content:space-between}
+.didi-header button{height:40px;padding:0 13px;border:0;border-radius:20px;background:#fff;box-shadow:0 2px 8px #0002}
+.didi-map{height:350px;flex:0 0 350px;position:relative;overflow:hidden;background:linear-gradient(35deg,#dfe8e6,#edf0e7)}
+.didi-map:before,.didi-map:after,.didi-map i{content:"";position:absolute;height:18px;background:#fff;transform:rotate(-18deg);box-shadow:0 0 0 1px #d8dfdc}
+.didi-map:before{width:520px;left:-80px;top:125px}
+.didi-map:after{width:460px;left:-30px;top:245px;transform:rotate(24deg)}
+.didi-map i:nth-of-type(1){width:420px;left:-50px;top:185px;transform:rotate(70deg)}
+.didi-map i:nth-of-type(2){width:260px;left:160px;top:90px;transform:rotate(40deg)}
+.didi-map i:nth-of-type(3){width:250px;left:-40px;top:48px;transform:rotate(-44deg)}
+.didi-current-dot{position:absolute;z-index:3;left:50%;top:42%;width:18px;height:18px;border:5px solid #fff;border-radius:50%;background:#2d7dff;box-shadow:0 2px 8px #0004}
+.didi-sheet{z-index:3;flex:1;margin-top:-34px;padding:15px 14px 8px;border-radius:22px 22px 0 0;background:#fff}
+.didi-destination{height:62px;padding:9px 13px;display:grid;grid-template-columns:14px 1fr;gap:9px;align-items:center;border-radius:12px;background:#f4f5f7}
+.didi-destination>span{width:8px;height:8px;border-radius:50%;background:#ff6b35}
+.didi-destination div{display:flex;flex-direction:column}
+.didi-destination small{color:#999}
+.didi-sheet nav{display:grid;grid-template-columns:repeat(4,1fr);padding:13px 0}
+.didi-sheet nav button{border:0;background:#fff;display:flex;flex-direction:column;align-items:center;gap:5px;font-size:10px}
+.didi-sheet nav i{width:34px;height:34px;border-radius:12px;display:grid;place-items:center;background:#fff2e9;color:#ff6b35;font-style:normal}
+.didi-sheet h2{margin:5px 0;font-size:15px}
+.didi-trip-row{width:100%;padding:12px 2px;display:grid;grid-template-columns:1fr 20px;border:0;border-top:1px solid #eee;background:#fff;text-align:left}
+.didi-trip-row div{display:flex;flex-direction:column;gap:5px}
+.didi-trip-row small{color:#999}
+.didi-trip-row>span{font-size:22px;color:#aaa}
+.didi-trip-detail{padding:30px 18px;background:#fff;min-height:100%}
+.didi-trip-detail>span{color:#18a058}
+.didi-trip-detail h1{font-size:19px}
+.didi-route-line{display:grid;grid-template-columns:20px 1fr;margin:25px 0}
+.didi-route-line i{width:3px;height:74px;margin-left:7px;background:linear-gradient(#2d7dff 0 48%,#ff6b35 48%)}
+.didi-route-line p{margin:0;display:flex;flex-direction:column;justify-content:space-between}
+.didi-trip-detail dl div{display:flex;justify-content:space-between;padding:12px 0;border-top:1px solid #eee}
+.didi-trip-detail dd{margin:0}
+.didi-trip-detail button{width:100%;margin-top:20px;padding:12px;border:0;border-radius:22px;background:#ff6b35;color:#fff}
+
+/* Meituan */
+.meituan-app{background:#f5f5f5}
+.meituan-header{height:54px;padding:0 10px;display:grid;grid-template-columns:59px 1fr 38px;gap:6px;align-items:center;background:#ffd400}
+.meituan-header button{height:42px;border:0;background:transparent}
+.meituan-header div{height:36px;padding:10px 12px;border:2px solid #222;border-radius:18px;background:#fff;font-size:12px;color:#888}
+.meituan-home{padding-bottom:15px}
+.meituan-categories{padding:16px 9px;display:grid;grid-template-columns:repeat(4,1fr);gap:15px 4px;background:#fff}
+.meituan-categories button{border:0;background:#fff;display:flex;flex-direction:column;align-items:center;gap:6px;font-size:10px}
+.meituan-categories i{width:38px;height:38px;border-radius:14px;display:grid;place-items:center;background:#fff1a8;color:#8a6500;font-style:normal}
+.meituan-banner{margin:10px;padding:17px;border-radius:12px;background:linear-gradient(120deg,#fff1a8,#ffd400);display:flex;flex-direction:column}
+.meituan-banner b{font-size:18px}
+.meituan-banner span{margin-top:5px;font-size:12px;color:#735a00}
+.meituan-orders{margin:10px;border-radius:12px;background:#fff;overflow:hidden}
+.meituan-orders header{padding:14px;display:flex;justify-content:space-between}
+.meituan-orders header span{font-size:11px;color:#999}
+.meituan-orders>button{width:100%;min-height:76px;padding:10px 13px;display:grid;grid-template-columns:44px 1fr auto;gap:9px;border:0;border-top:1px solid #eee;background:#fff;text-align:left}
+.meituan-shop-mark{width:42px;height:42px;border-radius:10px;display:grid;place-items:center;background:#ffd400}
+.meituan-orders button div{min-width:0;display:flex;flex-direction:column;gap:3px}
+.meituan-orders small{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:#777}
+.meituan-orders time{font-size:10px;color:#999}
+.meituan-order-detail{padding:14px;background:#f5f5f5;min-height:100%}
+.meituan-order-detail>header,.meituan-order-detail>section,.meituan-order-detail>div{padding:14px;border-radius:12px;background:#fff}
+.meituan-order-detail header h1{margin:0}
+.meituan-order-detail header span{color:#18a058}
+.meituan-order-detail section{margin-top:10px}
+.meituan-order-detail section p{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #eee}
+.meituan-order-detail>div{margin-top:10px;display:flex;justify-content:space-between}
+.meituan-order-detail>small{display:block;margin:14px;color:#999}
+.meituan-order-detail>button{width:100%;padding:12px;border:1px solid #ccc;border-radius:20px;background:#fff}
+
+/* Taobao */
+.taobao-app{background:#f6f6f6}
+.taobao-header{height:50px;padding:7px 10px;display:grid;grid-template-columns:1fr 50px;background:#fff}
+.taobao-header div{padding:9px 13px;border:2px solid #ff5000;border-right:0;border-radius:18px 0 0 18px;color:#999;font-size:12px}
+.taobao-header button{border:0;border-radius:0 18px 18px 0;background:#ff5000;color:#fff}
+.taobao-tabs{height:40px;display:flex;background:#fff}
+.taobao-tabs button{position:relative;flex:1;border:0;background:#fff;font-size:12px}
+.taobao-tabs button.active{color:#ff5000;font-weight:700}
+.taobao-tabs button.active:after{content:"";position:absolute;left:50%;bottom:2px;width:18px;height:3px;background:#ff5000;transform:translateX(-50%)}
+.taobao-categories{padding:14px 8px;display:grid;grid-template-columns:repeat(4,1fr);gap:14px 3px;background:#fff}
+.taobao-categories button{border:0;background:#fff;display:flex;flex-direction:column;align-items:center;gap:5px;font-size:10px}
+.taobao-categories i{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:#fff0e8;color:#ff5000;font-style:normal}
+.taobao-home h2{margin:12px;font-size:17px}
+.taobao-order-grid{padding:0 8px 18px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.taobao-order-grid>button{min-width:0;padding:0 0 10px;border:0;border-radius:10px;background:#fff;overflow:hidden;text-align:left}
+.taobao-thumb{height:128px;display:grid;place-items:center;background:linear-gradient(145deg,#d8e0e6,#8fa5b3);color:#fff;font-size:11px}
+.taobao-thumb.tone-1{background:linear-gradient(145deg,#6d87a3,#e0c4a1)}
+.taobao-order-grid b,.taobao-order-grid small,.taobao-order-grid strong{display:block;margin:7px 9px 0}
+.taobao-order-grid b{font-size:14px;line-height:1.4}
+.taobao-order-grid small{color:#999;font-size:10px}
+.taobao-order-grid strong{color:#ff5000}
+.taobao-order-detail{padding:0 15px 30px;background:#fff;min-height:100%}
+.taobao-product-image{height:310px;margin:0 -15px 17px;display:grid;place-items:center;background:linear-gradient(145deg,#dfe4e8,#8da3b1);color:#fff}
+.taobao-order-detail h1{font-size:21px}
+.taobao-order-detail>strong{color:#ff5000;font-size:25px}
+.taobao-order-detail dl{margin-top:20px}
+.taobao-order-detail dl div{display:flex;justify-content:space-between;gap:18px;padding:12px 0;border-top:1px solid #eee;font-size:13px}
+.taobao-order-detail dt{color:#999;flex:0 0 64px}
+.taobao-order-detail dd{margin:0;text-align:right}
+.taobao-detail-actions{height:56px;padding:7px 8px 11px;display:grid;grid-template-columns:repeat(3,1fr);gap:7px;border-top:1px solid #eee;background:#fff}
+.taobao-detail-actions button{border:1px solid #ddd;border-radius:18px;background:#fff}
+.taobao-detail-actions button:last-child{border-color:#ff5000;color:#ff5000}
 @media(min-width:421px) and (max-width:520px){.home-page{grid-template-columns:repeat(4,65px);column-gap:37px;padding-left:34px;padding-right:34px;grid-auto-rows:98px}
 .home-dock{left:17px;right:17px;bottom:20px;height:94px}
 }

@@ -1,0 +1,106 @@
+[
+  {
+    "phase": "before",
+    "viewport": "402x874",
+    "url": "https://magiicccc.github.io/11-52-arg/",
+    "method": "GET",
+    "resourceType": "document",
+    "failure": "net::ERR_CONNECTION_RESET"
+  },
+  {
+    "phase": "before",
+    "viewport": "402x874",
+    "url": "https://magiicccc.github.io/11-52-arg/",
+    "method": "GET",
+    "resourceType": "document",
+    "failure": "net::ERR_CONNECTION_RESET"
+  },
+  {
+    "phase": "before",
+    "viewport": "402x874",
+    "url": "https://magiicccc.github.io/11-52-arg/icons/system/runtime/photos.png",
+    "method": "GET",
+    "resourceType": "image",
+    "failure": "net::ERR_CONNECTION_RESET"
+  },
+  {
+    "phase": "before",
+    "viewport": "440x956",
+    "url": "https://magiicccc.github.io/11-52-arg/",
+    "method": "GET",
+    "resourceType": "document",
+    "failure": "net::ERR_CONNECTION_RESET"
+  },
+  {
+    "phase": "before",
+    "viewport": "440x956",
+    "url": "https://magiicccc.github.io/11-52-arg/",
+    "method": "GET",
+    "resourceType": "document",
+    "failure": "net::ERR_CONNECTION_RESET"
+  },
+  {
+    "phase": "before",
+    "viewport": "440x956",
+    "url": "https://magiicccc.github.io/11-52-arg/assets/index-iHeiDWEQ.css",
+    "method": "GET",
+    "resourceType": "stylesheet",
+    "failure": "net::ERR_CONNECTION_RESET"
+  },
+  {
+    "phase": "before",
+    "viewport": "440x956",
+    "url": "https://magiicccc.github.io/11-52-arg/icons/system/runtime/clock.png",
+    "method": "GET",
+    "resourceType": "image",
+    "failure": "net::ERR_CONNECTION_RESET"
+  },
+  {
+    "phase": "before",
+    "viewport": "440x956",
+    "url": "https://magiicccc.github.io/11-52-arg/icons/third_party/wechat_reading.png",
+    "method": "GET",
+    "resourceType": "image",
+    "failure": "net::ERR_CONNECTION_RESET"
+  },
+  {
+    "phase": "before",
+    "viewport": "440x956",
+    "url": "https://magiicccc.github.io/11-52-arg/icons/system/runtime/calculator.png",
+    "method": "GET",
+    "resourceType": "image",
+    "failure": "net::ERR_CONNECTION_RESET"
+  },
+  {
+    "phase": "before",
+    "viewport": "1440x1000",
+    "url": "https://magiicccc.github.io/11-52-arg/",
+    "method": "GET",
+    "resourceType": "document",
+    "failure": "net::ERR_CONNECTION_RESET"
+  },
+  {
+    "phase": "before",
+    "viewport": "1440x1000",
+    "url": "https://magiicccc.github.io/11-52-arg/",
+    "method": "GET",
+    "resourceType": "document",
+    "failure": "net::ERR_CONNECTION_RESET"
+  },
+  {
+    "phase": "before",
+    "viewport": "1440x1000",
+    "url": "https://magiicccc.github.io/11-52-arg/assets/index-iHeiDWEQ.css",
+    "method": "GET",
+    "resourceType": "stylesheet",
+    "failure": "net::ERR_CONNECTION_RESET"
+  },
+  {
+    "phase": "before",
+    "viewport": "1440x1000",
+    "url": "https://magiicccc.github.io/11-52-arg/icons/system/runtime/clock.png",
+    "method": "GET",
+    "resourceType": "image",
+    "failure": "net::ERR_CONNECTION_RESET"
+  }
+]

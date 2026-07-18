@@ -1,0 +1,114 @@
+[
+  {
+    "phase": "before",
+    "viewport": "402x874",
+    "url": "https://magiicccc.github.io/11-52-arg/",
+    "method": "GET",
+    "resourceType": "document",
+    "failure": "net::ERR_CONNECTION_RESET"
+  },
+  {
+    "phase": "before",
+    "viewport": "402x874",
+    "url": "https://magiicccc.github.io/11-52-arg/assets/index-iHeiDWEQ.css",
+    "method": "GET",
+    "resourceType": "stylesheet",
+    "failure": "net::ERR_CONNECTION_RESET"
+  },
+  {
+    "phase": "before",
+    "viewport": "402x874",
+    "url": "https://magiicccc.github.io/11-52-arg/icons/system/runtime/photos.png",
+    "method": "GET",
+    "resourceType": "image",
+    "failure": "net::ERR_CONNECTION_RESET"
+  },
+  {
+    "phase": "before",
+    "viewport": "402x874",
+    "url": "https://magiicccc.github.io/11-52-arg/icons/system/runtime/camera.png",
+    "method": "GET",
+    "resourceType": "image",
+    "failure": "net::ERR_CONNECTION_RESET"
+  },
+  {
+    "phase": "before",
+    "viewport": "440x956",
+    "url": "https://magiicccc.github.io/11-52-arg/",
+    "method": "GET",
+    "resourceType": "document",
+    "failure": "net::ERR_CONNECTION_RESET"
+  },
+  {
+    "phase": "before",
+    "viewport": "440x956",
+    "url": "https://magiicccc.github.io/11-52-arg/",
+    "method": "GET",
+    "resourceType": "document",
+    "failure": "net::ERR_CONNECTION_RESET"
+  },
+  {
+    "phase": "before",
+    "viewport": "440x956",
+    "url": "https://magiicccc.github.io/11-52-arg/icons/third_party/douyin.png",
+    "method": "GET",
+    "resourceType": "image",
+    "failure": "net::ERR_CONNECTION_RESET"
+  },
+  {
+    "phase": "before",
+    "viewport": "440x956",
+    "url": "https://magiicccc.github.io/11-52-arg/icons/system/runtime/safari.png",
+    "method": "GET",
+    "resourceType": "image",
+    "failure": "net::ERR_CONNECTION_RESET"
+  },
+  {
+    "phase": "before",
+    "viewport": "440x956",
+    "url": "https://magiicccc.github.io/11-52-arg/icons/third_party/tieba.png",
+    "method": "GET",
+    "resourceType": "image",
+    "failure": "net::ERR_CONNECTION_RESET"
+  },
+  {
+    "phase": "before",
+    "viewport": "440x956",
+    "url": "https://magiicccc.github.io/11-52-arg/icons/third_party/toutiao.png",
+    "method": "GET",
+    "resourceType": "image",
+    "failure": "net::ERR_CONNECTION_RESET"
+  },
+  {
+    "phase": "before",
+    "viewport": "1440x1000",
+    "url": "https://magiicccc.github.io/11-52-arg/icons/third_party/xiaohongshu.png",
+    "method": "GET",
+    "resourceType": "image",
+    "failure": "net::ERR_CONNECTION_RESET"
+  },
+  {
+    "phase": "before",
+    "viewport": "1440x1000",
+    "url": "https://magiicccc.github.io/11-52-arg/icons/third_party/taobao.png",
+    "method": "GET",
+    "resourceType": "image",
+    "failure": "net::ERR_CONNECTION_RESET"
+  },
+  {
+    "phase": "before",
+    "viewport": "1440x1000",
+    "url": "https://magiicccc.github.io/11-52-arg/icons/third_party/netease_music.png",
+    "method": "GET",
+    "resourceType": "image",
+    "failure": "net::ERR_CONNECTION_RESET"
+  },
+  {
+    "phase": "before",
+    "viewport": "1440x1000",
+    "url": "https://magiicccc.github.io/11-52-arg/icons/third_party/tieba.png",
+    "method": "GET",
+    "resourceType": "image",
+    "failure": "net::ERR_CONNECTION_RESET"
+  }
+]

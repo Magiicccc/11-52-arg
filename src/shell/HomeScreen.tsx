@@ -13,13 +13,27 @@ const pageAppIds = [
 ];
 
 function runtimeIconPath(path: string): string {
-  return path.startsWith("/icons/system/")
-    ? path.replace("/icons/system/", "/icons/system/runtime/")
-    : path;
+  if (path.startsWith("/icons/system/")) {
+    return path.replace("/icons/system/", "/icons/system/runtime/");
+  }
+  return path.replace("/icons/third_party/", "/icons/third_party/runtime/").replace(/\.png$/i, ".webp");
 }
 
 function badgeLabel(count: number): string {
   return count > 99 ? "99+" : String(count);
+}
+
+function AppIconImage({ path }: { path: string }) {
+  const [attempt, setAttempt] = useState(0);
+  const resolved = assetUrl(runtimeIconPath(path));
+  const src = attempt === 0 ? resolved : `${resolved}?retry=${attempt}`;
+  return <img
+    className="app-icon-image"
+    src={src}
+    alt=""
+    fetchPriority="high"
+    onError={() => setAttempt((current) => current < 2 ? current + 1 : current)}
+  />;
 }
 
 export function HomeScreen({deviceId}:{deviceId:DeviceId}){
@@ -45,7 +59,7 @@ export function HomeScreen({deviceId}:{deviceId:DeviceId}){
       aria-label={badgeCount>0?`${app.displayName}，${badgeCount} 条未读`:app.displayName}
     >
       <span className="icon-wrap">
-        <img className="app-icon-image" src={assetUrl(runtimeIconPath(app.iconAsset))} alt=""/>
+        <AppIconImage path={app.iconAsset}/>
         {badgeCount>0&&<span className="app-badge" aria-hidden="true">{badgeLabel(badgeCount)}</span>}
       </span>
       {location==="page"&&<span className="app-icon-label">{app.displayName}</span>}
