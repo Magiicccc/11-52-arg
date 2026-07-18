@@ -2,6 +2,8 @@
 
 日期：2026-07-18
 
+> 版本说明：本文主体保存第一轮线上验收的历史证据，所列 `18458960...` 不再是当前部署。第二轮完成后的当前线上 commit 为 `d0f6ab5d165b63979eb6bc108bbd96e73fc566df`，Workflow 为 [29640396718](https://github.com/Magiicccc/11-52-arg/actions/runs/29640396718)，部署版本证据以 [DEPLOYED_VERSION_AUDIT.md](./DEPLOYED_VERSION_AUDIT.md) 和第二轮四份差异报告为准。
+
 线上地址：<https://magiicccc.github.io/11-52-arg/>
 
 验收分支：`fix/github-pages-ui-realism`

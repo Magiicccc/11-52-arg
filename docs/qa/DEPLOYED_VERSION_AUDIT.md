@@ -76,3 +76,27 @@ Workflow run `29634602397` 由 `main` push 触发，`headSha` 为 `c30147c25de9b
 
 `docs/qa/GITHUB_PAGES_FULL_AUDIT.md` 的部署 SHA 和 Workflow 字段已过期。第二轮完成时必须将其更新为当时最新的功能分支部署事实，并以本文件的四段证据链为准，不再用早期功能分支 run 代表当前线上版本。
 
+## UI 真实性第二轮最终部署
+
+本文件前述 `c30147c` 结论是第二轮开始时的 before 基线。第二轮功能分支部署完成后，GitHub Deployments API、Workflow、线上 `?qa=1` 构建元数据和 after 截图元数据共同确认当前线上版本已经更新为：
+
+| 字段 | 当前值 |
+| --- | --- |
+| Commit | `d0f6ab5d165b63979eb6bc108bbd96e73fc566df` |
+| 分支 | `fix/ui-realism-pass-2` |
+| Workflow run | [29640396718](https://github.com/Magiicccc/11-52-arg/actions/runs/29640396718) |
+| Pages deployment ID | `5500799281` |
+| Deployment 创建时间 | `2026-07-18T10:10:31Z` |
+| Workflow 事件 | `workflow_dispatch` |
+| Workflow 结果 | build / deploy / online-test 全部 success |
+| 线上 Playwright | 30 passed / 0 failed |
+
+线上隐藏 QA 入口显示 `build d0f6ab5d165b · workflow 29640396718`。after 工件的 [capture-metadata.json](../../test-results/ui-pass-2/after/capture-metadata.json) 同时记录：
+
+- `baseUrl`: `https://magiicccc.github.io/11-52-arg/`
+- `deployedCommit`: `d0f6ab5d165b63979eb6bc108bbd96e73fc566df`
+- `workflowRun`: `29640396718`
+- `capturedAt`: `2026-07-18T10:12:21.619Z`
+- 两个视口 HTTP 状态均为 `200`
+
+因此，`18458960...` 与 `c30147c...` 都是可追溯的历史部署，不再代表本报告更新时的线上页面。
