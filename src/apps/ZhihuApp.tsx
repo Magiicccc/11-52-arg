@@ -1,6 +1,6 @@
 import { useLayoutEffect, useMemo, useRef, useState } from "react";
 import { useGame } from "@/app/GameContext";
-import { generatedAvatar } from "@/content/avatar-assets";
+import { realisticInternetAvatar } from "@/content/avatar-assets";
 import { activeBody, getContentItem } from "@/content/selectors";
 
 type ZhihuView = "home" | "ideas" | "profile" | "search" | "detail" | "comments" | "not-found" | "archive";
@@ -194,12 +194,12 @@ function ZhihuIcon({name}:{name:"menu"|"search"|"plus"|"back"|"share"|"home"|"me
   return <svg className="zhihu-icon" viewBox="0 0 24 24" aria-hidden="true"><path d={paths[name]}/></svg>;
 }
 
-function Avatar({mark,color}:{mark:string;color:string}) {
+function Avatar({mark,color,identity}:{mark:string;color:string;identity?:string}) {
   const slots:Record<string,number>={
     研:96,页:97,河:98,光:99,本:100,西:101,网:102,纲:103,八:104,雨:105,
     橙:106,南:107,普:108,川:120
   };
-  return <img className="zhihu-avatar" src={generatedAvatar(slots[mark]??109)} alt="" style={{background:color}} aria-hidden="true"/>;
+  return <img className="zhihu-avatar" src={realisticInternetAvatar(identity ?? mark,slots[mark]??109)} alt="" style={{background:color}} aria-hidden="true"/>;
 }
 
 export function ZhihuApp() {
@@ -294,7 +294,7 @@ export function ZhihuApp() {
       {notice&&<div className="zhihu-action-feedback">{notice}</div>}
       <div className="zhihu-scroll zhihu-ideas-feed" ref={scrollRef}>
         {feed.filter(item=>!item.notFound).slice(0,8).map((item,index)=><article key={item.id}>
-          <header><Avatar mark={item.authorMark} color={item.authorColor}/><div><b>{item.author}</b><small>{index+2} 小时前</small></div><button onClick={()=>act(`已关注 ${item.author}`,item.id)}>关注</button></header>
+          <header><Avatar mark={item.authorMark} color={item.authorColor} identity={item.author}/><div><b>{item.author}</b><small>{index+2} 小时前</small></div><button onClick={()=>act(`已关注 ${item.author}`,item.id)}>关注</button></header>
           <p>{item.excerpt}</p>
           <footer><button onClick={()=>act(`已赞同 ${item.title}`,item.id)}>赞同 {item.upvotes}</button><button onClick={()=>openItem(item)}>评论 {item.comments}</button><button onClick={()=>act(`已收藏 ${item.title}`,item.id)}>收藏</button></footer>
         </article>)}
@@ -308,7 +308,7 @@ export function ZhihuApp() {
       <header className="zhihu-page-header"><button data-testid="app-back" aria-label="返回首页" onClick={backWithinApp}><ZhihuIcon name="back"/></button><strong>我的</strong><button aria-label="设置" onClick={()=>act("打开设置")}>•••</button></header>
       {notice&&<div className="zhihu-action-feedback">{notice}</div>}
       <div className="zhihu-scroll zhihu-profile-page" ref={scrollRef}>
-        <section className="zhihu-profile-card"><Avatar mark="川" color="#1772f6"/><div><h1>川流档案</h1><p>用户研究 / 城市摄影</p></div><button onClick={()=>act("进入资料编辑")}>编辑资料</button></section>
+        <section className="zhihu-profile-card"><Avatar mark="川" color="#1772f6" identity="川流档案"/><div><h1>川流档案</h1><p>用户研究 / 城市摄影</p></div><button onClick={()=>act("进入资料编辑")}>编辑资料</button></section>
         <section className="zhihu-profile-stats"><span><b>28</b>创作</span><span><b>1,642</b>赞同</span><span><b>316</b>收藏</span><span><b>87</b>关注</span></section>
         <nav className="zhihu-profile-tabs">{["动态","回答","想法","收藏"].map(label=><button className={profileTab===label?"active":""} key={label} onClick={()=>{setProfileTab(label);act(`个人页：${label}`)}}>{label}</button>)}</nav>
         {feed.filter(item=>item.author==="川流档案").map(item=><QuestionCard item={item} key={item.id} onOpen={()=>openItem(item)}/>)}
@@ -381,7 +381,7 @@ export function ZhihuApp() {
       <div className="zhihu-scroll zhihu-comments-list" ref={scrollRef}>
         <div className="zhihu-comment-sort"><b>评论</b><button onClick={()=>act("评论排序：按时间",selected.id)}>默认排序⌄</button></div>
         {comments.map(comment=><article className="zhihu-comment" key={comment.author}>
-          <Avatar mark={comment.mark} color={comment.color}/>
+          <Avatar mark={comment.mark} color={comment.color} identity={comment.author}/>
           <div><b>{comment.author}</b><p>{comment.text}</p><footer><time>{comment.time}</time><span>♡ {comment.likes}</span><button onClick={()=>act(`回复 ${comment.author}`,selected.id)}>回复</button></footer></div>
         </article>)}
       </div>
@@ -406,7 +406,7 @@ export function ZhihuApp() {
           <div className="zhihu-question-buttons"><button className="follow" onClick={()=>act("已关注问题",selected.id)}>关注问题</button><button onClick={()=>act("回答编辑器已打开",selected.id)}>写回答</button><button onClick={()=>act("邀请回答面板已打开",selected.id)}>邀请回答</button></div>
         </article>
         <article className="zhihu-answer">
-          <header><Avatar mark={selected.authorMark} color={selected.authorColor}/><div><b>{selected.author}</b><span>{selected.credential}</span></div><button onClick={()=>act(`已关注 ${selected.author}`,selected.id)}>关注</button></header>
+          <header><Avatar mark={selected.authorMark} color={selected.authorColor} identity={selected.author}/><div><b>{selected.author}</b><span>{selected.credential}</span></div><button onClick={()=>act(`已关注 ${selected.author}`,selected.id)}>关注</button></header>
           <div className="zhihu-answer-voters">{selected.upvotes.toLocaleString("zh-CN")} 人赞同了该回答</div>
           {selected.body.map((paragraph,index)=><p key={index}>{paragraph}</p>)}
           <button className="zhihu-expand" onClick={()=>act("已展开全文",selected.id)}>展开阅读全文⌄</button>
@@ -452,7 +452,7 @@ function QuestionCard({item,onOpen,effective=false}:{item:ZhihuItem;onOpen():voi
   return <article className="zhihu-question-card">
     <button data-testid={effective?"app-effective-action":undefined} onClick={onOpen}>
       <h2>{item.title}</h2>
-      <div className="zhihu-card-author"><Avatar mark={item.authorMark} color={item.authorColor}/><span><b>{item.author}</b><small>{item.credential}</small></span></div>
+      <div className="zhihu-card-author"><Avatar mark={item.authorMark} color={item.authorColor} identity={item.author}/><span><b>{item.author}</b><small>{item.credential}</small></span></div>
       <p>{item.excerpt}</p>
       <footer><span>▲ {item.upvotes.toLocaleString("zh-CN")} 赞同</span><span>{item.comments} 评论</span><span>收藏</span><span>•••</span></footer>
     </button>

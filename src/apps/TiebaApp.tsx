@@ -2,7 +2,7 @@ import { useState } from "react";
 import { AppChrome } from "@/shell/AppChrome";
 import { useGame } from "@/app/GameContext";
 import { activeBody, unlockedItemsForApp } from "@/content/selectors";
-import { generatedAvatar } from "@/content/avatar-assets";
+import { realisticInternetAvatar } from "@/content/avatar-assets";
 
 type Floor={floor?:number,author?:string,text?:string,cacheOnly?:boolean};
 
@@ -15,7 +15,7 @@ export function TiebaApp(){
     <div className="tieba-head"><b>旧帖存档对比</b><button data-testid="app-effective-action" onClick={()=>setOnlyOwner(v=>!v)}>{onlyOwner?"查看全部":"只看楼主"}</button></div>
     {shown.sort((a,b)=>Number((activeBody(state,a) as Floor).floor)-Number((activeBody(state,b) as Floor).floor)).map(i=>{
       const f=activeBody(state,i) as Floor;
-      const content=<><header><span className="tieba-author"><img src={generatedAvatar(112+(Number(f.floor??0)%8))} alt={`${f.author??"贴吧用户"}头像`}/><b>{f.author}</b></span><span>{f.floor}楼</span></header><p>{f.text}</p>{f.cacheOnly&&<small>仅本机缓存可见</small>}</>;
+      const content=<><header><span className="tieba-author"><img src={realisticInternetAvatar(f.author??"贴吧用户",112+(Number(f.floor??0)%8))} alt={`${f.author??"贴吧用户"}头像`}/><b>{f.author}</b></span><span>{f.floor}楼</span></header><p>{f.text}</p>{f.cacheOnly&&<small>仅本机缓存可见</small>}</>;
       return i.id==="forum.tieba.floor417"
         ?<button className={`floor floor-button ${f.cacheOnly?"cache-floor":""}`} data-testid="inspect-floor-417" key={i.id} onClick={()=>emit("forum.floor.inspected",i.id,{floor:f.floor??417})}>{content}</button>
         :<article className={`floor ${f.cacheOnly?"cache-floor":""}`} key={i.id}>{content}</article>;

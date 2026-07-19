@@ -5,7 +5,7 @@ import { activeBody, getContentItem, unlockedItemsForApp } from "@/content/selec
 import type { ContentItem } from "@/contracts/content";
 import { getPath } from "@/engine/path-utils";
 import { ordinaryWechatThreads, ordinaryXhsNotes, type OrdinaryMessage } from "@/content/realism-life-data";
-import { generatedAvatar, identityAvatar, realisticWechatAvatar } from "@/content/avatar-assets";
+import { identityAvatar, realisticInternetAvatar, realisticWechatAvatar } from "@/content/avatar-assets";
 
 type SearchResult = { app?: string; title?: string; detail?: string };
 type Body={
@@ -201,7 +201,7 @@ export function WeChatApp(){
   if(tab==="发现") return <WechatScaffold tab={tab} onTab={setTab}>
     <header className="wechat-section-header"><strong>发现</strong></header>
     <div className="wechat-discover-menu">{["朋友圈","视频号","直播","扫一扫","摇一摇","看一看","搜一搜","附近"].map((label,index)=><button key={label} onClick={()=>setUiFlag(`wechat.discovery.${label}`,true)}><span>{["◎","▶","▣","⌗","↔","◉","⌕","⌖"][index]}</span><b>{label}</b><i>›</i></button>)}</div>
-    <section className="wechat-moments-preview"><header><b>朋友圈</b><span>最近动态</span></header>{ordinaryXhsNotes.slice(0,8).map((note,index)=><article key={note.id}><img className="avatar" src={generatedAvatar(20+index)} alt={`${note.author}头像`}/><div><b>{note.author}</b><p>{note.title}</p><img src={note.media} alt="普通生活动态"/><small>{note.date}</small></div></article>)}</section>
+    <section className="wechat-moments-preview"><header><b>朋友圈</b><span>最近动态</span></header>{ordinaryXhsNotes.slice(0,8).map((note,index)=><article key={note.id}><img className="avatar" src={realisticInternetAvatar(note.author,20+index)} alt={`${note.author}头像`}/><div><b>{note.author}</b><p>{note.title}</p><img src={note.media} alt="普通生活动态"/><small>{note.date}</small></div></article>)}</section>
   </WechatScaffold>;
 
   if(tab==="我") return <WechatScaffold tab={tab} onTab={setTab}>

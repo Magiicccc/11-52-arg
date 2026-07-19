@@ -3,7 +3,7 @@ import { AppChrome } from "@/shell/AppChrome";
 import { useGame } from "@/app/GameContext";
 import { activeBody, unlockedItemsForApp } from "@/content/selectors";
 import { getPath } from "@/engine/path-utils";
-import { generatedAvatar } from "@/content/avatar-assets";
+import { identityAvatar } from "@/content/avatar-assets";
 
 export function SettingsApp(){
   const {state,activeDeviceId,emit}=useGame();
@@ -22,7 +22,7 @@ export function SettingsApp(){
     <button className="settings-profile" data-testid="inspect-owner" onClick={inspectOwner}>
       <img
         className={`avatar ${playerGlitch?"avatar-account-glitch":""}`}
-        src={generatedAvatar(activeDeviceId==="player"?120:119)}
+        src={identityAvatar(activeDeviceId)}
         alt={activeDeviceId==="player"?"我的账户头像":"本机账户头像"}
       />
       <span><b>{activeDeviceId==="player"?(playerGlitch?"未设置":"我的账户"):String(b.owner??"无法验证账户身份")}</b><small>{ownerInspected&&activeDeviceId==="investigation"?"本机发现一段家庭语音":"Apple账户、iCloud与媒体购买"}</small></span>

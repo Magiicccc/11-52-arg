@@ -5,6 +5,7 @@ import {
   GENERATED_AVATAR_COUNT,
   generatedAvatar,
   identityAvatar,
+  realisticInternetAvatar,
   realisticWechatAvatar,
 } from "@/content/avatar-assets";
 
@@ -51,6 +52,7 @@ describe("generated avatar asset pack", () => {
       "wechat.daily-gym",
       "wechat.daily-cloud",
       "wechat.daily-self",
+      "actor.zhoulan",
     ];
     const paths = identities.map((identity, index) => realisticWechatAvatar(identity, index));
     expect(new Set(paths).size).toBe(identities.length);
@@ -60,5 +62,25 @@ describe("generated avatar asset pack", () => {
   it("uses non-face generated lifestyle photos for core device identities", () => {
     expect(identityAvatar("player")).toContain("/daily/temporary-archive-desk.jpg");
     expect(identityAvatar("investigation")).toContain("/daily/temporary-rainy-street.jpg");
+  });
+
+  it("maps the first visible Xiaohongshu author cohort to distinct semantic images", () => {
+    const authors = [
+      "南岸慢慢走",
+      "橙色文件夹",
+      "午间十分钟",
+      "白色鞋带",
+      "接口旁边",
+      "今天吃什么呀",
+      "慢快门小顾",
+      "八点四十二",
+      "木桌边",
+      "第三章以后",
+      "沿河但不靠河",
+      "硬盘灯还亮着",
+    ];
+    const paths = authors.map((author, index) => realisticInternetAvatar(author, 20 + index));
+    expect(new Set(paths).size).toBe(authors.length);
+    expect(paths.every((assetPath) => assetPath.includes("/avatars/realistic/"))).toBe(true);
   });
 });

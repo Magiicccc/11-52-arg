@@ -84,6 +84,77 @@ METADATA = {
         "category": "hobby-group-photo",
         "promptSummary": "Four fictional East Asian adult photographers in an ordinary rainy-day group snapshot.",
     },
+    "wechat-zhoulan-roses.png": {
+        "runtimeEntityKey": "actor.zhoulan",
+        "category": "personal-flower-photo",
+        "promptSummary": "Casual phone photo of pink roses on an ordinary residential balcony.",
+    },
+    "xhs-after-chapter-three.png": {
+        "platform": "xiaohongshu",
+        "runtimeEntityKey": "xhs.author.after-chapter-three",
+        "category": "reading-object-photo",
+        "promptSummary": "Open paperback, pen and tea beside a rainy cafe window.",
+    },
+    "xhs-eight-forty-two-cat.png": {
+        "platform": "cross-platform",
+        "runtimeEntityKey": "social.author.eight-forty-two",
+        "category": "pet-photo",
+        "promptSummary": "Sleepy orange-and-white cat beside an unreadable alarm clock on a rainy morning.",
+    },
+    "xhs-food-noodles.png": {
+        "platform": "xiaohongshu",
+        "runtimeEntityKey": "xhs.author.today-eat-what",
+        "category": "food-photo",
+        "promptSummary": "Ordinary neighborhood clear-broth noodle bowl photographed by phone.",
+    },
+    "xhs-hard-drive-light.png": {
+        "platform": "xiaohongshu",
+        "runtimeEntityKey": "xhs.author.hard-drive-light",
+        "category": "technology-object-photo",
+        "promptSummary": "Used external hard drive connected to a laptop on an evening desk.",
+    },
+    "xhs-lunch-ten-min.png": {
+        "platform": "xiaohongshu",
+        "runtimeEntityKey": "xhs.author.lunch-ten-minutes",
+        "category": "food-photo",
+        "promptSummary": "Ordinary weekday cafeteria tray with rice, vegetables, tomato and egg, and soup.",
+    },
+    "xhs-nanan-rain-walk.png": {
+        "platform": "xiaohongshu",
+        "runtimeEntityKey": "xhs.author.south-bank-slow-walk",
+        "category": "candid-travel-photo",
+        "promptSummary": "Fictional adult seen from behind walking with an umbrella beside a wet urban river path.",
+    },
+    "xhs-orange-folder.png": {
+        "platform": "cross-platform",
+        "runtimeEntityKey": "social.author.orange-folder",
+        "category": "stationery-object-photo",
+        "promptSummary": "Worn orange document folder, pen and paper clips on a pale wooden desk.",
+    },
+    "xhs-riverside-bike.png": {
+        "platform": "xiaohongshu",
+        "runtimeEntityKey": "xhs.author.riverside-not-river",
+        "category": "city-landscape-photo",
+        "promptSummary": "Green bicycle beside a public riverside path after rain.",
+    },
+    "xhs-white-shoelace.png": {
+        "platform": "xiaohongshu",
+        "runtimeEntityKey": "xhs.author.white-shoelace",
+        "category": "outfit-photo",
+        "promptSummary": "Fictional adult's casual neck-down mirror outfit photo in an apartment entryway.",
+    },
+    "xhs-window-outlet.png": {
+        "platform": "xiaohongshu",
+        "runtimeEntityKey": "xhs.author.by-the-outlet",
+        "category": "travel-object-photo",
+        "promptSummary": "Canvas tote and paperback beside a high-speed train window and power outlet.",
+    },
+    "xhs-wood-desk.png": {
+        "platform": "xiaohongshu",
+        "runtimeEntityKey": "xhs.author.wood-desk-edge",
+        "category": "home-object-photo",
+        "promptSummary": "Used wooden desk with mug, open book and glasses under evening lamp light.",
+    },
 }
 
 
@@ -101,7 +172,7 @@ def main() -> None:
         assets.append(
             {
                 "id": f"avatar.realistic.{metadata['runtimeEntityKey']}",
-                "platform": "wechat",
+                "platform": metadata.get("platform", "wechat"),
                 **metadata,
                 "path": processed["runtimePath"],
                 "width": processed["runtimeWidth"],

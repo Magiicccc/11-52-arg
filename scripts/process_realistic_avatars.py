@@ -30,7 +30,7 @@ def main() -> None:
         with Image.open(path) as source:
             source_width, source_height = source.size
             image = source.convert("RGB")
-            crop = CROP_INSETS.get(path.name)
+            crop = CROP_INSETS.get(path.name) if image.size != TARGET_SIZE else None
             if crop:
                 left, top, right, bottom = crop
                 image = image.crop(

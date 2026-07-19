@@ -5,7 +5,7 @@
     "width": 256,
     "height": 256
   },
-  "assetCount": 15,
+  "assetCount": 27,
   "assets": [
     {
       "filename": "wechat-badminton-group.png",
@@ -54,8 +54,8 @@
     {
       "filename": "wechat-delivery-service.png",
       "runtimePath": "/media/case-001/avatars/realistic/wechat-delivery-service.png",
-      "sourceWidth": 1254,
-      "sourceHeight": 1254,
+      "sourceWidth": 256,
+      "sourceHeight": 256,
       "runtimeWidth": 256,
       "runtimeHeight": 256,
       "cropInsets": [
@@ -176,6 +176,138 @@
       "cropInsets": null,
       "bytes": 115256,
       "sha256": "1f4cd28d9497ea124942255b26f99ba3a25d47c0a9a025b191499e41a317abdc"
+    },
+    {
+      "filename": "wechat-zhoulan-roses.png",
+      "runtimePath": "/media/case-001/avatars/realistic/wechat-zhoulan-roses.png",
+      "sourceWidth": 256,
+      "sourceHeight": 256,
+      "runtimeWidth": 256,
+      "runtimeHeight": 256,
+      "cropInsets": null,
+      "bytes": 131566,
+      "sha256": "e7dca221488b2410fde26a4ba4b432d915bd3bebd4c0d8e489207fe0627cf5a6"
+    },
+    {
+      "filename": "xhs-after-chapter-three.png",
+      "runtimePath": "/media/case-001/avatars/realistic/xhs-after-chapter-three.png",
+      "sourceWidth": 1254,
+      "sourceHeight": 1254,
+      "runtimeWidth": 256,
+      "runtimeHeight": 256,
+      "cropInsets": null,
+      "bytes": 102434,
+      "sha256": "6c980ec80e11d91360e2dd623fe58674b974aef24239a46f41019c84173efa35"
+    },
+    {
+      "filename": "xhs-eight-forty-two-cat.png",
+      "runtimePath": "/media/case-001/avatars/realistic/xhs-eight-forty-two-cat.png",
+      "sourceWidth": 1254,
+      "sourceHeight": 1254,
+      "runtimeWidth": 256,
+      "runtimeHeight": 256,
+      "cropInsets": null,
+      "bytes": 104691,
+      "sha256": "fa4b202f27656053273c1f06a4bcede2f972381e3e03b23d95dd07672a1220f4"
+    },
+    {
+      "filename": "xhs-food-noodles.png",
+      "runtimePath": "/media/case-001/avatars/realistic/xhs-food-noodles.png",
+      "sourceWidth": 1254,
+      "sourceHeight": 1254,
+      "runtimeWidth": 256,
+      "runtimeHeight": 256,
+      "cropInsets": null,
+      "bytes": 123887,
+      "sha256": "35033f5b4a52d4f347a24c0e62284dcdc1ddecf8e567cdbd8c6f295b99578238"
+    },
+    {
+      "filename": "xhs-hard-drive-light.png",
+      "runtimePath": "/media/case-001/avatars/realistic/xhs-hard-drive-light.png",
+      "sourceWidth": 1254,
+      "sourceHeight": 1254,
+      "runtimeWidth": 256,
+      "runtimeHeight": 256,
+      "cropInsets": null,
+      "bytes": 81116,
+      "sha256": "53654fa751e0fe197d612e1c4ac88f3f3f175a31d1a76ac1559494f55b035a2f"
+    },
+    {
+      "filename": "xhs-lunch-ten-min.png",
+      "runtimePath": "/media/case-001/avatars/realistic/xhs-lunch-ten-min.png",
+      "sourceWidth": 1254,
+      "sourceHeight": 1254,
+      "runtimeWidth": 256,
+      "runtimeHeight": 256,
+      "cropInsets": null,
+      "bytes": 109787,
+      "sha256": "0316f9c87f8ef84b001b0a48735bd081ed4c7badde25f3879b2f4dcef55d07b3"
+    },
+    {
+      "filename": "xhs-nanan-rain-walk.png",
+      "runtimePath": "/media/case-001/avatars/realistic/xhs-nanan-rain-walk.png",
+      "sourceWidth": 1254,
+      "sourceHeight": 1254,
+      "runtimeWidth": 256,
+      "runtimeHeight": 256,
+      "cropInsets": null,
+      "bytes": 111646,
+      "sha256": "232d2608b1d7b6a1d68770cb2e710badd79df78bb0cd203c25b16a4685df826d"
+    },
+    {
+      "filename": "xhs-orange-folder.png",
+      "runtimePath": "/media/case-001/avatars/realistic/xhs-orange-folder.png",
+      "sourceWidth": 1254,
+      "sourceHeight": 1254,
+      "runtimeWidth": 256,
+      "runtimeHeight": 256,
+      "cropInsets": null,
+      "bytes": 78888,
+      "sha256": "ce339b15e1b67d0c2794f7720fa9b323ad93baeb5ac035033fcd412b471edae8"
+    },
+    {
+      "filename": "xhs-riverside-bike.png",
+      "runtimePath": "/media/case-001/avatars/realistic/xhs-riverside-bike.png",
+      "sourceWidth": 1254,
+      "sourceHeight": 1254,
+      "runtimeWidth": 256,
+      "runtimeHeight": 256,
+      "cropInsets": null,
+      "bytes": 134308,
+      "sha256": "e5f93c2aa22389fc2e1a3cbb963fca608055f6e1a14b814d1608ac293325e022"
+    },
+    {
+      "filename": "xhs-white-shoelace.png",
+      "runtimePath": "/media/case-001/avatars/realistic/xhs-white-shoelace.png",
+      "sourceWidth": 1254,
+      "sourceHeight": 1254,
+      "runtimeWidth": 256,
+      "runtimeHeight": 256,
+      "cropInsets": null,
+      "bytes": 97438,
+      "sha256": "710dba71b8e04e5ae11f1bec38b5b7da674fc0083ae878c6e4042e91f08f8843"
+    },
+    {
+      "filename": "xhs-window-outlet.png",
+      "runtimePath": "/media/case-001/avatars/realistic/xhs-window-outlet.png",
+      "sourceWidth": 1254,
+      "sourceHeight": 1254,
+      "runtimeWidth": 256,
+      "runtimeHeight": 256,
+      "cropInsets": null,
+      "bytes": 90154,
+      "sha256": "d6a152f82f9848ba8bf405cf10bbca8eeb6d717f2f9acfbcf0f3061358683ba3"
+    },
+    {
+      "filename": "xhs-wood-desk.png",
+      "runtimePath": "/media/case-001/avatars/realistic/xhs-wood-desk.png",
+      "sourceWidth": 1254,
+      "sourceHeight": 1254,
+      "runtimeWidth": 256,
+      "runtimeHeight": 256,
+      "cropInsets": null,
+      "bytes": 89087,
+      "sha256": "b929a851e9e334f7a509b7139fa6868b90c8b1eec861a86a3a8a2bd9e6c89343"
     }
   ]
 }

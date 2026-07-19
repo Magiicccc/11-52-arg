@@ -9,7 +9,7 @@
     "Core story identities use non-face lifestyle images to avoid premature identity disclosure",
     "Every runtime identity is bound semantically rather than by list position"
   ],
-  "assetCount": 15,
+  "assetCount": 27,
   "assets": [
     {
       "id": "avatar.realistic.wechat.daily-gym",
@@ -307,6 +307,246 @@
       "height": 256,
       "bytes": 115256,
       "sha256": "1f4cd28d9497ea124942255b26f99ba3a25d47c0a9a025b191499e41a317abdc",
+      "postProcessing": {
+        "operation": "deterministic resize and PNG optimization",
+        "cropInsets": null
+      },
+      "source": "OpenAI built-in image generation",
+      "generatedAt": "2026-07-19",
+      "narrativeRole": "ordinary-ui-identity-only",
+      "isClue": false
+    },
+    {
+      "id": "avatar.realistic.actor.zhoulan",
+      "platform": "wechat",
+      "runtimeEntityKey": "actor.zhoulan",
+      "category": "personal-flower-photo",
+      "promptSummary": "Casual phone photo of pink roses on an ordinary residential balcony.",
+      "path": "/media/case-001/avatars/realistic/wechat-zhoulan-roses.png",
+      "width": 256,
+      "height": 256,
+      "bytes": 131566,
+      "sha256": "e7dca221488b2410fde26a4ba4b432d915bd3bebd4c0d8e489207fe0627cf5a6",
+      "postProcessing": {
+        "operation": "deterministic resize and PNG optimization",
+        "cropInsets": null
+      },
+      "source": "OpenAI built-in image generation",
+      "generatedAt": "2026-07-19",
+      "narrativeRole": "ordinary-ui-identity-only",
+      "isClue": false
+    },
+    {
+      "id": "avatar.realistic.xhs.author.after-chapter-three",
+      "platform": "xiaohongshu",
+      "runtimeEntityKey": "xhs.author.after-chapter-three",
+      "category": "reading-object-photo",
+      "promptSummary": "Open paperback, pen and tea beside a rainy cafe window.",
+      "path": "/media/case-001/avatars/realistic/xhs-after-chapter-three.png",
+      "width": 256,
+      "height": 256,
+      "bytes": 102434,
+      "sha256": "6c980ec80e11d91360e2dd623fe58674b974aef24239a46f41019c84173efa35",
+      "postProcessing": {
+        "operation": "deterministic resize and PNG optimization",
+        "cropInsets": null
+      },
+      "source": "OpenAI built-in image generation",
+      "generatedAt": "2026-07-19",
+      "narrativeRole": "ordinary-ui-identity-only",
+      "isClue": false
+    },
+    {
+      "id": "avatar.realistic.social.author.eight-forty-two",
+      "platform": "cross-platform",
+      "runtimeEntityKey": "social.author.eight-forty-two",
+      "category": "pet-photo",
+      "promptSummary": "Sleepy orange-and-white cat beside an unreadable alarm clock on a rainy morning.",
+      "path": "/media/case-001/avatars/realistic/xhs-eight-forty-two-cat.png",
+      "width": 256,
+      "height": 256,
+      "bytes": 104691,
+      "sha256": "fa4b202f27656053273c1f06a4bcede2f972381e3e03b23d95dd07672a1220f4",
+      "postProcessing": {
+        "operation": "deterministic resize and PNG optimization",
+        "cropInsets": null
+      },
+      "source": "OpenAI built-in image generation",
+      "generatedAt": "2026-07-19",
+      "narrativeRole": "ordinary-ui-identity-only",
+      "isClue": false
+    },
+    {
+      "id": "avatar.realistic.xhs.author.today-eat-what",
+      "platform": "xiaohongshu",
+      "runtimeEntityKey": "xhs.author.today-eat-what",
+      "category": "food-photo",
+      "promptSummary": "Ordinary neighborhood clear-broth noodle bowl photographed by phone.",
+      "path": "/media/case-001/avatars/realistic/xhs-food-noodles.png",
+      "width": 256,
+      "height": 256,
+      "bytes": 123887,
+      "sha256": "35033f5b4a52d4f347a24c0e62284dcdc1ddecf8e567cdbd8c6f295b99578238",
+      "postProcessing": {
+        "operation": "deterministic resize and PNG optimization",
+        "cropInsets": null
+      },
+      "source": "OpenAI built-in image generation",
+      "generatedAt": "2026-07-19",
+      "narrativeRole": "ordinary-ui-identity-only",
+      "isClue": false
+    },
+    {
+      "id": "avatar.realistic.xhs.author.hard-drive-light",
+      "platform": "xiaohongshu",
+      "runtimeEntityKey": "xhs.author.hard-drive-light",
+      "category": "technology-object-photo",
+      "promptSummary": "Used external hard drive connected to a laptop on an evening desk.",
+      "path": "/media/case-001/avatars/realistic/xhs-hard-drive-light.png",
+      "width": 256,
+      "height": 256,
+      "bytes": 81116,
+      "sha256": "53654fa751e0fe197d612e1c4ac88f3f3f175a31d1a76ac1559494f55b035a2f",
+      "postProcessing": {
+        "operation": "deterministic resize and PNG optimization",
+        "cropInsets": null
+      },
+      "source": "OpenAI built-in image generation",
+      "generatedAt": "2026-07-19",
+      "narrativeRole": "ordinary-ui-identity-only",
+      "isClue": false
+    },
+    {
+      "id": "avatar.realistic.xhs.author.lunch-ten-minutes",
+      "platform": "xiaohongshu",
+      "runtimeEntityKey": "xhs.author.lunch-ten-minutes",
+      "category": "food-photo",
+      "promptSummary": "Ordinary weekday cafeteria tray with rice, vegetables, tomato and egg, and soup.",
+      "path": "/media/case-001/avatars/realistic/xhs-lunch-ten-min.png",
+      "width": 256,
+      "height": 256,
+      "bytes": 109787,
+      "sha256": "0316f9c87f8ef84b001b0a48735bd081ed4c7badde25f3879b2f4dcef55d07b3",
+      "postProcessing": {
+        "operation": "deterministic resize and PNG optimization",
+        "cropInsets": null
+      },
+      "source": "OpenAI built-in image generation",
+      "generatedAt": "2026-07-19",
+      "narrativeRole": "ordinary-ui-identity-only",
+      "isClue": false
+    },
+    {
+      "id": "avatar.realistic.xhs.author.south-bank-slow-walk",
+      "platform": "xiaohongshu",
+      "runtimeEntityKey": "xhs.author.south-bank-slow-walk",
+      "category": "candid-travel-photo",
+      "promptSummary": "Fictional adult seen from behind walking with an umbrella beside a wet urban river path.",
+      "path": "/media/case-001/avatars/realistic/xhs-nanan-rain-walk.png",
+      "width": 256,
+      "height": 256,
+      "bytes": 111646,
+      "sha256": "232d2608b1d7b6a1d68770cb2e710badd79df78bb0cd203c25b16a4685df826d",
+      "postProcessing": {
+        "operation": "deterministic resize and PNG optimization",
+        "cropInsets": null
+      },
+      "source": "OpenAI built-in image generation",
+      "generatedAt": "2026-07-19",
+      "narrativeRole": "ordinary-ui-identity-only",
+      "isClue": false
+    },
+    {
+      "id": "avatar.realistic.social.author.orange-folder",
+      "platform": "cross-platform",
+      "runtimeEntityKey": "social.author.orange-folder",
+      "category": "stationery-object-photo",
+      "promptSummary": "Worn orange document folder, pen and paper clips on a pale wooden desk.",
+      "path": "/media/case-001/avatars/realistic/xhs-orange-folder.png",
+      "width": 256,
+      "height": 256,
+      "bytes": 78888,
+      "sha256": "ce339b15e1b67d0c2794f7720fa9b323ad93baeb5ac035033fcd412b471edae8",
+      "postProcessing": {
+        "operation": "deterministic resize and PNG optimization",
+        "cropInsets": null
+      },
+      "source": "OpenAI built-in image generation",
+      "generatedAt": "2026-07-19",
+      "narrativeRole": "ordinary-ui-identity-only",
+      "isClue": false
+    },
+    {
+      "id": "avatar.realistic.xhs.author.riverside-not-river",
+      "platform": "xiaohongshu",
+      "runtimeEntityKey": "xhs.author.riverside-not-river",
+      "category": "city-landscape-photo",
+      "promptSummary": "Green bicycle beside a public riverside path after rain.",
+      "path": "/media/case-001/avatars/realistic/xhs-riverside-bike.png",
+      "width": 256,
+      "height": 256,
+      "bytes": 134308,
+      "sha256": "e5f93c2aa22389fc2e1a3cbb963fca608055f6e1a14b814d1608ac293325e022",
+      "postProcessing": {
+        "operation": "deterministic resize and PNG optimization",
+        "cropInsets": null
+      },
+      "source": "OpenAI built-in image generation",
+      "generatedAt": "2026-07-19",
+      "narrativeRole": "ordinary-ui-identity-only",
+      "isClue": false
+    },
+    {
+      "id": "avatar.realistic.xhs.author.white-shoelace",
+      "platform": "xiaohongshu",
+      "runtimeEntityKey": "xhs.author.white-shoelace",
+      "category": "outfit-photo",
+      "promptSummary": "Fictional adult's casual neck-down mirror outfit photo in an apartment entryway.",
+      "path": "/media/case-001/avatars/realistic/xhs-white-shoelace.png",
+      "width": 256,
+      "height": 256,
+      "bytes": 97438,
+      "sha256": "710dba71b8e04e5ae11f1bec38b5b7da674fc0083ae878c6e4042e91f08f8843",
+      "postProcessing": {
+        "operation": "deterministic resize and PNG optimization",
+        "cropInsets": null
+      },
+      "source": "OpenAI built-in image generation",
+      "generatedAt": "2026-07-19",
+      "narrativeRole": "ordinary-ui-identity-only",
+      "isClue": false
+    },
+    {
+      "id": "avatar.realistic.xhs.author.by-the-outlet",
+      "platform": "xiaohongshu",
+      "runtimeEntityKey": "xhs.author.by-the-outlet",
+      "category": "travel-object-photo",
+      "promptSummary": "Canvas tote and paperback beside a high-speed train window and power outlet.",
+      "path": "/media/case-001/avatars/realistic/xhs-window-outlet.png",
+      "width": 256,
+      "height": 256,
+      "bytes": 90154,
+      "sha256": "d6a152f82f9848ba8bf405cf10bbca8eeb6d717f2f9acfbcf0f3061358683ba3",
+      "postProcessing": {
+        "operation": "deterministic resize and PNG optimization",
+        "cropInsets": null
+      },
+      "source": "OpenAI built-in image generation",
+      "generatedAt": "2026-07-19",
+      "narrativeRole": "ordinary-ui-identity-only",
+      "isClue": false
+    },
+    {
+      "id": "avatar.realistic.xhs.author.wood-desk-edge",
+      "platform": "xiaohongshu",
+      "runtimeEntityKey": "xhs.author.wood-desk-edge",
+      "category": "home-object-photo",
+      "promptSummary": "Used wooden desk with mug, open book and glasses under evening lamp light.",
+      "path": "/media/case-001/avatars/realistic/xhs-wood-desk.png",
+      "width": 256,
+      "height": 256,
+      "bytes": 89087,
+      "sha256": "b929a851e9e334f7a509b7139fa6868b90c8b1eec861a86a3a8a2bd9e6c89343",
       "postProcessing": {
         "operation": "deterministic resize and PNG optimization",
         "cropInsets": null

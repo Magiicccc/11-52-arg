@@ -2,7 +2,7 @@ import { useLayoutEffect, useRef, useState, type ReactNode } from "react";
 import { useGame } from "@/app/GameContext";
 import { activeBody, unlockedItemsForApp } from "@/content/selectors";
 import { ordinaryMails, ordinaryPlatformRecords, ordinaryVideos, ordinaryXhsDrafts, ordinaryXhsNotes } from "@/content/realism-life-data";
-import { generatedAvatar } from "@/content/avatar-assets";
+import { realisticInternetAvatar } from "@/content/avatar-assets";
 import { assetUrl } from "@/lib/asset-url";
 
 type Body = Record<string, unknown>;
@@ -26,8 +26,8 @@ function PlatformBack({ onClick, label = "返回" }: { onClick(): void; label?: 
   return <button className="platform-back" aria-label={label} onClick={onClick}>‹</button>;
 }
 
-function GeneratedAvatar({ slot, className, alt }: { slot: number; className: string; alt: string }) {
-  return <img className={className} src={generatedAvatar(slot)} alt={alt}/>;
+function GeneratedAvatar({ slot, className, alt, identity }: { slot: number; className: string; alt: string; identity?: string }) {
+  return <img className={className} src={realisticInternetAvatar(identity ?? alt, slot)} alt={alt}/>;
 }
 
 function PlatformBottomNav({ items, active, onChange }: { items: string[]; active: string; onChange(item: string): void }) {
@@ -190,15 +190,15 @@ export function XiaohongshuApp() {
           {selected.mediaType==="video"&&<span className="xhs-video-indicator">▶ {Math.max(8,selected.title.length)} 秒</span>}
           {selected.mediaSet.length>1&&<><span className="xhs-gallery-count">{galleryIndex+1}/{selected.mediaSet.length}</span><nav>{selected.mediaSet.map((_,index)=><button aria-label={`查看第${index+1}张`} className={galleryIndex===index?"active":""} key={index} onClick={()=>setGalleryIndex(index)}/>)}</nav></>}
         </div>
-        <header><button className="xhs-author-button" onClick={()=>setView("profile")}><GeneratedAvatar className="xhs-avatar" slot={selectedAvatarSlot} alt={`${selected.author}头像`}/><b>{selected.author}</b></button><button className={followed?"active":""} onClick={()=>setUiFlag(`xiaohongshu.followed.${selected.author}`,!followed)}>{followed?"已关注":"关注"}</button></header>
+        <header><button className="xhs-author-button" onClick={()=>setView("profile")}><GeneratedAvatar className="xhs-avatar" slot={selectedAvatarSlot} identity={selected.author} alt={`${selected.author}头像`}/><b>{selected.author}</b></button><button className={followed?"active":""} onClick={()=>setUiFlag(`xiaohongshu.followed.${selected.author}`,!followed)}>{followed?"已关注":"关注"}</button></header>
         <h1>{selected.title}</h1>
         {selected.body.map((paragraph,index)=><p key={index}>{paragraph}</p>)}
         <div className="xhs-tags"><span>#{selected.category}</span><span>#生活记录</span></div>
         <time>{selected.date} · {selected.location}</time>
         <section className="xhs-comments">
           <b>共 {selected.comments.length+playerComments.length} 条评论</b>
-          {selected.comments.map((comment,index)=><article key={comment.id}><GeneratedAvatar className="xhs-avatar" slot={46+index} alt={`${comment.author}头像`}/><div><b>{comment.author}</b><p>{comment.text}</p><small>♡ {comment.likes}</small></div></article>)}
-          {playerComments.map((text,index)=><article key={`player-${index}`}><GeneratedAvatar className="xhs-avatar" slot={120} alt="川流档案头像"/><div><b>川流档案</b><p>{text}</p><small>刚刚</small></div></article>)}
+          {selected.comments.map((comment,index)=><article key={comment.id}><GeneratedAvatar className="xhs-avatar" slot={46+index} identity={comment.author} alt={`${comment.author}头像`}/><div><b>{comment.author}</b><p>{comment.text}</p><small>♡ {comment.likes}</small></div></article>)}
+          {playerComments.map((text,index)=><article key={`player-${index}`}><GeneratedAvatar className="xhs-avatar" slot={120} identity="川流档案" alt="川流档案头像"/><div><b>川流档案</b><p>{text}</p><small>刚刚</small></div></article>)}
         </section>
       </article>
     </DetailShell>;
@@ -209,7 +209,7 @@ export function XiaohongshuApp() {
     const followed=state.world.flags[`ui.xiaohongshu.followed.${selected.author}`]===true;
     return <DetailShell className="xhs-app" title="个人主页" onBack={()=>setView("detail")}>
       <section className="xhs-profile">
-        <header><GeneratedAvatar className="xhs-avatar" slot={20+Math.max(0,notes.findIndex(note=>note.id===selected.id))} alt={`${selected.author}头像`}/><div><h1>{selected.author}</h1><p>普通生活记录 · {selected.category}</p></div></header>
+        <header><GeneratedAvatar className="xhs-avatar" slot={20+Math.max(0,notes.findIndex(note=>note.id===selected.id))} identity={selected.author} alt={`${selected.author}头像`}/><div><h1>{selected.author}</h1><p>普通生活记录 · {selected.category}</p></div></header>
         <div className="xhs-profile-stats"><span><b>{authorNotes.length}</b>笔记</span><span><b>{Math.max(12,selected.likes%1300)}</b>获赞与收藏</span><span><b>{Math.max(8,selected.comments.length*9)}</b>关注</span></div>
         <button className={followed?"active":""} onClick={()=>setUiFlag(`xiaohongshu.followed.${selected.author}`,!followed)}>{followed?"已关注":"关注"}</button>
         <div className="xhs-profile-grid">{authorNotes.map(note=><button key={note.id} onClick={()=>openNote(note.id)}><img src={assetUrl(note.media)} alt="笔记缩略图"/><b>{note.title}</b></button>)}</div>
@@ -238,7 +238,7 @@ export function XiaohongshuApp() {
   if(tab==="消息") return <XhsTabShell tab={tab} onTab={setTab} onExit={goBack}>
     <header className="xhs-simple-header"><strong>消息</strong></header>
     <div className="xhs-message-shortcuts">{["赞和收藏","新增关注","评论和@","陌生人消息"].map(label=><button key={label} onClick={()=>setUiFlag(`xiaohongshu.messages.${label}`,true)}><span>{label.slice(0,1)}</span><b>{label}</b><i>›</i></button>)}</div>
-    <section className="xhs-message-list">{ordinaryXhsNotes.slice(0,8).map((note,index)=><button key={note.id} onClick={()=>openNote(note.id)}><GeneratedAvatar className="xhs-avatar" slot={20+index} alt={`${note.author}头像`}/><div><b>{note.author}</b><p>{index%2===0?"赞了你的笔记":"回复了你的一条评论"}</p><small>{index+1} 小时前</small></div><img src={assetUrl(note.media)} alt="相关笔记"/></button>)}</section>
+    <section className="xhs-message-list">{ordinaryXhsNotes.slice(0,8).map((note,index)=><button key={note.id} onClick={()=>openNote(note.id)}><GeneratedAvatar className="xhs-avatar" slot={20+index} identity={note.author} alt={`${note.author}头像`}/><div><b>{note.author}</b><p>{index%2===0?"赞了你的笔记":"回复了你的一条评论"}</p><small>{index+1} 小时前</small></div><img src={assetUrl(note.media)} alt="相关笔记"/></button>)}</section>
   </XhsTabShell>;
 
   if(tab==="我") {
@@ -249,7 +249,7 @@ export function XiaohongshuApp() {
     const historyNotes=notes.filter((note,index)=>state.world.flags[`ui.xiaohongshu.history.${note.id}`]===true||index<4);
     const published=state.world.flags["ui.xiaohongshu.published"];
     return <XhsTabShell tab={tab} onTab={setTab} onExit={goBack}>
-      <section className="xhs-me-header"><GeneratedAvatar className="xhs-avatar" slot={120} alt="川流档案头像"/><div><h1>川流档案</h1><p>小红书号：chuanliu_archive</p></div><button onClick={()=>setUiFlag("xiaohongshu.profile.editing",true)}>编辑资料</button></section>
+      <section className="xhs-me-header"><GeneratedAvatar className="xhs-avatar" slot={120} identity="川流档案" alt="川流档案头像"/><div><h1>川流档案</h1><p>小红书号：chuanliu_archive</p></div><button onClick={()=>setUiFlag("xiaohongshu.profile.editing",true)}>编辑资料</button></section>
       <div className="xhs-me-stats"><span><b>87</b>关注</span><span><b>316</b>粉丝</span><span><b>1,642</b>获赞与收藏</span></div>
       <nav className="xhs-me-tabs">{["笔记","收藏","赞过","浏览记录","草稿"].map(label=><button key={label} onClick={()=>setUiFlag("xiaohongshu.me.section",label)}>{label}</button>)}</nav>
       <section className="xhs-me-summary"><div><b>收藏</b><span>{savedNotes.length} 篇</span></div><div><b>浏览记录</b><span>{historyNotes.length} 篇</span></div><div><b>草稿</b><span>{ordinaryXhsDrafts.length+(draftTitle||draftBody?1:0)} 篇</span></div></section>
@@ -278,7 +278,7 @@ export function XiaohongshuApp() {
           {note.mediaSet.length>1&&<span className="xhs-card-media-mark">▣ {note.mediaSet.length}</span>}
           {note.mediaType==="video"&&<span className="xhs-card-video-mark">▶</span>}
           <b>{note.title}</b>
-          <small><GeneratedAvatar className="xhs-feed-avatar" slot={20+index} alt={`${note.author}头像`}/> {note.author} <span>♡ {note.likes}</span></small>
+          <small><GeneratedAvatar className="xhs-feed-avatar" slot={20+index} identity={note.author} alt={`${note.author}头像`}/> {note.author} <span>♡ {note.likes}</span></small>
         </button>;
       })}
       <div className="xhs-feed-end">已经到底了 · 共 {notes.length} 篇笔记</div>
@@ -367,7 +367,7 @@ export function DouyinApp() {
       {paused && <span className="douyin-play-state">▶</span>}
     </button>
     <aside className="douyin-actions">
-      <button className={followed?"active":""} onClick={()=>{if(!item)return;setUiFlag(`douyin.followed.${item.author}`,!followed);emit("content.item.interacted",item.id,{action:"follow",active:!followed,source:"P"})}}><GeneratedAvatar className="douyin-avatar" slot={52+currentIndex} alt={`${item?.author??"视频作者"}头像`}/><b>{followed?"✓":"＋"}</b></button>
+      <button className={followed?"active":""} onClick={()=>{if(!item)return;setUiFlag(`douyin.followed.${item.author}`,!followed);emit("content.item.interacted",item.id,{action:"follow",active:!followed,source:"P"})}}><GeneratedAvatar className="douyin-avatar" slot={52+currentIndex} identity={item?.author} alt={`${item?.author??"视频作者"}头像`}/><b>{followed?"✓":"＋"}</b></button>
       <button onClick={() => item && emit("content.item.interacted", item.id, { action: "like", source:"P" })}>♡<small>{item?.likes??0}</small></button>
       <button onClick={() => item && emit("content.item.interacted", item.id, { action: "comments", source:"P" })}>◌<small>{item?.comments??0}</small></button>
       <button className={saved ? "active" : ""} onClick={() => {
@@ -529,7 +529,7 @@ export function QQMailApp() {
     }>
       <article className="mail-detail">
         <h1>{selected.subject}</h1>
-        <header><GeneratedAvatar className="mail-avatar" slot={68+Math.max(0,mails.findIndex(mail=>mail.id===selected.id))} alt={`${selected.from}头像`}/><div><b>{selected.from}</b><small>发给 沈川 · {selected.date}</small></div><button className={starred?"active":""} onClick={()=>setUiFlag(`qqmail.starred.${selected.id}`,!starred)}>{starred?"★":"☆"}</button></header>
+        <header><GeneratedAvatar className="mail-avatar" slot={68+Math.max(0,mails.findIndex(mail=>mail.id===selected.id))} identity={selected.from} alt={`${selected.from}头像`}/><div><b>{selected.from}</b><small>发给 沈川 · {selected.date}</small></div><button className={starred?"active":""} onClick={()=>setUiFlag(`qqmail.starred.${selected.id}`,!starred)}>{starred?"★":"☆"}</button></header>
         {selected.body.map((paragraph,index)=><p key={index}>{paragraph}</p>)}
         {attachments&&attachments.length>0&&<section className="mail-attachments"><b>{attachments.length} 个附件</b>{attachments.map(attachment=><button key={attachment.id} onClick={()=>{setUiFlag(`qqmail.downloaded.${attachment.id}`,true);emit("content.item.interacted",attachment.id,{action:"download",source:"P"})}}><span>{attachment.kind}</span><div><b>{attachment.name}</b><small>{attachment.size}</small></div><i>下载</i></button>)}</section>}
         {replyText&&<section className="mail-inline-reply"><textarea value={replyText} onChange={event=>setReplyText(event.target.value)}/><button onClick={()=>{setUiFlag(`qqmail.reply.${selected.id}`,replyText);emit("message.email.sent",selected.id,{mode:"reply",source:"P"});setReplyText("")}}>发送回复</button></section>}
@@ -539,7 +539,7 @@ export function QQMailApp() {
   }
 
   if(view==="folders") return <DetailShell className="qqmail-app" title="邮箱" onBack={()=>setView(selected?"detail":"list")}>
-    <section className="mail-folder-page"><header><GeneratedAvatar className="mail-account" slot={121} alt="沈川邮箱头像"/><div><b>沈川</b><small>已同步</small></div></header>{["收件箱","星标邮件","已发送","草稿箱","订阅邮件","归档","垃圾箱","所有邮件"].map(label=><button key={label} onClick={()=>{if(selected){setUiFlag(`qqmail.folder.${selected.id}`,label);emit("content.item.interacted",selected.id,{action:"move",folder:label,source:"P"})}setFolder(label);setView("list")}}><span>{label.slice(0,1)}</span><b>{label}</b><i>{mails.filter(mail=>mail.folder===label).length||""}</i></button>)}</section>
+    <section className="mail-folder-page"><header><GeneratedAvatar className="mail-account" slot={121} identity="沈川" alt="沈川邮箱头像"/><div><b>沈川</b><small>已同步</small></div></header>{["收件箱","星标邮件","已发送","草稿箱","订阅邮件","归档","垃圾箱","所有邮件"].map(label=><button key={label} onClick={()=>{if(selected){setUiFlag(`qqmail.folder.${selected.id}`,label);emit("content.item.interacted",selected.id,{action:"move",folder:label,source:"P"})}setFolder(label);setView("list")}}><span>{label.slice(0,1)}</span><b>{label}</b><i>{mails.filter(mail=>mail.folder===label).length||""}</i></button>)}</section>
   </DetailShell>;
 
   if(view==="compose") return <DetailShell className="qqmail-app" title="写邮件" onBack={()=>setView("list")} footer={<div className="mail-compose-actions"><button onClick={()=>{setUiFlag("qqmail.compose.draft",compose);emit("content.draft.saved","app.qqmail",{source:"P"});setView("list")}}>存草稿</button><button disabled={!compose.to.trim()||!compose.subject.trim()} onClick={()=>{setUiFlag("qqmail.compose.sent",{...compose,sentAt:"2026-07-15T21:35:00+08:00"});emit("message.email.sent","app.qqmail",{mode:"compose",to:compose.to,source:"P"});setCompose({to:"",subject:"",body:""});setView("list")}}>发送</button></div>}>
@@ -557,7 +557,7 @@ export function QQMailApp() {
       文件: ["项目排期.xlsx", "照片备份清单.pdf", "城市走访记录.docx", "车票报销凭证.zip"]
     };
     return <div className="app-window platform-app qqmail-app" data-testid={`qqmail-${tab}`}>
-      <header className="qqmail-header"><button className="mail-account" onClick={() => setTab("邮件")}><GeneratedAvatar className="mail-account-image" slot={121} alt="沈川邮箱头像"/></button><strong>{tab}</strong><button aria-label="新增" onClick={() => {
+      <header className="qqmail-header"><button className="mail-account" onClick={() => setTab("邮件")}><GeneratedAvatar className="mail-account-image" slot={121} identity="沈川" alt="沈川邮箱头像"/></button><strong>{tab}</strong><button aria-label="新增" onClick={() => {
         setUiFlag(`qqmail.${tab}.create`, true);
         emit("content.item.created", "app.qqmail", { surface: tab, source: "P" });
       }}>＋</button></header>
@@ -571,14 +571,14 @@ export function QQMailApp() {
   }
 
   return <div className="app-window platform-app qqmail-app" data-testid="qqmail-home">
-    <header className="qqmail-header"><button aria-label="邮箱文件夹" className="mail-account" onClick={()=>setView("folders")}><GeneratedAvatar className="mail-account-image" slot={121} alt="沈川邮箱头像"/></button><strong>{folder}</strong><div><button aria-label="搜索" onClick={()=>setView("search")}>⌕</button><button aria-label="写邮件" onClick={()=>setView("compose")}>＋</button></div></header>
+    <header className="qqmail-header"><button aria-label="邮箱文件夹" className="mail-account" onClick={()=>setView("folders")}><GeneratedAvatar className="mail-account-image" slot={121} identity="沈川" alt="沈川邮箱头像"/></button><strong>{folder}</strong><div><button aria-label="搜索" onClick={()=>setView("search")}>⌕</button><button aria-label="写邮件" onClick={()=>setView("compose")}>＋</button></div></header>
     <button className="mail-search" onClick={()=>setView("search")}>搜索邮件</button>
     <div className="platform-scroll mail-list" ref={scroll.ref}>
       <section className="mail-folders"><button onClick={()=>{setFolder("收件箱");setUiFlag("qqmail.filter","unread")}}>所有未读 <b>{mails.filter(mail=>mail.unread&&state.world.flags[`ui.qqmail.read.${mail.id}`]!==true).length}</b></button><button onClick={()=>setFolder("星标邮件")}>星标邮件</button><button onClick={()=>setUiFlag("qqmail.attachment.manager",true)}>附件管理</button></section>
       {visibleMails.map((mail, index) => {
         const read=state.world.flags[`ui.qqmail.read.${mail.id}`]===true||!mail.unread;
         return <button data-testid={index === 0 ? "app-effective-action" : undefined} className={`mail-row ${read?"read":""}`} key={mail.id} onClick={() => openMail(mail.id)}>
-          <span className="mail-list-avatar"><GeneratedAvatar className="mail-avatar" slot={68+index} alt={`${mail.from}头像`}/><i className="mail-unread"/></span>
+          <span className="mail-list-avatar"><GeneratedAvatar className="mail-avatar" slot={68+index} identity={mail.from} alt={`${mail.from}头像`}/><i className="mail-unread"/></span>
           <div><b>{mail.from}</b><strong>{mail.subject}</strong><p>{mail.preview}</p></div>
           <time>{mail.date}</time>
         </button>;
@@ -622,7 +622,7 @@ export function BaiduNetdiskApp() {
       我的: ["存储空间 18.4 GB / 100 GB", "回收站", "设备管理", "设置"]
     };
     return <div className="app-window platform-app netdisk-app" data-testid={`baidunetdisk-${tab}`}>
-      <header className="netdisk-header"><GeneratedAvatar className="netdisk-account" slot={121} alt="沈川网盘头像"/><div><b>{tab}</b><small>百度网盘</small></div><button onClick={() => {
+      <header className="netdisk-header"><GeneratedAvatar className="netdisk-account" slot={121} identity="沈川" alt="沈川网盘头像"/><div><b>{tab}</b><small>百度网盘</small></div><button onClick={() => {
         setUiFlag("baidunetdisk.upload.open", true);
         emit("media.picker.opened", "app.files", { surface: "baidunetdisk", source: "P" });
       }}>＋</button></header>
@@ -635,7 +635,7 @@ export function BaiduNetdiskApp() {
     </div>;
   }
   return <div className="app-window platform-app netdisk-app" data-testid="baidunetdisk-home">
-    <header className="netdisk-header"><GeneratedAvatar className="netdisk-account" slot={121} alt="沈川网盘头像"/><div><b>百度网盘</b><small>安全保存每一份文件</small></div><button onClick={() => {
+    <header className="netdisk-header"><GeneratedAvatar className="netdisk-account" slot={121} identity="沈川" alt="沈川网盘头像"/><div><b>百度网盘</b><small>安全保存每一份文件</small></div><button onClick={() => {
       setUiFlag("baidunetdisk.upload.open", true);
       emit("media.picker.opened", "app.files", { surface: "baidunetdisk", source: "P" });
     }}>＋</button></header>

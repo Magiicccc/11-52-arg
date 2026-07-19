@@ -2,7 +2,7 @@ import { useState } from "react";
 import type { DeviceId } from "@/contracts/game-state";
 import { useGame } from "@/app/GameContext";
 import { activeBody, getContentItem } from "@/content/selectors";
-import { generatedAvatar } from "@/content/avatar-assets";
+import { realisticWechatAvatar } from "@/content/avatar-assets";
 
 type CallBody = {
   contact?: string;
@@ -34,7 +34,7 @@ export function LockScreen({deviceId}:{deviceId:DeviceId}) {
     {failures>0&&<p className="lock-error">密码不正确（{failures}）</p>}
     <button className="unlock-hint" data-testid="open-passcode" onClick={()=>openApp("__passcode__")}>向上轻扫以解锁</button>
     {callOpen&&<section className="call-sheet" data-testid="chenyu-lock-reply" role="dialog" aria-label="与陈屿的回拨通话">
-      <img className="call-sheet-avatar" src={generatedAvatar(0)} alt="陈屿头像"/>
+      <img className="call-sheet-avatar" src={realisticWechatAvatar("陈屿")} alt="陈屿头像"/>
       <h2>{callBody.contact??"陈屿"}</h2>
       <small>{callBody.status??"已接通"}</small>
       <p>“{callBody.transcript??"我不认识失主。你先别联网。"}”</p>
