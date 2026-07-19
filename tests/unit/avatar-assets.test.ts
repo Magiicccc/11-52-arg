@@ -1,7 +1,12 @@
 import { readFileSync } from "node:fs";
 import path from "node:path";
 import { describe, expect, it } from "vitest";
-import { GENERATED_AVATAR_COUNT, generatedAvatar } from "@/content/avatar-assets";
+import {
+  GENERATED_AVATAR_COUNT,
+  generatedAvatar,
+  identityAvatar,
+  realisticWechatAvatar,
+} from "@/content/avatar-assets";
 
 type AvatarManifest = {
   assets: Array<{
@@ -27,5 +32,33 @@ describe("generated avatar asset pack", () => {
     for (let slot = 0; slot < GENERATED_AVATAR_COUNT; slot += 1) {
       expect(generatedAvatar(slot)).toMatch(new RegExp(`media/case-001/avatars/generated-avatar-${String(slot + 1).padStart(3, "0")}\\.png$`));
     }
+  });
+
+  it("maps ordinary WeChat identities to distinct realistic local images", () => {
+    const identities = [
+      "wechat.daily.chenyu",
+      "wechat.daily.photo-group",
+      "wechat.daily.research-group",
+      "wechat.daily.family",
+      "wechat.daily.xu",
+      "wechat.daily.lin",
+      "wechat.daily.gu",
+      "wechat.daily.property",
+      "wechat.daily.book-club",
+      "wechat.daily.neighbor",
+      "wechat.daily.delivery",
+      "wechat.daily.chen",
+      "wechat.daily-gym",
+      "wechat.daily-cloud",
+      "wechat.daily-self",
+    ];
+    const paths = identities.map((identity, index) => realisticWechatAvatar(identity, index));
+    expect(new Set(paths).size).toBe(identities.length);
+    expect(paths.every((assetPath) => assetPath.includes("/avatars/realistic/"))).toBe(true);
+  });
+
+  it("uses non-face generated lifestyle photos for core device identities", () => {
+    expect(identityAvatar("player")).toContain("/daily/temporary-archive-desk.jpg");
+    expect(identityAvatar("investigation")).toContain("/daily/temporary-rainy-street.jpg");
   });
 });

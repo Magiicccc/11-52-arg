@@ -1,0 +1,320 @@
+{
+  "schemaVersion": 1,
+  "status": "production-candidate",
+  "purpose": "Fictional profile images for realistic Chinese internet UI surfaces",
+  "constraints": [
+    "Fictional identities only",
+    "No generated artifact may be interpreted as evidence",
+    "No readable address, real-world location binding, brand logo, watermark, clue, or anomaly",
+    "Core story identities use non-face lifestyle images to avoid premature identity disclosure",
+    "Every runtime identity is bound semantically rather than by list position"
+  ],
+  "assetCount": 15,
+  "assets": [
+    {
+      "id": "avatar.realistic.wechat.daily-gym",
+      "platform": "wechat",
+      "runtimeEntityKey": "wechat.daily-gym",
+      "category": "hobby-group-photo",
+      "promptSummary": "Four badminton rackets, shuttlecocks and shoes on an ordinary community court.",
+      "path": "/media/case-001/avatars/realistic/wechat-badminton-group.png",
+      "width": 256,
+      "height": 256,
+      "bytes": 99582,
+      "sha256": "d3ed2df9e6d3f52866b7720552166163be6e384e50bafcbddaca993e5fe746ed",
+      "postProcessing": {
+        "operation": "deterministic resize and PNG optimization",
+        "cropInsets": null
+      },
+      "source": "OpenAI built-in image generation",
+      "generatedAt": "2026-07-19",
+      "narrativeRole": "ordinary-ui-identity-only",
+      "isClue": false
+    },
+    {
+      "id": "avatar.realistic.wechat.daily.book-club",
+      "platform": "wechat",
+      "runtimeEntityKey": "wechat.daily.book-club",
+      "category": "hobby-object-photo",
+      "promptSummary": "Casual cafe-table snapshot of books, tea, glasses and a leafy branch.",
+      "path": "/media/case-001/avatars/realistic/wechat-book-club.png",
+      "width": 256,
+      "height": 256,
+      "bytes": 115329,
+      "sha256": "d00c565ef30f2617ad738a0712638f645de7f6490cde8789f856a961ba7af69f",
+      "postProcessing": {
+        "operation": "deterministic resize and PNG optimization",
+        "cropInsets": null
+      },
+      "source": "OpenAI built-in image generation",
+      "generatedAt": "2026-07-19",
+      "narrativeRole": "ordinary-ui-identity-only",
+      "isClue": false
+    },
+    {
+      "id": "avatar.realistic.wechat.daily.chenyu",
+      "platform": "wechat",
+      "runtimeEntityKey": "wechat.daily.chenyu",
+      "category": "personal-object-photo",
+      "promptSummary": "Folded black umbrella and dark green bicycle on a rainy residential street.",
+      "path": "/media/case-001/avatars/realistic/wechat-chenyu-umbrella.png",
+      "width": 256,
+      "height": 256,
+      "bytes": 136413,
+      "sha256": "71079833fadf8f240670c24a845609595e64675ae1f59b23687a6fa856ebd52e",
+      "postProcessing": {
+        "operation": "deterministic resize and PNG optimization",
+        "cropInsets": null
+      },
+      "source": "OpenAI built-in image generation",
+      "generatedAt": "2026-07-19",
+      "narrativeRole": "ordinary-ui-identity-only",
+      "isClue": false
+    },
+    {
+      "id": "avatar.realistic.wechat.daily-cloud",
+      "platform": "wechat",
+      "runtimeEntityKey": "wechat.daily-cloud",
+      "category": "service-illustration",
+      "promptSummary": "Full-bleed editorial illustration of a cloud reflected in a hard drive.",
+      "path": "/media/case-001/avatars/realistic/wechat-cloud-service.png",
+      "width": 256,
+      "height": 256,
+      "bytes": 96655,
+      "sha256": "51254b9a996d733ea23e7856caeb3b988be4f8bb6d8bf43b3a3ab07744d2a713",
+      "postProcessing": {
+        "operation": "deterministic resize and PNG optimization",
+        "cropInsets": null
+      },
+      "source": "OpenAI built-in image generation",
+      "generatedAt": "2026-07-19",
+      "narrativeRole": "ordinary-ui-identity-only",
+      "isClue": false
+    },
+    {
+      "id": "avatar.realistic.wechat.daily.delivery",
+      "platform": "wechat",
+      "runtimeEntityKey": "wechat.daily.delivery",
+      "category": "service-illustration",
+      "promptSummary": "Parcel inside a green smart locker; outer generated icon frame removed in post-processing.",
+      "path": "/media/case-001/avatars/realistic/wechat-delivery-service.png",
+      "width": 256,
+      "height": 256,
+      "bytes": 72190,
+      "sha256": "cf991e39f766eb2b910e6bca8ff9f9be8989b535eaf5041c92364b80a5f2a335",
+      "postProcessing": {
+        "operation": "deterministic resize and PNG optimization",
+        "cropInsets": [
+          110,
+          110,
+          110,
+          110
+        ]
+      },
+      "source": "OpenAI built-in image generation",
+      "generatedAt": "2026-07-19",
+      "narrativeRole": "ordinary-ui-identity-only",
+      "isClue": false
+    },
+    {
+      "id": "avatar.realistic.wechat.daily.lin",
+      "platform": "wechat",
+      "runtimeEntityKey": "wechat.daily.lin",
+      "category": "casual-portrait",
+      "promptSummary": "Fictional East Asian male engineer on an ordinary weekend riverside walk.",
+      "path": "/media/case-001/avatars/realistic/wechat-engineer-lin.png",
+      "width": 256,
+      "height": 256,
+      "bytes": 113126,
+      "sha256": "a9b3e0e2a7e31fe9c7ca9e7d7d462a7efaa45afa4ee0ea3a3d912870c942b07e",
+      "postProcessing": {
+        "operation": "deterministic resize and PNG optimization",
+        "cropInsets": null
+      },
+      "source": "OpenAI built-in image generation",
+      "generatedAt": "2026-07-19",
+      "narrativeRole": "ordinary-ui-identity-only",
+      "isClue": false
+    },
+    {
+      "id": "avatar.realistic.wechat.daily.family",
+      "platform": "wechat",
+      "runtimeEntityKey": "wechat.daily.family",
+      "category": "family-group-photo",
+      "promptSummary": "Fictional Chinese family at a casual home dinner, photographed by phone.",
+      "path": "/media/case-001/avatars/realistic/wechat-family-dinner.png",
+      "width": 256,
+      "height": 256,
+      "bytes": 111514,
+      "sha256": "44d20eee424d418673bd49d39600970fd6dc586dc0614084c26035e3e43da920",
+      "postProcessing": {
+        "operation": "deterministic resize and PNG optimization",
+        "cropInsets": null
+      },
+      "source": "OpenAI built-in image generation",
+      "generatedAt": "2026-07-19",
+      "narrativeRole": "ordinary-ui-identity-only",
+      "isClue": false
+    },
+    {
+      "id": "avatar.realistic.wechat.daily-self",
+      "platform": "wechat",
+      "runtimeEntityKey": "wechat.daily-self",
+      "category": "system-service-illustration",
+      "promptSummary": "Documents moving between a laptop and phone in a restrained editorial style.",
+      "path": "/media/case-001/avatars/realistic/wechat-file-transfer.png",
+      "width": 256,
+      "height": 256,
+      "bytes": 89260,
+      "sha256": "6a4a2078b18c1b16d52ec6bf6baf232c37332ba95aac17aaa438771057722305",
+      "postProcessing": {
+        "operation": "deterministic resize and PNG optimization",
+        "cropInsets": null
+      },
+      "source": "OpenAI built-in image generation",
+      "generatedAt": "2026-07-19",
+      "narrativeRole": "ordinary-ui-identity-only",
+      "isClue": false
+    },
+    {
+      "id": "avatar.realistic.wechat.daily.neighbor",
+      "platform": "wechat",
+      "runtimeEntityKey": "wechat.daily.neighbor",
+      "category": "pet-photo",
+      "promptSummary": "Orange tabby cat sleeping beside a rainy apartment window.",
+      "path": "/media/case-001/avatars/realistic/wechat-neighbor-cat.png",
+      "width": 256,
+      "height": 256,
+      "bytes": 124765,
+      "sha256": "6dfe5b6fe1848f4a8349bd21e20d0dd8baf51f2b305f5ad5f58db14ff3fd1f28",
+      "postProcessing": {
+        "operation": "deterministic resize and PNG optimization",
+        "cropInsets": null
+      },
+      "source": "OpenAI built-in image generation",
+      "generatedAt": "2026-07-19",
+      "narrativeRole": "ordinary-ui-identity-only",
+      "isClue": false
+    },
+    {
+      "id": "avatar.realistic.wechat.daily.chen",
+      "platform": "wechat",
+      "runtimeEntityKey": "wechat.daily.chen",
+      "category": "personal-object-photo",
+      "promptSummary": "Well-used film camera and canisters on a neighborhood shop counter.",
+      "path": "/media/case-001/avatars/realistic/wechat-photo-shop-camera.png",
+      "width": 256,
+      "height": 256,
+      "bytes": 120469,
+      "sha256": "b722dcad35e611a2ca3fe93a6d1322e96a2b394d14e2eae5802a6911dcced86a",
+      "postProcessing": {
+        "operation": "deterministic resize and PNG optimization",
+        "cropInsets": null
+      },
+      "source": "OpenAI built-in image generation",
+      "generatedAt": "2026-07-19",
+      "narrativeRole": "ordinary-ui-identity-only",
+      "isClue": false
+    },
+    {
+      "id": "avatar.realistic.wechat.daily.gu",
+      "platform": "wechat",
+      "runtimeEntityKey": "wechat.daily.gu",
+      "category": "candid-hobby-photo",
+      "promptSummary": "Fictional amateur photographer under a transparent umbrella, face turned away.",
+      "path": "/media/case-001/avatars/realistic/wechat-photographer-gu.png",
+      "width": 256,
+      "height": 256,
+      "bytes": 98200,
+      "sha256": "1fd9a4d0e0f65fc4535096cf982c1352e0ab3f6cacd0631e19ac7c24e96ab394",
+      "postProcessing": {
+        "operation": "deterministic resize and PNG optimization",
+        "cropInsets": null
+      },
+      "source": "OpenAI built-in image generation",
+      "generatedAt": "2026-07-19",
+      "narrativeRole": "ordinary-ui-identity-only",
+      "isClue": false
+    },
+    {
+      "id": "avatar.realistic.wechat.daily.property",
+      "platform": "wechat",
+      "runtimeEntityKey": "wechat.daily.property",
+      "category": "service-location-photo",
+      "promptSummary": "Deidentified modern apartment entrance after rain.",
+      "path": "/media/case-001/avatars/realistic/wechat-property-building.png",
+      "width": 256,
+      "height": 256,
+      "bytes": 127613,
+      "sha256": "fd999b1f29827227f39bd963326cf3217e785b24fb369d1a57e3ae33554ae60c",
+      "postProcessing": {
+        "operation": "deterministic resize and PNG optimization",
+        "cropInsets": null
+      },
+      "source": "OpenAI built-in image generation",
+      "generatedAt": "2026-07-19",
+      "narrativeRole": "ordinary-ui-identity-only",
+      "isClue": false
+    },
+    {
+      "id": "avatar.realistic.wechat.daily.xu",
+      "platform": "wechat",
+      "runtimeEntityKey": "wechat.daily.xu",
+      "category": "casual-selfie",
+      "promptSummary": "Fictional young East Asian office receptionist in a natural window-light selfie.",
+      "path": "/media/case-001/avatars/realistic/wechat-reception-xu.png",
+      "width": 256,
+      "height": 256,
+      "bytes": 97909,
+      "sha256": "ff385c200f8ce9c64fa94d697fe0c2f6b92c0fc8754ec21962a7a9c611667cab",
+      "postProcessing": {
+        "operation": "deterministic resize and PNG optimization",
+        "cropInsets": null
+      },
+      "source": "OpenAI built-in image generation",
+      "generatedAt": "2026-07-19",
+      "narrativeRole": "ordinary-ui-identity-only",
+      "isClue": false
+    },
+    {
+      "id": "avatar.realistic.wechat.daily.research-group",
+      "platform": "wechat",
+      "runtimeEntityKey": "wechat.daily.research-group",
+      "category": "work-group-photo",
+      "promptSummary": "Top-down meeting-table snapshot with notebooks, cups, recorder and hands; no faces.",
+      "path": "/media/case-001/avatars/realistic/wechat-research-team.png",
+      "width": 256,
+      "height": 256,
+      "bytes": 98446,
+      "sha256": "fcaf5feac62cb2df5490640f86d4b76177307631baa6551893ce0a4bcaab5af5",
+      "postProcessing": {
+        "operation": "deterministic resize and PNG optimization",
+        "cropInsets": null
+      },
+      "source": "OpenAI built-in image generation",
+      "generatedAt": "2026-07-19",
+      "narrativeRole": "ordinary-ui-identity-only",
+      "isClue": false
+    },
+    {
+      "id": "avatar.realistic.wechat.daily.photo-group",
+      "platform": "wechat",
+      "runtimeEntityKey": "wechat.daily.photo-group",
+      "category": "hobby-group-photo",
+      "promptSummary": "Four fictional East Asian adult photographers in an ordinary rainy-day group snapshot.",
+      "path": "/media/case-001/avatars/realistic/wechat-weekend-photo-group.png",
+      "width": 256,
+      "height": 256,
+      "bytes": 115256,
+      "sha256": "1f4cd28d9497ea124942255b26f99ba3a25d47c0a9a025b191499e41a317abdc",
+      "postProcessing": {
+        "operation": "deterministic resize and PNG optimization",
+        "cropInsets": null
+      },
+      "source": "OpenAI built-in image generation",
+      "generatedAt": "2026-07-19",
+      "narrativeRole": "ordinary-ui-identity-only",
+      "isClue": false
+    }
+  ]
+}

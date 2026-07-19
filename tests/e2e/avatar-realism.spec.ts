@@ -27,6 +27,7 @@ test("communication and social apps use loaded custom avatar images", async ({ p
   await expectLoadedImages(page, ".list-row img.avatar", 15);
   const sources = await page.locator(".list-row img.avatar").evaluateAll((nodes) => nodes.map((node) => (node as HTMLImageElement).src));
   expect(new Set(sources).size).toBe(sources.length);
+  expect(sources.every((source) => !source.includes("generated-avatar-"))).toBe(true);
 
   await page.locator(".list-row").first().click();
   await expect(page.locator(".wechat-chat-with-avatars")).toBeVisible();
@@ -34,8 +35,9 @@ test("communication and social apps use loaded custom avatar images", async ({ p
     peer: getComputedStyle(node).getPropertyValue("--wechat-peer-avatar"),
     self: getComputedStyle(node).getPropertyValue("--wechat-self-avatar")
   }));
-  expect(avatarVariables.peer).toContain("generated-avatar-");
-  expect(avatarVariables.self).toContain("generated-avatar-121.png");
+  expect(avatarVariables.peer).not.toContain("generated-avatar-");
+  expect(avatarVariables.self).not.toContain("generated-avatar-");
+  expect(avatarVariables.self).toContain("/daily/");
   await page.getByTestId("wechat-conversations").click();
   await page.getByTestId("app-back").click();
 

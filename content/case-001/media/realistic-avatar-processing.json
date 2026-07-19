@@ -1,0 +1,181 @@
+{
+  "schemaVersion": 1,
+  "operation": "deterministic resize and PNG optimization",
+  "targetSize": {
+    "width": 256,
+    "height": 256
+  },
+  "assetCount": 15,
+  "assets": [
+    {
+      "filename": "wechat-badminton-group.png",
+      "runtimePath": "/media/case-001/avatars/realistic/wechat-badminton-group.png",
+      "sourceWidth": 256,
+      "sourceHeight": 256,
+      "runtimeWidth": 256,
+      "runtimeHeight": 256,
+      "cropInsets": null,
+      "bytes": 99582,
+      "sha256": "d3ed2df9e6d3f52866b7720552166163be6e384e50bafcbddaca993e5fe746ed"
+    },
+    {
+      "filename": "wechat-book-club.png",
+      "runtimePath": "/media/case-001/avatars/realistic/wechat-book-club.png",
+      "sourceWidth": 256,
+      "sourceHeight": 256,
+      "runtimeWidth": 256,
+      "runtimeHeight": 256,
+      "cropInsets": null,
+      "bytes": 115329,
+      "sha256": "d00c565ef30f2617ad738a0712638f645de7f6490cde8789f856a961ba7af69f"
+    },
+    {
+      "filename": "wechat-chenyu-umbrella.png",
+      "runtimePath": "/media/case-001/avatars/realistic/wechat-chenyu-umbrella.png",
+      "sourceWidth": 256,
+      "sourceHeight": 256,
+      "runtimeWidth": 256,
+      "runtimeHeight": 256,
+      "cropInsets": null,
+      "bytes": 136413,
+      "sha256": "71079833fadf8f240670c24a845609595e64675ae1f59b23687a6fa856ebd52e"
+    },
+    {
+      "filename": "wechat-cloud-service.png",
+      "runtimePath": "/media/case-001/avatars/realistic/wechat-cloud-service.png",
+      "sourceWidth": 256,
+      "sourceHeight": 256,
+      "runtimeWidth": 256,
+      "runtimeHeight": 256,
+      "cropInsets": null,
+      "bytes": 96655,
+      "sha256": "51254b9a996d733ea23e7856caeb3b988be4f8bb6d8bf43b3a3ab07744d2a713"
+    },
+    {
+      "filename": "wechat-delivery-service.png",
+      "runtimePath": "/media/case-001/avatars/realistic/wechat-delivery-service.png",
+      "sourceWidth": 1254,
+      "sourceHeight": 1254,
+      "runtimeWidth": 256,
+      "runtimeHeight": 256,
+      "cropInsets": [
+        110,
+        110,
+        110,
+        110
+      ],
+      "bytes": 72190,
+      "sha256": "cf991e39f766eb2b910e6bca8ff9f9be8989b535eaf5041c92364b80a5f2a335"
+    },
+    {
+      "filename": "wechat-engineer-lin.png",
+      "runtimePath": "/media/case-001/avatars/realistic/wechat-engineer-lin.png",
+      "sourceWidth": 256,
+      "sourceHeight": 256,
+      "runtimeWidth": 256,
+      "runtimeHeight": 256,
+      "cropInsets": null,
+      "bytes": 113126,
+      "sha256": "a9b3e0e2a7e31fe9c7ca9e7d7d462a7efaa45afa4ee0ea3a3d912870c942b07e"
+    },
+    {
+      "filename": "wechat-family-dinner.png",
+      "runtimePath": "/media/case-001/avatars/realistic/wechat-family-dinner.png",
+      "sourceWidth": 256,
+      "sourceHeight": 256,
+      "runtimeWidth": 256,
+      "runtimeHeight": 256,
+      "cropInsets": null,
+      "bytes": 111514,
+      "sha256": "44d20eee424d418673bd49d39600970fd6dc586dc0614084c26035e3e43da920"
+    },
+    {
+      "filename": "wechat-file-transfer.png",
+      "runtimePath": "/media/case-001/avatars/realistic/wechat-file-transfer.png",
+      "sourceWidth": 256,
+      "sourceHeight": 256,
+      "runtimeWidth": 256,
+      "runtimeHeight": 256,
+      "cropInsets": null,
+      "bytes": 89260,
+      "sha256": "6a4a2078b18c1b16d52ec6bf6baf232c37332ba95aac17aaa438771057722305"
+    },
+    {
+      "filename": "wechat-neighbor-cat.png",
+      "runtimePath": "/media/case-001/avatars/realistic/wechat-neighbor-cat.png",
+      "sourceWidth": 256,
+      "sourceHeight": 256,
+      "runtimeWidth": 256,
+      "runtimeHeight": 256,
+      "cropInsets": null,
+      "bytes": 124765,
+      "sha256": "6dfe5b6fe1848f4a8349bd21e20d0dd8baf51f2b305f5ad5f58db14ff3fd1f28"
+    },
+    {
+      "filename": "wechat-photo-shop-camera.png",
+      "runtimePath": "/media/case-001/avatars/realistic/wechat-photo-shop-camera.png",
+      "sourceWidth": 256,
+      "sourceHeight": 256,
+      "runtimeWidth": 256,
+      "runtimeHeight": 256,
+      "cropInsets": null,
+      "bytes": 120469,
+      "sha256": "b722dcad35e611a2ca3fe93a6d1322e96a2b394d14e2eae5802a6911dcced86a"
+    },
+    {
+      "filename": "wechat-photographer-gu.png",
+      "runtimePath": "/media/case-001/avatars/realistic/wechat-photographer-gu.png",
+      "sourceWidth": 256,
+      "sourceHeight": 256,
+      "runtimeWidth": 256,
+      "runtimeHeight": 256,
+      "cropInsets": null,
+      "bytes": 98200,
+      "sha256": "1fd9a4d0e0f65fc4535096cf982c1352e0ab3f6cacd0631e19ac7c24e96ab394"
+    },
+    {
+      "filename": "wechat-property-building.png",
+      "runtimePath": "/media/case-001/avatars/realistic/wechat-property-building.png",
+      "sourceWidth": 256,
+      "sourceHeight": 256,
+      "runtimeWidth": 256,
+      "runtimeHeight": 256,
+      "cropInsets": null,
+      "bytes": 127613,
+      "sha256": "fd999b1f29827227f39bd963326cf3217e785b24fb369d1a57e3ae33554ae60c"
+    },
+    {
+      "filename": "wechat-reception-xu.png",
+      "runtimePath": "/media/case-001/avatars/realistic/wechat-reception-xu.png",
+      "sourceWidth": 256,
+      "sourceHeight": 256,
+      "runtimeWidth": 256,
+      "runtimeHeight": 256,
+      "cropInsets": null,
+      "bytes": 97909,
+      "sha256": "ff385c200f8ce9c64fa94d697fe0c2f6b92c0fc8754ec21962a7a9c611667cab"
+    },
+    {
+      "filename": "wechat-research-team.png",
+      "runtimePath": "/media/case-001/avatars/realistic/wechat-research-team.png",
+      "sourceWidth": 256,
+      "sourceHeight": 256,
+      "runtimeWidth": 256,
+      "runtimeHeight": 256,
+      "cropInsets": null,
+      "bytes": 98446,
+      "sha256": "fcaf5feac62cb2df5490640f86d4b76177307631baa6551893ce0a4bcaab5af5"
+    },
+    {
+      "filename": "wechat-weekend-photo-group.png",
+      "runtimePath": "/media/case-001/avatars/realistic/wechat-weekend-photo-group.png",
+      "sourceWidth": 256,
+      "sourceHeight": 256,
+      "runtimeWidth": 256,
+      "runtimeHeight": 256,
+      "cropInsets": null,
+      "bytes": 115256,
+      "sha256": "1f4cd28d9497ea124942255b26f99ba3a25d47c0a9a025b191499e41a317abdc"
+    }
+  ]
+}
