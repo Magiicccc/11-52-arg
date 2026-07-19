@@ -5,8 +5,85 @@
     "width": 256,
     "height": 256
   },
-  "assetCount": 27,
+  "assetCount": 46,
   "assets": [
+    {
+      "filename": "social-nanan-no-wind-selfie.png",
+      "runtimePath": "/media/case-001/avatars/realistic/social-nanan-no-wind-selfie.png",
+      "sourceWidth": 256,
+      "sourceHeight": 256,
+      "runtimeWidth": 256,
+      "runtimeHeight": 256,
+      "cropInsets": null,
+      "bytes": 96264,
+      "sha256": "8d2d5cf8c98b710f7ff4a854d2420543a4d7029411e3a79198d9286adaf37048"
+    },
+    {
+      "filename": "social-old-rain-17-window.png",
+      "runtimePath": "/media/case-001/avatars/realistic/social-old-rain-17-window.png",
+      "sourceWidth": 256,
+      "sourceHeight": 256,
+      "runtimeWidth": 256,
+      "runtimeHeight": 256,
+      "cropInsets": null,
+      "bytes": 105040,
+      "sha256": "dcb581dffce7d2f0cbb0661c2c3d38431ed2491dbef5659ff1edae796bb6df15"
+    },
+    {
+      "filename": "social-ordinary-user-selfie.png",
+      "runtimePath": "/media/case-001/avatars/realistic/social-ordinary-user-selfie.png",
+      "sourceWidth": 256,
+      "sourceHeight": 256,
+      "runtimeWidth": 256,
+      "runtimeHeight": 256,
+      "cropInsets": null,
+      "bytes": 115550,
+      "sha256": "24ee42757d48eac99d6fa3962d04e2c290bfcc1e4c7c9606fb2e81efbfed64db"
+    },
+    {
+      "filename": "social-river-greenway-bike.png",
+      "runtimePath": "/media/case-001/avatars/realistic/social-river-greenway-bike.png",
+      "sourceWidth": 256,
+      "sourceHeight": 256,
+      "runtimeWidth": 256,
+      "runtimeHeight": 256,
+      "cropInsets": null,
+      "bytes": 110535,
+      "sha256": "21424272e1c331b5accf513c34664d377c0f9786c9a89bb18511fb7f9555c01a"
+    },
+    {
+      "filename": "social-sleepy-orange-cat.png",
+      "runtimePath": "/media/case-001/avatars/realistic/social-sleepy-orange-cat.png",
+      "sourceWidth": 256,
+      "sourceHeight": 256,
+      "runtimeWidth": 256,
+      "runtimeHeight": 256,
+      "cropInsets": null,
+      "bytes": 100935,
+      "sha256": "0fcab16ec4c344b31708f9ce438f2788a35124d178078019382ef2feeaedefdb"
+    },
+    {
+      "filename": "social-slow-organizing-duck.png",
+      "runtimePath": "/media/case-001/avatars/realistic/social-slow-organizing-duck.png",
+      "sourceWidth": 256,
+      "sourceHeight": 256,
+      "runtimeWidth": 256,
+      "runtimeHeight": 256,
+      "cropInsets": null,
+      "bytes": 114085,
+      "sha256": "131012ed9cf9e96a0fd439679f4349074f3a7062b06c16c78705ef710e1362bb"
+    },
+    {
+      "filename": "social-today-rain-umbrella.png",
+      "runtimePath": "/media/case-001/avatars/realistic/social-today-rain-umbrella.png",
+      "sourceWidth": 1254,
+      "sourceHeight": 1254,
+      "runtimeWidth": 256,
+      "runtimeHeight": 256,
+      "cropInsets": null,
+      "bytes": 101946,
+      "sha256": "2dd26a0c07b3f31921a4aa36ad0a425c27c103e76139a674fddc08cedb373698"
+    },
     {
       "filename": "wechat-badminton-group.png",
       "runtimePath": "/media/case-001/avatars/realistic/wechat-badminton-group.png",
@@ -191,8 +268,8 @@
     {
       "filename": "xhs-after-chapter-three.png",
       "runtimePath": "/media/case-001/avatars/realistic/xhs-after-chapter-three.png",
-      "sourceWidth": 1254,
-      "sourceHeight": 1254,
+      "sourceWidth": 256,
+      "sourceHeight": 256,
       "runtimeWidth": 256,
       "runtimeHeight": 256,
       "cropInsets": null,
@@ -202,8 +279,8 @@
     {
       "filename": "xhs-eight-forty-two-cat.png",
       "runtimePath": "/media/case-001/avatars/realistic/xhs-eight-forty-two-cat.png",
-      "sourceWidth": 1254,
-      "sourceHeight": 1254,
+      "sourceWidth": 256,
+      "sourceHeight": 256,
       "runtimeWidth": 256,
       "runtimeHeight": 256,
       "cropInsets": null,
@@ -213,8 +290,8 @@
     {
       "filename": "xhs-food-noodles.png",
       "runtimePath": "/media/case-001/avatars/realistic/xhs-food-noodles.png",
-      "sourceWidth": 1254,
-      "sourceHeight": 1254,
+      "sourceWidth": 256,
+      "sourceHeight": 256,
       "runtimeWidth": 256,
       "runtimeHeight": 256,
       "cropInsets": null,
@@ -222,10 +299,21 @@
       "sha256": "35033f5b4a52d4f347a24c0e62284dcdc1ddecf8e567cdbd8c6f295b99578238"
     },
     {
-      "filename": "xhs-hard-drive-light.png",
-      "runtimePath": "/media/case-001/avatars/realistic/xhs-hard-drive-light.png",
+      "filename": "xhs-fridge-note.png",
+      "runtimePath": "/media/case-001/avatars/realistic/xhs-fridge-note.png",
       "sourceWidth": 1254,
       "sourceHeight": 1254,
+      "runtimeWidth": 256,
+      "runtimeHeight": 256,
+      "cropInsets": null,
+      "bytes": 78345,
+      "sha256": "cdd8d5822d0c96d5c41d84167f9e3e3395403017f95cb2a18915402c8c702da0"
+    },
+    {
+      "filename": "xhs-hard-drive-light.png",
+      "runtimePath": "/media/case-001/avatars/realistic/xhs-hard-drive-light.png",
+      "sourceWidth": 256,
+      "sourceHeight": 256,
       "runtimeWidth": 256,
       "runtimeHeight": 256,
       "cropInsets": null,
@@ -233,10 +321,21 @@
       "sha256": "53654fa751e0fe197d612e1c4ac88f3f3f175a31d1a76ac1559494f55b035a2f"
     },
     {
-      "filename": "xhs-lunch-ten-min.png",
-      "runtimePath": "/media/case-001/avatars/realistic/xhs-lunch-ten-min.png",
+      "filename": "xhs-lens-cloth-missing.png",
+      "runtimePath": "/media/case-001/avatars/realistic/xhs-lens-cloth-missing.png",
       "sourceWidth": 1254,
       "sourceHeight": 1254,
+      "runtimeWidth": 256,
+      "runtimeHeight": 256,
+      "cropInsets": null,
+      "bytes": 102859,
+      "sha256": "8d6aa1ee3a1167faf99692405ad4e2d2887fbb3806787d819ac179bfd3dfa7e8"
+    },
+    {
+      "filename": "xhs-lunch-ten-min.png",
+      "runtimePath": "/media/case-001/avatars/realistic/xhs-lunch-ten-min.png",
+      "sourceWidth": 256,
+      "sourceHeight": 256,
       "runtimeWidth": 256,
       "runtimeHeight": 256,
       "cropInsets": null,
@@ -244,10 +343,21 @@
       "sha256": "0316f9c87f8ef84b001b0a48735bd081ed4c7badde25f3879b2f4dcef55d07b3"
     },
     {
-      "filename": "xhs-nanan-rain-walk.png",
-      "runtimePath": "/media/case-001/avatars/realistic/xhs-nanan-rain-walk.png",
+      "filename": "xhs-many-photos-calm.png",
+      "runtimePath": "/media/case-001/avatars/realistic/xhs-many-photos-calm.png",
       "sourceWidth": 1254,
       "sourceHeight": 1254,
+      "runtimeWidth": 256,
+      "runtimeHeight": 256,
+      "cropInsets": null,
+      "bytes": 119628,
+      "sha256": "c9f75eaf25eecada2bacfd04193851b2c1aa625f3db8c0338f792b64338f2aca"
+    },
+    {
+      "filename": "xhs-nanan-rain-walk.png",
+      "runtimePath": "/media/case-001/avatars/realistic/xhs-nanan-rain-walk.png",
+      "sourceWidth": 256,
+      "sourceHeight": 256,
       "runtimeWidth": 256,
       "runtimeHeight": 256,
       "cropInsets": null,
@@ -255,10 +365,54 @@
       "sha256": "232d2608b1d7b6a1d68770cb2e710badd79df78bb0cd203c25b16a4685df826d"
     },
     {
-      "filename": "xhs-orange-folder.png",
-      "runtimePath": "/media/case-001/avatars/realistic/xhs-orange-folder.png",
+      "filename": "xhs-not-late-today.png",
+      "runtimePath": "/media/case-001/avatars/realistic/xhs-not-late-today.png",
       "sourceWidth": 1254,
       "sourceHeight": 1254,
+      "runtimeWidth": 256,
+      "runtimeHeight": 256,
+      "cropInsets": null,
+      "bytes": 96614,
+      "sha256": "a7c5c2cfd4fde909530a1b59ef15bfbb2e8e995e698e1b3f313e3d98d8a6fddf"
+    },
+    {
+      "filename": "xhs-office-building-observer.png",
+      "runtimePath": "/media/case-001/avatars/realistic/xhs-office-building-observer.png",
+      "sourceWidth": 1254,
+      "sourceHeight": 1254,
+      "runtimeWidth": 256,
+      "runtimeHeight": 256,
+      "cropInsets": null,
+      "bytes": 98207,
+      "sha256": "191f92d8080b7328180ca0eef8c399dc7badb489f0cb8dfc5d1ce697b16365bc"
+    },
+    {
+      "filename": "xhs-one-earbud.png",
+      "runtimePath": "/media/case-001/avatars/realistic/xhs-one-earbud.png",
+      "sourceWidth": 1254,
+      "sourceHeight": 1254,
+      "runtimeWidth": 256,
+      "runtimeHeight": 256,
+      "cropInsets": null,
+      "bytes": 94908,
+      "sha256": "a09d5ab91d12833f94de24b46755065aa9214c5972a3970f0d43f48d59687858"
+    },
+    {
+      "filename": "xhs-one-stop-underexposed.png",
+      "runtimePath": "/media/case-001/avatars/realistic/xhs-one-stop-underexposed.png",
+      "sourceWidth": 1254,
+      "sourceHeight": 1254,
+      "runtimeWidth": 256,
+      "runtimeHeight": 256,
+      "cropInsets": null,
+      "bytes": 84021,
+      "sha256": "600a1ecfe1bab923bdfc4ef23a32b6a4822012640ec5b164cf5d8deff0281c08"
+    },
+    {
+      "filename": "xhs-orange-folder.png",
+      "runtimePath": "/media/case-001/avatars/realistic/xhs-orange-folder.png",
+      "sourceWidth": 256,
+      "sourceHeight": 256,
       "runtimeWidth": 256,
       "runtimeHeight": 256,
       "cropInsets": null,
@@ -266,10 +420,21 @@
       "sha256": "ce339b15e1b67d0c2794f7720fa9b323ad93baeb5ac035033fcd412b471edae8"
     },
     {
-      "filename": "xhs-riverside-bike.png",
-      "runtimePath": "/media/case-001/avatars/realistic/xhs-riverside-bike.png",
+      "filename": "xhs-research-outline.png",
+      "runtimePath": "/media/case-001/avatars/realistic/xhs-research-outline.png",
       "sourceWidth": 1254,
       "sourceHeight": 1254,
+      "runtimeWidth": 256,
+      "runtimeHeight": 256,
+      "cropInsets": null,
+      "bytes": 97176,
+      "sha256": "417315b862b92f4aa7b013117dadfaaf9f837a0eb5e396065966bf56a65437a7"
+    },
+    {
+      "filename": "xhs-riverside-bike.png",
+      "runtimePath": "/media/case-001/avatars/realistic/xhs-riverside-bike.png",
+      "sourceWidth": 256,
+      "sourceHeight": 256,
       "runtimeWidth": 256,
       "runtimeHeight": 256,
       "cropInsets": null,
@@ -277,10 +442,43 @@
       "sha256": "e5f93c2aa22389fc2e1a3cbb963fca608055f6e1a14b814d1608ac293325e022"
     },
     {
-      "filename": "xhs-white-shoelace.png",
-      "runtimePath": "/media/case-001/avatars/realistic/xhs-white-shoelace.png",
+      "filename": "xhs-shoe-cabinet.png",
+      "runtimePath": "/media/case-001/avatars/realistic/xhs-shoe-cabinet.png",
       "sourceWidth": 1254,
       "sourceHeight": 1254,
+      "runtimeWidth": 256,
+      "runtimeHeight": 256,
+      "cropInsets": null,
+      "bytes": 101623,
+      "sha256": "f24f8d7f1994a8ce88744e620947f7822d35f97370286c5a5e76c6dbd3ea2151"
+    },
+    {
+      "filename": "xhs-small-stove.png",
+      "runtimePath": "/media/case-001/avatars/realistic/xhs-small-stove.png",
+      "sourceWidth": 1254,
+      "sourceHeight": 1254,
+      "runtimeWidth": 256,
+      "runtimeHeight": 256,
+      "cropInsets": null,
+      "bytes": 104838,
+      "sha256": "d86728699454c2924a3e3db17216104537ed1a2f6a2dd5fee373eeaa795458e2"
+    },
+    {
+      "filename": "xhs-version-from-one.png",
+      "runtimePath": "/media/case-001/avatars/realistic/xhs-version-from-one.png",
+      "sourceWidth": 1254,
+      "sourceHeight": 1254,
+      "runtimeWidth": 256,
+      "runtimeHeight": 256,
+      "cropInsets": null,
+      "bytes": 95527,
+      "sha256": "67bfa3814205810a9447e012c3038b1ddea2a4b35337959c6f8e48e9ece5238b"
+    },
+    {
+      "filename": "xhs-white-shoelace.png",
+      "runtimePath": "/media/case-001/avatars/realistic/xhs-white-shoelace.png",
+      "sourceWidth": 256,
+      "sourceHeight": 256,
       "runtimeWidth": 256,
       "runtimeHeight": 256,
       "cropInsets": null,
@@ -290,8 +488,8 @@
     {
       "filename": "xhs-window-outlet.png",
       "runtimePath": "/media/case-001/avatars/realistic/xhs-window-outlet.png",
-      "sourceWidth": 1254,
-      "sourceHeight": 1254,
+      "sourceWidth": 256,
+      "sourceHeight": 256,
       "runtimeWidth": 256,
       "runtimeHeight": 256,
       "cropInsets": null,
@@ -299,10 +497,21 @@
       "sha256": "d6a152f82f9848ba8bf405cf10bbca8eeb6d717f2f9acfbcf0f3061358683ba3"
     },
     {
-      "filename": "xhs-wood-desk.png",
-      "runtimePath": "/media/case-001/avatars/realistic/xhs-wood-desk.png",
+      "filename": "xhs-window-pot-three.png",
+      "runtimePath": "/media/case-001/avatars/realistic/xhs-window-pot-three.png",
       "sourceWidth": 1254,
       "sourceHeight": 1254,
+      "runtimeWidth": 256,
+      "runtimeHeight": 256,
+      "cropInsets": null,
+      "bytes": 108524,
+      "sha256": "cbd31ef34b330905fb5e6830dbd231b786620f34d23f24785f742e4a0530f48b"
+    },
+    {
+      "filename": "xhs-wood-desk.png",
+      "runtimePath": "/media/case-001/avatars/realistic/xhs-wood-desk.png",
+      "sourceWidth": 256,
+      "sourceHeight": 256,
       "runtimeWidth": 256,
       "runtimeHeight": 256,
       "cropInsets": null,

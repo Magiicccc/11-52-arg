@@ -9,6 +9,48 @@ PROCESSING_PATH = ROOT / "content" / "case-001" / "media" / "realistic-avatar-pr
 MANIFEST_PATH = ROOT / "content" / "case-001" / "media" / "realistic-avatar-manifest.json"
 
 METADATA = {
+    "social-nanan-no-wind-selfie.png": {
+        "platform": "cross-platform",
+        "runtimeEntityKey": "social.author.nanan-no-wind",
+        "category": "casual-selfie",
+        "promptSummary": "Fictional Chinese woman in an ordinary apartment-window smartphone selfie.",
+    },
+    "social-ordinary-user-selfie.png": {
+        "platform": "cross-platform",
+        "runtimeEntityKey": "social.author.ordinary-user",
+        "category": "casual-street-selfie",
+        "promptSummary": "Fictional Chinese man in glasses and a navy windbreaker on an ordinary residential street.",
+    },
+    "social-old-rain-17-window.png": {
+        "platform": "cross-platform",
+        "runtimeEntityKey": "social.author.old-rain-17",
+        "category": "commute-object-photo",
+        "promptSummary": "Rainy city-bus window and folded ticket photographed during an ordinary evening commute.",
+    },
+    "social-river-greenway-bike.png": {
+        "platform": "cross-platform",
+        "runtimeEntityKey": "social.author.river-slow-walk",
+        "category": "city-landscape-photo",
+        "promptSummary": "Deidentified riverside greenway and bicycle in a casual overcast phone snapshot.",
+    },
+    "social-sleepy-orange-cat.png": {
+        "platform": "cross-platform",
+        "runtimeEntityKey": "social.author.ordinary-passerby",
+        "category": "pet-photo",
+        "promptSummary": "Sleepy orange-and-white cat on a rumpled blue-gray bed in an ordinary apartment.",
+    },
+    "social-slow-organizing-duck.png": {
+        "platform": "cross-platform",
+        "runtimeEntityKey": "social.author.slow-organizing",
+        "category": "personal-doodle",
+        "promptSummary": "Imperfect colored-pencil doodle of a sleepy yellow duck wearing a muted green scarf.",
+    },
+    "social-today-rain-umbrella.png": {
+        "platform": "cross-platform",
+        "runtimeEntityKey": "social.author.today-rain",
+        "category": "personal-object-photo",
+        "promptSummary": "Transparent umbrella drying beside wet shoe prints and a blue doormat.",
+    },
     "wechat-badminton-group.png": {
         "runtimeEntityKey": "wechat.daily-gym",
         "category": "hobby-group-photo",
@@ -119,11 +161,53 @@ METADATA = {
         "category": "food-photo",
         "promptSummary": "Ordinary weekday cafeteria tray with rice, vegetables, tomato and egg, and soup.",
     },
+    "xhs-fridge-note.png": {
+        "platform": "xiaohongshu",
+        "runtimeEntityKey": "xhs.author.fridge-note",
+        "category": "home-object-photo",
+        "promptSummary": "Apartment refrigerator with mismatched magnets, an unreadable grocery note, and dried flowers.",
+    },
+    "xhs-lens-cloth-missing.png": {
+        "platform": "xiaohongshu",
+        "runtimeEntityKey": "xhs.author.lens-cloth-missing",
+        "category": "photography-object-photo",
+        "promptSummary": "Used mirrorless camera and blue microfiber cloth half hidden on a cluttered home desk.",
+    },
+    "xhs-many-photos-calm.png": {
+        "platform": "xiaohongshu",
+        "runtimeEntityKey": "xhs.author.many-photos-calm",
+        "category": "archive-object-photo",
+        "promptSummary": "Printed landscape photos and negative sleeves being sorted into a plain archival box.",
+    },
     "xhs-nanan-rain-walk.png": {
         "platform": "xiaohongshu",
         "runtimeEntityKey": "xhs.author.south-bank-slow-walk",
         "category": "candid-travel-photo",
         "promptSummary": "Fictional adult seen from behind walking with an umbrella beside a wet urban river path.",
+    },
+    "xhs-not-late-today.png": {
+        "platform": "xiaohongshu",
+        "runtimeEntityKey": "xhs.author.not-late-today",
+        "category": "commute-photo",
+        "promptSummary": "Downward rainy-morning snapshot of sneakers crossing a wet pedestrian crossing with a navy umbrella.",
+    },
+    "xhs-office-building-observer.png": {
+        "platform": "xiaohongshu",
+        "runtimeEntityKey": "xhs.author.office-building-observer",
+        "category": "office-location-photo",
+        "promptSummary": "Layered rainy-window reflections and a paper cup in an anonymous office lobby.",
+    },
+    "xhs-one-earbud.png": {
+        "platform": "xiaohongshu",
+        "runtimeEntityKey": "xhs.author.one-earbud",
+        "category": "commute-object-photo",
+        "promptSummary": "Single wired earbud on a dark green canvas jacket during a rainy bus commute.",
+    },
+    "xhs-one-stop-underexposed.png": {
+        "platform": "xiaohongshu",
+        "runtimeEntityKey": "xhs.author.one-stop-underexposed",
+        "category": "night-photography-photo",
+        "promptSummary": "Underexposed wet side street and a compact camera held at the lower edge of frame.",
     },
     "xhs-orange-folder.png": {
         "platform": "cross-platform",
@@ -137,6 +221,30 @@ METADATA = {
         "category": "city-landscape-photo",
         "promptSummary": "Green bicycle beside a public riverside path after rain.",
     },
+    "xhs-research-outline.png": {
+        "platform": "xiaohongshu",
+        "runtimeEntityKey": "xhs.author.research-outline",
+        "category": "work-object-photo",
+        "promptSummary": "Well-used spiral notebook with colored tabs, black pen, paperclip, and tea on an office table.",
+    },
+    "xhs-shoe-cabinet.png": {
+        "platform": "xiaohongshu",
+        "runtimeEntityKey": "xhs.author.shoe-cabinet-observer",
+        "category": "home-object-photo",
+        "promptSummary": "Worn white canvas sneakers drying beside a folded umbrella in a small shoe cabinet.",
+    },
+    "xhs-small-stove.png": {
+        "platform": "xiaohongshu",
+        "runtimeEntityKey": "xhs.author.small-stove",
+        "category": "home-cooking-photo",
+        "promptSummary": "Small apartment stove with an enamel saucepan and washed greens under ordinary kitchen light.",
+    },
+    "xhs-version-from-one.png": {
+        "platform": "xiaohongshu",
+        "runtimeEntityKey": "xhs.author.version-from-one",
+        "category": "work-object-photo",
+        "promptSummary": "Blue, orange, and gray document folders beside an external SSD and blank label roll.",
+    },
     "xhs-white-shoelace.png": {
         "platform": "xiaohongshu",
         "runtimeEntityKey": "xhs.author.white-shoelace",
@@ -148,6 +256,12 @@ METADATA = {
         "runtimeEntityKey": "xhs.author.by-the-outlet",
         "category": "travel-object-photo",
         "promptSummary": "Canvas tote and paperback beside a high-speed train window and power outlet.",
+    },
+    "xhs-window-pot-three.png": {
+        "platform": "xiaohongshu",
+        "runtimeEntityKey": "xhs.author.window-pot-three",
+        "category": "plant-photo",
+        "promptSummary": "Slightly lopsided pothos with a fresh pale-green leaf on a rainy apartment windowsill.",
     },
     "xhs-wood-desk.png": {
         "platform": "xiaohongshu",

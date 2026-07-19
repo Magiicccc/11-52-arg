@@ -9,8 +9,148 @@
     "Core story identities use non-face lifestyle images to avoid premature identity disclosure",
     "Every runtime identity is bound semantically rather than by list position"
   ],
-  "assetCount": 27,
+  "assetCount": 46,
   "assets": [
+    {
+      "id": "avatar.realistic.social.author.nanan-no-wind",
+      "platform": "cross-platform",
+      "runtimeEntityKey": "social.author.nanan-no-wind",
+      "category": "casual-selfie",
+      "promptSummary": "Fictional Chinese woman in an ordinary apartment-window smartphone selfie.",
+      "path": "/media/case-001/avatars/realistic/social-nanan-no-wind-selfie.png",
+      "width": 256,
+      "height": 256,
+      "bytes": 96264,
+      "sha256": "8d2d5cf8c98b710f7ff4a854d2420543a4d7029411e3a79198d9286adaf37048",
+      "postProcessing": {
+        "operation": "deterministic resize and PNG optimization",
+        "cropInsets": null
+      },
+      "source": "OpenAI built-in image generation",
+      "generatedAt": "2026-07-19",
+      "narrativeRole": "ordinary-ui-identity-only",
+      "isClue": false
+    },
+    {
+      "id": "avatar.realistic.social.author.ordinary-user",
+      "platform": "cross-platform",
+      "runtimeEntityKey": "social.author.ordinary-user",
+      "category": "casual-street-selfie",
+      "promptSummary": "Fictional Chinese man in glasses and a navy windbreaker on an ordinary residential street.",
+      "path": "/media/case-001/avatars/realistic/social-ordinary-user-selfie.png",
+      "width": 256,
+      "height": 256,
+      "bytes": 115550,
+      "sha256": "24ee42757d48eac99d6fa3962d04e2c290bfcc1e4c7c9606fb2e81efbfed64db",
+      "postProcessing": {
+        "operation": "deterministic resize and PNG optimization",
+        "cropInsets": null
+      },
+      "source": "OpenAI built-in image generation",
+      "generatedAt": "2026-07-19",
+      "narrativeRole": "ordinary-ui-identity-only",
+      "isClue": false
+    },
+    {
+      "id": "avatar.realistic.social.author.old-rain-17",
+      "platform": "cross-platform",
+      "runtimeEntityKey": "social.author.old-rain-17",
+      "category": "commute-object-photo",
+      "promptSummary": "Rainy city-bus window and folded ticket photographed during an ordinary evening commute.",
+      "path": "/media/case-001/avatars/realistic/social-old-rain-17-window.png",
+      "width": 256,
+      "height": 256,
+      "bytes": 105040,
+      "sha256": "dcb581dffce7d2f0cbb0661c2c3d38431ed2491dbef5659ff1edae796bb6df15",
+      "postProcessing": {
+        "operation": "deterministic resize and PNG optimization",
+        "cropInsets": null
+      },
+      "source": "OpenAI built-in image generation",
+      "generatedAt": "2026-07-19",
+      "narrativeRole": "ordinary-ui-identity-only",
+      "isClue": false
+    },
+    {
+      "id": "avatar.realistic.social.author.river-slow-walk",
+      "platform": "cross-platform",
+      "runtimeEntityKey": "social.author.river-slow-walk",
+      "category": "city-landscape-photo",
+      "promptSummary": "Deidentified riverside greenway and bicycle in a casual overcast phone snapshot.",
+      "path": "/media/case-001/avatars/realistic/social-river-greenway-bike.png",
+      "width": 256,
+      "height": 256,
+      "bytes": 110535,
+      "sha256": "21424272e1c331b5accf513c34664d377c0f9786c9a89bb18511fb7f9555c01a",
+      "postProcessing": {
+        "operation": "deterministic resize and PNG optimization",
+        "cropInsets": null
+      },
+      "source": "OpenAI built-in image generation",
+      "generatedAt": "2026-07-19",
+      "narrativeRole": "ordinary-ui-identity-only",
+      "isClue": false
+    },
+    {
+      "id": "avatar.realistic.social.author.ordinary-passerby",
+      "platform": "cross-platform",
+      "runtimeEntityKey": "social.author.ordinary-passerby",
+      "category": "pet-photo",
+      "promptSummary": "Sleepy orange-and-white cat on a rumpled blue-gray bed in an ordinary apartment.",
+      "path": "/media/case-001/avatars/realistic/social-sleepy-orange-cat.png",
+      "width": 256,
+      "height": 256,
+      "bytes": 100935,
+      "sha256": "0fcab16ec4c344b31708f9ce438f2788a35124d178078019382ef2feeaedefdb",
+      "postProcessing": {
+        "operation": "deterministic resize and PNG optimization",
+        "cropInsets": null
+      },
+      "source": "OpenAI built-in image generation",
+      "generatedAt": "2026-07-19",
+      "narrativeRole": "ordinary-ui-identity-only",
+      "isClue": false
+    },
+    {
+      "id": "avatar.realistic.social.author.slow-organizing",
+      "platform": "cross-platform",
+      "runtimeEntityKey": "social.author.slow-organizing",
+      "category": "personal-doodle",
+      "promptSummary": "Imperfect colored-pencil doodle of a sleepy yellow duck wearing a muted green scarf.",
+      "path": "/media/case-001/avatars/realistic/social-slow-organizing-duck.png",
+      "width": 256,
+      "height": 256,
+      "bytes": 114085,
+      "sha256": "131012ed9cf9e96a0fd439679f4349074f3a7062b06c16c78705ef710e1362bb",
+      "postProcessing": {
+        "operation": "deterministic resize and PNG optimization",
+        "cropInsets": null
+      },
+      "source": "OpenAI built-in image generation",
+      "generatedAt": "2026-07-19",
+      "narrativeRole": "ordinary-ui-identity-only",
+      "isClue": false
+    },
+    {
+      "id": "avatar.realistic.social.author.today-rain",
+      "platform": "cross-platform",
+      "runtimeEntityKey": "social.author.today-rain",
+      "category": "personal-object-photo",
+      "promptSummary": "Transparent umbrella drying beside wet shoe prints and a blue doormat.",
+      "path": "/media/case-001/avatars/realistic/social-today-rain-umbrella.png",
+      "width": 256,
+      "height": 256,
+      "bytes": 101946,
+      "sha256": "2dd26a0c07b3f31921a4aa36ad0a425c27c103e76139a674fddc08cedb373698",
+      "postProcessing": {
+        "operation": "deterministic resize and PNG optimization",
+        "cropInsets": null
+      },
+      "source": "OpenAI built-in image generation",
+      "generatedAt": "2026-07-19",
+      "narrativeRole": "ordinary-ui-identity-only",
+      "isClue": false
+    },
     {
       "id": "avatar.realistic.wechat.daily-gym",
       "platform": "wechat",
@@ -437,6 +577,66 @@
       "isClue": false
     },
     {
+      "id": "avatar.realistic.xhs.author.fridge-note",
+      "platform": "xiaohongshu",
+      "runtimeEntityKey": "xhs.author.fridge-note",
+      "category": "home-object-photo",
+      "promptSummary": "Apartment refrigerator with mismatched magnets, an unreadable grocery note, and dried flowers.",
+      "path": "/media/case-001/avatars/realistic/xhs-fridge-note.png",
+      "width": 256,
+      "height": 256,
+      "bytes": 78345,
+      "sha256": "cdd8d5822d0c96d5c41d84167f9e3e3395403017f95cb2a18915402c8c702da0",
+      "postProcessing": {
+        "operation": "deterministic resize and PNG optimization",
+        "cropInsets": null
+      },
+      "source": "OpenAI built-in image generation",
+      "generatedAt": "2026-07-19",
+      "narrativeRole": "ordinary-ui-identity-only",
+      "isClue": false
+    },
+    {
+      "id": "avatar.realistic.xhs.author.lens-cloth-missing",
+      "platform": "xiaohongshu",
+      "runtimeEntityKey": "xhs.author.lens-cloth-missing",
+      "category": "photography-object-photo",
+      "promptSummary": "Used mirrorless camera and blue microfiber cloth half hidden on a cluttered home desk.",
+      "path": "/media/case-001/avatars/realistic/xhs-lens-cloth-missing.png",
+      "width": 256,
+      "height": 256,
+      "bytes": 102859,
+      "sha256": "8d6aa1ee3a1167faf99692405ad4e2d2887fbb3806787d819ac179bfd3dfa7e8",
+      "postProcessing": {
+        "operation": "deterministic resize and PNG optimization",
+        "cropInsets": null
+      },
+      "source": "OpenAI built-in image generation",
+      "generatedAt": "2026-07-19",
+      "narrativeRole": "ordinary-ui-identity-only",
+      "isClue": false
+    },
+    {
+      "id": "avatar.realistic.xhs.author.many-photos-calm",
+      "platform": "xiaohongshu",
+      "runtimeEntityKey": "xhs.author.many-photos-calm",
+      "category": "archive-object-photo",
+      "promptSummary": "Printed landscape photos and negative sleeves being sorted into a plain archival box.",
+      "path": "/media/case-001/avatars/realistic/xhs-many-photos-calm.png",
+      "width": 256,
+      "height": 256,
+      "bytes": 119628,
+      "sha256": "c9f75eaf25eecada2bacfd04193851b2c1aa625f3db8c0338f792b64338f2aca",
+      "postProcessing": {
+        "operation": "deterministic resize and PNG optimization",
+        "cropInsets": null
+      },
+      "source": "OpenAI built-in image generation",
+      "generatedAt": "2026-07-19",
+      "narrativeRole": "ordinary-ui-identity-only",
+      "isClue": false
+    },
+    {
       "id": "avatar.realistic.xhs.author.south-bank-slow-walk",
       "platform": "xiaohongshu",
       "runtimeEntityKey": "xhs.author.south-bank-slow-walk",
@@ -447,6 +647,86 @@
       "height": 256,
       "bytes": 111646,
       "sha256": "232d2608b1d7b6a1d68770cb2e710badd79df78bb0cd203c25b16a4685df826d",
+      "postProcessing": {
+        "operation": "deterministic resize and PNG optimization",
+        "cropInsets": null
+      },
+      "source": "OpenAI built-in image generation",
+      "generatedAt": "2026-07-19",
+      "narrativeRole": "ordinary-ui-identity-only",
+      "isClue": false
+    },
+    {
+      "id": "avatar.realistic.xhs.author.not-late-today",
+      "platform": "xiaohongshu",
+      "runtimeEntityKey": "xhs.author.not-late-today",
+      "category": "commute-photo",
+      "promptSummary": "Downward rainy-morning snapshot of sneakers crossing a wet pedestrian crossing with a navy umbrella.",
+      "path": "/media/case-001/avatars/realistic/xhs-not-late-today.png",
+      "width": 256,
+      "height": 256,
+      "bytes": 96614,
+      "sha256": "a7c5c2cfd4fde909530a1b59ef15bfbb2e8e995e698e1b3f313e3d98d8a6fddf",
+      "postProcessing": {
+        "operation": "deterministic resize and PNG optimization",
+        "cropInsets": null
+      },
+      "source": "OpenAI built-in image generation",
+      "generatedAt": "2026-07-19",
+      "narrativeRole": "ordinary-ui-identity-only",
+      "isClue": false
+    },
+    {
+      "id": "avatar.realistic.xhs.author.office-building-observer",
+      "platform": "xiaohongshu",
+      "runtimeEntityKey": "xhs.author.office-building-observer",
+      "category": "office-location-photo",
+      "promptSummary": "Layered rainy-window reflections and a paper cup in an anonymous office lobby.",
+      "path": "/media/case-001/avatars/realistic/xhs-office-building-observer.png",
+      "width": 256,
+      "height": 256,
+      "bytes": 98207,
+      "sha256": "191f92d8080b7328180ca0eef8c399dc7badb489f0cb8dfc5d1ce697b16365bc",
+      "postProcessing": {
+        "operation": "deterministic resize and PNG optimization",
+        "cropInsets": null
+      },
+      "source": "OpenAI built-in image generation",
+      "generatedAt": "2026-07-19",
+      "narrativeRole": "ordinary-ui-identity-only",
+      "isClue": false
+    },
+    {
+      "id": "avatar.realistic.xhs.author.one-earbud",
+      "platform": "xiaohongshu",
+      "runtimeEntityKey": "xhs.author.one-earbud",
+      "category": "commute-object-photo",
+      "promptSummary": "Single wired earbud on a dark green canvas jacket during a rainy bus commute.",
+      "path": "/media/case-001/avatars/realistic/xhs-one-earbud.png",
+      "width": 256,
+      "height": 256,
+      "bytes": 94908,
+      "sha256": "a09d5ab91d12833f94de24b46755065aa9214c5972a3970f0d43f48d59687858",
+      "postProcessing": {
+        "operation": "deterministic resize and PNG optimization",
+        "cropInsets": null
+      },
+      "source": "OpenAI built-in image generation",
+      "generatedAt": "2026-07-19",
+      "narrativeRole": "ordinary-ui-identity-only",
+      "isClue": false
+    },
+    {
+      "id": "avatar.realistic.xhs.author.one-stop-underexposed",
+      "platform": "xiaohongshu",
+      "runtimeEntityKey": "xhs.author.one-stop-underexposed",
+      "category": "night-photography-photo",
+      "promptSummary": "Underexposed wet side street and a compact camera held at the lower edge of frame.",
+      "path": "/media/case-001/avatars/realistic/xhs-one-stop-underexposed.png",
+      "width": 256,
+      "height": 256,
+      "bytes": 84021,
+      "sha256": "600a1ecfe1bab923bdfc4ef23a32b6a4822012640ec5b164cf5d8deff0281c08",
       "postProcessing": {
         "operation": "deterministic resize and PNG optimization",
         "cropInsets": null
@@ -497,6 +777,86 @@
       "isClue": false
     },
     {
+      "id": "avatar.realistic.xhs.author.research-outline",
+      "platform": "xiaohongshu",
+      "runtimeEntityKey": "xhs.author.research-outline",
+      "category": "work-object-photo",
+      "promptSummary": "Well-used spiral notebook with colored tabs, black pen, paperclip, and tea on an office table.",
+      "path": "/media/case-001/avatars/realistic/xhs-research-outline.png",
+      "width": 256,
+      "height": 256,
+      "bytes": 97176,
+      "sha256": "417315b862b92f4aa7b013117dadfaaf9f837a0eb5e396065966bf56a65437a7",
+      "postProcessing": {
+        "operation": "deterministic resize and PNG optimization",
+        "cropInsets": null
+      },
+      "source": "OpenAI built-in image generation",
+      "generatedAt": "2026-07-19",
+      "narrativeRole": "ordinary-ui-identity-only",
+      "isClue": false
+    },
+    {
+      "id": "avatar.realistic.xhs.author.shoe-cabinet-observer",
+      "platform": "xiaohongshu",
+      "runtimeEntityKey": "xhs.author.shoe-cabinet-observer",
+      "category": "home-object-photo",
+      "promptSummary": "Worn white canvas sneakers drying beside a folded umbrella in a small shoe cabinet.",
+      "path": "/media/case-001/avatars/realistic/xhs-shoe-cabinet.png",
+      "width": 256,
+      "height": 256,
+      "bytes": 101623,
+      "sha256": "f24f8d7f1994a8ce88744e620947f7822d35f97370286c5a5e76c6dbd3ea2151",
+      "postProcessing": {
+        "operation": "deterministic resize and PNG optimization",
+        "cropInsets": null
+      },
+      "source": "OpenAI built-in image generation",
+      "generatedAt": "2026-07-19",
+      "narrativeRole": "ordinary-ui-identity-only",
+      "isClue": false
+    },
+    {
+      "id": "avatar.realistic.xhs.author.small-stove",
+      "platform": "xiaohongshu",
+      "runtimeEntityKey": "xhs.author.small-stove",
+      "category": "home-cooking-photo",
+      "promptSummary": "Small apartment stove with an enamel saucepan and washed greens under ordinary kitchen light.",
+      "path": "/media/case-001/avatars/realistic/xhs-small-stove.png",
+      "width": 256,
+      "height": 256,
+      "bytes": 104838,
+      "sha256": "d86728699454c2924a3e3db17216104537ed1a2f6a2dd5fee373eeaa795458e2",
+      "postProcessing": {
+        "operation": "deterministic resize and PNG optimization",
+        "cropInsets": null
+      },
+      "source": "OpenAI built-in image generation",
+      "generatedAt": "2026-07-19",
+      "narrativeRole": "ordinary-ui-identity-only",
+      "isClue": false
+    },
+    {
+      "id": "avatar.realistic.xhs.author.version-from-one",
+      "platform": "xiaohongshu",
+      "runtimeEntityKey": "xhs.author.version-from-one",
+      "category": "work-object-photo",
+      "promptSummary": "Blue, orange, and gray document folders beside an external SSD and blank label roll.",
+      "path": "/media/case-001/avatars/realistic/xhs-version-from-one.png",
+      "width": 256,
+      "height": 256,
+      "bytes": 95527,
+      "sha256": "67bfa3814205810a9447e012c3038b1ddea2a4b35337959c6f8e48e9ece5238b",
+      "postProcessing": {
+        "operation": "deterministic resize and PNG optimization",
+        "cropInsets": null
+      },
+      "source": "OpenAI built-in image generation",
+      "generatedAt": "2026-07-19",
+      "narrativeRole": "ordinary-ui-identity-only",
+      "isClue": false
+    },
+    {
       "id": "avatar.realistic.xhs.author.white-shoelace",
       "platform": "xiaohongshu",
       "runtimeEntityKey": "xhs.author.white-shoelace",
@@ -527,6 +887,26 @@
       "height": 256,
       "bytes": 90154,
       "sha256": "d6a152f82f9848ba8bf405cf10bbca8eeb6d717f2f9acfbcf0f3061358683ba3",
+      "postProcessing": {
+        "operation": "deterministic resize and PNG optimization",
+        "cropInsets": null
+      },
+      "source": "OpenAI built-in image generation",
+      "generatedAt": "2026-07-19",
+      "narrativeRole": "ordinary-ui-identity-only",
+      "isClue": false
+    },
+    {
+      "id": "avatar.realistic.xhs.author.window-pot-three",
+      "platform": "xiaohongshu",
+      "runtimeEntityKey": "xhs.author.window-pot-three",
+      "category": "plant-photo",
+      "promptSummary": "Slightly lopsided pothos with a fresh pale-green leaf on a rainy apartment windowsill.",
+      "path": "/media/case-001/avatars/realistic/xhs-window-pot-three.png",
+      "width": 256,
+      "height": 256,
+      "bytes": 108524,
+      "sha256": "cbd31ef34b330905fb5e6830dbd231b786620f34d23f24785f742e4a0530f48b",
       "postProcessing": {
         "operation": "deterministic resize and PNG optimization",
         "cropInsets": null

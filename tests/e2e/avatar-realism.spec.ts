@@ -42,12 +42,14 @@ test("communication and social apps use loaded custom avatar images", async ({ p
   await page.getByTestId("app-back").click();
 
   await openApp(page, "app.xiaohongshu");
-  await expectLoadedImages(page, "img.xhs-feed-avatar", 12);
-  const xhsSources = await page.locator("img.xhs-feed-avatar").evaluateAll((nodes) => nodes.slice(0, 12).map((node) => (node as HTMLImageElement).src));
-  expect(new Set(xhsSources).size).toBe(12);
+  await expectLoadedImages(page, "img.xhs-feed-avatar", 24);
+  const xhsSources = await page.locator("img.xhs-feed-avatar").evaluateAll((nodes) => nodes.slice(0, 24).map((node) => (node as HTMLImageElement).src));
+  expect(new Set(xhsSources).size).toBe(24);
   expect(xhsSources.every((source) => source.includes("/avatars/realistic/"))).toBe(true);
   const viewportWidth = page.viewportSize()?.width ?? 0;
   await page.screenshot({ path: `test-results/full-realism/avatar-realistic-xhs/xhs-home-${viewportWidth}.png` });
+  await page.locator(".xhs-card").nth(12).scrollIntoViewIfNeeded();
+  await page.screenshot({ path: `test-results/full-realism/avatar-realistic-xhs/xhs-home-lower-${viewportWidth}.png` });
   await page.locator(".xhs-card").first().click();
   await expect(page.locator(".xhs-note-detail")).toBeVisible();
   await page.screenshot({ path: `test-results/full-realism/avatar-realistic-xhs/xhs-detail-${viewportWidth}.png` });
