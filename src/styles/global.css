@@ -741,6 +741,8 @@ img.mail-avatar{display:block;object-fit:cover}
 .map-layer-tabs{position:absolute;z-index:11;top:61px;left:10px;padding:3px;display:flex;border-radius:8px;background:#fff;box-shadow:0 3px 12px #0002}
 .map-layer-tabs button{height:30px;padding:0 10px;border:0;border-radius:6px;background:#fff;color:#555;font-size:11px}
 .map-layer-tabs button.active{background:#eaf3ff;color:#2377e5}
+.map-layer-tabs button:disabled,.map-bottom-nav button:disabled{opacity:1}
+.map-inline-notice{position:absolute;z-index:12;top:101px;left:10px;right:10px;margin:0;padding:7px 10px;border-radius:9px;background:#1f2937d9;color:#fff;font-size:11px;box-shadow:0 3px 10px #0002}
 .map-stage{position:relative;height:470px;background:#e9eee4;overflow:hidden}
 .maplibre-canvas{position:absolute;inset:0;width:100%;height:100%}
 .map-road-name{padding:2px 4px;border-radius:4px;background:#ffffffc7;color:#6f746d;font-size:9px;line-height:1;letter-spacing:.2px;white-space:nowrap;box-shadow:0 1px 2px #0001;pointer-events:none}
@@ -765,6 +767,7 @@ img.mail-avatar{display:block;object-fit:cover}
 .map-poi-sheet header button{border:0;border-radius:18px;background:#2377e5;color:#fff}
 .map-poi-sheet nav{margin-top:12px;display:grid;grid-template-columns:repeat(4,1fr)}
 .map-poi-sheet nav button{padding:8px;border:0;background:#fff;color:#2377e5}
+.map-poi-sheet nav button.active{font-weight:700;color:#e85c26}
 .map-support-content{padding:0 8px 14px}
 .map-empty-history,.map-favorite-card,.map-evidence-card{padding:13px;border-radius:13px;background:#fff}
 .map-empty-history h2,.map-favorite-card h2,.map-evidence-card h2{margin:0 0 8px}
@@ -1310,6 +1313,13 @@ img.mail-avatar{display:block;object-fit:cover}
 .compass-page{padding:48px 20px;text-align:center}
 .compass-dial{position:relative;width:250px;height:250px;margin:0 auto 50px;border:3px dotted #aaa;border-radius:50%;transition:transform .08s linear}
 .compass-dial:before,.compass-dial:after{content:"";position:absolute;left:50%;top:50%;background:#777;transform:translate(-50%,-50%)}
+.utility-segmented button:disabled,.music-nav button:disabled,.reading-nav button:disabled,.rail-nav button:disabled,.clock-tabs button:disabled,.camera-modes button:disabled,.wechat-bottom-nav button:disabled{opacity:1;cursor:default}
+.rail-inline-panel{margin:12px 14px;padding:13px;border-radius:12px;background:#fff;box-shadow:0 3px 14px #00000012}.rail-inline-panel header{display:flex;justify-content:space-between;margin-bottom:10px}.rail-inline-panel>button{width:100%;padding:10px 0;display:grid;grid-template-columns:55px 1fr auto;gap:8px;border:0;border-top:1px solid #eee;background:transparent;text-align:left}.rail-inline-panel p{margin:7px 0;font-size:13px}
+.weather-day-detail{margin-top:12px!important;padding:14px!important;border-radius:15px;background:#ffffff22!important;backdrop-filter:blur(16px)}.weather-day-detail header{display:flex;justify-content:space-between}.weather-day-detail header button{border:0;background:transparent;color:inherit;font-size:20px}.weather-day-detail dl{margin:8px 0 0}.weather-day-detail dl div{padding:7px 0;display:flex;justify-content:space-between;border-top:1px solid #ffffff36}.weather-page section button:disabled{opacity:1}
+.clock-new-alarm{margin:0 12px 10px;padding:14px;display:grid;gap:8px;border-radius:12px;background:#242426}.clock-new-alarm strong{font-size:34px;font-weight:300}.clock-new-alarm button{padding:8px;border:0;border-radius:8px;background:#ff9f0a;color:#fff}.alarm-delete{width:24px;height:24px;border-radius:50%;display:grid;place-items:center;background:#ff453a;color:#fff}
+.camera-recent-panel{height:calc(100% - 150px);padding:12px;background:#111;color:#fff}.camera-recent-panel header{display:flex;align-items:center;justify-content:space-between}.camera-recent-panel header button{border:0;background:transparent;color:#ffd60a}.camera-recent-panel>div{margin-top:12px;display:grid;grid-template-columns:1fr 1fr;gap:7px}.camera-recent-panel>div button{padding:0;overflow:hidden;border:0;border-radius:7px;background:#222;color:#fff;text-align:left}.camera-recent-panel>div span{height:95px;display:block;background:linear-gradient(145deg,#6b7d72,#222)}.camera-recent-panel>div small{display:block;padding:7px}
+.memo-folders{margin:0 14px 12px;border-radius:10px;overflow:hidden;background:#fff}.memo-folders button{width:100%;padding:12px;display:flex;justify-content:space-between;border:0;border-bottom:1px solid #eee;background:#fff}.memo-delete{width:22px;height:22px;display:grid;place-items:center;border-radius:50%;background:#ff3b30;color:#fff}.memo-wave i.played{background:#e33}
+.calculator-feedback{margin:-14px 14px 9px;text-align:right;color:#aaa;font-size:11px}.phone-recents-empty{padding:36px 24px;text-align:center}.phone-recents-empty h1{font-size:27px}.phone-recents-empty p{color:#777;line-height:1.6}.phone-recents-empty button{margin-top:18px;padding:10px 16px;border:0;border-radius:10px;background:#0a84ff;color:#fff}
 .compass-dial:before{width:220px;height:1px}
 .compass-dial:after{width:1px;height:220px}
 .compass-dial i{position:absolute;left:50%;top:16px;width:24px;height:92px;background:#ff3b30;clip-path:polygon(50% 0,100% 100%,50% 85%,0 100%);transform:translateX(-50%)}

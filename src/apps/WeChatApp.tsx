@@ -416,6 +416,6 @@ function WechatScaffold({children,tab,onTab}:{children:React.ReactNode;tab:strin
   return <div className="app-window wechat-real" data-testid="wechat-home">
     <button className="platform-close-hit" data-testid="app-back" aria-label="退出微信" onClick={goBack}/>
     <div className="wechat-page-scroll">{children}</div>
-    <nav className="wechat-bottom-nav" aria-label="微信底部导航">{["微信","通讯录","发现","我"].map(label=><button className={tab===label?"active":""} key={label} onClick={()=>onTab(label)}><span>{label==="微信"?"◌":label==="通讯录"?"♙":label==="发现"?"◎":"♙"}</span><b>{label}</b></button>)}</nav>
+    <nav className="wechat-bottom-nav" aria-label="微信底部导航">{["微信","通讯录","发现","我"].map(label=><button aria-current={tab===label?"page":undefined} disabled={tab===label} className={tab===label?"active":""} key={label} onClick={()=>onTab(label)}><span>{label==="微信"?"◌":label==="通讯录"?"♙":label==="发现"?"◎":"♙"}</span><b>{label}</b></button>)}</nav>
   </div>;
 }

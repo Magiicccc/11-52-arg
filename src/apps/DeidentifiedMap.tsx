@@ -153,6 +153,11 @@ export function DeidentifiedMap({
       mapRef.current = map;
       map.addControl(new maplibregl.NavigationControl({ showCompass: false, visualizePitch: false }), "bottom-right");
       map.on("load", () => {
+        const canvas = map.getCanvas();
+        canvas.dataset.interactionId = "app.baidu_map:map-gesture";
+        canvas.dataset.interactionState = "works";
+        canvas.dataset.interactionKind = "gesture";
+        canvas.setAttribute("aria-label", "拖动或缩放地图");
         const poiMarkers = temporaryMapPois.map((poi) => {
           const element = document.createElement("button");
           element.className = "map-poi-marker";
@@ -171,9 +176,13 @@ export function DeidentifiedMap({
           element.textContent = road.name;
           element.setAttribute("aria-hidden", "true");
           const midpoint = road.coordinates[Math.floor(road.coordinates.length / 2)]!;
-          return new maplibregl.Marker({ element, anchor: "center" })
+          const marker = new maplibregl.Marker({ element, anchor: "center" })
             .setLngLat(midpoint)
             .addTo(map);
+          element.tabIndex = -1;
+          element.removeAttribute("role");
+          element.removeAttribute("aria-label");
+          return marker;
         });
         const currentLocation = document.createElement("span");
         currentLocation.className = "map-current-location";
@@ -182,6 +191,10 @@ export function DeidentifiedMap({
         const currentMarker = new maplibregl.Marker({ element: currentLocation, anchor: "center" })
           .setLngLat([0, 0])
           .addTo(map);
+        currentLocation.tabIndex = -1;
+        currentLocation.removeAttribute("role");
+        currentLocation.removeAttribute("aria-label");
+        currentLocation.setAttribute("aria-hidden", "true");
         markersRef.current = [...poiMarkers, ...roadMarkers, currentMarker];
         callbacksRef.current.onReady();
       });

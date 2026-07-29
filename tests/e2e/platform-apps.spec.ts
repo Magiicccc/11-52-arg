@@ -82,6 +82,38 @@ test("Toutiao ordinary cards open complete sourced articles", async ({ page }) =
   await screenshot(page, "toutiao-long-form-detail");
 });
 
+test("Toutiao early records also open as complete articles instead of title-only shells", async ({ page }) => {
+  await page.goto(withoutQa(testEntryUrl));
+  await page.getByTestId("app-app.toutiao").scrollIntoViewIfNeeded();
+  await page.getByTestId("app-app.toutiao").click();
+  await page.getByTestId("toutiao-formal-card").first().click();
+  await expect(page.locator(".toutiao-article")).toBeVisible();
+  await expect(page.locator(".toutiao-article > p")).toHaveCount(5);
+  await expect(page.locator(".toutiao-article")).toContainText("现阶段没有证据支持将近期讨论合并为同一事件");
+});
+
+test("early Zhihu and Xiaohongshu records render complete readable bodies", async ({ page }) => {
+  await page.goto(withoutQa(testEntryUrl));
+  await page.getByTestId("app-app.zhihu").scrollIntoViewIfNeeded();
+  await page.getByTestId("app-app.zhihu").click();
+  await page.locator(".zhihu-question-card button", { hasText: "网页存档与当前页面为什么会不同" }).click();
+  await expect(page.locator(".zhihu-answer > p")).toHaveCount(3);
+  await page.getByTestId("zhihu-expand").click();
+  await expect(page.locator(".zhihu-answer > p")).toHaveCount(6);
+  await expect(page.locator(".zhihu-answer")).toContainText("先保留证据链");
+  await screenshot(page, "zhihu-early-complete-detail");
+  await page.getByTestId("app-back").click();
+  await expect(page.getByTestId("zhihu-home")).toBeVisible();
+  await page.getByTestId("app-back").click();
+
+  await page.getByTestId("app-app.xiaohongshu").scrollIntoViewIfNeeded();
+  await page.getByTestId("app-app.xiaohongshu").click();
+  await page.locator(".xhs-card", { hasText: "桥下咖啡" }).click();
+  await expect(page.locator(".xhs-note-detail > p")).toHaveCount(4);
+  await expect(page.locator(".xhs-note-detail")).toContainText("会先把文件名改准确");
+  await screenshot(page, "xiaohongshu-early-complete-detail");
+});
+
 test("QQ Mail ordinary messages include full headers and complete bodies", async ({ page }) => {
   await page.goto(withoutQa(testEntryUrl));
   await page.getByTestId("app-app.qqmail").scrollIntoViewIfNeeded();

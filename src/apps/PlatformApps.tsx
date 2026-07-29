@@ -2,6 +2,7 @@ import { useLayoutEffect, useRef, useState, type ReactNode } from "react";
 import { useGame } from "@/app/GameContext";
 import { activeBody, unlockedItemsForApp } from "@/content/selectors";
 import { ordinaryMails, ordinaryPlatformRecords, ordinaryVideos, ordinaryXhsDrafts, ordinaryXhsNotes } from "@/content/realism-life-data";
+import { completePlatformParagraphs } from "@/content/platform-prose";
 import { realisticInternetAvatar } from "@/content/avatar-assets";
 import { assetUrl } from "@/lib/asset-url";
 
@@ -158,7 +159,7 @@ export function XiaohongshuApp() {
       category:"生活记录",
       title:text(body,"title"),
       summary:text(body,"text"),
-      body:[text(body,"text")],
+      body:completePlatformParagraphs(item.id,[text(body,"text")]),
       date:text(body,"date"),
       location:"杭州",
       likes:number(body,"likes"),
@@ -495,7 +496,7 @@ export function ToutiaoApp() {
   if (selected) {
     const body = activeBody(state, selected) as Body;
     const detailId = selected.id;
-    const paragraphs = stringList(body, "paragraphs");
+    const paragraphs = completePlatformParagraphs(selected.id, stringList(body, "paragraphs"));
     return <DetailShell className="toutiao-app" title="今日头条" onBack={() => setSelectedId(null)} footer={
       <div className="toutiao-actions">
         <button onClick={() => setCommenting(true)}>{commenting ? "评论已打开" : "写评论…"}</button>

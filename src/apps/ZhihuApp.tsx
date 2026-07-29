@@ -2,6 +2,7 @@ import { useLayoutEffect, useMemo, useRef, useState } from "react";
 import { useGame } from "@/app/GameContext";
 import { realisticInternetAvatar } from "@/content/avatar-assets";
 import { activeBody, getContentItem, unlockedItemsForApp } from "@/content/selectors";
+import { completePlatformParagraphs } from "@/content/platform-prose";
 import type { NarrativeFunction } from "@/contracts/content";
 
 type ZhihuView = "home" | "ideas" | "profile" | "search" | "detail" | "comments" | "not-found" | "archive";
@@ -89,7 +90,7 @@ export function ZhihuApp() {
     contentId:"zhihu.answer.01",
     title:answerBody.question??"网页存档与当前页面为什么会不同？",
     excerpt:answerBody.answer??"",
-    body:[answerBody.answer??""],
+    body:completePlatformParagraphs("zhihu.answer.01",[answerBody.answer??""]),
     author:"川流档案",
     authorMark:"川",
     authorColor:"#1772f6",

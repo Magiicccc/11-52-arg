@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useRef, type FormEvent, type MouseEvent, type ReactNode } from "react";
 import { useGame } from "./GameContext";
 
-const interactiveSelector = "button, a[href], input, textarea, select, [role='button'], [tabindex]";
+const interactiveSelector = "button, a[href], input, textarea, select, [role='button'], [tabindex]:not([tabindex='-1'])";
 
 function normalizeToken(value: string): string {
   return value

@@ -1,7 +1,7 @@
 # 全部玩家 App 真实性评级
 
-- 部署 commit：`worktree`
-- Workflow：`local`
+- 部署 commit：`pending`
+- Workflow：`pending`
 - PASS：30
 - PARTIAL：0
 - FAIL：0

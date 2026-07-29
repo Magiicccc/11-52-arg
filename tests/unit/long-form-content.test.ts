@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import { contentForApp } from "@/content/content-pack";
 import { createInitialGameState, reconcileContentCatalog } from "@/engine/initial-state";
 import { ordinaryTiebaPosts } from "@/content/tieba-life-data";
+import { completePlatformParagraphs, platformProseSupplementCount } from "@/content/platform-prose";
 
 type ZhihuLongFormBody = {
   title?: string;
@@ -70,6 +71,27 @@ describe("long-form platform content", () => {
       expect(post.body.every((paragraph) => /[。？！]$/.test(paragraph.trim()))).toBe(true);
       expect(post.replies.length).toBeGreaterThanOrEqual(3);
       expect(post.narrative.clueRole).toBe("none");
+    }
+  });
+
+  it("gives every early platform article a complete beginning, development, and ending", () => {
+    const targetIds = [
+      ...contentForApp("app.xiaohongshu")
+        .filter((item) => !item.id.startsWith("xhs.ordinary."))
+        .map((item) => item.id),
+      ...contentForApp("app.toutiao")
+        .filter((item) => !item.id.startsWith("news.toutiao.life."))
+        .map((item) => item.id),
+      "zhihu.answer.01"
+    ];
+
+    expect(platformProseSupplementCount).toBeGreaterThanOrEqual(targetIds.length);
+    for (const id of targetIds) {
+      const paragraphs = completePlatformParagraphs(id);
+      expect(paragraphs.length, id).toBeGreaterThanOrEqual(4);
+      expect(paragraphs.join("").length, id).toBeGreaterThan(140);
+      expect(paragraphs.every((paragraph) => /[。？！]$/.test(paragraph.trim())), id).toBe(true);
+      expect(paragraphs[0], id).not.toBe(paragraphs[3]);
     }
   });
 

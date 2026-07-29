@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { AppChrome } from "@/shell/AppChrome";
 import { useGame } from "@/app/GameContext";
 import { activeBody, getContentItem } from "@/content/selectors";
@@ -12,9 +13,10 @@ type CallBody = {
 
 export function PhoneApp() {
   const { state, emit } = useGame();
+  const [showAll,setShowAll]=useState(false);
   const item = getContentItem("a3.unknown.call");
   const unlocked = state.content.unlockedContentIds.includes("a3.unknown.call");
-  if (!unlocked || !item) return <AppChrome title="电话"><button className="empty-state" data-testid="app-effective-action" onClick={()=>emit("phone.recents.filtered","phone.recents",{filter:"all"})}>没有最近通话 · 查看全部记录</button></AppChrome>;
+  if (!unlocked || !item) return <AppChrome title="电话">{showAll?<section className="phone-recents-empty" role="status"><h1>最近通话</h1><p>当前设备没有可显示的最近通话。</p><p>FaceTime 音频和已删除记录不会出现在这里。</p><button onClick={()=>setShowAll(false)}>返回空列表</button></section>:<button className="empty-state" data-testid="app-effective-action" onClick={()=>{setShowAll(true);emit("phone.recents.filtered","phone.recents",{filter:"all"})}}>没有最近通话 · 查看全部记录</button>}</AppChrome>;
   const body = activeBody(state, item) as CallBody;
   const completed = state.story.completedSceneIds.includes("A3-05");
   const fallback = state.world.flags.a3 && (state.world.flags.a3 as Record<string, unknown>).audioFallbackUsed === true;

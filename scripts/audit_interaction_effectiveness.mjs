@@ -171,7 +171,7 @@ async function openSurface(page, appId, surface) {
 }
 
 async function inventory(page, appId, surface) {
-  return page.locator(".app-window button, .app-window a[href], .app-window input, .app-window textarea, .app-window select, .app-window [role='button'], .app-window [tabindex]").evaluateAll(
+  return page.locator(".app-window button, .app-window a[href], .app-window input, .app-window textarea, .app-window select, .app-window [role='button'], .app-window [tabindex]:not([tabindex='-1'])").evaluateAll(
     (elements, context) => elements.filter((element) => {
       const style = getComputedStyle(element);
       const box = element.getBoundingClientRect();
@@ -185,6 +185,7 @@ async function inventory(page, appId, surface) {
       type: element.getAttribute("type") ?? "",
       text: (element.textContent ?? "").replace(/\s+/g, " ").trim().slice(0, 100),
       ariaLabel: element.getAttribute("aria-label"),
+      interactionKind: element.getAttribute("data-interaction-kind"),
       disabled: "disabled" in element ? element.disabled : false
     })),
     { appId, surface }
@@ -239,7 +240,17 @@ try {
         let clickError = null;
         let formValueChanged = false;
         try {
-          if (control.tag === "input" || control.tag === "textarea") {
+          if (control.interactionKind === "gesture") {
+            const box = await locator.boundingBox();
+            if (!box) throw new Error("gesture-surface-has-no-bounds");
+            const startX = box.x + box.width * 0.5;
+            const startY = box.y + box.height * 0.5;
+            await page.mouse.move(startX, startY);
+            await page.mouse.down();
+            await page.mouse.move(startX + Math.min(48, box.width * 0.18), startY + Math.min(30, box.height * 0.15), { steps: 6 });
+            await page.mouse.up();
+            await page.waitForTimeout(480);
+          } else if (control.tag === "input" || control.tag === "textarea") {
             const previousValue = await locator.inputValue();
             const probe = `audit-${Date.now()}`;
             await locator.fill(probe, { force: true, timeout: 4_000 });
@@ -275,7 +286,17 @@ try {
         let changedState = stateSignature(beforeEnvelope) !== stateSignature(afterEnvelope);
         if (!clickError && !formValueChanged && !changedDom && !changedState) {
           try {
-            if (control.tag === "input" || control.tag === "textarea") {
+            if (control.interactionKind === "gesture") {
+              const box = await locator.boundingBox();
+              if (!box) throw new Error("gesture-surface-has-no-bounds");
+              const startX = box.x + box.width * 0.5;
+              const startY = box.y + box.height * 0.5;
+              await page.mouse.move(startX, startY);
+              await page.mouse.down();
+              await page.mouse.move(startX - Math.min(42, box.width * 0.16), startY + Math.min(26, box.height * 0.12), { steps: 6 });
+              await page.mouse.up();
+              await page.waitForTimeout(480);
+            } else if (control.tag === "input" || control.tag === "textarea") {
               const previousValue = await locator.inputValue();
               const probe = `audit-retry-${Date.now()}`;
               await locator.fill(probe, { force: true });

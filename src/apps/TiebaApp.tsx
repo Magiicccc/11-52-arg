@@ -261,7 +261,7 @@ function TiebaHome({
         <span>{bar.name.slice(0, 1)}</span><b>{bar.name.replace("吧", "")}</b>
       </button>)}</div>
     </section>
-    <nav className="tieba-feed-tabs">{["推荐", "热榜", "视频"].map((label) => <button className={feedTab === label ? "active" : ""} key={label} onClick={() => setFeedTab(label)}>{label}</button>)}</nav>
+    <nav className="tieba-feed-tabs">{["推荐", "热榜", "视频"].map((label) => <button aria-current={feedTab === label ? "page" : undefined} disabled={feedTab === label} className={feedTab === label ? "active" : ""} key={label} onClick={() => setFeedTab(label)}>{label}</button>)}</nav>
     <section className="tieba-feed">
       {feed.map((post, index) => <div key={post.id}>
         {index === 4 && <ArchivePostCard onOpen={onOpenArchive}/>}
@@ -618,5 +618,5 @@ function TiebaBottomNav({ active, onChange }: { active: TiebaView; onChange(view
     { label: "消息", view: "messages", icon: "◌" },
     { label: "我的", view: "profile", icon: "人" }
   ];
-  return <nav className="tieba-bottom-nav" aria-label="百度贴吧底部导航">{items.map((item) => <button className={active === item.view ? "active" : ""} key={item.view} onClick={() => onChange(item.view)}><span>{item.icon}</span><b>{item.label}</b></button>)}</nav>;
+  return <nav className="tieba-bottom-nav" aria-label="百度贴吧底部导航">{items.map((item) => <button aria-current={active === item.view ? "page" : undefined} disabled={active === item.view} className={active === item.view ? "active" : ""} key={item.view} onClick={() => onChange(item.view)}><span>{item.icon}</span><b>{item.label}</b></button>)}</nav>;
 }
