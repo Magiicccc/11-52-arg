@@ -66,7 +66,7 @@ for (const viewport of [{ width: 402, height: 874 }, { width: 440, height: 956 }
   }
 
   const avatarUrls = Array.from({ length: 128 }, (_, index) =>
-    new URL(`media/case-001/avatars/generated-avatar-${String(index + 1).padStart(3, "0")}.svg`, baseUrl).href
+    new URL(`media/case-001/avatars/generated-avatar-${String(index + 1).padStart(3, "0")}.png`, baseUrl).href
   );
   await page.setContent(`<style>
     body{margin:0;padding:12px;background:#eef0f3;font-family:system-ui}

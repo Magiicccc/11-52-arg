@@ -78,5 +78,5 @@ test("account and passenger surfaces no longer render one-character avatar place
   await page.getByTestId("app-back").click();
 
   await openApp(page, "app.tieba");
-  await expectLoadedImages(page, ".tieba-author img", 1);
+  await expectLoadedImages(page, ".tieba-post-author img", 1);
 });

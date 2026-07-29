@@ -3,22 +3,31 @@
 ## 结论
 
 - 已移除玩家可见联系人、作者、发件人和账户页中的单字头像占位。
-- 当前头像包包含 128 个本地 PNG 运行时图片与对应 SVG 生成母版，文件路径、seed 与 SHA-256 均唯一。
+- 当前通用头像包包含 128 个本地生成的写实 PNG，文件路径、seed 与 SHA-256 均唯一；另有 47 个按身份语义定制的写实头像。
+- 128 个运行时头像经过精确重复与感知近重复扫描：精确重复 0，aHash 距离不超过 3 的近重复 0。
 - 头像在构建时由固定 slot 映射，不依赖运行时随机数或外部网络；GitHub Pages 离线缓存与子路径部署均可正常加载。
 - 头像仅承担视觉身份区分，不是线索，也不改变任何 StoryEvent、GameState、剧情文本或触发器。
 
 ## 生成与许可
 
-- 生成服务：DiceBear 10.x HTTP avatar generation API。
-- 生成脚本：`scripts/generate_avatar_assets.mjs`。
+- 生成方式：本机 NVIDIA RTX 4070 Laptop GPU 直接运行公开 Stable Diffusion 权重；不使用图像生成 API，不需要 OpenAI API Key 或 Hugging Face Token。
+- 模型：`SG161222/Realistic_Vision_V5.1_noVAE`，固定 revision `1e9f017a7b1eaefb63a1900ea6c5953d2739fd21`，CreativeML Open RAIL-M。
+- 采样：Euler Ancestral，24 steps，CFG 5.25，固定 seed；512×512 生成后以 Lanczos 缩至 192×192 PNG。
+- 生成脚本：`scripts/generate_local_avatar_pack.py`。
+- 审核与接入脚本：`scripts/promote_local_avatar_pack.py`。
 - 资产目录：`public/media/case-001/avatars/`。
 - 可机读清单：`content/case-001/media/generated-avatar-manifest.json`。
-- 生成风格：Lorelei、Adventurer、Personas；排除容易产生夸张表情的头像风格。
-- 每个文件的 creator、license、source URL、seed 与 SHA-256 均记录在 manifest。
-- 运行时使用 128×128 PNG，避免移动端与 CI 浏览器并发解码复杂 SVG 时出现偶发延迟；SVG 母版继续保留以便审计和可重复生产。
-- 文档：
-  - https://www.dicebear.com/how-to-use/http-api/
-  - https://www.dicebear.com/licenses/
+- 内容构成：56 张普通人物随手拍、24 张宠物、24 张日常场景、24 张食物或生活物件；避免把所有账户处理成同一种 AI 证件照。
+- 每个文件的类别、seed、尺寸与 SHA-256 均记录在 manifest。
+- 联系表：`test-results/full-realism/avatar-local-generation/local-avatar-contact-sheet-1.jpg` 至 `local-avatar-contact-sheet-4.jpg`。
+- 模型卡：https://huggingface.co/SG161222/Realistic_Vision_V5.1_noVAE
+
+## 无 API 路线实测
+
+- Codex 内置 `imagegen`：不需要 API Key，但本轮调用 `https://chatgpt.com/backend-api/codex/images/generations` 返回网络错误，未产生新文件。
+- 本机公开模型：成功；首次匿名下载公开权重，随后本机 CUDA 推理，128 张全部完成。
+- inference.sh skill：需要 `infsh login`，其设备授权仍会在本地保存服务会话凭据，因此不属于本轮要求的纯本地无凭据路线，未接入。
+- 旧 DiceBear 头像只保留为历史 SVG 生产母版，不再由玩家运行时加载；`capture_avatar_visuals.mjs` 已改为审计 PNG。
 
 ## Slot 分配
 
@@ -29,7 +38,7 @@
 | 52—67 | 抖音作者 |
 | 68—91 | QQ邮箱发件人 |
 | 96—111 | 知乎作者与评论 |
-| 112—119 | 贴吧用户与调查手机账户 |
+| 112—119 | 贴吧用户、调查手机账户与普通静物头像 |
 | 120 | 玩家本人跨 App 统一头像 |
 | 121 | 沈川跨 App 统一头像 |
 
@@ -59,11 +68,13 @@
 - 截图与运行时日志：`test-results/full-realism/avatar-pass/`
   - 28 张双视口页面及头像联系表截图；
   - `runtime-audit.json` 中 console error 为 0、failed request 为 0。
-- 真实 GitHub Pages 复验：`test-results/full-realism/avatar-pass-online/`
-  - 28 张直接来自 `https://magiicccc.github.io/11-52-arg/` 的双视口截图；
-  - 线上头像专项 Playwright 4/4 通过；
-  - console error 为 0、非导航取消类 failed request 为 0。
+- 本轮本机写实头像包复验：`test-results/full-realism/avatar-local-v2/`
+  - 28 张来自实际运行页面的双视口截图；
+  - 头像专项 Playwright 4/4 通过；
+  - `runtime-audit.json` 中两个视口的 console error 与 failed request 均为 0。
+- 本轮完整生产预览：`pnpm qa` 通过，单元测试 30/30、Playwright 38/38；包含 P00—A3-10、IndexedDB、Service Worker 与刷新恢复。
+- 真实 GitHub Pages 将在本提交的分支 Pages deployment 完成后重新复验；旧的 `avatar-pass-online` 只证明前一版本的线上资源加载，不作为本轮 128 张新包的上线证据。
 
 ## 视觉复核
 
-头像均使用真实图片元素或聊天气泡的本地图片背景，统一 `object-fit: cover`，圆形账户头像与微信方圆头像分别遵循各自页面结构。未再通过单字、首字母、问号或统一灰色方块模拟人物头像。
+头像均使用写实人物、宠物、风景、食物或日常物件图片，统一 `object-fit: cover`，圆形账户头像与微信方圆头像分别遵循各自页面结构。联系表人工检查未发现恐怖元素、剧情异常或明显五官畸变；未再通过单字、首字母、问号、统一卡通脸或统一灰色方块模拟人物头像。

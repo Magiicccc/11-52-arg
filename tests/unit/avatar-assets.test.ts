@@ -10,11 +10,18 @@ import {
 } from "@/content/avatar-assets";
 
 type AvatarManifest = {
+  source: string;
+  model: {
+    id: string;
+    revision: string;
+  };
   assets: Array<{
     slot: number;
     path: string;
-    seed: string;
+    seed: number;
     sha256: string;
+    width: number;
+    height: number;
   }>;
 };
 
@@ -27,6 +34,10 @@ describe("generated avatar asset pack", () => {
     expect(new Set(manifest.assets.map((asset) => asset.seed)).size).toBe(GENERATED_AVATAR_COUNT);
     expect(new Set(manifest.assets.map((asset) => asset.sha256)).size).toBe(GENERATED_AVATAR_COUNT);
     expect(manifest.assets.every((asset, index) => asset.slot === index && asset.path.endsWith(".png"))).toBe(true);
+    expect(manifest.assets.every((asset) => asset.width === 192 && asset.height === 192)).toBe(true);
+    expect(manifest.source).toContain("Local GPU generation");
+    expect(manifest.source).toContain("no image-generation API or API key");
+    expect(manifest.model.id).toBe("SG161222/Realistic_Vision_V5.1_noVAE");
   });
 
   it("maps every visible slot to a base-aware local asset URL", () => {
