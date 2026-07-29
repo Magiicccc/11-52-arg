@@ -73,7 +73,13 @@
   - 头像专项 Playwright 4/4 通过；
   - `runtime-audit.json` 中两个视口的 console error 与 failed request 均为 0。
 - 本轮完整生产预览：`pnpm qa` 通过，单元测试 30/30、Playwright 38/38；包含 P00—A3-10、IndexedDB、Service Worker 与刷新恢复。
-- 真实 GitHub Pages 将在本提交的分支 Pages deployment 完成后重新复验；旧的 `avatar-pass-online` 只证明前一版本的线上资源加载，不作为本轮 128 张新包的上线证据。
+- 真实 GitHub Pages 复验：`https://magiicccc.github.io/11-52-arg/`，部署提交 `311bddae0f4134d3bf100c14bcfa3b216e67adc9`。
+- GitHub Actions：run `30446207107`（attempt 2），build、deploy 与 online-test 全部通过。
+- 线上头像专项 Playwright：402×874 与 440×956 共 4/4 通过。
+- 线上截图与运行时日志：`test-results/full-realism/avatar-local-v2-online/`
+  - 共 28 张真实 GitHub Pages 页面截图；
+  - `runtime-audit.json` 中两个视口的 console error 与 failed request 均为 0；
+  - 已人工复核 QQ邮箱、抖音、知乎页面，头像图片均完成解码且未回退为单字、统一色块或旧 SVG。
 
 ## 视觉复核
 
