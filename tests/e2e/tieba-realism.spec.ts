@@ -41,6 +41,9 @@ test("贴吧具有真实首页、吧页、搜索、帖子、用户和缓存楼�
   await expect(page.getByTestId("tieba-home")).toBeVisible();
   await page.locator(".tieba-post-card").filter({ hasText: "今天傍晚这阵雨来得也太快了" }).getByRole("button").first().click();
   await expect(page.locator(".tieba-thread-op")).toContainText("今天傍晚这阵雨来得也太快了");
+  await expect(page.locator(".tieba-thread-op > p")).toHaveCount(4);
+  await expect(page.locator(".tieba-thread-op")).toContainText("晚高峰也多留一点换乘时间");
+  await expect(page.locator(".tieba-thread-op")).toContainText("不要为了赶几分钟直接穿过看不清底的水面");
   await page.getByPlaceholder("说点什么…").fill("雨停以后路面还是很滑，大家慢一点。");
   await page.getByRole("button", { name: "收藏帖子" }).click();
   await page.getByRole("button", { name: "发送" }).click();

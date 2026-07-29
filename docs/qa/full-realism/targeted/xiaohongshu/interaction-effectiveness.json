@@ -1,0 +1,1277 @@
+{
+  "baseUrl": "http://127.0.0.1:4176/",
+  "capturedAt": "2026-07-29T15:03:23.702Z",
+  "summary": [
+    {
+      "appId": "app.xiaohongshu",
+      "controls": 68,
+      "works": 66,
+      "disabled": 2,
+      "broken": 0
+    }
+  ],
+  "results": [
+    {
+      "appId": "app.xiaohongshu",
+      "surface": "home",
+      "interactionId": "app.xiaohongshu:菜单:1e41ke9",
+      "interactionState": "works",
+      "tag": "button",
+      "type": "",
+      "text": "☰",
+      "ariaLabel": "菜单",
+      "disabled": false,
+      "status": "WORKS",
+      "reason": "visible-surface-change",
+      "canonicalEvents": [
+        "app.view.changed"
+      ],
+      "formValueChanged": false,
+      "changedState": true,
+      "clickError": null
+    },
+    {
+      "appId": "app.xiaohongshu",
+      "surface": "home",
+      "interactionId": "app.xiaohongshu:关注:15krlry",
+      "interactionState": "works",
+      "tag": "button",
+      "type": "",
+      "text": "关注",
+      "ariaLabel": null,
+      "disabled": false,
+      "status": "WORKS",
+      "reason": "visible-surface-change",
+      "canonicalEvents": [
+        "app.view.changed"
+      ],
+      "formValueChanged": false,
+      "changedState": true,
+      "clickError": null
+    },
+    {
+      "appId": "app.xiaohongshu",
+      "surface": "home",
+      "interactionId": "app.xiaohongshu:发现:8ybvhb",
+      "interactionState": "works",
+      "tag": "button",
+      "type": "",
+      "text": "发现",
+      "ariaLabel": null,
+      "disabled": false,
+      "status": "WORKS",
+      "reason": "visible-surface-change",
+      "canonicalEvents": [
+        "app.view.changed"
+      ],
+      "formValueChanged": false,
+      "changedState": true,
+      "clickError": null
+    },
+    {
+      "appId": "app.xiaohongshu",
+      "surface": "home",
+      "interactionId": "app.xiaohongshu:附近:150see0",
+      "interactionState": "works",
+      "tag": "button",
+      "type": "",
+      "text": "附近",
+      "ariaLabel": null,
+      "disabled": false,
+      "status": "WORKS",
+      "reason": "visible-surface-change",
+      "canonicalEvents": [
+        "app.view.changed"
+      ],
+      "formValueChanged": false,
+      "changedState": true,
+      "clickError": null
+    },
+    {
+      "appId": "app.xiaohongshu",
+      "surface": "home",
+      "interactionId": "app.xiaohongshu:搜索:1da2rbc",
+      "interactionState": "works",
+      "tag": "button",
+      "type": "",
+      "text": "⌕",
+      "ariaLabel": "搜索",
+      "disabled": false,
+      "status": "WORKS",
+      "reason": "visible-surface-change",
+      "canonicalEvents": [],
+      "formValueChanged": false,
+      "changedState": false,
+      "clickError": null
+    },
+    {
+      "appId": "app.xiaohongshu",
+      "surface": "home",
+      "interactionId": "app.xiaohongshu:推荐:lhxt5a",
+      "interactionState": "works",
+      "tag": "button",
+      "type": "",
+      "text": "推荐",
+      "ariaLabel": null,
+      "disabled": false,
+      "status": "WORKS",
+      "reason": "visible-surface-change",
+      "canonicalEvents": [
+        "app.view.changed"
+      ],
+      "formValueChanged": false,
+      "changedState": true,
+      "clickError": null
+    },
+    {
+      "appId": "app.xiaohongshu",
+      "surface": "home",
+      "interactionId": "app.xiaohongshu:穿搭:mfsl4f",
+      "interactionState": "works",
+      "tag": "button",
+      "type": "",
+      "text": "穿搭",
+      "ariaLabel": null,
+      "disabled": false,
+      "status": "WORKS",
+      "reason": "visible-surface-change",
+      "canonicalEvents": [
+        "app.view.changed"
+      ],
+      "formValueChanged": false,
+      "changedState": true,
+      "clickError": null
+    },
+    {
+      "appId": "app.xiaohongshu",
+      "surface": "home",
+      "interactionId": "app.xiaohongshu:美食:m5szfg",
+      "interactionState": "works",
+      "tag": "button",
+      "type": "",
+      "text": "美食",
+      "ariaLabel": null,
+      "disabled": false,
+      "status": "WORKS",
+      "reason": "visible-surface-change",
+      "canonicalEvents": [
+        "app.view.changed"
+      ],
+      "formValueChanged": false,
+      "changedState": true,
+      "clickError": null
+    },
+    {
+      "appId": "app.xiaohongshu",
+      "surface": "home",
+      "interactionId": "app.xiaohongshu:旅行:lvtdqh",
+      "interactionState": "works",
+      "tag": "button",
+      "type": "",
+      "text": "旅行",
+      "ariaLabel": null,
+      "disabled": false,
+      "status": "WORKS",
+      "reason": "visible-surface-change",
+      "canonicalEvents": [
+        "app.view.changed"
+      ],
+      "formValueChanged": false,
+      "changedState": true,
+      "clickError": null
+    },
+    {
+      "appId": "app.xiaohongshu",
+      "surface": "home",
+      "interactionId": "app.xiaohongshu:摄影:llts1i",
+      "interactionState": "works",
+      "tag": "button",
+      "type": "",
+      "text": "摄影",
+      "ariaLabel": null,
+      "disabled": false,
+      "status": "WORKS",
+      "reason": "visible-surface-change",
+      "canonicalEvents": [
+        "app.view.changed"
+      ],
+      "formValueChanged": false,
+      "changedState": true,
+      "clickError": null
+    },
+    {
+      "appId": "app.xiaohongshu",
+      "surface": "home",
+      "interactionId": "app.xiaohongshu:数码:lbu6cj",
+      "interactionState": "works",
+      "tag": "button",
+      "type": "",
+      "text": "数码",
+      "ariaLabel": null,
+      "disabled": false,
+      "status": "WORKS",
+      "reason": "visible-surface-change",
+      "canonicalEvents": [
+        "app.view.changed"
+      ],
+      "formValueChanged": false,
+      "changedState": true,
+      "clickError": null
+    },
+    {
+      "appId": "app.xiaohongshu",
+      "surface": "home",
+      "interactionId": "app.xiaohongshu:居家:l1uknk",
+      "interactionState": "works",
+      "tag": "button",
+      "type": "",
+      "text": "居家",
+      "ariaLabel": null,
+      "disabled": false,
+      "status": "WORKS",
+      "reason": "visible-surface-change",
+      "canonicalEvents": [
+        "app.view.changed"
+      ],
+      "formValueChanged": false,
+      "changedState": true,
+      "clickError": null
+    },
+    {
+      "appId": "app.xiaohongshu",
+      "surface": "home",
+      "interactionId": "app.xiaohongshu:app-effective-action:1r5m3ze",
+      "interactionState": "works",
+      "tag": "button",
+      "type": "",
+      "text": "▣ 2▶雨停再走 南岸慢慢走 ♡ 428",
+      "ariaLabel": null,
+      "disabled": false,
+      "status": "WORKS",
+      "reason": "visible-surface-change",
+      "canonicalEvents": [
+        "content.item.opened"
+      ],
+      "formValueChanged": false,
+      "changedState": true,
+      "clickError": null
+    },
+    {
+      "appId": "app.xiaohongshu",
+      "surface": "home",
+      "interactionId": "app.xiaohongshu:一页一页存-橙色文件夹---1380:1qvmiaf",
+      "interactionState": "works",
+      "tag": "button",
+      "type": "",
+      "text": "一页一页存 橙色文件夹 ♡ 1380",
+      "ariaLabel": null,
+      "disabled": false,
+      "status": "WORKS",
+      "reason": "visible-surface-change",
+      "canonicalEvents": [
+        "content.item.opened"
+      ],
+      "formValueChanged": false,
+      "changedState": true,
+      "clickError": null
+    },
+    {
+      "appId": "app.xiaohongshu",
+      "surface": "home",
+      "interactionId": "app.xiaohongshu:今天的午饭很普通-午间十分钟---216:1qlmwlg",
+      "interactionState": "works",
+      "tag": "button",
+      "type": "",
+      "text": "今天的午饭很普通 午间十分钟 ♡ 216",
+      "ariaLabel": null,
+      "disabled": false,
+      "status": "WORKS",
+      "reason": "visible-surface-change",
+      "canonicalEvents": [
+        "content.item.opened"
+      ],
+      "formValueChanged": false,
+      "changedState": true,
+      "clickError": null
+    },
+    {
+      "appId": "app.xiaohongshu",
+      "surface": "home",
+      "interactionId": "app.xiaohongshu:2不费力的夏天穿搭-白色鞋带---389:1qbnawh",
+      "interactionState": "works",
+      "tag": "button",
+      "type": "",
+      "text": "▣ 2不费力的夏天穿搭 白色鞋带 ♡ 389",
+      "ariaLabel": null,
+      "disabled": false,
+      "status": "WORKS",
+      "reason": "visible-surface-change",
+      "canonicalEvents": [
+        "content.item.opened"
+      ],
+      "formValueChanged": false,
+      "changedState": true,
+      "clickError": null
+    },
+    {
+      "appId": "app.xiaohongshu",
+      "surface": "home",
+      "interactionId": "app.xiaohongshu:短途只带一个布袋-接口旁边---842:1q1np7i",
+      "interactionState": "works",
+      "tag": "button",
+      "type": "",
+      "text": "短途只带一个布袋 接口旁边 ♡ 842",
+      "ariaLabel": null,
+      "disabled": false,
+      "status": "WORKS",
+      "reason": "visible-surface-change",
+      "canonicalEvents": [
+        "content.item.opened"
+      ],
+      "formValueChanged": false,
+      "changedState": true,
+      "clickError": null
+    },
+    {
+      "appId": "app.xiaohongshu",
+      "surface": "home",
+      "interactionId": "app.xiaohongshu:路边小店的清汤面-今天吃什么呀---973:1pro3ij",
+      "interactionState": "works",
+      "tag": "button",
+      "type": "",
+      "text": "路边小店的清汤面 今天吃什么呀 ♡ 973",
+      "ariaLabel": null,
+      "disabled": false,
+      "status": "WORKS",
+      "reason": "visible-surface-change",
+      "canonicalEvents": [
+        "content.item.opened"
+      ],
+      "formValueChanged": false,
+      "changedState": true,
+      "clickError": null
+    },
+    {
+      "appId": "app.xiaohongshu",
+      "surface": "home",
+      "interactionId": "app.xiaohongshu:2阴天怎么拍树影-慢快门小顾---1206:1phohtk",
+      "interactionState": "works",
+      "tag": "button",
+      "type": "",
+      "text": "▣ 2阴天怎么拍树影 慢快门小顾 ♡ 1206",
+      "ariaLabel": null,
+      "disabled": false,
+      "status": "WORKS",
+      "reason": "visible-surface-change",
+      "canonicalEvents": [
+        "content.item.opened"
+      ],
+      "formValueChanged": false,
+      "changedState": true,
+      "clickError": null
+    },
+    {
+      "appId": "app.xiaohongshu",
+      "surface": "home",
+      "interactionId": "app.xiaohongshu:猫在窗边睡了一下午-八点四十二---632:1p7ow4l",
+      "interactionState": "works",
+      "tag": "button",
+      "type": "",
+      "text": "▶猫在窗边睡了一下午 八点四十二 ♡ 632",
+      "ariaLabel": null,
+      "disabled": false,
+      "status": "WORKS",
+      "reason": "visible-surface-change",
+      "canonicalEvents": [
+        "content.item.opened"
+      ],
+      "formValueChanged": false,
+      "changedState": true,
+      "clickError": null
+    },
+    {
+      "appId": "app.xiaohongshu",
+      "surface": "home",
+      "interactionId": "app.xiaohongshu:周末书桌复位-木桌边---517:1oxpafm",
+      "interactionState": "works",
+      "tag": "button",
+      "type": "",
+      "text": "周末书桌复位 木桌边 ♡ 517",
+      "ariaLabel": null,
+      "disabled": false,
+      "status": "WORKS",
+      "reason": "visible-surface-change",
+      "canonicalEvents": [
+        "content.item.opened"
+      ],
+      "formValueChanged": false,
+      "changedState": true,
+      "clickError": null
+    },
+    {
+      "appId": "app.xiaohongshu",
+      "surface": "home",
+      "interactionId": "app.xiaohongshu:2一小时读完短篇-第三章以后---305:1tig9ym",
+      "interactionState": "works",
+      "tag": "button",
+      "type": "",
+      "text": "▣ 2一小时读完短篇 第三章以后 ♡ 305",
+      "ariaLabel": null,
+      "disabled": false,
+      "status": "WORKS",
+      "reason": "visible-surface-change",
+      "canonicalEvents": [
+        "content.item.opened"
+      ],
+      "formValueChanged": false,
+      "changedState": true,
+      "clickError": null
+    },
+    {
+      "appId": "app.xiaohongshu",
+      "surface": "home",
+      "interactionId": "app.xiaohongshu:雨后自行车道-沿河但不靠河---711:1tsfvnl",
+      "interactionState": "works",
+      "tag": "button",
+      "type": "",
+      "text": "雨后自行车道 沿河但不靠河 ♡ 711",
+      "ariaLabel": null,
+      "disabled": false,
+      "status": "WORKS",
+      "reason": "visible-surface-change",
+      "canonicalEvents": [
+        "content.item.opened"
+      ],
+      "formValueChanged": false,
+      "changedState": true,
+      "clickError": null
+    },
+    {
+      "appId": "app.xiaohongshu",
+      "surface": "home",
+      "interactionId": "app.xiaohongshu:2别把截图当备份-硬盘灯还亮着---2115:1syh2ko",
+      "interactionState": "works",
+      "tag": "button",
+      "type": "",
+      "text": "▣ 2别把截图当备份 硬盘灯还亮着 ♡ 2115",
+      "ariaLabel": null,
+      "disabled": false,
+      "status": "WORKS",
+      "reason": "visible-surface-change",
+      "canonicalEvents": [
+        "content.item.opened"
+      ],
+      "formValueChanged": false,
+      "changedState": true,
+      "clickError": null
+    },
+    {
+      "appId": "app.xiaohongshu",
+      "surface": "home",
+      "interactionId": "app.xiaohongshu:今天不想做很多事情-写字楼观察员---344:1t8go9n",
+      "interactionState": "works",
+      "tag": "button",
+      "type": "",
+      "text": "今天不想做很多事情 写字楼观察员 ♡ 344",
+      "ariaLabel": null,
+      "disabled": false,
+      "status": "WORKS",
+      "reason": "visible-surface-change",
+      "canonicalEvents": [
+        "content.item.opened"
+      ],
+      "formValueChanged": false,
+      "changedState": true,
+      "clickError": null
+    },
+    {
+      "appId": "app.xiaohongshu",
+      "surface": "home",
+      "interactionId": "app.xiaohongshu:2普通相机也能拍夜路-一档欠曝---1762:1umeoqi",
+      "interactionState": "works",
+      "tag": "button",
+      "type": "",
+      "text": "▣ 2普通相机也能拍夜路 一档欠曝 ♡ 1762",
+      "ariaLabel": null,
+      "disabled": false,
+      "status": "WORKS",
+      "reason": "visible-surface-change",
+      "canonicalEvents": [
+        "content.item.opened"
+      ],
+      "formValueChanged": false,
+      "changedState": true,
+      "clickError": null
+    },
+    {
+      "appId": "app.xiaohongshu",
+      "surface": "home",
+      "interactionId": "app.xiaohongshu:本周买菜清单-冰箱便签---188:1uweafh",
+      "interactionState": "works",
+      "tag": "button",
+      "type": "",
+      "text": "本周买菜清单 冰箱便签 ♡ 188",
+      "ariaLabel": null,
+      "disabled": false,
+      "status": "WORKS",
+      "reason": "visible-surface-change",
+      "canonicalEvents": [
+        "content.item.opened"
+      ],
+      "formValueChanged": false,
+      "changedState": true,
+      "clickError": null
+    },
+    {
+      "appId": "app.xiaohongshu",
+      "surface": "home",
+      "interactionId": "app.xiaohongshu:2会议录音怎么归档-研究提纲---906:1u2fhck",
+      "interactionState": "works",
+      "tag": "button",
+      "type": "",
+      "text": "▣ 2会议录音怎么归档 研究提纲 ♡ 906",
+      "ariaLabel": null,
+      "disabled": false,
+      "status": "WORKS",
+      "reason": "visible-surface-change",
+      "canonicalEvents": [
+        "content.item.opened"
+      ],
+      "formValueChanged": false,
+      "changedState": true,
+      "clickError": null
+    },
+    {
+      "appId": "app.xiaohongshu",
+      "surface": "home",
+      "interactionId": "app.xiaohongshu:雨天鞋子怎么干得快-鞋柜观察---756:1ucf31j",
+      "interactionState": "works",
+      "tag": "button",
+      "type": "",
+      "text": "雨天鞋子怎么干得快 鞋柜观察 ♡ 756",
+      "ariaLabel": null,
+      "disabled": false,
+      "status": "WORKS",
+      "reason": "visible-surface-change",
+      "canonicalEvents": [
+        "content.item.opened"
+      ],
+      "formValueChanged": false,
+      "changedState": true,
+      "clickError": null
+    },
+    {
+      "appId": "app.xiaohongshu",
+      "surface": "home",
+      "interactionId": "app.xiaohongshu:2拍照前先擦镜头-镜头布不见了---1444:1rajgeu",
+      "interactionState": "works",
+      "tag": "button",
+      "type": "",
+      "text": "▣ 2拍照前先擦镜头 镜头布不见了 ♡ 1444",
+      "ariaLabel": null,
+      "disabled": false,
+      "status": "WORKS",
+      "reason": "visible-surface-change",
+      "canonicalEvents": [
+        "content.item.opened"
+      ],
+      "formValueChanged": false,
+      "changedState": true,
+      "clickError": null
+    },
+    {
+      "appId": "app.xiaohongshu",
+      "surface": "home",
+      "interactionId": "app.xiaohongshu:今天不做复杂菜-灶台很小---269:1rkj23t",
+      "interactionState": "works",
+      "tag": "button",
+      "type": "",
+      "text": "今天不做复杂菜 灶台很小 ♡ 269",
+      "ariaLabel": null,
+      "disabled": false,
+      "status": "WORKS",
+      "reason": "visible-surface-change",
+      "canonicalEvents": [
+        "content.item.opened"
+      ],
+      "formValueChanged": false,
+      "changedState": true,
+      "clickError": null
+    },
+    {
+      "appId": "app.xiaohongshu",
+      "surface": "home",
+      "interactionId": "app.xiaohongshu:2文件名里到底写什么-版本号从一开始---1887:1rufiat",
+      "interactionState": "works",
+      "tag": "button",
+      "type": "",
+      "text": "▣ 2文件名里到底写什么 版本号从一开始 ♡ 1887",
+      "ariaLabel": null,
+      "disabled": false,
+      "status": "WORKS",
+      "reason": "visible-surface-change",
+      "canonicalEvents": [
+        "content.item.opened"
+      ],
+      "formValueChanged": false,
+      "changedState": true,
+      "clickError": null
+    },
+    {
+      "appId": "app.xiaohongshu",
+      "surface": "home",
+      "interactionId": "app.xiaohongshu:城市里适合独处的十分钟-耳机只戴一边---668:1rkfwlu",
+      "interactionState": "works",
+      "tag": "button",
+      "type": "",
+      "text": "▶城市里适合独处的十分钟 耳机只戴一边 ♡ 668",
+      "ariaLabel": null,
+      "disabled": false,
+      "status": "WORKS",
+      "reason": "visible-surface-change",
+      "canonicalEvents": [
+        "content.item.opened"
+      ],
+      "formValueChanged": false,
+      "changedState": true,
+      "clickError": null
+    },
+    {
+      "appId": "app.xiaohongshu",
+      "surface": "home",
+      "interactionId": "app.xiaohongshu:2阳台小植物恢复了-窗台三号盆---452:1ragawv",
+      "interactionState": "works",
+      "tag": "button",
+      "type": "",
+      "text": "▣ 2阳台小植物恢复了 窗台三号盆 ♡ 452",
+      "ariaLabel": null,
+      "disabled": false,
+      "status": "WORKS",
+      "reason": "visible-surface-change",
+      "canonicalEvents": [
+        "content.item.opened"
+      ],
+      "formValueChanged": false,
+      "changedState": true,
+      "clickError": null
+    },
+    {
+      "appId": "app.xiaohongshu",
+      "surface": "home",
+      "interactionId": "app.xiaohongshu:如何减少每天的小摩擦-今天没迟到---1118:1r0gp7w",
+      "interactionState": "works",
+      "tag": "button",
+      "type": "",
+      "text": "如何减少每天的小摩擦 今天没迟到 ♡ 1118",
+      "ariaLabel": null,
+      "disabled": false,
+      "status": "WORKS",
+      "reason": "visible-surface-change",
+      "canonicalEvents": [
+        "content.item.opened"
+      ],
+      "formValueChanged": false,
+      "changedState": true,
+      "clickError": null
+    },
+    {
+      "appId": "app.xiaohongshu",
+      "surface": "home",
+      "interactionId": "app.xiaohongshu:2周末照片只整理一百张-照片很多但不慌---1529:1qqh3ix",
+      "interactionState": "works",
+      "tag": "button",
+      "type": "",
+      "text": "▣ 2周末照片只整理一百张 照片很多但不慌 ♡ 1529",
+      "ariaLabel": null,
+      "disabled": false,
+      "status": "WORKS",
+      "reason": "visible-surface-change",
+      "canonicalEvents": [
+        "content.item.opened"
+      ],
+      "formValueChanged": false,
+      "changedState": true,
+      "clickError": null
+    },
+    {
+      "appId": "app.xiaohongshu",
+      "surface": "home",
+      "interactionId": "app.xiaohongshu:桥下咖啡-雨刚停-川流档案---126:1qghhty",
+      "interactionState": "works",
+      "tag": "button",
+      "type": "",
+      "text": "桥下咖啡，雨刚停 川流档案 ♡ 126",
+      "ariaLabel": null,
+      "disabled": false,
+      "status": "WORKS",
+      "reason": "visible-surface-change",
+      "canonicalEvents": [
+        "content.item.opened"
+      ],
+      "formValueChanged": false,
+      "changedState": true,
+      "clickError": null
+    },
+    {
+      "appId": "app.xiaohongshu",
+      "surface": "home",
+      "interactionId": "app.xiaohongshu:公司楼下的用户研究对象-川流档案---318:1q6hw4z",
+      "interactionState": "works",
+      "tag": "button",
+      "type": "",
+      "text": "公司楼下的用户研究对象 川流档案 ♡ 318",
+      "ariaLabel": null,
+      "disabled": false,
+      "status": "WORKS",
+      "reason": "visible-surface-change",
+      "canonicalEvents": [
+        "content.item.opened"
+      ],
+      "formValueChanged": false,
+      "changedState": true,
+      "clickError": null
+    },
+    {
+      "appId": "app.xiaohongshu",
+      "surface": "home",
+      "interactionId": "app.xiaohongshu:一段比地图上更长的走廊--川流档案---97:1pwiag0",
+      "interactionState": "works",
+      "tag": "button",
+      "type": "",
+      "text": "一段比地图上更长的走廊。 川流档案 ♡ 97",
+      "ariaLabel": null,
+      "disabled": false,
+      "status": "WORKS",
+      "reason": "visible-surface-change",
+      "canonicalEvents": [
+        "content.item.opened"
+      ],
+      "formValueChanged": false,
+      "changedState": true,
+      "clickError": null
+    },
+    {
+      "appId": "app.xiaohongshu",
+      "surface": "home",
+      "interactionId": "app.xiaohongshu:我怎么给网页做本地存档-川流档案---3812:1u2cbul",
+      "interactionState": "works",
+      "tag": "button",
+      "type": "",
+      "text": "我怎么给网页做本地存档 川流档案 ♡ 3812",
+      "ariaLabel": null,
+      "disabled": false,
+      "status": "WORKS",
+      "reason": "visible-surface-change",
+      "canonicalEvents": [
+        "content.item.opened"
+      ],
+      "formValueChanged": false,
+      "changedState": true,
+      "clickError": null
+    },
+    {
+      "appId": "app.xiaohongshu",
+      "surface": "home",
+      "interactionId": "app.xiaohongshu:周女士寄来的蓝色搪瓷杯--川流档案---271:1tscq5m",
+      "interactionState": "works",
+      "tag": "button",
+      "type": "",
+      "text": "周女士寄来的蓝色搪瓷杯。 川流档案 ♡ 271",
+      "ariaLabel": null,
+      "disabled": false,
+      "status": "WORKS",
+      "reason": "visible-surface-change",
+      "canonicalEvents": [
+        "content.item.opened"
+      ],
+      "formValueChanged": false,
+      "changedState": true,
+      "clickError": null
+    },
+    {
+      "appId": "app.xiaohongshu",
+      "surface": "home",
+      "interactionId": "app.xiaohongshu:杭州下雨时适合走没有目的的路--川流档案---188:1q6eqn0",
+      "interactionState": "works",
+      "tag": "button",
+      "type": "",
+      "text": "杭州下雨时适合走没有目的的路。 川流档案 ♡ 188",
+      "ariaLabel": null,
+      "disabled": false,
+      "status": "WORKS",
+      "reason": "visible-surface-change",
+      "canonicalEvents": [
+        "content.item.opened"
+      ],
+      "formValueChanged": false,
+      "changedState": true,
+      "clickError": null
+    },
+    {
+      "appId": "app.xiaohongshu",
+      "surface": "home",
+      "interactionId": "app.xiaohongshu:这只猫拒绝参与任何用户访谈--川流档案---624:1qgecbz",
+      "interactionState": "works",
+      "tag": "button",
+      "type": "",
+      "text": "这只猫拒绝参与任何用户访谈。 川流档案 ♡ 624",
+      "ariaLabel": null,
+      "disabled": false,
+      "status": "WORKS",
+      "reason": "visible-surface-change",
+      "canonicalEvents": [
+        "content.item.opened"
+      ],
+      "formValueChanged": false,
+      "changedState": true,
+      "clickError": null
+    },
+    {
+      "appId": "app.xiaohongshu",
+      "surface": "home",
+      "interactionId": "app.xiaohongshu:离线保存不是截图-给资料党的一点习惯-川流档案---1206:1qqdy0y",
+      "interactionState": "works",
+      "tag": "button",
+      "type": "",
+      "text": "离线保存不是截图：给资料党的一点习惯 川流档案 ♡ 1206",
+      "ariaLabel": null,
+      "disabled": false,
+      "status": "WORKS",
+      "reason": "visible-surface-change",
+      "canonicalEvents": [
+        "content.item.opened"
+      ],
+      "formValueChanged": false,
+      "changedState": true,
+      "clickError": null
+    },
+    {
+      "appId": "app.xiaohongshu",
+      "surface": "home",
+      "interactionId": "app.xiaohongshu:旧校舍外墙与同一个下午--川流档案---146:1r0djpx",
+      "interactionState": "works",
+      "tag": "button",
+      "type": "",
+      "text": "旧校舍外墙与同一个下午。 川流档案 ♡ 146",
+      "ariaLabel": null,
+      "disabled": false,
+      "status": "WORKS",
+      "reason": "visible-surface-change",
+      "canonicalEvents": [
+        "content.item.opened"
+      ],
+      "formValueChanged": false,
+      "changedState": true,
+      "clickError": null
+    },
+    {
+      "appId": "app.xiaohongshu",
+      "surface": "home",
+      "interactionId": "app.xiaohongshu:同一网页-同一秒-两台设备-正文不一样--川流档案---173:1p2gbv4",
+      "interactionState": "works",
+      "tag": "button",
+      "type": "",
+      "text": "同一网页、同一秒、两台设备，正文不一样。 川流档案 ♡ 173",
+      "ariaLabel": null,
+      "disabled": false,
+      "status": "WORKS",
+      "reason": "visible-surface-change",
+      "canonicalEvents": [
+        "content.item.opened"
+      ],
+      "formValueChanged": false,
+      "changedState": true,
+      "clickError": null
+    },
+    {
+      "appId": "app.xiaohongshu",
+      "surface": "home",
+      "interactionId": "app.xiaohongshu:416之后为什么直接是418--川流档案---89:1pcfxk3",
+      "interactionState": "works",
+      "tag": "button",
+      "type": "",
+      "text": "416之后为什么直接是418？ 川流档案 ♡ 89",
+      "ariaLabel": null,
+      "disabled": false,
+      "status": "WORKS",
+      "reason": "visible-surface-change",
+      "canonicalEvents": [
+        "content.item.opened"
+      ],
+      "formValueChanged": false,
+      "changedState": true,
+      "clickError": null
+    },
+    {
+      "appId": "app.xiaohongshu",
+      "surface": "home",
+      "interactionId": "app.xiaohongshu:滨河旧园区外围散步--川流档案---212:1pmfj92",
+      "interactionState": "works",
+      "tag": "button",
+      "type": "",
+      "text": "滨河旧园区外围散步。 川流档案 ♡ 212",
+      "ariaLabel": null,
+      "disabled": false,
+      "status": "WORKS",
+      "reason": "visible-surface-change",
+      "canonicalEvents": [
+        "content.item.opened"
+      ],
+      "formValueChanged": false,
+      "changedState": true,
+      "clickError": null
+    },
+    {
+      "appId": "app.xiaohongshu",
+      "surface": "home",
+      "interactionId": "app.xiaohongshu:蓝杯子又掉了一块漆--川流档案---154:1pwf4y1",
+      "interactionState": "works",
+      "tag": "button",
+      "type": "",
+      "text": "蓝杯子又掉了一块漆。 川流档案 ♡ 154",
+      "ariaLabel": null,
+      "disabled": false,
+      "status": "WORKS",
+      "reason": "visible-surface-change",
+      "canonicalEvents": [
+        "content.item.opened"
+      ],
+      "formValueChanged": false,
+      "changedState": true,
+      "clickError": null
+    },
+    {
+      "appId": "app.xiaohongshu",
+      "surface": "home",
+      "interactionId": "app.xiaohongshu:三件事验证法--川流档案---23:1sebk6s",
+      "interactionState": "works",
+      "tag": "button",
+      "type": "",
+      "text": "三件事验证法。 川流档案 ♡ 23",
+      "ariaLabel": null,
+      "disabled": false,
+      "status": "WORKS",
+      "reason": "visible-surface-change",
+      "canonicalEvents": [
+        "content.item.opened"
+      ],
+      "formValueChanged": false,
+      "changedState": true,
+      "clickError": null
+    },
+    {
+      "appId": "app.xiaohongshu",
+      "surface": "home",
+      "interactionId": "app.xiaohongshu:今天先不整理--川流档案---31:1sob5vr",
+      "interactionState": "works",
+      "tag": "button",
+      "type": "",
+      "text": "今天先不整理。 川流档案 ♡ 31",
+      "ariaLabel": null,
+      "disabled": false,
+      "status": "WORKS",
+      "reason": "visible-surface-change",
+      "canonicalEvents": [
+        "content.item.opened"
+      ],
+      "formValueChanged": false,
+      "changedState": true,
+      "clickError": null
+    },
+    {
+      "appId": "app.xiaohongshu",
+      "surface": "home",
+      "interactionId": "app.xiaohongshu:首页:yhc3u7",
+      "interactionState": "works",
+      "tag": "button",
+      "type": "",
+      "text": "首页",
+      "ariaLabel": "首页",
+      "disabled": false,
+      "status": "WORKS",
+      "reason": "visible-surface-change",
+      "canonicalEvents": [
+        "app.view.changed"
+      ],
+      "formValueChanged": false,
+      "changedState": true,
+      "clickError": null
+    },
+    {
+      "appId": "app.xiaohongshu",
+      "surface": "home",
+      "interactionId": "app.xiaohongshu:购物:djg8xc",
+      "interactionState": "works",
+      "tag": "button",
+      "type": "",
+      "text": "购物",
+      "ariaLabel": "购物",
+      "disabled": false,
+      "status": "WORKS",
+      "reason": "visible-surface-change",
+      "canonicalEvents": [
+        "app.view.changed"
+      ],
+      "formValueChanged": false,
+      "changedState": true,
+      "clickError": null
+    },
+    {
+      "appId": "app.xiaohongshu",
+      "surface": "home",
+      "interactionId": "app.xiaohongshu:发布:gspate",
+      "interactionState": "works",
+      "tag": "button",
+      "type": "",
+      "text": "＋",
+      "ariaLabel": "发布",
+      "disabled": false,
+      "status": "WORKS",
+      "reason": "visible-surface-change",
+      "canonicalEvents": [
+        "app.view.changed"
+      ],
+      "formValueChanged": false,
+      "changedState": true,
+      "clickError": null
+    },
+    {
+      "appId": "app.xiaohongshu",
+      "surface": "home",
+      "interactionId": "app.xiaohongshu:消息:f7dv36",
+      "interactionState": "works",
+      "tag": "button",
+      "type": "",
+      "text": "消息",
+      "ariaLabel": "消息",
+      "disabled": false,
+      "status": "WORKS",
+      "reason": "visible-surface-change",
+      "canonicalEvents": [
+        "app.view.changed"
+      ],
+      "formValueChanged": false,
+      "changedState": true,
+      "clickError": null
+    },
+    {
+      "appId": "app.xiaohongshu",
+      "surface": "home",
+      "interactionId": "app.xiaohongshu:我:fhdgs5",
+      "interactionState": "works",
+      "tag": "button",
+      "type": "",
+      "text": "我",
+      "ariaLabel": "我",
+      "disabled": false,
+      "status": "WORKS",
+      "reason": "visible-surface-change",
+      "canonicalEvents": [
+        "app.view.changed"
+      ],
+      "formValueChanged": false,
+      "changedState": true,
+      "clickError": null
+    },
+    {
+      "appId": "app.xiaohongshu",
+      "surface": "home",
+      "interactionId": "app.xiaohongshu:app-back:8p76u5",
+      "interactionState": "works",
+      "tag": "button",
+      "type": "",
+      "text": "",
+      "ariaLabel": "退出小红书",
+      "disabled": false,
+      "status": "WORKS",
+      "reason": "visible-surface-change",
+      "canonicalEvents": [],
+      "formValueChanged": false,
+      "changedState": true,
+      "clickError": null
+    },
+    {
+      "appId": "app.xiaohongshu",
+      "surface": "detail",
+      "interactionId": "app.xiaohongshu:返回:19hk0gm",
+      "interactionState": "works",
+      "tag": "button",
+      "type": "",
+      "text": "‹",
+      "ariaLabel": "返回",
+      "disabled": false,
+      "status": "WORKS",
+      "reason": "visible-surface-change",
+      "canonicalEvents": [],
+      "formValueChanged": false,
+      "changedState": false,
+      "clickError": null
+    },
+    {
+      "appId": "app.xiaohongshu",
+      "surface": "detail",
+      "interactionId": "app.xiaohongshu:更多:1l6fxk",
+      "interactionState": "works",
+      "tag": "button",
+      "type": "",
+      "text": "•••",
+      "ariaLabel": "更多",
+      "disabled": false,
+      "status": "WORKS",
+      "reason": "visible-surface-change",
+      "canonicalEvents": [],
+      "formValueChanged": false,
+      "changedState": false,
+      "clickError": null
+    },
+    {
+      "appId": "app.xiaohongshu",
+      "surface": "detail",
+      "interactionId": "app.xiaohongshu:查看第1张:1bpc5on",
+      "interactionState": "disabled",
+      "tag": "button",
+      "type": "",
+      "text": "",
+      "ariaLabel": "查看第1张",
+      "disabled": true,
+      "status": "DISABLED",
+      "reason": "disabled-by-current-state"
+    },
+    {
+      "appId": "app.xiaohongshu",
+      "surface": "detail",
+      "interactionId": "app.xiaohongshu:查看第2张:77uyag",
+      "interactionState": "works",
+      "tag": "button",
+      "type": "",
+      "text": "",
+      "ariaLabel": "查看第2张",
+      "disabled": false,
+      "status": "WORKS",
+      "reason": "visible-surface-change",
+      "canonicalEvents": [],
+      "formValueChanged": false,
+      "changedState": false,
+      "clickError": null
+    },
+    {
+      "appId": "app.xiaohongshu",
+      "surface": "detail",
+      "interactionId": "app.xiaohongshu:南岸慢慢走:ti24ni",
+      "interactionState": "works",
+      "tag": "button",
+      "type": "",
+      "text": "南岸慢慢走",
+      "ariaLabel": null,
+      "disabled": false,
+      "status": "WORKS",
+      "reason": "visible-surface-change",
+      "canonicalEvents": [],
+      "formValueChanged": false,
+      "changedState": false,
+      "clickError": null
+    },
+    {
+      "appId": "app.xiaohongshu",
+      "surface": "detail",
+      "interactionId": "app.xiaohongshu:关注:1v6ux27",
+      "interactionState": "works",
+      "tag": "button",
+      "type": "",
+      "text": "关注",
+      "ariaLabel": null,
+      "disabled": false,
+      "status": "WORKS",
+      "reason": "visible-surface-change",
+      "canonicalEvents": [],
+      "formValueChanged": false,
+      "changedState": true,
+      "clickError": null
+    },
+    {
+      "appId": "app.xiaohongshu",
+      "surface": "detail",
+      "interactionId": "app.xiaohongshu:说点什么:9qprde",
+      "interactionState": "works",
+      "tag": "input",
+      "type": "",
+      "text": "",
+      "ariaLabel": null,
+      "disabled": false,
+      "status": "WORKS",
+      "reason": "form-value-change",
+      "canonicalEvents": [],
+      "formValueChanged": true,
+      "changedState": false,
+      "clickError": null
+    },
+    {
+      "appId": "app.xiaohongshu",
+      "surface": "detail",
+      "interactionId": "app.xiaohongshu:赞-428:ayliua",
+      "interactionState": "works",
+      "tag": "button",
+      "type": "",
+      "text": "赞 428",
+      "ariaLabel": null,
+      "disabled": false,
+      "status": "WORKS",
+      "reason": "visible-surface-change",
+      "canonicalEvents": [
+        "content.item.interacted"
+      ],
+      "formValueChanged": false,
+      "changedState": true,
+      "clickError": null
+    },
+    {
+      "appId": "app.xiaohongshu",
+      "surface": "detail",
+      "interactionId": "app.xiaohongshu:已收藏:1ylgg2j",
+      "interactionState": "works",
+      "tag": "button",
+      "type": "",
+      "text": "已收藏",
+      "ariaLabel": null,
+      "disabled": false,
+      "status": "WORKS",
+      "reason": "visible-surface-change",
+      "canonicalEvents": [
+        "content.item.interacted"
+      ],
+      "formValueChanged": false,
+      "changedState": true,
+      "clickError": null
+    },
+    {
+      "appId": "app.xiaohongshu",
+      "surface": "detail",
+      "interactionId": "app.xiaohongshu:发送:aembgc",
+      "interactionState": "disabled",
+      "tag": "button",
+      "type": "",
+      "text": "发送",
+      "ariaLabel": null,
+      "disabled": true,
+      "status": "DISABLED",
+      "reason": "disabled-by-current-state"
+    },
+    {
+      "appId": "app.xiaohongshu",
+      "surface": "detail",
+      "interactionId": "app.xiaohongshu:app-back:8p76u5",
+      "interactionState": "works",
+      "tag": "button",
+      "type": "",
+      "text": "",
+      "ariaLabel": "退出笔记",
+      "disabled": false,
+      "status": "WORKS",
+      "reason": "visible-surface-change",
+      "canonicalEvents": [],
+      "formValueChanged": false,
+      "changedState": true,
+      "clickError": null
+    }
+  ]
+}

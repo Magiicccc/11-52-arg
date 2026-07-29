@@ -28,6 +28,11 @@ describe("ordinary digital-life realism pack", () => {
     expect(realismContentSummary.xhsDefaultFavorites).toBeGreaterThanOrEqual(6);
     expect(realismContentSummary.xhsDefaultHistory).toBeGreaterThanOrEqual(4);
     expect(realismContentSummary.xhsDrafts).toBeGreaterThanOrEqual(2);
+    expect(ordinaryXhsNotes.every((note) => note.body.length >= 4)).toBe(true);
+    expect(ordinaryXhsNotes.every((note) => note.body.join("").length >= 180)).toBe(true);
+    expect(ordinaryXhsNotes.every((note) => note.summary.length < note.body.join("").length)).toBe(true);
+    expect(new Set(ordinaryXhsNotes.flatMap((note) => note.comments.map((comment) => comment.text))).size)
+      .toBe(ordinaryXhsNotes.reduce((sum, note) => sum + note.comments.length, 0));
 
     expect(realismContentSummary.mails).toBeGreaterThanOrEqual(20);
     expect(realismContentSummary.mailFolders).toBeGreaterThanOrEqual(6);

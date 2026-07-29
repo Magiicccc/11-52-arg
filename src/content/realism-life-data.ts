@@ -1,4 +1,5 @@
 import type { NarrativeMetadata } from "@/contracts/content";
+import longFormXhsNotes from "../../content/case-001/apps/long-form-xhs-notes.json";
 
 export type OrdinaryMessageType =
   | "text"
@@ -38,6 +39,7 @@ export interface OrdinaryXhsNote {
   avatar: string;
   category: string;
   title: string;
+  summary: string;
   body: string[];
   date: string;
   location: string;
@@ -430,64 +432,50 @@ const xhsMedia = [
   "/media/case-001/daily/temporary-balcony-plants.jpg"
 ];
 
-const xhsSeeds: Array<[string, string, string, string, string, number, number]> = [
-  ["雨停再走", "雨停后的十五分钟，街边反光比晴天更有层次。", "城市散步", "南岸慢慢走", "杭州市", 428, 36],
-  ["一页一页存", "整理旧文件时，先把来源和日期写清楚。", "数码整理", "橙色文件夹", "杭州", 1380, 92],
-  ["今天的午饭很普通", "工作日的一荤一素，吃完继续开会。", "日常饮食", "午间十分钟", "杭州", 216, 18],
-  ["不费力的夏天穿搭", "薄衬衫和宽松短裤，雨天也不用担心衣角拖地。", "穿搭", "白色鞋带", "杭州", 389, 27],
-  ["短途只带一个布袋", "车上要看的书和一瓶水，轻一点反而更自在。", "旅行", "接口旁边", "杭州", 842, 61],
-  ["路边小店的清汤面", "雨天想吃一点热的，清汤比重口更舒服。", "日常饮食", "今天吃什么呀", "杭州", 973, 74],
-  ["阴天怎么拍树影", "不要急着拉高对比，灰色也可以很有层次。", "摄影", "慢快门小顾", "杭州", 1206, 83],
-  ["猫在窗边睡了一下午", "雨声很轻，它换了两个姿势也没有醒。", "宠物", "八点四十二", "杭州", 632, 49],
-  ["周末书桌复位", "把外置硬盘接好，给下周留一个空桌面。", "居家", "木桌边", "杭州", 517, 33],
-  ["一小时读完短篇", "手机开勿扰，纸笔放在手边。", "阅读", "第三章以后", "杭州", 305, 21],
-  ["雨后自行车道", "积水退了以后，树下这一段很好走。", "城市散步", "沿河但不靠河", "杭州", 711, 58],
-  ["别把截图当备份", "截图适合记录当下，长期保存还得留原文件。", "数码整理", "硬盘灯还亮着", "杭州", 2115, 146],
-  ["今天不想做很多事情", "下班后只绕了一小段路，也算给一天留了空白。", "普通情绪", "写字楼观察员", "杭州", 344, 26],
-  ["普通相机也能拍夜路", "先稳住，别急着把暗部全部提亮。", "摄影", "一档欠曝", "杭州", 1762, 101],
-  ["本周买菜清单", "青菜、番茄、鸡蛋和一小袋米。", "居家", "冰箱便签", "杭州", 188, 12],
-  ["会议录音怎么归档", "先保留原始录音，再单独做逐字稿。", "工作方法", "研究提纲", "杭州", 906, 67],
-  ["雨天鞋子怎么干得快", "先吸水，再通风，不要直接贴着热源。", "生活经验", "鞋柜观察", "杭州", 756, 52],
-  ["拍照前先擦镜头", "最简单的一步，常常能解决大部分雾蒙蒙。", "摄影", "镜头布不见了", "杭州", 1444, 95],
-  ["今天不做复杂菜", "青菜、米饭和一碗汤也够了。", "日常饮食", "灶台很小", "杭州", 269, 17],
-  ["文件名里到底写什么", "日期、主题、版本和是否脱敏，足够了。", "工作方法", "版本号从一开始", "杭州", 1887, 120],
-  ["城市里适合独处的十分钟", "下班后绕一小段路，听完一首歌再回家。", "城市生活", "耳机只戴一边", "杭州", 668, 44],
-  ["阳台小植物恢复了", "连续阴雨后终于见到一点新叶。", "居家", "窗台三号盆", "杭州", 452, 39],
-  ["如何减少每天的小摩擦", "把常用东西放回固定位置，真的有用。", "通勤", "今天没迟到", "杭州", 1118, 86],
-  ["周末照片只整理一百张", "给任务设上限，反而更容易开始。", "数码整理", "照片很多但不慌", "杭州", 1529, 108]
-];
+interface LongFormXhsSeed {
+  title: string;
+  summary: string;
+  paragraphs: string[];
+  category: string;
+  author: string;
+  location: string;
+  likes: number;
+  comments: Array<{ author: string; text: string; likes: number }>;
+  mediaIndex: number;
+  mediaSetOffset?: number;
+  mediaType: "image" | "video";
+}
 
-export const ordinaryXhsNotes: OrdinaryXhsNote[] = xhsSeeds.map(([title, body, category, author, location, likes, commentCount], index) => ({
+const xhsSeeds = longFormXhsNotes as LongFormXhsSeed[];
+
+export const ordinaryXhsNotes: OrdinaryXhsNote[] = xhsSeeds.map((seed, index) => ({
   id: `xhs.ordinary.${String(index + 1).padStart(2, "0")}`,
-  author,
-  avatar: author.slice(0, 1),
-  category,
-  title,
-  body: [
-    body,
-    index % 3 === 0
-      ? "这只是当天随手记下的一件小事，没有特别的结论。"
-      : index % 3 === 1
-        ? "做法不复杂，能长期坚持比一次整理完更重要。"
-        : "吃饭、走路和收拾桌面，本来就是一天的大部分。"
-  ],
+  author: seed.author,
+  avatar: seed.author.slice(0, 1),
+  category: seed.category,
+  title: seed.title,
+  summary: seed.summary,
+  body: seed.paragraphs,
   date: `2026-07-${String(15 - (index % 12)).padStart(2, "0")}`,
-  location,
-  likes,
-  comments: [
-    { id: `xhs.ordinary.${index + 1}.comment.1`, author: "普通路过", text: "这个方法很实用，先收藏周末试试。", likes: Math.max(2, Math.floor(commentCount / 3)) },
-    { id: `xhs.ordinary.${index + 1}.comment.2`, author: index % 2 === 0 ? "今天也下雨" : "收纳慢慢来", text: index % 2 === 0 ? "雨天确实更适合慢一点走。" : "固定位置以后找东西快多了。", likes: Math.max(1, Math.floor(commentCount / 5)) }
-  ],
-  media: xhsMedia[index % xhsMedia.length]!,
-  mediaSet: index % 4 === 0
-    ? [xhsMedia[index % xhsMedia.length]!, xhsMedia[(index + 3) % xhsMedia.length]!]
-    : [xhsMedia[index % xhsMedia.length]!],
-  mediaType: index % 7 === 0 ? "video" : "image",
-  narrative: narrative(`以${category}内容构成平台普通信息流。`, category === "工作方法" ? "profession" : "world_context", {
-    worldFactIds: category === "工作方法" ? ["wf.shenchuan.job"] : ["wf.hangzhou.daily"],
-    characterTraitIds: category === "摄影"
+  location: seed.location,
+  likes: seed.likes,
+  comments: seed.comments.map((comment, commentIndex) => ({
+    id: `xhs.ordinary.${index + 1}.comment.${commentIndex + 1}`,
+    ...comment
+  })),
+  media: xhsMedia[seed.mediaIndex % xhsMedia.length]!,
+  mediaSet: seed.mediaSetOffset === undefined
+    ? [xhsMedia[seed.mediaIndex % xhsMedia.length]!]
+    : [
+        xhsMedia[seed.mediaIndex % xhsMedia.length]!,
+        xhsMedia[(seed.mediaIndex + seed.mediaSetOffset) % xhsMedia.length]!
+      ],
+  mediaType: seed.mediaType,
+  narrative: narrative(`以${seed.category}内容构成平台普通信息流。`, seed.category === "工作方法" ? "profession" : "world_context", {
+    worldFactIds: seed.category === "工作方法" ? ["wf.shenchuan.job"] : ["wf.hangzhou.daily"],
+    characterTraitIds: seed.category === "摄影"
       ? ["ct.shenchuan.photo"]
-      : category === "数码整理" || category === "工作方法"
+      : seed.category === "数码整理" || seed.category === "工作方法"
         ? ["ct.shenchuan.archivist"]
         : []
   })

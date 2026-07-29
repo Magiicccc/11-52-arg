@@ -98,15 +98,18 @@ const contentCounts = new Map([
 ]);
 
 await mkdir(appReportRoot, { recursive: true });
+const appRatings = [];
 for (const [slug, displayName, component, referenceDir] of apps) {
   const interactionKey = appIdOverrides.get(slug) ?? `app.${slug.replaceAll("-", "_")}`;
   const coverage = interaction.summary.find((row) => row.appId === interactionKey)
     ?? interactionByApp.get(slug)
     ?? { controls: 0, works: 0, disabled: 0, broken: 0 };
+  const rating = coverage.controls === 0 || coverage.broken > 0 ? "FAIL" : "PASS";
+  appRatings.push({ slug, displayName, component, rating });
   const markdown = [
     `# ${displayName}真实性验收`,
     "",
-    `- 评级：**PASS**`,
+    `- 评级：**${rating}**`,
     `- 运行时组件：\`${component}\``,
     `- 部署 commit：\`${deployedCommit}\``,
     `- Workflow：\`${workflowRun}\``,
@@ -125,7 +128,9 @@ for (const [slug, displayName, component, referenceDir] of apps) {
     "",
     "- 使用专用首页、导航、详情与交互状态，不经过 GenericApp。",
     "- 正常玩家模式不显示内部 ID、场景 ID、交互等级或临时开发说明。",
-    "- 可见控件全部有效、合理禁用或提供世界内反馈；没有静默失败。",
+    coverage.broken === 0 && coverage.controls > 0
+      ? "- 本次可见控件审计未发现静默失败。"
+      : `- 当前控件门禁未通过：覆盖 ${coverage.controls}，失效 ${coverage.broken}。`,
     "- 页面可滚动或具有与原生 App 相符的分页/手势结构；关键状态写入统一存档投影。",
     "- 普通内容使用静态可复现数据与 NarrativeMetadata；未改写冻结主线内容。",
     "",
@@ -138,19 +143,25 @@ for (const [slug, displayName, component, referenceDir] of apps) {
   await writeFile(path.join(appReportRoot, `${slug}.md`), markdown, "utf8");
 }
 
+const ratingCounts = {
+  PASS: appRatings.filter((app) => app.rating === "PASS").length,
+  PARTIAL: appRatings.filter((app) => app.rating === "PARTIAL").length,
+  FAIL: appRatings.filter((app) => app.rating === "FAIL").length
+};
 const index = [
   "# 全部玩家 App 真实性评级",
   "",
   `- 部署 commit：\`${deployedCommit}\``,
   `- Workflow：\`${workflowRun}\``,
-  `- PASS：${apps.length}`,
-  "- PARTIAL：0",
-  "- FAIL：0",
+  `- PASS：${ratingCounts.PASS}`,
+  `- PARTIAL：${ratingCounts.PARTIAL}`,
+  `- FAIL：${ratingCounts.FAIL}`,
   "",
   "| App | 组件 | 评级 | 报告 |",
   "| --- | --- | --- | --- |",
-  ...apps.map(([slug, name, component]) => `| ${name} | \`${component}\` | PASS | [证据](apps/${slug}.md) |`),
+  ...appRatings.map(({ slug, displayName, component, rating }) => `| ${displayName} | \`${component}\` | ${rating} | [证据](apps/${slug}.md) |`),
   ""
 ].join("\n");
 await writeFile(path.join(reportRoot, "APP_PASS_MATRIX.md"), index, "utf8");
-console.log(JSON.stringify({ reports: apps.length, deployedCommit, workflowRun }, null, 2));
+console.log(JSON.stringify({ reports: apps.length, deployedCommit, workflowRun, ratingCounts }, null, 2));
+if (ratingCounts.FAIL > 0) process.exitCode = 1;

@@ -33,11 +33,15 @@ function GeneratedAvatar({ slot, className, alt, identity }: { slot: number; cla
 function PlatformBottomNav({ items, active, onChange }: { items: string[]; active: string; onChange(item: string): void }) {
   const { emit } = useGame();
   return <nav className="platform-bottom-nav" aria-label="底部导航">
-    {items.map((item) => <button className={item === active ? "active" : ""} key={item} onClick={() => {
+    {items.map((item) => <button aria-current={item===active?"page":undefined} disabled={item===active} className={item === active ? "active" : ""} key={item} onClick={() => {
       onChange(item);
-      emit("app.view.changed", "platform.bottom-navigation", { view: item, repeated: item === active, source: "P" });
+      emit("app.view.changed", "platform.bottom-navigation", { view: item, source: "P" });
     }}>{item}</button>)}
   </nav>;
+}
+
+function PlatformNotice({ children, onClose }: { children: ReactNode; onClose(): void }) {
+  return <div className="platform-action-notice" role="status"><span>{children}</span><button aria-label="关闭提示" onClick={onClose}>×</button></div>;
 }
 
 function usePlatformScroll(route: string) {
@@ -112,7 +116,7 @@ export function XiaohongshuApp() {
   const items = unlockedItemsForApp(state, "app.xiaohongshu");
   const savedTab=state.world.flags["ui.xiaohongshu.tab"];
   const [tab,setTabState]=useState(typeof savedTab==="string"?savedTab:"首页");
-  const [view,setView]=useState<"home"|"detail"|"search"|"profile">("home");
+  const [view,setView]=useState<"home"|"detail"|"search"|"profile"|"product">("home");
   const savedSelected=state.world.flags["ui.xiaohongshu.selected"];
   const [selectedId, setSelectedIdState] = useState<string | null>(typeof savedSelected==="string"?savedSelected:null);
   const savedDraft=state.world.flags["ui.xiaohongshu.draft"];
@@ -120,8 +124,27 @@ export function XiaohongshuApp() {
   const [draftTitle,setDraftTitle]=useState(typeof draft.title==="string"?draft.title:"");
   const [draftBody,setDraftBody]=useState(typeof draft.body==="string"?draft.body:"");
   const [query,setQuery]=useState("");
+  const [searchFilter,setSearchFilter]=useState("综合");
   const [commentText,setCommentText]=useState("");
   const [galleryIndex,setGalleryIndex]=useState(0);
+  const [draftStatus,setDraftStatus]=useState("");
+  const [feedFeedback,setFeedFeedback]=useState("");
+  const [profileEditing,setProfileEditing]=useState(false);
+  const storedProfileName=state.world.flags["ui.xiaohongshu.profile.name"];
+  const storedProfileBio=state.world.flags["ui.xiaohongshu.profile.bio"];
+  const [profileName,setProfileName]=useState(typeof storedProfileName==="string"?storedProfileName:"川流档案");
+  const [profileBio,setProfileBio]=useState(typeof storedProfileBio==="string"?storedProfileBio:"记录城市、照片和日常整理");
+  const savedFeed=state.world.flags["ui.xiaohongshu.feed"];
+  const feedMode=typeof savedFeed==="string"?savedFeed:"discover";
+  const savedCategory=state.world.flags["ui.xiaohongshu.category"];
+  const selectedCategory=typeof savedCategory==="string"?savedCategory:"推荐";
+  const savedStoreCategory=state.world.flags["ui.xiaohongshu.store.category"];
+  const storeCategory=typeof savedStoreCategory==="string"?savedStoreCategory:"全部";
+  const savedMessageSection=state.world.flags["ui.xiaohongshu.messages.section"];
+  const messageSection=typeof savedMessageSection==="string"?savedMessageSection:"赞和收藏";
+  const savedMeSection=state.world.flags["ui.xiaohongshu.me.section"];
+  const meSection=typeof savedMeSection==="string"?savedMeSection:"笔记";
+  const publishMedia=state.world.flags["ui.xiaohongshu.publish.media"];
   const scroll = usePlatformScroll("xiaohongshu.home");
   useLayoutEffect(()=>{
     if(view==="home") scroll.restore();
@@ -134,6 +157,7 @@ export function XiaohongshuApp() {
       avatar:"川",
       category:"生活记录",
       title:text(body,"title"),
+      summary:text(body,"text"),
       body:[text(body,"text")],
       date:text(body,"date"),
       location:"杭州",
@@ -146,11 +170,36 @@ export function XiaohongshuApp() {
   });
   const notes=[...ordinaryXhsNotes,...formalNotes];
   const selected = notes.find((note) => note.id === selectedId);
+  const categoryMatches=(note:typeof notes[number],label:string)=>{
+    if(label==="推荐") return true;
+    if(label==="美食") return note.category==="日常饮食";
+    if(label==="数码") return note.category==="数码整理"||note.category==="工作方法";
+    if(label==="旅行") return note.category==="旅行"||note.category==="城市散步";
+    if(label==="居家") return note.category==="居家"||note.category==="生活经验";
+    return note.category===label;
+  };
+  const feedNotes=notes.filter(note=>{
+    if(!categoryMatches(note,selectedCategory)) return false;
+    if(feedMode==="following") return state.world.flags[`ui.xiaohongshu.followed.${note.author}`]===true;
+    if(feedMode==="nearby") return note.location.includes("杭州");
+    return true;
+  });
+  const changeFeed=(value:"following"|"discover"|"nearby")=>{
+    setFeedFeedback(value===feedMode?`${value==="discover"?"发现":value==="following"?"关注":"附近"}内容已刷新`:`已切换到${value==="discover"?"发现":value==="following"?"关注":"附近"}`);
+    setUiFlag("xiaohongshu.feed",value);
+    emit("app.view.changed","app.xiaohongshu",{view:value,source:"P"});
+  };
+  const changeCategory=(value:string)=>{
+    setFeedFeedback(value===selectedCategory?`${value}内容已刷新`:`正在查看${value}`);
+    setUiFlag("xiaohongshu.category",value);
+    emit("app.view.changed","app.xiaohongshu",{view:`category:${value}`,source:"P"});
+  };
   const setSelectedId=(value:string|null)=>{
     setSelectedIdState(value);
     setUiFlag("xiaohongshu.selected",value);
   };
   const setTab=(value:string)=>{
+    if(value==="首页"&&tab==="首页") setFeedFeedback("已回到首页顶部");
     setTabState(value);
     setUiFlag("xiaohongshu.tab",value);
     setView("home");
@@ -179,8 +228,8 @@ export function XiaohongshuApp() {
       onBack={() => setView("home")}
       footer={<div className="xhs-detail-actions">
         <input value={commentText} onChange={event=>setCommentText(event.target.value)} placeholder="说点什么…"/>
-        <button className={liked?"active":""} onClick={()=>{setUiFlag(`xiaohongshu.liked.${selected.id}`,!liked);emit("content.item.interacted",selected.id,{action:"like",active:!liked,source:"P"})}}>{liked?"已赞":`赞 ${selected.likes}`}</button>
-        <button className={saved?"active":""} onClick={()=>{setUiFlag(`xiaohongshu.saved.${selected.id}`,!saved);emit("content.item.interacted",selected.id,{action:"save",active:!saved,source:"P"})}}>{saved?"已收藏":"收藏"}</button>
+        <button aria-label="点赞笔记" className={liked?"active":""} onClick={()=>{setUiFlag(`xiaohongshu.liked.${selected.id}`,!liked);emit("content.item.interacted",selected.id,{action:"like",active:!liked,source:"P"})}}>{liked?"已赞":`赞 ${selected.likes}`}</button>
+        <button aria-label="收藏笔记" className={saved?"active":""} onClick={()=>{setUiFlag(`xiaohongshu.saved.${selected.id}`,!saved);emit("content.item.interacted",selected.id,{action:"save",active:!saved,source:"P"})}}>{saved?"已收藏":"收藏"}</button>
         <button disabled={!commentText.trim()} onClick={()=>{setUiFlag(`xiaohongshu.comments.${selected.id}`,[...playerComments,commentText.trim()]);emit("content.comment.created",selected.id,{text:commentText.trim(),source:"P"});setCommentText("")}}>发送</button>
       </div>}
     >
@@ -188,9 +237,9 @@ export function XiaohongshuApp() {
         <div className="xhs-gallery">
           <img className="xhs-note-photo" src={assetUrl(selected.mediaSet[galleryIndex]??selected.media)} alt={`${selected.category}普通生活照片`}/>
           {selected.mediaType==="video"&&<span className="xhs-video-indicator">▶ {Math.max(8,selected.title.length)} 秒</span>}
-          {selected.mediaSet.length>1&&<><span className="xhs-gallery-count">{galleryIndex+1}/{selected.mediaSet.length}</span><nav>{selected.mediaSet.map((_,index)=><button aria-label={`查看第${index+1}张`} className={galleryIndex===index?"active":""} key={index} onClick={()=>setGalleryIndex(index)}/>)}</nav></>}
+          {selected.mediaSet.length>1&&<><span className="xhs-gallery-count">{galleryIndex+1}/{selected.mediaSet.length}</span><nav>{selected.mediaSet.map((_,index)=><button aria-label={`查看第${index+1}张`} aria-current={galleryIndex===index?"true":undefined} disabled={galleryIndex===index} className={galleryIndex===index?"active":""} key={index} onClick={()=>setGalleryIndex(index)}/>)}</nav></>}
         </div>
-        <header><button className="xhs-author-button" onClick={()=>setView("profile")}><GeneratedAvatar className="xhs-avatar" slot={selectedAvatarSlot} identity={selected.author} alt={`${selected.author}头像`}/><b>{selected.author}</b></button><button className={followed?"active":""} onClick={()=>setUiFlag(`xiaohongshu.followed.${selected.author}`,!followed)}>{followed?"已关注":"关注"}</button></header>
+        <header><button className="xhs-author-button" onClick={()=>setView("profile")}><GeneratedAvatar className="xhs-avatar" slot={selectedAvatarSlot} identity={selected.author} alt={`${selected.author}头像`}/><b>{selected.author}</b></button><button aria-label={`关注作者 ${selected.author}`} className={followed?"active":""} onClick={()=>setUiFlag(`xiaohongshu.followed.${selected.author}`,!followed)}>{followed?"已关注":"关注"}</button></header>
         <h1>{selected.title}</h1>
         {selected.body.map((paragraph,index)=><p key={index}>{paragraph}</p>)}
         <div className="xhs-tags"><span>#{selected.category}</span><span>#生活记录</span></div>
@@ -204,6 +253,23 @@ export function XiaohongshuApp() {
     </DetailShell>;
   }
 
+  if(view==="product"&&selected) {
+    const productIndex=Math.max(0,notes.findIndex(note=>note.id===selected.id));
+    const price=(19.9+(productIndex%12)*7).toFixed(1);
+    const inCart=state.world.flags[`ui.xiaohongshu.cart.${selected.id}`]===true;
+    const productSaved=state.world.flags[`ui.xiaohongshu.product.saved.${selected.id}`]===true;
+    return <DetailShell className="xhs-app" title="商品详情" onBack={()=>setView("home")} footer={<div className="xhs-product-actions">
+      <button aria-label="收藏商品" className={productSaved?"active":""} onClick={()=>setUiFlag(`xiaohongshu.product.saved.${selected.id}`,!productSaved)}>{productSaved?"已收藏":"收藏"}</button>
+      <button aria-label="切换购物车状态" className={inCart?"active":""} onClick={()=>{setUiFlag(`xiaohongshu.cart.${selected.id}`,!inCart);emit("content.item.interacted",selected.id,{action:inCart?"remove-from-cart":"add-to-cart",source:"P"})}}>{inCart?"已加入购物车":"加入购物车"}</button>
+    </div>}>
+      <article className="xhs-product-detail">
+        <img src={assetUrl(selected.media)} alt={`${selected.category}商品图`}/>
+        <div><strong>¥{price}</strong><h1>{selected.title}</h1><p>{selected.summary}</p><small>小红书市集 · 普通生活精选</small></div>
+        <section><b>商品说明</b><p>该商品卡来自当前生活内容分类，用于本机模拟收藏与购物车状态；价格、库存和操作均为稳定的离线演示数据。</p><p>加入购物车后可以退出 App 或刷新页面，状态仍会保留。</p></section>
+      </article>
+    </DetailShell>;
+  }
+
   if(view==="profile"&&selected) {
     const authorNotes=notes.filter(note=>note.author===selected.author);
     const followed=state.world.flags[`ui.xiaohongshu.followed.${selected.author}`]===true;
@@ -211,34 +277,46 @@ export function XiaohongshuApp() {
       <section className="xhs-profile">
         <header><GeneratedAvatar className="xhs-avatar" slot={20+Math.max(0,notes.findIndex(note=>note.id===selected.id))} identity={selected.author} alt={`${selected.author}头像`}/><div><h1>{selected.author}</h1><p>普通生活记录 · {selected.category}</p></div></header>
         <div className="xhs-profile-stats"><span><b>{authorNotes.length}</b>笔记</span><span><b>{Math.max(12,selected.likes%1300)}</b>获赞与收藏</span><span><b>{Math.max(8,selected.comments.length*9)}</b>关注</span></div>
-        <button className={followed?"active":""} onClick={()=>setUiFlag(`xiaohongshu.followed.${selected.author}`,!followed)}>{followed?"已关注":"关注"}</button>
+        <button aria-label={`关注作者 ${selected.author}`} className={followed?"active":""} onClick={()=>setUiFlag(`xiaohongshu.followed.${selected.author}`,!followed)}>{followed?"已关注":"关注"}</button>
         <div className="xhs-profile-grid">{authorNotes.map(note=><button key={note.id} onClick={()=>openNote(note.id)}><img src={assetUrl(note.media)} alt="笔记缩略图"/><b>{note.title}</b></button>)}</div>
       </section>
     </DetailShell>;
   }
 
   if(view==="search") {
-    const results=notes.filter(note=>!query.trim()||`${note.title}${note.category}${note.author}`.includes(query.trim()));
+    const results=notes.filter(note=>!query.trim()||`${note.title}${note.summary}${note.category}${note.author}`.includes(query.trim()));
+    const submitSearch=()=>{
+      const normalized=query.trim();
+      if(normalized) {
+        const previous=state.world.flags["ui.xiaohongshu.search.history"];
+        const history=Array.isArray(previous)?previous.filter((item):item is string=>typeof item==="string"):[];
+        setUiFlag("xiaohongshu.search.history",[normalized,...history.filter(item=>item!==normalized)].slice(0,8));
+      }
+      emit("app.search.submitted","app.xiaohongshu",{query:normalized,filter:searchFilter,source:"P"});
+    };
     return <DetailShell className="xhs-app" title="搜索" onBack={()=>setView("home")}>
-      <div className="xhs-search-page"><input value={query} onChange={event=>setQuery(event.target.value)} placeholder="搜索小红书"/><nav>{["综合","笔记","用户","商品"].map((label,index)=><button className={index===0?"active":""} key={label} onClick={()=>emit("app.search.submitted","app.xiaohongshu",{query,filter:label,source:"P"})}>{label}</button>)}</nav>{results.slice(0,16).map(note=><button key={note.id} onClick={()=>openNote(note.id)}><img src={assetUrl(note.media)} alt="搜索结果"/><div><b>{note.title}</b><small>{note.author} · ♡ {note.likes}</small></div></button>)}</div>
+      <div className="xhs-search-page"><div className="xhs-search-field"><input value={query} onChange={event=>setQuery(event.target.value)} onKeyDown={event=>{if(event.key==="Enter")submitSearch()}} placeholder="搜索小红书"/><button onClick={submitSearch}>搜索</button></div><nav>{["综合","笔记","用户","商品"].map(label=><button className={label===searchFilter?"active":""} key={label} onClick={()=>{setSearchFilter(label);emit("app.search.submitted","app.xiaohongshu",{query:query.trim(),filter:label,source:"P"})}}>{label}</button>)}</nav>
+      {searchFilter==="用户"
+        ? [...new Map(results.map(note=>[note.author,note])).values()].slice(0,12).map(note=><button key={note.author} onClick={()=>{setSelectedId(note.id);setView("profile")}}><GeneratedAvatar className="xhs-avatar" slot={20+notes.indexOf(note)} identity={note.author} alt={`${note.author}头像`}/><div><b>{note.author}</b><small>{note.category} · {notes.filter(item=>item.author===note.author).length} 篇笔记</small></div></button>)
+        : results.slice(0,16).map(note=><button key={note.id} onClick={()=>{setSelectedId(note.id);setView(searchFilter==="商品"?"product":"detail");setUiFlag(`xiaohongshu.history.${note.id}`,true)}}><img src={assetUrl(note.media)} alt="搜索结果"/><div><b>{note.title}</b><small>{searchFilter==="商品"?`¥${(19.9+(notes.indexOf(note)%12)*7).toFixed(1)}`:`${note.author} · ♡ ${note.likes}`}</small></div></button>)}</div>
     </DetailShell>;
   }
 
   if(tab==="购物") return <XhsTabShell tab={tab} onTab={setTab} onExit={goBack}>
     <header className="xhs-store-header"><strong>小红书市集</strong><button onClick={()=>setView("search")}>搜索商品</button></header>
-    <div className="xhs-store-categories">{["家居","数码","服饰","食品","运动","文具","摄影","更多"].map(label=><button key={label} onClick={()=>setUiFlag(`xiaohongshu.store.category.${label}`,true)}>{label}</button>)}</div>
-    <section className="xhs-store-grid">{notes.filter(note=>["居家","数码整理","摄影","日常饮食"].includes(note.category)).slice(0,12).map((note,index)=><button key={note.id} onClick={()=>{setUiFlag(`xiaohongshu.cart.${note.id}`,true);emit("content.item.interacted",note.id,{action:"add-to-cart",source:"P"})}}><img src={assetUrl(note.media)} alt="生活好物"/><b>{note.title}</b><strong>¥{(19.9+index*7).toFixed(1)}</strong><small>加入购物车</small></button>)}</section>
+    <div className="xhs-store-categories">{["全部","家居","数码","服饰","食品","摄影","旅行","更多"].map(label=><button className={storeCategory===label?"active":""} key={label} onClick={()=>setUiFlag("xiaohongshu.store.category",label)}>{label}</button>)}</div>
+    <section className="xhs-store-grid">{notes.filter(note=>storeCategory==="全部"||storeCategory==="更多"||categoryMatches(note,storeCategory==="家居"?"居家":storeCategory==="食品"?"美食":storeCategory==="服饰"?"穿搭":storeCategory)).slice(0,12).map((note,index)=><button aria-label={`查看商品 ${note.title}`} key={note.id} onClick={()=>{setSelectedId(note.id);setView("product")}}><img src={assetUrl(note.media)} alt="生活好物"/><b>{note.title}</b><strong>¥{(19.9+index*7).toFixed(1)}</strong><small>{state.world.flags[`ui.xiaohongshu.cart.${note.id}`]===true?"已在购物车":"查看详情"}</small></button>)}</section>
   </XhsTabShell>;
 
   if(tab==="发布") return <XhsTabShell tab={tab} onTab={setTab} onExit={goBack}>
     <header className="xhs-publish-header"><button onClick={()=>setTab("首页")}>取消</button><strong>发布笔记</strong><button disabled={!draftTitle.trim()} onClick={()=>{setUiFlag("xiaohongshu.published",{title:draftTitle,body:draftBody,createdAt:"2026-07-15T21:35:00+08:00"});setUiFlag("xiaohongshu.draft",{});emit("content.item.created","app.xiaohongshu",{title:draftTitle,source:"P"});setDraftTitle("");setDraftBody("");setTab("我")}}>发布</button></header>
-    <section className="xhs-publish-editor"><button className="xhs-publish-media" onClick={()=>emit("media.picker.opened","app.photos",{surface:"xiaohongshu",source:"P"})}>＋ 添加照片或视频</button><input value={draftTitle} onChange={event=>{setDraftTitle(event.target.value);setUiFlag("xiaohongshu.draft",{title:event.target.value,body:draftBody})}} placeholder="填写标题会有更多赞哦"/><textarea value={draftBody} onChange={event=>{setDraftBody(event.target.value);setUiFlag("xiaohongshu.draft",{title:draftTitle,body:event.target.value})}} placeholder="添加正文"/><div>{["#日常生活","#城市散步","#摄影","#工作方法"].map(label=><button key={label} onClick={()=>setDraftBody(value=>`${value}${value?" ":""}${label}`)}>{label}</button>)}</div><button onClick={()=>{setUiFlag("xiaohongshu.draft",{title:draftTitle,body:draftBody});emit("content.draft.saved","app.xiaohongshu",{source:"P"})}}>保存草稿</button></section>
+    <section className="xhs-publish-editor"><button aria-label="选择发布媒体" className="xhs-publish-media" onClick={()=>{setUiFlag("xiaohongshu.publish.media",ordinaryXhsNotes[0]!.media);emit("media.picker.opened","app.photos",{surface:"xiaohongshu",source:"P"})}}>{typeof publishMedia==="string"?<><img src={assetUrl(publishMedia)} alt="已选择的发布图片"/><span>更换照片或视频</span></>:"＋ 添加照片或视频"}</button><input value={draftTitle} onChange={event=>{setDraftTitle(event.target.value);setDraftStatus("");setUiFlag("xiaohongshu.draft",{title:event.target.value,body:draftBody})}} placeholder="填写标题会有更多赞哦"/><textarea value={draftBody} onChange={event=>{setDraftBody(event.target.value);setDraftStatus("");setUiFlag("xiaohongshu.draft",{title:draftTitle,body:event.target.value})}} placeholder="添加正文"/><div>{["#日常生活","#城市散步","#摄影","#工作方法"].map(label=><button key={label} onClick={()=>{setDraftBody(value=>`${value}${value?" ":""}${label}`);setDraftStatus("")}}>{label}</button>)}</div><button onClick={()=>{setUiFlag("xiaohongshu.draft",{title:draftTitle,body:draftBody});emit("content.draft.saved","app.xiaohongshu",{source:"P"});setDraftStatus("草稿已保存到本机")}}>保存草稿</button>{draftStatus&&<p className="xhs-inline-feedback" role="status">{draftStatus}</p>}</section>
   </XhsTabShell>;
 
   if(tab==="消息") return <XhsTabShell tab={tab} onTab={setTab} onExit={goBack}>
-    <header className="xhs-simple-header"><strong>消息</strong></header>
-    <div className="xhs-message-shortcuts">{["赞和收藏","新增关注","评论和@","陌生人消息"].map(label=><button key={label} onClick={()=>setUiFlag(`xiaohongshu.messages.${label}`,true)}><span>{label.slice(0,1)}</span><b>{label}</b><i>›</i></button>)}</div>
-    <section className="xhs-message-list">{ordinaryXhsNotes.slice(0,8).map((note,index)=><button key={note.id} onClick={()=>openNote(note.id)}><GeneratedAvatar className="xhs-avatar" slot={20+index} identity={note.author} alt={`${note.author}头像`}/><div><b>{note.author}</b><p>{index%2===0?"赞了你的笔记":"回复了你的一条评论"}</p><small>{index+1} 小时前</small></div><img src={assetUrl(note.media)} alt="相关笔记"/></button>)}</section>
+    <header className="xhs-simple-header"><strong>消息 · {messageSection}</strong></header>
+    <div className="xhs-message-shortcuts">{["赞和收藏","新增关注","评论和@","陌生人消息"].map(label=><button className={label===messageSection?"active":""} key={label} onClick={()=>setUiFlag("xiaohongshu.messages.section",label)}><span>{label.slice(0,1)}</span><b>{label}</b><i>›</i></button>)}</div>
+    <section className="xhs-message-list">{ordinaryXhsNotes.slice(messageSection==="赞和收藏"?0:messageSection==="新增关注"?4:messageSection==="评论和@"?8:12, messageSection==="赞和收藏"?6:messageSection==="新增关注"?10:messageSection==="评论和@"?14:18).map((note,index)=><button key={note.id} onClick={()=>openNote(note.id)}><GeneratedAvatar className="xhs-avatar" slot={20+ordinaryXhsNotes.indexOf(note)} identity={note.author} alt={`${note.author}头像`}/><div><b>{note.author}</b><p>{messageSection==="赞和收藏"?"赞了你的笔记":messageSection==="新增关注"?"开始关注你":messageSection==="评论和@"?"回复了你的一条评论":"发来一条普通私信"}</p><small>{index+1} 小时前</small></div><img src={assetUrl(note.media)} alt="相关笔记"/></button>)}</section>
   </XhsTabShell>;
 
   if(tab==="我") {
@@ -247,27 +325,34 @@ export function XiaohongshuApp() {
       return typeof flag==="boolean"?flag:index<6;
     });
     const historyNotes=notes.filter((note,index)=>state.world.flags[`ui.xiaohongshu.history.${note.id}`]===true||index<4);
+    const likedNotes=notes.filter(note=>state.world.flags[`ui.xiaohongshu.liked.${note.id}`]===true);
     const published=state.world.flags["ui.xiaohongshu.published"];
+    const myNotes=notes.filter(note=>note.author==="川流档案");
+    const visibleMeNotes=meSection==="收藏"?savedNotes:meSection==="赞过"?likedNotes:meSection==="浏览记录"?historyNotes:myNotes;
     return <XhsTabShell tab={tab} onTab={setTab} onExit={goBack}>
-      <section className="xhs-me-header"><GeneratedAvatar className="xhs-avatar" slot={120} identity="川流档案" alt="川流档案头像"/><div><h1>川流档案</h1><p>小红书号：chuanliu_archive</p></div><button onClick={()=>setUiFlag("xiaohongshu.profile.editing",true)}>编辑资料</button></section>
+      <section className="xhs-me-header"><GeneratedAvatar className="xhs-avatar" slot={120} identity={profileName} alt={`${profileName}头像`}/><div><h1>{profileName}</h1><p>{profileBio}</p><small>小红书号：chuanliu_archive</small></div><button onClick={()=>setProfileEditing(true)}>编辑资料</button></section>
+      {profileEditing&&<section className="xhs-profile-editor"><label>昵称<input value={profileName} onChange={event=>setProfileName(event.target.value)}/></label><label>简介<textarea value={profileBio} onChange={event=>setProfileBio(event.target.value)}/></label><div><button onClick={()=>setProfileEditing(false)}>取消</button><button onClick={()=>{setUiFlag("xiaohongshu.profile.name",profileName.trim()||"川流档案");setUiFlag("xiaohongshu.profile.bio",profileBio.trim()||"记录城市、照片和日常整理");setProfileEditing(false)}}>保存</button></div></section>}
       <div className="xhs-me-stats"><span><b>87</b>关注</span><span><b>316</b>粉丝</span><span><b>1,642</b>获赞与收藏</span></div>
-      <nav className="xhs-me-tabs">{["笔记","收藏","赞过","浏览记录","草稿"].map(label=><button key={label} onClick={()=>setUiFlag("xiaohongshu.me.section",label)}>{label}</button>)}</nav>
-      <section className="xhs-me-summary"><div><b>收藏</b><span>{savedNotes.length} 篇</span></div><div><b>浏览记录</b><span>{historyNotes.length} 篇</span></div><div><b>草稿</b><span>{ordinaryXhsDrafts.length+(draftTitle||draftBody?1:0)} 篇</span></div></section>
-      <section className="xhs-draft-list">{ordinaryXhsDrafts.map(item=><article key={item.id}><img src={assetUrl(item.media)} alt="普通生活草稿"/><div><b>{item.title}</b><p>{item.body}</p><small>{item.updatedAt}</small></div></article>)}</section>
-      {published&&typeof published==="object"&&!Array.isArray(published)&&<article className="xhs-published-note"><b>{typeof published.title==="string"?published.title:"新笔记"}</b><p>{typeof published.body==="string"?published.body:""}</p><small>仅本机发布记录</small></article>}
-      <div className="xhs-profile-grid">{[...savedNotes,...historyNotes,...ordinaryXhsNotes].filter((note,index,array)=>array.findIndex(candidate=>candidate.id===note.id)===index).slice(0,12).map(note=><button key={note.id} onClick={()=>openNote(note.id)}><img src={assetUrl(note.media)} alt="个人页笔记"/><b>{note.title}</b></button>)}</div>
+      <nav className="xhs-me-tabs">{["笔记","收藏","赞过","浏览记录","草稿"].map(label=><button className={label===meSection?"active":""} key={label} onClick={()=>setUiFlag("xiaohongshu.me.section",label)}>{label}</button>)}</nav>
+      {meSection==="草稿"?<section className="xhs-draft-list">{ordinaryXhsDrafts.map(item=><article key={item.id}><img src={assetUrl(item.media)} alt="普通生活草稿"/><div><b>{item.title}</b><p>{item.body}</p><small>{item.updatedAt}</small></div></article>)}{draftTitle||draftBody?<article><div><b>{draftTitle||"未命名草稿"}</b><p>{draftBody||"尚未填写正文"}</p><small>刚刚保存</small></div></article>:null}</section>:<>
+        <section className="xhs-me-summary"><div><b>当前分类</b><span>{meSection}</span></div><div><b>内容</b><span>{visibleMeNotes.length} 篇</span></div><div><b>草稿</b><span>{ordinaryXhsDrafts.length+(draftTitle||draftBody?1:0)} 篇</span></div></section>
+        {meSection==="笔记"&&published&&typeof published==="object"&&!Array.isArray(published)&&<article className="xhs-published-note"><b>{typeof published.title==="string"?published.title:"新笔记"}</b><p>{typeof published.body==="string"?published.body:""}</p><small>仅本机发布记录</small></article>}
+        {visibleMeNotes.length?<div className="xhs-profile-grid">{visibleMeNotes.slice(0,12).map(note=><button key={note.id} onClick={()=>openNote(note.id)}><img src={assetUrl(note.media)} alt="个人页笔记"/><b>{note.title}</b></button>)}</div>:<div className="xhs-empty-state"><b>这里还没有内容</b><p>浏览、点赞或收藏笔记后会显示在这里。</p></div>}
+      </>}
     </XhsTabShell>;
   }
 
   return <div className="app-window platform-app xhs-app" data-testid="xiaohongshu-home">
     <header className="xhs-home-header">
       <button aria-label="菜单" onClick={()=>setTab("我")}>☰</button>
-      <nav><button onClick={()=>setUiFlag("xiaohongshu.feed","following")}>关注</button><button className="active" onClick={()=>setUiFlag("xiaohongshu.feed","discover")}>发现</button><button onClick={()=>setUiFlag("xiaohongshu.feed","nearby")}>附近</button></nav>
+      <nav><button className={feedMode==="following"?"active":""} onClick={()=>changeFeed("following")}>关注</button><button className={feedMode==="discover"?"active":""} onClick={()=>changeFeed("discover")}>发现</button><button className={feedMode==="nearby"?"active":""} onClick={()=>changeFeed("nearby")}>附近</button></nav>
       <button aria-label="搜索" onClick={()=>setView("search")}>⌕</button>
     </header>
-    <div className="xhs-topic-tabs">{["推荐","穿搭","美食","旅行","摄影","数码","居家"].map((label,index)=><button className={index===0?"active":""} key={label} onClick={()=>setUiFlag("xiaohongshu.category",label)}>{label}</button>)}</div>
+    <div className="xhs-topic-tabs">{["推荐","穿搭","美食","旅行","摄影","数码","居家"].map(label=><button className={label===selectedCategory?"active":""} key={label} onClick={()=>changeCategory(label)}>{label}</button>)}</div>
     <div className="platform-scroll xhs-feed" ref={scroll.ref}>
-      {notes.map((note, index) => {
+      {feedFeedback&&<p className="xhs-feed-feedback" role="status">{feedFeedback}</p>}
+      {feedMode==="following"&&!feedNotes.length&&<div className="xhs-empty-state xhs-following-empty"><b>关注页还没有新内容</b><p>从下方推荐作者开始，之后的新笔记会出现在这里。</p>{notes.slice(0,4).map((note,index)=><button aria-label={`关注作者 ${note.author}`} key={note.id} onClick={()=>setUiFlag(`xiaohongshu.followed.${note.author}`,true)}><GeneratedAvatar className="xhs-avatar" slot={20+index} identity={note.author} alt={`${note.author}头像`}/><span>{note.author}</span><i>{state.world.flags[`ui.xiaohongshu.followed.${note.author}`]===true?"已关注":"关注"}</i></button>)}</div>}
+      {feedNotes.map((note, index) => {
         return <button
           className="xhs-card"
           data-testid={index === 0 ? "app-effective-action" : undefined}
@@ -281,9 +366,9 @@ export function XiaohongshuApp() {
           <small><GeneratedAvatar className="xhs-feed-avatar" slot={20+index} identity={note.author} alt={`${note.author}头像`}/> {note.author} <span>♡ {note.likes}</span></small>
         </button>;
       })}
-      <div className="xhs-feed-end">已经到底了 · 共 {notes.length} 篇笔记</div>
+      <div className="xhs-feed-end">{feedMode==="nearby"?"附近 5 公里内":"已经到底了"} · 共 {feedNotes.length} 篇笔记</div>
     </div>
-    <nav className="platform-bottom-nav" aria-label="小红书底部导航">{["首页","购物","发布","消息","我"].map(label=><button className={label==="首页"?"active":label==="发布"?"publish":""} key={label} onClick={()=>setTab(label)}>{label==="发布"?"＋":label}</button>)}</nav>
+    <nav className="platform-bottom-nav" aria-label="小红书底部导航">{["首页","购物","发布","消息","我"].map(label=><button aria-label={label} className={label==="首页"?"active":label==="发布"?"publish":""} key={label} onClick={()=>setTab(label)}>{label==="发布"?"＋":label}</button>)}</nav>
     <button className="platform-close-hit" data-testid="app-back" aria-label="退出小红书" onClick={goBack}/>
   </div>;
 }
@@ -291,7 +376,7 @@ export function XiaohongshuApp() {
 function XhsTabShell({children,tab,onTab,onExit}:{children:ReactNode;tab:string;onTab(value:string):void;onExit():void}) {
   return <div className="app-window platform-app xhs-app" data-testid={`xiaohongshu-${tab}`}>
     <div className="platform-scroll">{children}</div>
-    <nav className="platform-bottom-nav" aria-label="小红书底部导航">{["首页","购物","发布","消息","我"].map(label=><button className={label===tab?"active":label==="发布"?"publish":""} key={label} onClick={()=>onTab(label)}>{label==="发布"?"＋":label}</button>)}</nav>
+    <nav className="platform-bottom-nav" aria-label="小红书底部导航">{["首页","购物","发布","消息","我"].map(label=><button aria-label={label} className={label===tab?"active":label==="发布"?"publish":""} key={label} onClick={()=>onTab(label)}>{label==="发布"?"＋":label}</button>)}</nav>
     <button className="platform-close-hit" data-testid="app-back" aria-label="退出小红书" onClick={onExit}/>
   </div>;
 }
@@ -321,8 +406,10 @@ export function DouyinApp() {
   const [paused, setPaused] = useState(false);
   const [tab, setTab] = useState("首页");
   const [feedMode,setFeedMode]=useState("推荐");
+  const [overlay,setOverlay]=useState<""|"comments"|"share">("");
   const saved = item ? state.world.flags[`ui.douyin.saved.${item.id}`] === true : false;
   const followed = item ? state.world.flags[`ui.douyin.followed.${item.author}`] === true : false;
+  const liked = item ? state.world.flags[`ui.douyin.liked.${item.id}`] === true : false;
   const changeVideo=(direction:number)=>{
     if(videos.length===0)return;
     const next=(currentIndex+direction+videos.length)%videos.length;
@@ -351,7 +438,7 @@ export function DouyinApp() {
   return <div className="app-window platform-app douyin-app" data-testid="douyin-home">
     <header className="douyin-header">
       <button aria-label="直播" onClick={()=>{setUiFlag("douyin.live.open",true);setTab("直播")}}>LIVE</button>
-      <nav>{["关注","推荐"].map(label=><button className={feedMode===label?"active":""} key={label} onClick={()=>{setFeedMode(label);setUiFlag("douyin.feed",label);emit("app.view.changed","app.douyin",{view:label,source:"P"})}}>{label}</button>)}</nav>
+      <nav>{["关注","推荐"].map(label=><button aria-current={feedMode===label?"page":undefined} disabled={feedMode===label} className={feedMode===label?"active":""} key={label} onClick={()=>{setFeedMode(label);setUiFlag("douyin.feed",label);emit("app.view.changed","app.douyin",{view:label,source:"P"})}}>{label}</button>)}</nav>
       <button aria-label="搜索" onClick={()=>{setUiFlag("douyin.search.open",true);setTab("搜索")}}>⌕</button>
     </header>
     <button
@@ -368,14 +455,14 @@ export function DouyinApp() {
     </button>
     <aside className="douyin-actions">
       <button className={followed?"active":""} onClick={()=>{if(!item)return;setUiFlag(`douyin.followed.${item.author}`,!followed);emit("content.item.interacted",item.id,{action:"follow",active:!followed,source:"P"})}}><GeneratedAvatar className="douyin-avatar" slot={52+currentIndex} identity={item?.author} alt={`${item?.author??"视频作者"}头像`}/><b>{followed?"✓":"＋"}</b></button>
-      <button onClick={() => item && emit("content.item.interacted", item.id, { action: "like", source:"P" })}>♡<small>{item?.likes??0}</small></button>
-      <button onClick={() => item && emit("content.item.interacted", item.id, { action: "comments", source:"P" })}>◌<small>{item?.comments??0}</small></button>
+      <button className={liked?"active":""} onClick={() => {if(!item)return;setUiFlag(`douyin.liked.${item.id}`,!liked);emit("content.item.interacted", item.id, { action: "like",active:!liked, source:"P" })}}>{liked?"♥":"♡"}<small>{(item?.likes??0)+(liked?1:0)}</small></button>
+      <button onClick={() => {setOverlay("comments");if(item)emit("content.item.interacted", item.id, { action: "comments", source:"P" })}}>◌<small>{item?.comments??0}</small></button>
       <button className={saved ? "active" : ""} onClick={() => {
         if (!item) return;
         setUiFlag(`douyin.saved.${item.id}`, !saved);
         emit("content.item.interacted", item.id, { action: "save", active: !saved });
       }}>☆<small>{saved ? "已收藏" : "收藏"}</small></button>
-      <button onClick={()=>item&&emit("content.item.interacted",item.id,{action:"share-sheet",source:"P"})}>↗<small>分享</small></button>
+      <button onClick={()=>{setOverlay("share");if(item)emit("content.item.interacted",item.id,{action:"share-sheet",source:"P"})}}>↗<small>分享</small></button>
     </aside>
     <section className="douyin-caption">
       <b>@{item?.author??"城市边角"}</b>
@@ -383,7 +470,9 @@ export function DouyinApp() {
       <span>♫ 原声 · {item?.author??"城市边角"} · {item?.duration??0}秒</span>
     </section>
     <div className="douyin-feed-controls"><button onClick={()=>changeVideo(-1)}>上一条</button><span>{currentIndex+1} / {videos.length}</span><button onClick={()=>changeVideo(1)}>下一条</button></div>
-    <nav className="platform-bottom-nav" aria-label="抖音底部导航">{["首页","朋友","＋","消息","我"].map(label=><button className={label===tab?"active":""} key={label} onClick={()=>{setTab(label);setUiFlag("douyin.tab",label);emit("app.view.changed","app.douyin",{view:label,source:"P"})}}>{label}</button>)}</nav>
+    {overlay==="comments"&&<section className="douyin-overlay-sheet"><header><b>{item?.comments??0} 条评论</b><button aria-label="关闭评论" onClick={()=>setOverlay("")}>×</button></header><p>雨后的路面颜色很安静。</p><p>构图里保留行人会更有生活感。</p><p>这个机位是在公共道路一侧拍的吗？</p></section>}
+    {overlay==="share"&&<section className="douyin-overlay-sheet"><header><b>分享至</b><button aria-label="关闭分享" onClick={()=>setOverlay("")}>×</button></header><div><button onClick={()=>setOverlay("")}>微信好友</button><button onClick={()=>setOverlay("")}>复制链接</button><button onClick={()=>setOverlay("")}>保存到相册</button></div></section>}
+    <nav className="platform-bottom-nav" aria-label="抖音底部导航">{["首页","朋友","＋","消息","我"].map(label=><button aria-current={label===tab?"page":undefined} disabled={label===tab} className={label===tab?"active":""} key={label} onClick={()=>{setTab(label);setUiFlag("douyin.tab",label);emit("app.view.changed","app.douyin",{view:label,source:"P"})}}>{label}</button>)}</nav>
     <button className="platform-close-hit" data-testid="app-back" aria-label="退出抖音" onClick={goBack}/>
   </div>;
 }
@@ -397,6 +486,7 @@ export function ToutiaoApp() {
   const [tab, setTab] = useState("首页");
   const [channel, setChannel] = useState("推荐");
   const [commenting, setCommenting] = useState(false);
+  const [shareOpen,setShareOpen]=useState(false);
   const scroll = usePlatformScroll("toutiao.home");
   useLayoutEffect(()=>{
     if(!selectedId) scroll.restore();
@@ -411,7 +501,7 @@ export function ToutiaoApp() {
         <button onClick={() => setCommenting(true)}>{commenting ? "评论已打开" : "写评论…"}</button>
         <PlatformStateButton flag={`toutiao.liked.${detailId}`} label="♡" activeLabel="♥" contentId={detailId}/>
         <PlatformStateButton flag={`toutiao.saved.${detailId}`} label="☆" activeLabel="★" contentId={detailId}/>
-        <button onClick={() => emit("content.item.interacted", detailId, { action: "share-sheet", source: "P" })}>↗</button>
+        <button aria-label="分享文章" onClick={() => {setShareOpen(true);emit("content.item.interacted", detailId, { action: "share-sheet", source: "P" })}}>↗</button>
       </div>
     }>
       <article className="toutiao-article">
@@ -421,6 +511,7 @@ export function ToutiaoApp() {
         {paragraphs.map((paragraph,index)=><p key={index}>{paragraph}</p>)}
         {paragraphs.length>0&&<footer><span>{text(body, "category", "资讯")}</span><span>{number(body, "commentCount")} 条评论</span><span>内容发布于游戏内 2026-07-15 时间线</span></footer>}
       </article>
+      {shareOpen&&<section className="toutiao-share-panel"><b>分享文章</b><button onClick={()=>setShareOpen(false)}>微信好友</button><button onClick={()=>setShareOpen(false)}>复制链接</button><button aria-label="关闭分享" onClick={()=>setShareOpen(false)}>取消</button></section>}
     </DetailShell>;
   }
   if (tab !== "首页") {
@@ -444,7 +535,7 @@ export function ToutiaoApp() {
   }
   return <div className="app-window platform-app toutiao-app" data-testid="toutiao-home">
     <header className="toutiao-home-header"><strong>今日头条</strong><button aria-label="搜索" onClick={() => setTab("搜索")}>⌕</button><button aria-label="发布" onClick={() => setTab("发布")}>＋</button></header>
-    <nav className="toutiao-tabs">{["关注","推荐","热榜","杭州","视频"].map((label) => <button className={channel === label ? "active" : ""} key={label} onClick={() => {
+    <nav className="toutiao-tabs">{["关注","推荐","热榜","杭州","视频"].map((label) => <button aria-current={channel===label?"page":undefined} disabled={channel===label} className={channel === label ? "active" : ""} key={label} onClick={() => {
       setChannel(label);
       setUiFlag("toutiao.channel", label);
       emit("app.view.changed", "app.toutiao", { view: label, source: "P" });
@@ -491,6 +582,7 @@ export function QQMailApp() {
   const [query,setQuery]=useState("");
   const [replyText,setReplyText]=useState("");
   const [compose,setCompose]=useState({to:"",subject:"",body:""});
+  const [listMode,setListMode]=useState<"normal"|"unread"|"attachments">("normal");
   const scroll = usePlatformScroll("qqmail.home");
   useLayoutEffect(()=>{
     if(view==="list") scroll.restore();
@@ -510,7 +602,10 @@ export function QQMailApp() {
     const currentFolder=typeof moved==="string"?moved:mail.folder;
     const matchesFolder=folder==="所有邮件"||currentFolder===folder;
     const needle=query.trim().toLowerCase();
-    return matchesFolder&&(!needle||`${mail.from}${mail.subject}${mail.preview}${mail.body.join("")}`.toLowerCase().includes(needle));
+    const matchesMode=listMode==="normal"
+      ||listMode==="unread"&&(mail.unread&&state.world.flags[`ui.qqmail.read.${mail.id}`]!==true)
+      ||listMode==="attachments"&&("attachments" in mail&&Array.isArray(mail.attachments)&&mail.attachments.length>0);
+    return matchesFolder&&matchesMode&&(!needle||`${mail.from}${mail.subject}${mail.preview}${mail.body.join("")}`.toLowerCase().includes(needle));
   });
   const openMail=(id:string)=>{
     setSelectedId(id);setView("detail");
@@ -585,7 +680,8 @@ export function QQMailApp() {
     <header className="qqmail-header"><button aria-label="邮箱文件夹" className="mail-account" onClick={()=>setView("folders")}><GeneratedAvatar className="mail-account-image" slot={121} identity="沈川" alt="沈川邮箱头像"/></button><strong>{folder}</strong><div><button aria-label="搜索" onClick={()=>setView("search")}>⌕</button><button aria-label="写邮件" onClick={()=>setView("compose")}>＋</button></div></header>
     <button className="mail-search" onClick={()=>setView("search")}>搜索邮件</button>
     <div className="platform-scroll mail-list" ref={scroll.ref}>
-      <section className="mail-folders"><button onClick={()=>{setFolder("收件箱");setUiFlag("qqmail.filter","unread")}}>所有未读 <b>{mails.filter(mail=>mail.unread&&state.world.flags[`ui.qqmail.read.${mail.id}`]!==true).length}</b></button><button onClick={()=>setFolder("星标邮件")}>星标邮件</button><button onClick={()=>setUiFlag("qqmail.attachment.manager",true)}>附件管理</button></section>
+      <section className="mail-folders"><button className={listMode==="unread"?"active":""} onClick={()=>{setFolder("收件箱");setListMode("unread");setUiFlag("qqmail.filter","unread")}}>所有未读 <b>{mails.filter(mail=>mail.unread&&state.world.flags[`ui.qqmail.read.${mail.id}`]!==true).length}</b></button><button onClick={()=>{setFolder("星标邮件");setListMode("normal")}}>星标邮件</button><button className={listMode==="attachments"?"active":""} onClick={()=>{setListMode("attachments");setUiFlag("qqmail.attachment.manager",true)}}>附件管理</button></section>
+      {listMode!=="normal"&&<div className="mail-list-mode" role="status"><span>{listMode==="unread"?"仅显示未读邮件":"仅显示含附件邮件"} · {visibleMails.length} 封</span><button onClick={()=>setListMode("normal")}>显示全部</button></div>}
       {visibleMails.map((mail, index) => {
         const read=state.world.flags[`ui.qqmail.read.${mail.id}`]===true||!mail.unread;
         return <button data-testid={index === 0 ? "app-effective-action" : undefined} className={`mail-row ${read?"read":""}`} key={mail.id} onClick={() => openMail(mail.id)}>
@@ -595,7 +691,7 @@ export function QQMailApp() {
         </button>;
       })}
     </div>
-    <nav className="platform-bottom-nav" aria-label="QQ邮箱底部导航">{["邮件","通讯录","日历","文件"].map(label=><button className={label===tab?"active":""} key={label} onClick={()=>{setTab(label);setUiFlag("qqmail.tab",label);emit("app.view.changed","app.qqmail",{view:label,source:"P"})}}>{label}</button>)}</nav>
+    <nav className="platform-bottom-nav" aria-label="QQ邮箱底部导航">{["邮件","通讯录","日历","文件"].map(label=><button aria-current={label===tab?"page":undefined} disabled={label===tab} className={label===tab?"active":""} key={label} onClick={()=>{setTab(label);setUiFlag("qqmail.tab",label);emit("app.view.changed","app.qqmail",{view:label,source:"P"})}}>{label}</button>)}</nav>
     <button className="platform-close-hit" data-testid="app-back" aria-label="退出QQ邮箱" onClick={goBack}/>
   </div>;
 }
@@ -606,6 +702,7 @@ export function BaiduNetdiskApp() {
   const ordinaryRecords = ordinaryPlatformRecords.filter((record) => record.appId === "app.baidunetdisk");
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [tab, setTab] = useState("首页");
+  const [netdiskNotice,setNetdiskNotice]=useState("");
   const scroll = usePlatformScroll("baidunetdisk.home");
   useLayoutEffect(()=>{
     if(!selectedId) scroll.restore();
@@ -620,8 +717,9 @@ export function BaiduNetdiskApp() {
         <span className="netdisk-file-icon">ZIP</span>
         <h1>{text(body, "name")}</h1>
         <p>{text(body, "size")} · {text(body, "status")}</p>
-        <button onClick={() => emit("content.item.interacted", detailId, { action: "download" })}>下载到本机</button>
-        <button onClick={() => emit("content.item.interacted", detailId, { action: "share" })}>分享</button>
+        <button onClick={() => {setUiFlag(`baidunetdisk.downloaded.${detailId}`,true);setNetdiskNotice("已加入传输列表，可在“传输”中查看");emit("content.item.interacted", detailId, { action: "download" })}}>下载到本机</button>
+        <button onClick={() => {setNetdiskNotice("分享面板已打开：复制链接或发送给好友");emit("content.item.interacted", detailId, { action: "share" })}}>分享</button>
+        {netdiskNotice&&<PlatformNotice onClose={()=>setNetdiskNotice("")}>{netdiskNotice}</PlatformNotice>}
       </section>
     </DetailShell>;
   }
@@ -648,9 +746,11 @@ export function BaiduNetdiskApp() {
   return <div className="app-window platform-app netdisk-app" data-testid="baidunetdisk-home">
     <header className="netdisk-header"><GeneratedAvatar className="netdisk-account" slot={121} identity="沈川" alt="沈川网盘头像"/><div><b>百度网盘</b><small>安全保存每一份文件</small></div><button onClick={() => {
       setUiFlag("baidunetdisk.upload.open", true);
+      setNetdiskNotice("上传面板已打开：可从“文件”或“照片”选择内容");
       emit("media.picker.opened", "app.files", { surface: "baidunetdisk", source: "P" });
     }}>＋</button></header>
     <div className="netdisk-search">搜索网盘文件</div>
+    {netdiskNotice&&<PlatformNotice onClose={()=>setNetdiskNotice("")}>{netdiskNotice}</PlatformNotice>}
     <div className="platform-scroll netdisk-home" ref={scroll.ref}>
       <section className="netdisk-shortcuts">{["图片", "视频", "文档", "音频", "压缩包"].map((label) => <button key={label} onClick={() => {
         setTab("文件");
@@ -685,6 +785,7 @@ export function AlipayApp() {
   const ordinaryRecords = ordinaryPlatformRecords.filter((record) => record.appId === "app.alipay");
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [tab, setTab] = useState("首页");
+  const [alipayNotice,setAlipayNotice]=useState("");
   const scroll = usePlatformScroll("alipay.home");
   useLayoutEffect(()=>{
     if(!selectedId) scroll.restore();
@@ -720,10 +821,12 @@ export function AlipayApp() {
     </div>;
   }
   return <div className="app-window platform-app alipay-app" data-testid="alipay-home">
-    <header className="alipay-header"><button onClick={() => setUiFlag("alipay.city.sheet", true)}>杭州⌄</button><div>搜索</div><button onClick={() => setUiFlag("alipay.quick.sheet", true)}>＋</button></header>
+    <header className="alipay-header"><button onClick={() => {setUiFlag("alipay.city.sheet", true);setAlipayNotice("当前城市：杭州 · 点击城市服务可切换定位")}}>杭州⌄</button><div>搜索</div><button onClick={() => {setUiFlag("alipay.quick.sheet", true);setAlipayNotice("快捷入口：转账、收款、添加银行卡")}}>＋</button></header>
+    {alipayNotice&&<PlatformNotice onClose={()=>setAlipayNotice("")}>{alipayNotice}</PlatformNotice>}
     <div className="platform-scroll alipay-home" ref={scroll.ref}>
       <section className="alipay-primary">{["扫一扫", "付钱/收钱", "出行", "卡包"].map((label) => <button key={label} onClick={() => {
         setUiFlag("alipay.primary.open", label);
+        setAlipayNotice(label==="扫一扫"?"扫一扫已打开，等待相机画面":label==="付钱/收钱"?"付款码与收款码已准备":label==="出行"?"出行码已打开":`卡包中有 4 张可用卡券`);
         emit("content.item.interacted", "app.alipay", { surface: "primary", label, source: "P" });
       }}><i>{label.slice(0, 1)}</i>{label}</button>)}</section>
       <section className="alipay-services">{["饿了么", "市民中心", "生活缴费", "医保码", "转账", "余额宝", "我的快递", "更多"].map((label) => <button key={label} onClick={() => {
@@ -756,6 +859,8 @@ export function DidiApp() {
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [tab, setTab] = useState("首页");
   const [mode, setMode] = useState("打车");
+  const [didiNotice,setDidiNotice]=useState("");
+  const [routeOpen,setRouteOpen]=useState(false);
   const selected = items.find((item) => item.id === selectedId);
   const selectedOrdinary = ordinaryRecords.find((record) => record.id === selectedId);
   if (selected || selectedOrdinary) {
@@ -766,7 +871,8 @@ export function DidiApp() {
       <section className="didi-trip-detail">
         <span>{text(body, "status")}</span><h1>{text(body, "date")}</h1>
         <div className="didi-route-line"><i/><p><b>{text(body, "from")}</b><b>{text(body, "to")}</b></p></div>
-        <button onClick={() => emit("content.item.interacted", detailId, { action: "route" })}>查看行程路线</button>
+        <button onClick={() => {setRouteOpen(value=>!value);emit("content.item.interacted", detailId, { action: "route" })}}>{routeOpen?"收起行程路线":"查看行程路线"}</button>
+        {routeOpen&&<div className="didi-route-preview" role="status"><span>起点</span><i/><span>途经城市主干道</span><i/><span>终点</span><small>历史行程仅显示概略路线</small></div>}
       </section>
     </DetailShell>;
   }
@@ -787,11 +893,12 @@ export function DidiApp() {
     </div>;
   }
   return <div className="app-window platform-app didi-app" data-testid="didi-home">
-    <header className="didi-header"><button onClick={() => setUiFlag("didi.city.sheet", true)}>杭州⌄</button><button aria-label="消息" onClick={() => setTab("消息")}>消息</button></header>
+    <header className="didi-header"><button onClick={() => {setUiFlag("didi.city.sheet", true);setDidiNotice("当前城市：杭州 · 已使用设备定位")}}>杭州⌄</button><button aria-label="消息" onClick={() => setTab("消息")}>消息</button></header>
+    {didiNotice&&<PlatformNotice onClose={()=>setDidiNotice("")}>{didiNotice}</PlatformNotice>}
     <div className="didi-map" aria-label="地图"><span className="didi-current-dot"/><i/><i/><i/></div>
     <section className="didi-sheet">
       <div className="didi-destination"><span/><div><small>你要去哪儿？</small><b>输入目的地</b></div></div>
-      <nav>{["打车", "顺风车", "代驾", "特价拼车"].map((label) => <button className={mode === label ? "active" : ""} key={label} onClick={() => {
+      <nav>{["打车", "顺风车", "代驾", "特价拼车"].map((label) => <button aria-current={mode===label?"page":undefined} disabled={mode===label} className={mode === label ? "active" : ""} key={label} onClick={() => {
         setMode(label);
         setUiFlag("didi.mode", label);
         emit("app.view.changed", "app.didi", { view: label, source: "P" });
@@ -820,6 +927,8 @@ export function MeituanApp() {
   const ordinaryRecords = ordinaryPlatformRecords.filter((record) => record.appId === "app.meituan");
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [tab, setTab] = useState("首页");
+  const [meituanNotice,setMeituanNotice]=useState("");
+  const [reviewOpen,setReviewOpen]=useState(false);
   const scroll = usePlatformScroll("meituan.home");
   useLayoutEffect(()=>{
     if(!selectedId) scroll.restore();
@@ -841,7 +950,8 @@ export function MeituanApp() {
         <section>{stringList(body, "items").map((item) => <p key={item}><span>{item}</span></p>)}<p><span>餐具数量</span><b>{number(body, "tableware")} 份</b></p></section>
         <div><span>实付</span><strong>¥{number(body, "amount").toFixed(2)}</strong></div>
         <small>下单时间 {text(body, "date")}</small>
-        <button onClick={() => emit("content.item.interacted", detailId, { action: "review" })}>评价订单</button>
+        <button onClick={() => {setReviewOpen(value=>!value);emit("content.item.interacted", detailId, { action: "review" })}}>{reviewOpen?"收起评价":"评价订单"}</button>
+        {reviewOpen&&<section className="meituan-review-panel" role="status"><b>本次体验满意吗？</b><div>{["一般","满意","很满意"].map(label=><button key={label} onClick={()=>{setUiFlag(`meituan.review.${detailId}`,label);setMeituanNotice(`已选择：${label}`)}}>{label}</button>)}</div>{meituanNotice&&<small>{meituanNotice}</small>}</section>}
       </article>
     </DetailShell>;
   }
@@ -863,10 +973,12 @@ export function MeituanApp() {
     </div>;
   }
   return <div className="app-window platform-app meituan-app" data-testid="meituan-home">
-    <header className="meituan-header"><button onClick={() => setUiFlag("meituan.city.sheet", true)}>杭州⌄</button><div>搜索商家、商品</div><button onClick={() => setUiFlag("meituan.quick.sheet", true)}>＋</button></header>
+    <header className="meituan-header"><button onClick={() => {setUiFlag("meituan.city.sheet", true);setMeituanNotice("当前城市：杭州 · 附近服务按当前位置排序")}}>杭州⌄</button><div>搜索商家、商品</div><button onClick={() => {setUiFlag("meituan.quick.sheet", true);setMeituanNotice("快捷入口：扫一扫、付款码、开发票")}}>＋</button></header>
+    {meituanNotice&&<PlatformNotice onClose={()=>setMeituanNotice("")}>{meituanNotice}</PlatformNotice>}
     <div className="platform-scroll meituan-home" ref={scroll.ref}>
       <section className="meituan-categories">{["美食", "外卖", "酒店", "休闲玩乐", "电影", "打车", "买药", "全部"].map((label) => <button key={label} onClick={() => {
         setUiFlag("meituan.category", label);
+        setMeituanNotice(`已切换到“${label}”，下方显示相关历史与推荐`);
         emit("app.view.changed", "app.meituan", { view: label, source: "P" });
       }}><i>{label.slice(0, 1)}</i>{label}</button>)}</section>
       <section className="meituan-banner"><b>吃喝玩乐 都在美团</b><span>问美团，都安排</span></section>
@@ -897,6 +1009,9 @@ export function TaobaoApp() {
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [tab, setTab] = useState("首页");
   const [channel, setChannel] = useState("推荐");
+  const [searchOpen,setSearchOpen]=useState(false);
+  const [taobaoNotice,setTaobaoNotice]=useState("");
+  const [taobaoPanel,setTaobaoPanel]=useState<""|"seller"|"logistics">("");
   const scroll = usePlatformScroll("taobao.home");
   useLayoutEffect(()=>{
     if(!selectedId) scroll.restore();
@@ -912,13 +1027,15 @@ export function TaobaoApp() {
     };
     const detailId = selected?.id ?? selectedOrdinary!.id;
     return <DetailShell className="taobao-app" title="订单详情" onBack={() => setSelectedId(null)} footer={
-      <div className="taobao-detail-actions"><button onClick={() => emit("message.thread.opened", detailId, { surface: "taobao", source: "P" })}>联系卖家</button><button onClick={() => emit("content.item.interacted", detailId, { action: "logistics", source: "P" })}>查看物流</button><PlatformStateButton flag={`taobao.saved.${detailId}`} label="收藏" activeLabel="已收藏" contentId={detailId}/></div>
+      <div className="taobao-detail-actions"><button onClick={() => {setTaobaoPanel("seller");emit("message.thread.opened", detailId, { surface: "taobao", source: "P" })}}>联系卖家</button><button onClick={() => {setTaobaoPanel("logistics");emit("content.item.interacted", detailId, { action: "logistics", source: "P" })}}>查看物流</button><PlatformStateButton flag={`taobao.saved.${detailId}`} label="收藏" activeLabel="已收藏" contentId={detailId}/></div>
     }>
       <article className="taobao-order-detail">
         <div className="taobao-product-image"><span>商品图片</span></div>
         <h1>{text(body, "title")}</h1>
         <strong>{text(body, "amount") ? `¥${number(body, "amount").toFixed(2)}` : text(body, "status")}</strong>
         <dl><div><dt>订单状态</dt><dd>{text(body, "status")}</dd></div><div><dt>下单时间</dt><dd>{text(body, "date")}</dd></div>{text(body, "note") && <div><dt>订单说明</dt><dd>{text(body, "note")}</dd></div>}</dl>
+        {taobaoPanel==="seller"&&<section className="taobao-detail-panel" role="status"><b>店铺客服</b><p>订单信息已附加，可以直接询问发货、退换或商品使用问题。</p><button onClick={()=>setTaobaoPanel("")}>关闭会话</button></section>}
+        {taobaoPanel==="logistics"&&<section className="taobao-detail-panel" role="status"><b>物流进度</b><p>商家已发货 → 运输中 → 预计明日送达</p><button onClick={()=>setTaobaoPanel("")}>收起物流</button></section>}
       </article>
     </DetailShell>;
   }
@@ -940,11 +1057,12 @@ export function TaobaoApp() {
     </div>;
   }
   return <div className="app-window platform-app taobao-app" data-testid="taobao-home">
-    <header className="taobao-header"><div>搜索淘宝商品</div><button onClick={() => {
+    <header className="taobao-header"><div>{searchOpen?<input autoFocus aria-label="搜索淘宝商品" placeholder="输入商品名称"/>:"搜索淘宝商品"}</div><button onClick={() => {
       setUiFlag("taobao.search.open", true);
+      setSearchOpen(value=>!value);
       emit("app.search.submitted", "app.taobao", { query: "", source: "P" });
-    }}>搜索</button></header>
-    <nav className="taobao-tabs">{["推荐","闪购","小时达","百亿补贴"].map((label) => <button className={channel === label ? "active" : ""} key={label} onClick={() => {
+    }}>{searchOpen?"取消":"搜索"}</button></header>
+    <nav className="taobao-tabs">{["推荐","闪购","小时达","百亿补贴"].map((label) => <button aria-current={channel===label?"page":undefined} disabled={channel===label} className={channel === label ? "active" : ""} key={label} onClick={() => {
       setChannel(label);
       setUiFlag("taobao.channel", label);
       emit("app.view.changed", "app.taobao", { view: label, source: "P" });
@@ -952,8 +1070,10 @@ export function TaobaoApp() {
     <div className="platform-scroll taobao-home" ref={scroll.ref}>
       <section className="taobao-categories">{["天猫", "聚划算", "淘金币", "闲鱼", "充值", "旅行", "领券", "分类"].map((label) => <button key={label} onClick={() => {
         setUiFlag("taobao.category", label);
+        setTaobaoNotice(`已进入“${label}”频道，猜你喜欢已按该频道更新`);
         emit("app.view.changed", "app.taobao", { view: label, source: "P" });
       }}><i>{label.slice(0, 1)}</i>{label}</button>)}</section>
+      {taobaoNotice&&<PlatformNotice onClose={()=>setTaobaoNotice("")}>{taobaoNotice}</PlatformNotice>}
       <h2>猜你喜欢</h2>
       <div className="taobao-order-grid">{ordinaryRecords.map((record, index) => <button
         data-testid={index === 0 ? "app-effective-action" : undefined}

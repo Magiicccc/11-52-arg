@@ -3,7 +3,7 @@ import { mkdir, writeFile } from "node:fs/promises";
 import path from "node:path";
 
 const baseUrl = process.env.LIVE_SITE_URL ?? "http://127.0.0.1:4173/";
-const outputDir = path.resolve("docs", "qa", "full-realism");
+const canonicalOutputDir = path.resolve("docs", "qa", "full-realism");
 const allApps = [
   "app.wechat", "app.photos", "app.safari", "app.baidu_map", "app.phone", "app.files", "app.notes", "app.calendar",
   "app.settings", "app.xiaohongshu", "app.douyin", "app.zhihu", "app.tieba", "app.toutiao", "app.qqmail",
@@ -12,6 +12,15 @@ const allApps = [
 ];
 const requestedApps = (process.env.AUDIT_APP_IDS ?? "").split(",").map((value) => value.trim()).filter(Boolean);
 const apps = requestedApps.length ? allApps.filter((appId) => requestedApps.includes(appId)) : allApps;
+const fullAudit = requestedApps.length === 0;
+const auditSlug = requestedApps.map((appId) => appId.replace(/^app\./, "").replaceAll(".", "-")).join("__") || "full";
+const outputDir = fullAudit
+  ? canonicalOutputDir
+  : path.join(canonicalOutputDir, "targeted", auditSlug);
+
+if (!apps.length) {
+  throw new Error(`No known app IDs selected from AUDIT_APP_IDS=${process.env.AUDIT_APP_IDS ?? ""}`);
+}
 
 await mkdir(outputDir, { recursive: true });
 
@@ -101,7 +110,28 @@ function stateSignature(envelope) {
 async function domSignature(page) {
   return page.evaluate(() => {
     const root = document.querySelector(".app-window") ?? document.body;
-    const value = root.innerHTML;
+    const scrollState = [...root.querySelectorAll("*")]
+      .filter((element) => element.scrollTop || element.scrollLeft)
+      .map((element) => `${element.tagName}:${element.scrollTop}:${element.scrollLeft}`)
+      .join("|");
+    const formState = [...root.querySelectorAll("input,textarea,select")]
+      .map((element) => {
+        if (element instanceof HTMLInputElement) return `${element.value}:${element.checked}`;
+        if (element instanceof HTMLTextAreaElement) return element.value;
+        if (element instanceof HTMLSelectElement) return element.value;
+        return "";
+      })
+      .join("|");
+    const canvasState = [...root.querySelectorAll("canvas")]
+      .map((canvas) => {
+        try {
+          return canvas.toDataURL("image/png");
+        } catch {
+          return `${canvas.width}x${canvas.height}`;
+        }
+      })
+      .join("|");
+    const value = `${root.innerHTML}\n${scrollState}\n${formState}\n${canvasState}`;
     let hash = 2166136261;
     for (let index = 0; index < value.length; index += 1) {
       hash ^= value.charCodeAt(index);
@@ -272,11 +302,21 @@ try {
             clickError = fallbackError instanceof Error ? fallbackError.message : String(fallbackError);
           }
         }
-        const works = !clickError && (formValueChanged || changedDom || changedState);
+        const works = !clickError && (formValueChanged || changedDom);
         results.push({
           ...control,
           status: works ? "WORKS" : "BROKEN",
-          reason: clickError ? "click-error" : formValueChanged ? "form-value-change" : changedDom ? "visible-dom-change" : changedState ? "game-state-change" : canonicalEvents.length ? "event-without-visible-or-state-effect" : "no-observable-effect",
+          reason: clickError
+            ? "click-error"
+            : formValueChanged
+              ? "form-value-change"
+              : changedDom
+                ? "visible-surface-change"
+                : changedState
+                  ? "state-only-no-visible-feedback"
+                  : canonicalEvents.length
+                    ? "event-without-visible-effect"
+                    : "no-observable-effect",
           canonicalEvents,
           formValueChanged,
           changedState,
@@ -301,6 +341,7 @@ const summary = apps.map((appId) => {
     broken: appResults.filter((result) => result.status === "BROKEN").length
   };
 });
+const missingApps = summary.filter((row) => row.controls === 0).map((row) => row.appId);
 
 const markdown = [
   "# 全站交互有效性审计",
@@ -311,6 +352,8 @@ const markdown = [
   `- WORKS：${results.filter((result) => result.status === "WORKS").length}`,
   `- DISABLED：${results.filter((result) => result.status === "DISABLED").length}`,
   `- BROKEN：${broken.length}`,
+  `- 审计范围：${fullAudit ? "全部 30 个玩家可见 App" : `定向 ${apps.join(", ")}`}`,
+  `- 未覆盖 App：${missingApps.length ? missingApps.join(", ") : "0"}`,
   "",
   "| App | 控件 | WORKS | DISABLED | BROKEN |",
   "| --- | ---: | ---: | ---: | ---: |",
@@ -326,5 +369,14 @@ await Promise.all([
   writeFile(path.join(outputDir, "INTERACTION_COVERAGE.md"), `${markdown.replace("# 全站交互有效性审计", "# 全站交互覆盖门禁")}\n`, "utf8")
 ]);
 
-console.log(JSON.stringify({ baseUrl, controls: results.length, broken: broken.length, disabled: results.filter((result) => result.status === "DISABLED").length }, null, 2));
-if (broken.length) process.exitCode = 1;
+console.log(JSON.stringify({
+  baseUrl,
+  scope: fullAudit ? "full" : "targeted",
+  apps: apps.length,
+  controls: results.length,
+  broken: broken.length,
+  disabled: results.filter((result) => result.status === "DISABLED").length,
+  missingApps,
+  outputDir
+}, null, 2));
+if (broken.length || (fullAudit && missingApps.length)) process.exitCode = 1;

@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { contentForApp } from "@/content/content-pack";
 import { createInitialGameState, reconcileContentCatalog } from "@/engine/initial-state";
+import { ordinaryTiebaPosts } from "@/content/tieba-life-data";
 
 type ZhihuLongFormBody = {
   title?: string;
@@ -52,6 +53,23 @@ describe("long-form platform content", () => {
       expect(body.source?.trim()).not.toBe("");
       expect(body.date?.trim()).not.toBe("");
       expect(item.narrative.clueRole).toBe("none");
+    }
+  });
+
+  it("ships complete and logically closed ordinary Tieba posts", () => {
+    expect(ordinaryTiebaPosts.length).toBeGreaterThanOrEqual(16);
+
+    const paragraphs = ordinaryTiebaPosts.flatMap((post) => post.body);
+    expect(new Set(paragraphs).size).toBe(paragraphs.length);
+
+    for (const post of ordinaryTiebaPosts) {
+      expect(post.title.trim().length).toBeGreaterThan(8);
+      expect(post.body).toHaveLength(4);
+      expect(post.body.every((paragraph) => paragraph.trim().length >= 45)).toBe(true);
+      expect(post.body.join("").length).toBeGreaterThan(250);
+      expect(post.body.every((paragraph) => /[。？！]$/.test(paragraph.trim()))).toBe(true);
+      expect(post.replies.length).toBeGreaterThanOrEqual(3);
+      expect(post.narrative.clueRole).toBe("none");
     }
   });
 
