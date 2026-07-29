@@ -9,7 +9,7 @@
     "Core story identities use non-face lifestyle images to avoid premature identity disclosure",
     "Every runtime identity is bound semantically rather than by list position"
   ],
-  "assetCount": 46,
+  "assetCount": 47,
   "assets": [
     {
       "id": "avatar.realistic.social.author.nanan-no-wind",
@@ -62,6 +62,26 @@
       "height": 256,
       "bytes": 105040,
       "sha256": "dcb581dffce7d2f0cbb0661c2c3d38431ed2491dbef5659ff1edae796bb6df15",
+      "postProcessing": {
+        "operation": "deterministic resize and PNG optimization",
+        "cropInsets": null
+      },
+      "source": "OpenAI built-in image generation",
+      "generatedAt": "2026-07-19",
+      "narrativeRole": "ordinary-ui-identity-only",
+      "isClue": false
+    },
+    {
+      "id": "avatar.realistic.actor.pb0425",
+      "platform": "cross-platform",
+      "runtimeEntityKey": "actor.pb0425",
+      "category": "anonymous-atmosphere-photo",
+      "promptSummary": "Rainy cafe window, plain ceramic cup and folded umbrella in an ordinary phone snapshot.",
+      "path": "/media/case-001/avatars/realistic/social-pb0425-rainy-cafe.png",
+      "width": 256,
+      "height": 256,
+      "bytes": 119543,
+      "sha256": "99dafdadc5ecb5205c83c5cd937f281bc3aa821746fabe84ddddfc166f078014",
       "postProcessing": {
         "operation": "deterministic resize and PNG optimization",
         "cropInsets": null

@@ -12,7 +12,9 @@ async function unlock(page:Page){
 }
 
 async function closeApp(page:Page){
-  await page.getByTestId("app-back").click();
+  for(let attempt=0;attempt<3&&!await page.getByTestId("home-screen").isVisible();attempt+=1){
+    await page.getByTestId("app-back").click();
+  }
   await expect(page.getByTestId("home-screen")).toBeVisible();
 }
 
@@ -54,6 +56,7 @@ test("P00-A2-11 complete vertical slice is reachable and persists", async ({page
   await closeApp(page);
 
   await page.getByTestId("app-app.tieba").click();
+  await page.getByTestId("open-archive-thread").click();
   await page.getByTestId("inspect-floor-417").click();
   await closeApp(page);
 

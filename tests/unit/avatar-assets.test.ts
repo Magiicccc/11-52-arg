@@ -124,4 +124,10 @@ describe("generated avatar asset pack", () => {
     expect(paths.every((assetPath) => assetPath.includes("/avatars/realistic/"))).toBe(true);
     expect(paths.every((assetPath) => !assetPath.includes("generated-avatar-"))).toBe(true);
   });
+
+  it("uses a unique non-face custom image for the anonymous PB_0425 account", () => {
+    const path = realisticInternetAvatar("PB_0425", 119);
+    expect(path).toContain("/avatars/realistic/social-pb0425-rainy-cafe.png");
+    expect(path).not.toContain("generated-avatar-");
+  });
 });

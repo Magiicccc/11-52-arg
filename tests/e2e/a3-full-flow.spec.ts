@@ -2,7 +2,9 @@ import { test, expect, type Page } from "@playwright/test";
 import { testEntryUrl } from "./entry-url";
 
 async function closeApp(page:Page){
-  await page.getByTestId("app-back").click();
+  for(let attempt=0;attempt<3&&!await page.getByTestId("home-screen").isVisible();attempt+=1){
+    await page.getByTestId("app-back").click();
+  }
   await expect(page.getByTestId("home-screen")).toBeVisible();
 }
 
@@ -37,6 +39,7 @@ async function reachA2_11(page:Page){
   await page.getByTestId("safari-search-submit").click();
   await closeApp(page);
   await page.getByTestId("app-app.tieba").click();
+  await page.getByTestId("open-archive-thread").click();
   await page.getByTestId("inspect-floor-417").click();
   await closeApp(page);
   await page.getByTestId("app-app.safari").click();

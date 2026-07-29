@@ -101,7 +101,7 @@ export function InteractionBoundary({ children }: { children: ReactNode }) {
     ref={boundaryRef}
     onClickCapture={(event: MouseEvent<HTMLDivElement>) => {
       const element = interactiveTarget(event.target);
-      if (element && !element.matches(":disabled")) {
+      if (element && !element.matches(":disabled") && !element.matches("input, textarea, select")) {
         queueMicrotask(() => record(element, "activated"));
       }
     }}

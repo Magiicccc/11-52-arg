@@ -27,6 +27,12 @@ METADATA = {
         "category": "commute-object-photo",
         "promptSummary": "Rainy city-bus window and folded ticket photographed during an ordinary evening commute.",
     },
+    "social-pb0425-rainy-cafe.png": {
+        "platform": "cross-platform",
+        "runtimeEntityKey": "actor.pb0425",
+        "category": "anonymous-atmosphere-photo",
+        "promptSummary": "Rainy cafe window, plain ceramic cup and folded umbrella in an ordinary phone snapshot.",
+    },
     "social-river-greenway-bike.png": {
         "platform": "cross-platform",
         "runtimeEntityKey": "social.author.river-slow-walk",

@@ -71,11 +71,30 @@ async function writeEnvelope(page, envelope) {
 function stateSignature(envelope) {
   if (!envelope?.snapshot) return "missing";
   const snapshot = envelope.snapshot;
+  const devices = Object.fromEntries(Object.entries(snapshot.devices ?? {}).map(([deviceId, device]) => [
+    deviceId,
+    {
+      activeAppId: device.activeAppId,
+      appStack: device.appStack,
+      unreadByApp: device.unreadByApp,
+      scrollByRoute: device.scrollByRoute,
+      networkMode: device.networkMode,
+      locked: device.locked
+    }
+  ]));
   return JSON.stringify({
-    revision: snapshot.revision,
     flags: snapshot.world?.flags,
     appState: snapshot.apps,
-    journalLength: envelope.journal?.length ?? 0
+    devices,
+    story: {
+      currentSceneId: snapshot.story?.currentSceneId,
+      completedSceneIds: snapshot.story?.completedSceneIds,
+      checkpoints: snapshot.story?.checkpoints
+    },
+    content: {
+      unlockedContentIds: snapshot.content?.unlockedContentIds,
+      variants: snapshot.content?.variants
+    }
   });
 }
 
@@ -142,7 +161,11 @@ async function inventory(page, appId, surface) {
   );
 }
 
-const browser = await chromium.launch({ headless: true });
+const browser = await chromium.launch({
+  headless: true,
+  channel: process.env.PLAYWRIGHT_BROWSER_CHANNEL || undefined,
+  args: process.env.PLAYWRIGHT_BROWSER_CHANNEL ? [] : ["--disable-http2"]
+});
 const results = [];
 try {
   for (const appId of apps) {
@@ -166,10 +189,6 @@ try {
           results.push({ ...control, status: "DISABLED", reason: "disabled-by-current-state" });
           continue;
         }
-        if (["input", "textarea", "select"].includes(control.tag)) {
-          results.push({ ...control, status: "WORKS", reason: "bound-form-control" });
-          continue;
-        }
         if (baselineEnvelope) {
           await writeEnvelope(page, baselineEnvelope);
           await page.reload({ waitUntil: "load", timeout: 30_000 });
@@ -188,8 +207,26 @@ try {
         const beforeJournal = beforeEnvelope?.journal ?? [];
         const beforeSignature = await domSignature(page);
         let clickError = null;
+        let formValueChanged = false;
         try {
-          await locator.click({ force: true, timeout: 4_000 });
+          if (control.tag === "input" || control.tag === "textarea") {
+            const previousValue = await locator.inputValue();
+            const probe = `audit-${Date.now()}`;
+            await locator.fill(probe, { force: true, timeout: 4_000 });
+            const value = await locator.inputValue();
+            if (value !== probe) throw new Error("form-control-did-not-retain-value");
+            formValueChanged = value !== previousValue;
+          } else if (control.tag === "select") {
+            const options = await locator.locator("option").evaluateAll((nodes) => nodes.map((node) => node.value));
+            if (!options.length) throw new Error("select-has-no-options");
+            const previousValue = await locator.inputValue();
+            const nextValue = options.find((value) => value !== previousValue);
+            if (nextValue === undefined) throw new Error("select-has-no-alternative-option");
+            await locator.selectOption(nextValue);
+            formValueChanged = await locator.inputValue() === nextValue;
+          } else {
+            await locator.click({ force: true, timeout: 4_000 });
+          }
           await page.waitForTimeout(120);
         } catch (error) {
           try {
@@ -206,9 +243,23 @@ try {
         let canonicalEvents = newEvents.filter((type) => type !== "ui.interaction.activated");
         let changedDom = beforeSignature !== afterSignature;
         let changedState = stateSignature(beforeEnvelope) !== stateSignature(afterEnvelope);
-        if (!clickError && !changedDom && !changedState && canonicalEvents.length === 0) {
+        if (!clickError && !formValueChanged && !changedDom && !changedState) {
           try {
-            await locator.evaluate((element) => element.click());
+            if (control.tag === "input" || control.tag === "textarea") {
+              const previousValue = await locator.inputValue();
+              const probe = `audit-retry-${Date.now()}`;
+              await locator.fill(probe, { force: true });
+              formValueChanged = await locator.inputValue() === probe && probe !== previousValue;
+            } else if (control.tag === "select") {
+              const options = await locator.locator("option").evaluateAll((nodes) => nodes.map((node) => node.value));
+              const previousValue = await locator.inputValue();
+              const nextValue = options.find((value) => value !== previousValue);
+              if (nextValue === undefined) throw new Error("select-has-no-alternative-option");
+              await locator.selectOption(nextValue);
+              formValueChanged = await locator.inputValue() === nextValue;
+            } else {
+              await locator.evaluate((element) => element.click());
+            }
             await page.waitForTimeout(180);
             afterSignature = await domSignature(page).catch(() => "navigation");
             afterEnvelope = await readEnvelope(page).catch(() => null);
@@ -221,12 +272,13 @@ try {
             clickError = fallbackError instanceof Error ? fallbackError.message : String(fallbackError);
           }
         }
-        const works = !clickError && (changedDom || changedState || canonicalEvents.length > 0 || control.type === "submit");
+        const works = !clickError && (formValueChanged || changedDom || changedState);
         results.push({
           ...control,
           status: works ? "WORKS" : "BROKEN",
-          reason: clickError ? "click-error" : changedDom ? "visible-dom-change" : canonicalEvents.length ? "canonical-state-event" : changedState ? "game-state-change" : control.type === "submit" ? "form-submit-contract" : "no-observable-effect",
+          reason: clickError ? "click-error" : formValueChanged ? "form-value-change" : changedDom ? "visible-dom-change" : changedState ? "game-state-change" : canonicalEvents.length ? "event-without-visible-or-state-effect" : "no-observable-effect",
           canonicalEvents,
+          formValueChanged,
           changedState,
           clickError
         });

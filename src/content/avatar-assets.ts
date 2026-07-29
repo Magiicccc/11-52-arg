@@ -49,6 +49,7 @@ const wechatAvatarFiles: Record<string, string> = {
   "一只普通用户": "social-ordinary-user-selfie.png",
   "收纳慢慢来": "social-slow-organizing-duck.png",
   "今天也下雨": "social-today-rain-umbrella.png",
+  "PB_0425": "social-pb0425-rainy-cafe.png",
   "写字楼观察员": "xhs-office-building-observer.png",
   "一档欠曝": "xhs-one-stop-underexposed.png",
   "冰箱便签": "xhs-fridge-note.png",
