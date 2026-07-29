@@ -438,7 +438,22 @@ function ArchiveThread({
           return <article className={`tieba-reply ${floor.cacheOnly ? "cache-floor" : ""}`} key={item.id}>
             <button className="tieba-reply-user" onClick={() => onAuthor(floor.author ?? "贴吧用户")}><img src={realisticInternetAvatar(floor.author ?? "贴吧用户", 112 + (Number(floor.floor ?? 0) % 8))} alt={`${floor.author ?? "贴吧用户"}头像`}/></button>
             {item.id === "forum.tieba.floor417"
-              ? <button className="tieba-cache-inspect" data-testid="inspect-floor-417" onClick={onInspect417}>{content}</button>
+              ? <div
+                  className="tieba-cache-inspect"
+                  data-testid="inspect-floor-417"
+                  role="button"
+                  tabIndex={0}
+                  aria-label="检查缓存中的417楼"
+                  onClick={(event)=>{
+                    if (!(event.target as HTMLElement).closest("button")) onInspect417();
+                  }}
+                  onKeyDown={(event)=>{
+                    if (event.key==="Enter"||event.key===" ") {
+                      event.preventDefault();
+                      onInspect417();
+                    }
+                  }}
+                >{content}</div>
               : content}
           </article>;
         })}

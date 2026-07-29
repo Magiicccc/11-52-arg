@@ -62,7 +62,7 @@ test("Zhihu dedicated home, search, detail, comments and cache states",async ({p
   const suffix=viewportSuffix(page);
   await openZhihu(page);
   await expect(page.locator(".generic-app")).toHaveCount(0);
-  await expect(page.locator(".zhihu-question-card")).toHaveCount(12);
+  await expect(page.locator(".zhihu-question-card")).toHaveCount(14);
   await expect(page.locator(".zhihu-bottom-nav")).toBeVisible();
   await page.screenshot({path:path.join(visualRoot,"zhihu",`home-${suffix}.png`)});
 
@@ -75,6 +75,10 @@ test("Zhihu dedicated home, search, detail, comments and cache states",async ({p
 
   await page.locator(".zhihu-question-card").first().click();
   await expect(page.getByTestId("zhihu-detail")).toBeVisible();
+  await expect(page.locator(".zhihu-answer > p")).toHaveCount(3);
+  await page.getByTestId("zhihu-expand").click();
+  await expect(page.locator(".zhihu-answer > p")).toHaveCount(6);
+  await expect(page.locator(".zhihu-answer")).toContainText("建立可说明的来源链");
   await page.screenshot({path:path.join(visualRoot,"zhihu",`detail-${suffix}.png`)});
 
   await page.locator(".zhihu-answer-actions button").nth(1).click();

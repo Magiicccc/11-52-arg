@@ -66,3 +66,31 @@ test("supporting platform apps use distinct shells and real detail transitions",
     await expect(page.getByTestId("home-screen")).toBeVisible();
   }
 });
+
+test("Toutiao ordinary cards open complete sourced articles", async ({ page }) => {
+  await page.goto(withoutQa(testEntryUrl));
+  await page.getByTestId("app-app.toutiao").scrollIntoViewIfNeeded();
+  await page.getByTestId("app-app.toutiao").click();
+  await expect(page.locator('.toutiao-card[data-content-class="ordinary"]')).toHaveCount(20);
+  await expect(page.locator('.toutiao-card[data-content-class="formal"]')).toHaveCount(10);
+  await expect(page.locator(".toutiao-card")).toHaveCount(30);
+  await page.locator(".toutiao-card").first().click();
+  await expect(page.locator(".toutiao-article")).toBeVisible();
+  await expect(page.locator(".toutiao-article > p")).toHaveCount(5);
+  await expect(page.locator(".toutiao-source")).toHaveText("城市气象服务");
+  await expect(page.locator(".toutiao-article")).toContainText("根据实际天气调整路线");
+  await screenshot(page, "toutiao-long-form-detail");
+});
+
+test("QQ Mail ordinary messages include full headers and complete bodies", async ({ page }) => {
+  await page.goto(withoutQa(testEntryUrl));
+  await page.getByTestId("app-app.qqmail").scrollIntoViewIfNeeded();
+  await page.getByTestId("app-app.qqmail").click();
+  await page.locator(".mail-row").first().click();
+  await expect(page.locator(".mail-detail")).toBeVisible();
+  await expect(page.locator(".mail-envelope")).toContainText("收件人");
+  await expect(page.locator(".mail-envelope")).toContainText("项目经理");
+  await expect(page.locator(".mail-detail > p")).toHaveCount(5);
+  await expect(page.locator(".mail-detail")).toContainText("今天 18:00 前回复确认主持人与记录分工");
+  await screenshot(page, "qqmail-long-form-detail");
+});

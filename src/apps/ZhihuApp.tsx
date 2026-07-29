@@ -1,7 +1,8 @@
 import { useLayoutEffect, useMemo, useRef, useState } from "react";
 import { useGame } from "@/app/GameContext";
 import { realisticInternetAvatar } from "@/content/avatar-assets";
-import { activeBody, getContentItem } from "@/content/selectors";
+import { activeBody, getContentItem, unlockedItemsForApp } from "@/content/selectors";
+import type { NarrativeFunction } from "@/contracts/content";
 
 type ZhihuView = "home" | "ideas" | "profile" | "search" | "detail" | "comments" | "not-found" | "archive";
 type ZhihuItem = {
@@ -17,12 +18,35 @@ type ZhihuItem = {
   upvotes: number;
   comments: number;
   topics: string[];
-  narrativeFunction: "profession" | "habit" | "world_context" | "platform_culture" | "supporting";
+  narrativeFunction: NarrativeFunction;
+  avatarSlot?: number;
+  publishedAt?: string;
+  commentItems?: ZhihuComment[];
   notFound?: boolean;
 };
 
 type AnswerBody = { question?: string; answer?: string; upvotes?: number };
 type DeletedBody = { title?: string; status?: number; archivedAt?: string };
+type ZhihuComment = {
+  author: string;
+  avatarSlot: number;
+  text: string;
+  likes: number;
+  time: string;
+};
+type LongFormAnswerBody = {
+  title?: string;
+  excerpt?: string;
+  paragraphs?: string[];
+  author?: string;
+  credential?: string;
+  avatarSlot?: number;
+  upvotes?: number;
+  commentCount?: number;
+  topics?: string[];
+  publishedAt?: string;
+  comments?: ZhihuComment[];
+};
 
 const neutralItems: ZhihuItem[] = [
   {
@@ -135,7 +159,7 @@ const neutralItems: ZhihuItem[] = [
     upvotes: 691,
     comments: 47,
     topics: ["EXIF", "数字取证"],
-    narrativeFunction: "supporting"
+    narrativeFunction: "habit"
   },
   {
     id: "zhihu.ui.work-files",
@@ -194,18 +218,19 @@ function ZhihuIcon({name}:{name:"menu"|"search"|"plus"|"back"|"share"|"home"|"me
   return <svg className="zhihu-icon" viewBox="0 0 24 24" aria-hidden="true"><path d={paths[name]}/></svg>;
 }
 
-function Avatar({mark,color,identity}:{mark:string;color:string;identity?:string}) {
+function Avatar({mark,color,identity,slot}:{mark:string;color:string;identity?:string;slot?:number}) {
   const slots:Record<string,number>={
     研:96,页:97,河:98,光:99,本:100,西:101,网:102,纲:103,八:104,雨:105,
     橙:106,南:107,普:108,川:120
   };
-  return <img className="zhihu-avatar" src={realisticInternetAvatar(identity ?? mark,slots[mark]??109)} alt="" style={{background:color}} aria-hidden="true"/>;
+  return <img className="zhihu-avatar" src={realisticInternetAvatar(identity ?? mark,slot??slots[mark]??109)} alt="" style={{background:color}} aria-hidden="true"/>;
 }
 
 export function ZhihuApp() {
   const {state,activeDeviceId,goBack,emit,setUiFlag,setScrollPosition}=useGame();
   const formalAnswer=getContentItem("zhihu.answer.01");
   const deletedPage=getContentItem("page.zhihu.deleted.01");
+  const longFormContent=unlockedItemsForApp(state,"app.zhihu").filter(item=>item.id.startsWith("zhihu.life."));
   const answerBody=formalAnswer?activeBody(state,formalAnswer) as AnswerBody:{};
   const deletedBody=deletedPage?activeBody(state,deletedPage) as DeletedBody:{};
   const formalItem:ZhihuItem={
@@ -221,7 +246,10 @@ export function ZhihuApp() {
     upvotes:answerBody.upvotes??318,
     comments:32,
     topics:["网页存档","缓存"],
-    narrativeFunction:"profession"
+    narrativeFunction:"profession",
+    avatarSlot:120,
+    publishedAt:"编辑于 2026-07-12",
+    commentItems:[]
   };
   const missingItem:ZhihuItem={
     id:"page.zhihu.deleted.01",
@@ -236,14 +264,36 @@ export function ZhihuApp() {
     upvotes:17,
     comments:4,
     topics:["记忆","验证"],
-    narrativeFunction:"supporting",
+    narrativeFunction:"world_context",
+    avatarSlot:105,
+    commentItems:[],
     notFound:true
   };
-  const feed=useMemo(()=>[
-    neutralItem(0),neutralItem(1),neutralItem(2),formalItem,neutralItem(3),
-    neutralItem(4),neutralItem(5),neutralItem(6),neutralItem(7),neutralItem(8),
-    neutralItem(9),missingItem
-  ],[answerBody.answer,answerBody.question,answerBody.upvotes,deletedBody.title]);
+  const feed=useMemo(()=>{
+    const ordinary=longFormContent.map((item):ZhihuItem=>{
+      const body=activeBody(state,item) as LongFormAnswerBody;
+      const author=body.author??"知乎用户";
+      return {
+        id:item.id,
+        contentId:item.id,
+        title:body.title??"未命名问题",
+        excerpt:body.excerpt??"",
+        body:body.paragraphs??[],
+        author,
+        authorMark:author.slice(0,1),
+        authorColor:"#607d8b",
+        credential:body.credential??"知乎用户",
+        upvotes:body.upvotes??0,
+        comments:body.commentCount??body.comments?.length??0,
+        topics:body.topics??[],
+        narrativeFunction:item.narrative.primaryFunction,
+        avatarSlot:body.avatarSlot,
+        publishedAt:body.publishedAt,
+        commentItems:body.comments??[]
+      };
+    });
+    return [...ordinary.slice(0,4),formalItem,...ordinary.slice(4),missingItem];
+  },[answerBody.answer,answerBody.question,answerBody.upvotes,deletedBody.title,longFormContent,state]);
   const [view,setView]=useState<ZhihuView>("home");
   const [selectedId,setSelectedId]=useState(formalItem.id);
   const [query,setQuery]=useState("");
@@ -256,6 +306,10 @@ export function ZhihuApp() {
   const selected=feed.find(item=>item.id===selectedId)??formalItem;
   const liked=state.world.flags[`ui.zhihu.liked.${selected.id}`]===true;
   const saved=state.world.flags[`ui.zhihu.saved.${selected.id}`]===true;
+  const expanded=state.world.flags[`ui.zhihu.expanded.${selected.id}`]===true;
+  const selectedComments=selected.commentItems?.length
+    ? selected.commentItems
+    : comments.map((comment,index)=>({...comment,avatarSlot:106+index}));
   const routeKey=`zhihu.${view}`;
 
   useLayoutEffect(()=>{
@@ -282,7 +336,7 @@ export function ZhihuApp() {
   const searchResults=feed.filter(item=>{
     const needle=searchQuery.trim().toLowerCase();
     return !needle||`${item.title}${item.excerpt}${item.topics.join("")}`.toLowerCase().includes(needle);
-  });
+  }).sort((left,right)=>right.body.length-left.body.length);
   const act=(action:string,target="app.zhihu")=>{
     setNotice(action);
     emit("content.item.interacted",target,{action,source:"P"});
@@ -294,7 +348,7 @@ export function ZhihuApp() {
       {notice&&<div className="zhihu-action-feedback">{notice}</div>}
       <div className="zhihu-scroll zhihu-ideas-feed" ref={scrollRef}>
         {feed.filter(item=>!item.notFound).slice(0,8).map((item,index)=><article key={item.id}>
-          <header><Avatar mark={item.authorMark} color={item.authorColor} identity={item.author}/><div><b>{item.author}</b><small>{index+2} 小时前</small></div><button onClick={()=>act(`已关注 ${item.author}`,item.id)}>关注</button></header>
+          <header><Avatar mark={item.authorMark} color={item.authorColor} identity={item.author} slot={item.avatarSlot}/><div><b>{item.author}</b><small>{index+2} 小时前</small></div><button onClick={()=>act(`已关注 ${item.author}`,item.id)}>关注</button></header>
           <p>{item.excerpt}</p>
           <footer><button onClick={()=>act(`已赞同 ${item.title}`,item.id)}>赞同 {item.upvotes}</button><button onClick={()=>openItem(item)}>评论 {item.comments}</button><button onClick={()=>act(`已收藏 ${item.title}`,item.id)}>收藏</button></footer>
         </article>)}
@@ -380,8 +434,8 @@ export function ZhihuApp() {
       {notice&&<div className="zhihu-action-feedback">{notice}</div>}
       <div className="zhihu-scroll zhihu-comments-list" ref={scrollRef}>
         <div className="zhihu-comment-sort"><b>评论</b><button onClick={()=>act("评论排序：按时间",selected.id)}>默认排序⌄</button></div>
-        {comments.map(comment=><article className="zhihu-comment" key={comment.author}>
-          <Avatar mark={comment.mark} color={comment.color} identity={comment.author}/>
+        {selectedComments.map(comment=><article className="zhihu-comment" key={`${selected.id}-${comment.author}`}>
+          <Avatar mark={comment.author.slice(0,1)} color="#778ca3" identity={comment.author} slot={comment.avatarSlot}/>
           <div><b>{comment.author}</b><p>{comment.text}</p><footer><time>{comment.time}</time><span>♡ {comment.likes}</span><button onClick={()=>act(`回复 ${comment.author}`,selected.id)}>回复</button></footer></div>
         </article>)}
       </div>
@@ -406,11 +460,18 @@ export function ZhihuApp() {
           <div className="zhihu-question-buttons"><button className="follow" onClick={()=>act("已关注问题",selected.id)}>关注问题</button><button onClick={()=>act("回答编辑器已打开",selected.id)}>写回答</button><button onClick={()=>act("邀请回答面板已打开",selected.id)}>邀请回答</button></div>
         </article>
         <article className="zhihu-answer">
-          <header><Avatar mark={selected.authorMark} color={selected.authorColor} identity={selected.author}/><div><b>{selected.author}</b><span>{selected.credential}</span></div><button onClick={()=>act(`已关注 ${selected.author}`,selected.id)}>关注</button></header>
+          <header><Avatar mark={selected.authorMark} color={selected.authorColor} identity={selected.author} slot={selected.avatarSlot}/><div><b>{selected.author}</b><span>{selected.credential}</span></div><button onClick={()=>act(`已关注 ${selected.author}`,selected.id)}>关注</button></header>
           <div className="zhihu-answer-voters">{selected.upvotes.toLocaleString("zh-CN")} 人赞同了该回答</div>
-          {selected.body.map((paragraph,index)=><p key={index}>{paragraph}</p>)}
-          <button className="zhihu-expand" onClick={()=>act("已展开全文",selected.id)}>展开阅读全文⌄</button>
-          <footer className="zhihu-answer-meta">编辑于 2026-07-12 · 著作权归作者所有</footer>
+          {(expanded?selected.body:selected.body.slice(0,3)).map((paragraph,index)=><p key={index}>{paragraph}</p>)}
+          {selected.body.length>3&&<button
+            className="zhihu-expand"
+            data-testid="zhihu-expand"
+            onClick={()=>{
+              setUiFlag(`zhihu.expanded.${selected.id}`,!expanded);
+              emit("content.item.interacted",selected.contentId??selected.id,{action:expanded?"collapse-answer":"expand-answer",active:!expanded,source:"P"});
+            }}
+          >{expanded?"收起回答⌃":"展开阅读全文⌄"}</button>}
+          <footer className="zhihu-answer-meta">{selected.publishedAt??"编辑于 2026-07-12"} · 著作权归作者所有</footer>
         </article>
         <section className="zhihu-related">
           <h2>相关推荐</h2>
@@ -452,7 +513,7 @@ function QuestionCard({item,onOpen,effective=false}:{item:ZhihuItem;onOpen():voi
   return <article className="zhihu-question-card">
     <button data-testid={effective?"app-effective-action":undefined} onClick={onOpen}>
       <h2>{item.title}</h2>
-      <div className="zhihu-card-author"><Avatar mark={item.authorMark} color={item.authorColor} identity={item.author}/><span><b>{item.author}</b><small>{item.credential}</small></span></div>
+      <div className="zhihu-card-author"><Avatar mark={item.authorMark} color={item.authorColor} identity={item.author} slot={item.avatarSlot}/><span><b>{item.author}</b><small>{item.credential}</small></span></div>
       <p>{item.excerpt}</p>
       <footer><span>▲ {item.upvotes.toLocaleString("zh-CN")} 赞同</span><span>{item.comments} 评论</span><span>收藏</span><span>•••</span></footer>
     </button>

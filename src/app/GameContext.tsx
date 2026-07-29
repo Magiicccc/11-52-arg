@@ -2,7 +2,7 @@ import { createContext, useCallback, useContext, useEffect, useMemo, useRef, use
 import type { DeviceId, GameState, JsonValue } from "@/contracts/game-state";
 import type { EventReceipt, StoryEvent } from "@/contracts/story-event";
 import { triggers } from "@/content/content-pack";
-import { createInitialGameState } from "@/engine/initial-state";
+import { createInitialGameState, reconcileContentCatalog } from "@/engine/initial-state";
 import { createStoryEvent } from "@/engine/event-factory";
 import { processStoryEvent } from "@/engine/story-engine";
 import { clearSave, commitSave, loadSave } from "@/persistence/save-service";
@@ -37,7 +37,7 @@ export function GameProvider({children}:{children:ReactNode}) {
   journalRef.current=journal;
   receiptsRef.current=receipts;
 
-  useEffect(() => { void loadSave().then((save) => { if (save) { setState(save.snapshot); setJournal(save.journal); setReceipts(save.receipts); } setReady(true); }); }, []);
+  useEffect(() => { void loadSave().then((save) => { if (save) { setState(reconcileContentCatalog(save.snapshot)); setJournal(save.journal); setReceipts(save.receipts); } setReady(true); }); }, []);
   useEffect(() => { if (ready) void commitSave(state,journal,receipts); }, [state,journal,receipts,ready]);
 
   const activeDeviceId = (state.world.flags.activeDeviceId === "investigation" ? "investigation" : "player") as DeviceId;

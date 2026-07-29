@@ -391,7 +391,8 @@ export function DouyinApp() {
 export function ToutiaoApp() {
   const { state, goBack, emit, setUiFlag } = useGame();
   const items = unlockedItemsForApp(state, "app.toutiao");
-  const ordinaryRecords = ordinaryPlatformRecords.filter((record) => record.appId === "app.toutiao");
+  const ordinaryItems = items.filter((item) => item.id.startsWith("news.toutiao.life."));
+  const formalItems = items.filter((item) => !item.id.startsWith("news.toutiao.life."));
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [tab, setTab] = useState("首页");
   const [channel, setChannel] = useState("推荐");
@@ -401,14 +402,10 @@ export function ToutiaoApp() {
     if(!selectedId) scroll.restore();
   },[selectedId]);
   const selected = items.find((item) => item.id === selectedId);
-  const selectedOrdinary = ordinaryRecords.find((record) => record.id === selectedId);
-  if (selected || selectedOrdinary) {
-    const body = selected ? activeBody(state, selected) as Body : {
-      title: selectedOrdinary!.title,
-      summary: selectedOrdinary!.subtitle,
-      date: selectedOrdinary!.date
-    };
-    const detailId = selected?.id ?? selectedOrdinary!.id;
+  if (selected) {
+    const body = activeBody(state, selected) as Body;
+    const detailId = selected.id;
+    const paragraphs = stringList(body, "paragraphs");
     return <DetailShell className="toutiao-app" title="今日头条" onBack={() => setSelectedId(null)} footer={
       <div className="toutiao-actions">
         <button onClick={() => setCommenting(true)}>{commenting ? "评论已打开" : "写评论…"}</button>
@@ -419,8 +416,10 @@ export function ToutiaoApp() {
     }>
       <article className="toutiao-article">
         <h1>{text(body, "title")}</h1>
-        <div><span className="toutiao-source">头条新闻</span><time>{text(body, "date")}</time></div>
-        <p>{text(body, "summary")}</p>
+        <div><span className="toutiao-source">{text(body, "source", "头条新闻")}</span><time>{text(body, "date")}</time></div>
+        <p className="toutiao-lead">{text(body, "summary")}</p>
+        {paragraphs.map((paragraph,index)=><p key={index}>{paragraph}</p>)}
+        {paragraphs.length>0&&<footer><span>{text(body, "category", "资讯")}</span><span>{number(body, "commentCount")} 条评论</span><span>内容发布于游戏内 2026-07-15 时间线</span></footer>}
       </article>
     </DetailShell>;
   }
@@ -451,18 +450,21 @@ export function ToutiaoApp() {
       emit("app.view.changed", "app.toutiao", { view: label, source: "P" });
     }}>{label}</button>)}</nav>
     <div className="platform-scroll toutiao-feed" ref={scroll.ref}>
-      {ordinaryRecords.map((record, index) => <button data-testid={index === 0 ? "app-effective-action" : undefined} className="toutiao-card" key={record.id} onClick={() => {
-        setSelectedId(record.id);
-        emit("content.item.opened", record.id, { surface: "toutiao", source: "P" });
+      {ordinaryItems.map((item, index) => {
+        const body = activeBody(state, item) as Body;
+        return <button data-testid={index === 0 ? "app-effective-action" : "toutiao-ordinary-card"} data-content-class="ordinary" className="toutiao-card" key={item.id} onClick={() => {
+        setSelectedId(item.id);
+        emit("content.item.opened", item.id, { surface: "toutiao", source: "P" });
         scroll.remember();
       }}>
-        <b>{record.title}</b>
-        <p>{record.subtitle}</p>
-        <small>{record.category} · {record.date}</small>
-      </button>)}
-      {items.map((item, index) => {
+        <b>{text(body, "title")}</b>
+        <p>{text(body, "summary")}</p>
+        <small>{text(body, "source", "头条新闻")} · {text(body, "date")}</small>
+      </button>;
+      })}
+      {formalItems.map((item) => {
         const body = activeBody(state, item) as Body;
-        return <button className="toutiao-card" key={item.id} onClick={() => {
+        return <button data-testid="toutiao-formal-card" data-content-class="formal" className="toutiao-card" key={item.id} onClick={() => {
           setSelectedId(item.id);
           emit("content.item.opened", item.id, { surface: "toutiao" });
           scroll.remember();
@@ -508,7 +510,7 @@ export function QQMailApp() {
     const currentFolder=typeof moved==="string"?moved:mail.folder;
     const matchesFolder=folder==="所有邮件"||currentFolder===folder;
     const needle=query.trim().toLowerCase();
-    return matchesFolder&&(!needle||`${mail.from}${mail.subject}${mail.preview}`.toLowerCase().includes(needle));
+    return matchesFolder&&(!needle||`${mail.from}${mail.subject}${mail.preview}${mail.body.join("")}`.toLowerCase().includes(needle));
   });
   const openMail=(id:string)=>{
     setSelectedId(id);setView("detail");
@@ -519,17 +521,26 @@ export function QQMailApp() {
   if (view==="detail"&&selected) {
     const starred=state.world.flags[`ui.qqmail.starred.${selected.id}`]===true||"starred" in selected&&selected.starred===true;
     const attachments="attachments" in selected?selected.attachments:undefined;
+    const recipient="to" in selected?selected.to:"沈川";
+    const cc="cc" in selected?selected.cc:undefined;
+    const sentAt="sentAt" in selected?selected.sentAt:selected.date;
     return <DetailShell className="qqmail-app" title="邮件" onBack={() => setView("list")} footer={
       <div className="mail-actions">
         <button onClick={()=>setReplyText(replyText||`Re: ${selected.subject}\n`)}>回复</button>
-        <button onClick={()=>{setCompose({to:"",subject:`Fwd: ${selected.subject}`,body:selected.preview});setView("compose")}}>转发</button>
+        <button onClick={()=>{setCompose({to:"",subject:`Fwd: ${selected.subject}`,body:selected.body.join("\n\n")});setView("compose")}}>转发</button>
         <button onClick={()=>setView("folders")}>移动</button>
         <button onClick={()=>{setUiFlag(`qqmail.deleted.${selected.id}`,true);emit("content.item.interacted",selected.id,{action:"delete",source:"P"});setView("list")}}>删除</button>
       </div>
     }>
       <article className="mail-detail">
         <h1>{selected.subject}</h1>
-        <header><GeneratedAvatar className="mail-avatar" slot={68+Math.max(0,mails.findIndex(mail=>mail.id===selected.id))} identity={selected.from} alt={`${selected.from}头像`}/><div><b>{selected.from}</b><small>发给 沈川 · {selected.date}</small></div><button className={starred?"active":""} onClick={()=>setUiFlag(`qqmail.starred.${selected.id}`,!starred)}>{starred?"★":"☆"}</button></header>
+        <header><GeneratedAvatar className="mail-avatar" slot={68+Math.max(0,mails.findIndex(mail=>mail.id===selected.id))} identity={selected.from} alt={`${selected.from}头像`}/><div><b>{selected.from}</b><small>发给 {recipient} · {selected.date}</small></div><button className={starred?"active":""} onClick={()=>setUiFlag(`qqmail.starred.${selected.id}`,!starred)}>{starred?"★":"☆"}</button></header>
+        <section className="mail-envelope">
+          <div><b>发件人</b><span>{selected.from}</span></div>
+          <div><b>收件人</b><span>{recipient}</span></div>
+          {cc&&cc.length>0&&<div><b>抄送</b><span>{cc.join("、")}</span></div>}
+          <div><b>时间</b><span>{sentAt}</span></div>
+        </section>
         {selected.body.map((paragraph,index)=><p key={index}>{paragraph}</p>)}
         {attachments&&attachments.length>0&&<section className="mail-attachments"><b>{attachments.length} 个附件</b>{attachments.map(attachment=><button key={attachment.id} onClick={()=>{setUiFlag(`qqmail.downloaded.${attachment.id}`,true);emit("content.item.interacted",attachment.id,{action:"download",source:"P"})}}><span>{attachment.kind}</span><div><b>{attachment.name}</b><small>{attachment.size}</small></div><i>下载</i></button>)}</section>}
         {replyText&&<section className="mail-inline-reply"><textarea value={replyText} onChange={event=>setReplyText(event.target.value)}/><button onClick={()=>{setUiFlag(`qqmail.reply.${selected.id}`,replyText);emit("message.email.sent",selected.id,{mode:"reply",source:"P"});setReplyText("")}}>发送回复</button></section>}

@@ -1,0 +1,615 @@
+[
+  {
+    "id": "zhihu.life.interview",
+    "appId": "app.zhihu",
+    "kind": "answer",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "zhihu.life.interview.v0",
+    "variants": [
+      {
+        "id": "zhihu.life.interview.v0",
+        "correctionStage": "R0",
+        "body": {
+          "title": "第一次做用户访谈，怎样避免不自觉地诱导对方？",
+          "excerpt": "先问经历，再问判断。把“你是不是觉得”改成“当时发生了什么”，通常能得到更接近真实使用过程的回答。",
+          "paragraphs": [
+            "诱导并不只发生在“你是不是更喜欢新版”这种明显的问题里。更常见的情况是，访谈者已经在问题中替受访者定义了困难、原因和理想答案。对方为了让谈话顺利，会沿着这个框架回答，最后得到的材料看起来完整，却很难判断哪些判断真正来自用户。",
+            "准备提纲时，我会先把研究目标和访谈问题分开写。研究目标可以是“理解用户为什么放弃一次上传”，真正说出口的问题却应该从事实开始，例如：“回忆最近一次上传文件，当时你在哪里？先做了什么？”研究目标留给研究者，具体经历交给受访者。",
+            "访谈开始后，优先追问动作顺序。可以问“然后呢”“你当时看到了什么”“你为什么停了一下”，少问“你觉得方便吗”。前一类问题让对方重建现场，后一类问题容易得到笼统评价。遇到“挺好的”“不太方便”时，也不要立刻解释，应继续追问最近一次具体例子。",
+            "复述是必要的，但复述时要保留不确定性。我通常会说：“我确认一下，你刚才提到先返回上一页，之后才重新搜索，对吗？”而不是说：“所以搜索不好用，导致你返回了。”前一句核对事实，后一句已经替对方完成了因果判断。",
+            "如果受访者的前后叙述不一致，不必急着指出矛盾。可以分别询问两个场景的时间、设备和任务，很多差异来自情境不同。只有在事实层面仍无法对应时，再把两段原话并列，请对方解释其中的区别。",
+            "访谈结束后，我会在记录里标出“用户原话”“现场事实”和“研究者解释”三类内容。避免诱导不是把访谈做成机械问卷，而是让结论能回到清楚的证据链：谁在什么情境下做了什么，研究者又依据哪些材料作出判断。"
+          ],
+          "author": "周末做研究",
+          "credential": "用户研究从业者",
+          "avatarSlot": 96,
+          "upvotes": 1264,
+          "commentCount": 83,
+          "topics": ["用户研究", "访谈"],
+          "publishedAt": "编辑于 2026-07-11",
+          "comments": [
+            {"author": "提纲第四版", "avatarSlot": 103, "text": "把研究目标和说出口的问题分开写，这一点特别实用。", "likes": 46, "time": "昨天 20:18"},
+            {"author": "录音笔还有电", "avatarSlot": 109, "text": "复述时不替用户补因果，确实能少掉很多误判。", "likes": 29, "time": "昨天 22:07"},
+            {"author": "普通产品人", "avatarSlot": 110, "text": "新人最容易把提纲当成必须逐字念完的问卷。", "likes": 17, "time": "今天 08:36"}
+          ]
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "profession",
+      "secondaryFunctions": ["platform_culture"],
+      "clueRole": "none",
+      "worldFactIds": ["wf.shenchuan.job"],
+      "characterTraitIds": ["ct.shenchuan.archivist"],
+      "relationshipBeatIds": [],
+      "continuityLinkIds": [],
+      "firstReadValue": "建立沈川会阅读严谨用户研究方法讨论的职业生活。",
+      "payoffPolicy": "none"
+    },
+    "metadata": {"visibleAtStart": true, "slice": "daily", "contentClass": "ordinary"}
+  },
+  {
+    "id": "zhihu.life.photos",
+    "appId": "app.zhihu",
+    "kind": "answer",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "zhihu.life.photos.v0",
+    "variants": [
+      {
+        "id": "zhihu.life.photos.v0",
+        "correctionStage": "R0",
+        "body": {
+          "title": "为什么手机照片整理到最后总会越分越乱？",
+          "excerpt": "相簿更适合表达“我想怎样找”，文件夹更适合表达“它原来在哪里”。两套逻辑混在一起时，分类会越来越重。",
+          "paragraphs": [
+            "很多人整理照片时，先建立一套看起来完整的分类：人物、地点、旅行、工作、食物。真正开始移动照片后才发现，一张图可能同时属于三四类，于是目录越建越细，最后连自己都记不住应该放在哪里。",
+            "问题往往不是分类不够精确，而是混用了两种需求。文件目录回答“原文件存在哪里”，相簿和标签回答“以后想怎样找到它”。原文件适合按年份、月份或拍摄批次稳定保存；相簿则可以围绕一次旅行、一个人或一个项目重复收录同一张照片。",
+            "我的做法是先保护原始信息。导入后不立即改动文件，保留拍摄时间、原始文件名和设备信息；确认备份完成，再删除明显重复、失焦和误触的图片。这个阶段只做取舍，不急着给每张图赋予意义。",
+            "第二步才建立少量长期有效的相簿，例如“家人”“工作资料”“待冲印”和“城市散步”。临时活动可以按日期建立相簿，但活动结束后不必继续维护复杂层级。搜索地点、人物和文字识别已经能承担一部分找图工作，不必人工复制全部信息。",
+            "备份也要和整理分开。云端同步解决多设备查看，不等于独立备份；重要原图至少还应有一份离线副本。每次迁移硬盘时记录日期、容量和校验结果，比依赖“应该已经复制过”可靠得多。",
+            "一套能坚持的系统通常并不精致：原文件位置稳定，常用入口不超过几个，重要照片有第二份副本。整理的目标是以后找得到、说得清来源，而不是让每张照片只能属于唯一格子。"
+          ],
+          "author": "折页之间",
+          "credential": "摄影话题优秀答主",
+          "avatarSlot": 97,
+          "upvotes": 836,
+          "commentCount": 54,
+          "topics": ["照片管理", "数字生活"],
+          "publishedAt": "编辑于 2026-07-09",
+          "comments": [
+            {"author": "橙色文件夹", "avatarSlot": 106, "text": "“云同步不等于备份”值得单独加粗。", "likes": 38, "time": "昨天 21:16"},
+            {"author": "照片很多但不慌", "avatarSlot": 111, "text": "一次只删一百张以后，终于没有因为任务太大直接放弃。", "likes": 22, "time": "昨天 23:04"},
+            {"author": "移动硬盘二号", "avatarSlot": 112, "text": "记录迁移日期和校验结果比文件夹命名更救命。", "likes": 15, "time": "今天 09:12"}
+          ]
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "habit",
+      "secondaryFunctions": ["profession"],
+      "clueRole": "none",
+      "worldFactIds": ["wf.hangzhou.daily"],
+      "characterTraitIds": ["ct.shenchuan.photo", "ct.shenchuan.archivist"],
+      "relationshipBeatIds": [],
+      "continuityLinkIds": [],
+      "firstReadValue": "建立沈川整理照片、保留原文件与离线备份的稳定习惯。",
+      "payoffPolicy": "none"
+    },
+    "metadata": {"visibleAtStart": true, "slice": "daily", "contentClass": "ordinary"}
+  },
+  {
+    "id": "zhihu.life.walk",
+    "appId": "app.zhihu",
+    "kind": "answer",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "zhihu.life.walk.v0",
+    "variants": [
+      {
+        "id": "zhihu.life.walk.v0",
+        "correctionStage": "R0",
+        "body": {
+          "title": "在一座熟悉的城市里散步，怎样重新获得一点新鲜感？",
+          "excerpt": "不要先选目的地，只给自己一个小限制：沿着有树荫的路走，或者每经过三条街才允许转弯。",
+          "paragraphs": [
+            "熟悉感会把城市压缩成几条功能路线：去公司、去地铁、去超市。人并不是看不见周围的变化，而是每天都用同一种目标穿过它们。想获得新鲜感，未必需要去很远的地方，先改变走路时的任务就够了。",
+            "我常给路线加一个简单限制，例如只走公共绿地相连的街道、遇到小雨就沿有檐廊的一侧前进，或者每走二十分钟才看一次地图。限制不能太复杂，否则散步会变成执行规则；它只是帮助人离开默认路线。",
+            "出发前仍应确认回程方式、天气和开放时间。施工区域、封闭校园、废弃厂房和私人住宅不会因为适合拍照就变成公共空间。隔着围挡观察、沿公开道路绕行，得到的城市信息并不会更少。",
+            "走路时可以记录三类细节：声音的变化、店铺的更替和同一条路在不同天气里的使用方式。与其连续拍几十张相似照片，不如停下来写一句当时为什么按下快门。这样回看时，照片会重新连接到当天的经验。",
+            "如果路线很满意，我只保存起点、终点和几个公共节点，不把它包装成“秘密路线”。城市空间一直在变化，店铺会搬走，道路会施工，给下一次散步留一点重新选择的余地更有意思。",
+            "新鲜感不是假装自己从未见过这座城市，而是暂时放下“赶到哪里”的目的。安全地走一条不同的公共道路，认真看完十分钟，已经足够让熟悉的地方恢复层次。"
+          ],
+          "author": "沿河慢慢走",
+          "credential": "城市生活话题答主",
+          "avatarSlot": 98,
+          "upvotes": 592,
+          "commentCount": 41,
+          "topics": ["城市生活", "散步"],
+          "publishedAt": "发布于 2026-07-08",
+          "comments": [
+            {"author": "八点四十二", "avatarSlot": 104, "text": "改变任务而不是强行找景点，这个说法很准确。", "likes": 31, "time": "7月10日"},
+            {"author": "今天也下雨", "avatarSlot": 113, "text": "雨天沿有檐廊的一侧走，路线和平时真的不一样。", "likes": 19, "time": "7月11日"},
+            {"author": "公共道路观察员", "avatarSlot": 114, "text": "不翻围挡这一点应该成为城市摄影常识。", "likes": 14, "time": "7月12日"}
+          ]
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "world_context",
+      "secondaryFunctions": ["habit", "location"],
+      "clueRole": "none",
+      "worldFactIds": ["wf.hangzhou.daily"],
+      "characterTraitIds": ["ct.shenchuan.photo"],
+      "relationshipBeatIds": [],
+      "continuityLinkIds": [],
+      "firstReadValue": "建立沈川在开放公共空间散步和拍照的城市生活背景。",
+      "payoffPolicy": "none"
+    },
+    "metadata": {"visibleAtStart": true, "slice": "daily", "contentClass": "ordinary"}
+  },
+  {
+    "id": "zhihu.life.reflection",
+    "appId": "app.zhihu",
+    "kind": "answer",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "zhihu.life.reflection.v0",
+    "variants": [
+      {
+        "id": "zhihu.life.reflection.v0",
+        "correctionStage": "R0",
+        "body": {
+          "title": "手机摄影中怎样处理玻璃反光？",
+          "excerpt": "贴近玻璃、改变拍摄角度、用深色衣物遮住身后光源，通常比后期强行去反光自然。",
+          "paragraphs": [
+            "隔着橱窗、车窗或室内玻璃拍照时，画面里会同时出现玻璃两侧的光。反光不是手机算法单独造成的，后期也很难把两个重叠场景完整分离，所以最有效的处理发生在按下快门之前。",
+            "先观察反光来自哪里。屏幕上较亮的块面往往对应身后的灯、白墙或衣服。向左或向右移动半步，通常比只改变手机角度有效；条件允许时让镜头靠近玻璃，也能缩小身后光线进入镜头的范围。",
+            "用深色衣物、包或手掌在镜头周围遮光时，不要覆盖镜头和测光区域。手机贴近玻璃后容易对焦到污渍，应先擦净一小块区域，再点按真正的主体对焦。夜间拍摄还要防止手机壳边缘被玻璃反射进画面。",
+            "偏振镜在特定角度能减弱反光，但不是万能开关。它可能让天空、屏幕或车窗出现不均匀色块，超广角镜头尤其明显。拍记录照片时，我会同时保留一张不加滤镜的版本，避免只剩处理后的判断。",
+            "有时反光本身也包含环境信息，例如拍摄者所在的位置、室内光线或玻璃前后的距离。如果照片用于工作记录或长期存档，不建议为了“干净”把所有反光都修掉，更不应覆盖原文件。",
+            "判断标准可以很简单：反光遮住主体时，在现场减少它；反光属于现场的一部分时，控制亮度并保留。拍摄完先检查边角和对焦，再决定是否需要后期，比依赖一次自动消除更稳妥。"
+          ],
+          "author": "一格曝光",
+          "credential": "摄影与器材话题答主",
+          "avatarSlot": 99,
+          "upvotes": 2187,
+          "commentCount": 129,
+          "topics": ["手机摄影", "反光"],
+          "publishedAt": "编辑于 2026-07-07",
+          "comments": [
+            {"author": "镜头布不见了", "avatarSlot": 115, "text": "先擦玻璃再谈算法，解决了我一半的问题。", "likes": 72, "time": "7月8日"},
+            {"author": "慢快门小顾", "avatarSlot": 116, "text": "保留一张无滤镜版本，对记录类照片很有必要。", "likes": 44, "time": "7月9日"},
+            {"author": "窗边座位", "avatarSlot": 117, "text": "深色外套遮反光比我买的小配件还好用。", "likes": 27, "time": "7月10日"}
+          ]
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "habit",
+      "secondaryFunctions": ["profession"],
+      "clueRole": "none",
+      "worldFactIds": ["wf.hangzhou.daily"],
+      "characterTraitIds": ["ct.shenchuan.photo", "ct.shenchuan.archivist"],
+      "relationshipBeatIds": [],
+      "continuityLinkIds": [],
+      "firstReadValue": "补充沈川会保留原图并谨慎解释反光的摄影习惯。",
+      "payoffPolicy": "none"
+    },
+    "metadata": {"visibleAtStart": true, "slice": "daily", "contentClass": "ordinary"}
+  },
+  {
+    "id": "zhihu.life.filename",
+    "appId": "app.zhihu",
+    "kind": "answer",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "zhihu.life.filename.v0",
+    "variants": [
+      {
+        "id": "zhihu.life.filename.v0",
+        "correctionStage": "R0",
+        "body": {
+          "title": "长期保存文件时，文件名应该包含哪些信息？",
+          "excerpt": "日期、对象、版本和状态足够覆盖大多数个人资料。文件名要帮助以后的人判断，而不是记录此刻所有想法。",
+          "paragraphs": [
+            "文件名的作用不是替代数据库，而是在文件离开原目录、被邮件转发或复制到移动硬盘后，仍然能让人做出基本判断。一个可靠的名字至少要回答：它是什么、属于哪个时间或对象、现在处于什么版本。",
+            "我通常使用“日期_主题_对象_版本”的顺序，例如“20260715_访谈提纲_支付流程_v04.docx”。日期用四位年份和两位月日，排序时不会混乱；主题和对象保持短而稳定，不在不同文件里来回使用简称和全称。",
+            "版本号只表达迭代顺序，不表达情绪。v03之后应该是v04，而不是“最终版”“最终版2”“真的不改了”。如果文件存在脱敏、导出或签署状态，可以在版本后增加明确后缀，例如“_脱敏”或“_已签署”。",
+            "创建时间和修改时间不适合全部塞进文件名。系统时间可能因复制而变化，重要资料应另外保存来源、创建环境和校验值。文件名负责识别，元数据和记录表负责证明，两者不能互相替代。",
+            "建立规则后，不必一次重命名所有旧文件。先从仍在使用的项目开始，把新文件和最终归档文件统一；旧目录可以保留一张索引表，记录旧名与新名的对应关系，避免链接和引用突然失效。",
+            "好的命名规则应该让同事不看说明也能大致理解，并且半年后仍愿意继续执行。字段越多不一定越安全，稳定、可排序、能区分版本，已经覆盖了大多数长期保存需求。"
+          ],
+          "author": "本地优先",
+          "credential": "数字存档话题答主",
+          "avatarSlot": 100,
+          "upvotes": 1479,
+          "commentCount": 96,
+          "topics": ["文件管理", "数据备份"],
+          "publishedAt": "编辑于 2026-07-06",
+          "comments": [
+            {"author": "版本号从一开始", "avatarSlot": 118, "text": "版本号不表达情绪，说中了“最终版3”的根因。", "likes": 64, "time": "7月7日"},
+            {"author": "本地还有一份", "avatarSlot": 119, "text": "旧文件先做索引、不强行全改，更适合实际项目。", "likes": 35, "time": "7月8日"},
+            {"author": "橙色文件夹", "avatarSlot": 106, "text": "文件名负责识别，校验值负责证明，记住了。", "likes": 28, "time": "7月9日"}
+          ]
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "platform_culture",
+      "secondaryFunctions": ["profession", "habit"],
+      "clueRole": "none",
+      "worldFactIds": ["wf.shenchuan.job"],
+      "characterTraitIds": ["ct.shenchuan.archivist"],
+      "relationshipBeatIds": [],
+      "continuityLinkIds": [],
+      "firstReadValue": "解释沈川文件命名与版本管理习惯的普通来源。",
+      "payoffPolicy": "none"
+    },
+    "metadata": {"visibleAtStart": true, "slice": "daily", "contentClass": "ordinary"}
+  },
+  {
+    "id": "zhihu.life.renting",
+    "appId": "app.zhihu",
+    "kind": "answer",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "zhihu.life.renting.v0",
+    "variants": [
+      {
+        "id": "zhihu.life.renting.v0",
+        "correctionStage": "R0",
+        "body": {
+          "title": "一个人租房后，最值得先买的生活小物是什么？",
+          "excerpt": "不是装饰品，是一盏稳定的台灯、够长的插线板，以及真的会用到的收纳盒。",
+          "paragraphs": [
+            "刚搬进出租屋时，最容易买错的不是某个具体物品，而是一次性购买“想象中的生活”。还没做过饭就买齐锅具，还没住过一个雨天就先布置阳台，结果真正每天使用的东西反而缺位。",
+            "我建议先保证照明、供电、清洁和睡眠。检查床边和书桌是否有稳定光源，插座位置是否需要合规插线板，卫生间有没有能晾干毛巾的地方。这些问题每天都会出现，解决后的收益最直接。",
+            "收纳盒不必先买成套。先住一周，观察钥匙、雨伞、充电线和快递包装总是落在哪里，再按实际尺寸补一两个容器。收纳的意义是减少寻找和归位成本，不是把所有东西藏进同样颜色的盒子。",
+            "厨房也可以从最低需求开始：一口容易清洗的锅、一把顺手的刀、两个带盖容器，足以应付简单饭菜。确认自己确实会在家吃饭后，再补烤箱、咖啡器具或更多餐具，既省预算，也不占有限台面。",
+            "购买前还要看租房限制。墙面能否打孔、家具是否允许移动、电器功率是否适合老线路，都比短视频里的布置效果重要。涉及电气和燃气的问题应交给物业或专业人员处理。",
+            "住处真正变得像自己的地方，不靠第一天买齐，而靠每天顺手使用。把钱先花在照明、供电、睡眠和清洁上，其余物品等真实生活提出需求后再买，通常更准确。"
+          ],
+          "author": "住在城西",
+          "credential": "杭州生活话题答主",
+          "avatarSlot": 101,
+          "upvotes": 734,
+          "commentCount": 112,
+          "topics": ["租房", "生活经验"],
+          "publishedAt": "发布于 2026-07-05",
+          "comments": [
+            {"author": "窗台三号盆", "avatarSlot": 121, "text": "先住一周再买收纳盒，避免了我又囤一批空盒。", "likes": 55, "time": "7月6日"},
+            {"author": "灶台很小", "avatarSlot": 122, "text": "一口锅两个容器，确实比一次买全更适合租房。", "likes": 42, "time": "7月7日"},
+            {"author": "钥匙固定放门口", "avatarSlot": 123, "text": "减少每天寻找的时间，才是收纳最实际的价值。", "likes": 31, "time": "7月8日"}
+          ]
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "world_context",
+      "secondaryFunctions": ["socioeconomic", "habit"],
+      "clueRole": "none",
+      "worldFactIds": ["wf.hangzhou.daily"],
+      "characterTraitIds": ["ct.shenchuan.charger"],
+      "relationshipBeatIds": [],
+      "continuityLinkIds": [],
+      "firstReadValue": "补充独居租房、消费节奏和物品归位的普通城市生活。",
+      "payoffPolicy": "none"
+    },
+    "metadata": {"visibleAtStart": true, "slice": "daily", "contentClass": "ordinary"}
+  },
+  {
+    "id": "zhihu.life.archive-images",
+    "appId": "app.zhihu",
+    "kind": "answer",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "zhihu.life.archive-images.v0",
+    "variants": [
+      {
+        "id": "zhihu.life.archive-images.v0",
+        "correctionStage": "R0",
+        "body": {
+          "title": "旧网页里的图片失效后，还有哪些常规找回方法？",
+          "excerpt": "先检查页面缓存、源文件名和站点迁移记录，再查公共网页存档。不同入口里的副本不一定是独立来源。",
+          "paragraphs": [
+            "旧网页还能打开、图片却显示失败，通常先从普通原因排查：图片地址改了、域名迁移、权限变化、CDN 清理，或者页面仍引用临时链接。不要一开始就把空白图片当成内容被刻意删除。",
+            "第一步查看页面源代码和网络记录，找到原始图片地址、文件名与可能的尺寸参数。有些站点只更换了域名或目录，文件名仍然保留；也有些缩略图失效，但原图地址还能通过页面数据找到。",
+            "第二步检查自己曾经使用过的设备。浏览器缓存、离线网页、聊天转发和下载目录可能保存副本，但这些副本都来自同一次加载，不能因为出现在多个文件夹就当成多个独立来源。记录取得路径和时间，比仅仅保存图片更重要。",
+            "公共网页存档可以帮助确认某个时间点页面如何呈现，但并不保证抓取到站外资源。找到快照后，应同时保存页面地址、快照时间、响应状态和文件校验值；如果图片来自第三方域名，还要单独核对它的存档记录。",
+            "搜索引擎缩略图、社交平台转发和他人截图可作为线索，却可能经过裁切、压缩或重新编码。需要验证细节时，应尽量回到最接近原始发布链的文件，并把无法确认的环节明确写下来。",
+            "找回旧图的目标不是制造一个“最像原图”的版本，而是建立可说明的来源链。能确认什么、从哪里取得、经历过哪些处理、哪些部分仍不确定，这些信息与图片本身同样重要。"
+          ],
+          "author": "网页考古队",
+          "credential": "互联网档案收藏者",
+          "avatarSlot": 102,
+          "upvotes": 3208,
+          "commentCount": 184,
+          "topics": ["网页存档", "互联网"],
+          "publishedAt": "编辑于 2026-07-04",
+          "comments": [
+            {"author": "本地优先", "avatarSlot": 100, "text": "同一缓存被复制到多个位置，仍然只有一个来源。", "likes": 103, "time": "7月5日"},
+            {"author": "旧链接收藏夹", "avatarSlot": 124, "text": "很多时候是缩略图参数变了，原文件名确实还能用。", "likes": 67, "time": "7月6日"},
+            {"author": "页面另存为", "avatarSlot": 125, "text": "把无法确认的环节写清楚，比强行补全更可靠。", "likes": 48, "time": "7月7日"}
+          ]
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "platform_culture",
+      "secondaryFunctions": ["profession", "theme"],
+      "clueRole": "none",
+      "worldFactIds": ["wf.device.offline"],
+      "characterTraitIds": ["ct.shenchuan.archivist"],
+      "relationshipBeatIds": [],
+      "continuityLinkIds": [],
+      "firstReadValue": "提供网页失效与缓存副本的完整普通技术解释。",
+      "payoffPolicy": "none"
+    },
+    "metadata": {"visibleAtStart": true, "slice": "daily", "contentClass": "ordinary"}
+  },
+  {
+    "id": "zhihu.life.exif",
+    "appId": "app.zhihu",
+    "kind": "answer",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "zhihu.life.exif.v0",
+    "variants": [
+      {
+        "id": "zhihu.life.exif.v0",
+        "correctionStage": "R0",
+        "body": {
+          "title": "如何验证照片 EXIF 是否可靠？",
+          "excerpt": "EXIF 可以被修改，需要与原文件哈希、文件时间、路线和相邻照片交叉验证。",
+          "paragraphs": [
+            "EXIF 记录了设备写入的一组信息，但它不是不可更改的证明。拍摄时间、设备型号、镜头参数和 GPS 都可能因软件导出、系统设置或人工编辑发生变化，因此验证时不能只盯住一个字段。",
+            "拿到文件后，先保留原件并计算哈希，再在副本上查看信息。不要先用相册编辑、聊天转发或云端优化，因为这些操作可能重写创建时间、移除定位，甚至生成一个新的压缩文件。",
+            "时间至少要分开看：拍摄时间描述相机记录的时刻，文件创建时间可能对应导入或复制，修改时间则可能因编辑变化。三个字段一致并不能自动证明真实，不一致也不一定代表伪造，关键是它们是否符合文件经历过的流程。",
+            "GPS 应与路线、天气、光照和相邻照片交叉核对。连续拍摄的文件编号、曝光参数和画面变化通常能提供上下文；单独一张带定位的图片，比不上同一批原文件形成的连续序列。",
+            "如果图片来自社交平台或聊天软件，应记录下载入口和账号状态。平台可能移除 EXIF，只保留服务器生成的文件时间；此时“没有元数据”只说明当前副本缺少字段，不能反推原始照片一定没有这些信息。",
+            "最终结论最好分级表达：哪些字段来自当前文件，哪些信息由其他记录支持，哪些只能推测。可靠性来自多条独立记录相互吻合，而不是某个查看器显示了一组看起来完整的数字。"
+          ],
+          "author": "川流档案",
+          "credential": "用户研究 / 城市摄影",
+          "avatarSlot": 120,
+          "upvotes": 691,
+          "commentCount": 47,
+          "topics": ["EXIF", "数字取证"],
+          "publishedAt": "编辑于 2026-07-03",
+          "comments": [
+            {"author": "橙色文件夹", "avatarSlot": 106, "text": "先计算哈希再查看，顺序写得很清楚。", "likes": 38, "time": "昨天 21:16"},
+            {"author": "南岸没有风", "avatarSlot": 107, "text": "除了哈希，还可以看同一组照片的编号是否连续。", "likes": 21, "time": "昨天 22:03"},
+            {"author": "一只普通用户", "avatarSlot": 108, "text": "终于分清拍摄、创建和修改时间不是一回事。", "likes": 9, "time": "今天 08:42"},
+            {"author": "川流档案", "avatarSlot": 120, "text": "对，相邻文件和取得路径通常比单独一个字段更有意义。", "likes": 46, "time": "今天 09:11"}
+          ]
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "habit",
+      "secondaryFunctions": ["profession", "continuity"],
+      "clueRole": "supporting",
+      "worldFactIds": ["wf.shenchuan.job"],
+      "characterTraitIds": ["ct.shenchuan.photo", "ct.shenchuan.archivist"],
+      "relationshipBeatIds": [],
+      "continuityLinkIds": [],
+      "firstReadValue": "建立沈川交叉核验照片元数据、文件时间与来源链的工作方式。",
+      "payoffPolicy": "optional"
+    },
+    "metadata": {"visibleAtStart": true, "slice": "daily", "contentClass": "character"}
+  },
+  {
+    "id": "zhihu.life.research-files",
+    "appId": "app.zhihu",
+    "kind": "answer",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "zhihu.life.research-files.v0",
+    "variants": [
+      {
+        "id": "zhihu.life.research-files.v0",
+        "correctionStage": "R0",
+        "body": {
+          "title": "做用户研究的人通常会保留哪些工作资料？",
+          "excerpt": "招募记录、访谈提纲、原始笔记、逐字稿和分析版本都要分开，尤其不要把修订后的结论当成原始记录。",
+          "paragraphs": [
+            "用户研究资料并不是“一个项目文件夹里放所有东西”。从招募到汇报，每类文件的用途、隐私风险和保留期限都不同。把它们分开，既方便回溯，也能避免在分享汇报材料时意外带出个人信息。",
+            "项目开始阶段通常有研究计划、招募条件、筛选问卷和排期。实际访谈产生录音、现场笔记、观察照片与同意记录。录音和包含联系方式的招募表权限最高，不应和公开汇报稿放在同一个共享目录。",
+            "整理阶段会产生逐字稿、编码表、分析便签和阶段性结论。逐字稿应保留与原始录音的对应关系，脱敏版本另存；分析结论需要能回到支持它的材料，但不必把受访者全部原话复制进演示文稿。",
+            "版本管理要区分事实与解释。原始记录只追加说明，不覆盖重写；清洗、脱敏和摘要都生成新版本，并记录处理日期。文件名、修改记录和校验值共同构成可追溯链，任何一个都不能单独承担全部证明。",
+            "项目结束后，根据同意范围和公司制度执行删除或归档。没有明确用途的个人信息不应因为“以后也许有用”而长期保留。共享链接要设置期限，离职或项目成员变化时及时检查权限。",
+            "真正值得保留的不是文件数量，而是形成结论的过程：问题如何提出、材料从哪里来、经过什么处理、哪些判断仍有限制。资料结构清楚，团队才能在不暴露不必要信息的前提下复核工作。"
+          ],
+          "author": "提纲第四版",
+          "credential": "互联网产品经理",
+          "avatarSlot": 103,
+          "upvotes": 447,
+          "commentCount": 29,
+          "topics": ["用户研究", "工作方法"],
+          "publishedAt": "发布于 2026-07-02",
+          "comments": [
+            {"author": "周末做研究", "avatarSlot": 96, "text": "原始记录只追加说明、不覆盖重写，是团队最该统一的规则。", "likes": 32, "time": "7月3日"},
+            {"author": "脱敏再分享", "avatarSlot": 126, "text": "共享链接设置期限也很重要，项目结束后最容易漏。", "likes": 19, "time": "7月4日"},
+            {"author": "录音笔还有电", "avatarSlot": 109, "text": "结论能回到材料，但汇报稿不搬运全部原话。", "likes": 14, "time": "7月5日"}
+          ]
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "profession",
+      "secondaryFunctions": ["habit", "theme"],
+      "clueRole": "none",
+      "worldFactIds": ["wf.shenchuan.job"],
+      "characterTraitIds": ["ct.shenchuan.archivist"],
+      "relationshipBeatIds": [],
+      "continuityLinkIds": [],
+      "firstReadValue": "说明沈川的用户研究资料为何分层、脱敏并可追溯。",
+      "payoffPolicy": "none"
+    },
+    "metadata": {"visibleAtStart": true, "slice": "daily", "contentClass": "ordinary"}
+  },
+  {
+    "id": "zhihu.life.commute",
+    "appId": "app.zhihu",
+    "kind": "answer",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "zhihu.life.commute.v0",
+    "variants": [
+      {
+        "id": "zhihu.life.commute.v0",
+        "correctionStage": "R0",
+        "body": {
+          "title": "城市通勤中，哪些小习惯真的能减少疲惫？",
+          "excerpt": "把路线留出十分钟余量、固定常用物品的位置，以及不要在最拥挤的换乘口临时做决定。",
+          "paragraphs": [
+            "通勤疲惫很少由某一个大问题造成，更多是每天重复的小摩擦叠加：出门前找钥匙、到站才决定路线、手机快没电、下雨时没有地方放湿伞。想改善体验，先记录一周里最常发生的三件事，比购买新装备有效。",
+            "时间上给换乘留出十分钟余量，不是要求每天更早到公司，而是减少“每一步都必须刚好赶上”的紧张。错过一班车时允许自己等下一班，整段路程往往只多五六分钟，身体却不用一路冲刺。",
+            "物品尽量固定位置。钥匙放门边，交通卡不离开通勤包，办公室留一根短充电线。雨季可以常备纸巾、折叠伞套和一双干袜子，这些东西不贵，却能避免临时寻找和反复搬动。",
+            "路线至少准备两条：正常情况下最快的一条，以及雨天、拥堵或电梯停运时仍能走通的一条。备用路线不必每天使用，但真正需要时，人不用在嘈杂站厅里重新做完整判断。",
+            "手机可以帮助查看天气和到站信息，但不要把所有注意力交给屏幕。提前下载必要的乘车码或离线信息，确认耳机音量不会遮住广播，在步行和上下楼梯时留意周围环境。",
+            "通勤不一定会因此变得愉快，但它可以少消耗一点决定力。把重复动作变成稳定顺序，给不可控的天气和交通留出余地，这些小改动比追求一条永远最快的路线更可持续。"
+          ],
+          "author": "八点四十二",
+          "credential": "生活方式话题答主",
+          "avatarSlot": 104,
+          "upvotes": 982,
+          "commentCount": 76,
+          "topics": ["通勤", "城市生活"],
+          "publishedAt": "编辑于 2026-07-01",
+          "comments": [
+            {"author": "今天没迟到", "avatarSlot": 127, "text": "允许自己等下一班以后，通勤真的没那么狼狈。", "likes": 51, "time": "7月2日"},
+            {"author": "短线放办公室", "avatarSlot": 105, "text": "办公室固定一根线，减少了每天最无聊的一次寻找。", "likes": 37, "time": "7月3日"},
+            {"author": "耳机只戴一边", "avatarSlot": 128, "text": "备用路线真正有用的时候，往往没空临时研究。", "likes": 24, "time": "7月4日"}
+          ]
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "world_context",
+      "secondaryFunctions": ["habit"],
+      "clueRole": "none",
+      "worldFactIds": ["wf.hangzhou.daily"],
+      "characterTraitIds": ["ct.shenchuan.charger"],
+      "relationshipBeatIds": [],
+      "continuityLinkIds": [],
+      "firstReadValue": "建立沈川通过固定物品位置和备用路线减少通勤摩擦的日常习惯。",
+      "payoffPolicy": "none"
+    },
+    "metadata": {"visibleAtStart": true, "slice": "daily", "contentClass": "ordinary"}
+  },
+  {
+    "id": "zhihu.life.reading-notes",
+    "appId": "app.zhihu",
+    "kind": "answer",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "zhihu.life.reading-notes.v0",
+    "variants": [
+      {
+        "id": "zhihu.life.reading-notes.v0",
+        "correctionStage": "R0",
+        "body": {
+          "title": "读完一本非虚构作品后，怎样留下真正会再看的笔记？",
+          "excerpt": "不要把阅读变成逐句摘抄。每章结束后回答三个问题：作者解决什么问题、用了什么证据、自己还不确定什么。",
+          "paragraphs": [
+            "很多阅读笔记最后不会再看，是因为它只复制了书里的句子，没有保存阅读者当时的判断。划线越多，回顾时越难知道哪些内容真正改变了理解，哪些只是写得顺口。",
+            "开始前先写一句阅读目的，例如“理解作者如何解释城市记忆”或“找一个适合访谈分析的方法”。目的不需要宏大，它只是帮助你判断哪些内容值得停下来，而不是要求每页都产出笔记。",
+            "每章结束后，我会回答三个问题：作者在解决什么问题，使用了哪些材料，哪些地方仍让我不确定。答案可以很短，但必须用自己的话。这样即使忘记细节，也能快速恢复全书结构。",
+            "摘录只保留能够支持上述判断的少量原句，并标明页码或章节。电子书位置会因版本变化，重要引用最好同时写章节标题。自己的补充和作者原文分开排版，避免几个月后误把解释当成原句。",
+            "读完整本书后，不急着写长总结。我会先把各章的三个问题放在一起，删掉重复内容，再写一段“这本书改变了我什么”和一段“它没有解决什么”。这两段通常比十页摘抄更容易复用。",
+            "笔记的价值不在于证明认真读过，而在于下一次需要时能迅速找回问题、证据和自己的判断。控制数量、保留来源、定期回看，已经足够形成可靠的阅读记录。"
+          ],
+          "author": "第三章以后",
+          "credential": "阅读与写作话题答主",
+          "avatarSlot": 109,
+          "upvotes": 1168,
+          "commentCount": 68,
+          "topics": ["阅读", "笔记方法"],
+          "publishedAt": "发布于 2026-06-30",
+          "comments": [
+            {"author": "一小时短篇", "avatarSlot": 113, "text": "用自己的话回答三个问题，比复制金句有用多了。", "likes": 43, "time": "7月1日"},
+            {"author": "页码写在旁边", "avatarSlot": 114, "text": "电子书还要记章节标题，这个坑我踩过。", "likes": 27, "time": "7月2日"},
+            {"author": "折页之间", "avatarSlot": 97, "text": "“没有解决什么”能防止总结变成单纯赞美。", "likes": 18, "time": "7月3日"}
+          ]
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "habit",
+      "secondaryFunctions": ["profession"],
+      "clueRole": "none",
+      "worldFactIds": ["wf.hangzhou.daily"],
+      "characterTraitIds": ["ct.shenchuan.archivist"],
+      "relationshipBeatIds": [],
+      "continuityLinkIds": [],
+      "firstReadValue": "补充沈川重视结构、来源和可回顾性的普通阅读习惯。",
+      "payoffPolicy": "none"
+    },
+    "metadata": {"visibleAtStart": true, "slice": "daily", "contentClass": "ordinary"}
+  },
+  {
+    "id": "zhihu.life.rainy-plants",
+    "appId": "app.zhihu",
+    "kind": "answer",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "zhihu.life.rainy-plants.v0",
+    "variants": [
+      {
+        "id": "zhihu.life.rainy-plants.v0",
+        "correctionStage": "R0",
+        "body": {
+          "title": "连续阴雨后，室内植物叶子发黄应该先做什么？",
+          "excerpt": "先确认盆土、光照和通风，不要一看到黄叶就同时换盆、施肥和增加浇水。",
+          "paragraphs": [
+            "连续阴雨后叶子发黄，原因可能是光照下降、盆土长时间不干、通风不足，也可能只是老叶正常更新。第一步不是立刻处理，而是确认变化从哪一部分开始、最近的养护条件发生了什么。",
+            "先摸表层以下两三厘米的盆土，并检查盆底是否积水。如果土仍然湿润，就暂停浇水，让空气流动起来；不要因为叶片看起来没精神就继续加水。根系缺氧时，更多水只会让情况恶化。",
+            "把植物移到明亮散射光处，但不要在久阴后突然暴晒。每天开窗通风一段时间，保证花盆之间有间距。空调直吹和密闭高湿都可能增加压力，调整时一次只改变一个条件。",
+            "黄叶已经完全失去绿色时可以剪掉，仍有绿色的叶片先保留观察。此时通常不急着施肥，根系状态不稳时增加肥料可能造成新的损伤。只有发现明显烂根、异味或虫害，才需要进一步脱盆检查。",
+            "记录浇水日期、盆土干燥速度和新叶状态，比每天凭感觉做不同处理更有用。连续观察一到两周，如果新叶正常、黄叶没有继续增加，说明植物正在适应；若持续恶化，再根据具体品种寻求针对性建议。",
+            "养植物最难的往往是克制同时做很多事。先排水、补充温和光照和通风，保留观察时间，能让后续判断建立在真实变化上，而不是被一连串处理混在一起。"
+          ],
+          "author": "窗台三号盆",
+          "credential": "家居与园艺话题答主",
+          "avatarSlot": 121,
+          "upvotes": 526,
+          "commentCount": 38,
+          "topics": ["室内植物", "雨季养护"],
+          "publishedAt": "发布于 2026-06-29",
+          "comments": [
+            {"author": "盆土还没干", "avatarSlot": 122, "text": "我就是看到蔫了继续浇，读完先停手。", "likes": 34, "time": "6月30日"},
+            {"author": "阳台没有直射光", "avatarSlot": 123, "text": "一次只改一个条件，观察起来确实清楚很多。", "likes": 21, "time": "7月1日"},
+            {"author": "新叶慢慢来", "avatarSlot": 124, "text": "久阴后突然暴晒也会出问题，补充得很及时。", "likes": 16, "time": "7月2日"}
+          ]
+        },
+        "reason": "normal"
+      }
+    ],
+    "narrative": {
+      "primaryFunction": "world_context",
+      "secondaryFunctions": ["habit"],
+      "clueRole": "none",
+      "worldFactIds": ["wf.hangzhou.daily"],
+      "characterTraitIds": [],
+      "relationshipBeatIds": [],
+      "continuityLinkIds": [],
+      "firstReadValue": "补充杭州连续阴雨下的普通居家生活与观察习惯。",
+      "payoffPolicy": "none"
+    },
+    "metadata": {"visibleAtStart": true, "slice": "daily", "contentClass": "ordinary"}
+  }
+]

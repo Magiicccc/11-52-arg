@@ -606,7 +606,8 @@ img.douyin-avatar{display:block;object-fit:cover}
 .toutiao-article>div{display:flex;gap:12px;align-items:center;color:#999;font-size:12px}
 .toutiao-source{color:#e33}
 .toutiao-article p{font-size:17px;line-height:1.85;text-align:justify}
-.toutiao-article footer{margin-top:30px;color:#999;font-size:12px}
+.toutiao-article .toutiao-lead{margin:18px 0 20px;padding:12px 14px;border-left:3px solid #e64340;background:#f7f7f7;color:#555;font-size:15px;line-height:1.7}
+.toutiao-article footer{display:flex;flex-wrap:wrap;gap:8px 14px;margin-top:30px;padding-top:16px;border-top:1px solid #eee;color:#999;font-size:12px}
 .toutiao-actions{height:52px;padding:6px 10px 10px;display:grid;grid-template-columns:1fr 42px 42px 42px;gap:5px;border-top:1px solid #eee;background:#fff}
 .toutiao-actions button{border:0;background:transparent}
 .toutiao-actions button:first-child{border-radius:18px;background:#f2f3f5;color:#999;text-align:left;padding-left:14px}
@@ -640,7 +641,11 @@ img.douyin-avatar{display:block;object-fit:cover}
 img.mail-avatar{display:block;object-fit:cover}
 .mail-detail header div{display:flex;flex-direction:column}
 .mail-detail header small{color:#999}
-.mail-detail p{font-size:16px;line-height:1.8}
+.mail-envelope{margin:14px 0 18px;padding:10px 12px;border-radius:10px;background:#f6f7f9;color:#555;font-size:12px}
+.mail-envelope div{display:grid;grid-template-columns:48px 1fr;gap:8px;padding:3px 0}
+.mail-envelope b{color:#8a8f99;font-weight:500}
+.mail-envelope span{overflow-wrap:anywhere}
+.mail-detail p{font-size:16px;line-height:1.8;white-space:pre-line}
 .mail-actions{height:54px;padding:7px 8px 11px;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid #eee;background:#fff}
 .mail-actions button{border:0;background:transparent;color:#1688f8}
 .mail-search{width:calc(100% - 24px);border:0;text-align:left}

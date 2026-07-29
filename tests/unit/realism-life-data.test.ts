@@ -34,6 +34,10 @@ describe("ordinary digital-life realism pack", () => {
     expect(realismContentSummary.mailAttachments).toBeGreaterThanOrEqual(4);
     expect(realismContentSummary.mailThreads).toBeGreaterThanOrEqual(3);
     expect(new Set(ordinaryMails.map((mail) => mail.senderType)).size).toBe(3);
+    expect(new Set(ordinaryMails.map((mail) => mail.body.join("\n"))).size).toBe(ordinaryMails.length);
+    expect(ordinaryMails.every((mail) => mail.body.length >= 4)).toBe(true);
+    expect(ordinaryMails.filter((mail) => mail.body.join("").length >= 180).length).toBeGreaterThanOrEqual(8);
+    expect(ordinaryMails.every((mail) => mail.to.trim().length > 0 && mail.sentAt.trim().length > 0)).toBe(true);
 
     expect(realismContentSummary.videos).toBeGreaterThanOrEqual(15);
     expect(realismContentSummary.mapPois).toBeGreaterThanOrEqual(15);

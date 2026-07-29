@@ -2,8 +2,9 @@ import { defineConfig } from "@playwright/test";
 
 const remoteBaseURL = process.env.PLAYWRIGHT_BASE_URL;
 const localPagesBasePath = process.env.PLAYWRIGHT_LOCAL_PAGES_BASE_PATH;
+const localPort = process.env.PLAYWRIGHT_LOCAL_PORT ?? "4176";
 const baseURL = remoteBaseURL
-  || (localPagesBasePath ? `http://127.0.0.1:4173${localPagesBasePath}` : "http://127.0.0.1:4173");
+  || (localPagesBasePath ? `http://127.0.0.1:${localPort}${localPagesBasePath}` : `http://127.0.0.1:${localPort}`);
 const chromiumExecutablePath = process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH;
 
 export default defineConfig({
@@ -30,12 +31,12 @@ export default defineConfig({
   },
   webServer: remoteBaseURL ? undefined : {
     command: localPagesBasePath
-      ? "pnpm preview -- --host 127.0.0.1 --port 4173"
-      : "pnpm exec vite --host 0.0.0.0 --port 4173",
+      ? `pnpm preview -- --host 127.0.0.1 --port ${localPort} --strictPort`
+      : `pnpm exec vite --host 127.0.0.1 --port ${localPort} --strictPort`,
     url: localPagesBasePath
-      ? `http://127.0.0.1:4173${localPagesBasePath}`
-      : "http://127.0.0.1:4173",
-    reuseExistingServer: true,
+      ? `http://127.0.0.1:${localPort}${localPagesBasePath}`
+      : `http://127.0.0.1:${localPort}`,
+    reuseExistingServer: false,
     timeout: 120_000,
     env: localPagesBasePath ? { VITE_BASE_PATH: localPagesBasePath } : undefined
   },

@@ -1,9 +1,15 @@
 import type { GameState } from "@/contracts/game-state";
 import { contentItems } from "@/content/content-pack";
 
+function visibleContentIds(): string[] {
+  return contentItems
+    .filter((item) => item.metadata?.visibleAtStart === true)
+    .map((item) => item.id);
+}
+
 export function createInitialGameState(): GameState {
   const activeVariantByContentId = Object.fromEntries(contentItems.map((item) => [item.id, item.initialVariantId]));
-  const visibleContent = contentItems.filter((item) => item.metadata?.visibleAtStart === true).map((item) => item.id);
+  const visibleContent = visibleContentIds();
   return {
     schemaVersion: 1,
     campaignId: "campaign.case-001",
@@ -27,4 +33,31 @@ export function createInitialGameState(): GameState {
     responses: { activeResponseId: null, queuedResponseIds: [] },
     meta: { runNumber: 1, endingHistory: [], archiveUnlocked: false, accessibility: { reduceMotion: false } }
   };
+}
+
+/**
+ * Adds newly shipped, initially visible content to an existing save without
+ * changing any story, evidence, trigger, or active variant already present.
+ */
+export function reconcileContentCatalog(snapshot: GameState): GameState {
+  const next = structuredClone(snapshot);
+  let changed = false;
+  for (const item of contentItems) {
+    if (!next.content.activeVariantByContentId[item.id]) {
+      next.content.activeVariantByContentId[item.id] = item.initialVariantId;
+      changed = true;
+    }
+  }
+  const unlocked = new Set(next.content.unlockedContentIds);
+  for (const id of visibleContentIds()) {
+    if (!unlocked.has(id)) {
+      unlocked.add(id);
+      changed = true;
+    }
+  }
+  if (changed) {
+    next.content.unlockedContentIds = [...unlocked];
+    next.revision += 1;
+  }
+  return next;
 }

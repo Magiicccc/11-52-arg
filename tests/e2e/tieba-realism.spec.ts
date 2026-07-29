@@ -12,6 +12,10 @@ test.beforeEach(async ({ page }) => {
 });
 
 test("贴吧具有真实首页、吧页、搜索、帖子、用户和缓存楼层路径", async ({ page }, testInfo) => {
+  const consoleErrors: string[] = [];
+  page.on("console", (message) => {
+    if (message.type() === "error") consoleErrors.push(message.text());
+  });
   await mkdir(visualRoot, { recursive: true });
   const viewport = testInfo.project.name.replace("chromium-", "");
 
@@ -52,4 +56,5 @@ test("贴吧具有真实首页、吧页、搜索、帖子、用户和缓存楼�
   await expect(page.getByTestId("tieba-user")).toBeVisible();
   await expect(page.locator(".tieba-user-hero img")).toHaveJSProperty("complete", true);
   await page.screenshot({ path: path.join(visualRoot, `user-${viewport}.png`) });
+  expect(consoleErrors.filter((message) => /button.*descendant|nested <button>/i.test(message))).toEqual([]);
 });

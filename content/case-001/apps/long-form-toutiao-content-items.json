@@ -1,0 +1,422 @@
+[
+  {
+    "id": "news.toutiao.life.weather",
+    "appId": "app.toutiao",
+    "kind": "article",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "news.toutiao.life.weather.v0",
+    "variants": [{"id": "news.toutiao.life.weather.v0", "correctionStage": "R0", "body": {
+      "title": "本周多阵雨，通勤请预留换乘时间",
+      "summary": "午后到夜间仍可能出现短时强降水，公共交通晚高峰客流预计有所增加。",
+      "paragraphs": [
+        "据城市气象服务信息，本周暖湿空气活跃，午后至夜间容易出现分散性阵雨。降水持续时间未必很长，但局地雨势变化快，早晨晴朗并不代表下班时仍适合不带雨具出门。",
+        "公共交通运营方提醒，强降水时部分地铁出入口会临时采取防滑和客流引导措施，换乘通道的通行速度也会下降。晚高峰出行可比平时多预留十分钟，进站后留意现场广播和入口提示。",
+        "步行和骑行市民应避开积水不明的低洼路段，不在树木、临时搭建物和施工围挡附近久留。随身携带折叠伞时，最好准备防水袋或纸巾，减少湿伞进入车厢后的滑倒风险。",
+        "气象部门将根据降水发展更新短时预报。市民可以在出发前查看最近一小时雷达和公共交通状态，根据实际天气调整路线，不必因一条较早的预报固定整天安排。"
+      ],
+      "date": "7月15日 08:26", "source": "城市气象服务", "category": "城市", "commentCount": 128
+    }, "reason": "normal"}],
+    "narrative": {"primaryFunction": "world_context", "secondaryFunctions": ["chronology"], "clueRole": "none", "worldFactIds": ["wf.hangzhou.daily"], "characterTraitIds": [], "relationshipBeatIds": [], "continuityLinkIds": [], "firstReadValue": "建立故事日期杭州阵雨与通勤节奏的普通城市背景。", "payoffPolicy": "none"},
+    "metadata": {"visibleAtStart": true, "slice": "daily", "contentClass": "ordinary"}
+  },
+  {
+    "id": "news.toutiao.life.library",
+    "appId": "app.toutiao",
+    "kind": "article",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "news.toutiao.life.library.v0",
+    "variants": [{"id": "news.toutiao.life.library.v0", "correctionStage": "R0", "body": {
+      "title": "公共图书馆延长周末开放时段",
+      "summary": "新增摄影、城市观察与数字生活专题书架，部分活动需提前预约。",
+      "paragraphs": [
+        "市公共图书馆发布七月服务安排，本月起周六、周日闭馆时间延后，阅览区、自习区与部分专题空间同步延长开放。少儿区域和设备维护时段仍按现场公告执行。",
+        "本次调整同时新增“城市观察”“数字生活”和“日常摄影”三组专题书架，内容包括城市公共空间、个人资料整理、影像保存与非虚构写作。专题书可正常借阅，热门书目每人限借一本。",
+        "周末还将安排两场公开分享，主题分别为手机照片整理和城市散步记录。活动免费，但座位有限，需要通过图书馆服务号预约；未预约读者仍可在活动结束后查看公开书单。",
+        "馆方提醒，延时开放不等于所有服务窗口都延时。办理读者证、复杂咨询和纸质资料调阅的读者，仍建议在傍晚前到馆，并在离馆时确认借阅手续已经完成。"
+      ],
+      "date": "7月14日 16:40", "source": "城市公共文化", "category": "文化", "commentCount": 64
+    }, "reason": "normal"}],
+    "narrative": {"primaryFunction": "world_context", "secondaryFunctions": ["platform_culture"], "clueRole": "none", "worldFactIds": ["wf.hangzhou.daily"], "characterTraitIds": ["ct.shenchuan.photo"], "relationshipBeatIds": [], "continuityLinkIds": [], "firstReadValue": "补充公共文化活动和沈川摄影、阅读兴趣所在的城市环境。", "payoffPolicy": "none"},
+    "metadata": {"visibleAtStart": true, "slice": "daily", "contentClass": "ordinary"}
+  },
+  {
+    "id": "news.toutiao.life.camera-moisture",
+    "appId": "app.toutiao",
+    "kind": "article",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "news.toutiao.life.camera-moisture.v0",
+    "variants": [{"id": "news.toutiao.life.camera-moisture.v0", "correctionStage": "R0", "body": {
+      "title": "雨季相机和镜头如何防潮",
+      "summary": "从室外回家后先擦干机身，待温差缓和再收纳，电池与存储卡分别检查。",
+      "paragraphs": [
+        "连续阴雨期间，相机器材面对的不只是淋雨，还有室内外温差造成的凝露。器材从低温空调环境进入潮湿室外，或从雨中直接放进密闭包内，都可能让水汽停留在机身和镜头表面。",
+        "拍摄结束后，应先在干燥环境中擦去外部水滴，打开相机包通风，确认接口和镜头卡口附近没有可见水分。不要立刻用高温吹风，也不要在镜片上反复摩擦细小沙粒。",
+        "长期收纳可以使用带湿度显示的防潮箱，湿度保持在器材建议范围即可，并非越低越好。电池取出后检查触点，存储卡完成备份再格式化；重要照片至少保留一份独立副本。",
+        "如果镜头内部已经出现持续雾气、霉斑或电子故障，应停止通电并交由专业维修检查。家庭防潮措施适合日常预防，不能替代对进水器材的拆检。"
+      ],
+      "date": "7月14日 11:05", "source": "摄影器材周刊", "category": "摄影", "commentCount": 92
+    }, "reason": "normal"}],
+    "narrative": {"primaryFunction": "habit", "secondaryFunctions": ["world_context"], "clueRole": "none", "worldFactIds": ["wf.hangzhou.daily"], "characterTraitIds": ["ct.shenchuan.photo", "ct.shenchuan.archivist"], "relationshipBeatIds": [], "continuityLinkIds": [], "firstReadValue": "建立沈川在雨季维护器材并备份照片的普通习惯。", "payoffPolicy": "none"},
+    "metadata": {"visibleAtStart": true, "slice": "daily", "contentClass": "ordinary"}
+  },
+  {
+    "id": "news.toutiao.life.gym",
+    "appId": "app.toutiao",
+    "kind": "article",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "news.toutiao.life.gym.v0",
+    "variants": [{"id": "news.toutiao.life.gym.v0", "correctionStage": "R0", "body": {
+      "title": "社区体育馆公布七月场地安排",
+      "summary": "羽毛球场晚间预约较紧张，临时取消需尽早操作，以便释放公共时段。",
+      "paragraphs": [
+        "社区体育馆公布七月场地开放计划，工作日晚间和周末上午仍是预约高峰。羽毛球、乒乓球和多功能活动室均可通过场馆小程序提前七天预约。",
+        "场馆将在每晚九点后整理次日临时退订时段，有短时使用需求的市民可以再次查询。预约成功后需在开场前完成签到，超过规定时间未到场，系统会按规则释放场地。",
+        "体育馆提醒，近期阵雨较多，入口处将增加防滑垫和湿伞存放区。运动前应充分热身，双打参与者可以提前确认站位和轮换方式，减少场上临时争球。",
+        "如因个人原因无法到场，建议尽早取消，避免公共时段闲置。设备维护或极端天气造成的场地调整，将通过预约账户原渠道通知。"
+      ],
+      "date": "7月13日 19:10", "source": "社区体育服务", "category": "生活", "commentCount": 47
+    }, "reason": "normal"}],
+    "narrative": {"primaryFunction": "world_context", "secondaryFunctions": ["habit"], "clueRole": "none", "worldFactIds": ["wf.hangzhou.daily"], "characterTraitIds": [], "relationshipBeatIds": [], "continuityLinkIds": [], "firstReadValue": "补充社区体育、羽毛球预约和雨天活动的日常背景。", "payoffPolicy": "none"},
+    "metadata": {"visibleAtStart": true, "slice": "daily", "contentClass": "ordinary"}
+  },
+  {
+    "id": "news.toutiao.life.web-archive",
+    "appId": "app.toutiao",
+    "kind": "article",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "news.toutiao.life.web-archive.v0",
+    "variants": [{"id": "news.toutiao.life.web-archive.v0", "correctionStage": "R0", "body": {
+      "title": "旧网页保存时应记录哪些信息",
+      "summary": "网址、取得时间、页面状态和文件校验值共同构成来源记录，截图不能替代完整网页。",
+      "paragraphs": [
+        "网页内容随时可能因编辑、下线、登录状态或资源迁移发生变化。需要长期引用时，只保存一张截图并不足够，因为截图通常不包含完整网址、链接关系和取得环境。",
+        "最低限度的记录应包括页面标题、完整网址、访问时间、响应状态和保存方式。若下载了 HTML、图片或附件，还应保留原始文件名并计算校验值，避免后续无法区分不同版本。",
+        "登录后页面、个性化推荐和本机缓存都可能让两个人看到不同内容。保存者应注明账号状态、设备或浏览器环境；涉及隐私信息时，则应先脱敏并限制副本的共享范围。",
+        "网页存档证明的是某个来源在某个时刻可见的状态，不自动证明内容真实。引用时仍需核对发布主体、上下文和其他独立材料，并把无法确认的部分明确保留。"
+      ],
+      "date": "7月13日 10:22", "source": "数字生活观察", "category": "数码", "commentCount": 156
+    }, "reason": "normal"}],
+    "narrative": {"primaryFunction": "platform_culture", "secondaryFunctions": ["profession"], "clueRole": "none", "worldFactIds": ["wf.device.offline"], "characterTraitIds": ["ct.shenchuan.archivist"], "relationshipBeatIds": [], "continuityLinkIds": [], "firstReadValue": "提供沈川保存网页时记录来源、状态和哈希的普通方法背景。", "payoffPolicy": "none"},
+    "metadata": {"visibleAtStart": true, "slice": "daily", "contentClass": "ordinary"}
+  },
+  {
+    "id": "news.toutiao.life.lunch",
+    "appId": "app.toutiao",
+    "kind": "article",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "news.toutiao.life.lunch.v0",
+    "variants": [{"id": "news.toutiao.life.lunch.v0", "correctionStage": "R0", "body": {
+      "title": "工作日午餐不必追求复杂",
+      "summary": "在忙碌日程里稳定吃完一顿饭，比用咖啡替代正餐更有利于维持下午状态。",
+      "paragraphs": [
+        "不少上班族把午餐压缩成会议间隙的一杯咖啡或几口零食，下午再依靠甜食补充精力。营养师提醒，偶尔如此问题不大，但长期缺少稳定正餐容易让饥饿和注意力波动更明显。",
+        "普通工作日可以优先保证主食、蛋白质和蔬菜，不必每天追求复杂搭配。食堂的一荤一素、便利店饭团配鸡蛋和牛奶，或前一晚准备的简单便当，都比完全跳过更可持续。",
+        "吃饭时尽量离开持续弹出消息的工作界面，哪怕只有二十分钟。进食过快、边开会边吃，往往让人难以判断饱腹感，也没有真正获得休息。",
+        "如果下午安排密集，可以提前准备水和少量坚果、水果，避免临时用高糖饮料代替所有补充。健康习惯的重点不是每一餐完美，而是多数工作日都能稳定完成。"
+      ],
+      "date": "7月12日 12:18", "source": "健康生活栏目", "category": "生活", "commentCount": 73
+    }, "reason": "normal"}],
+    "narrative": {"primaryFunction": "world_context", "secondaryFunctions": ["habit"], "clueRole": "none", "worldFactIds": ["wf.hangzhou.daily"], "characterTraitIds": [], "relationshipBeatIds": [], "continuityLinkIds": [], "firstReadValue": "建立普通互联网工作日的午餐和会议节奏。", "payoffPolicy": "none"},
+    "metadata": {"visibleAtStart": true, "slice": "daily", "contentClass": "ordinary"}
+  },
+  {
+    "id": "news.toutiao.life.photo-boundary",
+    "appId": "app.toutiao",
+    "kind": "article",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "news.toutiao.life.photo-boundary.v0",
+    "variants": [{"id": "news.toutiao.life.photo-boundary.v0", "correctionStage": "R0", "body": {
+      "title": "城市公共空间摄影边界提示",
+      "summary": "开放道路和公共绿地可以满足多数记录需求，不翻越围挡，不拍摄私人门牌和敏感信息。",
+      "paragraphs": [
+        "城市摄影常从街道、商场外立面、公共交通和开放绿地开始，但“能看见”不等于“可以随意进入或发布”。拍摄前应先确认所在区域是否开放，以及现场是否有明确限制。",
+        "施工围挡、封闭校园、废弃厂区和住宅内部都不应因画面有吸引力而擅自进入。隔着公共道路拍摄时，也应避免长时间对准私人窗户、门牌、车牌和可识别个人。",
+        "遇到行人进入画面，可通过等待、改变机位或后期模糊减少影响。以某个普通人为主体发布前，应取得同意；儿童、医疗和个人事务场景需要更谨慎处理。",
+        "一张照片的价值不取决于进入更隐蔽的地方。记录光线、天气、道路使用和建筑变化，同样能形成有意义的城市观察，同时尊重现场秩序与他人边界。"
+      ],
+      "date": "7月12日 09:46", "source": "城市文明观察", "category": "摄影", "commentCount": 89
+    }, "reason": "normal"}],
+    "narrative": {"primaryFunction": "world_context", "secondaryFunctions": ["location", "habit"], "clueRole": "none", "worldFactIds": ["wf.hangzhou.daily"], "characterTraitIds": ["ct.shenchuan.photo"], "relationshipBeatIds": [], "continuityLinkIds": [], "firstReadValue": "明确沈川的普通城市摄影发生在开放空间，不为地点谜题提供越界借口。", "payoffPolicy": "none"},
+    "metadata": {"visibleAtStart": true, "slice": "daily", "contentClass": "ordinary"}
+  },
+  {
+    "id": "news.toutiao.life.versioning",
+    "appId": "app.toutiao",
+    "kind": "article",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "news.toutiao.life.versioning.v0",
+    "variants": [{"id": "news.toutiao.life.versioning.v0", "correctionStage": "R0", "body": {
+      "title": "个人文件怎样建立可维护的版本号",
+      "summary": "日期、主题、顺序版本与处理状态已经能覆盖多数文档，不再使用“最终版2”。",
+      "paragraphs": [
+        "文件版本混乱往往不是工具不足，而是团队同时用文件名、聊天记录和个人记忆表达状态。相同目录里出现“最终版”“最终修改”和“真的最终”，其他人很难判断先后关系。",
+        "简单规则可以从两位版本号开始：v01、v02、v03。每次形成可供他人查看的变化再增加版本，自动保存和个人微调不必全部生成新文件。日期用于定位工作时段，版本号用于排序。",
+        "脱敏、审阅和签署是处理状态，应使用明确后缀，而不是混入版本描述。原始材料只读保存，处理版另建文件；重要交付可以记录校验值和发送时间。",
+        "规则一旦确定，就应写在项目说明里，并由实际协作者共同使用。命名不是为了让目录看起来整齐，而是让任何成员能回答：当前版本是哪一个、它从哪里来、之前的版本是否还在。"
+      ],
+      "date": "7月11日 17:32", "source": "效率工作室", "category": "工作", "commentCount": 118
+    }, "reason": "normal"}],
+    "narrative": {"primaryFunction": "profession", "secondaryFunctions": ["habit"], "clueRole": "none", "worldFactIds": ["wf.shenchuan.job"], "characterTraitIds": ["ct.shenchuan.archivist"], "relationshipBeatIds": [], "continuityLinkIds": [], "firstReadValue": "补充沈川文件版本清楚、原始材料不覆盖的职业习惯。", "payoffPolicy": "none"},
+    "metadata": {"visibleAtStart": true, "slice": "daily", "contentClass": "ordinary"}
+  },
+  {
+    "id": "news.toutiao.life.puddles",
+    "appId": "app.toutiao",
+    "kind": "article",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "news.toutiao.life.puddles.v0",
+    "variants": [{"id": "news.toutiao.life.puddles.v0", "correctionStage": "R0", "body": {
+      "title": "雨后道路积水逐步消退",
+      "summary": "主干道路通行正常，部分低洼支路和地下通道入口仍需绕行。",
+      "paragraphs": [
+        "昨夜短时强降水结束后，市政排水人员对重点路段进行了巡查。今天上午主干道路积水已基本消退，公共交通运行总体平稳。",
+        "部分低洼支路、施工路段和地下通道入口仍可能出现浅层积水。现场已设置提示标志，行人和非机动车应按引导绕行，不要根据水面外观判断实际深度。",
+        "沿街商户和物业正在清理排水口附近落叶与杂物。市民如发现井盖移位、积水持续上涨或树枝坠落，可通过城市服务渠道提交位置和现场照片。",
+        "未来两天仍有分散阵雨，排水部门将继续值守。出行前查看实时道路信息，遇到局部封闭时选择公开替代路线即可。"
+      ],
+      "date": "7月11日 10:08", "source": "本地融媒", "category": "城市", "commentCount": 52
+    }, "reason": "normal"}],
+    "narrative": {"primaryFunction": "world_context", "secondaryFunctions": ["chronology"], "clueRole": "none", "worldFactIds": ["wf.hangzhou.daily"], "characterTraitIds": [], "relationshipBeatIds": [], "continuityLinkIds": [], "firstReadValue": "补充阵雨后道路恢复和城市公共服务的正常背景。", "payoffPolicy": "none"},
+    "metadata": {"visibleAtStart": true, "slice": "daily", "contentClass": "ordinary"}
+  },
+  {
+    "id": "news.toutiao.life.light-travel",
+    "appId": "app.toutiao",
+    "kind": "article",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "news.toutiao.life.light-travel.v0",
+    "variants": [{"id": "news.toutiao.life.light-travel.v0", "correctionStage": "R0", "body": {
+      "title": "周末短途出行轻装清单",
+      "summary": "饮水、折叠伞、短充电线和一本途中会看的书，通常已经覆盖一天需求。",
+      "paragraphs": [
+        "一两天短途出行最容易出现两种极端：什么都不准备，或把“可能用到”的物品全部装进箱子。真正需要的清单应从天气、交通和住宿条件出发，而不是复制长途旅行模板。",
+        "随身包优先放证件、手机、饮水、必要药物和充电设备。雨季增加折叠伞与防水袋；需要乘坐较长时间公共交通时，再带一本确实会读的书或已下载的离线内容。",
+        "衣物按实际天数和活动准备，颜色与材质尽量容易组合。洗护用品可以使用小容量分装，住宿已经提供且个人没有特殊需求的物品不必重复携带。",
+        "出发前最后检查返程票、天气变化和住处联系方式。轻装不是刻意少带，而是每件物品都有清楚用途，让移动过程不被多余行李占据。"
+      ],
+      "date": "7月10日 18:24", "source": "周末出行指南", "category": "出行", "commentCount": 101
+    }, "reason": "normal"}],
+    "narrative": {"primaryFunction": "habit", "secondaryFunctions": ["socioeconomic"], "clueRole": "none", "worldFactIds": ["wf.hangzhou.daily"], "characterTraitIds": ["ct.shenchuan.charger"], "relationshipBeatIds": [], "continuityLinkIds": [], "firstReadValue": "补充沈川轻量出行、携带短充电线和纸质阅读物的习惯。", "payoffPolicy": "none"},
+    "metadata": {"visibleAtStart": true, "slice": "daily", "contentClass": "ordinary"}
+  },
+  {
+    "id": "news.toutiao.life.research-retention",
+    "appId": "app.toutiao",
+    "kind": "article",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "news.toutiao.life.research-retention.v0",
+    "variants": [{"id": "news.toutiao.life.research-retention.v0", "correctionStage": "R0", "body": {
+      "title": "研究访谈资料如何做最小化保存",
+      "summary": "原始记录、脱敏版本和结论稿应分开管理，个人信息只在明确期限内保留。",
+      "paragraphs": [
+        "用户访谈会产生联系方式、排期、录音、逐字稿和分析结论。它们看似属于同一项目，实际包含的个人信息和使用目的不同，不适合全部放进长期共享目录。",
+        "招募与联系信息只用于安排访谈，应限制访问人员并设置删除时间。录音和原始笔记保留在受控位置，生成逐字稿后制作脱敏副本，日常分析优先使用脱敏材料。",
+        "结论稿引用用户表达时，应去除不必要身份细节，并能回到对应证据编号。原始记录不因结论变化而重写，修订发生在分析和汇报版本中。",
+        "项目结束后按同意范围、公司制度和研究目的处理资料。最小化保存并不是把证据删到无法复核，而是在可追溯的前提下，只保留完成工作真正需要的内容。"
+      ],
+      "date": "7月10日 09:30", "source": "产品研究观察", "category": "工作", "commentCount": 77
+    }, "reason": "normal"}],
+    "narrative": {"primaryFunction": "profession", "secondaryFunctions": ["theme"], "clueRole": "none", "worldFactIds": ["wf.shenchuan.job"], "characterTraitIds": ["ct.shenchuan.archivist"], "relationshipBeatIds": [], "continuityLinkIds": [], "firstReadValue": "建立沈川工作中区分原始、脱敏与结论材料的职业基线。", "payoffPolicy": "none"},
+    "metadata": {"visibleAtStart": true, "slice": "daily", "contentClass": "ordinary"}
+  },
+  {
+    "id": "news.toutiao.life.market-hours",
+    "appId": "app.toutiao",
+    "kind": "article",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "news.toutiao.life.market-hours.v0",
+    "variants": [{"id": "news.toutiao.life.market-hours.v0", "correctionStage": "R0", "body": {
+      "title": "社区菜场夏季营业时间调整",
+      "summary": "早间营业提前，午后部分摊位短时休息，晚市供应保持不变。",
+      "paragraphs": [
+        "为适应夏季高温和居民采购习惯，社区菜场自本周起调整部分区域营业时间。蔬菜、肉类和早餐摊位早间开门时间提前，方便市民在气温升高前完成采购。",
+        "中午一点至三点，部分个体摊位将轮流休息，公共区域仍保持开放。晚市主要生鲜供应不变，具体收摊时间根据当日库存略有差异。",
+        "菜场增设了冷藏暂存和饮水点，保洁人员会加强湿滑区域清理。市民购买冷藏食品后应尽快回家，避免长时间放在高温车厢或后备箱。",
+        "管理方提醒，营业调整不影响周边便民服务。临时维修、检测或极端天气导致的变化，将在入口公告和社区服务群同步发布。"
+      ],
+      "date": "7月9日 17:16", "source": "社区服务中心", "category": "生活", "commentCount": 35
+    }, "reason": "normal"}],
+    "narrative": {"primaryFunction": "world_context", "secondaryFunctions": ["socioeconomic"], "clueRole": "none", "worldFactIds": ["wf.hangzhou.daily"], "characterTraitIds": [], "relationshipBeatIds": [], "continuityLinkIds": [], "firstReadValue": "补充夏季社区采购与普通消费环境。", "payoffPolicy": "none"},
+    "metadata": {"visibleAtStart": true, "slice": "daily", "contentClass": "ordinary"}
+  },
+  {
+    "id": "news.toutiao.life.fixed-places",
+    "appId": "app.toutiao",
+    "kind": "article",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "news.toutiao.life.fixed-places.v0",
+    "variants": [{"id": "news.toutiao.life.fixed-places.v0", "correctionStage": "R0", "body": {
+      "title": "家中常用物品固定位置更省时间",
+      "summary": "钥匙、充电线和雨伞最适合设置固定归位点，重点是顺手而不是展示效果。",
+      "paragraphs": [
+        "不少家庭整理方案强调统一容器和视觉整齐，但真正影响每天体验的，往往是少数高频物品是否有稳定位置。钥匙、门卡、充电线和雨伞每次寻找一分钟，一个月就会重复很多次。",
+        "选择位置时应沿着动作路线安排。钥匙放在进门能顺手取放且儿童不易触及的位置，湿伞先在通风处晾干，常用充电线分别留在床边、书桌和通勤包。",
+        "固定位置不等于永远不变。使用一周后仍经常随手放在别处，说明位置不顺手，应调整容器或动线，而不是只靠提醒自己。",
+        "整理完成的判断标准，是家里的人能自然归位、需要时马上找到。减少寻找和重复购买，比让所有抽屉看起来完全一致更实际。"
+      ],
+      "date": "7月9日 09:12", "source": "家居生活报", "category": "居家", "commentCount": 84
+    }, "reason": "normal"}],
+    "narrative": {"primaryFunction": "habit", "secondaryFunctions": ["world_context"], "clueRole": "none", "worldFactIds": ["wf.hangzhou.daily"], "characterTraitIds": ["ct.shenchuan.charger"], "relationshipBeatIds": [], "continuityLinkIds": [], "firstReadValue": "补充沈川把充电线等高频物品固定归位的生活习惯。", "payoffPolicy": "none"},
+    "metadata": {"visibleAtStart": true, "slice": "daily", "contentClass": "ordinary"}
+  },
+  {
+    "id": "news.toutiao.life.culture-july",
+    "appId": "app.toutiao",
+    "kind": "article",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "news.toutiao.life.culture-july.v0",
+    "variants": [{"id": "news.toutiao.life.culture-july.v0", "correctionStage": "R0", "body": {
+      "title": "七月公共文化活动清单发布",
+      "summary": "展览、讲座、电影放映和周末工作坊陆续开放预约，部分活动保留现场名额。",
+      "paragraphs": [
+        "市公共文化中心发布七月活动安排，内容涵盖城市影像展、非虚构写作讲座、公共纪录片放映和家庭手作工作坊。多数活动免费开放，少量材料类工作坊收取成本费用。",
+        "线上预约将在活动前七天开放，每个账号可预约两人。未能及时预约的市民可在活动开始前查看退订名额，部分讲座还会保留少量现场座位。",
+        "城市影像展设置了普通市民投稿单元，作品重点记录公共空间、日常劳动和季节变化，不以设备和后期技巧作为主要评选标准。",
+        "主办方提醒，活动时间与场地可能因天气调整。报名后应关注原渠道通知，无法参加时及时取消，把名额留给其他观众。"
+      ],
+      "date": "7月8日 18:50", "source": "城市公共文化", "category": "文化", "commentCount": 59
+    }, "reason": "normal"}],
+    "narrative": {"primaryFunction": "world_context", "secondaryFunctions": ["platform_culture"], "clueRole": "none", "worldFactIds": ["wf.hangzhou.daily"], "characterTraitIds": ["ct.shenchuan.photo"], "relationshipBeatIds": [], "continuityLinkIds": [], "firstReadValue": "建立沈川生活圈内可见的公共文化与城市影像活动。", "payoffPolicy": "none"},
+    "metadata": {"visibleAtStart": true, "slice": "daily", "contentClass": "ordinary"}
+  },
+  {
+    "id": "news.toutiao.life.photo-dedup",
+    "appId": "app.toutiao",
+    "kind": "article",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "news.toutiao.life.photo-dedup.v0",
+    "variants": [{"id": "news.toutiao.life.photo-dedup.v0", "correctionStage": "R0", "body": {
+      "title": "手机照片整理先从重复项开始",
+      "summary": "一次只处理一百张，先删除明显重复和误触，再建立少量长期相簿。",
+      "paragraphs": [
+        "面对几万张手机照片，很多人第一步就试图重新建立完整分类，结果任务过大，很快放弃。更容易开始的方法，是按最近月份打开照片，只处理明显重复、误触和失焦内容。",
+        "每次给自己设置一百张上限，完成后立即停止。连续拍摄的相似照片先保留信息完整、主体清楚的一两张；涉及工作、家庭或重要记录时，不要在未备份前批量删除。",
+        "完成取舍后，再建立“家人”“工作资料”“待冲印”等少量长期相簿。同一张照片可以进入多个相簿，原文件仍按时间保留，不必为了唯一归属反复移动。",
+        "照片整理是一项长期维护，不是一次性清空。固定每周二十分钟，记录备份位置和最后整理日期，比偶尔花整晚重新分类更可靠。"
+      ],
+      "date": "7月8日 11:28", "source": "数字生活观察", "category": "数码", "commentCount": 143
+    }, "reason": "normal"}],
+    "narrative": {"primaryFunction": "habit", "secondaryFunctions": ["platform_culture"], "clueRole": "none", "worldFactIds": ["wf.hangzhou.daily"], "characterTraitIds": ["ct.shenchuan.photo", "ct.shenchuan.archivist"], "relationshipBeatIds": [], "continuityLinkIds": [], "firstReadValue": "建立沈川每次只整理一百张照片的可持续习惯。", "payoffPolicy": "none"},
+    "metadata": {"visibleAtStart": true, "slice": "daily", "contentClass": "ordinary"}
+  },
+  {
+    "id": "news.toutiao.life.walk-route",
+    "appId": "app.toutiao",
+    "kind": "article",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "news.toutiao.life.walk-route.v0",
+    "variants": [{"id": "news.toutiao.life.walk-route.v0", "correctionStage": "R0", "body": {
+      "title": "城市步行可尝试改变默认路径",
+      "summary": "沿公共道路多绕十分钟，观察树荫、店铺和街角使用方式，也能获得新的城市体验。",
+      "paragraphs": [
+        "日常步行往往只剩起点和终点，人会自动忽略重复经过的街道。想重新观察城市，不必寻找所谓隐藏地点，可以从改变一小段默认路线开始。",
+        "选择公开道路和开放绿地，提前确认天气、照明和返程交通。给自己一个简单任务，例如记录三处树荫、两家新店或同一路口在雨前雨后的变化。",
+        "拍照时避免阻碍通行，不进入施工、封闭和私人区域。比起连续拍摄相似画面，写下一句为什么停下来，更能帮助以后恢复当时的观察。",
+        "步行的价值不在于完成多少公里，而是把原本被通勤压缩的空间重新展开。安全地多走十分钟，就足以建立一条不同于日常效率路线的记忆。"
+      ],
+      "date": "7月7日 17:45", "source": "城市生活频道", "category": "城市", "commentCount": 67
+    }, "reason": "normal"}],
+    "narrative": {"primaryFunction": "world_context", "secondaryFunctions": ["habit", "location"], "clueRole": "none", "worldFactIds": ["wf.hangzhou.daily"], "characterTraitIds": ["ct.shenchuan.photo"], "relationshipBeatIds": [], "continuityLinkIds": [], "firstReadValue": "补充沈川在公开城市空间散步和记录的普通媒介习惯。", "payoffPolicy": "none"},
+    "metadata": {"visibleAtStart": true, "slice": "daily", "contentClass": "ordinary"}
+  },
+  {
+    "id": "news.toutiao.life.plants",
+    "appId": "app.toutiao",
+    "kind": "article",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "news.toutiao.life.plants.v0",
+    "variants": [{"id": "news.toutiao.life.plants.v0", "correctionStage": "R0", "body": {
+      "title": "室内植物连续阴雨后如何养护",
+      "summary": "减少浇水、保持通风并观察新叶，不要同时换盆、施肥和暴晒。",
+      "paragraphs": [
+        "连续阴雨会让室内光照下降、盆土干燥变慢。叶片发黄时，先检查盆土和通风，不要因为植物看起来没有精神就立刻增加浇水。",
+        "盆土仍湿润时暂停浇水，把植物移到明亮散射光处，并让花盆之间保持空气流动。久阴后不宜突然放到强烈直射光下，以免叶片受到新的刺激。",
+        "已经完全发黄的老叶可以剪除，仍有绿色的叶片先保留观察。根系状态不明时暂缓施肥，只有出现异味、明显烂根或虫害，才考虑进一步处理。",
+        "记录浇水日期和新叶变化，连续观察一到两周。一次只调整一个条件，才能判断植物是在恢复，还是需要针对品种寻求更具体的建议。"
+      ],
+      "date": "7月7日 10:14", "source": "家居生活报", "category": "居家", "commentCount": 48
+    }, "reason": "normal"}],
+    "narrative": {"primaryFunction": "world_context", "secondaryFunctions": ["habit"], "clueRole": "none", "worldFactIds": ["wf.hangzhou.daily"], "characterTraitIds": [], "relationshipBeatIds": [], "continuityLinkIds": [], "firstReadValue": "补充连续阴雨下的普通居家养护和观察节奏。", "payoffPolicy": "none"},
+    "metadata": {"visibleAtStart": true, "slice": "daily", "contentClass": "ordinary"}
+  },
+  {
+    "id": "news.toutiao.life.commute-bag",
+    "appId": "app.toutiao",
+    "kind": "article",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "news.toutiao.life.commute-bag.v0",
+    "variants": [{"id": "news.toutiao.life.commute-bag.v0", "correctionStage": "R0", "body": {
+      "title": "通勤包里值得长期保留的四样东西",
+      "summary": "纸巾、短充电线、折叠伞和一双干袜子，覆盖多数雨季小状况。",
+      "paragraphs": [
+        "通勤包不需要成为应急仓库。长期携带的物品越多，越容易忘记真正需要的东西。选择清单时，应先回顾一个月里最常遇到的小问题。",
+        "纸巾用于清理湿伞和座位，短充电线能在办公室或移动电源旁使用，折叠伞应配防水袋。雨季再放一双轻薄干袜子，遇到积水时比临时购买更方便。",
+        "药物、证件和工作设备根据个人需要携带，不应照搬他人清单。每周检查一次充电线和移动电源，过期用品及时更换，避免包里堆积失效物品。",
+        "好的通勤包让人不用每天重新决定带什么。高频用品固定位置，回家后归位补充，已经能减少许多重复的小摩擦。"
+      ],
+      "date": "7月6日 19:20", "source": "通勤生活志", "category": "生活", "commentCount": 96
+    }, "reason": "normal"}],
+    "narrative": {"primaryFunction": "habit", "secondaryFunctions": ["world_context"], "clueRole": "none", "worldFactIds": ["wf.hangzhou.daily"], "characterTraitIds": ["ct.shenchuan.charger"], "relationshipBeatIds": [], "continuityLinkIds": [], "firstReadValue": "强化沈川固定携带短充电线和雨季用品的日常习惯。", "payoffPolicy": "none"},
+    "metadata": {"visibleAtStart": true, "slice": "daily", "contentClass": "ordinary"}
+  },
+  {
+    "id": "news.toutiao.life.audio-original",
+    "appId": "app.toutiao",
+    "kind": "article",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "news.toutiao.life.audio-original.v0",
+    "variants": [{"id": "news.toutiao.life.audio-original.v0", "correctionStage": "R0", "body": {
+      "title": "普通录音也需要保留原始文件",
+      "summary": "转写稿便于搜索，但不能替代母带；降噪、裁切和格式转换应另存处理版。",
+      "paragraphs": [
+        "会议、访谈和个人备忘录完成转写后，很多人只留下文字，认为录音已经没有用途。事实上，语气、停顿、环境声和转写错误都需要回到原始音频才能核对。",
+        "录音结束后先复制原文件，记录设备、日期和场景，再在副本上进行降噪、裁切和格式转换。处理版文件名应明确标注，不覆盖母带。",
+        "转写稿需要保留时间码，使文字能快速回到音频位置。自动转写的人名、数字和专业词容易出错，发布或引用前必须人工复听相关片段。",
+        "涉及个人信息的录音应限制访问并按约定期限保存。保留原始文件不是无限期囤积，而是在合法、必要的范围内维持可复核性。"
+      ],
+      "date": "7月6日 09:52", "source": "数字工作方法", "category": "数码", "commentCount": 81
+    }, "reason": "normal"}],
+    "narrative": {"primaryFunction": "profession", "secondaryFunctions": ["habit"], "clueRole": "none", "worldFactIds": ["wf.shenchuan.job"], "characterTraitIds": ["ct.shenchuan.archivist"], "relationshipBeatIds": [], "continuityLinkIds": [], "firstReadValue": "建立沈川保留录音母带、处理版和时间码的职业习惯。", "payoffPolicy": "none"},
+    "metadata": {"visibleAtStart": true, "slice": "daily", "contentClass": "ordinary"}
+  },
+  {
+    "id": "news.toutiao.life.reading-event",
+    "appId": "app.toutiao",
+    "kind": "article",
+    "ownerId": "actor.shenchuan",
+    "sourceRootId": "source.shenchuan_daily",
+    "initialVariantId": "news.toutiao.life.reading-event.v0",
+    "variants": [{"id": "news.toutiao.life.reading-event.v0", "correctionStage": "R0", "body": {
+      "title": "周末读书会本期讨论数字记忆",
+      "summary": "活动将在公共文化中心举行，围绕个人照片、聊天记录和网页存档展开。",
+      "paragraphs": [
+        "本周末城市读书会将以“我们如何保存数字生活”为主题，讨论个人照片、聊天记录、网页收藏和长期备份。活动不要求参与者具备技术背景。",
+        "主持人将从两篇非虚构文章出发，邀请参与者分享自己曾经找不到照片、丢失聊天记录或重新整理文件的经历。现场不会收集私人文件，也不要求展示个人账号。",
+        "活动后半段设置自由讨论，重点关注保存的选择：哪些内容值得留下，哪些资料需要定期删除，以及家庭成员之间如何说明数字遗产。",
+        "本期线上预约已满，活动当天可能释放少量退订名额。主办方将在结束后公开书单和讨论问题，未到场读者也可自行阅读。"
+      ],
+      "date": "7月5日 18:36", "source": "城市阅读", "category": "文化", "commentCount": 42
+    }, "reason": "normal"}],
+    "narrative": {"primaryFunction": "platform_culture", "secondaryFunctions": ["theme", "world_context"], "clueRole": "none", "worldFactIds": ["wf.hangzhou.daily"], "characterTraitIds": ["ct.shenchuan.archivist"], "relationshipBeatIds": [], "continuityLinkIds": [], "firstReadValue": "补充数字记忆作为普通公共讨论主题，而非只属于案件的异常概念。", "payoffPolicy": "none"},
+    "metadata": {"visibleAtStart": true, "slice": "daily", "contentClass": "ordinary"}
+  }
+]
