@@ -1,8 +1,10 @@
-import { useLayoutEffect, useMemo, useRef, useState } from "react";
+import { Fragment, useLayoutEffect, useMemo, useRef, useState } from "react";
 import { useGame } from "@/app/GameContext";
 import { realisticInternetAvatar } from "@/content/avatar-assets";
 import { activeBody, getContentItem, unlockedItemsForApp } from "@/content/selectors";
 import { completePlatformParagraphs } from "@/content/platform-prose";
+import { articleMediaFor } from "@/content/article-media";
+import { assetUrl } from "@/lib/asset-url";
 import type { NarrativeFunction } from "@/contracts/content";
 
 type ZhihuView = "home" | "ideas" | "profile" | "search" | "detail" | "comments" | "not-found" | "archive";
@@ -296,6 +298,9 @@ export function ZhihuApp() {
   }
 
   if(view==="detail") {
+    const answerMedia=articleMediaFor(selected.title,selected.body);
+    const visibleParagraphs=expanded?selected.body:selected.body.slice(0,3);
+    const mediaAfter=Math.max(0,Math.floor(visibleParagraphs.length/2)-1);
     return <div className="app-window zhihu-app" data-testid="zhihu-detail">
       <header className="zhihu-page-header">
         <button data-testid="app-back" aria-label="返回" onClick={backWithinApp}><ZhihuIcon name="back"/></button>
@@ -314,7 +319,7 @@ export function ZhihuApp() {
         <article className="zhihu-answer">
           <header><Avatar mark={selected.authorMark} color={selected.authorColor} identity={selected.author} slot={selected.avatarSlot}/><div><b>{selected.author}</b><span>{selected.credential}</span></div><button onClick={()=>act(`已关注 ${selected.author}`,selected.id)}>关注</button></header>
           <div className="zhihu-answer-voters">{selected.upvotes.toLocaleString("zh-CN")} 人赞同了该回答</div>
-          {(expanded?selected.body:selected.body.slice(0,3)).map((paragraph,index)=><p key={index}>{paragraph}</p>)}
+          {visibleParagraphs.map((paragraph,index)=><Fragment key={index}><p>{paragraph}</p>{index===mediaAfter&&<figure className="platform-inline-figure"><img src={assetUrl(answerMedia.src)} alt={answerMedia.alt}/><figcaption>{answerMedia.caption}</figcaption></figure>}</Fragment>)}
           {selected.body.length>3&&<button
             className="zhihu-expand"
             data-testid="zhihu-expand"

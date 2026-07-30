@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { Fragment, useMemo, useState } from "react";
 import { useGame } from "@/app/GameContext";
 import { activeBody, unlockedItemsForApp } from "@/content/selectors";
 import { followedTiebaBars, ordinaryTiebaPosts, type OrdinaryTiebaPost } from "@/content/tieba-life-data";
@@ -10,6 +10,20 @@ type TiebaView = "home" | "bar" | "thread" | "search" | "messages" | "profile" |
 
 const archivePostId = "tieba.archive.417";
 const validViews: TiebaView[] = ["home", "bar", "thread", "search", "messages", "profile", "user", "favorites"];
+const archiveFloorContext: Record<string, { before: string; after: string }> = {
+  "forum.tieba.floor416": {
+    before: "我刚把公开页和缓存页分别导出，标题看着一样，但响应头和保存时间对不上。",
+    after: "浏览器缓存、页面源码和截图最好分开留，后面核对时才不会把同一份副本算成两个来源。"
+  },
+  "forum.tieba.floor417": {
+    before: "那段现场视频我又逐帧看了一遍，画外的声音和画面里能确认的人不能直接按数量相加。",
+    after: "先把脚步、钥匙声和持机位置各自标时间，再讨论现场到底有几个人会更稳妥。"
+  },
+  "forum.tieba.floor418": {
+    before: "我这里关闭“只看楼主”后，缓存楼层顺序仍然是连着的，刷新也没有再跳。",
+    after: "如果你那边没出现，先检查折叠回复和本机缓存版本，别把显示差异当成新的证据。"
+  }
+};
 
 function compactNumber(value: number): string {
   if (value >= 10_000) return `${(value / 10_000).toFixed(value >= 100_000 ? 0 : 1)}万`;
@@ -371,8 +385,7 @@ function OrdinaryThread({
       <article className="tieba-thread-op">
         <h1>{post.title}</h1>
         <button className="tieba-user-line" onClick={() => onAuthor(post.author)}><img src={realisticInternetAvatar(post.author)} alt={`${post.author}头像`}/><span><b>{post.author}</b><small>{post.bar} · {post.time}</small></span><i>楼主</i></button>
-        {post.body.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
-        {post.media && <img className="tieba-thread-media" src={assetUrl(post.media)} alt="帖子生活配图"/>}
+        {post.body.map((paragraph,index) => <Fragment key={paragraph}><p>{paragraph}</p>{post.media&&index===Math.max(0,Math.floor(post.body.length/2)-1)&&<figure className="platform-inline-figure"><img className="tieba-thread-media" src={assetUrl(post.media)} alt="帖子正文生活配图"/><figcaption>楼主随帖上传的现场生活照片</figcaption></figure>}</Fragment>)}
         <footer><span>{compactNumber(post.views)} 次浏览</span><span>{post.replyCount + customReplies.length} 条回复</span></footer>
       </article>
       <section className="tieba-replies">
@@ -423,15 +436,20 @@ function ArchiveThread({
         <h1>旧帖存档对比：页面缺失前后的缓存差异</h1>
         <button className="tieba-user-line" onClick={() => onAuthor("旧雨17")}><img src={realisticInternetAvatar("旧雨17")} alt="旧雨17头像"/><span><b>旧雨17</b><small>潘博文事件吧 · 旧帖只读副本</small></span><i>楼主</i></button>
         <p>公开页面目前无法访问。下面的楼层来自同一页面的本机缓存，不代表新的独立来源。</p>
+        <figure className="tieba-archive-figure">
+          <img src={assetUrl("/media/case-001/daily/temporary-archive-desk.jpg")} alt="旧页面导出文件与缓存记录整理桌面"/>
+          <figcaption>楼主上传的整理记录：公开页面导出、本机缓存与截图分开归档。</figcaption>
+        </figure>
         <footer><span>3.8万 次浏览</span><span>缓存楼层 {floors.length}</span></footer>
       </article>
       <div className="tieba-thread-filter"><b>全部回复</b><button data-testid="app-effective-action" onClick={onOnlyOwner}>{onlyOwner ? "查看全部" : "只看楼主"}</button></div>
       <section className="tieba-replies">
         {ordered.map((item) => {
           const floor = activeBody(state, item) as Floor;
+          const context = archiveFloorContext[item.id];
           const content = <div>
             <header><button onClick={() => onAuthor(floor.author ?? "贴吧用户")}>{floor.author}</button><span>{floor.floor}楼</span></header>
-            <p>{floor.text}</p>
+            <p>{context?.before} {floor.text} {context?.after}</p>
             <footer><time>缓存记录</time><button onClick={() => onReplyText(`回复 ${floor.author}：`)}>回复</button></footer>
             {floor.cacheOnly && <small className="tieba-cache-only">仅本机缓存可见</small>}
           </div>;

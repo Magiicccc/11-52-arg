@@ -33,6 +33,12 @@ export interface OrdinaryWechatThread {
   narrative: NarrativeMetadata;
 }
 
+export interface WechatThreadSupplement {
+  thread: string;
+  messages: OrdinaryMessage[];
+  narrative: NarrativeMetadata;
+}
+
 export interface OrdinaryXhsNote {
   id: string;
   author: string;
@@ -416,6 +422,78 @@ export const ordinaryWechatThreads: OrdinaryWechatThread[] = [
     narrative: narrative("提供个人跨设备传输和待办痕迹。", "habit", {
       worldFactIds: ["wf.shenchuan.job"],
       characterTraitIds: ["ct.shenchuan.archivist", "ct.shenchuan.charger"]
+    })
+  }
+];
+
+export const wechatThreadSupplements: WechatThreadSupplement[] = [
+  {
+    thread: "妈妈",
+    messages: messages("wechat.supplement.mom", [
+      ["妈妈", "text", "早上出门带伞了吗？天气预报说下午还有一阵雨。", "周一 08:02"],
+      ["self", "text", "带了，放在包侧袋里。", "周一 08:06"],
+      ["妈妈", "text", "那就好。冰箱里的菜记得先吃，别又点太晚的外卖。", "周一 08:07"],
+      ["self", "image", "[图片：楼下清汤面]", "周一 19:14"],
+      ["妈妈", "text", "看着还行，汤别全喝，早点回去。", "周一 19:16"],
+      ["self", "text", "已经到家了，明晚给你打电话。", "周一 21:32"]
+    ]),
+    narrative: narrative("以天气、吃饭和报平安构成自然的家庭聊天背景。", "relationship", {
+      relationshipBeatIds: ["rb.player.parents"]
+    })
+  },
+  {
+    thread: "爸爸",
+    messages: messages("wechat.supplement.dad", [
+      ["爸爸", "text", "快递柜给我发了个取件码，是不是你上次寄的那盒照片？", "周二 17:21"],
+      ["self", "text", "是，外面套了硬纸板，拆的时候别用刀划太深。", "周二 17:25"],
+      ["爸爸", "text", "知道。阳台那盆薄荷又长起来了，周末拍给你看。", "周二 17:29"],
+      ["self", "text", "好，最近雨多，别一直放外面淋。", "周二 17:31"],
+      ["爸爸", "image", "[图片：阳台上的薄荷]", "周六 09:46"],
+      ["self", "text", "比上次精神多了，窗边光也挺好。", "周六 10:02"]
+    ]),
+    narrative: narrative("用快递、照片和阳台植物呈现稳定的父子日常联系。", "relationship", {
+      relationshipBeatIds: ["rb.player.parents"]
+    })
+  },
+  {
+    thread: "阿序",
+    messages: messages("wechat.supplement.axu", [
+      ["阿序", "text", "你昨晚发的那个页面我在手机上看了，按钮离底边有点近。", "周三 10:18"],
+      ["self", "text", "我也觉得，横屏更明显，晚上把安全区再调一下。", "周三 10:22"],
+      ["阿序", "text", "别光测你那台，窄屏也跑一遍。上次就是小屏先挤掉标题。", "周三 10:24"],
+      ["self", "file", "[文件：移动端检查清单.pdf]", "周三 10:27"],
+      ["阿序", "text", "收到了。中午还去楼下那家面馆吗？", "周三 11:41"],
+      ["self", "text", "十二点十分下楼，靠窗那排见。", "周三 11:43"]
+    ]),
+    narrative: narrative("用移动端工作讨论和午饭约定建立阿序与玩家的熟悉关系。", "relationship", {
+      characterTraitIds: ["ct.axu.friend"],
+      relationshipBeatIds: ["rb.player.axu"]
+    })
+  },
+  {
+    thread: "妈",
+    messages: messages("wechat.supplement.investigation-mom", [
+      ["妈", "text", "换季的薄被我晒过了，你回来时记得带走。", "7月9日 09:12"],
+      ["self", "text", "好，周末如果不下雨我过去。", "7月9日 09:20"],
+      ["妈", "text", "门口那双旧球鞋还要不要？鞋底已经有点硬了。", "7月9日 09:22"],
+      ["self", "text", "先留着，我打球穿新的，那双下雨天走路还行。", "7月9日 09:27"],
+      ["妈", "voice", "回来前说一声，我把汤提前热上。", "7月12日 18:06", 5.1],
+      ["self", "text", "知道了，不用等我吃饭。", "7月12日 18:09"]
+    ]),
+    narrative: narrative("保留沈川与家人的普通生活往来，避免联系人只剩案件信息。", "relationship")
+  },
+  {
+    thread: "PB_0425",
+    messages: messages("wechat.supplement.pb0425", [
+      ["PB_0425", "text", "你上次问的旧页面，我只留了浏览器导出的那一份。", "7月11日 22:14"],
+      ["self", "text", "够了，文件名和导出时间先别改。", "7月11日 22:17"],
+      ["PB_0425", "text", "明白。我把公开页面和本机缓存分了两个文件夹，免得混在一起。", "7月11日 22:21"],
+      ["self", "text", "这样最好，来源不同就不要放成一条记录。", "7月11日 22:25"],
+      ["PB_0425", "text", "还有一张加载失败的截图，周末整理硬盘时再发你。", "7月11日 22:28"],
+      ["self", "text", "不用急，原文件在就行。", "7月11日 22:30"]
+    ]),
+    narrative: narrative("以普通的文件整理沟通承托后续缓存线索，不提前增加结论。", "habit", {
+      characterTraitIds: ["ct.shenchuan.archivist"]
     })
   }
 ];
@@ -967,7 +1045,9 @@ export const ordinaryPlatformRecords: OrdinaryPlatformRecord[] = [
 
 export const realismContentSummary = {
   wechatThreads: ordinaryWechatThreads.length,
-  wechatMessages: ordinaryWechatThreads.reduce((sum, thread) => sum + thread.messages.length, 0),
+  wechatMessages: ordinaryWechatThreads.reduce((sum, thread) => sum + thread.messages.length, 0)
+    + wechatThreadSupplements.reduce((sum, thread) => sum + thread.messages.length, 0),
+  wechatSupplementThreads: wechatThreadSupplements.length,
   wechatGroups: ordinaryWechatThreads.filter((thread) => thread.group).length,
   xhsNotes: ordinaryXhsNotes.length,
   xhsAuthors: new Set(ordinaryXhsNotes.map((note) => note.author)).size,

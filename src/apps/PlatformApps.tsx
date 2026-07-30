@@ -1,8 +1,9 @@
-import { useLayoutEffect, useRef, useState, type ReactNode } from "react";
+import { Fragment, useLayoutEffect, useRef, useState, type ReactNode } from "react";
 import { useGame } from "@/app/GameContext";
 import { activeBody, unlockedItemsForApp } from "@/content/selectors";
 import { ordinaryMails, ordinaryPlatformRecords, ordinaryVideos, ordinaryXhsDrafts, ordinaryXhsNotes } from "@/content/realism-life-data";
 import { completePlatformParagraphs } from "@/content/platform-prose";
+import { articleMediaFor } from "@/content/article-media";
 import { realisticInternetAvatar } from "@/content/avatar-assets";
 import { assetUrl } from "@/lib/asset-url";
 
@@ -242,7 +243,7 @@ export function XiaohongshuApp() {
         </div>
         <header><button className="xhs-author-button" onClick={()=>setView("profile")}><GeneratedAvatar className="xhs-avatar" slot={selectedAvatarSlot} identity={selected.author} alt={`${selected.author}头像`}/><b>{selected.author}</b></button><button aria-label={`关注作者 ${selected.author}`} className={followed?"active":""} onClick={()=>setUiFlag(`xiaohongshu.followed.${selected.author}`,!followed)}>{followed?"已关注":"关注"}</button></header>
         <h1>{selected.title}</h1>
-        {selected.body.map((paragraph,index)=><p key={index}>{paragraph}</p>)}
+        {selected.body.map((paragraph,index)=><Fragment key={index}><p>{paragraph}</p>{index===0&&selected.mediaSet.length>1&&<figure className="platform-inline-figure"><img src={assetUrl(selected.mediaSet[1]!)} alt={`${selected.category}笔记正文配图`}/><figcaption>作者补充的同组生活照片</figcaption></figure>}</Fragment>)}
         <div className="xhs-tags"><span>#{selected.category}</span><span>#生活记录</span></div>
         <time>{selected.date} · {selected.location}</time>
         <section className="xhs-comments">
@@ -497,6 +498,8 @@ export function ToutiaoApp() {
     const body = activeBody(state, selected) as Body;
     const detailId = selected.id;
     const paragraphs = completePlatformParagraphs(selected.id, stringList(body, "paragraphs"));
+    const articleMedia = articleMediaFor(text(body, "title"), paragraphs);
+    const mediaAfter = Math.max(0, Math.floor(paragraphs.length / 2) - 1);
     return <DetailShell className="toutiao-app" title="今日头条" onBack={() => setSelectedId(null)} footer={
       <div className="toutiao-actions">
         <button onClick={() => setCommenting(true)}>{commenting ? "评论已打开" : "写评论…"}</button>
@@ -509,7 +512,7 @@ export function ToutiaoApp() {
         <h1>{text(body, "title")}</h1>
         <div><span className="toutiao-source">{text(body, "source", "头条新闻")}</span><time>{text(body, "date")}</time></div>
         <p className="toutiao-lead">{text(body, "summary")}</p>
-        {paragraphs.map((paragraph,index)=><p key={index}>{paragraph}</p>)}
+        {paragraphs.map((paragraph,index)=><Fragment key={index}><p>{paragraph}</p>{index===mediaAfter&&<figure className="platform-inline-figure"><img src={assetUrl(articleMedia.src)} alt={articleMedia.alt}/><figcaption>{articleMedia.caption}</figcaption></figure>}</Fragment>)}
         {paragraphs.length>0&&<footer><span>{text(body, "category", "资讯")}</span><span>{number(body, "commentCount")} 条评论</span><span>内容发布于游戏内 2026-07-15 时间线</span></footer>}
       </article>
       {shareOpen&&<section className="toutiao-share-panel"><b>分享文章</b><button onClick={()=>setShareOpen(false)}>微信好友</button><button onClick={()=>setShareOpen(false)}>复制链接</button><button aria-label="关闭分享" onClick={()=>setShareOpen(false)}>取消</button></section>}

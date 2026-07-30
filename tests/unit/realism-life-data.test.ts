@@ -7,7 +7,8 @@ import {
   ordinaryXhsDrafts,
   ordinaryXhsNotes,
   realismContentSummary,
-  temporaryMapPois
+  temporaryMapPois,
+  wechatThreadSupplements
 } from "@/content/realism-life-data";
 
 describe("ordinary digital-life realism pack", () => {
@@ -15,6 +16,8 @@ describe("ordinary digital-life realism pack", () => {
     expect(realismContentSummary.wechatThreads).toBeGreaterThanOrEqual(15);
     expect(realismContentSummary.wechatMessages).toBeGreaterThanOrEqual(100);
     expect(realismContentSummary.wechatGroups).toBeGreaterThanOrEqual(3);
+    expect(wechatThreadSupplements).toHaveLength(5);
+    expect(wechatThreadSupplements.every((thread) => thread.messages.length >= 6)).toBe(true);
     expect(new Set(ordinaryWechatThreads.flatMap((thread) => thread.messages.map((message) => message.type))).size).toBeGreaterThanOrEqual(6);
 
     expect(realismContentSummary.xhsNotes).toBeGreaterThanOrEqual(24);
@@ -55,6 +58,7 @@ describe("ordinary digital-life realism pack", () => {
   it("keeps every ordinary content unit attached to NarrativeMetadata", () => {
     const units = [
       ...ordinaryWechatThreads,
+      ...wechatThreadSupplements,
       ...ordinaryXhsNotes,
       ...ordinaryXhsDrafts,
       ...ordinaryMails,

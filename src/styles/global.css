@@ -33,7 +33,8 @@ button,input{font:inherit}
 .battery{position:relative;width:25px;height:12px;border:1.5px solid currentColor;border-radius:3px}
 .battery:after{content:"";position:absolute;right:-3.5px;top:3px;width:2px;height:5px;border-radius:0 2px 2px 0;background:currentColor;opacity:.7}
 .battery i{position:absolute;inset:2px auto 2px 2px;width:78%;border-radius:1px;background:currentColor}
-.home-indicator{position:absolute;z-index:30;bottom:8px;left:50%;transform:translateX(-50%);width:134px;height:5px;border-radius:3px;background:#111b}
+.home-indicator{position:absolute;z-index:30;bottom:8px;left:50%;transform:translateX(-50%);width:134px;height:5px;padding:0;border:0;border-radius:3px;background:#111b}
+button.home-indicator{cursor:pointer}
 .phone-screen:has(.home-screen) .home-indicator,.phone-screen:has(.lock-screen) .home-indicator{background:#ffff}
 .lock-screen{height:100%;padding:70px 18px 34px;display:flex;flex-direction:column;align-items:center;color:#fff;background:linear-gradient(180deg,#6f8290 0,#354b55 42%,#17232a 100%);position:relative}
 .lock-screen:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 70% 30%,#ffffff22,transparent 30%);pointer-events:none}
@@ -82,6 +83,9 @@ button,input{font:inherit}
 .app-header>button:first-child{font-size:34px;text-align:left;padding-left:16px}
 .app-header strong{text-align:center;font-size:17px}
 .app-content{flex:1;overflow:auto;padding-bottom:26px}
+.platform-inline-figure{margin:16px 0}
+.platform-inline-figure img{width:100%;max-height:320px;display:block;border-radius:7px;object-fit:cover;background:#eceef1}
+.platform-inline-figure figcaption{padding-top:6px;color:#8b8f97;font-size:11px;line-height:1.45;text-align:left}
 .notification-toast{position:absolute;z-index:50;top:64px;bottom:auto;left:10px;right:10px;border:0;border-radius:18px;padding:10px 14px;background:#f7f7f9ee;backdrop-filter:blur(20px);box-shadow:0 8px 25px #0004;text-align:left;display:flex;flex-direction:column}
 .notification-toast span{font-size:13px;color:#45484d}
 .search-field,.address-bar{margin:8px 12px;padding:9px 12px;border-radius:12px;background:#e4e5e9;color:#7a7c80;font-size:14px}
@@ -747,8 +751,11 @@ img.mail-avatar{display:block;object-fit:cover}
 .maplibre-canvas{position:absolute;inset:0;width:100%;height:100%}
 .map-road-name{padding:2px 4px;border-radius:4px;background:#ffffffc7;color:#6f746d;font-size:9px;line-height:1;letter-spacing:.2px;white-space:nowrap;box-shadow:0 1px 2px #0001;pointer-events:none}
 .map-road-name.primary{font-size:10px;font-weight:600;color:#5d625c}
-.map-current-location{width:22px;height:22px;border:2px solid #fff;border-radius:50%;display:grid;place-items:center;background:#2b7df7;box-shadow:0 1px 5px #0005;pointer-events:none}
+.map-current-location{position:relative;width:24px;height:24px;border:3px solid #fff;border-radius:50%;display:grid;place-items:center;background:#2b7df7;box-shadow:0 1px 5px #0005,0 0 0 12px #2b7df72b;pointer-events:none}
+.map-current-location:after{content:"当前位置";position:absolute;top:25px;left:50%;padding:2px 5px;border-radius:5px;background:#ffffffed;color:#236bc4;font-size:9px;font-weight:650;white-space:nowrap;transform:translateX(-50%);box-shadow:0 1px 4px #0002}
 .map-current-location i{width:6px;height:6px;border-radius:50%;background:#fff}
+.map-locate-button{position:absolute;z-index:12;right:9px;bottom:82px;min-width:78px;height:36px;padding:0 10px;border:0;border-radius:18px;background:#fff;color:#2377e5;box-shadow:0 3px 13px #0003;font-size:11px;font-weight:650}
+.map-locate-button span{margin-right:4px;font-size:16px;vertical-align:-1px}
 .maplibregl-ctrl-bottom-right{bottom:72px!important;right:8px!important}
 .maplibregl-ctrl-group{border-radius:9px!important;overflow:hidden;box-shadow:0 2px 12px #0002!important}
 .map-poi-marker{display:flex;align-items:center;max-width:120px;padding:2px 5px 2px 2px;border:0;border-radius:12px;background:#fff;box-shadow:0 2px 8px #0003;color:#333;white-space:nowrap}
@@ -760,6 +767,9 @@ img.mail-avatar{display:block;object-fit:cover}
 .map-quick-actions{position:absolute;z-index:12;left:8px;right:8px;top:397px;height:58px;padding:7px;display:grid;grid-template-columns:repeat(4,1fr);gap:5px;border-radius:13px;background:#fff;box-shadow:0 4px 16px #0002}
 .map-quick-actions button{border:0;background:#fff;color:#333;display:flex;flex-direction:column;justify-content:center;font-size:11px}
 .map-quick-actions button:first-child{color:#2377e5;font-weight:650}
+.tieba-archive-figure{margin:14px 0 4px}
+.tieba-archive-figure img{width:100%;max-height:240px;display:block;border-radius:8px;object-fit:cover}
+.tieba-archive-figure figcaption{padding-top:6px;color:#8b8f97;font-size:11px;line-height:1.45}
 .map-poi-sheet{margin:-2px 8px 8px;padding:13px;border-radius:14px;background:#fff;box-shadow:0 3px 15px #0001}
 .map-poi-sheet header{display:grid;grid-template-columns:1fr 68px;gap:8px}
 .map-poi-sheet h2{margin:0;font-size:18px}

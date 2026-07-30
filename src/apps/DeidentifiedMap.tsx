@@ -117,6 +117,7 @@ const style: maplibregl.StyleSpecification = {
 export function DeidentifiedMap({
   selectedPoiId,
   routeVisible,
+  locateRequest,
   onSelectPoi,
   onViewportChanged,
   onReady,
@@ -124,6 +125,7 @@ export function DeidentifiedMap({
 }: {
   selectedPoiId: string | null;
   routeVisible: boolean;
+  locateRequest: number;
   onSelectPoi(poi: TemporaryMapPoi): void;
   onViewportChanged(viewport: { center: [number, number]; zoom: number }): void;
   onReady(): void;
@@ -216,6 +218,11 @@ export function DeidentifiedMap({
       mapRef.current = null;
     };
   }, []);
+
+  useEffect(() => {
+    if (locateRequest <= 0) return;
+    mapRef.current?.easeTo({ center: [0, 0], zoom: 16.2, duration: 420 });
+  }, [locateRequest]);
 
   useEffect(() => {
     const map = mapRef.current;

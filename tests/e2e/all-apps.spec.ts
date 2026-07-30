@@ -4,7 +4,7 @@ const appIds=["app.wechat","app.photos","app.safari","app.baidu_map","app.phone"
 
 test.beforeEach(async ({page}) => { await page.goto(testEntryUrl); });
 
-test("all visible player phone apps open and return", async ({page}) => {
+test("all visible player phone apps open and return through the Home Indicator", async ({page}) => {
   for (const appId of appIds) {
     const locator=page.getByTestId(`app-${appId}`);
     await locator.scrollIntoViewIfNeeded();
@@ -13,10 +13,7 @@ test("all visible player phone apps open and return", async ({page}) => {
     const action=page.getByTestId("app-effective-action").first();
     await expect(action).toBeVisible();
     await action.click();
-    await page.getByTestId("app-back").click();
-    if (!(await page.getByTestId("home-screen").isVisible())) {
-      await page.getByTestId("app-back").click();
-    }
+    await page.getByTestId("home-indicator").click();
     await expect(page.getByTestId("home-screen")).toBeVisible();
   }
 });

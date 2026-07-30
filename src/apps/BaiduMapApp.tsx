@@ -36,6 +36,7 @@ export function BaiduMapApp() {
   const [mapError,setMapError]=useState<string|null>(null);
   const [mapNotice,setMapNotice]=useState("");
   const [layer,setLayer]=useState("地图");
+  const [locateRequest,setLocateRequest]=useState(0);
   const selectedPoi=temporaryMapPois.find((poi)=>poi.id===selectedPoiId)??null;
   const selectedPoiFavorite=selectedPoi
     ? state.world.flags[`ui.baiduMap.favorite.${selectedPoi.id}`]===true
@@ -82,6 +83,11 @@ export function BaiduMapApp() {
     setMapNotice(selectedPoiFavorite?`已取消收藏${selectedPoi.name}`:`已收藏${selectedPoi.name}`);
     emit("content.item.interacted",selectedPoi.id,{action:"favorite",active:!selectedPoiFavorite,source:"P"});
   };
+  const locateCurrentPosition=()=>{
+    setLocateRequest((request)=>request+1);
+    setMapNotice("已回到当前位置");
+    emit("map.current_location.requested","map.current_location",{source:"P",temporaryGeometry:true});
+  };
 
   if (!unlocked || !mapItem) {
     return <MapShell
@@ -103,6 +109,8 @@ export function BaiduMapApp() {
       onViewportChanged={recordViewport}
       onReady={markReady}
       onError={markError}
+      locateRequest={locateRequest}
+      onLocate={locateCurrentPosition}
     >
       <section className="map-empty-history"><h2>最近查看</h2>{temporaryMapPois.slice(0,5).map((poi)=><button data-testid={poi.id==="poi.temp.01"?"app-effective-action":undefined} key={poi.id} onClick={()=>selectPoi(poi)}><span>{poi.category.slice(0,1)}</span><div><b>{poi.name}</b><small>{poi.detail}</small></div></button>)}</section>
     </MapShell>;
@@ -133,6 +141,8 @@ export function BaiduMapApp() {
     onViewportChanged={recordViewport}
     onReady={markReady}
     onError={markError}
+    locateRequest={locateRequest}
+    onLocate={locateCurrentPosition}
   >
     {activeDeviceId==="player"&&<section className="map-favorite-card" data-testid={state.story.completedSceneIds.includes("A3-09")?"player-map-eroded":undefined}>
       <span>收藏地点</span><h2>{title}</h2><p>{state.story.completedSceneIds.includes("A3-09")?"已同步为普通收藏地点；历史路线不再标记家庭关系。":"常用地点"}</p>
@@ -148,7 +158,7 @@ export function BaiduMapApp() {
 
 function MapShell({
   offline,query,onQuery,onSearch,layer,onLayer,selectedPoi,selectedPoiFavorite,routeVisible,onRoute,onNetwork,onFavorite,notice,mapError,
-  onSelectPoi,onViewportChanged,onReady,onError,children
+  onSelectPoi,onViewportChanged,onReady,onError,locateRequest,onLocate,children
 }:{
   offline:boolean;
   query:string;
@@ -168,6 +178,8 @@ function MapShell({
   onViewportChanged(viewport:{center:[number,number];zoom:number}):void;
   onReady():void;
   onError(message:string):void;
+  locateRequest:number;
+  onLocate():void;
   children:React.ReactNode;
 }) {
   return <AppChrome title="百度地图">
@@ -177,8 +189,9 @@ function MapShell({
       {notice&&<p className="map-inline-notice" role="status">{notice}</p>}
       <section className="map-stage">
         <Suspense fallback={<div className="map-loading-card">正在载入本机离线地图…</div>}>
-          <DeidentifiedMap selectedPoiId={selectedPoi?.id??null} routeVisible={routeVisible} onSelectPoi={onSelectPoi} onViewportChanged={onViewportChanged} onReady={onReady} onError={onError}/>
+          <DeidentifiedMap selectedPoiId={selectedPoi?.id??null} routeVisible={routeVisible} locateRequest={locateRequest} onSelectPoi={onSelectPoi} onViewportChanged={onViewportChanged} onReady={onReady} onError={onError}/>
         </Suspense>
+        <button className="map-locate-button" data-testid="map-locate-current" aria-label="回到当前位置" onClick={onLocate}><span>⌖</span>当前位置</button>
         {offline&&<span className="map-offline-badge">离线地图 · 本机矢量包</span>}
         {mapError&&<div className="map-render-error"><b>地图画布暂不可用</b><p>已保留搜索、POI列表、路线文字与剧情入口。</p></div>}
       </section>

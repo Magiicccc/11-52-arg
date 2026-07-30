@@ -8,7 +8,7 @@ import { AppHost } from "@/apps/AppHost";
 import { NotificationToast } from "./NotificationToast";
 
 export function PhoneFrame({deviceId}:{deviceId:DeviceId}) {
-  const {state}=useGame(); const device=state.devices[deviceId];
+  const {state,closeApp}=useGame(); const device=state.devices[deviceId];
   const passcodeMode=device.activeAppId==="__passcode__";
   const screenId=device.locked?(passcodeMode?"passcode":"lock"):device.activeAppId?"app":"home";
   return <section className={`phone-frame ${deviceId}`} data-testid={`phone-${deviceId}`} data-screen-id={`${deviceId}.${screenId}`}>
@@ -16,7 +16,9 @@ export function PhoneFrame({deviceId}:{deviceId:DeviceId}) {
       <StatusBar deviceId={deviceId}/>
       {device.locked ? (passcodeMode?<PasscodeScreen/>:<LockScreen deviceId={deviceId}/>) : device.activeAppId ? <div className="app-runtime" data-app-id={device.activeAppId}><AppHost appId={device.activeAppId}/></div> : <HomeScreen deviceId={deviceId}/>}
       <NotificationToast />
-      <div className="home-indicator"/>
+      {device.activeAppId&&!device.locked
+        ? <button className="home-indicator" data-testid="home-indicator" aria-label="返回手机主屏幕" onClick={closeApp}/>
+        : <div className="home-indicator" aria-hidden="true"/>}
     </div>
   </section>;
 }
